@@ -23,7 +23,7 @@ def strip_tags(html):
 
 
 def iter_files():
-    with open(CSV_CATALOGUE_PATH) as catalogue_file:
+    with codecs.open(CSV_CATALOGUE_PATH, encoding="cp1250") as catalogue_file:
         lines = catalogue_file.readlines()  #seznam vet = stringu
         records = [line.strip("\n").split(";") for line in lines] #n = zkratka pro newline, seznam seznamu slov
         lookup_dictionary = dict((record[0], record[1:]) for record in records)
@@ -50,6 +50,5 @@ def extract_article_text(): # extrahuje čisté texty fanfikcí ze souboru
     for filename in filter():
         with codecs.open(os.path.join(FULLDOWNLOAD_PATH, filename), "r", "utf-8") as file:
             text = file.read()
-
         yield strip_tags(text)
 

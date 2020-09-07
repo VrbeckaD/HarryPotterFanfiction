@@ -51,17 +51,16 @@ with codecs.open('HP_catalogue.csv', 'w', encoding="utf8") as csvfile:
                                   quotechar='"', quoting=csv.QUOTE_MINIMAL)
     catalogue_writer.writerow(["filename","title", "rating", "ship", "language", "category", "lovers", "wordcount"])
 
-    for filename in [str(name) + ".txt" for name in range(1, 5001)]:
+    for filename in [str(name) + ".txt" for name in range(1, 4300)]:
         path = os.path.join(DOWNLOAD_PATH, filename)
-        with codecs.open(path, encoding="utf8")as F:
-            text = F.read()
+        with codecs.open(path, encoding="utf8") as f:
+            text = f.read()
+        print(text)
         parts = re.split("<!--title, author, fandom-->", text)[1:]
         for no, part in enumerate(parts):
             targetname = filename.replace(".txt", "") + "_" + str(no + 1) + ".txt"
             text_path = os.path.join(FULLDOWNLOAD_PATH, targetname)
-            print (text_path)
             text = get_text(text_path)
-            print([part])
             subresult = [targetname]
             # vyhledá title
             _title_prepare = re.split("</a>", part)[0]
@@ -97,8 +96,12 @@ with codecs.open('HP_catalogue.csv', 'w', encoding="utf8") as csvfile:
             # vyhledá počet slov
             wordcount = re.search(r'<dd class="words">((?:\d*,?)+)</dd>', part).groups(1)[0].replace(",", "")
             subresult.append(wordcount)
-            print (subresult)
+            print(subresult)
             catalogue_writer.writerow(subresult)
 
     for line in result:
         print("\t".join(line))
+
+
+if __name__ == '__main__':
+    pass
