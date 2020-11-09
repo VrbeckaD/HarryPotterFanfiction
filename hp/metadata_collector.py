@@ -49,7 +49,7 @@ def get_text(text_path):
 with codecs.open('HP_catalogue.csv', 'w', encoding="utf8") as csvfile:
     catalogue_writer = csv.writer(csvfile, delimiter=',',
                                   quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    catalogue_writer.writerow(["filename","title", "rating", "ship", "language", "category", "lovers", "wordcount"])
+    catalogue_writer.writerow(["filename","title", "rating", "ship", "language", "category", "lovers", "wordcount", "published","hits"])
 
     for filename in [str(name) + ".txt" for name in range(1, 4300)]:
         path = os.path.join(DOWNLOAD_PATH, filename)
@@ -96,8 +96,16 @@ with codecs.open('HP_catalogue.csv', 'w', encoding="utf8") as csvfile:
             # vyhledá počet slov
             wordcount = re.search(r'<dd class="words">((?:\d*,?)+)</dd>', part).groups(1)[0].replace(",", "")
             subresult.append(wordcount)
+            # vyhledá datum publikování
+            published= re.search (r'<dd class="published">(\d\d\d\d-\d\d-\d\d)</dd>', part).group(1)[0]
+            subresult.append(published)
+            # vyhledá počet kliknutí na povídku
+            hits= re.search(r'<dd class="hits">\d+</dd>', part).group(1)
+            subresult.append(hits)
+           
             print(subresult)
             catalogue_writer.writerow(subresult)
+            
 
     for line in result:
         print("\t".join(line))
