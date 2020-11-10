@@ -49,7 +49,7 @@ def get_text(text_path):
 with codecs.open('HP_catalogue.csv', 'w', encoding="utf8") as csvfile:
     catalogue_writer = csv.writer(csvfile, delimiter=',',
                                   quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    catalogue_writer.writerow(["filename","title", "rating", "ship", "language", "category", "lovers", "wordcount", "published","hits"])
+    catalogue_writer.writerow(["filename","title", "rating", "ship", "language", "category", "lovers", "wordcount", "published","hits", "freeform_tags"])
 
     for filename in [str(name) + ".txt" for name in range(1, 4300)]:
         path = os.path.join(DOWNLOAD_PATH, filename)
@@ -102,7 +102,13 @@ with codecs.open('HP_catalogue.csv', 'w', encoding="utf8") as csvfile:
             # vyhledá počet kliknutí na povídku
             hits= re.search(r'<dd class="hits">(\d+)</dd>', part).group(1)
             subresult.append(hits)
-           
+            # vyhledá další tagy, kterými autoři označují povídky
+            raw_freeform_tags = re.search(r'<dd class="freeform tags">(.*?)</dd>', part).group(1)  #vyhledá daný prvek v HTML, příprava na extrahování freeform tagů
+            freeform_tags = [item.replace('|', '/') for item in re.sub(r'<[^>]+>', 'a12b', raw_freeform_tags).split('a12b') if item.strip()]
+            # nahradí všechna svislítka v tazích lomítkem aby se to nepletlo (svislítka chci používa v dalším kroku), nahradí značky šipek stringem v tazích a potom podle něj rozseká
+            # if item.strip = položky, které po odstranění mezer mají alespoň jeden znak, tj. nejsou prázdné
+            subresult.append('|'.join(freeform_tags)) # propojí jednotlivé tagy svislítkem
+            
             print(subresult)
             catalogue_writer.writerow(subresult)
             
