@@ -24,6 +24,7 @@ def get_text(text_path):
     Returns:
 
     """
+    text_with_headers_path = str(text_path).replace(".txt", "_full.txt")
     if not os.path.isfile(text_path):  # tady budeme stahovat soubor
         url = "https://archiveofourown.org/works/" + re.search(r'<a href="/works/(\d+)">', part).groups(1)[
             0] + "?view_adult=true"
@@ -31,20 +32,40 @@ def get_text(text_path):
         print(url)
         user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'
         headers = {'User-Agent': user_agent}
-        content = requests.get(url, allow_redirects=True, headers=headers).text # na tomto místě fejkujeme prohlížeč
+        full_content = requests.get(url, allow_redirects=True, headers=headers).text # na tomto místě fejkujeme prohlížeč
         try:
+            with codecs.open(text_with_headers_path, "w", "utf8") as hw:
+                hw.write(full_content)
             content = re.search(
                 "<!--(?:main|chapter) content-->(.*)<!--/(?:main|chapter)-->",    #první argument
-                content,                                                            # druhý argument
+                full_content,                                                            # druhý argument
                 flags=re.DOTALL).groups(1)[0] #třetí argument
             with codecs.open(text_path, "w", "utf8") as hw:
                 hw.write(content)
         except:
-            return ""    # pokud narazí na chybu, pokračujeme dále s prázdným dokumentem
+            return "", ""   # pokud narazí na chybu, pokračujeme dále s 2 prázdnými dokumenty
+    elif not os.path.isfile(text_with_headers_path):
+        url = "https://archiveofourown.org/works/" + re.search(r'<a href="/works/(\d+)">', part).groups(1)[
+            0] + "?view_adult=true"
+        time.sleep(random.random() / 2)
+        print(url)
+        user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'
+        headers = {'User-Agent': user_agent}
+        full_content = requests.get(url, allow_redirects=True,
+                                    headers=headers).text  # na tomto místě fejkujeme prohlížeč
+        try:
+            with codecs.open(text_with_headers_path, "w", "utf8") as hw:
+                hw.write(full_content)
+        except:
+            return "", ""  # pokud narazí na chybu, pokračujeme dále s 2 prázdnými dokumenty
+        with codecs.open(text_path, "r", "utf8") as hw:
+            content = hw.read()
     else:
         with codecs.open(text_path, "r", "utf8") as hw:
             content = hw.read()
-    return content
+        with codecs.open(text_with_headers_path, "r", "utf8") as hw:
+            full_content = hw.read()
+    return content, full_content
 
 with codecs.open('HP_catalogue.csv', 'w', encoding="utf8") as csvfile:
     catalogue_writer = csv.writer(csvfile, delimiter=',',
@@ -60,7 +81,7 @@ with codecs.open('HP_catalogue.csv', 'w', encoding="utf8") as csvfile:
         for no, part in enumerate(parts):
             targetname = filename.replace(".txt", "") + "_" + str(no + 1) + ".txt"
             text_path = os.path.join(FULLDOWNLOAD_PATH, targetname)
-            text = get_text(text_path)
+            text, full_text = get_text(text_path)
             subresult = [targetname]
             # vyhledá title
             _title_prepare = re.split("</a>", part)[0]
@@ -97,18 +118,23 @@ with codecs.open('HP_catalogue.csv', 'w', encoding="utf8") as csvfile:
             wordcount = re.search(r'<dd class="words">((?:\d*,?)+)</dd>', part).groups(1)[0].replace(",", "")
             subresult.append(wordcount)
             # vyhledá datum publikování
-            published= re.search (r'<dd class="published">(\d\d\d\d-\d\d-\d\d)</dd>', part).group(1)
+            try:
+                published = re.search (r'<dd class="published">(\d\d\d\d-\d\d-\d\d)</dd>', full_text).group(1)
+            except:
+                published = "missing data"
             subresult.append(published)
             # vyhledá počet kliknutí na povídku
             hits= re.search(r'<dd class="hits">(\d+)</dd>', part).group(1)
             subresult.append(hits)
             # vyhledá další tagy, kterými autoři označují povídky
-            raw_freeform_tags = re.search(r'<dd class="freeform tags">(.*?)</dd>', part).group(1)  #vyhledá daný prvek v HTML, příprava na extrahování freeform tagů
-            freeform_tags = [item.replace('|', '/') for item in re.sub(r'<[^>]+>', 'a12b', raw_freeform_tags).split('a12b') if item.strip()]
-            # nahradí všechna svislítka v tazích lomítkem aby se to nepletlo (svislítka chci používa v dalším kroku), nahradí značky šipek stringem v tazích a potom podle něj rozseká
-            # if item.strip = položky, které po odstranění mezer mají alespoň jeden znak, tj. nejsou prázdné
+            try:
+                raw_freeform_tags = re.search(r'<dd class="freeform tags">((.|\n)*?)</dd>', full_text).group(1)  #vyhledá daný prvek v HTML, příprava na extrahování freeform tagů
+                freeform_tags = [item.replace('|', '/') for item in re.sub(r'<[^>]+>', 'a12b', raw_freeform_tags).split('a12b') if item.strip()]
+                # nahradí všechna svislítka v tazích lomítkem aby se to nepletlo (svislítka chci používa v dalším kroku), nahradí značky šipek stringem v tazích a potom podle něj rozseká
+                # if item.strip = položky, které po odstranění mezer mají alespoň jeden znak, tj. nejsou prázdné
+            except:
+                freeform_tags = ["none"]
             subresult.append('|'.join(freeform_tags)) # propojí jednotlivé tagy svislítkem
-            
             print(subresult)
             catalogue_writer.writerow(subresult)
             
