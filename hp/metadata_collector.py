@@ -124,7 +124,10 @@ with codecs.open('HP_catalogue.csv', 'w', encoding="utf8") as csvfile:
                 published = "missing data"
             subresult.append(published)
             # vyhledá počet kliknutí na povídku
-            hits= re.search(r'<dd class="hits">(\d+)</dd>', part).group(1)
+            try:
+                hits = re.search(r'<dd class="hits">(\d+)</dd>', full_text).group(1)
+            except:
+                hits = "missing data"
             subresult.append(hits)
             # vyhledá další tagy, kterými autoři označují povídky
             try:
