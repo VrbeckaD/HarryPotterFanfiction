@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"f2edcff25e","applicationID":"190034","transactionName":"dgwMEkpfWVsHERpRXlQTFgNKQxpECgxC","queueTime":0,"applicationTime":201,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VQcCWV9RGwIJVFFRAw==",licenseKey:"f2edcff25e",applicationID:"190034"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(23),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(24),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(24),a=t(23);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(20),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(23),c=t(24),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(25);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(22),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],20:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],21:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],22:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],23:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],24:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],25:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?s(t,c,o):o()}function n(n,r,i,o){if(!l.aborted||o){t&&t(n,r,i);for(var a=e(i),c=m(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([x,n,r,a]),a}}function p(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||i(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:a,aborted:!1};return x}function o(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(23),u={},d={},l=e.exports=i();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=x.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(g,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=t(18),c=t("handle"),s=t(23),f=t("ee"),u=t(21),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},y=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),x=e.exports={offset:a.getLastTimestamp(),now:a,origin:v,features:{},xhrWrappable:y,userAgent:u};t(15),t(19),l[p]?(l[p]("DOMContentLoaded",o,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",i),d[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var b=0},{}],"wrap-function":[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var i=t("ee"),o=t(24),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,i){function nrWrapper(){var r,a,c,s;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,i],c])}u(e+"start",[r,a,i],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,i,o){i||(i="");var a,c,s,f="-"===i.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+i:i,o,c))}function u(n,r,i){if(!s||e){var o=s;s=!0;try{t.emit(n,r,i,e)}catch(a){l([a,n,r,i])}s=o}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var i in t)c.call(t,i)&&(e[i]=t[i]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=i),n.inPlace=f,n.flag=a,n}},{}]},{},["loader",2,12,4,3]);</script>
+    <meta name="keywords" content="fanfiction, transformative works, otw, fair use, archive"/>
+    <meta name="language" content="en-US"/>
+    <meta name="subject" content="fandom"/>
+    <meta name="description" content="An Archive of Our Own, a project of the
+    Organization for Transformative Works"/>
+    <meta name="distribution" content="GLOBAL"/>
+    <meta name="classification" content="transformative works"/>
+    <meta name="author" content="Organization for Transformative Works"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+        A Second Chance - Chapter 1 - Breanie - Harry Potter - J. K. Rowling [Archive of Our Own]
+    </title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/A.1_site_screen_.css.pagespeed.cf.clueW7UFD0.css"/>
+<style media="only screen and (max-width: 62em), handheld">#dashboard{clear:both;float:none;margin:1% 3.5%;max-width:100%;padding:0;width:auto}#dashboard,#dashboard.own{border-bottom:10px solid #900;border-top:10px solid #900;padding:.5em 0;border-radius:.25em}#dashboard ul{border:none;display:inline;padding:0;text-align:left}#dashboard li{display:inline}#dashboard a,#dashboard span{display:inline-block;margin:.25em 0}#dashboard .secondary{background:#eee;padding:.375em 0 .625em;box-shadow:inset 2px 2px 5px #bbb}#dashboard .secondary a{margin:.125em 0}#dashboard .landmark{clear:none;float:left}#main,#main.dashboard{float:none;margin:auto;padding-left:3.5%;padding-right:3.5%;width:auto}.logged-in .splash>.module{width:48.5%}.logged-in .splash > div:nth-of-type(odd) {margin-left:0;margin-right:1.5%}.logged-in .splash > div:nth-of-type(even) {margin-left:1.5%;margin-right:0}form.filters{width:auto;min-width:23%;max-width:24%}.filters fieldset{margin-right:0}form.filters dl{margin-left:.25em;margin-right:.25em}#workskin{margin:auto 1.5%}</style>
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 42em), handheld" href="/stylesheets/skins/skin_873_archive_2_0/A.5_site_narrow.handheld_.css.pagespeed.cf.8L0d7x-op8.css"/>
+<link rel="stylesheet" type="text/css" media="speech" href="/stylesheets/skins/skin_873_archive_2_0/A.6_site_speech_.css.pagespeed.cf.Ybb8bLK5Um.css"/>
+<link rel="stylesheet" type="text/css" media="print" href="/stylesheets/skins/skin_873_archive_2_0/A.7_site_print_.css.pagespeed.cf.ry3YZtf8Cz.css"/>
+<!--[if IE 8]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/8_site_screen_IE8_or_lower.css" /><![endif]-->
+<!--[if IE 5]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/9_site_screen_IE5.css" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/10_site_screen_IE6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/11_site_screen_IE7.css" /><![endif]-->
+
+
+
+<!--sandbox for developers	-->
+<style media="screen">#new_work_search fieldset:first-of-type .submit{padding-top:0}.edit_external_author ul ul{margin-left:2.75em}.twitter{width:76px;height:28px}</style>
+<script src="/javascripts/livevalidation_standalone.js.pagespeed.jm.oB__Z5piTe.js"></script>
+
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="q+4izAc5UEU3I8T0mSn+31H4n1jfGfVosceWcZNxYKgFuFLS7GMYJrLQZInAJiC6tJRcuwhU56YmBeP6kr9dug=="/>
+
+    
+  </head>
+
+  <body class="logged-out">
+    <div id="outer" class="wrapper">
+      <ul id="skiplinks"><li><a href="#main">Main Content</a></li></ul>
+      <!-- BEGIN BETA CAVEATS! -->
+<noscript>
+  <p id="javascript-warning">
+    While we&#39;ve done our best to make the core functionality of this site accessible without javascript, it will work better with it enabled. Please consider turning it on!
+  </p>
+</noscript>
+<!-- END BETA CAVEATS! --> 
+
+<!-- BEGIN header -->
+
+<div id="header" class="region">
+
+  <h1 class="heading">
+    <a href="/"><span>Archive of Our Own</span><sup> beta</sup><script data-pagespeed-no-defer>(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','http://archiveofourown.org/works/16237082/chapters/37957664','6aaL7r5rlp',true,false,'zh_PGDmYWRg');</script><script data-pagespeed-no-defer>(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','http://archiveofourown.org/works/16237082/chapters/37957664','6aaL7r5rlp',true,false,'ZTNfkHTlFas');</script><img alt="Archive of Our Own" class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAAqCAMAAAA3b6P4AAACslBMVEWXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACpit0XAAAA5XRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESFBUWFxgZGhscHR4fICEiIyQlJygpKissLi8wMTM0NTY3ODk6Ozw9PkBBQkNFR0hJSktMTU5PUFFSVFVWV1hZWltcXV5fY2RlZmhpamtsbW5vcHFyc3V2d3p7fX5/gIGCg4SFhoeIiouMjY6PkJGSlJWWl5iZmpucnZ6foKGipKWnqKmrrK2ur7CxsrO0tba3uLm6u7y9vr/AwsPFxsfIycrLzM7P0NLT1NXW19na29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+b1plRQAABBRJREFUSMedlvtb1FUQxgcEBMtQggUCxVACu1ApYmRmUqESkCkUREaS4h3JCDONEFPBoBQCJcDIGxkGKYGBkgGSAq4BARIXWWA//0c/7J39LvY0P82cd97nzJlzZuaIKvBRmVqmP/XOrrQNIbOVsNfyjq/3nYrs/1GlWjPe90v28wrgnOiDP7ddeN9WAE47O9DLQI6PksfDMWVjnfuDlCC3b4HbpYcOFjUC9UHKWywtQZNpjTmdgu60uSIis979HRr8bIT4YjVDqV6TFlPgVqjxjBegyM4MfSPepDsm9tAcb5mwHnpfMJmq39C+ZLQCytrfM3deUAylwWYL2+BTc4eICU4aNk/pLgm0DNQuqY+/Nk8zmuX0PmFx83V0eIiIyOPlmq3Wpw+tg1OG7Lk1c8YSzmZsqYhIhLp7pVLy3AugLUqnz73L15boHogUke1cW6ic+5n7QJvhLCLic4cTlmAGRIhdFhfdlcmPpUjCfSj3FpEZ9dQ5W6CFDPrLIc652rj2FWUi0f1wdZGI5DERbg56dlIvO6hyt1UTe8pEZKUa1JEiMVBhDu6GzbHc8LFZUSXHRUTC/oShBHG5DKkmbPUg1xPujSyxSba/sltEREJuA9tl0Qikz9JD8f1ovrjOVtvF7NexRqcsVgOfSIIW6pMDVe7z3zwLHDjFeSfb7GV/P6fXwrqATInuAvraWruB0U2bx4aenqKRJA/MMairhoAsCczr1TWH8dPLfO7w2VRtqKDZFFjsOHBY5JmNX549dzQ5ROQkLY9MQbZvKDCzNgHkGCvaLRGOznS2zQ6e2GJu7gXY7/3kiqQj52ubbo9C143asm2hLsrsD3jV8l2PAbcGsBRN9VuK7B+Gvc3N+WnDKEuqAtlz8FdT37J/5dhdk3vbxUb4Y23UusT08nZAobyTSDeoD8VUmKja3DCVcylk6LB5J7Qcts54Ncv13PVXDMQWLfC9o4SOMxqmd/TqocSKvZirTiIiTusM3NbM5aq9AGccPoYaB73jwn/ItWJ/xQ4RkTWVOupg4VqViEw7ApBTA5l6P9/T8LrV1veHA0RCirQANKU/q193KdZHEiUiMjc2vxUO2E9ml5MlXhn9ANRsVJmAWdUAjAaLiKoRaN9pRX6bdv9VjQD8FGv5HgNuAjS5ioj3Hd3jnyS+7RQfA+BSpONkMFwD5OvOVzEClZNmuV0hE/cAqqOmK7yjD4ENen1Jhpo+y6xt1SXmWoKNEtzS8qOn0Zi3jw7z1hg+BNCZ5m2z/DxmmFuZ7DKbATeBsYKgKX8/C6JNehjfmEZ3DlAb8YC/k1dVlrHx5LHaNNZ7GElzlQdJwOXaOA8REb9sSh2Myw5xn78s/0Fmpzc0V+TmVY1y2lP+h3jF5l9qvPpdnP4I/wITXDY67Xw1sAAAAABJRU5ErkJggg==" data-pagespeed-url-hash="4179492045" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" data-pagespeed-url-hash="1900347101" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a> 
+  </h1>
+
+    <div id="login" class="dropdown">
+      <p class="user actions" role="menu">
+        <a id="login-dropdown" href="/users/login">Log In</a>
+      </p>
+      <div id="small_login" class="simple login">
+	<form class="new_user" id="new_user_session_small" action="/users/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="e06xHtkxMXm6cm8pdOKBXLF+6R2VvqmxS58hyPxZVzTVGMEAMmt5Gj+Bz1Qt7V85VBIq/kLzu3/cXVRD/ZdqJg=="/>
+	<dl>
+    <dt>
+      <label for="user_session_login_small">User name or email:</label></dt>
+    <dd><input id="user_session_login_small" type="text" name="user[login]"/></dd>
+    <dt><label for="user_session_password_small">Password:</label></dt>
+    <dd><input id="user_session_password_small" type="password" name="user[password]"/></dd>
+  </dl>
+  <p class="submit actions">
+    <label for="user_remember_me_small" class="action"><input type="checkbox" name="user[remember_me]" id="user_remember_me_small" value="1"/>Remember Me</label>
+    <input type="submit" name="commit" value="Log In"/>
+  </p>
+</form>
+<ul class="footnote actions">
+  <li><a href="/users/password/new">Forgot password?</a></li>
+    <li>
+      <a href="/invite_requests">Get an Invitation</a>
+    </li>
+</ul>
+
+</div>
+
+    </div>
+
+  <h3 class="landmark heading">Site Navigation</h3>
+  <ul class="primary navigation actions" role="navigation">
+    <li class="dropdown">
+      <a href="/menu/fandoms">Fandoms</a>
+      <ul class="menu" role="menu">
+  <li><a href="/media">All Fandoms</a></li>
+        <li id="medium_5"><a href="/media/Anime%20*a*%20Manga/fandoms">Anime &amp; Manga</a></li>
+        <li id="medium_3"><a href="/media/Books%20*a*%20Literature/fandoms">Books &amp; Literature</a></li>
+        <li id="medium_4"><a href="/media/Cartoons%20*a*%20Comics%20*a*%20Graphic%20Novels/fandoms">Cartoons &amp; Comics &amp; Graphic Novels</a></li>
+        <li id="medium_7"><a href="/media/Celebrities%20*a*%20Real%20People/fandoms">Celebrities &amp; Real People</a></li>
+        <li id="medium_2"><a href="/media/Movies/fandoms">Movies</a></li>
+        <li id="medium_6"><a href="/media/Music%20*a*%20Bands/fandoms">Music &amp; Bands</a></li>
+        <li id="medium_8"><a href="/media/Other%20Media/fandoms">Other Media</a></li>
+        <li id="medium_30198"><a href="/media/Theater/fandoms">Theater</a></li>
+        <li id="medium_1"><a href="/media/TV%20Shows/fandoms">TV Shows</a></li>
+        <li id="medium_476"><a href="/media/Video%20Games/fandoms">Video Games</a></li>
+        <li id="medium_9971"><a href="/media/Uncategorized%20Fandoms/fandoms">Uncategorized Fandoms</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/browse">Browse</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works">Works</a></li>
+  <li><a href="/bookmarks">Bookmarks</a></li>
+  <li><a href="/tags">Tags</a></li>
+  <li><a href="/collections">Collections</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/search">Search</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works/search">Works</a></li>
+  <li><a href="/bookmarks/search">Bookmarks</a></li>
+  <li><a href="/tags/search">Tags</a></li>
+  <li><a href="/people/search">People</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/about">About</a>
+      <ul class="menu" role="menu">
+  <li><a href="/about">About Us</a></li>
+  <li><a href="/admin_posts">News</a></li>
+  <li><a href="/faq">FAQ</a></li>
+  <li><a href="/wrangling_guidelines">Wrangling Guidelines</a></li>
+  <li><a href="/donate">Donate or Volunteer</a></li>
+</ul>
+
+    </li>
+	  <li class="search"><form class="search" id="search" action="/works/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+  <fieldset>
+    <legend>Search Works</legend>
+    <p>
+      <label class="landmark" for="site_search">Work Search:</label>
+      <input class="text" id="site_search" aria-describedby="site_search_tooltip" type="text" name="work_search[query]"/>
+      <span class="tip" role="tooltip" id="site_search_tooltip">tip: words:100</span>
+      <span class="submit actions"><input type="submit" value="Search" class="button"/></span>
+    </p>
+  </fieldset>
+</form></li>
+  </ul>
+
+
+
+  <div class="clear"></div>
+
+</div>
+
+
+
+<!-- END header -->
+
+      <div id="inner" class="wrapper">
+        <!-- BEGIN sidebar -->
+        <!-- END sidebar -->
+
+        <!-- BEGIN main -->
+        <div id="main" class="chapters-show region" role="main">
+          
+          <div class="flash"></div>
+          <!--page description, messages-->
+<!--/descriptions-->
+
+<!--subnav-->
+<!--/subnav-->
+
+  <!-- BEGIN work -->
+  <div class="work"><p class="landmark"><a name="top">&nbsp;</a></p>
+      <!-- BEGIN navigation -->
+<h3 class="landmark heading">Actions</h3>
+<ul class="work navigation actions" role="menu">
+
+
+
+    <li class="chapter entire"><a href="/works/16237082?view_full_work=true">Entire Work</a></li>
+
+
+      <li class="chapter next"><a href="/works/16237082/chapters/37957724#workskin">Next Chapter &#8594;</a></li>
+
+    <li class="chapter" aria-haspopup="true">
+      <noscript>
+        <a href="/works/16237082/navigate">Chapter Index</a>
+      </noscript>
+      <a class="hidden" href="#">Chapter Index</a>
+      <ul id="chapter_index" class="expandable secondary hidden">
+        <li>
+          <form action="/works/16237082/chapters/37957664" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+            <p>
+              <select name="selected_id" id="selected_id"><option selected="selected" value="37957664">1. Chapter 1</option>
+<option value="37957724">2. Chapter 2</option>
+<option value="37957772">3. Chapter 3</option>
+<option value="37957805">4. Chapter 4</option>
+<option value="37957844">5. Chapter 5</option>
+<option value="37957862">6. Chapter 6</option>
+<option value="37957892">7. Chapter 7</option>
+<option value="37957964">8. Chapter 8</option>
+<option value="37958195">9. Chapter 9</option>
+<option value="37958219">10. Chapter 10</option>
+<option value="37958246">11. Chapter 11</option>
+<option value="37958396">12. Chapter 12</option>
+<option value="37958516">13. Chapter 13</option>
+<option value="37958555">14. Chapter 14</option>
+<option value="37958606">15. Chapter 15</option>
+<option value="37958642">16. Chapter 16</option>
+<option value="37958690">17. Chapter 17</option>
+<option value="37958738">18. Chapter 18</option>
+<option value="37958807">19. Chapter 19</option>
+<option value="37958831">20. Chapter 20</option>
+<option value="37958858">21. Chapter 21</option>
+<option value="37958897">22. Chapter 22</option>
+<option value="37958951">23. Chapter 23</option>
+<option value="37958975">24. Chapter 24</option>
+<option value="37958999">25. Chapter 25</option>
+<option value="37959026">26. Chapter 26</option>
+<option value="37959071">27. Chapter 27</option>
+<option value="37959089">28. Chapter 28</option>
+<option value="37959128">29. Chapter 29</option>
+<option value="37959173">30. Chapter 30</option>
+<option value="37959203">31. Chapter 31</option>
+<option value="37959266">32. Chapter 32</option>
+<option value="37959296">33. Chapter 33</option>
+<option value="37959317">34. Chapter 34</option>
+<option value="37959359">35. Chapter 35</option>
+<option value="37959395">36. Chapter 36</option>
+<option value="37959428">37. Chapter 37</option>
+<option value="37959476">38. Chapter 38</option>
+<option value="37959557">39. Chapter 39</option>
+<option value="37959578">40. Chapter 40</option>
+<option value="37959629">41. Chapter 41</option>
+<option value="37959695">42. Chapter 42</option>
+<option value="37959737">43. Chapter 43</option>
+<option value="37959761">44. Chapter 44</option>
+<option value="37959815">45. Chapter 45</option>
+<option value="37959836">46. Chapter 46</option>
+<option value="37959866">47. Chapter 47</option>
+<option value="37959884">48. Chapter 48</option>
+<option value="37959923">49. Chapter 49</option>
+<option value="37959947">50. Chapter 50</option>
+<option value="37959965">51. Chapter 51</option>
+<option value="37960007">52. Chapter 52</option>
+<option value="37960055">53. Chapter 53</option>
+<option value="37960079">54. Chapter 54</option>
+<option value="37960118">55. Chapter 55</option>
+<option value="37960148">56. Chapter 56</option>
+<option value="37960181">57. Chapter 57</option>
+<option value="37960256">58. Chapter 58</option>
+<option value="37960307">59. Chapter 59</option>
+<option value="37960322">60. Chapter 60</option>
+<option value="37960367">61. Chapter 61</option>
+<option value="37960460">62. Chapter 62</option>
+<option value="37960484">63. Chapter 63</option>
+<option value="37960526">64. Chapter 64</option>
+<option value="37960553">65. Chapter 65</option>
+<option value="37960565">66. Chapter 66</option>
+<option value="37960601">67. Chapter 67</option>
+<option value="37960631">68. Chapter 68</option>
+<option value="37960670">69. Chapter 69</option>
+<option value="37960694">70. Chapter 70</option>
+<option value="37960733">71. Chapter 71</option>
+<option value="37960763">72. Chapter 72</option>
+<option value="37960778">73. Chapter 73</option>
+<option value="37960799">74. Chapter 74</option>
+<option value="37960835">75. Chapter 75</option>
+<option value="37960862">76. Chapter 76</option>
+<option value="37960904">77. Chapter 77</option>
+<option value="37960967">78. Chapter 78</option>
+<option value="37960982">79. Chapter 79</option>
+<option value="37961012">80. Chapter 80</option>
+<option value="37961033">81. Chapter 81</option>
+<option value="37961060">82. Chapter 82</option>
+<option value="37961111">83. Chapter 83</option>
+<option value="37961120">84. Chapter 84</option>
+<option value="37961150">85. Chapter 85</option>
+<option value="37961174">86. Chapter 86</option>
+<option value="37961198">87. Chapter 87</option>
+<option value="37961252">88. Chapter 88</option>
+<option value="37961279">89. Chapter 89</option>
+<option value="37961300">90. Chapter 90</option>
+<option value="37961336">91. Chapter 91</option>
+<option value="37961375">92. Chapter 92</option>
+<option value="37961396">93. Chapter 93</option>
+<option value="37961417">94. Chapter 94</option>
+<option value="37961432">95. Chapter 95</option>
+<option value="37961468">96. Chapter 96</option>
+<option value="37961498">97. Chapter 97</option>
+<option value="37961552">98. Chapter 98</option>
+<option value="37962155">99. Chapter 99</option>
+<option value="38012522">100. Chapter 100</option>
+<option value="38177741">101. Chapter 101</option>
+<option value="38248844">102. Chapter 102</option>
+<option value="38392748">103. Chapter 103</option>
+<option value="38535860">104. Chapter 104</option>
+<option value="38535899">105. Chapter 105</option>
+<option value="38579738">106. Chapter 106</option>
+<option value="38764745">107. Chapter 107</option>
+<option value="38834525">108. Chapter 108</option>
+<option value="38942684">109. Chapter 109</option>
+<option value="39017052">110. Chapter 110</option>
+<option value="39069423">111. Chapter 111</option>
+<option value="39233115">112. Chapter 112</option>
+<option value="39353215">113. Chapter 113</option>
+<option value="39356677">114. Chapter 114</option>
+<option value="39356701">115. Chapter 115</option>
+<option value="39416980">116. Chapter 116</option>
+<option value="39480142">117. Chapter 117</option>
+<option value="39607864">118. Chapter 118</option>
+<option value="39808719">119. Chapter 119</option>
+<option value="39868806">120. Chapter 120</option>
+<option value="40113317">121. Chapter 121</option>
+<option value="40356224">122. Chapter 122</option>
+<option value="40470890">123. Chapter 123</option>
+<option value="40592228">124. Chapter 124</option>
+<option value="40733288">125. Chapter 125</option>
+<option value="40851542">126. Chapter 126</option>
+<option value="40984163">127. Chapter 127</option>
+<option value="41044568">128. Chapter 128</option>
+<option value="41253053">129. Chapter 129</option>
+<option value="41360588">130. Chapter 130</option>
+<option value="41493092">131. Chapter 131</option>
+<option value="41575550">132. Chapter 132</option>
+<option value="41689784">133. Chapter 133</option>
+<option value="41874050">134. Chapter 134</option>
+<option value="42012509">135. Chapter 135</option>
+<option value="42131168">136. Chapter 136</option>
+<option value="42234950">137. Chapter 137</option>
+<option value="42275684">138. Chapter 138</option>
+<option value="42351017">139. Chapter 139</option>
+<option value="42438197">140. Chapter 140</option>
+<option value="42557564">141. Chapter 141</option>
+<option value="42584471">142. Chapter 142</option>
+<option value="42759362">143. Chapter 143</option>
+<option value="42845912">144. Chapter 144</option>
+<option value="42972449">145. Chapter 145</option>
+<option value="43158017">146. Chapter 146</option>
+<option value="43262948">147. Chapter 147</option>
+<option value="43368038">148. Chapter 148</option>
+<option value="43448018">149. Chapter 149</option>
+<option value="43498871">150. Chapter 150</option>
+<option value="43610318">151. Chapter 151</option>
+<option value="43695920">152. Chapter 152</option>
+<option value="43818595">153. Chapter 153</option>
+<option value="43998781">154. Chapter 154</option>
+<option value="44057887">155. Chapter 155</option>
+<option value="44229079">156. Chapter 156</option>
+<option value="44340961">157. Chapter 157</option>
+<option value="44480074">158. Chapter 158</option>
+<option value="44579644">159. Chapter 159</option>
+<option value="44650906">160. Chapter 160</option>
+<option value="44651554">161. Chapter 161</option>
+<option value="44767309">162. Chapter 162</option>
+<option value="44862643">163. Chapter 163</option>
+<option value="44988721">164. Chapter 164</option>
+<option value="45035629">165. Chapter 165</option>
+<option value="45241270">166. Chapter 166</option>
+<option value="45339118">167. Chapter 167</option>
+<option value="45463816">168. Chapter 168</option>
+<option value="45548524">169. Chapter 169</option>
+<option value="45764131">170. Chapter 170</option>
+<option value="45838486">171. Chapter 171</option>
+<option value="45937006">172. Chapter 172</option>
+<option value="46039189">173. Chapter 173</option>
+<option value="46212217">174. Chapter 174</option>
+<option value="46291405">175. Chapter 175</option>
+<option value="46572475">176. Chapter 176</option>
+<option value="46681786">177. Chapter 177</option>
+<option value="46940497">178. Chapter 178</option>
+<option value="47137504">179. Chapter 179</option>
+<option value="47343052">180. Chapter 180</option>
+<option value="47460316">181. Chapter 181</option>
+<option value="47580514">182. Chapter 182</option>
+<option value="47676118">183. Chapter 183</option>
+<option value="47781112">184. Chapter 184</option>
+<option value="47950123">185. Chapter 185</option>
+<option value="48055195">186. Chapter 186</option>
+<option value="48206839">187. Chapter 187</option>
+<option value="48400366">188. Chapter 188</option>
+<option value="48573596">189. Chapter 189</option>
+<option value="48622769">190. Chapter 190</option>
+<option value="48761870">191. Chapter 191</option>
+<option value="48869828">192. Chapter 192</option>
+<option value="48996407">193. Chapter 193</option>
+<option value="49090922">194. Chapter 194</option>
+<option value="49173512">195. Chapter 195</option>
+<option value="49301888">196. Chapter 196</option>
+<option value="49334186">197. Chapter 197</option>
+<option value="49526936">198. Chapter 198</option>
+<option value="49794614">199. Chapter 199</option>
+<option value="50175044">200. Chapter 200</option>
+<option value="50922046">201. Chapter 201</option>
+<option value="51071203">202. Chapter 202</option>
+<option value="51246442">203. Chapter 203</option>
+<option value="51435739">204. Chapter 204</option>
+<option value="51671359">205. Chapter 205</option>
+<option value="51908929">206. Chapter 206</option>
+<option value="52088200">207. Chapter 207</option>
+<option value="52650469">208. Chapter 208</option>
+<option value="52876720">209. Chapter 209</option>
+<option value="53125324">210. Chapter 210</option>
+<option value="53186902">211. Chapter 211</option>
+<option value="53430922">212. Chapter 212</option>
+<option value="53679043">213. Chapter 213</option>
+<option value="53908894">214. Chapter 214</option>
+<option value="54155542">215. Chapter 215</option>
+<option value="54415519">216. Chapter 216</option>
+<option value="54705652">217. Chapter 217</option>
+<option value="54948136">218. Chapter 218</option>
+<option value="55045285">219. Chapter 219</option>
+<option value="55447156">220. Chapter 220</option>
+<option value="55727455">221. Chapter 221</option>
+<option value="55853239">222. Chapter 222</option>
+<option value="56040964">223. Chapter 223</option>
+<option value="56362870">224. Chapter 224</option>
+<option value="56731885">225. Chapter 225</option>
+<option value="56998876">226. Chapter 226</option>
+<option value="57353068">227. Chapter 227</option>
+<option value="57718807">228. Chapter 228</option>
+<option value="58053532">229. Chapter 229</option>
+<option value="58397554">230. Chapter 230</option>
+<option value="58708729">231. Chapter 231</option>
+<option value="59366311">232. Chapter 232</option>
+<option value="59721526">233. Chapter 233</option>
+<option value="59971063">234. Chapter 234</option>
+<option value="60155581">235. Chapter 235</option>
+<option value="60422479">236. Chapter 236</option>
+<option value="60804979">237. Chapter 237</option>
+<option value="61616410">238. Chapter 238</option>
+<option value="62016796">239. Chapter 239</option>
+<option value="62384842">240. Chapter 240</option>
+<option value="62672641">241. Chapter 241</option>
+<option value="63012160">242. Chapter 242</option>
+<option value="63419008">243. Chapter 243</option>
+<option value="63740383">244. Chapter 244</option>
+<option value="64118932">245. Chapter 245</option>
+<option value="64393513">246. Chapter 246</option>
+<option value="64708147">247. Chapter 247</option>
+<option value="65052460">248. Chapter 248</option>
+<option value="65501947">249. Chapter 249</option>
+<option value="65914630">250. Chapter 250</option>
+<option value="66108268">251. Chapter 251</option>
+<option value="66208669">252. Chapter 252</option>
+<option value="67406071">253. Chapter 253</option></select>
+              <span class="submit actions"><input type="submit" name="commit" value="Go"/></span>
+            </p>
+</form>        </li>
+        <li><a href="/works/16237082/navigate">Full-page index</a></li>
+      </ul>
+    </li>
+
+
+
+  <li class="comments" id="show_comments_link_top">
+      <a data-remote="true" href="/comments/show_comments?chapter_id=37957664">Comments </a>
+  </li>
+
+
+
+    <li class="share hidden">
+      <a class=" modal" title="Share Work" aria-controls="#modal" href="/works/16237082/share">Share</a>
+    </li>
+
+
+    <li class="download" aria-haspopup="true">
+      <a href="#">Download</a>
+      <ul class="expandable secondary">
+          <li><a href="/downloads/16237082/A%20Second%20Chance.azw3?updated_at=1605366067">AZW3</a></li>
+          <li><a href="/downloads/16237082/A%20Second%20Chance.epub?updated_at=1605366067">EPUB</a></li>
+          <li><a href="/downloads/16237082/A%20Second%20Chance.mobi?updated_at=1605366067">MOBI</a></li>
+          <li><a href="/downloads/16237082/A%20Second%20Chance.pdf?updated_at=1605366067">PDF</a></li>
+          <li><a href="/downloads/16237082/A%20Second%20Chance.html?updated_at=1605366067">HTML</a></li>
+      </ul>
+    </li>
+</ul>
+<!-- END navigation -->
+
+
+<h3 class="landmark heading">Work Header</h3>
+
+<div class="wrapper">
+
+  <dl class="work meta group" role="complementary">
+          <dt class="rating tags">
+
+              Rating:
+          </dt>
+
+          <dd class="rating tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Explicit/works">Explicit</a></li>
+            </ul>
+          </dd>
+          <dt class="warning tags">
+
+              <a href="/tos_faq#tags">Archive Warnings</a>:
+          </dt>
+
+          <dd class="warning tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Graphic%20Depictions%20Of%20Violence/works">Graphic Depictions Of Violence</a></li><li><a class="tag" href="/tags/Major%20Character%20Death/works">Major Character Death</a></li><li><a class="tag" href="/tags/Underage/works">Underage</a></li>
+            </ul>
+          </dd>
+          <dt class="category tags">
+
+              Categories:
+          </dt>
+
+          <dd class="category tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/F*s*M/works">F/M</a></li><li><a class="tag" href="/tags/M*s*M/works">M/M</a></li><li><a class="tag" href="/tags/Multi/works">Multi</a></li>
+            </ul>
+          </dd>
+          <dt class="fandom tags">
+
+              Fandom:
+          </dt>
+
+          <dd class="fandom tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a></li>
+            </ul>
+          </dd>
+          <dt class="relationship tags">
+
+              Relationships:
+          </dt>
+
+          <dd class="relationship tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Remus%20Lupin*s*Nymphadora%20Tonks/works">Remus Lupin/Nymphadora Tonks</a></li><li><a class="tag" href="/tags/Sirius%20Black*s*Original%20Female%20Character(s)/works">Sirius Black/Original Female Character(s)</a></li><li><a class="tag" href="/tags/Sirius%20Black%20*a*%20Remus%20Lupin%20*a*%20Peter%20Pettigrew%20*a*%20James%20Potter/works">Sirius Black &amp; Remus Lupin &amp; Peter Pettigrew &amp; James Potter</a></li><li><a class="tag" href="/tags/Remus%20Lupin*s*Original%20Female%20Character(s)/works">Remus Lupin/Original Female Character(s)</a></li><li><a class="tag" href="/tags/Harry%20Potter*s*Ginny%20Weasley/works">Harry Potter/Ginny Weasley</a></li><li><a class="tag" href="/tags/Sirius%20Black%20*a*%20Harry%20Potter/works">Sirius Black &amp; Harry Potter</a></li><li><a class="tag" href="/tags/Remus%20Lupin%20*a*%20Harry%20Potter/works">Remus Lupin &amp; Harry Potter</a></li>
+            </ul>
+          </dd>
+          <dt class="character tags">
+
+              Characters:
+          </dt>
+
+          <dd class="character tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter/works">Harry Potter</a></li><li><a class="tag" href="/tags/Ginny%20Weasley/works">Ginny Weasley</a></li><li><a class="tag" href="/tags/Sirius%20Black/works">Sirius Black</a></li><li><a class="tag" href="/tags/Remus%20Lupin/works">Remus Lupin</a></li><li><a class="tag" href="/tags/Minerva%20McGonagall/works">Minerva McGonagall</a></li>
+            </ul>
+          </dd>
+          <dt class="freeform tags">
+
+              Additional Tags:
+          </dt>
+
+          <dd class="freeform tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Multiple%20Sex%20Positions/works">Multiple Sex Positions</a></li><li><a class="tag" href="/tags/Oral%20Sex/works">Oral Sex</a></li><li><a class="tag" href="/tags/Sex/works">Sex</a></li><li><a class="tag" href="/tags/From%20Sex%20to%20Love/works">From Sex to Love</a></li><li><a class="tag" href="/tags/Sex%20Talk/works">Sex Talk</a></li><li><a class="tag" href="/tags/Implied*s*Referenced%20Child%20Abuse/works">Implied/Referenced Child Abuse</a></li><li><a class="tag" href="/tags/Past%20Abuse/works">Past Abuse</a></li><li><a class="tag" href="/tags/Emotional*s*Psychological%20Abuse/works">Emotional/Psychological Abuse</a></li><li><a class="tag" href="/tags/Physical%20Abuse/works">Physical Abuse</a></li><li><a class="tag" href="/tags/Torture/works">Torture</a></li><li><a class="tag" href="/tags/Psychological%20Torture/works">Psychological Torture</a></li><li><a class="tag" href="/tags/Implied*s*Referenced%20Torture/works">Implied/Referenced Torture</a></li><li><a class="tag" href="/tags/Blood%20and%20Torture/works">Blood and Torture</a></li><li><a class="tag" href="/tags/Nightmares/works">Nightmares</a></li><li><a class="tag" href="/tags/Comedy/works">Comedy</a></li><li><a class="tag" href="/tags/Father-Son%20Relationship/works">Father-Son Relationship</a></li><li><a class="tag" href="/tags/Shower%20Sex/works">Shower Sex</a></li><li><a class="tag" href="/tags/Gay%20Sex/works">Gay Sex</a></li><li><a class="tag" href="/tags/Gay%20Character/works">Gay Character</a></li><li><a class="tag" href="/tags/Explicit%20Language/works">Explicit Language</a></li><li><a class="tag" href="/tags/Multiple%20Orgasms/works">Multiple Orgasms</a></li><li><a class="tag" href="/tags/Friendship*s*Love/works">Friendship/Love</a></li><li><a class="tag" href="/tags/True%20Love/works">True Love</a></li><li><a class="tag" href="/tags/Recreational%20Drug%20Use/works">Recreational Drug Use</a></li><li><a class="tag" href="/tags/Masturbation/works">Masturbation</a></li><li><a class="tag" href="/tags/Underage%20Masturbation/works">Underage Masturbation</a></li><li><a class="tag" href="/tags/Underage%20Rape*s*Non-con/works">Underage Rape/Non-con</a></li><li><a class="tag" href="/tags/Mind%20Rape/works">Mind Rape</a></li><li><a class="tag" href="/tags/Rape/works">Rape</a></li><li><a class="tag" href="/tags/Lesbian%20Sex/works">Lesbian Sex</a></li><li><a class="tag" href="/tags/Slow%20Romance/works">Slow Romance</a></li><li><a class="tag" href="/tags/Soulmates/works">Soulmates</a></li><li><a class="tag" href="/tags/Falling%20In%20Love/works">Falling In Love</a></li><li><a class="tag" href="/tags/Original%20Character(s)/works">Original Character(s)</a></li>
+            </ul>
+          </dd>
+
+      <dt class="language">
+        Language:
+      </dt>
+      <dd class="language">
+        English
+      </dd>
+
+
+
+    <dt class="stats">Stats:</dt>
+    <dd class="stats">
+<!-- end of cache -->
+
+      <dl class="stats"><dt class="published">Published:</dt><dd class="published">2018-10-08</dd><dt class="status">Updated:</dt><dd class="status">2020-11-15</dd><dt class="words">Words:</dt><dd class="words">1997281</dd><dt class="chapters">Chapters:</dt><dd class="chapters">253/?</dd><dt class="comments">Comments:</dt><dd class="comments">2347</dd><dt class="kudos">Kudos:</dt><dd class="kudos">1679</dd><dt class="bookmarks">Bookmarks:</dt><dd class="bookmarks"><a href="/works/16237082/bookmarks">305</a></dd><dt class="hits">Hits:</dt><dd class="hits">90828</dd></dl>
+      </dd>
+  </dl>
+</div>
+
+
+
+<!-- BEGIN section where work skin applies -->
+<div id="workskin">
+  <div class="preface group">
+    <h2 class="title heading">
+      A Second Chance
+    </h2>
+    <h3 class="byline heading">
+      <a rel="author" href="/users/Breanie/pseuds/Breanie">Breanie</a>
+    </h3>
+
+
+        <div class="summary module" role="complementary">
+          <h3 class="heading">Summary:</h3>
+            <blockquote class="userstuff">
+              <p>What if Sirius didn't spent twelve years in prison, but was given a trial after four years? Follow the story of Sirius Black as he learns what it means to be a father/brother/guardian to his young godson &amp; the story of Harry Potter, a young boy with a loving home who learns about the Marauders from the two men who should have raised him. M for later. Eventual Hinny.</p>
+            </blockquote>
+        </div>
+
+
+  </div>
+
+
+
+    <div id="chapters">
+      <!-- This partial requires local variable 'chapter' -->
+<div class="chapter" id="chapter-1">
+  <!-- chapter management -->
+
+
+  <div class="chapter preface group" role="complementary">
+    <h3 class="title">
+      <a href="/works/16237082/chapters/37957664">Chapter 1</a>
+    </h3>
+
+    <!-- only display byline if different from the main byline -->
+
+
+      <div id="notes" class="notes module">
+        <h3 class="heading">Notes:</h3>
+          <blockquote class="userstuff"><p>Author's Note:</p><p>DISCLAIMER: I do not own the world or characters of JK Rowling - I’m just playing with them.</p><p>This just a little something that I started (back in February of 2018) due to the fact that I've been seeing a lot tumblr posts on my feed lately about the idea of how much better Harry's life would have been if he had been raised by Sirius like he was supposed to be.  Someone posted this adorable fan art of Sirius riding his motorbike with a toddler Harry on a kid’s motorbike and I just thought, oh my God, I want this so much!  This is completely alternate universe obviously, but it’s the start of a story and I’m trying to stick to canon as much as I can while also not; so it’s alternate universe, but also semi-canon, if that makes sense?  </p><p>It is rated M because of language and violence and sexual scenes, which will be present later on in the story.</p><p>This will be the story of Sirius Black and Harry Potter which I think is important to mention.  It is about how they find each other; how Harry learns about the Marauders; and how his life is different.  This story is about Sirius and Harry, but also about Remus Lupin, but will ultimately be a Hinny fic in the end as that is what I love to write about and my favourite couple in the Harry Potter universe outside of Jily.  It is slow-building and long and I think worth the wait (at least I hope so).</p><p>This story can also be found on fanfiction.net under my author's name.  I am new to Ao3.</p><p>Also to any artists out there — if anyone is interested in sending me a drawing of young Harry and Sirius, I would love to use it for the cover. </p><p>For updates, mood boards, and other things related to this story or Harry Potter, please check out my tumblr — breaniebree.</p><p>Thank you very much for reading and please, please review!  </p><p>Your reviews give me life!  They give me inspiration!  And they make me want to keep writing for more than just myself!  Thank you!</p><p>I hope you enjoy ~ A SECOND CHANCE</p></blockquote>
+            <p>
+            (See the end of the chapter for  <a href="/works/16237082/chapters/37957664#chapter_1_endnotes">more notes</a>.)
+            </p>
+      </div>
+  </div>
+
+  <!--main content-->
+  <div class="userstuff module" role="article">
+    <h3 class="landmark heading" id="work">Chapter Text</h3>
+    <p>
+  <u>
+    <b>CHAPTER ONE:</b>
+  </u>
+</p><p> </p><p>
+  <b>They were dead. </b>
+  <span class="Apple-converted-space"> </span>
+</p><p> </p><p>They were both dead and it was all his fault.</p><p> </p><p>He didn’t cry.<span class="Apple-converted-space">  </span>He had no tears left in him to cry.<span class="Apple-converted-space">  </span>He didn’t rage; he’d spent weeks doing just that, slamming his fists into the stones until his knuckles had bled; until his fingers were broken, but the pain never fazed him.<span class="Apple-converted-space">  </span>He ate mechanically as the healer fixed his hands and the next day, he’d punched the stone all over again and again trying to feel something … anything.</p><p> </p><p>He screamed.<span class="Apple-converted-space">  </span>He shouted that he was innocent.<span class="Apple-converted-space">  </span>He threatened to kill his former best friend, his brother.<span class="Apple-converted-space">  </span>But it was for nothing. <span class="Apple-converted-space"> </span></p><p> </p><p>It was all for nothing. <span class="Apple-converted-space"> </span></p><p> </p><p>He was the one who had been betrayed; the spy who wasn’t; he was guilty in the eyes of the world and nothing he could say was going to change that.</p><p> </p><p>And no one was listening anyway.</p><p> </p><p>At first he thought that at least <em>he</em> would come.<span class="Apple-converted-space">  </span>His best friend; the one who he had trusted most outside of the one who was his blood brother.<span class="Apple-converted-space">  </span>The one who he had kept secrets for; the one who was so thankful and confused as to why they even called him friend, called him brother in the first place. <span class="Apple-converted-space"> </span></p><p> </p><p>But he never came. <span class="Apple-converted-space"> </span></p><p> </p><p>He too thought he was guilty; that he was just like the family that he had tried so hard to run from.</p><p> </p><p>The days turned into weeks which turned into months.<span class="Apple-converted-space">  </span>He paced; he ran on the spot; he spent hours doing push-ups and sit-ups; contemplated making a noose with his thin shabby sheet and just ending it until the rage consumed him once more.<span class="Apple-converted-space">  </span>He was <em>not</em> going to take his own life; not while <em>he</em> was out there, the truly guilty party, the spy, the one that he had once called friend and brother.</p><p> </p><p>The months dragged into that first year and his thin hold on his own sanity started to slip away from him as he counted the days, digging the rock into the stone to tally his sentence. <span class="Apple-converted-space"> </span></p><p> </p><p>On his twenty-third birthday, he spent the day in fitful dreams; memories of the woman that he had called mother holding her wand above him and telling him how worthless he was; how spineless and unworthy he was to be in the Most Ancient and Noble House.<span class="Apple-converted-space">  </span>He relived the feel of the torture curse, seeing his mother holding the wand; relived the pain of the belt that his father struck across his back and when he heard his own screams echoing in the stone cell — he clawed at the stone until his nails bled.</p><p> </p><p>By the second year, he forced himself to transform the moment the memories came to the surface.<span class="Apple-converted-space">  </span>He forced himself to think of happy thoughts, but he couldn’t remember any.<span class="Apple-converted-space">  </span>Had he ever been happy?<span class="Apple-converted-space">  </span>He was innocent.<span class="Apple-converted-space">  </span>It wasn’t a happy thought, but it wasn’t a miserable thought either so they couldn’t take it away from him.<span class="Apple-converted-space">  </span>He hadn’t murdered those people, true.<span class="Apple-converted-space">  </span>But could he really be considered innocent? <span class="Apple-converted-space"> </span></p><p> </p><p>It was his fault that they were dead; his decision; his stupid mistake. <span class="Apple-converted-space"> </span></p><p> </p><p>He was innocent. <span class="Apple-converted-space"> </span></p><p> </p><p>He was guilty. <span class="Apple-converted-space"> </span></p><p> </p><p>He was innocent. <span class="Apple-converted-space"> </span></p><p> </p><p>He was guilty.</p><p> </p><p>He paced the cell back and forth; back and forth, marking the days each morning when he woke.<span class="Apple-converted-space">  </span>He slept as a dog; woke to eat the gruel that they called porridge; one hour of push-ups; one hour of sit-ups, keep the body disciplined, keep the mind sane, he told himself repeatedly.<span class="Apple-converted-space">  </span>He’d nap as a dog; wake to eat the gruel that they called stew and as the first wave of unhappy memories would unfold into his system, he’d transform and whimper in the corner.</p><p> </p><p>By the third year, he had his routine down to a science.<span class="Apple-converted-space">  </span>No one spoke to him.<span class="Apple-converted-space">  </span>The healer came to check on him once a month; let him wash with a bowl of lukewarm water and a clean cloth.<span class="Apple-converted-space">  </span>The healer never spoke and the soul-sucking creatures hovered as the healer trembled, waiting for him to finish so that he could leave.<span class="Apple-converted-space">  </span>The moment that the healer was gone, he became a dog once more.</p><p> </p><p>When he started his count into year four, he knew that he would die alone in this very cell.<span class="Apple-converted-space">  </span>No one would ever discover that his old friend had been the real one to betray them; the real one to trick those who cared for him. <span class="Apple-converted-space"> </span></p><p> </p><p>No one would ever know his story.</p><p> </p><p>“Sirius?”</p><p> </p><p>The voice sounded foreign, almost too far away.<span class="Apple-converted-space">  </span>He recognized the Scottish burr, but he couldn’t place it.<span class="Apple-converted-space">  </span>No one had spoken to him in four years, six months, and seventeen days.<span class="Apple-converted-space">  </span>Was that his name?<span class="Apple-converted-space">  </span>His head pounded, but for the first time all day it was clear, telling him that the soul sucking creatures had distanced themselves, at least partially, from his cell.</p><p> </p><p>“Sirius Black?”</p><p> </p><p>The hesitation in the voice now got his attention and he realized that it wasn’t a memory; <em>someone</em> was actually speaking to him. <span class="Apple-converted-space"> </span></p><p> </p><p>Someone was outside of his cell. <span class="Apple-converted-space"> </span></p><p> </p><p>He moved towards the bars, long thin fingers gripping the iron and his grey eyes bruised around the edges meeting the square beady brown eyes that he recognized so well and his heart stopped at the sight of them.</p><p> </p><p>“Minnie?”<span class="Apple-converted-space">  </span>he whispered hoarsely, the old nickname slipping out before he consciously thought about it.</p><p> </p><p>The brown eyes rolled in exaggeration at him and for the first time in four years, six months, and seventeen days — he felt a bubble of laughter rising in his throat.</p><p> </p><p>“Sirius,” she said softly, reaching to hold his ice cold hands where they clutched the iron bars tightly.<span class="Apple-converted-space">  </span>“You remember me?<span class="Apple-converted-space">  </span>I was worried that I might have been too late.<span class="Apple-converted-space">  </span>The healer said… never mind.<span class="Apple-converted-space">  </span>You <em>know </em>me.”</p><p> </p><p>He shook his head, clearing the cobwebs that lingered there.<span class="Apple-converted-space">  </span>“Yeah,” he said roughly.<span class="Apple-converted-space">  </span>“Why are you here, Professor?”</p><p> </p><p>Her eyes looked sad as she gripped his hands tightly from where they were clutched<span class="Apple-converted-space">  </span>around the bars.<span class="Apple-converted-space">  </span>“I’m sorry that it took so long, Sirius, I’m so sorry, but you are <em>finally </em>getting a trial.<span class="Apple-converted-space">  </span>A trial to prove your innocence.”</p><p> </p><p>His dark grey eyes met hers in shock.<span class="Apple-converted-space">  </span>“What?”</p><p> </p><p>“I don’t believe for a moment that you betrayed James and Lily, Sirius.<span class="Apple-converted-space">  </span>I never have.<span class="Apple-converted-space">  </span>James was like a brother to you and you… you loved that little boy.<span class="Apple-converted-space">  </span>You deserve a trial.<span class="Apple-converted-space">  </span>Maybe if we can understand why you…”</p><p> </p><p>Sirius snorted now, his fingers gripping hers as he realized what she was saying.<span class="Apple-converted-space">  </span>“You believe that I murdered thirteen people in a crowded street, but I didn’t betray my best friends.<span class="Apple-converted-space">  </span>Interesting view you have of me, Minnie, my dear.”</p><p> </p><p>“Sirius,” she said again, her voice quiet and stern.<span class="Apple-converted-space">  </span>“I believe that you are innocent and I have been campaigning for you to be set free from the moment that you were arrested.<span class="Apple-converted-space">  </span>Finally, the Minister has taken heed of my words and agreed to give you the trial you should have been given years ago.<span class="Apple-converted-space">  </span>It will be in three days time.”</p><p> </p><p>Sirius squeezed her fingers gently.<span class="Apple-converted-space">  </span>“I am innocent, Minnie.<span class="Apple-converted-space">  </span>I would never have betrayed them, never!”</p><p> </p><p>McGonagall nodded, smiling at him.<span class="Apple-converted-space">  </span>“I know.<span class="Apple-converted-space">  </span>I will see you in three days, Sirius.<span class="Apple-converted-space">  </span>I’m rooting for you.”</p><p> </p><p>As he watched her leave, he felt the darkness pressing in on him once again and he moved away from the bars, letting his back rest against the cool stone.</p><p> </p><p>Four years, six months, seventeen days — but he was getting a trial.</p><p> </p>
+  </div>
+  <!--/main-->
+
+    <div class="chapter preface group">
+      <div class="end notes module" id="chapter_1_endnotes" role="complementary">
+        <h3 class="heading">Notes:</h3>
+        <blockquote class="userstuff">
+          <p>End Author’s Note:</p><p>Thank you for reading and please review.</p>
+        </blockquote>
+      </div>
+    </div>
+
+</div>
+
+<!-- end of cache -->
+
+    </div>
+  
+  
+    </div>
+    <!-- END work skin -->
+  </div>
+  <!-- END work -->
+
+  <!-- BEGIN comment section -->
+  <!-- Gets embedded anywhere we need to list comments on a top-level commentable. We need the local variable "commentable" here. -->
+<div id="feedback" class="feedback" role="complementary">
+
+  <h3 class="landmark heading">Actions</h3>
+
+  <ul class="actions" role="navigation">
+      <li><a href="#main">&#8593; Top</a></li>
+
+
+      <li><a href="/works/16237082/chapters/37957724#workskin">Next Chapter &#8594;</a></li>
+
+
+
+
+      <li>
+        <form id="new_kudo" action="/kudos" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="OZcJmAPfNwk0T3Hagruu+yxc3RhpXrOUQ6wvQNwST/6XwXmG6IV/arG80afbtHCeyTAe+74ToVrUblrL3dxy7A=="/>
+          <input value="16237082" type="hidden" name="kudo[commentable_id]" id="kudo_commentable_id"/>
+          <input value="Work" type="hidden" name="kudo[commentable_type]" id="kudo_commentable_type"/>
+          <input type="submit" name="commit" value="Kudos ♥" id="kudo_submit"/>
+</form>      </li>
+
+
+
+
+        <li id="show_comments_link"><a data-remote="true" href="/comments/show_comments?chapter_id=37957664">Comments (19)</a></li>
+  </ul>
+
+  <div id="kudos_message"></div>
+
+  <h3 class="landmark heading"><a name="comments">Comments</a></h3>
+
+  
+
+    <div id="kudos">
+      <p class="kudos">
+          <a href="/users/missLeo">missLeo</a>, <a href="/users/Vritz">Vritz</a>, <a href="/users/RealHuman">RealHuman</a>, <a href="/users/Favestories">Favestories</a>, <a href="/users/Malecklance">Malecklance</a>, <a href="/users/Sindaamanda">Sindaamanda</a>, <a href="/users/teresa_the_traitor">teresa_the_traitor</a>, <a href="/users/Paus24">Paus24</a>, <a href="/users/wolfstarisendgame">wolfstarisendgame</a>, <a href="/users/elanceq">elanceq</a>, <a href="/users/wewouldabeenbynow">wewouldabeenbynow</a>, <a href="/users/LittleSilence13">LittleSilence13</a>, <a href="/users/gaudium843">gaudium843</a>, <a href="/users/MaddieFurtado">MaddieFurtado</a>, <a href="/users/mckinleyyyyyyy">mckinleyyyyyyy</a>, <a href="/users/valec_46">valec_46</a>, <a href="/users/OldfashionedAnglophile">OldfashionedAnglophile</a>, <a href="/users/coconut5639">coconut5639</a>, <a href="/users/LiaD">LiaD</a>, <a href="/users/Syzer97">Syzer97</a>, <a href="/users/kgiraffe">kgiraffe</a>, <a href="/users/ungodlyravenpuff">ungodlyravenpuff</a>, <a href="/users/AMacDaddy">AMacDaddy</a>, <a href="/users/Aenessa">Aenessa</a>, <a href="/users/Shrepa">Shrepa</a>, <a href="/users/Bgould789">Bgould789</a>, <a href="/users/MasterofMindz">MasterofMindz</a>, <a href="/users/earth_to_sonia">earth_to_sonia</a>, <a href="/users/ladydragontl">ladydragontl</a>, <a href="/users/1maxriem1">1maxriem1</a>, <a href="/users/sab65">sab65</a>, <a href="/users/Ash8462">Ash8462</a>, <a href="/users/djpatel">djpatel</a>, <a href="/users/Escape21">Escape21</a>, <a href="/users/SeriouslySam">SeriouslySam</a>, <a href="/users/Edett">Edett</a>, <a href="/users/camigraphy">camigraphy</a>, <a href="/users/Celery07">Celery07</a>, <a href="/users/Stormchaser20">Stormchaser20</a>, <a href="/users/CDeynk">CDeynk</a>, <a href="/users/sodoesrachael">sodoesrachael</a>, <a href="/users/ka0di_angel_uzumaki">ka0di_angel_uzumaki</a>, <a href="/users/fuzzybunnysocks">fuzzybunnysocks</a>, <a href="/users/Pruitfizza">Pruitfizza</a>, <a href="/users/al_narru">al_narru</a>, <a href="/users/VulcanRavenClaw">VulcanRavenClaw</a>, <a href="/users/Legolas_Greenleaf">Legolas_Greenleaf</a>, <a href="/users/NotAMultitool">NotAMultitool</a>, <a href="/users/EvellynLaurentins">EvellynLaurentins</a>, <a href="/users/Thephoenix94">Thephoenix94</a>, 
+          <a id="kudos_summary" href="/works/16237082/kudos">
+               and 374 more users
+</a>          <span class="kudos_expanded hidden">
+            <a href="/users/PetraMysticaCLXV">PetraMysticaCLXV</a>, <a href="/users/erober20">erober20</a>, <a href="/users/Quartz">Quartz</a>, <a href="/users/D_jewelled">D_jewelled</a>, <a href="/users/Rosedewdrop">Rosedewdrop</a>, <a href="/users/Gildingthis">Gildingthis</a>, <a href="/users/angelattackss">angelattackss</a>, <a href="/users/kol_chrono">kol_chrono</a>, <a href="/users/Rivas_gaby">Rivas_gaby</a>, <a href="/users/Mizfitz22">Mizfitz22</a>, <a href="/users/karenpond">karenpond</a>, <a href="/users/pinktokkimin">pinktokkimin</a>, <a href="/users/Padfoo">Padfoo</a>, <a href="/users/Roxy_ricki">Roxy_ricki</a>, <a href="/users/Bambi_is_here_1">Bambi_is_here_1</a>, <a href="/users/PixieJinxes">PixieJinxes</a>, <a href="/users/Mawkinberd">Mawkinberd</a>, <a href="/users/gungunb06">gungunb06</a>, <a href="/users/YsabelTriana">YsabelTriana</a>, <a href="/users/Terrahsims">Terrahsims</a>, <a href="/users/little_hawk395">little_hawk395</a>, <a href="/users/AleXym22">AleXym22</a>, <a href="/users/crazy_capybara">crazy_capybara</a>, <a href="/users/Kyregiusz">Kyregiusz</a>, <a href="/users/kevinsayshi">kevinsayshi</a>, <a href="/users/wildstyle_101">wildstyle_101</a>, <a href="/users/Anixara">Anixara</a>, <a href="/users/jensindenial3516">jensindenial3516</a>, <a href="/users/Mysstltaiin">Mysstltaiin</a>, <a href="/users/TanzaniteWrites">TanzaniteWrites</a>, <a href="/users/Cynthia411">Cynthia411</a>, <a href="/users/The_Great_Walnuts">The_Great_Walnuts</a>, <a href="/users/muffimtriste">muffimtriste</a>, <a href="/users/Triskell_Nyx">Triskell_Nyx</a>, <a href="/users/SingerOnTheRise">SingerOnTheRise</a>, <a href="/users/xBethx">xBethx</a>, <a href="/users/Enimia13">Enimia13</a>, <a href="/users/I_wish_I_was_a_wizard_oof69">I_wish_I_was_a_wizard_oof69</a>, <a href="/users/Isabel3710">Isabel3710</a>, <a href="/users/har36joke28">har36joke28</a>, <a href="/users/LewisJo">LewisJo</a>, <a href="/users/vampiregrimmjow">vampiregrimmjow</a>, <a href="/users/JuniorCinderella">JuniorCinderella</a>, <a href="/users/ahopelessromantic">ahopelessromantic</a>, <a href="/users/rebelsaurus29">rebelsaurus29</a>, <a href="/users/juqheadjones">juqheadjones</a>, <a href="/users/ginandpasta">ginandpasta</a>, <a href="/users/Leapyearbaby29">Leapyearbaby29</a>, <a href="/users/Dumb_thotticus">Dumb_thotticus</a>, <a href="/users/Whyam1writing">Whyam1writing</a>, <a href="/users/MissLuxe">MissLuxe</a>, <a href="/users/Chitohru">Chitohru</a>, <a href="/users/failuretoland">failuretoland</a>, <a href="/users/ButterflyRogue">ButterflyRogue</a>, <a href="/users/kamiam123">kamiam123</a>, <a href="/users/hppeach429">hppeach429</a>, <a href="/users/averylou4">averylou4</a>, <a href="/users/Sez3037">Sez3037</a>, <a href="/users/sisi_fangirl">sisi_fangirl</a>, <a href="/users/souzana_barnes">souzana_barnes</a>, <a href="/users/AnnaVronsky">AnnaVronsky</a>, <a href="/users/mssn">mssn</a>, <a href="/users/SherrylNiria">SherrylNiria</a>, <a href="/users/SmilingNerdyCat">SmilingNerdyCat</a>, <a href="/users/Qrowisbestgirl">Qrowisbestgirl</a>, <a href="/users/Emily34">Emily34</a>, <a href="/users/PetaZedrok">PetaZedrok</a>, <a href="/users/Endinium">Endinium</a>, <a href="/users/daughterofwisdomandsea">daughterofwisdomandsea</a>, <a href="/users/TheMortka">TheMortka</a>, <a href="/users/littlebutnotfierce">littlebutnotfierce</a>, <a href="/users/ResaThee">ResaThee</a>, <a href="/users/soyouthinkyoucanread">soyouthinkyoucanread</a>, <a href="/users/Felkros">Felkros</a>, <a href="/users/PigTheFish">PigTheFish</a>, <a href="/users/ABlackRaven">ABlackRaven</a>, <a href="/users/amazingcharlie">amazingcharlie</a>, <a href="/users/giulss98">giulss98</a>, <a href="/users/Ezorai">Ezorai</a>, <a href="/users/junkl0rd">junkl0rd</a>, <a href="/users/Caighlee">Caighlee</a>, <a href="/users/ltcferreira">ltcferreira</a>, <a href="/users/TalisRuadair">TalisRuadair</a>, <a href="/users/Deffka26">Deffka26</a>, <a href="/users/Ismira">Ismira</a>, <a href="/users/LittleEngland">LittleEngland</a>, <a href="/users/kortiz709">kortiz709</a>, <a href="/users/notthatchhavi">notthatchhavi</a>, <a href="/users/AnnaKatharina2306">AnnaKatharina2306</a>, <a href="/users/MrMoonPie">MrMoonPie</a>, <a href="/users/Pygovaam">Pygovaam</a>, <a href="/users/0kami">0kami</a>, <a href="/users/lozz990">lozz990</a>, <a href="/users/juhcapirama">juhcapirama</a>, <a href="/users/forgetful_biscuits">forgetful_biscuits</a>, <a href="/users/Disterion">Disterion</a>, <a href="/users/Cavan">Cavan</a>, <a href="/users/OKMurphy">OKMurphy</a>, <a href="/users/Acacia14">Acacia14</a>, <a href="/users/isacat17">isacat17</a>, <a href="/users/SarahTheChimera">SarahTheChimera</a>, <a href="/users/Kellen_der_Heide">Kellen_der_Heide</a>, <a href="/users/enrapturedreader">enrapturedreader</a>, <a href="/users/themadmage">themadmage</a>, <a href="/users/Animals52">Animals52</a>, <a href="/users/Kashua">Kashua</a>, <a href="/users/oaksun111">oaksun111</a>, <a href="/users/Natmare">Natmare</a>, <a href="/users/thesnaccthatsmilesback">thesnaccthatsmilesback</a>, <a href="/users/RandomObserver">RandomObserver</a>, <a href="/users/Matt71478">Matt71478</a>, <a href="/users/kayceeeeveeee">kayceeeeveeee</a>, <a href="/users/Dinovictor">Dinovictor</a>, <a href="/users/BluestWitch">BluestWitch</a>, <a href="/users/Renlily1224">Renlily1224</a>, <a href="/users/mrippa">mrippa</a>, <a href="/users/Karsia">Karsia</a>, <a href="/users/deadptarmigan">deadptarmigan</a>, <a href="/users/kademb99">kademb99</a>, <a href="/users/seijoh">seijoh</a>, <a href="/users/LuckyILikeIt">LuckyILikeIt</a>, <a href="/users/RiverBunniee">RiverBunniee</a>, <a href="/users/Tonya">Tonya</a>, <a href="/users/Butterflywhisperer">Butterflywhisperer</a>, <a href="/users/deathbyegg">deathbyegg</a>, <a href="/users/Rangerwill50">Rangerwill50</a>, <a href="/users/Rahkatrekmminnaa">Rahkatrekmminnaa</a>, <a href="/users/Smudge_Rat">Smudge_Rat</a>, <a href="/users/Quick_Bent">Quick_Bent</a>, <a href="/users/Beguiled">Beguiled</a>, <a href="/users/cwdavies">cwdavies</a>, <a href="/users/interesting_sand">interesting_sand</a>, <a href="/users/Darkscar26">Darkscar26</a>, <a href="/users/Martini1937">Martini1937</a>, <a href="/users/blueleaves">blueleaves</a>, <a href="/users/candytt">candytt</a>, <a href="/users/Anerol152">Anerol152</a>, <a href="/users/Archo">Archo</a>, <a href="/users/VioletWolfe">VioletWolfe</a>, <a href="/users/S14zenki">S14zenki</a>, <a href="/users/Rayyork93">Rayyork93</a>, <a href="/users/Sister_Says_Go">Sister_Says_Go</a>, <a href="/users/Suchaskiver">Suchaskiver</a>, <a href="/users/What_a_WonderfulWorld">What_a_WonderfulWorld</a>, <a href="/users/Aigaion">Aigaion</a>, <a href="/users/DerLykaner">DerLykaner</a>, <a href="/users/N1ghtAngel">N1ghtAngel</a>, <a href="/users/RhiRosario">RhiRosario</a>, <a href="/users/ImLovable">ImLovable</a>, <a href="/users/Kinkybo">Kinkybo</a>, <a href="/users/missdone">missdone</a>, <a href="/users/HufflepuffBanana">HufflepuffBanana</a>, <a href="/users/SquidgyTV">SquidgyTV</a>, <a href="/users/beerandcore">beerandcore</a>, <a href="/users/Deisuan">Deisuan</a>, <a href="/users/Allyriablack8">Allyriablack8</a>, <a href="/users/AnnaChase123">AnnaChase123</a>, <a href="/users/SylaiseHearthKeeper95">SylaiseHearthKeeper95</a>, <a href="/users/I_am_Jude">I_am_Jude</a>, <a href="/users/Katiekat197">Katiekat197</a>, <a href="/users/kroman143">kroman143</a>, <a href="/users/legaweinanalil">legaweinanalil</a>, <a href="/users/xXSunnivahXx">xXSunnivahXx</a>, <a href="/users/Arcanis">Arcanis</a>, <a href="/users/PotatoFaye">PotatoFaye</a>, <a href="/users/aNa_5stars">aNa_5stars</a>, <a href="/users/adamaris12526">adamaris12526</a>, <a href="/users/alphiesthecat">alphiesthecat</a>, <a href="/users/madapingu">madapingu</a>, <a href="/users/Majviva">Majviva</a>, <a href="/users/shoredkafka">shoredkafka</a>, <a href="/users/retrop">retrop</a>, <a href="/users/Lovepuppy1011">Lovepuppy1011</a>, <a href="/users/KoolKat1004">KoolKat1004</a>, <a href="/users/Ridonkulous2">Ridonkulous2</a>, <a href="/users/LiaDreyar">LiaDreyar</a>, <a href="/users/Hellrespawn">Hellrespawn</a>, <a href="/users/IrisMikaelson">IrisMikaelson</a>, <a href="/users/PookiPooki">PookiPooki</a>, <a href="/users/schokofreak">schokofreak</a>, <a href="/users/Ellycup">Ellycup</a>, <a href="/users/pottyhead">pottyhead</a>, <a href="/users/That_One_Shipper">That_One_Shipper</a>, <a href="/users/Hana_xx">Hana_xx</a>, <a href="/users/ThaliaGrace318">ThaliaGrace318</a>, <a href="/users/masawi">masawi</a>, <a href="/users/PersonOfEarth">PersonOfEarth</a>, <a href="/users/ThePumpkinKingsWife">ThePumpkinKingsWife</a>, <a href="/users/ThePizzaLover">ThePizzaLover</a>, <a href="/users/Caecus57">Caecus57</a>, <a href="/users/Blackamor">Blackamor</a>, <a href="/users/NRietveld">NRietveld</a>, <a href="/users/TheOneWithWritersBlock">TheOneWithWritersBlock</a>, <a href="/users/kira9018">kira9018</a>, <a href="/users/Damayanti">Damayanti</a>, <a href="/users/emmafran25">emmafran25</a>, <a href="/users/ElderEldrazi">ElderEldrazi</a>, <a href="/users/Pavk9918">Pavk9918</a>, <a href="/users/ChatrBox16">ChatrBox16</a>, <a href="/users/kaibagirl">kaibagirl</a>, <a href="/users/Ghost1704">Ghost1704</a>, <a href="/users/Random_fan13">Random_fan13</a>, <a href="/users/Yanksrock615">Yanksrock615</a>, <a href="/users/ntlpurpolia">ntlpurpolia</a>, <a href="/users/aat2184">aat2184</a>, <a href="/users/NSabrina">NSabrina</a>, <a href="/users/abrandnewstart">abrandnewstart</a>, <a href="/users/mindread">mindread</a>, <a href="/users/wavelength_ofcelestial_intent">wavelength_ofcelestial_intent</a>, <a href="/users/Jaganoto">Jaganoto</a>, <a href="/users/Pegg7">Pegg7</a>, <a href="/users/margarita_piqui">margarita_piqui</a>, <a href="/users/VividSnare">VividSnare</a>, <a href="/users/Vvulpecula">Vvulpecula</a>, <a href="/users/RainbowO">RainbowO</a>, <a href="/users/LaureWithAnE">LaureWithAnE</a>, <a href="/users/thenewslenderman">thenewslenderman</a>, <a href="/users/Homarid">Homarid</a>, <a href="/users/HoneyWrench">HoneyWrench</a>, <a href="/users/DRedWings">DRedWings</a>, <a href="/users/Evyione">Evyione</a>, <a href="/users/marcytherock">marcytherock</a>, <a href="/users/crafter4">crafter4</a>, <a href="/users/Ninjaman2">Ninjaman2</a>, <a href="/users/free_bee">free_bee</a>, <a href="/users/Rayssa_RDuarte">Rayssa_RDuarte</a>, <a href="/users/gracie328">gracie328</a>, <a href="/users/SnowWhite86">SnowWhite86</a>, <a href="/users/jtitmarsh86">jtitmarsh86</a>, <a href="/users/Jaco_1_2">Jaco_1_2</a>, <a href="/users/Mollusc">Mollusc</a>, <a href="/users/SzunAko">SzunAko</a>, <a href="/users/Padfootette">Padfootette</a>, <a href="/users/pottermum">pottermum</a>, <a href="/users/lovelyellie">lovelyellie</a>, <a href="/users/fangirl94">fangirl94</a>, <a href="/users/FatimaAbbasRizvi">FatimaAbbasRizvi</a>, <a href="/users/AmyLee96">AmyLee96</a>, <a href="/users/Clupeidae">Clupeidae</a>, <a href="/users/siriush">siriush</a>, <a href="/users/flowermage">flowermage</a>, <a href="/users/Dancing4every1">Dancing4every1</a>, <a href="/users/0_Marbs">0_Marbs</a>, <a href="/users/Raesicle">Raesicle</a>, <a href="/users/DarkLord935">DarkLord935</a>, <a href="/users/hilli98215">hilli98215</a>, <a href="/users/AkaKitsune133">AkaKitsune133</a>, <a href="/users/Savageness321">Savageness321</a>, <a href="/users/LadyPhoenix">LadyPhoenix</a>, <a href="/users/KrystanLee">KrystanLee</a>, <a href="/users/happybunny688">happybunny688</a>, <a href="/users/Social_Elessar">Social_Elessar</a>, <a href="/users/Yami_Faerie">Yami_Faerie</a>, <a href="/users/xKomaru">xKomaru</a>, <a href="/users/therosylane">therosylane</a>, <a href="/users/PsiStorm">PsiStorm</a>, <a href="/users/razielle_tzu">razielle_tzu</a>, <a href="/users/SuicideQueen">SuicideQueen</a>, <a href="/users/Soveliss">Soveliss</a>, <a href="/users/Marinka">Marinka</a>, <a href="/users/Certorian">Certorian</a>, <a href="/users/mrs_pamplemousse">mrs_pamplemousse</a>, <a href="/users/Kmi_Kmi">Kmi_Kmi</a>, <a href="/users/WhovianLeiaGranger">WhovianLeiaGranger</a>, <a href="/users/kellykat1889">kellykat1889</a>, <a href="/users/xXQueenofDragonsXx">xXQueenofDragonsXx</a>, <a href="/users/Velveteen_Writes">Velveteen_Writes</a>, <a href="/users/mingxingxing">mingxingxing</a>, <a href="/users/Orangeapple91">Orangeapple91</a>, <a href="/users/JustReading_1867">JustReading_1867</a>, <a href="/users/CalicoJane">CalicoJane</a>, <a href="/users/mango_0520">mango_0520</a>, <a href="/users/DisneyGirl1991">DisneyGirl1991</a>, <a href="/users/Maester_Aemon_Heterodyne">Maester_Aemon_Heterodyne</a>, <a href="/users/MP4">MP4</a>, <a href="/users/Hellpony">Hellpony</a>, <a href="/users/musingmarauder">musingmarauder</a>, <a href="/users/GryffindorHealer">GryffindorHealer</a>, <a href="/users/ashborn">ashborn</a>, <a href="/users/Idlemanpop">Idlemanpop</a>, <a href="/users/Bubble_Corsair119">Bubble_Corsair119</a>, <a href="/users/Mary_Hinatinha">Mary_Hinatinha</a>, <a href="/users/KielWhitehead24">KielWhitehead24</a>, <a href="/users/lilbbyjl">lilbbyjl</a>, <a href="/users/Delgoth24">Delgoth24</a>, <a href="/users/Maddiemoomoe">Maddiemoomoe</a>, <a href="/users/aldersprig">aldersprig</a>, <a href="/users/Lilylizzy2000">Lilylizzy2000</a>, <a href="/users/Angel_of_Mysteries">Angel_of_Mysteries</a>, <a href="/users/unchangeable57">unchangeable57</a>, <a href="/users/IsabelleTudor">IsabelleTudor</a>, <a href="/users/doggie52191">doggie52191</a>, <a href="/users/Mythical_Murder_Of_Crows">Mythical_Murder_Of_Crows</a>, <a href="/users/IllogicalHuman">IllogicalHuman</a>, <a href="/users/Greaterthan84">Greaterthan84</a>, <a href="/users/catherineandrea23">catherineandrea23</a>, <a href="/users/Rina1997">Rina1997</a>, <a href="/users/JMC6509">JMC6509</a>, <a href="/users/kyciona">kyciona</a>, <a href="/users/Matroushka">Matroushka</a>, <a href="/users/thedreamerswin">thedreamerswin</a>, <a href="/users/Itsaka">Itsaka</a>, <a href="/users/leflemmeenrose">leflemmeenrose</a>, <a href="/users/0dysse">0dysse</a>, <a href="/users/Naluforever3">Naluforever3</a>, <a href="/users/tony0314">tony0314</a>, <a href="/users/via">via</a>, <a href="/users/MaluhXavier">MaluhXavier</a>, <a href="/users/Jmcglynn522">Jmcglynn522</a>, <a href="/users/Vivadufruit">Vivadufruit</a>, <a href="/users/MotherOfDragons20">MotherOfDragons20</a>, <a href="/users/LordStrider">LordStrider</a>, <a href="/users/archiveScrapper">archiveScrapper</a>, <a href="/users/keraluv22">keraluv22</a>, <a href="/users/TheWonderingWizard">TheWonderingWizard</a>, <a href="/users/Hinami">Hinami</a>, <a href="/users/Jpink3125">Jpink3125</a>, <a href="/users/krelofwerewolf">krelofwerewolf</a>, <a href="/users/SoCalGirl28">SoCalGirl28</a>, <a href="/users/Pappadogg">Pappadogg</a>, <a href="/users/TheQueenOfStars">TheQueenOfStars</a>, <a href="/users/charlie_rj">charlie_rj</a>, <a href="/users/NinjagirlRebecca">NinjagirlRebecca</a>, <a href="/users/oh_sinnerman">oh_sinnerman</a>, <a href="/users/1moonlightxnder">1moonlightxnder</a>, <a href="/users/MandT">MandT</a>, <a href="/users/Random_Account1789">Random_Account1789</a>, <a href="/users/mxgnuz">mxgnuz</a>, <a href="/users/ForeverBloodyWolf">ForeverBloodyWolf</a>, <a href="/users/juhcl">juhcl</a>, <a href="/users/Bigmike33321">Bigmike33321</a>, <a href="/users/Asiegon">Asiegon</a>, <a href="/users/RebelDixie">RebelDixie</a>, <a href="/users/chocolate_fish">chocolate_fish</a>, <a href="/users/Amyleigh87">Amyleigh87</a>, <a href="/users/Lunaluvr95">Lunaluvr95</a>, <a href="/users/Thenorthernbaby">Thenorthernbaby</a>, <a href="/users/Painted_whisps">Painted_whisps</a>, <a href="/users/TMikey">TMikey</a>, <a href="/users/milady89">milady89</a>, <a href="/users/SwordZword">SwordZword</a>, <a href="/users/evilmidget369">evilmidget369</a>, <a href="/users/NPP6">NPP6</a>, <a href="/users/willow96">willow96</a>, <a href="/users/TheDeathOfGhosts">TheDeathOfGhosts</a>, <a href="/users/eevylynn">eevylynn</a>, <a href="/users/huff_le_puff">huff_le_puff</a>, <a href="/users/HpF2">HpF2</a>, <a href="/users/OwlChaser113">OwlChaser113</a>, <a href="/users/DuncanSinclair">DuncanSinclair</a>, <a href="/users/Annaminadara">Annaminadara</a>, <a href="/users/Fenrix_Shadowbane">Fenrix_Shadowbane</a>, <a href="/users/zxreen">zxreen</a>, <a href="/users/Bosma18">Bosma18</a>, <a href="/users/abbisfazbear">abbisfazbear</a>, <a href="/users/Amy_d27">Amy_d27</a>, <a href="/users/Shaded">Shaded</a>, <a href="/users/RedheadLover">RedheadLover</a>, <a href="/users/Ols3017">Ols3017</a>, <a href="/users/Zolaris">Zolaris</a>, <a href="/users/PinkLady12">PinkLady12</a>, <a href="/users/Sugarcoated_Wishes">Sugarcoated_Wishes</a>, <a href="/users/JosAttic">JosAttic</a>, <a href="/users/azukin_notsumi">azukin_notsumi</a>, <a href="/users/tricia91593">tricia91593</a>, <a href="/users/Juliel">Juliel</a>, <a href="/users/bruciewayneisbatman">bruciewayneisbatman</a>, <a href="/users/Steelcode">Steelcode</a>, <a href="/users/Xenia_Moon">Xenia_Moon</a>, <a href="/users/HPforLife">HPforLife</a>, <a href="/users/mishaleh">mishaleh</a>, <a href="/users/dekuismybaby">dekuismybaby</a>, <a href="/users/Dragonstone2017">Dragonstone2017</a> and <a href="/users/emma_elm">emma_elm</a>
+          </span>
+             as well as 
+          1255 guests
+         left kudos on this work!
+        <span class="kudos_expanded hidden">
+          <a id="kudos_collapser" href="#">(collapse)</a>
+        </span>
+      </p>
+</div>
+
+
+    <div id="add_comment_placeholder" title="top level comment">
+      <div id="add_comment">
+        <!-- expects the local variables comment, commentable, and button_name -->
+<div class="post comment" id="comment_form_for_37957664">
+  <form class="new_comment" id="comment_for_37957664" action="/chapters/37957664/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="kD652kT2TFhrCgeWA29kHt7OJtfSxNd5plZVLvZe0Fw+aMnEr6wEO+75p+taYLp7O6LlNAWJxbcxlCCl95DtTg=="/>
+    <fieldset>
+      <legend>Post Comment</legend>
+
+
+
+
+
+
+        <dl>
+          <dt class="landmark">Note:</dt>
+          <dd class="instructions comment_form">All fields are required. Your email address will not be published.</dd>
+          <dt><label for="comment_name_for_37957664">Name: </label></dt>
+          <dd>
+            <input id="comment_name_for_37957664" type="text" name="comment[name]"/>
+            <script>var validation_for_comment_name_for_37957664=new LiveValidation('comment_name_for_37957664',{wait:500,onlyOnBlur:false});validation_for_comment_name_for_37957664.add(Validate.Presence,{"failureMessage":"Please enter your name.","validMessage":""});</script>
+          </dd>
+          <dt><label for="comment_email_for_37957664">Email: </label></dt>
+          <dd>
+            <input id="comment_email_for_37957664" type="text" name="comment[email]"/>
+            <script>var validation_for_comment_email_for_37957664=new LiveValidation('comment_email_for_37957664',{wait:500,onlyOnBlur:false});validation_for_comment_email_for_37957664.add(Validate.Presence,{"failureMessage":"Please enter your email address.","validMessage":""});</script>
+          </dd>
+        </dl>
+
+      <p>
+        <label for="comment_content_for_37957664" class="landmark">Comment</label>
+        <textarea id="comment_content_for_37957664" class="comment_form observe_textlength" title="Enter Comment" name="comment[comment_content]">
+</textarea>
+        <input type="hidden" id="controller_name_for_37957664" name="controller_name" value="chapters"/>
+      </p>
+      <p class="character_counter"><span id="comment_content_for_37957664_counter" class="value" data-maxlength="10000" aria-live="polite" aria-valuemax="10000" aria-valuenow="comment_content_for_37957664">10000</span> characters left</p>
+      <script>var validation_for_comment_content_for_37957664=new LiveValidation('comment_content_for_37957664',{wait:500,onlyOnBlur:false});validation_for_comment_content_for_37957664.add(Validate.Presence,{"failureMessage":"Brevity is the soul of wit, but we need your comment to have text in it.","validMessage":""});validation_for_comment_content_for_37957664.add(Validate.Length,{"maximum":"10000","tooLongMessage":"must be less than 10000 characters long."});</script>
+      <p class="submit actions">
+        <input type="submit" name="commit" value="Comment" id="comment_submit_for_37957664" data-disable-with="Please wait..."/>
+      </p>
+    </fieldset>
+</form></div>
+<div class="clear"></div>
+
+      </div>
+    </div>
+
+  <!-- If we have javascript, here is where the comments will be spiffily inserted -->
+  <!-- If not, and show_comments is true, here is where the comments will be rendered -->
+  <div id="comments_placeholder" style="display:none;">
+  </div>
+
+
+</div>
+<!-- END comments -->
+
+  <!-- END comment section -->
+
+
+
+          <div class="clear"><!--presentational--></div>
+        </div>
+        <!-- END main -->
+      </div>
+      <!-- BEGIN footer -->
+<div id="footer" role="contentinfo" class="region">
+	<h3 class="landmark heading">Footer</h3>
+  <ul class="navigation actions" role="navigation">
+    <li class="module group">
+      <h4 class="heading">About the Archive</h4>
+      <ul class="menu">
+        <li><a href="/site_map">Site Map</a></li>
+        <li><a href="/diversity">Diversity Statement</a></li>
+        <li><a href="/tos">Terms of Service</a></li>
+        <li><a href="/dmca">DMCA Policy</a> </li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Contact Us</h4>
+      <ul class="menu">
+        <li><a href="/abuse_reports/new">Report Abuse</a></li>
+        <li><a href="/support">Technical Support and Feedback</a></li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Development</h4>
+      <ul class="menu">
+          <li><a href="https://github.com/otwcode/otwarchive/commits/v0.9.295.0">otwarchive v0.9.295.0</a></li>
+        <li><a href="/known_issues">Known Issues</a></li>
+        <li><a href="http://www.gnu.org/licenses/gpl-2.0.html" title="View License">GPL</a> by the <a href="http://transformativeworks.org/" title="The Organization for Transformative Works">OTW</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!-- END footer -->
+
+    </div>
+    <!-- check to see if this controller/action allow tinymce before we load the gigantor js; see application_helper -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js" type="text/javascript"></script>
+<!-- if user has googleapis blocked for some reason we need a fallback -->
+<script type="text/javascript">if(typeof jQuery=='undefined'){document.write(unescape("%3Cscript src='/javascripts/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));document.write(unescape("%3Cscript src='/javascripts/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));}</script>
+
+
+<script type="text/javascript">$j=jQuery.noConflict();</script>
+<script src="/javascripts/jquery.scrollTo.min.js+jquery.livequery.min.js+rails.js+application.js+bootstrap,,_bootstrap-dropdown.min.js+jquery-shuffle.js+jquery.tokeninput.min.js+jquery.trap.min.js+ao3modal.min.js+js.cookie.min.js+filters.min.js,Mjc.9IDDdceXcF.js.pagespeed.jm.ZwTODK7jAq.js"></script><script>eval(mod_pagespeed_a8hDjzT3l_);</script>
+<script>eval(mod_pagespeed_1nA1vKz9z4);</script>
+<script>eval(mod_pagespeed_AKC4FLip6q);</script>
+<script>eval(mod_pagespeed_gX7XC77lvT);</script>
+<script>eval(mod_pagespeed_5zo0ZWMy4O);</script>
+<script>eval(mod_pagespeed_eCCgOhjhYQ);</script>
+<script>eval(mod_pagespeed_TU1Ln7LKSh);</script>
+<script>eval(mod_pagespeed_qTpbjsXQwh);</script>
+<script>eval(mod_pagespeed_R5FGw2ySDb);</script>
+<script>eval(mod_pagespeed_rqqFCT3xcT);</script>
+
+<script>eval(mod_pagespeed_Gf_4KFhTvB);</script>
+
+
+  <script>function isSupported(){var item="localStoragePolyfill";try{localStorage.setItem(item,item);localStorage.removeItem(item);return true;}catch(e){return false;}}function acceptTOS(){if(isSupported()){localStorage.setItem("accepted_tos","20180523");}else{Cookies.set("accepted_tos","20180523",{expires:365});}}$j(document).ready(function(){if(localStorage.getItem("accepted_tos")!=="20180523"&&Cookies.get("accepted_tos")!=="20180523"){$j("body").prepend("<div id=\"tos_prompt\" class=\"hidden\">\n  <h2 class=\"heading\">\n    <span>Archive of Our Own<\/span>\n  <\/h2>\n  <div class=\"agreement\">\n    <p class=\"summary\">\n      On Archive of Our Own (AO3), users can make profiles, create works and\n            other Content, post comments, give Kudos, create Collections and \n            Bookmarks, participate in Challenges, import works, and more. Any \n            information you publish in a comment, profile, work, or Content that you \n            post or import onto AO3 including in summaries, notes and tags, \n            will be accessible by the public (unless you limit access to a work only \n            to those with AO3 Accounts), and it will be available to \n            AO3 personnel. Be mindful when sharing personal information, \n            including  your religious or political views, health, racial background, \n            country of origin, sexual identity and/or personal relationships. To \n            learn more, check out our <a href=\"/tos\">Terms of Service<\/a> and <a href=\"/tos#privacy\">Privacy Policy<\/a>.\n    <\/p>\n\n    <p class=\"confirmation\">\n      <input type=\"checkbox\" id=\"tos_agree\" />\n      <label for=\"tos_agree\">I have read &amp; understood the new Terms of Service and Privacy Policy<\/label>\n    <\/p>\n\n      <p class=\"submit\">\n        <button name=\"button\" type=\"button\" disabled=\"disabled\" id=\"accept_tos\">I agree/consent to its terms<\/button>\n      <\/p>\n\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    var container = \$j(\"#tos_prompt\");\n    var outer = \$j(\"#outer\");\n    var button = \$j(\"#accept_tos\");\n\n    setTimeout(showTOSPrompt, 1500);\n\n    function showTOSPrompt() {\n      \$j.when(container.fadeIn(500)).done(function() {\n        outer.addClass(\"hidden\").attr(\"aria-hidden\", \"true\");\n      });\n\n      \$j(\"#tos_agree\").on(\"click\", function() {\n        button.attr(\"disabled\", !this.checked);\n        if (this.checked) {\n          button.on(\"click\", function() {\n            acceptTOS();\n            outer.removeClass(\"hidden\").removeAttr(\"aria-hidden\");\n            \$j.when(container.fadeOut(500)).done(function() {\n              container.remove();\n            });\n          });\n        };\n      }).change();\n    };\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+  <script>$j(document).ready(function(){var permitted_hosts=["archiveofourown.org","download.archiveofourown.org","insecure.archiveofourown.org","www.archiveofourown.org","insecure-test.archiveofourown.org","test.archiveofourown.org","testdownload.archiveofourown.org"];var current_host=window.location.hostname;if(!permitted_hosts.includes(current_host)&&Cookies.get("proxy_notice")!=="0"){$j("#skiplinks").after("<div id=\"proxy-notice\">\n  <div class=\"userstuff\">\n    <p class=\"important\">Important message:<\/p>\n    <ol>\n      <li>You are using a proxy site that is not part of the Archive of Our Own.<\/li>\n      <li>The entity that set up the proxy site can see what you submit, including your IP address. If you log in through the proxy site, it can see your password.<\/li>\n    <\/ol>\n    <p class=\"important\">重要提示：<\/p>\n    <ol>\n      <li>您使用的是第三方开发的反向代理网站，此网站并非Archive of Our Own - AO3（AO3作品库）原站。<\/li>\n      <li>代理网站的开发者能够获取您上传至该站点的全部内容，包括您的ip地址。如您通过代理登录AO3，对方将获得您的密码。<\/li>\n    <\/ol>\n    <p class=\"submit\"><button class=\"action\" type=\"button\" id=\"proxy-notice-dismiss\">Dismiss Notice<\/button><\/p>\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    \$j(\"#proxy-notice-dismiss\").on(\"click\", function() {\n      Cookies.set(\"proxy_notice\", \"0\");\n      \$j(\"#proxy-notice\").slideUp();\n    });\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+    <script>$j(document).on("loadedCSRF",function(){$j.post("/works/16237082/hit_count.json")})</script>
+
+
+  </body>
+</html>

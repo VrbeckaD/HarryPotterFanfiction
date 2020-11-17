@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"f2edcff25e","applicationID":"190034","transactionName":"dgwMEkpfWVsHERpRXlQTFgNKQxpECgxC","queueTime":0,"applicationTime":119,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VQcCWV9RGwIJVFFRAw==",licenseKey:"f2edcff25e",applicationID:"190034"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(23),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(24),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(24),a=t(23);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(20),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(23),c=t(24),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(25);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(22),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],20:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],21:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],22:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],23:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],24:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],25:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?s(t,c,o):o()}function n(n,r,i,o){if(!l.aborted||o){t&&t(n,r,i);for(var a=e(i),c=m(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([x,n,r,a]),a}}function p(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||i(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:a,aborted:!1};return x}function o(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(23),u={},d={},l=e.exports=i();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=x.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(g,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=t(18),c=t("handle"),s=t(23),f=t("ee"),u=t(21),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},y=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),x=e.exports={offset:a.getLastTimestamp(),now:a,origin:v,features:{},xhrWrappable:y,userAgent:u};t(15),t(19),l[p]?(l[p]("DOMContentLoaded",o,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",i),d[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var b=0},{}],"wrap-function":[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var i=t("ee"),o=t(24),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,i){function nrWrapper(){var r,a,c,s;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,i],c])}u(e+"start",[r,a,i],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,i,o){i||(i="");var a,c,s,f="-"===i.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+i:i,o,c))}function u(n,r,i){if(!s||e){var o=s;s=!0;try{t.emit(n,r,i,e)}catch(a){l([a,n,r,i])}s=o}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var i in t)c.call(t,i)&&(e[i]=t[i]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=i),n.inPlace=f,n.flag=a,n}},{}]},{},["loader",2,12,4,3]);</script>
+    <meta name="keywords" content="fanfiction, transformative works, otw, fair use, archive"/>
+    <meta name="language" content="en-US"/>
+    <meta name="subject" content="fandom"/>
+    <meta name="description" content="An Archive of Our Own, a project of the
+    Organization for Transformative Works"/>
+    <meta name="distribution" content="GLOBAL"/>
+    <meta name="classification" content="transformative works"/>
+    <meta name="author" content="Organization for Transformative Works"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+        Törésvonalak - Chapter 1 - Hiriajuu - Harry Potter - J. K. Rowling [Archive of Our Own]
+    </title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/A.1_site_screen_.css.pagespeed.cf.clueW7UFD0.css"/>
+<style media="only screen and (max-width: 62em), handheld">#dashboard{clear:both;float:none;margin:1% 3.5%;max-width:100%;padding:0;width:auto}#dashboard,#dashboard.own{border-bottom:10px solid #900;border-top:10px solid #900;padding:.5em 0;border-radius:.25em}#dashboard ul{border:none;display:inline;padding:0;text-align:left}#dashboard li{display:inline}#dashboard a,#dashboard span{display:inline-block;margin:.25em 0}#dashboard .secondary{background:#eee;padding:.375em 0 .625em;box-shadow:inset 2px 2px 5px #bbb}#dashboard .secondary a{margin:.125em 0}#dashboard .landmark{clear:none;float:left}#main,#main.dashboard{float:none;margin:auto;padding-left:3.5%;padding-right:3.5%;width:auto}.logged-in .splash>.module{width:48.5%}.logged-in .splash > div:nth-of-type(odd) {margin-left:0;margin-right:1.5%}.logged-in .splash > div:nth-of-type(even) {margin-left:1.5%;margin-right:0}form.filters{width:auto;min-width:23%;max-width:24%}.filters fieldset{margin-right:0}form.filters dl{margin-left:.25em;margin-right:.25em}#workskin{margin:auto 1.5%}</style>
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 42em), handheld" href="/stylesheets/skins/skin_873_archive_2_0/A.5_site_narrow.handheld_.css.pagespeed.cf.8L0d7x-op8.css"/>
+<link rel="stylesheet" type="text/css" media="speech" href="/stylesheets/skins/skin_873_archive_2_0/A.6_site_speech_.css.pagespeed.cf.Ybb8bLK5Um.css"/>
+<link rel="stylesheet" type="text/css" media="print" href="/stylesheets/skins/skin_873_archive_2_0/A.7_site_print_.css.pagespeed.cf.ry3YZtf8Cz.css"/>
+<!--[if IE 8]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/8_site_screen_IE8_or_lower.css" /><![endif]-->
+<!--[if IE 5]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/9_site_screen_IE5.css" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/10_site_screen_IE6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/11_site_screen_IE7.css" /><![endif]-->
+
+
+
+<!--sandbox for developers	-->
+<style media="screen">#new_work_search fieldset:first-of-type .submit{padding-top:0}.edit_external_author ul ul{margin-left:2.75em}.twitter{width:76px;height:28px}</style>
+<script src="/javascripts/livevalidation_standalone.js.pagespeed.jm.oB__Z5piTe.js"></script>
+
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="ODSGayTh6+HFNejgcIlSevSBv89c/0GSnXIh68OCQ+X7FMSwByleglDeWy6JsaIBGG8KXAfFlzirEQBcWV/nEQ=="/>
+
+    
+  </head>
+
+  <body class="logged-out">
+    <div id="outer" class="wrapper">
+      <ul id="skiplinks"><li><a href="#main">Main Content</a></li></ul>
+      <!-- BEGIN BETA CAVEATS! -->
+<noscript>
+  <p id="javascript-warning">
+    While we&#39;ve done our best to make the core functionality of this site accessible without javascript, it will work better with it enabled. Please consider turning it on!
+  </p>
+</noscript>
+<!-- END BETA CAVEATS! --> 
+
+<!-- BEGIN header -->
+
+<div id="header" class="region">
+
+  <h1 class="heading">
+    <a href="/"><span>Archive of Our Own</span><sup> beta</sup><script data-pagespeed-no-defer>(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','http://archiveofourown.org/works/23430865/chapters/56159299','6aaL7r5rlp',true,false,'olZZ_tu_G6g');</script><script data-pagespeed-no-defer>(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','http://archiveofourown.org/works/23430865/chapters/56159299','6aaL7r5rlp',true,false,'Gjfbdg3wkXk');</script><img alt="Archive of Our Own" class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAAqCAMAAAA3b6P4AAACslBMVEWXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACpit0XAAAA5XRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESFBUWFxgZGhscHR4fICEiIyQlJygpKissLi8wMTM0NTY3ODk6Ozw9PkBBQkNFR0hJSktMTU5PUFFSVFVWV1hZWltcXV5fY2RlZmhpamtsbW5vcHFyc3V2d3p7fX5/gIGCg4SFhoeIiouMjY6PkJGSlJWWl5iZmpucnZ6foKGipKWnqKmrrK2ur7CxsrO0tba3uLm6u7y9vr/AwsPFxsfIycrLzM7P0NLT1NXW19na29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+b1plRQAABBRJREFUSMedlvtb1FUQxgcEBMtQggUCxVACu1ApYmRmUqESkCkUREaS4h3JCDONEFPBoBQCJcDIGxkGKYGBkgGSAq4BARIXWWA//0c/7J39LvY0P82cd97nzJlzZuaIKvBRmVqmP/XOrrQNIbOVsNfyjq/3nYrs/1GlWjPe90v28wrgnOiDP7ddeN9WAE47O9DLQI6PksfDMWVjnfuDlCC3b4HbpYcOFjUC9UHKWywtQZNpjTmdgu60uSIis979HRr8bIT4YjVDqV6TFlPgVqjxjBegyM4MfSPepDsm9tAcb5mwHnpfMJmq39C+ZLQCytrfM3deUAylwWYL2+BTc4eICU4aNk/pLgm0DNQuqY+/Nk8zmuX0PmFx83V0eIiIyOPlmq3Wpw+tg1OG7Lk1c8YSzmZsqYhIhLp7pVLy3AugLUqnz73L15boHogUke1cW6ic+5n7QJvhLCLic4cTlmAGRIhdFhfdlcmPpUjCfSj3FpEZ9dQ5W6CFDPrLIc652rj2FWUi0f1wdZGI5DERbg56dlIvO6hyt1UTe8pEZKUa1JEiMVBhDu6GzbHc8LFZUSXHRUTC/oShBHG5DKkmbPUg1xPujSyxSba/sltEREJuA9tl0Qikz9JD8f1ovrjOVtvF7NexRqcsVgOfSIIW6pMDVe7z3zwLHDjFeSfb7GV/P6fXwrqATInuAvraWruB0U2bx4aenqKRJA/MMairhoAsCczr1TWH8dPLfO7w2VRtqKDZFFjsOHBY5JmNX549dzQ5ROQkLY9MQbZvKDCzNgHkGCvaLRGOznS2zQ6e2GJu7gXY7/3kiqQj52ubbo9C143asm2hLsrsD3jV8l2PAbcGsBRN9VuK7B+Gvc3N+WnDKEuqAtlz8FdT37J/5dhdk3vbxUb4Y23UusT08nZAobyTSDeoD8VUmKja3DCVcylk6LB5J7Qcts54Ncv13PVXDMQWLfC9o4SOMxqmd/TqocSKvZirTiIiTusM3NbM5aq9AGccPoYaB73jwn/ItWJ/xQ4RkTWVOupg4VqViEw7ApBTA5l6P9/T8LrV1veHA0RCirQANKU/q193KdZHEiUiMjc2vxUO2E9ml5MlXhn9ANRsVJmAWdUAjAaLiKoRaN9pRX6bdv9VjQD8FGv5HgNuAjS5ioj3Hd3jnyS+7RQfA+BSpONkMFwD5OvOVzEClZNmuV0hE/cAqqOmK7yjD4ENen1Jhpo+y6xt1SXmWoKNEtzS8qOn0Zi3jw7z1hg+BNCZ5m2z/DxmmFuZ7DKbATeBsYKgKX8/C6JNehjfmEZ3DlAb8YC/k1dVlrHx5LHaNNZ7GElzlQdJwOXaOA8REb9sSh2Myw5xn78s/0Fmpzc0V+TmVY1y2lP+h3jF5l9qvPpdnP4I/wITXDY67Xw1sAAAAABJRU5ErkJggg==" data-pagespeed-url-hash="4179492045" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" data-pagespeed-url-hash="1900347101" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a> 
+  </h1>
+
+    <div id="login" class="dropdown">
+      <p class="user actions" role="menu">
+        <a id="login-dropdown" href="/users/login">Log In</a>
+      </p>
+      <div id="small_login" class="simple login">
+	<form class="new_user" id="new_user_session_small" action="/users/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="feg5R9QlZT/LEmeA1D1ZlEZ8ZE3bJnabY/INAtM5d6y+yHuc9+3QXF751E4tBanvqpLR3oAcoDFVkSy1SeTTWA=="/>
+	<dl>
+    <dt>
+      <label for="user_session_login_small">User name or email:</label></dt>
+    <dd><input id="user_session_login_small" type="text" name="user[login]"/></dd>
+    <dt><label for="user_session_password_small">Password:</label></dt>
+    <dd><input id="user_session_password_small" type="password" name="user[password]"/></dd>
+  </dl>
+  <p class="submit actions">
+    <label for="user_remember_me_small" class="action"><input type="checkbox" name="user[remember_me]" id="user_remember_me_small" value="1"/>Remember Me</label>
+    <input type="submit" name="commit" value="Log In"/>
+  </p>
+</form>
+<ul class="footnote actions">
+  <li><a href="/users/password/new">Forgot password?</a></li>
+    <li>
+      <a href="/invite_requests">Get an Invitation</a>
+    </li>
+</ul>
+
+</div>
+
+    </div>
+
+  <h3 class="landmark heading">Site Navigation</h3>
+  <ul class="primary navigation actions" role="navigation">
+    <li class="dropdown">
+      <a href="/menu/fandoms">Fandoms</a>
+      <ul class="menu" role="menu">
+  <li><a href="/media">All Fandoms</a></li>
+        <li id="medium_5"><a href="/media/Anime%20*a*%20Manga/fandoms">Anime &amp; Manga</a></li>
+        <li id="medium_3"><a href="/media/Books%20*a*%20Literature/fandoms">Books &amp; Literature</a></li>
+        <li id="medium_4"><a href="/media/Cartoons%20*a*%20Comics%20*a*%20Graphic%20Novels/fandoms">Cartoons &amp; Comics &amp; Graphic Novels</a></li>
+        <li id="medium_7"><a href="/media/Celebrities%20*a*%20Real%20People/fandoms">Celebrities &amp; Real People</a></li>
+        <li id="medium_2"><a href="/media/Movies/fandoms">Movies</a></li>
+        <li id="medium_6"><a href="/media/Music%20*a*%20Bands/fandoms">Music &amp; Bands</a></li>
+        <li id="medium_8"><a href="/media/Other%20Media/fandoms">Other Media</a></li>
+        <li id="medium_30198"><a href="/media/Theater/fandoms">Theater</a></li>
+        <li id="medium_1"><a href="/media/TV%20Shows/fandoms">TV Shows</a></li>
+        <li id="medium_476"><a href="/media/Video%20Games/fandoms">Video Games</a></li>
+        <li id="medium_9971"><a href="/media/Uncategorized%20Fandoms/fandoms">Uncategorized Fandoms</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/browse">Browse</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works">Works</a></li>
+  <li><a href="/bookmarks">Bookmarks</a></li>
+  <li><a href="/tags">Tags</a></li>
+  <li><a href="/collections">Collections</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/search">Search</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works/search">Works</a></li>
+  <li><a href="/bookmarks/search">Bookmarks</a></li>
+  <li><a href="/tags/search">Tags</a></li>
+  <li><a href="/people/search">People</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/about">About</a>
+      <ul class="menu" role="menu">
+  <li><a href="/about">About Us</a></li>
+  <li><a href="/admin_posts">News</a></li>
+  <li><a href="/faq">FAQ</a></li>
+  <li><a href="/wrangling_guidelines">Wrangling Guidelines</a></li>
+  <li><a href="/donate">Donate or Volunteer</a></li>
+</ul>
+
+    </li>
+	  <li class="search"><form class="search" id="search" action="/works/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+  <fieldset>
+    <legend>Search Works</legend>
+    <p>
+      <label class="landmark" for="site_search">Work Search:</label>
+      <input class="text" id="site_search" aria-describedby="site_search_tooltip" type="text" name="work_search[query]"/>
+      <span class="tip" role="tooltip" id="site_search_tooltip">tip: austen words:10000-50000 sort:title</span>
+      <span class="submit actions"><input type="submit" value="Search" class="button"/></span>
+    </p>
+  </fieldset>
+</form></li>
+  </ul>
+
+
+
+  <div class="clear"></div>
+
+</div>
+
+
+
+<!-- END header -->
+
+      <div id="inner" class="wrapper">
+        <!-- BEGIN sidebar -->
+        <!-- END sidebar -->
+
+        <!-- BEGIN main -->
+        <div id="main" class="chapters-show region" role="main">
+          
+          <div class="flash"></div>
+          <!--page description, messages-->
+<!--/descriptions-->
+
+<!--subnav-->
+<!--/subnav-->
+
+  <!-- BEGIN work -->
+  <div class="work"><p class="landmark"><a name="top">&nbsp;</a></p>
+      <!-- BEGIN navigation -->
+<h3 class="landmark heading">Actions</h3>
+<ul class="work navigation actions" role="menu">
+
+
+
+    <li class="chapter entire"><a href="/works/23430865?view_full_work=true">Entire Work</a></li>
+
+
+      <li class="chapter next"><a href="/works/23430865/chapters/56300131#workskin">Next Chapter &#8594;</a></li>
+
+    <li class="chapter" aria-haspopup="true">
+      <noscript>
+        <a href="/works/23430865/navigate">Chapter Index</a>
+      </noscript>
+      <a class="hidden" href="#">Chapter Index</a>
+      <ul id="chapter_index" class="expandable secondary hidden">
+        <li>
+          <form action="/works/23430865/chapters/56159299" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+            <p>
+              <select name="selected_id" id="selected_id"><option selected="selected" value="56159299">1. Mondaynek lenni</option>
+<option value="56300131">2. Szürke karácsony</option>
+<option value="56486959">3. Szimbiózis I.</option>
+<option value="56969230">4. Szimbiózis II.</option>
+<option value="57351388">5. Szimbiózis III.</option>
+<option value="60899578">6. Szimbiózis IV.</option>
+<option value="61298317">7. Pofonok és ízlések</option>
+<option value="62155174">8. Összetartozás</option></select>
+              <span class="submit actions"><input type="submit" name="commit" value="Go"/></span>
+            </p>
+</form>        </li>
+        <li><a href="/works/23430865/navigate">Full-page index</a></li>
+      </ul>
+    </li>
+
+
+
+  <li class="comments" id="show_comments_link_top">
+      <a data-remote="true" href="/comments/show_comments?chapter_id=56159299">Comments </a>
+  </li>
+
+
+
+    <li class="share hidden">
+      <a class=" modal" title="Share Work" aria-controls="#modal" href="/works/23430865/share">Share</a>
+    </li>
+
+
+    <li class="download" aria-haspopup="true">
+      <a href="#">Download</a>
+      <ul class="expandable secondary">
+          <li><a href="/downloads/23430865/Toresvonalak.azw3?updated_at=1601620092">AZW3</a></li>
+          <li><a href="/downloads/23430865/Toresvonalak.epub?updated_at=1601620092">EPUB</a></li>
+          <li><a href="/downloads/23430865/Toresvonalak.mobi?updated_at=1601620092">MOBI</a></li>
+          <li><a href="/downloads/23430865/Toresvonalak.pdf?updated_at=1601620092">PDF</a></li>
+          <li><a href="/downloads/23430865/Toresvonalak.html?updated_at=1601620092">HTML</a></li>
+      </ul>
+    </li>
+</ul>
+<!-- END navigation -->
+
+
+<h3 class="landmark heading">Work Header</h3>
+
+<div class="wrapper">
+
+  <dl class="work meta group" role="complementary">
+          <dt class="rating tags">
+
+              Rating:
+          </dt>
+
+          <dd class="rating tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Explicit/works">Explicit</a></li>
+            </ul>
+          </dd>
+          <dt class="warning tags">
+
+              <a href="/tos_faq#tags">Archive Warnings</a>:
+          </dt>
+
+          <dd class="warning tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Graphic%20Depictions%20Of%20Violence/works">Graphic Depictions Of Violence</a></li><li><a class="tag" href="/tags/Rape*s*Non-Con/works">Rape/Non-Con</a></li><li><a class="tag" href="/tags/Underage/works">Underage</a></li>
+            </ul>
+          </dd>
+          <dt class="category tags">
+
+              Categories:
+          </dt>
+
+          <dd class="category tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/F*s*M/works">F/M</a></li><li><a class="tag" href="/tags/Gen/works">Gen</a></li><li><a class="tag" href="/tags/M*s*M/works">M/M</a></li><li><a class="tag" href="/tags/Multi/works">Multi</a></li>
+            </ul>
+          </dd>
+          <dt class="fandom tags">
+
+              Fandom:
+          </dt>
+
+          <dd class="fandom tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a></li>
+            </ul>
+          </dd>
+          <dt class="relationship tags">
+
+              Relationships:
+          </dt>
+
+          <dd class="relationship tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Marlene%20McKinnon*s*Original%20Female%20Character(s)/works">Marlene McKinnon/Original Female Character(s)</a></li><li><a class="tag" href="/tags/Alice%20Longbottom*s*Frank%20Longbottom/works">Alice Longbottom/Frank Longbottom</a></li>
+            </ul>
+          </dd>
+          <dt class="character tags">
+
+              Characters:
+          </dt>
+
+          <dd class="character tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Marlene%20McKinnon/works">Marlene McKinnon</a></li><li><a class="tag" href="/tags/Frank%20Longbottom/works">Frank Longbottom</a></li><li><a class="tag" href="/tags/Savage%20(Harry%20Potter)/works">Savage (Harry Potter)</a></li><li><a class="tag" href="/tags/Original%20Characters/works">Original Characters</a></li><li><a class="tag" href="/tags/McKinnon%20Family%20(Harry%20Potter)/works">McKinnon Family (Harry Potter)</a></li><li><a class="tag" href="/tags/Emmeline%20Vance/works">Emmeline Vance</a></li>
+            </ul>
+          </dd>
+          <dt class="freeform tags">
+
+              Additional Tags:
+          </dt>
+
+          <dd class="freeform tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Canon%20Compliant/works">Canon Compliant</a></li><li><a class="tag" href="/tags/Extended%20Universe/works">Extended Universe</a></li><li><a class="tag" href="/tags/OC%20Hell/works">OC Hell</a></li><li><a class="tag" href="/tags/Coming%20of%20Age/works">Coming of Age</a></li><li><a class="tag" href="/tags/Queer%20Character/works">Queer Character</a></li><li><a class="tag" href="/tags/Trans%20Character/works">Trans Character</a></li><li><a class="tag" href="/tags/Queer%20Themes/works">Queer Themes</a></li><li><a class="tag" href="/tags/Language/works">Language</a></li><li><a class="tag" href="/tags/diverse%20cast/works">diverse cast</a></li><li><a class="tag" href="/tags/Bullying/works">Bullying</a></li><li><a class="tag" href="/tags/Mental%20Health%20Issues/works">Mental Health Issues</a></li><li><a class="tag" href="/tags/Death%20Eaters/works">Death Eaters</a></li><li><a class="tag" href="/tags/Morally%20Ambiguous%20Character/works">Morally Ambiguous Character</a></li><li><a class="tag" href="/tags/Self-Harm/works">Self-Harm</a></li><li><a class="tag" href="/tags/Prostitution/works">Prostitution</a></li><li><a class="tag" href="/tags/Underage%20Drinking/works">Underage Drinking</a></li><li><a class="tag" href="/tags/Underage%20Sex/works">Underage Sex</a></li><li><a class="tag" href="/tags/Drug%20Use/works">Drug Use</a></li><li><a class="tag" href="/tags/Drug%20Addiction/works">Drug Addiction</a></li><li><a class="tag" href="/tags/Underage%20Drug%20Use/works">Underage Drug Use</a></li><li><a class="tag" href="/tags/Drug%20Withdrawal/works">Drug Withdrawal</a></li><li><a class="tag" href="/tags/Dubious%20Consent/works">Dubious Consent</a></li><li><a class="tag" href="/tags/Sexual%20Abuse/works">Sexual Abuse</a></li><li><a class="tag" href="/tags/Explicit%20Sexual%20Content/works">Explicit Sexual Content</a></li><li><a class="tag" href="/tags/Childhood%20Sexual%20Abuse/works">Childhood Sexual Abuse</a></li><li><a class="tag" href="/tags/Childhood%20Trauma/works">Childhood Trauma</a></li><li><a class="tag" href="/tags/Murder/works">Murder</a></li><li><a class="tag" href="/tags/Sexual%20Assault/works">Sexual Assault</a></li><li><a class="tag" href="/tags/Epilepsy/works">Epilepsy</a></li><li><a class="tag" href="/tags/Disabled%20Character/works">Disabled Character</a></li><li><a class="tag" href="/tags/Vampires/works">Vampires</a></li><li><a class="tag" href="/tags/Crimes%20*a*%20Criminals/works">Crimes &amp; Criminals</a></li><li><a class="tag" href="/tags/Stabbing/works">Stabbing</a></li><li><a class="tag" href="/tags/Homophobia/works">Homophobia</a></li><li><a class="tag" href="/tags/Underage%20Prostitution/works">Underage Prostitution</a></li><li><a class="tag" href="/tags/Sugar%20Daddy/works">Sugar Daddy</a></li><li><a class="tag" href="/tags/Eating%20Disorders/works">Eating Disorders</a></li><li><a class="tag" href="/tags/Anorexia/works">Anorexia</a></li><li><a class="tag" href="/tags/Implied*s*Referenced%20Suicide/works">Implied/Referenced Suicide</a></li><li><a class="tag" href="/tags/Religion/works">Religion</a></li><li><a class="tag" href="/tags/Religious%20Content/works">Religious Content</a></li>
+            </ul>
+          </dd>
+
+      <dt class="language">
+        Language:
+      </dt>
+      <dd class="language">
+        Magyar
+      </dd>
+
+      <dt class="series">
+        Series:
+      </dt>
+      <dd class="series">
+        <span class="series"><a class="previous" href="/works/18085889">&#8592; Previous Work</a><span class="divider"> </span><span class="position">Part 2 of the <a href="/series/1302119">Bolondok</a> series</span><span class="divider"> </span><a class="next" href="/works/18405443">Next Work &#8594;</a></span>
+      </dd>
+
+
+    <dt class="stats">Stats:</dt>
+    <dd class="stats">
+<!-- end of cache -->
+
+      <dl class="stats"><dt class="published">Published:</dt><dd class="published">2020-04-01</dd><dt class="status">Updated:</dt><dd class="status">2020-07-30</dd><dt class="words">Words:</dt><dd class="words">53761</dd><dt class="chapters">Chapters:</dt><dd class="chapters">8/30</dd><dt class="comments">Comments:</dt><dd class="comments">18</dd><dt class="kudos">Kudos:</dt><dd class="kudos">3</dd><dt class="hits">Hits:</dt><dd class="hits">171</dd></dl>
+      </dd>
+  </dl>
+</div>
+
+
+
+<!-- BEGIN section where work skin applies -->
+<div id="workskin">
+  <div class="preface group">
+    <h2 class="title heading">
+      Törésvonalak
+    </h2>
+    <h3 class="byline heading">
+      <a rel="author" href="/users/Hiriajuu/pseuds/Hiriajuu">Hiriajuu</a>
+    </h3>
+
+
+        <div class="summary module" role="complementary">
+          <h3 class="heading">Summary:</h3>
+            <blockquote class="userstuff">
+              <p>Avagy egy novellagyűjtemény formájában megvalósított családregény-szerűség, a Bolondok világából már megismert szereplőkkel. Mert ahol fény van, ott árnyéknak is kell lennie, és sokan ebben az árnyékban élnek a Roxfortban is. Ők a világ igazi bolondjai: a lecsúszott hősök, az eltévelyedettek, a vétkesek, akikről általában hallgatnak a regék. Általában. De persze a Monday-família minden, csak nem átlagos. Egy elszúrt család, öt (hat) elszúrt és ennek ellenére büszke és elszánt kölyökkel. Mert őket persze nem érdekli, hogy elszúrtak. Azt mondják, hogy a család mindennél fontosabb, meg hogy a cél szentesíti az eszközt. Ők ebben hisznek, ez az első számú hitvallásuk. És kicsodájuk nekik mindenki más, hogy ítélkezzen felettük?<br/><i>Az írói facebookom <a href="https://www.facebook.com/bolondokfanfic/" rel="nofollow">itt</a> leledzik, a <a href="https://open.spotify.com/user/hiriajuu" rel="nofollow">spotify</a> felhasználómon a sztorihoz készült playlistek is fellelhetők. Illetve van egy folyamatosan frissülő lista a Bolondok-univerzum ajánlott olvasási sorrendjéről is, <a href="https://www.evernote.com/shard/s383/sh/14ae459b-a425-4642-91e8-fef52ae86206/2ac52559e6cf664bc37a42018ca64f2b" rel="nofollow">itt</a>. :)</i></p>
+            </blockquote>
+        </div>
+
+        <div class="notes module" role="complementary">
+  <h3 class="heading">Notes:</h3>
+
+
+
+
+
+    <blockquote class="userstuff">
+      <p>A korhatár jóval Bolondok fölött van, és ezt tessék komolyan venni. Ez a tizennyolcas részleg, sötét és mocskos életek sötét és mocskos históriáiról. Züllöttség, balhék, illegalitás és bűnözés, változó mennyiségben fiatalkorú droghasználat, szex, szexuális zaklatás és prostitúció. A gyűjtemény a Bolondok-univerzumban játszódik, és sokszor át is fed a fősztorival, de annak ismerete nélkül is érhető. A legtöbb fejezet komor, nyomasztó témákról szól, és bár a taglist nem azt jelenti, hogy minden fejezet minden felsorolt dolgot fel fog vonultatni, a legtöbbje visszatérő és jelen levő téma. Minden fejezet elején lesz egy note arról, hogy specifikusan épp mi zavaró/triggering dolog felbukkanása várható az adott részben, hogy mindenki felkészülhessen lelkiekben.</p>
+    </blockquote>
+
+</div>
+
+
+  </div>
+
+
+
+    <div id="chapters">
+      <!-- This partial requires local variable 'chapter' -->
+<div class="chapter" id="chapter-1">
+  <!-- chapter management -->
+
+
+  <div class="chapter preface group" role="complementary">
+    <h3 class="title">
+      <a href="/works/23430865/chapters/56159299">Chapter 1</a>: Mondaynek lenni
+    </h3>
+
+    <!-- only display byline if different from the main byline -->
+
+        <div id="summary" class="summary module">
+          <h3 class="heading">Summary:</h3>
+          <blockquote class="userstuff">
+            <p>Avagy a Monday-család bemutatkozik. A fiúk levelet kapnak otthonról, és vele egy küldetést, hogy az otthonélő angyalka testvérüket megmentsék az intézményesítéstől. És mivel azok, akik, minden követ készek megmozgatni és minden maradék ártatlanságukat hajlandók feláldozni a család összetartása érdekében, ha arra kerül a sor. Arra kerül. Nem az első törés ez az életükben, és nem is a felnőtté válás fordulópontja, csak a végérvényesülése annak, hogy a világ szar.<br/><i> Zeneajánló: <a href="https://www.youtube.com/watch?v=3FdUdvajOp0" rel="nofollow"> Astronautalis – The Wondersmith And His Sons</a></i></p>
+          </blockquote>
+        </div>
+
+      <div id="notes" class="notes module">
+        <h3 class="heading">Notes:</h3>
+          <blockquote class="userstuff"><p>Trigger/content warnings: fiatalkorú drogfogyasztásra tett említések, fiatalkorú alkoholfogyasztás és részeg karakter. Tinédzser-prostitúció, megkérdőjelezhető beleegyezés szexuális aktusba, ezen aktus nem túlrészletezett, de egyértelmű leírása, és egy alkoholos befolyásoltság alatt álló kiskorú és egy nagyon nem kiskorú karakter között történik a dolog. Felbukkan némi bullying is, értelmi fogyatékos karakter említés-szinten, öhhh, egy hányás, és asszem, ennyi.</p></blockquote>
+            <p>
+            (See the end of the chapter for  <a href="/works/23430865/chapters/56159299#chapter_1_endnotes">more notes</a>.)
+            </p>
+      </div>
+  </div>
+
+  <!--main content-->
+  <div class="userstuff module" role="article">
+    <h3 class="landmark heading" id="work">Chapter Text</h3>
+    <p align="center">
+  <strong>1. Mondaynek lenni</strong>
+</p><p align="center">*****</p><p align="center">
+  <em>Father was a charming man with much hidden up his sleeve,</em>
+  <br/>
+  <em>I wonder if this is what he planned when he taught his tricks to me.</em>
+  <br/>
+  <em>The youngest was a clever boy, cracking calculus by three,</em>
+  <br/>
+  <em>the eldest was impractical and obsessively clean,</em>
+  <br/>
+  <em>then there was me:</em>
+</p><p align="center">
+  <em>I was born a charming man with silver tongue, pearl teeth.</em>
+  <br/>
+  <em>This's never how it's 'sposed to end, we're promised all we dreamed</em>
+  <br/>
+  <em>The envy of the Everyman, our family seemed complete,</em>
+  <br/>
+  <em>our father was a charming man, our mother a sirene.</em>
+</p><p> </p><p></p><div align="center">
+  <p>
+    <a href="https://www.youtube.com/watch?v=3FdUdvajOp0" rel="nofollow">Astronautalis – The Wondersmith And His Sons </a>
+  </p>
+</div><p align="center">*****</p><p align="justify">- Be akarják csukni Jayt.<br/>1974 októberében járunk, nem sokkal Halloween előtt. Négyen ülnek a Hollóhát klubhelyiségében egy asztal körül. Mondayek. A látványos elszigeteltségük tán a hírnevükből fakad, de az is lehet, hogy csak senki nem akarja megzavarni a családi kupaktanácsot. Merthogy az zajlik.</p><p align="justify">Az asztalfőn, egy kopottas huzatú fotelban, Jared ül.<br/>Végzős bátyjuk híján jelenleg ő a rangidős képviselője a famíliának. Mert Jake nem ér rá. Újabban sosem ér rá, ha a családról van szó. Családja-e még neki, amiről szó van? Nem tudni. Ha el akar határolódni, ha a Flint-lányt választja az öccsei és a szüleik helyett, nem állítják meg.<br/>Jared most hatodéves, és a frissen kinevezett kapitánya a Hollóhát kviddicscsapatának. Szarukeretes szemüveget visel, lófarkat meg felelősségteljes kifejezést az arcán. Komoly fiú, zárkózott, a testvérein kívül nem sokakat enged közel magához, de a távolságtartáson túl amúgy meglepően segítőkész és gondoskodó. Drogos. Ez amolyan nyílt titok az iskolában. A marihuána és a szépálomfű az állandó tartozékai, alkalmi kokainista, sokféle titokzatos mágus-bogyó fogyasztója, szakértője és árusítója. A jelenlegi helyzet komolyságát jól mutatja, hogy most éppen teljesen tiszta, bár olyankor is elég lerobbant és nyúzott szokott lenni, úgyhogy ezt a kívülállóknak nehéz megállapítani róla. A családtagjai persze ismerik, és már ebből tudták, hogy baj van, amikor Jared összeszedte őket.<br/>Amúgy egy hivatalosnak kinéző pergament szorongat a kezében. Minisztériumi értesítés. Látták már hasonlót párszor. Az asztalra hajítva hever az anyjuk levele, amihez csatolva érkezett.</p><p align="justify">A kereveten Joel fetreng, a sorban következő gyerek. Ötödéves, szintén hollóhátas, szintén frissen kinevezett, csak ő meg prefektusnak. Határozottan érdekes választás, a vérmérsékletét figyelembe véve. Mind hevesség, mind romlottság szempontjából. A cipője ócska, a nadrágja kopott, az inge nemkülönben, de minden ruhadarabja patyolattiszta és szépen vasalt. Adna ő magára, csak nem telik miből.<br/>Unott arccal piszkálja a körmét egy pillangókéssel. A körme lakkozott, a kés meg friss szerzeménye. Az ember azt hihetné, hogy nem hatotta meg Jared bejelentése, de a nyakán megfeszülnek az izmok, a barna szemei dühösen izzanak, és a testvérei tudják, most elég lenne egy rossz szó akárkitől, és az a pillangó elrepülne. Joelnek viharos egy természete van. Hirtelenharagú, sértődékeny, érzékeny ember. Szeszélyes, mint az áprilisi időjárás, bár februárban született. Nem érdemes packázni vele, mert vagy odacsap, vagy lesírja a fejed a helyéről. Vagy mindkettő. <br/>Amúgy egy rossz ribanc, a kezdő fajtából. Tanulni még éppenséggel tudna is, tán nem teljesen véletlen a sasos ház tagja ő sem, de az órákon figyelni vagy leckét írni már derogál neki. Mégis mindig van jegyzete és házija, mint ahogy mindig voltak és lesznek is olyan emberek, akik átadják a sajátjukat némi ellenszolgáltatás fejében. Szóval jelenleg még csak a tanulmányi eredményeinek a feljavítása érdekében árulja magát, de sejthető, hogy mindenképpen nagy, ha nem is fényes jövő áll előtte.<br/>Ámbár a fényes sem kizárt, mert amúgy színészkedik meg bandában énekel és zongorál, amikor éppen nem kurválkodik. Civilben, mint a magafajta büszkén felvállalt homokosok, rémesen teátrális és ripacs, de ha előad, ezt levetkőzi magáról. Legalább olyankor őszinte.</p><p align="justify">A kanapén ketten ülnek, kiskölykök. Harmadévesek, a család legifjabb tagjai.<br/>Jesse szintén szemüveges, szintén hollóhátas. Zseni, már ami a matematikával kapcsolatos ügyeket illeti. Valószínűségszámít. Kalkulál. Gyorsszámol. Tud. És csal, zsarol, lop, hazudik. A morális szépérzéke kopottas, gátlásai nincsenek és valószínűleg érzelmei se igazán, csak a családja meg a barátai, akik próbálják megvédeni. A világot tőle, meg őt is a világtól. A legzakkantabb a Monday-brancsból, már most nyilvánvalóan szociopata tendenciákat mutat, és mégis ő néz ki a legnormálisabbnak, a legszelídebbnek. Báránybőrbe bújt farkas.<br/>És ki más lehetne a család feketebáránya, mint ennek a báránybőrbe bújt farkasnak az ikre? Jaxon sok szempontból kakukktojás, de azért ízig-vérig Monday ő is. Csak épp valahogy a Griffendélbe került, egyedül a családból. Jó srác. Talán nem annyira őrült, mint a testvérei. Talán nem is okos annyira, bár Joel mellett még rúghat labdába. De ő az izom, a családban is meg Jesse esze mellé is, az agya helyett jobb szeretni az öklét használni kapásból, és az ikrével együtt legyőzhetetlen párost alkotnak.<br/>Tizenhárom évesek, nem kéne ilyennek lenniük. A többieknek se. De aki az ő családjukba születik, annak nincs választása. A Mondayek az aranyvérű társadalom peremén tengődnek, nekik nem áll a rendelkezésükre évszázados hírnév meg egy csordulásig töltött széf a Gringottsban, mint a szerencsésebbeknek. Az ő örökségük másból áll.<br/>Összetartásból. Tudásból, amivel a jég hátán is megélnek, kevésbé vagy éppen jobban kiütköző elmebajokból, meg abból, hogy hogyan faragjanak minden hátrányból előnyt.</p><p align="justify">Ez is valami.</p><p align="center">*****</p><p align="justify">- Be akarják csukni Jayt - ismétli el Jared az iménti szavait. Megremeg a kezében a levél, ahogy még egyszer átfutja. Mintha sokadjára olvasva más lenne a tartalma. Nem az, sajnos. - Megint robbantott.<br/>- Na és? - vonogatja a vállát Jaxon. - Szokása.</p><p align="justify">Van ugyanis még egy testvérük. Öt Monday jár a Roxfortba, de hatan vannak. A hatodik, vagyis hát sorban a negyedik, Joel után, az Jayden.<br/>Jayden nem jár a Roxfortba, pedig ő is varázsló.<br/>Csak épp több jutott neki a rosszból, mint a jóból, már ami a Monday-örökségeket illeti. Szellemi fogyatékos. A pálcával nem tud bánni, a pálca nélküli mágiája kiszámíthatatlan, és némiképp veszélyes is tud lenni.<br/>Imádják. A család szeme fénye.<br/>Amúgy egy édes, békés srác, csak nem szabad felzaklatni, összezavarni vagy kizökkenteni a saját kis világából, mert olyankor elszabadul. És olyankor általában el akarják tüntetni, kórházba vagy intézetbe vagy javítóba vagy még rosszabb helyekre. Mint most.<br/>- Aha, hát most eldurvult - lengeti meg a levelet Jared. - Tárgyalást akarnak, meg szakértői vizsgálatot, meg a Mungóba zárni. Közveszély szerintük.<br/>- Faszt - kommentálja a vádakat Joel. - Jay egy tündér, csak nem kell buzerálni.<br/>- Micsinált, hogy ennyire ráálltak? - érdeklődik Jaxon előrehajolva. Jesse mellette nem szól, az arcán látszik, hogy máshol jár fejben, szokása szerint. Ő ilyenkor már előregondol és tervez, nem problémázik.<br/>- Nem tudják, de öt utca csatornarendszerét tönkretette vele - felel Jared. - Megállt az élet Carlisle-ban, a muglik hőbörögnek, a varázsbaj-elhárítók meg gondolom, nagyon a helyzet magaslatán vannak. Azt találták ki, hogy direkt csinálta.<br/>Joel az asztalba vágja a kést, ezzel fejezi ki a véleményét az öccsükkel kapcsolatos vádakról. Jared összegyűri a hivatalos levelet, aztán persze rögtön ki is simítja. Még szükség lehet rá.</p><p align="justify">Nem ez az első ilyen eset. Oké, a csatornabeomlasztás új még Jaytől is, eddig általában megelégedett a saját házuk egy-egy szobájának a romba döntésével, ha bepöccent. Csak Jo tudja elcsitítani meg anya, de ők se mindig. És nyilván ahogy idősödik, úgy erősödik a mágiája is. A kontrollja nem.<br/>Ilyenkor általában az a megoldás, hogy apa kerít egy megkenhető hivatalnokot vagy gyógyítót, és perkál, cserébe Jayden szabadságáért és nyugalmáért. Apa első számú elve: a család a legfontosabb.<br/>Csakhogy apa most nincs itthon. Üzleti útra ment, ők így szokták mondani, meg ez szokott lenni a fedősztorija is a legális állás mellett illegálban űzött csempészbizniszeinek. Görögországban van elvileg, kimérákra vadászik, egész pontosan kimératojásra. Még sokáig távol lesz, hetekig mindenképpen, de talán hónapokig is.<br/>A Zsebkosz közben meg a hasonló helyeken mindenki ismeri a Monday nevet. Ha varázslényekről van szó, és törvényellenes a dolog, mindenki apát keresi.<br/>Valamiből el kell tartani a családot, és a minisztériumi meló nem fizet elég jól hat ügyes-bajos gyerekre.</p><p align="justify">Ám ez jelenleg a probléma egyik forrása is. Apa nincs itthon, márpedig amíg nincs itthon, addig nincs pénzük se, családfőjük se. Jay viszont most van bajban.<br/>Megoldás kell. Anya írta.<br/>Ha megoldás kell, megoldást fognak találni. Megmutatják, mit jelent Mondaynek lenni, mit tanultak a szüleiktől.<br/>- Van egy ötletem - jelenti Jesse hosszas gondolkodás után, és a többiek fellélegeznek. Jesse a család esze, ha ő tudja, mit kell tenni, minden rendben lesz.<br/>- Mondd - bólint Jared. Mint rangidőstől, tőle várják a végszót. Ő az összetartásban profi, akkor sem zuhan szét, amikor már minden emberi számítás szerint a padlón kéne nyáladzania. Nem tudják, hogy csinálja, de ugyanúgy, ahogy magát egyben tartja minden körülmények között, a családot is sikerül neki.<br/>- Durva lesz - jegyzi meg Jesse, mintha ez nem lett volna egyértelmű. Az ő ötletei mindig durvák. - De Jo szeretni fogja.<br/>- Már jól hangzik - vigyorodik el az említett sandán. - Mi az, amihez az én csodás képességeim kellenek?<br/>- Vajon mi? - mormog Jared. Ismerik mind Joel szakterületeit. - Ribanc.<br/>Joel felnevet.<br/>- Kettős végkimenetelű játszma lehet - fejtegeti Jesse. - De mindenképp sima ügy, ha jól csináljuk. Az eleje a szokásos műsor, fogunk egy kellően befolyásos alakot, legcélszerűbb lenne a Mágikus Balesetek és Katasztrófák Főosztályán. Az eddigieknél kevésbé korruptat, hogy tudjunk a jóérzéseire apellálni, viszont romlottabbat, mert ha nincs pénz, mit lehet tenni? Természetben fizetünk. Ha utólag visszakozna, akkor meg zsarolunk.<br/>Úgy mondja az egészet, mintha a holnapi ebédről beszélne. A testvérei is úgy néznek rá. Nagyobb fa, mint amibe eddig bármikor vágták a fejszéjüket, már a dílerkedésből mostanában mellékest szerző Jaredet leszámítva, de nem rosszabb.<br/>Joelnek mindenesetre ragyognak a szemei, ahogy fontolgatja a terv rá vonatkozó részét. Házi feladatért kurvulni rémesen kispályás dolog, de a tündér Jay szabadságáért, az már más. Az hősies. Undorító persze, de hősies.<br/>Apa mindig azt mondta, hogy ők hősök. És a maguk elbaszott módján tényleg azok.</p><p align="justify">- Szóval az én csáberőmön múlik a dolog? - csücsörít. Kihúzza a pillangókést az asztalból, pörgetni kezdi. Bénázik, még most tanulja a trükköket. Lenyalja az elmetszett ujjáról a vért, és felnevet. - Csak ne valami dagadt pasast kerítsetek.<br/>- Nem kívánságműsör - inti le Jesse, de somolyog ő is.<br/>- Ki ismerünk egyáltalán, akinek akárkije a varázsbajosoknál dolgozik? - Jared kérdése Jesse-nek szól elsősorban. Ő az, aki mindig mindenkiről tud mindent is.<br/>- Kupor - dobja be a potenciális áldozat nevét Jesse. A testvérei hümmögve gondolják végig a javaslatot. Barty Kupor másodéves, ványadt, sírós kis mardekáros kölyök. Aranyvérű, de abból a tisztább és nemesebb fajtából, ami a Mondayeket csak kosznak nézi a cipője talpán.<br/>- Nem jó - veti ellen Jared, végiggondolva az infót. - Varázsbűnüldözésen van az apja, nem a Mágikus Baleseteknél.<br/>Persze téved, ha azt hitte, hogy Jesse téved.<br/>- Nem is az apja a célpont - legyint Jesse magabiztosan. Ő tudja, hogy a terve kikezdhetetlen. - A nagybátyja.</p><p align="justify">Így már más a helyzet természetesen.<br/>Ichabod Kupor a főosztályvezető-helyettes a Mágikus Balesetek és Katasztrófák Főosztályán. Nem tudják, hogy megfűzhető-e, de nyilván nem ajánlotta volna Jesse, ha nem lenne az. A szexualitása nem akadály, sejti mindenki az aranyvérű világban, miért nem ő a család örököse elsőszülött létére, még ha Kuporék tagadják is a feltételezést.<br/>A többi meg már Joelen múlik és a sima száján. Mindkét értelemben.<br/>Joel is tudja, és rohadtul örül. Egy karrier kezdete lesz ez, ha nem tolja el. Nem tervezi eltolni.<br/>- Ki kell jutnom a kastélyból hozzá - állapítja meg, és ez a megállapítás egyben beleegyezést is jelent. Elcsábítja ő Ichabod Kuport, neki adja magát egy napra, ha cserébe kihúzza Jayt a csávából. Talán egy életre is odaadná magát bárkinek, ha Jayről van szó.<br/>Jay nem tudja, hogy neki rossz. Ez az, ami megkülönbözteti az összes testvérétől, és ez az, amiért bármelyikük tűzbe menne érte. A kívülállók őt tartják a legkevesebbre a családból, csak mert az, ami. Pedig ő a legtisztább közülük. Sőt, az egyetlen, aki tiszta. Aki ártatlan.<br/>Akiért nekik megéri szar alaknak lenni. Tudják, hogy azok, hogyne tudnák. De csak merje valaki azt mondani, hogy Jay is az.<br/>Az illetőt rövid úton igen nagy szerencsétlenségek érnék.</p><p align="justify">- Ki - ért egyet Jesse is. - Jövő héten roxmortsi látogatás lesz.<br/>Miért is nem egyértelmű, hogy már rég kitervelte az egészet? Nem véletlen okostojás a beceneve.<br/>- Randim lett volna - közli Joel, csak hogy tudják, mekkora áldozatot hoz. Hogy a cserekereskedelmi találkáit ilyen ártatlan kifejezéssel illeti, az az ő dolga. Meg a normalitás ócska illúziója. Néha szeretnek belekapaszkodni ők is. - Jövök Jeongnak eggyel, kihúzott a szarból tegnapelőtt. Ha nem bukok meg gyógynövénytanból, azt csak neki köszönhetem.<br/>- Ha még egy hetet nem bír kivárni egy szopásért, meg se érdemli - legyint Jared. Joel nem ellenkezik. Akkor se ellenkezne, ha nem értene egyet, mert Jared a főnök, de Jeong nagy szerencsétlenségére egyet is ért a meglátással.<br/>- És ha kijutottam? - kérdezi tehát az öccsüktől.<br/>- Nem tudok eleget a pasasról, hogy tovább tervezzek - feleli Jesse. - Elbeszélgetünk a kis Kuporral, biztos tud valamit a nagybácsiról, ami a hasznunkra lesz. Utána mondom, mi legyen.<br/>Ha Jesse beszélget, az varázslat a maga nemében. Úgy húz ki dolgokat az emberekből, hogy észre se veszik. Arra az esetre meg, ha felsülne, ott a testvére, akinek egy homlokegyenest más, de nemkülönben ütős módszere van az információszerzésre. Szó szerint is ütős. Ez a hatásosságuk titka, kettejük közül az egyik mindig sikerrel jár.<br/>Jaxon vigyorogva nyújtózik az ikre tervének a következő lépését hallva. Az egyik szemfoga csorba, még múlt héten tört le, összeverekedett egy haverjával. Brahiból. Jaxon szeret brahiból verekedni. A tanárok már nem szeretik érte, úgyhogy újabban kihagyja a gyengélkedőt összecsapás után.</p><p align="justify">Mivel jelenleg nem tehetnek semmi többet Jay ügye érdekében, Jared berekeszti a tanácskozást. Amíg a kisebbek elszélednek ügyes-bajos dolgaikra, ő az egy szem bátyja, Jake után néz. Még bízik benne, hogy érdekelni fogják a hírek, hogy még nem határolódott el tőlük teljesen.<br/>Csalódnia kell. Jake a Flint-lány társaságában leledzik szokás szerint, és csak annyit mond az újságot hallva: sajnálja.<br/>De így is jó. Megoldják nélküle. Ami azt illeti, már egy ideje nélküle oldják meg.<br/>Jared elmegy írni anyának, hogy ne izguljon, minden rendben lesz.</p><p align="justify">Pedig velük már régóta semmi nincs rendben.</p><p align="center">*****</p><p align="justify">Négy nap múlva találkoznak újra. Ugyanott, ugyanannál az asztalnál ülnek, ugyanazokon az ülőalkalmatosságokon. Ez az ő helyük a klubhelyiségben, tudja mindenki.<br/>Azt is, hogy Jake már nem tartozik közéjük, mert ő meg újabban nem ül ott velük soha. Dezertált.</p><p align="justify">Jared ránézésre jól van. Amúgy nagyon nincs jól. Klasszikus.<br/>Aggódik Jayért, aki abba rokkanna bele csak igazán, ha elvinnék otthonról, és bármennyire hülyeség is, aggódik a többi öccséért is. Tudja, hogy ők se ártatlanok már régóta, de akkor is ótvar egy érzés még mélyebbre lökni őket a szakadékban. Ha nem kellene megtennie, nem is tenné meg, de nincs választása.<br/>Utálja magát érte, és nem szereti utálni magát. Kompenzál, ezzel, azzal, a végén már ő se tudja, mit vesz be és mit szív el rá. Mixeli a mugli és varázsló szereket. Aludni mindenesetre nem sokat alszik, de legalább már szar alaknak se érzi magát.<br/>Igaz, leginkább semminek se érzi magát. Szomorú, hogy már az is pozitívum, de tőle nem újdonság. </p><p align="justify">Joel viszont ragyog. Tegnap lerendezte az ügyét Jeonggal, kastélyon belül jobb híján, a rá váró feladatra meg kihívásként és lehetőségként tekint. Még.<br/>Ő nem egy zseni, mint Jesse, vagy erős, mint Jaxon, vagy jó szervező, mint Jared. Ő csak simán egy törtető ribanc. Egy elbaszott, kétszínű, romlott ember, de kellő adag sármmal ahhoz, hogy bárki ölébe behízelegje magát.<br/>Ha a puding próbája az evés, hát az ő pudingját most majd Ichabod papa letesztelheti. És ha neki ízlik, tán megkínál vele mást is. Ha kap cserébe valamit, természetesen. Miért szexeljen ingyen, ha pénzért is lehet?</p><p align="justify">Az ikrek jelenteni készülnek. Konzultáltak az ifjabb Kuporral, új híreik vannak. Jó híreik.<br/>Jesse egy ideig csak ül a kanapén, és indifferensen szemléli a világot. Figyeli, de nem foglalkozik vele. Csak félig van jelen, mint általában, ki tudja, mi jár a fejében és merre jár fejben. Jaxon szemén friss monokli éktelenkedik, de a vigyora lelkes.<br/>- Jesse elbaszta - közli rögtön, mire az említett szúrósan néz rá.<br/>- A számításaim helyesek voltak, amennyire csak azok lehettek - szögezi le megfontoltan. - De az emberi érzelmek kiszámíthatatlanok. Organikus tényezőkkel nem lehet száz százalékra biztosan kalkulálni. Nem tehetek róla, hogy Kupor a hibaszázalékon belül esett.<br/>- Vagyis elbasztad - állapítja meg Joel kuncogva. A nyelvét rágcsálja elgondolkodva, oda se figyel. Pörög a kezében a pillangókés, arra koncentrál. Már magabiztosabban kezeli.<br/>- Nem basztam el - köti az ebet a karóhoz Jesse. - Franc se gondolta volna, hogy fontosabb neki a nagybátyja, mint az a szent apja, és nem akar róla vallani.<br/>- De én megoldottam! - büszkélkedik Jaxon.<br/>- Ő verte be a pofádat? - méri végig Jared a srácot, de az a fejét rázza.<br/>- Rian volt, túlélem - felel.<br/>Adrian Mckinnon az a haver, akivel Jaxon szeret brahiból verekedni. Hozzá kell tennünk, Rian is szeret Jaxonnal brahiból verekedni. Továbbá úgy-ahogy szereti Jaxont is. Vannak ilyenek.<br/>- Akkor te verted be az övét? - faggat tovább Jared. Jól ismeri az ikrek módszereit, ha Jesse felsül a verbális erőszakkal, Jaxon rögtön a fizikaihoz folyamodik.<br/>- Nem - tagad ismét Jaxon. Hazudik. Tudják. Tudja, hogy tudják, úgyhogy nem számít. Olyan, mintha nem is hazudna, nem?<br/>- Nem annyira - helyesbít Jesse. - És meggyógyítottam. Nem fog köpni.</p><p align="justify">- És mi az, amit köpött, és jó nekünk? - kérdi Joel, az öccsükre mutatva a pillangóval. Jesse elmosolyodik.<br/>- Kocsmázás - közli, és kivár. Szokása. Az ő agyában más tempóban pörögnek az infók, mint egy átlagemberében, nem tudja, mennyivel gyorsabban, de azt tudja, hogy gyorsabban. Jared meg néha külön is lassú, ha nagyon hazavágja magát. Joel meg amúgy is. Szóval Jesse inkább kivár egy kicsit két új infó között. Mikor aztán Joel figyelmeztetően megrázza a pillangót, tovább beszél. - Ichabod Kupor szombatonként általában összeül pár vajsörre a régi iskolai barátaival. Délután négy és öt között szoktak találkozni, és ami a legfontosabb, a Sánta Kentaurba járnak.<br/>A Fogadó a Sánta Kentaurhoz híres-hírhedt hely, a varázslónegyed egyik Abszol útról lekanyarodó sikátorában. Apa néha oda is jár üzletelni, ha nem az átlagvevőiről van szó. Az átlagvevői a Zsebkosz köznél is rosszabb helyekre beszélnek meg találkozókat. De néha, ha nagy mákjuk van, a nagyobb kutyák közül is rászorul egy apa szakértelmére, és olyankor egy ideig jól élnek.<br/>Joel mosolya ragyogó és veszedelmes. Most ő is előre gondol, mint Jesse, és tudja, hogy innentől nyert ügyük van. Járt már apával a Kentaurban, egyszer. Optimálisan félhomályos hely. Kiadják a kiskorúnak a Lángnyelvet, ha szépen néz, és Jo mestere a szépen nézésnek. A férfimosdó kellően tágas, párnázóbűbájt meg már egy ideje tud vetni. Aki annyit térdel, mint ő, annak muszáj.</p><p align="justify">A mosolya láttán Jared egyszerre lélegzik fel és keseredik el. Fellélegzik, mert Jay meg fog menekülni, de elkeseredik, mert tudja, mit jelent ez a mosoly. Tudja azt is, hogy ha most nem állítja meg Joelt azon az úton, amin elindulni tervez, elvész ő is menthetetlenül.<br/>Nem állíthatja meg.<br/>És Joel nem is hagyná neki.</p><p align="justify">De akkor is rohadt egy érzés asszisztálni ahhoz, hogy az öccse végleg prostit csinál magából.</p><p align="center">*****</p><p align="justify">Jared és Joel együtt sétálnak le Roxmortsba szombaton, a falulátogatás ürügyén. Az ilyenkor szokásos felfordulás kiváló alibi az elintézendőjükre. Az ikrek a kastélyban maradtak. Van engedélyük a roxmortsi kimenőkre, mint a legtöbb harmadikosnak, de Jared megtiltotta, hogy lejöjjenek. Ha valami félresikerül, nekik legyen csak alibijük és legyenek minél távolabb a kihágásnak még a lehetőségétől is. Meg aztán nem biztos, hogy Joel szép látvány lesz, amikor visszatér. Ne lássák, ha nem muszáj. <br/>Anya írt, sok sikert kívánt. Jay jól van, azt mondta, már megnyugodott. Nyilván. Aranyhal-memóriája van, ami az ilyen csörtéket illeti. Hiányoznak neki. Nyilván. Mindig akkor a legboldogabb, ha mindenki odahaza van.<br/>Holnap lesz a hivatalos minisztériumi vizsgálat.</p><p align="justify">Joel izgatott. Rémült is, Jared látja rajta, de nem teszi szóvá. Minek?<br/>A legjobb ruháját viseli. Magas derekú, szűk kordbársony nadrág van rajta, fodros ujjú ing, nadrágtartó. A haja jólfésült, a szeme kihúzva feketével. Gyönyörű.<br/>Ichabod be fog dőlni neki.<br/>Jared különösen toprongyosnak hat mellette. A szeme véreres a karcos lencséjű szemüveg mögött, a szája cserepes és a bőre sápatag, a járása alig észlelhetően bizonytalan. Kicsit szétvan, mint általában. Ő aggódik Joel helyett is.</p><p align="justify">A Szárnyas Vadkanba mennek. Jared majd egy teljes havi keresetét perkálja le az öreg, kecskeszagú kocsmárosnak azért, hogy Joel oda-vissza használhassa a kandallót, a maradékot az öccse kezébe csúsztatja. Családi ügy, annyit mondanak, és a pasas nem kérdezősködik. Ennyi aranyért ez a minimum.<br/>Nem búcsúzkodnak.<br/>- Mondj el azért értem egy miatyánkot, vagy valami - dünnyögi még Joel egy szar vigyorral. Jared csak fáradtan röhög, aztán megszorítja a vállát finoman, és int neki, hogy menjen.<br/>Joel tehát megy. A gyomra gombócba zsugorodva, a nyelvét lassan véresre rágja a hülye stresszeléstől, és idegesítően izzad a tenyere is. A zsebre dugott jobbjában csúszkál a pillangókés felmelegedett fémje. De Jayre gondol, a drága tündérre, aki nem tehet róla, hogy kibaszott vele az élet, és nem tétovázik egy pillanatra sem.<br/>A Sánta Kentaurban csönd van és nyugalom. Perdita, a kocsmárosnő nem szól egy szót se Joelt látva, de a szemeiben felismerés villan. Pedig már jó egy éve, hogy itt volt az apjával. De nem véletlen járnak ide olyan sokan a piszkos üzleteiket intézni, Perdita tudja, hogy kit kell felismernie, és azt is, mikor kell hallgatni.<br/>Most is hallgat. Kitölti Joelnek a rendelését, és nem is kéri az árát. Az öreg Monday majd fizeti, ha megint erre jár, és nemsokára erre fog járni. Pár hónapja kimératojást kerestek rajta bizalmasan, és ő mindenre kész kocsmárosként rögtön tudta, kit kell ajánlania a diszkrécióban bízó illetőnek.<br/>Még vannak körök, ahol a Monday név jó ajánlólevélnek számít. Alacsonyabb körök.</p><p align="justify">Joel korán érkezett, de nem bánja. Iszik, csak hogy csináljon valamit, és iszik, hogy kitartson a bátorsága. Mondjuk ez az egy vajsör nem sokat fog nyomni a latban. Még beplacebózhatja magának, hogy ér valamit. <br/>Perdita lopva ránéz, mire biztatóan rámosolyog a nőre. Az visszamosolyog.<br/>Joel azon gondolkodik, vajon akkor is ezt tette volna, ha tudja, hogy milyen elvetemültségre készül éppen ez a kölyök a kocsmájában? <br/>Nem akar gondolkodni. Túl akar lenni ezen a szarságon.<br/>Mélyen legbelül tudja, hogy soha nem lesz túl rajta.</p><p align="justify">Végre, mikor már kezdi halálosan unni ezt az ostoba vihar előtti csendet, és nagy dőrén lehúzott egy rövidet is, Ichabod Kupor és a társasága megérkezik.<br/>Joel innentől megfigyel. A pasas negyvenesnek néz ki, de többnek kell lennie annál, mert nagyjából apával együtt járt a Roxfortba vagy kicsivel utána csak. Elegánsan öltözött, magas, szálas alakú. Jól láthatóan és egyértelműen agglegény. Sorban gurítja le a vajsöröket, és közben nagyokat nevet a többi férfival együtt, bizonyára mindenféle jelentéktelen és sekélyes és gonosz viccen. Egy ponton feltűnik neki, hogy Joel őt figyeli, de nem teszi szóvá. Jó jel.<br/>Joel utánamegy a vécére. Félfallal elválasztva, külön vannak a piszoárok, de nem baj, most úgysem akar konfrontálódni a férfival. Apró pergament tesz az egyetlen mosdókagyló szélére, mielőtt távozna. Még a Roxfortban írta meg.<br/><em>"Maradjon hátra, ha a barátai elmentek. Nem fogja megbánni."</em><br/>Jared szerint rémesen teátrális szöveg, és Ichabod nem fog bedőlni neki. De Jared bogyókkal és bájitalokkal csinál saját színházat a fejében, ő nem tudja, hogy az emberek odavannak a közhelyességért. Joel színész, ő tudja a legjobban.</p><p align="justify">Ichabod Kupor kíváncsi lesz rá.</p><p align="center">*****</p><p align="justify">A számítása helyesnek bizonyul. Egy pillanatra megijed, amikor órákkal később Ichabod kisétál az ajtón a barátai nyomában, de aztán látja, hogy csak hátlapogatva-kézrázogatva búcsúzkodnak, és Ichabod nem tart velük. Elszív egy cigit a bejáratnál és visszafordul.<br/>Joel addigra már a volt asztaluknál ül két itallal. Minden átmenet nélkül csábító üzemmódba kapcsol, az arcán kisimulnak a ráncok, a mosolya széles és ártatlan. A zsebében pihen a pillangókés, de érzi a combjának feszülni a hűvös fémet. Ez megnyugtatja.<br/>Ichabod leül vele szemben. Közelről megnézve egész jóképű. Kíváncsian méri végig Joelt, aki erre megrebegteti a szempilláit, és a férfi elé tolja az egyik üveget. Ichabod felhúzza a szemöldökét.<br/>- Miben lehetek a szolgálatára, fiatalember? - kérdezi aztán, továbbra sem véve le a szemét Joelről. Magázódik, újabb jó jel. Nem gyerekként tekint Joelre.<br/>Már nem is az egy ideje, ha őszinték akarunk lenni. Az ő családjukban a fiatalkori tisztaságot rövid években mérik. Apa szerint Jaynek adták mind a sajátjuk nagyját, ő azért lehet örök gyerek. Szentimentális baromság. De néha jó hinni benne. <br/>- Kellene a segítsége - pillázik tovább Joel. A viselkedése, a lágy hangja maga az ártatlanság, a kinézete pont az ellenkezőjét sugallja. Ezek az Ichabod-féle bujkáló homokosok általában rohadtul buknak az ilyesmire. - A kisöcsém bajban van.<br/>- Kicsoda a maga kisöccse? - harap rá a csalira Ichabod. Joel röhög magában, Jesse jól beválasztott neki, nevetségesen manipulálható a pasas.<br/>Nevetséges, hogy ilyen alakok felelős pozícióban lehetnek a Minisztériumban.<br/>Nevetséges a Minisztérium.<br/>- Jayden Monday - böki ki aztán, gondosan szemlesütve és pironkodva, mint valami szende szűzlányka. Közben megszakad az iróniától. Bár technikailag még szűz. Ártatlannak már rég nem ártatlan így se. És nem is lány. Annyira. Elvileg. <br/>Hagyjuk. <br/>Ő maga nem mutatkozik be, de nem is kell neki. Ichabod egyre kíváncsibban néz rá, már érzi, hogy valami készül, de azt még nem, hogy pontosan mi.</p><p align="justify">Joel nem hagyja sokáig kétségek között vergődni.<br/>Túlmagyarázkodnia szerencsére nem kell, a férfi így névről már valamelyest sejti, hogy kicsoda ő és az öccse is. Bár esélyes, hogy a korukat illetően tévedésekben lehet, mert ugye apával együtt járt suliba, és Harlow Monday eléggé benne jár már a korban. De főosztályvezető-helyettesként nyilván tisztában van legalább a holnapi vizsgálóbizottság létezésének a tényével, meg úgy körvonalaiban Jay ügyével.<br/>Joel szívszorító regét improvizál a család nehéz helyzetéről, meg arról, hogy Jayden egy földre szállt angyal, és az anyjuk szíve beleszakadna, ha elszakítanák a családtól, és amúgy is, véletlen balesetek miatt nem lehet okolni őt. A röhej az, hogy közben egy pillanatra sem hazudik.<br/>Még nagyobb röhej, hogy Ichabod bekapja a mézesmadzagot, sajnálkozva nézi, ahogy Joel elmorzsol egy könnycseppet a szeme sarkában, és megbabonázva figyeli, ahogy a fiú aggódva az ajkára harap.<br/>Na, talán most már leesett neki a dolog.<br/>Joel innentől kivárásra játszik. Lehajtott fejjel babrál az ingujjával, abszolút művi és ugyanannyira ártatlannak tetsző erotikussággal szopogatja az italát, és próbál annyira szerencsétlenül kinézni, mint ahogy amúgy érzi magát. Azt nem kell megjátszania.<br/>Lehúzza a pasast egy cigire. A középső- és a mutatóujja közé fogja a szálat, tenyérközelben, mint a nők. Francia belégzéssel dohányzik, a száján kiengedi a füstöt, az orrán újra beszívja.<br/>Hatásos trükk, bár a nemdohányzót az ilyesmi nem hatja meg. Ichabodot szemlátomást igen.<br/>Joel szándékolt lassúsággal és alapossággal nyomja el a végigégett cigit az asztalon álló hamutálban. Egy pillanatra arra gondol, hogy milyen rohadt büdös lesz a keze tőle, aztán majdnem felröhög. Mire itt végez, ez lesz a legkisebb baja.</p><p align="justify">Ichabodon látszik, most már elértette, mire megy ki a játék. Előjátékra.<br/>Az megvolt, jöhet a következő felvonás.<br/>Joel feláll az asztaltól, riszálja magát a mosdóba menet. Nem kell hátranéznie, hogy tudja, a férfi követi.<br/>A kezét mondjuk megmossa addig is.<br/>- Na jó. Mit akarsz tőlem? - szegezi neki a kérdést Ichabod, mikor becsukódik mögötte az ajtó. Tegezésre váltott, de már nem baj az se. Nem bizonytalan a járása, de Joel látja rajta, hogy enyhén spicces. Bár ő is érzi azt a lehajtott rövidet meg a másfél vajsört éppenséggel. Nem hátrány jelenleg, sőt. Ichabod illumináltsági szintje pedig jobb nem is lehetne. Tökéletesen emlékezni fog mindenre, de a gátlásai már omladoznak. Be van gerjedve.<br/>- Mentse meg az öcsémet - búgja Joel közelebb lépve. - Nem lesz jobb neki, ha bezárják, maga is tudja.<br/>- Megtehetném éppenséggel - vallja be a férfi, és csak nézi, ahogy Joel újra közelebb lép. - De miért is tenném?<br/>Joel megállja, hogy felnevessen. Helyette lassan, a nyelvét kidugva elmosolyodik, újra lép, a mellkasuk már szinte összeér.<br/>- Mert szépen kérem rá - suttogja, egyenesen Ichabod szemébe nézve. - Nagyon szépen.<br/>Szemeznek még pár pillanatig. Ichabod mosolya épp csak árnyalatnyi aztán, de Joelnek nem kell ennél több biztatás. Zöld utat kapott.</p><p align="justify">Sóhajtva hajol rá a férfi nyakára. Nem smárol, nem tudná magát rávenni, meg az ilyen kiéhezett faszkalapoknak amúgy is erotika kell, nem romantika.<br/>Közben előhúzza a pálcáját, a varázspálcáját mármint, és a pasas háta mögött elvégez pár bűbájt. Hangszigetel, egyirányúan ajtót zár, padlót párnáz maga alatt. Rutin.<br/>Rutin az is, amikor Ichabod zihálva elhúzódik tőle, és egy szelíd, de határozott mozdulattal térdre kényszeríti. Hogy a fogával cipzárt lehúzni miért rutin, azt ne feszegessük. De az.<br/>A folytatás is.</p><p align="justify">Ami már nem az, az Ichabod mosolya, amikor egyszer csak az álla alá nyúlva felhúzza magához, és ő a száját törölgetve fölemelkedik hozzá. Egymagasak nagyjából, de Joel mégis kisebbnek és védtelennek érzi magát a méregetéstől.<br/>Ichabod Kupor ezt persze nem látja rajta. Joel szemtelenül és veszélyesen jó színész. Ichabod csak egy jól öltözött és halálosan elszánt fiatalembert lát maga előtt, akiről még a lehetősége se merült föl benne annak, hogy iskoláskorú is lehet. Tévesen, de teljesen logikusan következtet a birtokában lévő információkból: hogy a fiúnak Harlow Monday az örege, aki vagy öt évvel előtte lehet korban, és Londonban jár hétvégén, de az iskolaév kellős közepén, és a kisöccsének titulálja ezt a Jayden gyereket, szignifikáns korkülönbséget sugallva vele. Ezen tények egyikébe se gondol bele ugyan tudatosan, de Joel megjelenésével és kiállásával együtt meg sem fordul a fejében, hogy amúgy egy tinivel van dolga.<br/>Néz Joelre. Bujkál a mosolyában valami sajnálkozás. Joel tudja, hogy mit jelent ez a mosoly, de azért ostoba módon sírhatnékja lesz tőle. Neki mindig mindentől sírhatnékja lesz.<br/>- Édes, hogy azt hiszed, ehhez ennyi elég - ingatja a fejét a férfi. - Naiv, és ezért édes.<br/>Joel nagyot nyel, és oké, nem először az elmúlt percekben, de ez most más. Pedig számított rá, hogy ez jön. Ez mégsem az iskolai kispályázás házi dolgozatokért és büntetőmunka-elsimításokért, itt nagyobb a tét, és ennek megfelelően nagyobbnak kell lennie az áldozatnak is. Úgy is készült, mielőtt eljött volna a kastélyból. De azért valahol mélyen hitt benne, hogy megúszhatja.<br/>Anya azt szokta mondani, a hit a remélt dolgokban való bizalom, és a nem látható dolgok létéről való meggyőződés.<br/>Csak hát az efféle naivitás már rég nem az ő világuk.<br/>Kupor tovább nézi várakozón, és Joel tudja, hogy ugyanarra gondolnak mindketten. Jayden Mondayre. A szerencsétlen kis fogyatékosra, aki igazán jó fiú, soha senkit nem bántana, és tényleg belepusztulna, ha elvinnék otthonról. Megvan az esélye rá, hogy ne vigyék el. Még nincs veszve semmi. Kupor tett egy ajánlatot válaszul Joelére, még ha nem is mondta ki, és vár.<br/>Most már minden azon múlik, hogy Joel mennyire tud bátor lenni.<br/>Mennyire tud bátor lenni?<br/>Jesse gyűjtötte az infót erről a nyavalyásról, még ki tudja, mikor és miért és hogyan, és Jaxon verekedett meg a továbbiakért. Jared az oktatásával, a család hírnevével játszott, hogy ki tudják fizetni ezt a kirándulást. Ha kiderül, hogy ő juttatja hozzá a napi adagjához Jeongot, Flintet meg a többi, hozzá hasonló lecsúszott alakokat, a Roxfort söpredékét, hát az lesz a legkisebb baja, hogy kicsapják.<br/>De tették mindezt Jayért. Az öccsükért, akit szeretnek, ha már senki más nem szereti.<br/>Hát most légy bátor, Joel Monday, a többiek már azok voltak.</p><p align="justify">Összeszorítja a fogait. Minden erejével azon van, hogy ne bőgje el magát, és ne üljön ki az arcára a szégyen pírja, bár az az ő barnaságával amúgy sem nagyon szokott látszani, ebben a balladai félhomályban meg főleg nem fog. Nem baj. Bátor lesz.<br/>Kupor persze mosolyog továbbra is, és Joel legszívesebben beverné a képét, vagy a gyomrába mártaná a pillangót, de nem teheti. Utolsó egy érzés.<br/>Kupor magához húzza és megcsókolja, és Joel most már hagyja neki. Aztán int, hogy forduljon meg, és Joel megfordul. Még hálás is valamennyire ezért. Küzd tovább, hogy ne fakadjon sírva, de a szemei égnek és szúrnak a le nem gördült könnyektől. Tipikus, de nem akarja, hogy Kupor ezt lássa.<br/>Ő sem akarja látni Kuport. A mosdókagylóra hajol, rámarkol a hűvös porcelánra két oldalról és nekiszorítja a homlokát. Kupor kikapcsolja a nadrágját, ő meg kikapcsolja az agyát.<br/>A fájdalmat nem tudja.<br/>De aztán rájön, hogy nem is akarja.<br/>Anya egyszer azt mondta, hogy Jaydennek nagyon nehéz az élete, de legalább nem fáj neki, hogy az.<br/>Ők fájnak Jayden helyett is.</p><p align="justify">- Ügyes fiú - lihegi Kupor egyszer csak a nyakába, és Joel feleszmél abból a kín, szégyen és önundor okozta bódulatból, amibe esett. Vége?<br/>Vége. Összecsuklana, ha nem kapaszkodna elfehéredő ujjakkal a mosdókagylóba, a lábán folyik <em>valami</em>, és éppen meg szeretne halni, de vége. Kupor nagy levegőt vesz, és Joel sejti, most fogja megtudni, hogy mindkét fél számára előnyös üzletet kötött-e éppen, vagy csak odaadta a szüzességét egy idegennek a semmiért egy félreeső kocsma férfivécéjében. - Jayden otthon marad.<br/>Kiszaladnának alóla a lábai megkönnyebbülésében, de Kupor megtartja.<br/>Úgyhogy Joel felnyög. Ahhoz még van ereje. Kupor egészen tétován, de megsimítja a tarkóját, és ettől eltörik benne valami. Sírva fakad egy kicsit. A nyelvére harap, hogy ne hüppögjön, a porcelánnak ütögeti a homlokát, küzd az utolsó kis foszlányáért a letiport, áruba bocsátott becsületének.<br/>- Ne bőgj, na - mondja neki Kupor, és hihetetlen, de mintha próbálna kedves lenni. - Majd beletanulsz.<br/>És Joel ettől egészen érthetetlen módon megvigasztalódik.</p><p align="justify">Kupor elengedi, rendbe szedi magát, és Joel még kivárja, hogy az ajtó becsukódjon utána, csak akkor roskad a padlóra.<br/>Fejbevágja a pia, amit eddig az adrenalin és az idegessége nem engedett felszívódni, és letaglózza kicsit a megkönnyebbülés is. De még nem szabad kidőlnie. Jared várja, és biztos letelt már rég a roxmortsi kimenő ideje is. Megváltás lenne elájulni, de az ilyen szar alakoknak, mint ő, nem jár megváltás, úgyhogy küzd az édes öntudatlanság ellen. Végül, bár ezt először nem tartotta lehetségesnek, de sikerül összekaparnia magát. Vagyis a romjait annak az embernek, aki egykor, nem is olyan rég még Joel Monday volt. Tisztító varázslatokat végez. Visszaöltözik. Fésülködik az ujjaival. Letörli az elkenődött festéket a szeme alól, egyetlen pillanatra a tükörbe nézve.<br/>- Bocsásd meg a mi vétkeinket - dörmögi az orra alatt csak úgy gépiesen, megeresztve egy fáradt vigyort a nyúzott arcképének.<br/>Feloldja a védővarázslatokat, és távozik az utálatos helyiségből. Minden lépés fáj és éget, de nem törődik vele. Azzal sem, hogy már nagyon nem kéne innia, a pulthoz érve kér valami ütőset Perditától. A nő kiszolgálja ugyan, de az arcára van írva a véleménye az egész nyilvánvaló helyzetről. Ki is fejezi, azzal, hogy hűvösen elkéri az eddigi italok árát.</p><p align="justify">Joel fizet, és menekül. Joel ma mindenért fizet.</p><p align="center">*****</p><p align="justify">Jared még a Szárnyas Vadkanban ücsörög, ahogy ígérte. Remeg a keze, az idegességtől meg mástól is. Megszédülve ugrik föl, ahogy Joel kiesik a kandallóból, és elég egy pillantást az öccse arcára vetnie, tud mindent. Megszakad a szíve egy kicsit.<br/>Megöleli Joelt. Mindketten úgy tesznek, mintha ettől minden rendben lenne, és Joel úgy kapaszkodik belé, mint egy fuldokló, de már soha nem lesz semmi rendben.<br/>Jaydent kivéve. Ironikus, mi?</p><p align="justify">El kell indulniuk, későre jár, most nem állhatnak le érzelgősködni. Joel útközben még oldalba hányja Madam Puddifoot kávézóját. Pont Madam Puddifoot kávézóját. Ezen röhögnek, mert amúgy sírni kéne rajta, de azt se lehet, úgyhogy röhögnek. Sokáig, idiótán, fékezhetetlenül.<br/>Sikeresen bejutnak a kastélyba. Joel hagyja, hogy Jared vonszolja maga után, már rettentően kimerült. De Jared nem a Hollóhát-toronyba viszi őt.<br/>A prefektusi fürdőbe löködi be, meg miután levetkőztette, a teleeresztett kádba. Joelnek ettől megint sírhatnékja támad, de nem engedi el magát, pedig tudja, hogy ha most nem sír, ő, aki pedig mindenen szokott, akkor valami menthetetlenül elveszett, de legalábbis megváltozott. <br/>De nem lehet, bassza meg.<br/>Jared se sír, pedig még mindig jót tenne neki is. De ő már nagyon régóta nem sír. Joel miatt, a többiek miatt ki kell tartania, úgyhogy csak ücsörög a kád szélén, alsógatyában, a lábát lógázva a vízbe. Girhes. Persze, aki cuccozik, az sokszor elfelejt enni.</p><p align="justify">Egyetlen vékony hajszálnyira vannak mindketten attól, hogy örökre és visszafordíthatatlanul szétzuhanjanak. Jared már a mestere ennek a határmezsgyén egyensúlyozásnak, Joel még csak most tanulja.<br/>Jake még időben hátat fordított, ő megúszta. Az ikrek egyelőre biztonságban vannak.<br/>Jayden szétzuhanva született.<br/>Tőle tanulják állandóan, hogy kell megküzdeni ezzel. Hogy kell Mondaynek lenni. Ő a legprofibb benne, mert neki az alapállapota ez a szarság, amibe a többiek állandóan keverik magukat miatta.</p><p align="justify">Joel kidől, és Jarednek kábé a karjaiban kell fölvinnie a toronyba. Ha nem lenne annyira beállva, mint amennyire be van, biztos nem bírná el, de így meg se érzi. Joel se, de az nem is baj. Érzett ma már elég mindent.<br/>A klubhelyiség még nem üres teljesen. Persze, akik kevésbé abnormális dolgokkal töltötték a roxmortsi kimenőjüket, mint ők, azok nem is fáradtak ennyire. Úgyhogy akadna pár bámészkodó, de Jaxon előbukkan egy fotelből, és mit keres ő itt egyáltalán?<br/>Hülye kérdés, persze, a bátyjait. Az, hogy a Süveg anno miként vélekedett a jelleméről, igazán derogál neki. Mondjuk azt se tudják, Joel hogy nem mardekáros lett a sok büszke becsvágyával.<br/>Szóval Jaxon nem a saját háza tornyában van, hanem itt. Az ökleit ropogtatja fenyegetően, és az emberek félretekintenek. Jesse erősítő és fájdalomcsillapító bájitalokat hoz meg egy józanítót is, jobb nem tudni, honnan szerezte őket. Remélhetőleg Blackburntől. A mardekárosok gyógyítótanonc prefektusa általában szívesen nyújt segítséget anélkül is, hogy kellemetlen kérdéseket tenne föl. Velük kapcsolatban csak olyanok szoktak akadni. <br/>Jared a saját ágyába fekteti Joelt. Ő úgyse fog ma benne aludni, de a szobatársai kevesebbet szoktak okvetetlenkedni, mint az ötödév összes barma, akik Joelnek jutottak. Joel erre még magához tér kissé, főleg a bájitalok bevétele után. Horkantva elutasítja a Jared által fölajánlott bogyót, összekócolja Jaxon hülye haját, és megnyugtatja őket, hogy minden rendben lesz. Jayden otthon maradhat.<br/>Az ikrek ünnepelnek. Tudják, Joel mit áldozott mindezért, de talán még túl fiatalok hozzá, hogy átérezzék a súlyát a dolognak. Vagy talán csak túl érzéketlenek. Jared szeretné hinni, hogy az előbbi az igazság, de már rég nem tud magának hazudni. Erről legalábbis nem. </p><p align="justify">Egy ideig fontolgatja, hogy összedob egy levelet anyának, de fingja sincs, mit írhatna, meg aztán minek is? A vizsgálóbizottság előbb oda fog érni hozzájuk, mint akármilyen bagoly. Most már tisztán Ichabod Kupor kezében vannak.<br/>Úgyhogy nem ír levelet. Helyette elégeti a kandallóban azt, amit anya küldött, meg a minisztériumit is.<br/>Úgy érzi közben, Joel gyerekkorát égeti el. De bevette a Joelnek ajánlott bogyót, arra fogja ezt a baromságot.<br/>Hajnalig ücsörög a kandalló előtti szőnyegen, a tűzbe bámulva. Egy ponton Jaxon is megjelenik, és hozzábújik. Talán pityereg is egy kicsit, nem figyel rá annyira.<br/>Ő se tud mindig mindenre figyelni.</p><p align="justify">Másnap este kapják meg anya levelét. Együtt olvassák el, a klubhelyiségben. Nem a szokott helyeiken ülnek, Joel trónol Jared nagy asztalfői foteljában. Inkább praktikussági okokból, mint puszta kényelmességből. Mászkálni nem nagyon akaródzik neki, díva üzemmódba kapcsolt, úgyhogy hoznak föl neki kaját. A mosolya műbb, mint valaha. A pillangókés állandóan kiesik a kezéből, tiszta seb a tenyere. De tartja magát, büszkén, egyenesen.<br/>Nem csak azért, mert fáj a segge.<br/>Azért is, amit anya írt nekik. Nem írt sokat, azt is maszatosan. Tudják, sírt, helyettük is.</p><p align="justify">
+  <em>"Köszönöm. Apátok büszke lesz."</em>
+</p><p align="justify">Ennyi áll a levélben. De nem is kell több. Hiszen ezt jelenti Mondaynek lenni.<br/>Így aztán amikor Joel pár nap múlva kap egy I. K. aláírású, fényes aranygalleonok kísérte levelet, ami az aktuális elérhetőségei után érdeklődik, röhögve ír vissza a következő szabad falulátogatós hétvége dátumával és a roxmortsi helyszínnel. A legborzasztóbb, hogy őszintén boldognak érzi magát, miközben elígérkezik. Már nem fáj az egész. Megérdemelte.</p><p align="justify">Egy új cipőt is megérdemelne végre.</p><p align="center">*****</p><p align="center">
+  <em>The brother's born a wondersmith,</em>
+  <br/>
+  <em>we started as a team.</em>
+  <br/>
+  <em>By complimenting cogs and gears we built a head of steam.</em>
+  <br/>
+  <em>The tragic flaw of charming men</em>
+  <br/>
+  <em>is exactly as it seems,</em>
+  <br/>
+  <em>too much grease,</em>
+  <br/>
+  <em>can break down a machine.</em>
+</p><p align="center">
+  <em>Pour another round on me.</em>
+  <br/>
+  <em>You know I'm good for it,</em>
+  <br/>
+  <em>you know me.</em>
+  <br/>
+  <em>You know I'm good for it,</em>
+  <br/>
+  <em>you know my family.</em>
+</p><p align="center">
+  <em> <a href="https://www.youtube.com/watch?v=3FdUdvajOp0" rel="nofollow"> Astronautalis – The Wondersmith And His Sons </a> </em>
+</p><p align="center">*****</p><p align="center">
+  <strong>VÉGE</strong>
+</p><p align="center"> </p>
+  </div>
+  <!--/main-->
+
+    <div class="chapter preface group">
+      <div class="end notes module" id="chapter_1_endnotes" role="complementary">
+        <h3 class="heading">Notes:</h3>
+        <blockquote class="userstuff">
+          <p>Welcome to the ride, folks. :"D Ezzel elkezdődött végre az én kedvenc srácaim története is. Remélhetőleg ti is szeretni fogjátok őket, bármilyen idióták és problematikusak is. :3 And the usual: jelezzetek vissza, igyekszem a válaszaimmal is mindig haladni, és köszi mindenkinek, aki eddig írt, kudosolt vagy csak olvasott, ti ösztönöztök most igazán, hogy ne adjam fel, és menjek előre tovább/megint. ❤) Ja, és kövessetek <a href="https://www.facebook.com/bolondokfanfic/" rel="nofollow">fészen</a>, oda posztolok híreket/képeket/vicceseket alkalmasint, meg nézzetek el a spotify felhasználómra, <a href="https://open.spotify.com/user/hiriajuu" rel="nofollow">ide</a>, a történethez készült sok-sok playlistért. Van jópár, ami specifikusan ehhez a sztorihoz vagy a szereplőihez készült.</p>
+        </blockquote>
+      </div>
+    </div>
+
+</div>
+
+<!-- end of cache -->
+
+    </div>
+  
+  
+    </div>
+    <!-- END work skin -->
+  </div>
+  <!-- END work -->
+
+  <!-- BEGIN comment section -->
+  <!-- Gets embedded anywhere we need to list comments on a top-level commentable. We need the local variable "commentable" here. -->
+<div id="feedback" class="feedback" role="complementary">
+
+  <h3 class="landmark heading">Actions</h3>
+
+  <ul class="actions" role="navigation">
+      <li><a href="#main">&#8593; Top</a></li>
+
+
+      <li><a href="/works/23430865/chapters/56300131#workskin">Next Chapter &#8594;</a></li>
+
+
+
+
+      <li>
+        <form id="new_kudo" action="/kudos" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="JDKbfYqho72OnRgxT/7i+DFGbA5+s5KDtLONtMzpmmjnEtmmqWkW3ht2q/+2xhKD3ajZnSWJRCmC0KwDVjQ+nA=="/>
+          <input value="23430865" type="hidden" name="kudo[commentable_id]" id="kudo_commentable_id"/>
+          <input value="Work" type="hidden" name="kudo[commentable_type]" id="kudo_commentable_type"/>
+          <input type="submit" name="commit" value="Kudos ♥" id="kudo_submit"/>
+</form>      </li>
+
+
+
+
+        <li id="show_comments_link"><a data-remote="true" href="/comments/show_comments?chapter_id=56159299">Comments (2)</a></li>
+  </ul>
+
+  <div id="kudos_message"></div>
+
+  <h3 class="landmark heading"><a name="comments">Comments</a></h3>
+
+  
+
+    <div id="kudos">
+      <p class="kudos">
+          <a href="/users/muffinhamster">muffinhamster</a> and <a href="/users/LilyPotteri">LilyPotteri</a>
+             as well as 
+          1 guest
+         left kudos on this work!
+        <span class="kudos_expanded hidden">
+          <a id="kudos_collapser" href="#">(collapse)</a>
+        </span>
+      </p>
+</div>
+
+
+    <div id="add_comment_placeholder" title="top level comment">
+      <div id="add_comment">
+        <!-- expects the local variables comment, commentable, and button_name -->
+<div class="post comment" id="comment_form_for_56159299">
+  <form class="new_comment" id="comment_for_56159299" action="/chapters/56159299/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="LcP3f/YwVTQnrFqm8kfxcqUx2IqsLxCcykQLSl38pFfu47Wk1fjgV7JH6WgLfwEJSd9tGfcVxjb8Jyr9xyEAow=="/>
+    <fieldset>
+      <legend>Post Comment</legend>
+
+
+
+
+
+        <p class="notice">
+          This work&#39;s creator has chosen to moderate comments on the work. Your comment will not appear until it has been approved by the creator.
+        </p>
+
+        <dl>
+          <dt class="landmark">Note:</dt>
+          <dd class="instructions comment_form">All fields are required. Your email address will not be published.</dd>
+          <dt><label for="comment_name_for_56159299">Name: </label></dt>
+          <dd>
+            <input id="comment_name_for_56159299" type="text" name="comment[name]"/>
+            <script>var validation_for_comment_name_for_56159299=new LiveValidation('comment_name_for_56159299',{wait:500,onlyOnBlur:false});validation_for_comment_name_for_56159299.add(Validate.Presence,{"failureMessage":"Please enter your name.","validMessage":""});</script>
+          </dd>
+          <dt><label for="comment_email_for_56159299">Email: </label></dt>
+          <dd>
+            <input id="comment_email_for_56159299" type="text" name="comment[email]"/>
+            <script>var validation_for_comment_email_for_56159299=new LiveValidation('comment_email_for_56159299',{wait:500,onlyOnBlur:false});validation_for_comment_email_for_56159299.add(Validate.Presence,{"failureMessage":"Please enter your email address.","validMessage":""});</script>
+          </dd>
+        </dl>
+
+      <p>
+        <label for="comment_content_for_56159299" class="landmark">Comment</label>
+        <textarea id="comment_content_for_56159299" class="comment_form observe_textlength" title="Enter Comment" name="comment[comment_content]">
+</textarea>
+        <input type="hidden" id="controller_name_for_56159299" name="controller_name" value="chapters"/>
+      </p>
+      <p class="character_counter"><span id="comment_content_for_56159299_counter" class="value" data-maxlength="10000" aria-live="polite" aria-valuemax="10000" aria-valuenow="comment_content_for_56159299">10000</span> characters left</p>
+      <script>var validation_for_comment_content_for_56159299=new LiveValidation('comment_content_for_56159299',{wait:500,onlyOnBlur:false});validation_for_comment_content_for_56159299.add(Validate.Presence,{"failureMessage":"Brevity is the soul of wit, but we need your comment to have text in it.","validMessage":""});validation_for_comment_content_for_56159299.add(Validate.Length,{"maximum":"10000","tooLongMessage":"must be less than 10000 characters long."});</script>
+      <p class="submit actions">
+        <input type="submit" name="commit" value="Comment" id="comment_submit_for_56159299" data-disable-with="Please wait..."/>
+      </p>
+    </fieldset>
+</form></div>
+<div class="clear"></div>
+
+      </div>
+    </div>
+
+  <!-- If we have javascript, here is where the comments will be spiffily inserted -->
+  <!-- If not, and show_comments is true, here is where the comments will be rendered -->
+  <div id="comments_placeholder" style="display:none;">
+  </div>
+
+
+</div>
+<!-- END comments -->
+
+  <!-- END comment section -->
+
+
+
+          <div class="clear"><!--presentational--></div>
+        </div>
+        <!-- END main -->
+      </div>
+      <!-- BEGIN footer -->
+<div id="footer" role="contentinfo" class="region">
+	<h3 class="landmark heading">Footer</h3>
+  <ul class="navigation actions" role="navigation">
+    <li class="module group">
+      <h4 class="heading">About the Archive</h4>
+      <ul class="menu">
+        <li><a href="/site_map">Site Map</a></li>
+        <li><a href="/diversity">Diversity Statement</a></li>
+        <li><a href="/tos">Terms of Service</a></li>
+        <li><a href="/dmca">DMCA Policy</a> </li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Contact Us</h4>
+      <ul class="menu">
+        <li><a href="/abuse_reports/new">Report Abuse</a></li>
+        <li><a href="/support">Technical Support and Feedback</a></li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Development</h4>
+      <ul class="menu">
+          <li><a href="https://github.com/otwcode/otwarchive/commits/v0.9.295.0">otwarchive v0.9.295.0</a></li>
+        <li><a href="/known_issues">Known Issues</a></li>
+        <li><a href="http://www.gnu.org/licenses/gpl-2.0.html" title="View License">GPL</a> by the <a href="http://transformativeworks.org/" title="The Organization for Transformative Works">OTW</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!-- END footer -->
+
+    </div>
+    <!-- check to see if this controller/action allow tinymce before we load the gigantor js; see application_helper -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js" type="text/javascript"></script>
+<!-- if user has googleapis blocked for some reason we need a fallback -->
+<script type="text/javascript">if(typeof jQuery=='undefined'){document.write(unescape("%3Cscript src='/javascripts/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));document.write(unescape("%3Cscript src='/javascripts/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));}</script>
+
+
+<script type="text/javascript">$j=jQuery.noConflict();</script>
+<script src="/javascripts/jquery.scrollTo.min.js+jquery.livequery.min.js+rails.js+application.js+bootstrap,,_bootstrap-dropdown.min.js+jquery-shuffle.js+jquery.tokeninput.min.js+jquery.trap.min.js+ao3modal.min.js+js.cookie.min.js+filters.min.js,Mjc.9IDDdceXcF.js.pagespeed.jm.ZwTODK7jAq.js"></script><script>eval(mod_pagespeed_a8hDjzT3l_);</script>
+<script>eval(mod_pagespeed_1nA1vKz9z4);</script>
+<script>eval(mod_pagespeed_AKC4FLip6q);</script>
+<script>eval(mod_pagespeed_gX7XC77lvT);</script>
+<script>eval(mod_pagespeed_5zo0ZWMy4O);</script>
+<script>eval(mod_pagespeed_eCCgOhjhYQ);</script>
+<script>eval(mod_pagespeed_TU1Ln7LKSh);</script>
+<script>eval(mod_pagespeed_qTpbjsXQwh);</script>
+<script>eval(mod_pagespeed_R5FGw2ySDb);</script>
+<script>eval(mod_pagespeed_rqqFCT3xcT);</script>
+
+<script>eval(mod_pagespeed_Gf_4KFhTvB);</script>
+
+
+  <script>function isSupported(){var item="localStoragePolyfill";try{localStorage.setItem(item,item);localStorage.removeItem(item);return true;}catch(e){return false;}}function acceptTOS(){if(isSupported()){localStorage.setItem("accepted_tos","20180523");}else{Cookies.set("accepted_tos","20180523",{expires:365});}}$j(document).ready(function(){if(localStorage.getItem("accepted_tos")!=="20180523"&&Cookies.get("accepted_tos")!=="20180523"){$j("body").prepend("<div id=\"tos_prompt\" class=\"hidden\">\n  <h2 class=\"heading\">\n    <span>Archive of Our Own<\/span>\n  <\/h2>\n  <div class=\"agreement\">\n    <p class=\"summary\">\n      On Archive of Our Own (AO3), users can make profiles, create works and\n            other Content, post comments, give Kudos, create Collections and \n            Bookmarks, participate in Challenges, import works, and more. Any \n            information you publish in a comment, profile, work, or Content that you \n            post or import onto AO3 including in summaries, notes and tags, \n            will be accessible by the public (unless you limit access to a work only \n            to those with AO3 Accounts), and it will be available to \n            AO3 personnel. Be mindful when sharing personal information, \n            including  your religious or political views, health, racial background, \n            country of origin, sexual identity and/or personal relationships. To \n            learn more, check out our <a href=\"/tos\">Terms of Service<\/a> and <a href=\"/tos#privacy\">Privacy Policy<\/a>.\n    <\/p>\n\n    <p class=\"confirmation\">\n      <input type=\"checkbox\" id=\"tos_agree\" />\n      <label for=\"tos_agree\">I have read &amp; understood the new Terms of Service and Privacy Policy<\/label>\n    <\/p>\n\n      <p class=\"submit\">\n        <button name=\"button\" type=\"button\" disabled=\"disabled\" id=\"accept_tos\">I agree/consent to its terms<\/button>\n      <\/p>\n\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    var container = \$j(\"#tos_prompt\");\n    var outer = \$j(\"#outer\");\n    var button = \$j(\"#accept_tos\");\n\n    setTimeout(showTOSPrompt, 1500);\n\n    function showTOSPrompt() {\n      \$j.when(container.fadeIn(500)).done(function() {\n        outer.addClass(\"hidden\").attr(\"aria-hidden\", \"true\");\n      });\n\n      \$j(\"#tos_agree\").on(\"click\", function() {\n        button.attr(\"disabled\", !this.checked);\n        if (this.checked) {\n          button.on(\"click\", function() {\n            acceptTOS();\n            outer.removeClass(\"hidden\").removeAttr(\"aria-hidden\");\n            \$j.when(container.fadeOut(500)).done(function() {\n              container.remove();\n            });\n          });\n        };\n      }).change();\n    };\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+  <script>$j(document).ready(function(){var permitted_hosts=["archiveofourown.org","download.archiveofourown.org","insecure.archiveofourown.org","www.archiveofourown.org","insecure-test.archiveofourown.org","test.archiveofourown.org","testdownload.archiveofourown.org"];var current_host=window.location.hostname;if(!permitted_hosts.includes(current_host)&&Cookies.get("proxy_notice")!=="0"){$j("#skiplinks").after("<div id=\"proxy-notice\">\n  <div class=\"userstuff\">\n    <p class=\"important\">Important message:<\/p>\n    <ol>\n      <li>You are using a proxy site that is not part of the Archive of Our Own.<\/li>\n      <li>The entity that set up the proxy site can see what you submit, including your IP address. If you log in through the proxy site, it can see your password.<\/li>\n    <\/ol>\n    <p class=\"important\">重要提示：<\/p>\n    <ol>\n      <li>您使用的是第三方开发的反向代理网站，此网站并非Archive of Our Own - AO3（AO3作品库）原站。<\/li>\n      <li>代理网站的开发者能够获取您上传至该站点的全部内容，包括您的ip地址。如您通过代理登录AO3，对方将获得您的密码。<\/li>\n    <\/ol>\n    <p class=\"submit\"><button class=\"action\" type=\"button\" id=\"proxy-notice-dismiss\">Dismiss Notice<\/button><\/p>\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    \$j(\"#proxy-notice-dismiss\").on(\"click\", function() {\n      Cookies.set(\"proxy_notice\", \"0\");\n      \$j(\"#proxy-notice\").slideUp();\n    });\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+    <script>$j(document).on("loadedCSRF",function(){$j.post("/works/23430865/hit_count.json")})</script>
+
+
+  </body>
+</html>

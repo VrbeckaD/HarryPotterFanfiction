@@ -1,0 +1,371 @@
+
+    <div id="chapters" role="article">
+        <h3 class="landmark heading" id="work">Work Text:</h3>
+          <div class="userstuff"><h2>Introduction</h2>
+<p>The <a href="https://archiveofourown.org/collections/hd_fan_fair" rel="nofollow">Harry/Draco Fan Fair 2019</a> is a long running prompt fest for Draco Malfoy/Harry Potter, focused around specific themes (i.e., unusual careers, pets, books, travel, and food). The works are posted anonymously, and at the conclusion of the fest is a guessing poll that runs for a few days before the final reveal of the authors.</p>
+<p>The event includes artworks, written works, and podfics. Podfics are clearly identified by their narrator; With a small enough set of artists, it is typically feasible to judge by visual examination of art style. However, guessing the authors is a much more arduous task.</p>
+<p>Hence, we ask: <em>is it possible to use machine learning to guess?</em></p>
+<p>The answer: yes! (Or rather, mostly.)</p>
+<p>This is a common academic problem of <em>authorship attribution</em>. Different people write differently: from the structure of sentences, punctuation, and vocabulary, etc., and by analysing this data, it is possible to guess the author of the work.</p>
+<p>Here, we use supervised learning. We are given the list of authors by the event organisers, and this allows us to gather previous writing samples from their AO3 page. The learning is 'supervised' which means we have previous works from each author, and we know who is the author in these previous works. We can use these works as example of each author's writing style (e.g. frequency of popular words, sentence length...). These samples are used to train and build a predictive model, which we then apply to the unknown works from the fest.</p>
+<p>This document is organised as follows:</p><ul>
+<li><a href="#results" rel="nofollow">Results</a></li>
+<li><a href="#discussion" rel="nofollow">Discussion</a></li>
+<li><a href="#methods" rel="nofollow">Methods</a></li>
+<li><a href="#references" rel="nofollow">References</a></li>
+</ul>
+<p><br/>
+<br/>
+</p><h2>
+<a name="results" rel="nofollow" id="results"></a>Results</h2>
+<p>Here is the word cloud from the fics in the <a href="https://archiveofourown.org/tags/H*s*D%20Fan%20Fair%202019/works" rel="nofollow">Harry/Draco Fan Fair 2019</a>:</p>
+<p align="center">
+  <img src="https://cdn.discordapp.com/attachments/625379582953914380/654986174145888284/word_cloud_hdff_full_text.png" alt="word cloud from hd fanfair 2019 fics"/>
+</p>
+<p><br/>
+</p>
+<p>This is, in comparison with the word cloud from all the older fics scraped from the authors:</p>
+<p align="center">
+  <img src="https://cdn.discordapp.com/attachments/625379582953914380/654986190935687178/word_cloud_all_prior_work_full_text.png" alt="word cloud from all prior authors' works"/>
+</p>
+<p>The only need-to-know information to understand the following results:</p><ul>
+<li>
+
+<p>Support Vector Machine (SVM), and Multilayer Perceptron are different machine learning algorithms (different algorithms are suited to different data and predictions)</p>
+</li>
+<li>
+
+<p>F1-measure is a rating of how good the machine learning model is (based on the <em>known</em> data fed). The bigger the better! Ideally, we would have f1 = 1.</p>
+</li>
+<li>
+
+<p>the models are guessing on <em>Bag of Words</em>, which is based on how often a word appears in a text. It is a common feature for text-classification. Common “stopwords” are removed, including articles (a, the…) and prepositions (in, on…). However, “Draco Malfoy” isn’t a common word in the general literature, hence names remain in the models. 
+</p>
+
+<p><br/>
+<br/>
+</p>
+<h3>Now, without further ado:</h3>
+
+<p>Best machine-learning-only guess: 27/44 = <b>61%</b></p>
+
+<p>Best machine learning + human intervention: 30/44 = <b>68%</b></p>
+
+<p>Best human-only guessing (from the guessing poll): was <a href="https://archiveofourown.org/users/maesterchill" rel="nofollow">maesterchill</a> with 8 fics correct (<a href="https://archiveofourown.org/users/milkandhoney" rel="nofollow">milkandhoney</a> also had 8, though they had helped on two of them) = 8/44 = <b>18%</b></p>
+
+<p>and <a href="https://hd-fan-fair.livejournal.com/179743.html" rel="nofollow">combined total correct guess from all guessers in the poll</a> is 18/44 = <b>41%</b></p>
+
+<p><br/>
+</p>
+
+<p>The complete results are shown in the table below. There is some randomness in the predictions each time it is run, so I picked the ones with the best f1 measure from a handful of runs (very imprecise, I know. Glad this isn’t an official paper!).</p>
+
+<p>Machine learning alone was able to correctly guess <em>less than half </em>of authors. However, some authors are never/rarely predicted (<a href="https://archiveofourown.org/users/fanfictionbubbles" rel="nofollow">fanfictionbubbles</a> in particular who had no fics on their AO3 page), and some authors were predicted multiple times (especially <a href="https://archiveofourown.org/users/digthewriter" rel="nofollow">digthewriter</a>, <a href="https://archiveofourown.org/users/gracerene" rel="nofollow">gracerene</a>, <a href="https://archiveofourown.org/users/AhaMarimbas" rel="nofollow">AhaMarimbas</a>, <a href="https://archiveofourown.org/users/punk_rock_yuppie" rel="nofollow">punk_rock_yuppie</a>, and <a href="https://archiveofourown.org/users/ladderofyears" rel="nofollow">ladderofyears</a> who have a lot more fics).</p>
+
+<p>Furthermore, there is extra data that was not built into the machine learning models:</p>
+<ul>
+<li>
+
+<p>In the final predictions, an author can only appear <em>once</em></p>
+</li>
+<li>
+
+<p>I knew my own fic, <b><a href="https://archiveofourown.org/works/20652239/chapters/49042691" rel="nofollow">Infuse With Affection, Enchant With Love</a></b>;</p>
+</li>
+<li>
+
+<p>I could confidently predict the author of <b><a href="https://archiveofourown.org/works/20620829" rel="nofollow">Harry Potter and the Peahen from Perdition (tigersilver)</a></b> due to my familiarity with their distinct humour</p>
+</li>
+<li>
+
+<p>I strongly believed that <b><a href="https://archiveofourown.org/works/20691434" rel="nofollow">Baby Gate</a></b> was by <b><a href="https://archiveofourown.org/users/donnarafiki" rel="nofollow">donnarafiki</a></b>, due to my familiarity with what they tend to write about, their mentions that they only read the short fics in the fest--and the fact that they didn’t comment on this short fic.</p>
+</li>
+<li>
+
+<p>Some of the fest authors commented on many works, which means they <em>couldn't have</em> written that work</p>
+</li>
+<li>
+
+<p>Some authors had partially distinct author notes (i.e. content-wise, tone) that I also used to narrow down guesses</p>
+</li>
+</ul>
+
+<p>I can combine this extra knowledge with numerous runs of the machine learning in an adhoc way, and doing this increased the correct percentage from 55% to 68%.</p>
+
+<p align="center">
+
+ <img src="https://cdn.discordapp.com/attachments/625379582953914380/654991384918360074/longtable.png" alt="table of machine learning guesses versus the true answer"/>
+</p>
+
+<p>*(Note that SVM using 99% of input data to train is technically poor methodology)</p>
+
+<p><br/>
+<br/>
+</p>
+
+<p>The fics that a human was able to guess are also marked on the results, which is interesting in comparing which fics that were easy to guess both by humans and machine learning—and which were easier for different methods. Authors that were predicted correctly by all methods (human and machine) are:</p>
+<ul>
+<li>ravenclawsquill</li>
+<li>ignatiustrout</li>
+<li>mindabbles</li>
+<li>bafflinghaze</li>
+<li>donnarafiki</li>
+<li>gracerene</li>
+<li>tigersilver</li>
+</ul>
+
+<p>which suggests that these authors likely have a combination of distinctive style and sufficiently many fics.</p>
+
+<p><br/>
+<br/>
+</p>
+<h2>
+<a name="discussion" rel="nofollow" id="discussion"></a> Discussion
+</h2>
+
+<p>In this report, we used machine learning to predict the authors on the anonymous fics of the Harry/Draco Fan Fair 2019. We were able to predict approximately <b>60%</b> correctly (24/44), in comparison to the best human prediction of <b>18% </b>and best <em>combined</em> human prediction of <b>41%</b>. Hence, despite the fact that the machine learning models were not perfect, they were able to significantly increase the number of correct predictions. Hence, using machine learning to predict authors of anonymous fanfic is a viable method.</p>
+
+<p>There are multiple reasons why the machine learning models were imperfect. Aside from authors changing writing styles, and perhaps the existence of better machine learning algorithms, the input data and features are the two main problems</p>
+<ol>
+<li>
+
+<p>Non-ideal input data</p>
+<ul>
+<li>
+
+<p>Some authors had much more works than others (and some authors had no data at all). Authors with few works are less likely to be selected by the algorithm.</p>
+</li>
+<li>
+
+<p>As part of fanfiction writing, some words (e.g. character names, places, spells) are much more common. This makes it more difficult to distinguish different authors. This is compounded by the fact that some authors <em>did not</em> have Draco/Harry or even Harry Potter fanfiction in their prior work to draw from. Because of that the algorithm will find that this author's previous works don't look like any of the works in the fest.</p>
+</li>
+</ul>
+</li>
+<li>
+
+<p>Features in the model could be further fine-tuned:</p>
+</li>
+<li>
+
+<p>Removing fandom specific words to make fics from authors across different fandoms more equal</p>
+</li>
+<li>
+
+<p>Use re-sampling to make the total amount of words per author more balanced.</p>
+</li>
+<li>
+
+<p>include other data, such as:</p>
+<ul>
+
+<li>
+
+<p>total fic lengths</p>
+</li>
+<li>
+
+<p>fic ratings</p>
+</li>
+<li>
+
+<p>typically tags used and author note content (such as betas used and casual language)</p>
+</li>
+<li>
+
+<p>average words per sentence</p>
+</li>
+<li>
+
+<p>sentence length variation</p>
+</li>
+<li>
+
+<p>lexical diversity (i.e. range of vocabulary)</p>
+</li>
+<li>
+
+<p>average word length</p>
+</li>
+<li>
+
+<p>paragraph lengths</p>
+</li>
+<li>
+
+<p>commas/question marks/other punctuation per sentence</p>
+</li>
+<li>
+
+<p>tense used (e.g. past/present/future) and POV (first/second/third)</p>
+</li>
+<li>
+
+<p>formatting features such as preferred scene breaks, indentation etc.</p>
+</li>
+
+</ul>
+</li>
+</ol>
+
+<p>We did not explore whether authors had more works on fanfiction.net or tumblr. Also, note that the prediction results are not “stable”: in different training iterations, a different random 80% of known data is used as input, for example, and this affects the subsequent predictive model produced.</p>
+
+<p>Now, at the conclusion of the fest, all the authors in the fest now have at least one work. This would make predicting their authorship in future anonymous fests easier.</p>
+
+<p><br/>
+<br/>
+</p>
+<h2>
+<a name="methods" rel="nofollow" id="methods"></a>Methods
+</h2>
+
+<p>This section is for those interested in more detailed explanations about all the steps of the process.</p>
+
+<p>This section contains:</p>
+<ul>
+<li><a href="#data_gathering" rel="nofollow">Data gathering</a></li>
+<li><a href="#features" rel="nofollow">Features</a></li>
+<li><a href="#training" rel="nofollow">Training and testing sets</a></li>
+<li><a href="model_baseline" rel="nofollow">Model baseline</a></li>
+<li><a href="#model_training" rel="nofollow">Model training</a></li>
+<li><a href="#performance" rel="nofollow">Performance metrics</a></li>
+</ul>
+
+<p><br/>
+</p>
+<h3>
+  <a name="data_gathering" rel="nofollow" id="data_gathering"></a>Data gathering
+</h3>
+
+<p>First we need to get the works (fanfics):</p>
+<ol>
+<li>
+
+<p>From the fest itself,</p>
+</li>
+<li>
+
+<p>and the prior works from the known authors.</p>
+</li>
+</ol>
+
+<p>This was done by scraping AO3 using the <a href="https://github.com/radiolarian/AO3Scraper" rel="nofollow">AO3Scraper</a>. From the list of authors and artists given, the known artists were removed (they can be determined by looking at their AO3 pages, with the word “[ART]” in titles, and/or zero wordcounts).</p>
+
+<p>The generic works page for any user is <u>https://archiveofourown.org/users/<b>username</b>/works</u>, and the AO3Scraper was used to retrieve all relevant works. Similarly, all the non-podfic, non-art-only works from the Harry/Draco Fan Fair 2019 were retrieved. Through this, I gathered all <b>metadata and all chapter words</b>.</p>
+
+<p><br/>
+<br/>
+</p>
+<h3>
+  <a name="features" rel="nofollow" id="features"></a>Features
+</h3>
+
+<p>In this report, we are using <a href="https://scikit-learn.org/stable/" rel="nofollow">scikit-learn</a>, which is a python package.</p>
+
+<p>However, I also recommend <a href="https://www.cs.waikato.ac.nz/ml/weka/" rel="nofollow">Weka</a>, which has a graphical user interface.</p>
+
+<p>Scikit-learn has a function called word vectorization that turns all the input words into features, i.e. by picking out the most <b>common words</b> and calculating the <b>frequency</b> of those words in each fic. Essentially, it turns input like this:</p>
+
+<p align="center">
+<img src="https://cdn.discordapp.com/attachments/625379582953914380/654991374562623488/fic_format_example.png" alt="fic format example"/>
+</p>
+
+<p><br/>
+<br/>
+</p>
+
+<p>which contains text that cannot be directly used in machine learning, into input like this for example:</p>
+
+<p align="center">
+<img src="https://cdn.discordapp.com/attachments/625379582953914380/654991372717129728/vectorised_example.png" alt="example of fic text being vectorised"/>
+
+</p>
+
+<p><br/>
+<br/>
+</p>
+<h3>
+<a name="training" rel="nofollow" id="training"></a>Training and testing sets (+unknown data set)</h3>
+
+<p>The unknown data set contained 44 fics. The known data set contained 2579 fics, of which some authors featured prominently (note that digthewriter was ultimately an author in the HD Fanfair 2019; however, given that they often both draw and write, I had kept them in).</p>
+
+<p align="center">
+  <img src="https://cdn.discordapp.com/attachments/625379582953914380/654986394732855317/Number_of_prior_fics_used_as_input.png" alt="proportion of works per writer"/>
+</p>
+
+<p>20% of the input data was randomly selected to be used as the testing set. This is to test the predicting power of the machine learning model on data that we <em>do</em> know.</p>
+
+<p><br/>
+</p>
+<h3>
+  <a name="performance" rel="nofollow" id="performance"></a>Performance metrics
+</h3>
+
+<p>Percentage of correct guesses is our main performance metric (averaged accuracy).</p>
+
+<p>Meanwhile, the f1 measure (or f1 score) is a combined measure of both <em>precision</em> and <em>recall</em>. High precision means that the model would only select answers that it was absolutely sure of, but will miss some results, e.g. for a given author, it would only guess fics it was certain to belong to that author. Meanwhile, with high recall, the model would select as much as possible that could be the answer--including fics by other authors, in our example.</p>
+
+<p><br/>
+<br/>
+</p>
+<h3>
+<a name="model_baseline" rel="nofollow" id="model_baseline"></a>Model baseline
+</h3>
+
+<p>The model baseline is how much we can predict using very simple strategies, such as assigning every work to the most prolific author. We can only consider our model successful if it beats the results of this baseline.</p>
+
+<p>At minimum, we want the model to be better than simply guessing randomly; and ideally, we want it to exceed human guesses.</p>
+
+<p>If we take the strategy of guessing the most prolific author for all fics (here, digthewriter), then the mean accuracy is 0.18 and a f1-score of 0.05 (using sklearn’s dummy classifier).</p>
+
+<p>As you can see in the results, the accuracy and f1-score ultimately achieved is much greater than this!</p>
+
+<p>Alpacapricot calculated a baseline of 1.44 f-measure using only the frequency of each author with a NaiveBayes classifier on a 80/10 partition of known data.</p>
+
+<p>We can also compare our model to human guess. The best human guesser in the poll obtained 18% accuracy. We also beat this metric with up to 60% accuracy.</p>
+
+<p><br/>
+<br/>
+</p>
+<h3>
+<a name="model_training" rel="nofollow" id="model_training"></a>Model training
+</h3>
+
+<p>With the data organised, and testing and training data split, training the model is just one line of code:</p>
+
+<pre>  machine_learning_model.fit(Input_known_data, output_known_authors)
+</pre>
+<p><br/>
+<br/>
+</p>
+
+<p><br/>
+<br/>
+</p>
+<h2>
+  <a name="references" rel="nofollow" id="references"></a>Some Selected References
+</h2>
+
+<p>
+  <a href="http://www.aicbt.com/authorship-attribution/" rel="nofollow">
+    Authorship Attribution with Python
+
+  </a>
+</p>
+
+<p>
+  <a href="https://towardsdatascience.com/a-machine-learning-approach-to-author-identification-of-horror-novels-from-text-snippets-3f1ef5dba634" rel="nofollow">
+    A Machine Learning Approach to Author Identification of Horror Novels from Text Snippets
+  </a>
+</p>
+
+<p>
+  <a href="https://towardsdatascience.com/random-forest-in-python-24d0893d51c0" rel="nofollow">Random Forest in Python</a>
+</p>
+
+<p><br/>
+<br/>
+</p>
+</li>
+</ul></div>
+        <!-- end cache -->
+    </div>
