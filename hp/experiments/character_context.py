@@ -2,28 +2,47 @@ import codecs
 import os
 from collections import Counter, defaultdict
 
-from tokenizer import tokenizer
-from filter_file import extract_article_text
-import spacy
+from pathlib import Path
 
-nlp = spacy.load("en_core_web_sm")
+from hp.utils.tokenizer import tokenizer
+from hp.utils.filter_file import extract_article_text
 
-spacy.load("en_core_web_sm")
 
-DIR_PATH = os.path.join("..", "data", "character_context")
-STOPWORDS = ["from", "in", "and", "to", "out", "up", "not", "before", "he", "she", "are",
-             "is", "was", "said", "had", "would", "at", "that", "with", "whether"]
+DIR_PATH = os.path.join("data", "character_context")
+STOPWORDS = ["from", "in", "and", "to", "out", "up", "not", "before", "he", "she", "on", "only", "about",
+             "would", "at", "that", "with", "whether", "just", "in", "even",
+             "here", "one", "near", "all", "sure", "still", "Black", "through", "i",
+             "Potter's", "as", "his", "her", "its", "himself", "herself", "a", "an", "the"
+             ]
 CHARACTER_NAMES = {
     "Sprout": ["Sprout"],
     "Snape": ["Severus", "Snape"],
     "Harry": ["Harry"],
     "Draco": ["Draco"],
-    "Voldermort": ["Voldermort"],
+    "Voldermort": ["Voldermort", "Tom", "Riddle", "Marvolo"],
     "McGonagall": ["McGonagall", "Minerva"],
     "other": ["Stark", "Albus"],
-    "Lupin": ["Lupin"],
+    "Lupin": ["Lupin", "Remus"],
     "Peeves": ["Peeves"],
-    "Sirius": ["Sirius", "Black"],
+    "Sirius": ["Sirius"],
+    "Ronald": ["Ronald", "Ron"],
+    "Narcissa": ["Narcissa"],
+    "Bellatrix": ["Bellatrix", "Bella"],
+    "Hermione": ["Hermione", "Granger"],
+    "Luna": ["Luna", "Lovegood", "Loony"],
+    "Newt": ["Newt", "Scamander"],
+    "Dumbledore": ["Albus", "Dumbledore"],
+    "Moody": ["Alastor", "Moody", "Madeye", "Mad-eye"],
+    "Cedric": ["Cedric", "Diggory"],
+    "Cho": ["Cho", "Chang"],
+    "Neville": ["Neville", "Longbottom"],
+    "Scorpius": ["Scorpius"],
+    "Ginny": ["Ginny"],
+    "Tina": ["Tina", "Goldstein"],
+    "Grindelwald": ["Grindelwald", "Gellert"],
+    "Pansy": ["Pansy", "Parkinson"],
+    "Credence": ["Credence", "Barebone"],
+    "Charlie": ["Charlie"],
 }
 INVERSE_CHARACTER_NAMES = {}
 for target_name, variants in CHARACTER_NAMES.items():
@@ -31,13 +50,15 @@ for target_name, variants in CHARACTER_NAMES.items():
         INVERSE_CHARACTER_NAMES[variant] = target_name
 
 
-SENTENCE_END = [".", "?", "!"]
+SENTENCE_END = [".", "?", "!", ",", ";", "then", "–", "and"]
 PERSON_CHAR = "😀"
 
+
 def get_adjectives():
-    with codecs.open("../adjectives.txt", encoding="utf-8") as adj:
+    with codecs.open("adjectives.txt", encoding="utf-8") as adj:
         data = [line.rstrip("\n").lower() for line in adj.readlines()]  # každý řádek končí znakem konec řádku \n, ten chceme oddělat
         return set(data)  # unikátní záznamy
+
 
 def select_second_item_from_two_items(record):
     """For sorting, return frequency for record (word, frequency). """
@@ -46,6 +67,9 @@ def select_second_item_from_two_items(record):
 
 def generate_context_for_all_characters():
     known_adjectives = get_adjectives()
+    for stopword in STOPWORDS:
+        if stopword in known_adjectives:
+            known_adjectives.remove(stopword)
     adjectives = defaultdict(list)  # sem ulozime vse, co najdeme, klic bude postava, hodnota budou privlastky
     for no_article, article in enumerate(extract_article_text()):  # pro kazdy text, co mame
         tokens = tokenizer(article)  # nechme si z nej udelat tokeny
@@ -72,27 +96,37 @@ def generate_context_for_all_characters():
                 if last_member != "ok":
                     current = []  # vše smaž
                 current.append(PERSON_CHAR)
-                last_member = "ok"
+                annotation = []
+                extensions = []
                 for forward in range(1, 10):
                     if position + forward > len(tokens) - 1:
                         break
-                    current_position_word = tokens[position + forward]
+                    current_position_word = tokens[position + forward].lower()
                     if current_position_word in SENTENCE_END:
                         break
-                    elif current_position_word.lower() in known_adjectives:
-                        last_member = "ok"
-                        current.append(current_position_word)
-                    elif current_position_word in ("is", "was", "were", "will", "be", "isn't", "not", "would"):
-                        last_member = "not ok verb"
-                        current.append(current_position_word)
+                    if current_position_word in STOPWORDS:
+                        continue
+                    if current_position_word.lower() in known_adjectives:
+                        annotation.append("ok")
+                    elif current_position_word in ("is", "was", "were", "are", "should", "'ll", "am", "'m", "will", "be", "isn't", "not", "would", "hadn't", "going", "to", "must", "have"):
+                        annotation.append("not ok verb")
                     else:
+                        annotation.append("not ok other")
+                    extensions.append(current_position_word)
+                if "ok" not in annotation:
+                    extensions = []
+                for i in range(1, len(extensions)):
+                    if "not ok other" in annotation[:i]:
+                        if "ok" in annotation[:i]:
+                            extensions = extensions[:i]
+                        else:
+                            extensions = []
                         break
-                if last_member != "ok":
-                    current = current[:current.index(PERSON_CHAR)]
+                current.extend(extensions)
                 if len(current) > 1:
                     adjectives[character].append(" ".join(current))
 
-        if no_article % 10 == 0:
+        if no_article % 1000 == 0:
             print("----------------------------------------------", no_article)
             for character in CHARACTER_NAMES:
                 counter = Counter(adjectives[character])  # {"heslo": 100 -- pocet vyskytu}
@@ -139,6 +173,23 @@ def character_preferences():
             if score == top:
                 print(character, ":", phrase, score)
 
+
 if __name__ == '__main__':
+    os.chdir("hp")
     generate_context_for_all_characters()
     character_preferences()
+    phrases = defaultdict(dict)
+    for character in CHARACTER_NAMES:
+        text = (Path("data") / "character_context" / (character.lower() + ".txt")).read_text()
+        lines = [line.replace(PERSON_CHAR, "").strip() for line in text.split("\n") if line.startswith(PERSON_CHAR) and "black" not in line.lower()]
+        total = sum([int(line.split("\t")[1]) for line in lines])
+        for line in lines[:20]:
+            phrase, freq = line.rstrip("\n").split("\t")
+            phrases[phrase][character] = round(100 * float(freq) / total, 1)
+    for phrase, data in sorted(phrases.items(), key=lambda rec: sum(rec[1].values()), reverse=True):
+        if len(data) == 1:
+            continue
+        print()
+        print(phrase)
+        for name, val in sorted(data.items(), key=lambda rec: -rec[1]):
+            print(f"{name}\t{val} %")
