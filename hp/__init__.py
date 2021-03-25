@@ -1,5 +1,5 @@
 import os
 
-DOWNLOAD_PATH = os.path.join("..", "downloaded_articles")
-FULLDOWNLOAD_PATH = os.path.join("..", "downloaded_fullarticles")
-CSV_CATALOGUE_PATH = "CSV HP_catalogue.csv"
+DOWNLOAD_PATH = os.path.abspath(os.path.join(__file__, "..", "..", "downloaded_articles"))
+FULLDOWNLOAD_PATH = os.path.abspath(os.path.join(__file__, "..", "..", "downloaded_fullarticles"))
+CSV_CATALOGUE_PATH = os.path.abspath(os.path.join(__file__, "..", "CSV HP_catalogue.csv"))
