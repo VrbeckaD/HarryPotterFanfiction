@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"f2edcff25e","applicationID":"190034","transactionName":"dgwMEkpfWVsHERpRXlQTFgNKQxpECgxC","queueTime":0,"applicationTime":148,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VQcCWV9RGwIJVFFRAw==",licenseKey:"f2edcff25e",applicationID:"190034"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script>
+    <meta name="keywords" content="fanfiction, transformative works, otw, fair use, archive"/>
+    <meta name="language" content="en-US"/>
+    <meta name="subject" content="fandom"/>
+    <meta name="description" content="An Archive of Our Own, a project of the
+    Organization for Transformative Works"/>
+    <meta name="distribution" content="GLOBAL"/>
+    <meta name="classification" content="transformative works"/>
+    <meta name="author" content="Organization for Transformative Works"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+        Fey Child - Chapter 1 - Blueraven (min96) - Harry Potter - J. K. Rowling [Archive of Our Own]
+    </title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/A.1_site_screen_.css.pagespeed.cf.JiR2hT5NxR.css"/>
+<style media="only screen and (max-width: 62em), handheld">#dashboard{clear:both;float:none;margin:1% 3.5%;max-width:100%;padding:0;width:auto}#dashboard,#dashboard.own{border-bottom:10px solid #900;border-top:10px solid #900;padding:.5em 0;border-radius:.25em}#dashboard ul{border:none;display:inline;padding:0;text-align:left}#dashboard li{display:inline}#dashboard a,#dashboard span{display:inline-block;margin:.25em 0}#dashboard .secondary{background:#eee;padding:.375em 0 .625em;box-shadow:inset 2px 2px 5px #bbb}#dashboard .secondary a{margin:.125em 0}#dashboard .landmark{clear:none;float:left}#main,#main.dashboard{float:none;margin:auto;padding-left:3.5%;padding-right:3.5%;width:auto}.logged-in .splash>.module{width:48.5%}.logged-in .splash > div:nth-of-type(odd) {margin-left:0;margin-right:1.5%}.logged-in .splash > div:nth-of-type(even) {margin-left:1.5%;margin-right:0}form.filters{width:auto;min-width:23%;max-width:24%}.filters fieldset{margin-right:0}form.filters dl{margin-left:.25em;margin-right:.25em}#workskin{margin:auto 1.5%}</style>
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 42em), handheld" href="/stylesheets/skins/skin_873_archive_2_0/A.5_site_narrow.handheld_.css.pagespeed.cf.8L0d7x-op8.css"/>
+<link rel="stylesheet" type="text/css" media="speech" href="/stylesheets/skins/skin_873_archive_2_0/A.6_site_speech_.css.pagespeed.cf.Ybb8bLK5Um.css"/>
+<link rel="stylesheet" type="text/css" media="print" href="/stylesheets/skins/skin_873_archive_2_0/A.7_site_print_.css.pagespeed.cf.ry3YZtf8Cz.css"/>
+<!--[if IE 8]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/8_site_screen_IE8_or_lower.css" /><![endif]-->
+<!--[if IE 5]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/9_site_screen_IE5.css" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/10_site_screen_IE6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/11_site_screen_IE7.css" /><![endif]-->
+
+
+
+<!--sandbox for developers	-->
+<style media="screen">#new_work_search fieldset:first-of-type .submit{padding-top:0}.edit_external_author ul ul{margin-left:2.75em}a.resp-sharing-button__link,.resp-sharing-button__icon{display:inline-block}a.resp-sharing-button__link,a.resp-sharing-button__link:hover{text-decoration:none;color:#fff;border:none}.resp-sharing-button{border-radius:5px;transition:25ms ease-out;padding:.5em .75em}.resp-sharing-button__icon svg{width:1em;height:1em;margin-right:.4em;vertical-align:top}.resp-sharing-button__icon{stroke:#fff;fill:none}.resp-sharing-button__icon--solid{fill:#fff;stroke:none}.resp-sharing-button--twitter{background-color:#55acee}.resp-sharing-button--twitter:hover,a:focus .resp-sharing-button--twitter{background-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c}.resp-sharing-button--tumblr:hover,a:focus .resp-sharing-button--tumblr{background-color:#222d3c}.resp-sharing-button--twitter{background-color:#55acee;border-color:#55acee}.resp-sharing-button--twitter:hover,.resp-sharing-button--twitter:active{background-color:#2795e9;border-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c;border-color:#35465c}.resp-sharing-button--tumblr:hover,.resp-sharing-button--tumblr:active{background-color:#222d3c;border-color:#222d3c}</style>
+<script src="/javascripts/livevalidation_standalone.js.pagespeed.jm.oB__Z5piTe.js"></script>
+
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="8loVm7JyrIKnuBDd0Kx1gXguG8QZdUT+D4/F69mi3rvsI6G2SPcdl0KwfEjMH4/AUmZINQpE4Qs4ohJ0WVfFKQ=="/>
+
+    
+  </head>
+
+  <body class="logged-out">
+    <div id="outer" class="wrapper">
+      <ul id="skiplinks"><li><a href="#main">Main Content</a></li></ul>
+      <!-- BEGIN BETA CAVEATS! -->
+<noscript>
+  <p id="javascript-warning">
+    While we&#39;ve done our best to make the core functionality of this site accessible without javascript, it will work better with it enabled. Please consider turning it on!
+  </p>
+</noscript>
+<!-- END BETA CAVEATS! --> 
+
+<!-- BEGIN header -->
+
+<div id="header" class="region">
+
+  <h1 class="heading">
+    <a href="/"><span>Archive of Our Own</span><sup> beta</sup><script data-pagespeed-no-defer>(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','http://archiveofourown.org/works/5676037/chapters/13075468','eVfAzEuqgZ',true,false,'vL-MuFKqme0');</script><img alt="Archive of Our Own" class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAAqCAMAAAA3b6P4AAACslBMVEWXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACpit0XAAAA5XRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESFBUWFxgZGhscHR4fICEiIyQlJygpKissLi8wMTM0NTY3ODk6Ozw9PkBBQkNFR0hJSktMTU5PUFFSVFVWV1hZWltcXV5fY2RlZmhpamtsbW5vcHFyc3V2d3p7fX5/gIGCg4SFhoeIiouMjY6PkJGSlJWWl5iZmpucnZ6foKGipKWnqKmrrK2ur7CxsrO0tba3uLm6u7y9vr/AwsPFxsfIycrLzM7P0NLT1NXW19na29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+b1plRQAABBRJREFUSMedlvtb1FUQxgcEBMtQggUCxVACu1ApYmRmUqESkCkUREaS4h3JCDONEFPBoBQCJcDIGxkGKYGBkgGSAq4BARIXWWA//0c/7J39LvY0P82cd97nzJlzZuaIKvBRmVqmP/XOrrQNIbOVsNfyjq/3nYrs/1GlWjPe90v28wrgnOiDP7ddeN9WAE47O9DLQI6PksfDMWVjnfuDlCC3b4HbpYcOFjUC9UHKWywtQZNpjTmdgu60uSIis979HRr8bIT4YjVDqV6TFlPgVqjxjBegyM4MfSPepDsm9tAcb5mwHnpfMJmq39C+ZLQCytrfM3deUAylwWYL2+BTc4eICU4aNk/pLgm0DNQuqY+/Nk8zmuX0PmFx83V0eIiIyOPlmq3Wpw+tg1OG7Lk1c8YSzmZsqYhIhLp7pVLy3AugLUqnz73L15boHogUke1cW6ic+5n7QJvhLCLic4cTlmAGRIhdFhfdlcmPpUjCfSj3FpEZ9dQ5W6CFDPrLIc652rj2FWUi0f1wdZGI5DERbg56dlIvO6hyt1UTe8pEZKUa1JEiMVBhDu6GzbHc8LFZUSXHRUTC/oShBHG5DKkmbPUg1xPujSyxSba/sltEREJuA9tl0Qikz9JD8f1ovrjOVtvF7NexRqcsVgOfSIIW6pMDVe7z3zwLHDjFeSfb7GV/P6fXwrqATInuAvraWruB0U2bx4aenqKRJA/MMairhoAsCczr1TWH8dPLfO7w2VRtqKDZFFjsOHBY5JmNX549dzQ5ROQkLY9MQbZvKDCzNgHkGCvaLRGOznS2zQ6e2GJu7gXY7/3kiqQj52ubbo9C143asm2hLsrsD3jV8l2PAbcGsBRN9VuK7B+Gvc3N+WnDKEuqAtlz8FdT37J/5dhdk3vbxUb4Y23UusT08nZAobyTSDeoD8VUmKja3DCVcylk6LB5J7Qcts54Ncv13PVXDMQWLfC9o4SOMxqmd/TqocSKvZirTiIiTusM3NbM5aq9AGccPoYaB73jwn/ItWJ/xQ4RkTWVOupg4VqViEw7ApBTA5l6P9/T8LrV1veHA0RCirQANKU/q193KdZHEiUiMjc2vxUO2E9ml5MlXhn9ANRsVJmAWdUAjAaLiKoRaN9pRX6bdv9VjQD8FGv5HgNuAjS5ioj3Hd3jnyS+7RQfA+BSpONkMFwD5OvOVzEClZNmuV0hE/cAqqOmK7yjD4ENen1Jhpo+y6xt1SXmWoKNEtzS8qOn0Zi3jw7z1hg+BNCZ5m2z/DxmmFuZ7DKbATeBsYKgKX8/C6JNehjfmEZ3DlAb8YC/k1dVlrHx5LHaNNZ7GElzlQdJwOXaOA8REb9sSh2Myw5xn78s/0Fmpzc0V+TmVY1y2lP+h3jF5l9qvPpdnP4I/wITXDY67Xw1sAAAAABJRU5ErkJggg==" data-pagespeed-url-hash="4179492045" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a> 
+  </h1>
+
+    <div id="login" class="dropdown">
+      <p class="user actions" role="menu">
+        <a id="login-dropdown" href="/users/login">Log In</a>
+      </p>
+      <div id="small_login" class="simple login">
+	<form class="new_user" id="new_user_session_small" action="/users/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="g4wUhxAEAu4CubCpEF2HZeR20Fq9b4VRn4cE7/oJSUed9aCq6oGz++ex3DwM7n0kzj6Dq65eIKSoqtNwevxS1Q=="/>
+	<dl>
+    <dt>
+      <label for="user_session_login_small">User name or email:</label></dt>
+    <dd><input id="user_session_login_small" type="text" name="user[login]"/></dd>
+    <dt><label for="user_session_password_small">Password:</label></dt>
+    <dd><input id="user_session_password_small" type="password" name="user[password]"/></dd>
+  </dl>
+  <p class="submit actions">
+    <label for="user_remember_me_small" class="action"><input type="checkbox" name="user[remember_me]" id="user_remember_me_small" value="1"/>Remember Me</label>
+    <input type="submit" name="commit" value="Log In"/>
+  </p>
+</form>
+<ul class="footnote actions">
+  <li><a href="/users/password/new">Forgot password?</a></li>
+    <li>
+      <a href="/invite_requests">Get an Invitation</a>
+    </li>
+</ul>
+
+</div>
+
+    </div>
+
+  <h3 class="landmark heading">Site Navigation</h3>
+  <ul class="primary navigation actions" role="navigation">
+    <li class="dropdown">
+      <a href="/menu/fandoms">Fandoms</a>
+      <ul class="menu" role="menu">
+  <li><a href="/media">All Fandoms</a></li>
+        <li id="medium_5"><a href="/media/Anime%20*a*%20Manga/fandoms">Anime &amp; Manga</a></li>
+        <li id="medium_3"><a href="/media/Books%20*a*%20Literature/fandoms">Books &amp; Literature</a></li>
+        <li id="medium_4"><a href="/media/Cartoons%20*a*%20Comics%20*a*%20Graphic%20Novels/fandoms">Cartoons &amp; Comics &amp; Graphic Novels</a></li>
+        <li id="medium_7"><a href="/media/Celebrities%20*a*%20Real%20People/fandoms">Celebrities &amp; Real People</a></li>
+        <li id="medium_2"><a href="/media/Movies/fandoms">Movies</a></li>
+        <li id="medium_6"><a href="/media/Music%20*a*%20Bands/fandoms">Music &amp; Bands</a></li>
+        <li id="medium_8"><a href="/media/Other%20Media/fandoms">Other Media</a></li>
+        <li id="medium_30198"><a href="/media/Theater/fandoms">Theater</a></li>
+        <li id="medium_1"><a href="/media/TV%20Shows/fandoms">TV Shows</a></li>
+        <li id="medium_476"><a href="/media/Video%20Games/fandoms">Video Games</a></li>
+        <li id="medium_9971"><a href="/media/Uncategorized%20Fandoms/fandoms">Uncategorized Fandoms</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/browse">Browse</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works">Works</a></li>
+  <li><a href="/bookmarks">Bookmarks</a></li>
+  <li><a href="/tags">Tags</a></li>
+  <li><a href="/collections">Collections</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/search">Search</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works/search">Works</a></li>
+  <li><a href="/bookmarks/search">Bookmarks</a></li>
+  <li><a href="/tags/search">Tags</a></li>
+  <li><a href="/people/search">People</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/about">About</a>
+      <ul class="menu" role="menu">
+  <li><a href="/about">About Us</a></li>
+  <li><a href="/admin_posts">News</a></li>
+  <li><a href="/faq">FAQ</a></li>
+  <li><a href="/wrangling_guidelines">Wrangling Guidelines</a></li>
+  <li><a href="/donate">Donate or Volunteer</a></li>
+</ul>
+
+    </li>
+	  <li class="search"><form class="search" id="search" action="/works/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+  <fieldset>
+    <legend>Search Works</legend>
+    <p>
+      <label class="landmark" for="site_search">Work Search:</label>
+      <input class="text" id="site_search" aria-describedby="site_search_tooltip" type="text" name="work_search[query]"/>
+      <span class="tip" role="tooltip" id="site_search_tooltip">tip: buffy gen teen AND &quot;no archive warnings apply&quot;</span>
+      <span class="submit actions"><input type="submit" value="Search" class="button"/></span>
+    </p>
+  </fieldset>
+</form></li>
+  </ul>
+
+
+
+  <div class="clear"></div>
+
+</div>
+
+
+
+<!-- END header -->
+
+      <div id="inner" class="wrapper">
+        <!-- BEGIN sidebar -->
+        <!-- END sidebar -->
+
+        <!-- BEGIN main -->
+        <div id="main" class="chapters-show region" role="main">
+          
+          <div class="flash"></div>
+          <!--page description, messages-->
+<!--/descriptions-->
+
+<!--subnav-->
+<!--/subnav-->
+
+  <!-- BEGIN work -->
+  <div class="work"><p class="landmark"><a name="top">&nbsp;</a></p>
+      <!-- BEGIN navigation -->
+<h3 class="landmark heading">Actions</h3>
+<ul class="work navigation actions" role="menu">
+
+
+
+    <li class="chapter entire"><a href="/works/5676037?view_full_work=true">Entire Work</a></li>
+
+
+      <li class="chapter next"><a href="/works/5676037/chapters/13111093#workskin">Next Chapter &#8594;</a></li>
+
+    <li class="chapter" aria-haspopup="true">
+      <noscript>
+        <a href="/works/5676037/navigate">Chapter Index</a>
+      </noscript>
+      <a class="hidden" href="#">Chapter Index</a>
+      <ul id="chapter_index" class="expandable secondary hidden">
+        <li>
+          <form action="/works/5676037/chapters/13075468" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+            <p>
+              <select name="selected_id" id="selected_id"><option selected="selected" value="13075468">1. Introduction</option>
+<option value="13111093">2. Birthdays, Wands and Feline Fae.</option>
+<option value="13155664">3. A New Friend and A train Trip</option>
+<option value="13308034">4. The Sorting</option>
+<option value="13455280">5. First Days</option>
+<option value="13610848">6. Potions, Brooms and Midnight Wondering</option>
+<option value="13789744">7. Samhain and a Troll, Arrivals and Family</option></select>
+              <span class="submit actions"><input type="submit" name="commit" value="Go"/></span>
+            </p>
+</form>        </li>
+        <li><a href="/works/5676037/navigate">Full-page index</a></li>
+      </ul>
+    </li>
+
+
+
+  <li class="comments" id="show_comments_link_top">
+      <a data-remote="true" href="/comments/show_comments?chapter_id=13075468">Comments </a>
+  </li>
+
+
+
+    <li class="share hidden">
+      <a class=" modal" title="Share Work" aria-controls="#modal" href="/works/5676037/share">Share</a>
+    </li>
+
+
+    <li class="download" aria-haspopup="true">
+      <a href="#">Download</a>
+      <ul class="expandable secondary">
+          <li><a href="/downloads/5676037/Fey%20Child.azw3?updated_at=1577080173">AZW3</a></li>
+          <li><a href="/downloads/5676037/Fey%20Child.epub?updated_at=1577080173">EPUB</a></li>
+          <li><a href="/downloads/5676037/Fey%20Child.mobi?updated_at=1577080173">MOBI</a></li>
+          <li><a href="/downloads/5676037/Fey%20Child.pdf?updated_at=1577080173">PDF</a></li>
+          <li><a href="/downloads/5676037/Fey%20Child.html?updated_at=1577080173">HTML</a></li>
+      </ul>
+    </li>
+</ul>
+<!-- END navigation -->
+
+
+<h3 class="landmark heading">Work Header</h3>
+
+<div class="wrapper">
+
+  <dl class="work meta group" role="complementary">
+          <dt class="rating tags">
+
+              Rating:
+          </dt>
+
+          <dd class="rating tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/General%20Audiences/works">General Audiences</a></li>
+            </ul>
+          </dd>
+          <dt class="warning tags">
+
+              <a href="/tos_faq#tags">Archive Warning</a>:
+          </dt>
+
+          <dd class="warning tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/No%20Archive%20Warnings%20Apply/works">No Archive Warnings Apply</a></li>
+            </ul>
+          </dd>
+          <dt class="fandom tags">
+
+              Fandom:
+          </dt>
+
+          <dd class="fandom tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a></li>
+            </ul>
+          </dd>
+          <dt class="character tags">
+
+              Characters:
+          </dt>
+
+          <dd class="character tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter/works">Harry Potter</a></li><li><a class="tag" href="/tags/Minerva%20McGonagall/works">Minerva McGonagall</a></li><li><a class="tag" href="/tags/Albus%20Dumbledore/works">Albus Dumbledore</a></li><li><a class="tag" href="/tags/Hermione%20Granger/works">Hermione Granger</a></li><li><a class="tag" href="/tags/Ron%20Weasley/works">Ron Weasley</a></li><li><a class="tag" href="/tags/OCs/works">OCs</a></li>
+            </ul>
+          </dd>
+          <dt class="freeform tags">
+
+              Additional Tags:
+          </dt>
+
+          <dd class="freeform tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Adopted%20Harry%20Potter/works">Adopted Harry Potter</a></li><li><a class="tag" href="/tags/Manipulative%20Dumbledore/works">Manipulative Dumbledore</a></li><li><a class="tag" href="/tags/Other%20Additional%20Tags%20to%20Be%20Added/works">Other Additional Tags to Be Added</a></li><li><a class="tag" href="/tags/Fae%20*a*%20Fairies/works">Fae &amp; Fairies</a></li><li><a class="tag" href="/tags/Seelie%20Court/works">Seelie Court</a></li><li><a class="tag" href="/tags/Unseelie%20Court/works">Unseelie Court</a></li><li><a class="tag" href="/tags/Familiars/works">Familiars</a></li><li><a class="tag" href="/tags/Mother-Son%20Relationship/works">Mother-Son Relationship</a></li><li><a class="tag" href="/tags/Politics/works">Politics</a></li>
+            </ul>
+          </dd>
+
+      <dt class="language">
+        Language:
+      </dt>
+      <dd class="language">
+        English
+      </dd>
+
+      <dt class="series">
+        Series:
+      </dt>
+      <dd class="series">
+        <span class="series"><span class="position">Part 1 of the <a href="/series/385492">Child of the Fae</a> series</span><span class="divider"> </span><a class="next" href="/works/5693053">Next Work &#8594;</a></span>
+      </dd>
+
+
+    <dt class="stats">Stats:</dt>
+    <dd class="stats">
+<!-- end of cache -->
+
+      <dl class="stats"><dt class="published">Published:</dt><dd class="published">2019-06-20</dd><dt class="status">Updated:</dt><dd class="status">2019-06-20</dd><dt class="words">Words:</dt><dd class="words">43000</dd><dt class="chapters">Chapters:</dt><dd class="chapters">7/?</dd><dt class="comments">Comments:</dt><dd class="comments">22</dd><dt class="kudos">Kudos:</dt><dd class="kudos">220</dd><dt class="bookmarks">Bookmarks:</dt><dd class="bookmarks"><a href="/works/5676037/bookmarks">61</a></dd><dt class="hits">Hits:</dt><dd class="hits">4474</dd></dl>
+      </dd>
+  </dl>
+</div>
+
+
+
+<!-- BEGIN section where work skin applies -->
+<div id="workskin">
+  <div class="preface group">
+    <h2 class="title heading">
+      Fey Child
+    </h2>
+    <h3 class="byline heading">
+      <a rel="author" href="/users/min96/pseuds/Blueraven">Blueraven (min96)</a>
+    </h3>
+
+
+        <div class="summary module" role="complementary">
+          <h3 class="heading">Summary:</h3>
+            <blockquote class="userstuff">
+              <p>Taken in by a distant relative Harry grows up very differently. Will the plans set in place for his arrival at Hogwarts continue as planned, how much will a different upbringing change a young wizards perspectives, reactions and attitude? (a lot, a hell of a lot) UNDER REVIEW! FIRST 4 CHAPTERS UPDATED</p>
+            </blockquote>
+        </div>
+
+        <div class="notes module" role="complementary">
+  <h3 class="heading">Notes:</h3>
+
+
+
+
+
+    <blockquote class="userstuff">
+      <p>This work will be based off the books with some deviation. All OCs are my own and plagiarism will be reported to the proper authorities.<br/>Harry Potter and the associated stories belong to J.K. Rolling. I do not lay claim to the fandom or anything that has come from other stories. Credit will be given where it is due, and I can both remember and specify correctly.<br/>I do not have a Beta (volunteers welcome).<br/>Being Edited!<br/>Chapter 1-4 Updated again...</p>
+    </blockquote>
+
+</div>
+
+
+  </div>
+
+
+
+    <div id="chapters">
+      <!-- This partial requires local variable 'chapter' -->
+<div class="chapter" id="chapter-1">
+  <!-- chapter management -->
+
+
+  <div class="chapter preface group" role="complementary">
+    <h3 class="title">
+      <a href="/works/5676037/chapters/13075468">Chapter 1</a>: Introduction
+    </h3>
+
+    <!-- only display byline if different from the main byline -->
+
+
+      <div id="notes" class="notes module">
+        <h3 class="heading">Notes:</h3>
+          <p>
+          (See the end of the chapter for  <a href="/works/5676037/chapters/13075468#chapter_1_endnotes">notes</a>.)
+          </p>
+      </div>
+  </div>
+
+  <!--main content-->
+  <div class="userstuff module" role="article">
+    <h3 class="landmark heading" id="work">Chapter Text</h3>
+    <p>~November 2, 1981~<br/>
+~Hogwarts, Scotland~<br/>
+“Minnie?” Minerva blinks up at the door, glass in hand and shoulders slumped forwards. <br/>
+“Alea? What…?” A figure steps into the room, the door falling shut behind it. Long hair falls around a slim figure, swaying with each step. <br/>
+“Escaping for a few hours. We saw the lights and it’s caused a…” Alea steps into the space between Minerva and the fireplace. “Is everything alright?” A long fingered hand waves to the half empty glass, rich amber liquid ripples as it’s placed on a table next to Minerva. With a sigh she lets her arm fall away from the glass.<br/>
+“James and Lilly were killed last night, the war is over but…” Alea folds herself to kneel at Minerva’s feet, resting a hand on the armrest of the woman’s chair. <br/>
+“War causes death and even when it ends, we mourn for those not with us to see it.” Minerva laughs and the sound catches in her throat. “They sounded so bright in your letters, they will be missed.” <br/>
+“You would have loved Lilly, Alea, she had eyes just like yours.” Alea blinks dark green eyes at her old friend. <br/>
+“I don’t remember, but you mentioned her… ah, maiden name?” <br/>
+“Evens, she married James Potter, I think I introduced you to Fleamont, James’ father, at some point.” Alea pats Minerva’s arm and stands. <br/>
+“I wish I had visited at a happier time, maybe next summer?” Minerva smiles. <br/>
+“I have more than enough reason to be happy now.” Alea shrugs and lets herself fall into a second armchair next to Minerva’s. “I am glad you are here, I missed you.” Alea stretches long legs out in front of her. <br/>
+“I should have visited sooner.” Minerva lifts her glass to her mouth and dips it towards Alea.<br/>
+“Time runs differently at the courts, I am always surprised to see you at all.” Alea laughs.<br/>
+“Time runs no faster under our roof, you will find it is just that when no one pays any attention to the passing of seasons you loose track.” Minerva rolls her eyes and lets the glass tap down onto the table once more. <br/>
+“Well, now that the war is over it shouldn’t be so hard to meet on more neutral grounds.” Alea raises an eyebrow.<br/>
+“I have no problem getting to you here.” Minerva pauses. <br/>
+“How…” Alea’s eyes lighten and seem to flicker slightly in the light of the fire. <br/>
+“I did come with news of my own.” Minerva’s mouth narrows as she nods. “I am moving back into the cottage.” Minerva’s face relaxes.<br/>
+“Will your brothers be…” Alea taps her fingers against the table between them. <br/>
+“I haven’t told them.” Minerva laughs.<br/>
+“They worry about you.” Alea glances at Minerva with narrow eyes.<br/>
+“They can worry over Rubrea, she’s pregnant.” Minerva places a hand on her chest.<br/>
+“That’s wonderful news, Ailluin must be so pleased.” Alea waves a hand around in a circle.<br/>
+“He was over the moon, until Mother mentioned something about us all growing up, then he started hovering around us both.” Minerva snorts into her hand. “I think I will leave you to your evening.” Minerva places her hands on the arms of her chair and braces them into place.<br/>
+“I will show you…” Alea rises with a huff.<br/>
+“No need.” Minerva falls back into her chair. <br/>
+“I will envy you your youth every time you leave me to my aches.” Alea steps lightly to stand before her friend. <br/>
+“And I will envy you your scars and wrinkles.” Minerva reaches for her glass again, pausing with her hand in the air.<br/>
+“You never said how you got here.” Minerva narrows her eyes at the younger looking woman. <br/>
+“I asked, the paintings are very helpful.” Minerva taps the rim of her glass.<br/>
+“You have never given me straight answer on how you make it into the strangest places.” Alea turns to face the door. <br/>
+“And I see no need to now.” Minerva laughs as the door closes behind Alea. The fire crackles and burning logs shift as the quite voice of the painting that guards her door filters through the aged wood. Minerva lifts her glass and finds it empty, placing it back on the table she glances out the window, seeing the dark grounds of Hogwarts she waves her wand at the curtain. As it whispers into place, she turns her mind in wards once more.</p><p> </p>
+<hr/><p> </p><p>~August 6, 1985~<br/>
+~Privet Drive, Surrey~<br/>
+The quite comfort of normality was broken one rather normal morning by a knock on the door. For most this would not be much of a disturbance, but at eight on this particular morning it was for a family not used to early weekday visitors. The largest member of this family grunts as he heaves his considerable bulk out of his seat. Moustache twitching over thick lips. The rest of the table resumes their motion, the second widest member of the family, an achievement of sorts given his lack of hight, begins to shovel food into his mouth via his hands. Lines of syrup begin to join on the path to his elbows as the second tallest member of the family purses her lips as a plate of lightly buttered Marmite and tomato toast and a sliced and skinned peach, is placed next to her cup of weak milky tea by the smallest member of the family. <br/>
+Said family member walks with deliberate steps back into the attached kitchen. Pushing a step into place next to the door of the fridge, he steps up, stretching to reach the handle of the door. As his fingers tug at the handle the large man re-enters the dining room with a tall, thin, though not as skeletal as the seated woman, with long auburn hair contained in a ponytail. <br/>
+“Pet, this is…” He glances at the woman standing next to him.<br/>
+“Leah.” He grunts.<br/>
+“She says she’s related to your great something grandfather.” The seated woman sips her tea. The large man slumps back into his seat.<br/>
+“Well, are you going to introduce yourself?” ‘Pet’ places her tea back in it’s saucer and raises her eyebrows at the standing woman. The man scowls at his empty glass.<br/>
+“Boy!” The small child in the kitchen yanks open the fridge door, reaching among the rattling bottles for and containing something vibrantly orange.<br/>
+“Coming ‘ncle Vernon.” The tall woman frowns at ‘Boy’.<br/>
+“I’m checking in on the family for Elnaril, he is caught up in something at Court.” The child places the bottle on the bench next to him, closes the door, hops of his stool and pulls the bottle into his hands before using the same careful steps to return to the table. <br/>
+“Then I don’t see why you have to remain any longer.” Leah blinks as the child pushes the bottle next to Vernon’s glass and steps away, returning to the kitchen once more. <br/>
+“Wait a minute Petunia, what Court?” Petunia scowls at her husband. <br/>
+“The Freakish kind.” Leah’s eyes narrow and the boy in the kitchen peaks around the counter. <br/>
+“Then your sister…” Petunia shakes her head. <br/>
+“Different kind of Freak.” Vernon taps his fork against his plate. <br/>
+“But still a Freak, they could take the boy.” Leah turns her head as the boy flinches back behind the counter. <br/>
+“And why would we?” Leah looks down on the seated family. The large child scoops a pile of waffles smothered in caramel off a plate in the centre of the tables and returns to his meal. <br/>
+“He’s a freak like his mother.” Leah tilts her head and Vernon huffs.<br/>
+“She married on of Them, whelped the Freak and then got herself killed.” He waves a greasy fork in the air. “They left him on our doorstep.” <br/>
+“Who are They?” Leah crosses her arms and shifts her weight onto one foot. <br/>
+“Witches, Wizards, Them.” Petunia spears a piece of peach on her fork and points it at the dark head of hair visible over the kitchen bench. “He’s one too.” Leah blinks a few times.<br/>
+“So she took after Rose’s family?” Petunia pauses with the peach between her lips. “Elnaril’s wife, her parents and brother were all part of that world.” <br/>
+“Then my great, great grandmother was a…” Leah shakes her head and waves a hand to the kitchen.<br/>
+“She wasn’t, I do not believe it is possible to simply walk away with a child these days.” Vernon waves a hand at the hallway.<br/>
+“Only if their’s some sort of official record for them, and he doesn’t have one. I checked.” Petunia nods firmly and swallows. <br/>
+“All we have is a letter, declaring his parents dead and him our responsibility. Can’t just turn up at the police office with a child and a letter, they might charge us with something.” Leah raises an eyebrow. <br/>
+“So you are offering me a child of your blood.” Petunia pauses but Vernon thumps the table with a fist. <br/>
+“Yes, take him.” Petunia begins to raise a hand but Leah’s eyes flicker before she turns away from the table. Leah turns her gaze on the boy frowning from his place at the table. <br/>
+“You offer me the child of your sister?”<br/>
+“Yes, why are you…”<br/>
+“The cousin of your son?” A large hand slams onto the table and thick brows draw down over small eyes.<br/>
+“We are.” Leah watches Petunia, Vernon turns narrow eyes on his wife.<br/>
+“Yes.” Leah stands, turning away from the table.<br/>
+“Hello little one.” The small child is now standing behind her, leaf green eyes blinking into eyes only a shade darker. “What do you think of leaving with me?” The mop of dark hair shifts as his head falls and rises. “Is there anything you wish to take with you?” The hair rustles as the head bellow it shakes. Long hands tuck under small arms and the boy is suddenly far from the slightly sticky linoleum. <br/>
+“Hurry up and get out.” Leah turns to face the table once more and waits, eyes on Petunia. <br/>
+“Go on then.” With a nod she tucks the child onto her hip and holds out a hand. <br/>
+“Thrice you have forsaken this child into my care, thrice given up all claim to him, thrice called for no price.” Petunia’s eyes widen as she pushes away from the table. “Elnaril’s blood flows though your vein’s no more, this I declare as Kin to Elnaril and his children.” Petunia’s mouth falls open and Leah chants one final line. “I remove from this place those protections granted onto you and your line by my brother Elnaril.” The windows flash dully and Lee turns to the front door, ignoring the cries from Petunia as they fill the suddenly quite room. <br/>
+Leah steps out of the house and strides down the front path, as she steps over the yard boundary it flashes red. Leah continues down the street, child resting against her.</p><p> </p>
+<hr/><p> </p><p>Harry preses his head against the green eyed woman’s shoulder. He wasn’t quite sure what was happening, but the things she had said to Aunt Petunia and Uncle Vernon made him think that maybe he was going to be staying with her now. Though what that would mean he didn’t know. <br/>
+Would he still have to help make breakfast, still have to help with the laundry, the gardening, the cleaning? Would this new woman… aunt he supposed, it was what he had to call Aun… Petunia. Would his new Aunt have different tasks for him, would she treat him more like A… Petunia treated Dudley? The walk down the street took them to the local park, where he had been left alone when Petunia took Dudley clothes shopping last week. Was his new Aunt going to leave him here and go clothes shopping? <br/>
+His new Aunt sits him on a picnic table and then sits on the attached bench. He looks down slightly into her eyes and ponders their colour again. He didn’t know anyone with green eyes, other than himself anyway. Au… Petunia had made a comment to a neighbour that he had his mother’s eyes once, so maybe his new Aunt was actually his mother? The hand on his shoulder stills his pondering.<br/>
+“Hello little one, can you tell me your name?” Harry tips his head forward so he can see his hair and watches his knees.<br/>
+“Harry.” Harry feels his shoulder relax under gentle fingers.<br/>
+“Hello Harry, my name is Alea.” Harry notices a grass stain on his pants and frowns. “Have you eaten this morning?” Harry shakes his head. There wasn’t a chance to eat the extra bit of toast behind the counter while U… Vernon drank his juice. “Then that would make a fine place to start.” Harry blinks up at his new… he wasn’t sure… Alea. “For the moment though, I am going to be looking after you now, and this means that we need to find the right names to call each other.” Harry looks up. “I can be your Career, your Aunt, your Cousin or something else.” Harry nibbles on his bottom lip.<br/>
+“What would you call me?” Alea hums.<br/>
+“Well, ward, nephew, cousin, or something else.” Harry blinks. <br/>
+“But my name’s Harry.” Alea laughs.<br/>
+“And my name is Alea, but I call my uncle Uncle, and my mother Mother and my brothers Alluin and Elnaril.” Harry huffs. <br/>
+“But I had to call Aunt Petunia ‘nd Uncle Vernon Aunt and Uncle.” Harry watches Alea blink a few time.  <br/>
+“Ah, well Petunia is your mother’s sister, so she is your Aunt, as her husband Vernon is your Uncle. If we work on those lines I would be your great, great, great aunt, but that’s a bit long.” Harry nods. He wasn’t sure he wanted to have to say that every time he talked to her. Or thought about her. “So we could shorten it to Aunt, or choose something else.” Harry hums.<br/>
+“Like I had to call Aunt Marge Aunt even though she’s not my aunt.” The last to words stretch out as Alea nods.<br/>
+“In a way. So how would you like to address me?” Harry thinks over what he was told about using the proper titles. Aunt Petunia had spent most of an hour talking about how using the right name was a sign of respect, so it was wrong of Uncle Vernon’s secretary to call him by his first name, like he had to call them Aunt and Uncle. <br/>
+And Alea was nice to him, she sounded like she was going to feed him, and she said she was going to care for him. So he should be respectful. “Aunt Alea.” Aunt Alea smiles and taps a finger against his forehead before picking him up and again and walking to the tree line. <br/>
+“Then I will call you Harry, or my nephew Harry.” Harry berries his face in her shoulder again, her jacket smells nice. <br/>
+“My Aunt Alea.” Harry smiles at the sound, muffled as it is draws a laugh he feels as much as hears. <br/>
+“Yes, your Aunt Alea. </p><p>~Diagon Alley~</p><p>Harry watches with wide eyes as he follows Aunt Alea into a tall white building. The last of the stickiness on his hand from a mix of cinnamon donuts and a warm chocolate drink was causing him to feel grubby surrounded by the clean stone and tall adults. Alea stands taller though, not so tall as to be head and shoulders above the men in what she called robes wondering the foyer but tall enough that Harry imagined she would be easy to spot from the other side of the crowd. <br/>
+Alea drew them over to one of the podiums at the side of the room. A hallway at the back of the room full of doors has Harry stretching out his arm to look. <br/>
+“Teller…” The rest of the sentence is full of sounds that make Harry wonder if Alea has rocks in her throat. The squat figure behind the desk rumbles something back and points at the hallway. With a nod Alea follows the mysterious direction. <br/>
+“Lady Alea.” A… Harry isn’t sure what to call the speaker, short, though not as short as he is, with wide shoulders and rough skin they aren’t what Harry would call pretty, but at the same time nor are they alien enough to be scary. <br/>
+“Ragnok, thank you for taking the time to see us.” Ragnok nods and peer through half glasses at Harry.<br/>
+“This is?” Harry shrinks a little behind Alea. He takes that back, shorter than any adult he had ever seen or not, Ragnok was scary.<br/>
+“Harry, he has recently been given into my care and I have reason to believe he may have a family account.” Harry blinks up at Alea’s ear, her face was pointing away from him but maybe it would hold some answer, as he watched the tip wavered like light on the road on a hot day. <br/>
+“Then if you would follow me.” Ragnok turns away from them and the foyer. “I will set up an inheritance test, if there is nothing to be found the cost will be deducted from your account.” Alea starts walking after Ragnok and Harry follows as closely as he can without stepping on her skirt. She had stepped into a bathroom at the bakery they stopped at near the park they walked out of, and returned with a floor length skirt in place of the knee length one she had been wearing when she went in. <br/>
+“Acceptable.” Ragnok knocks on a door and opens it when a grunt echos into the hall. <br/>
+“Goldhook, inheritance test.” Harry follows Alea into the room, making sure to stay on the opposite side of her to Ragnok. Goldhook is seated behind a desk he can see the top of, on it are piles of papers, much like the ones Uncle Vernon would spread out over the kitchen table when he was complaining about bills and the cost of raising an additional, unsupported child. Or they seemed to be until he noticed the colour and thickness were not what he would normally expect of paper. <br/>
+“Could the tester please fill out this form?” Alea took the form and sat in a chair, pulling Harry into her lap she red it out. Harry thought he recognised some of the words from his task list and Dudley’s books but many of them were new.<br/>
+“Right, well your name is Harry…” Harry pauses, he thinks Aunt Petunia had told the particularly nosey neighbour his full name but… Oh, Mrs. Fig called him... <br/>
+“Potter, Harry Potter.” Alea hums and uses the feather to scratch out what must be his name.<br/>
+“Your birthday is…” Harry blinks at the form. <br/>
+“Um…” He counted back on his fingers. He had been given a sock… on Tuesday, so the last day of July and… counting over his knuckles. “July 31st.” <br/>
+“Do you know how old you are?” Harry blinks.<br/>
+“Five” Alea keeps scratching. <br/>
+“Do you know your parents’ names?” Harry shakes his head. Mrs. Figg never talked about anything but her cats and Aunt Petunia only ever referred to his mother as her sister and his father as her sister’s husband. If she referred to them at all. “That’s fine, we are here to work this out, but I do know your mother’s grandfather, his mother and father and their parents.” More scratching filled the empty space on the form. “With that…” The form is passed back to the goblin and Aunt Alea wraps her arms around him. “We are done.” Goldhook glances over the file before reaching behind him and pulling a pile of files from the cabinet behind him. <br/>
+“Well to start with the Parkinson line, the account is active under the main line so other than possibly having a dowry account or trust fund for her children this Rose Parkinson is a dead end for us.” Harry blinks at Goldhook as he pushes a file to one side. “The Potter file is dormant, so worth checking for legitimacy, the Potter file is liked to the Fleamont and Peverell files.” Harry glances over the three files left in front of them. “We will run a check through all existing accounts once the Potter file is dealt with.” Flipping open the file Goldhook runs a long dark fingernail down the page. “Harry James Potter, son of James Potter and Lilly Potter nee Evens.” With a glance at the form Aunt Alea filed he nods. Pushing forward a bowl with a small knife in the bottom of it he pulls a strip of the same thick paper out of a draw and places in on the open file. Lacing his hands together he peers over them at Harry. Aunt Alea loosens her grip and pulls the bowl closer. Taking his left hand she holds the knife over his middle finger.<br/>
+“This will hurt only for a moment.” As the blade slips over his finger Harry braces his hand and bites his lip. The sting wasn’t any worse than cutting himself with a kitchen knife, but if felt different all the same. “Done.” Aunt Alea holds his hand over the bowl and lets the blood seeping from his finger drip into it. When the flow slows to a stop she turns his hand over and pushes the bowl back to Goldhook who taps the slip of paper before dipping it into the blood. The paper is then placed on the cover of the now closed file. <br/>
+Harry lets Alea wrap his finger in a slip of fabric pulled from somewhere as the file flashes a pale gold. “Claim validated.” Goldhook opens the file once more, the stack of papers it contains now significantly thicker than it was. “The Potter Account is frozen until a new family head can claim it or a regent makes a valid claim.” He turns a sheet of paper around and pushes it to Aunt Alea who glances over it.<br/>
+“This says a regent must be able to prove custody and intent, or be declared as such in a will.” Goldhook grunts. <br/>
+“The will is sealed, to gain access to the accounts linked to the Potter Account you must have either approval of the Family Head or the informed agreement of the primary Heir and approval from their regent.” Harry lets the conversation drift over his head as Aunt Alea starts debating regency forms with Goldhook, letting his gaze wonder over the room. <br/>
+The walls were the same white stone the foyer had been made from, the floors however were patterned with gold lines and the roof had black marks on it. There weren’t any windows but paintings of people with who looked like Ragnok and Goldhook hung on the walls. The paintings showed a mix of scenes, one of the ones who looked more like Ragnok was standing over a pile of what looked like rubies with a stick of wood in hand, one of the ones who looked more like Goldhook was wearing black and holding a book that looked like it was made of metal. Harry’s attention was caught once more as Aunt Alea. The woman was leaning over him and filling out some kind of form that seemed to relate to their regent debate from earlier. <br/>
+“Will you be doing any adoption rituals?” Goldhook looks over the form after Alea turns it around and pushes it back to him. Alea shrugs.<br/>
+“Not now, maybe in a few years, it might prohibit him from claiming membership of one of the older lines.” Goldhook grunts and taps the Potter folder with a finger. When the file glows blue before splitting into two new folders he passes the smaller one over to Alea. Harry blinks a few times and lets his eyes roam over the file Aunt Alea was now flipping through, trying to spot a word he might recognise.<br/>
+“So partial regency, that should be enough to make sure no one else can stick their fingers into the accounts.” She shuts the file and nods to Goldhook. “I need to speak with Ragnok again but unless there is anything else I should know about his ancestral accounts?” Goldhook slides a small file over from under one of the two still undisturbed on his desk. <br/>
+“This may be of concern, he has been declared Heir Presumptive as he is the declared heir of the last known main line Heir.” Aunt Alea blinks at the file a few times before flicking through it and frowning.<br/>
+“I would assume something has kept him from making a guardianship claim?” Goldhook nods and lays a finger on the file over a word Harry struggles to make sense of. “Ah, well that will only be a concern should he manage to attempt a claim.” Harry looks over the page and only recognises the word black from somewhere near the top, like the black sheep in Dudley’s book. Goldhook nods and taps the small file and the other two at the centre of his desk, as they split he hands the smaller over to Aunt Alea and she gathers them into a pile. Harry blinks as she slides them into her small purse but decided that after walking into a tree near his relatives house and walking out a tree somewhere completely different was enough to have him wandering if this was all a dream. And more imposable things were not enough to get him to want to wake up.  <br/>
+“Then if that is all…” Goldhook waves to the door and Alea stands, lifting Harry as she does. Harry wraps his arms around her neck and presses into her shoulder once more. He wasn’t quite sure how he was able to feel pain in a dream but it was still nice. Alea steps out of the office and blinks at the new being standing in the hallway.<br/>
+“Lady Alea, Ragnok is in his office. If you would follow me?” Alea shifts Harry slightly but does so. As they walk down the hall Harry feels his eyes drift closed and sighs. There isn’t much point in holding onto a good dream, that turns them into bad ones. <br/>
+As Harry drifts off Alea runs her free hand down his back and watches the goblin leading them further into the bank. No point trying to keep a child awake after a full morning, she would have to make sure he ate lunch but until then he could sleep. She had only a few things to discuss with Ragnok before she heads home and Harry may as well sleep through it.</p><p> </p>
+<hr/><p>~October 12, 1985~<br/>
+~The Market, The Gathering Place, Outer Hebrides~<br/>
+Alea frowns at the small Fae peering at the curse scar on her nephew’s forehead. “Can you do something about it?” The Fae shrugs.<br/>
+“Maybe, it hasn’t healed yet, and you said it was several years old?” Alea nods and runs her hand through the sleeping child’s hair. <br/>
+“Yes.” The Fae huffs and steps away. <br/>
+“Well it isn’t my realm of experience to be honest.” Alea narrow her eyes at the Fae and stands. <br/>
+“Then I will find someone else to help me.” The Fae laughs.<br/>
+“From what I got out of it you would need one of the those who talk with death to deal with that.” Alea bites her tongue and nods once before stepping out from under the shaded stall. “Talk to the tengu that wanders through here sometimes, he’s over at the Tailor's.” Alea sighs and nods again, tossing a bag over to the small Fae woman.<br/>
+“I will listen to you for now.” The Fae waves a hand and Alea strides down the street, sleeping child in her arms. She had tried to deal with it herself, but it was too old for her to cleanse properly and she couldn’t ask her mother, who would be far more able, without her brother’s finding out where she was and who she was caring for. Alluin would try to get her to bring the child to court and Elnaril would retreat back into himself, pull away as he always did when reminded of the family he had loved and lost. Alea steps out of the street and into the goblin Tailor’s stone store, one of the few permanent buildings in the hidden valley. <br/>
+“And what brings one of you lot to me?” Alea turns to face the Tailor who blinks and grins. “Never mind then, good to see you child.” Alea resists the urge to roll her eyes at the greying goblin woman, she was born not long after Alea learnt to talk, so why the Tailor called her child she didn’t understand. <br/>
+“I was looking for someone, I was told they would…” Alea blinks as a dark haired man steps out of a backroom. Shoulder length, feathery hair parts over pointed red tipped ears, a long pointy nose grabs her attention next. “You must be who I was looking for.” The young man raises a black eyebrow over a blue eye.<br/>
+“Why would one of the High Born be looking for a foreign Half Blood.” Alea shifts Harry in her arms and the pair look down at the boy. The Tengu blinks and takes a few long limbed steps over to peer at the child. “That would do it.” Alea curls Harry closer to her and nods to the Tailor. <br/>
+“We wont intrude for much longer I think.” The Tungu grunts and pulls a silk pouch out of his pocket, tossing it to the Tailor he calls over his shoulder. <br/>
+“That’s the change from the lot you picked, I’ll sell the excess on to one of the other stalls.” The Tailor grunts and shuffles into her back room, Alea follows the Tengu out of the store. “Names Kenji, I assume you want that out of him?” Alea frowns.<br/>
+“What?” Kenji spins to face her just out side the door and taps on Harry’s forehead. <br/>
+“The soul shard.” Alea pales and her lip curls.<br/>
+“If you would.” Kenji’s laugh sounds like a crow and Alea taps her foot. <br/>
+“It would be my pleasure.” Kenji curls his finger’s around Harry’s scar and pulls, Alea tenses as something screeches and Harry starts to shake. Kenji growls something under his breath and yanks his hand away, something black and slimy comes with it and Kenji clenches his fist. Alea tucks Harry hard against her and the child whimpers and watches with her teeth bared as the soul shard cracks and shatters in Kenji’s grip. Alea bows around Harry to the half Tengu with a sigh.<br/>
+“I…” Kanji waves a hand around.<br/>
+“Don’t bother, it will get me a reprieve from dealing with the Shinigami when I get back, doing something every few years keeps me out of their schools and walking my own path and I would much rather hunt something down than get stuck wearing their uniform.” Alea blinks and shrugs.<br/>
+“I’m not one to talk, I avoid the Courts as often as I can, send back a letter every few years so they don’t come looking and spend my time learning.” Kanji grins and flashes pointed teeth. <br/>
+“Nothing wrong with that, learning is always fun.” Alea snorts and bows slightly again.<br/>
+“Well I will be going, I suppose if you wonder through regularly I will see you again.” Kenji waves a hand. <br/>
+“I might keep an eye out, that one is as death touched as I am.” Alea frowns at the mans back as he walks away but sighs and tucks Harry up onto on hip. She wouldn’t worry about it now, she had the scar that had been bugging her dealt with and she should be able to get the mark to fade a little now, and Harry’s eyesight might improve a little. Watching the boy squint at things was getting a little old. With a final sigh Alea starts her way out of the Market, she had best get home before the herb wore off and Harry woke, he wasn’t ready for to deal with the Market awake yet. </p><p> </p>
+<hr/><p> </p><p>~Spetmeber 20, 1985~<br/>
+~Fae Cottage, Tote, Isle of Skye~<br/>
+Harry peers into the kitchen of Aunt Alea’s cottage, listening to her sing as she cooked was now one of his favourite parts of living with her. The yucky tasting potions that came with his breakfast weren’t so great but eating three full meals and snacks meant he didn’t feel hungry anymore. Not being hungry made it easier to sleep, so he wasn’t as tired or clumsy either. He ducks behind the archway he stands under as she turns his way, holding still as her voice pauses. When she doesn’t start singing again Harry peers around the archway.<br/>
+“Is there something you wanted?” Harry ducks back and holds still again. “Harry?” Harry pulls his shoulders back and steps into the archway. “Good morning.” Harry bobs his head and shuffles a little into the room.<br/>
+“Morning.” Aunt Alea holds out a hand.<br/>
+“Do you want to help?” Harry blinks past her to the messy bench covered in flour and bowls. “I’m making bread for the Market.” Harry bites his lip but nods. He liked the market, even if it was as scary as the goblin’s bank most days. Harry takes the offered hand and lets himself be led to a stool Aunt Alea bought to him to stand on. There was another in the bathroom. “Were you listening?” Harry bobs his head and focuses on watching Aunt Alea’s hands as the work the bread dough, turning it over on itself before putting it aside and reaching for the next loaf. “Do you want to learn the song?” Harry glances up and wonders at the ability to see her without glamour. Pointed ears poke out of long dark hair, her eyes were longer and slanted slightly, her cheek bones high and prominent. Harry feels his shoulders drop when she smiles. “Well then, I think I should sing the English version for you first…” Harry makes a sound and Aunt Alea pauses.<br/>
+“What were you singing in then?” Harry liked asking questions, especially when they were answered. <br/>
+“Gaelic, it’s the language I grew up speaking with my family.” Harry nods and Alea continues. “Right well…” Harry smiles as the song drifts through the kitchen and the dough comes together under her hands. As she sung Alea moved through the kitchen with light feet. The dough was placed in a cloth lined basket to rest, the bench was tidied and the bowls washed. As she finished She picked him up and put him back on the ground, beside his tool. “Do you want to sing it with me?” Harry nods. <br/>
+“Will you teach me Gaelic too?” Alea laughs. <br/>
+“I will teach you Scottish Gaelic, then if you want to learn more I will teach you old Irish, if you enjoy that we can work on Old English, Modern Irish, maybe French, Greek and Latin.” Harry blinks at her from the kitchen as she almost skips to their table. <br/>
+“Thats a lot.” Alea spins with a laugh and waves his over.<br/>
+“Then we had best get started!” </p><p> </p>
+<hr/><p> </p><p>~December 21, 1985~<br/>
+~The Market, Outer Hebrides~<br/>
+Harry laughs as one of the child like Fae leads him around Feast table set up in the central Market square. The stall holders and residents had all brought food and drink to share and Harry was enjoying the heat of the bonfires and the warmth of happy people. Laughter rang as he was pulled past gathered Fae, the rumbling laugh of a Goblin had him waving to his maths teacher who waved back. Aunt Alea had set him at the laid back Goblin’s feet one day and let him teach Harry about numbers, about what they can be used to do beyond count and Harry enjoyed his lessons. Though when others interrupted they would become hard to understand. The Old human woman who talked to them about Philosophy pressed a sweet bread into his hand as he was pulled past her and the surprisingly graceful Goblin woman he knew only as the Tailor pressed a ribbon into his pocket as he was pulled around her. Aunt Alea pulled him out of the Fae’s grasp as they returned to her seat and Harry laughs and smiles at her. The Fae Elders that sat around her watched with warm eyes as she examined all his treasures and accepted half of the sweet bread. <br/>
+“He will struggle to be welcome back among them.” Alea turns and Harry follows her to watch the crumpled looking Fae, his bread falling almost to his lap and his hands thin and spindly. <br/>
+“Only if he stays among us too long, he is still only a child.” The next speaker was wrapped up almost entirely in rags, but she smiles at Alea and Harry thinks he might like her.<br/>
+“Yes, but we are growing more apart from them, we have since they sailed their boats to the other side of the world and brought back stories of red deserts.” The next speaker was a large Fae, one of the taller he had seen, but he looked hollow. <br/>
+“He will never be without Magic though.” Aunt Alea runs a hand down his back as she talks and Harry leans into her. He wasn’t quite sure he caught everything they were talking about but being without magic sounded bad, he didn’t want to go back to his old family. <br/>
+“And even humans with Magic are learning to forget it, and us.” The first speaker scowls at the rest of the seated Fae. “He will never be accepted by them, not when he come bearing stories they forgot on purpose.” Harry wiggles against Aunt Alea, trying to find a way under her cloak. <br/>
+“Then he will tell them only once, and should they choose not to listen then let them suffer for it.” The smallest of the Elder Fae grumbles from her place nearest to the largest Bonfire. “He will pass our stories on and if they do not listen it is on them.” Alea hums and ties his ribbon around his wrist, knotting the loose ends in some sort of pattern. <br/>
+“Then he had best know them to tell.” Alea watches the Fae from under her eyelashes and Harry blinks up at her. <br/>
+“Ah, tricky Seelie, something will be set up, no point only telling one child when we could pass it to all who would listen. You are right, telling our stories even once is better than telling no one.” Alea laughs and stands, Harry in her arms. <br/>
+“Then I will see you in the morning, I have a tired child to find a bed for.” The Fae flap their hands at them and Harry peers up at the woman he found he cared for more than he ever remembered caring for anyone. </p><p> </p>
+<hr/><p> </p><p>~February 1, 1986~<br/>
+Harry was quickly discovering that the Fae had lots of Feasts. Though he was enjoying learning the stories behind each event they happened far more frequently then his vague memories of the holiday’s his old Family had each year. Instead of St. Nicholas and Christ the Fae celebrated the longest night. Instead of the Halloween costumes and candy they talked of the dead, shared stories and carved turnips. Now, Harry pondered the cross in his hands. <br/>
+“You all right Harry?” Harry looks up at the Fae in front of him. The straw in the Fae’s hands was being folded into the same shape as the straw in Harry’s. <br/>
+“Yeah, why are we happy it’s cloudy?” The fae laughs and weaves the last end under and out to finish the cross. <br/>
+“Well today Cailleach Bheurra is collecting firewood for winter, if there is clear weather she is planning for a long winter, but it’s cloudy and cold, so she must not be looking for much, a short winter and an early spring.” Harry nods, Cailleach Bheurra was in charge of the weather in the stories Alea was reading too him, so she would know if winter was going to be long. <br/>
+“Why the cross though?” The Fae places the one he was making in a pile and picks up a new piece of straw. <br/>
+“Well they are to ask for Brighid’s blessing.” Harry hums and turns his cross over.<br/>
+“She’s in charge of babies right?” The Fae laughs and turns the cross to add the next piece of straw.<br/>
+“Almost, she’s the goddess of Fertility, her blessing might bring children, a good harvest, wealth, healthy lambs and kids, there is more to Fertility than just babes.” Harry smiles and bows his head.<br/>
+“I will see you around?” No thanking the Fae, no thanking the Fae. <br/>
+“Maybe.” Harry runs off to see if Aunt Alea is around somewhere, she mentioned going looking for a badger den to watch but Harry wasn’t quite sure what she meant by that. She would like it if they were blessed, it would make her happy. Harry waves to the Fae he runs past, asking those he knows at least a little if they have seen Alea before dashing off again. <br/>
+The Fae were nice, not always safe, his stories made sure he remembered that, but they let him run around and told him stories and played with him and… <br/>
+“Harry!” Harry stumbles to a stop and spins around. Aunt Alea stands next to one of the big Fae, smiling and holding a bag in her hands. Harry hurries over, there might be sweets in the bag, there was always something to eat at a festival. </p><p> </p>
+<hr/><p> </p><p>~July 30, 1988~<br/>
+~Fae Cottage, Tote, Isle of Skye~<br/>
+Harry hums as he reads through his new book. The runic forms Alea had introduced him to last year were easy to read once he got used to the difference in spelling conventions. He didn’t think he would ever make sense of some of the ways they were used to construct wards but understanding some of the things the Fae talked about was easier when he knew the writing system they used for blessings, curses and other workings. <br/>
+Aunt Alea was packing a bag so they could head to London for a few days, they always did around his birthday to empty out the mail box that Gringotts held for them. But this year they were going early so Aunt Alea could deal with something he had asked her about last week. <br/>
+“Harry, you ready?” Harry slips on of the ribbons almost always in his pocket into his book and slips the book into his bag. <br/>
+“Yeah.” Aunt Alea holds out her hand and Harry tucks himself as close to her side as he can. “Are you really going to ask?” Alea squeezes his hand and pulls them out the door. <br/>
+“Yes, so long as you haven’t changed your mind.” Harry lets himself be drawn away from the door.<br/>
+“No, I still want to.” Alea shuts the door behind them and taps the runes engraved into the doorway with a finger. When they glow slightly she leads him to the tree line.<br/>
+“Then I will still ask, Ragnok should have the right paperwork somewhere in his office and if we do it right it shouldn’t matter to much.” Harry closes his eyes as they step through the first tree, letting Aunt Alea lead him through the Fae paths was easier if he ignored them as well as he could. <br/>
+“Thanks.” Alea hums a questions. “For bringing me home.” Alea huffs. “You didn’t have to take them up on it, I know you stretched the rules to do what you did.” Alea pulls him close and into her arms.<br/>
+“I am ever so glad I did.” Harry huffs and opens his eyes to look into hers. Today they were closer to his rich green. <br/>
+“Even when I don’t do my work?” The corners of her eyes wrinkle slightly. “When I don’t clean my room or do the dishes?” Her nose wrinkles. “When I yell at you and refuse to do things?” She blinks. “When I forget to put away my books or take my laundry to the tub?” <br/>
+“Even at all those times.” Harry flicks his eyes down to watch her chin.<br/>
+“Even though you could give me to your brother instead?” Alea bumps his chin up with her hand and looks into her father’s eyes in a child’s face. <br/>
+“Even though, there’s a reason I haven’t told him about you yet.” Harry frowns.<br/>
+“Why?” Alea presses her lips to his forehead.<br/>
+“Because I don’t want him to take you away from me.” Harry buries himself in her shirt and enjoys the familiar scent. <br/>
+“Love you.” Alea buries her own face in his hair.<br/>
+“And I love you.” </p><p> </p>
+<hr/><p> </p><p>~March 5, 1989~<br/>
+~Fae Cottage, Tote~<br/>
+Harry slips his way into the kitchen and grins to find the ashes cool in the stove and the trough empty of water. Opening the cool box and letting his eyes rove over the things inside he gets to work. The oven is lit and the charcoal from the night before used to build up the fire. Wood is brought in from outside and the driest log fed to the now flickering flame. <br/>
+Crepe batter is mixed and put aside, berries and sugar on the stove to boil with a dash of lemon juice. Then the kettle is filled and put beside the stove, ready to go on to boil. Butter pulled out ans set beside the stove, the fire stoked up and the mostly dried wood piled on. As the stove top heats up further and the largest of Alea’s fry pans is heaved into place Harry checks on the batter and the berries. Pulling the berries of before the bottom burns and setting them aside to cool Harry lifts the kettle on to the hotplate and sets to work frying the crepes, once cooked they pile high on a plate and Harry covers it to start slicing the bananas and adding them to the tray Harry pours the now boiling water into the empty tea pot, pours it out into the empty jam pot, spoons the tea leaves into the pot and adds the fresh water from the kettle. Tea brewing, sugar, lemon slice, milk jug, crepes, berry compote, banana and cream on the tray Harry adds the mugs, plates and turns to bank the fire in the stove.<br/>
+Turning around again he blinks at Alea who is blinking at the full tray and steaming kettle. Harry frowns and huffs.<br/>
+“You aren’t supposed to be up yet.” Alea raise an unglamoured eyebrow.<br/>
+“I’m not?” Harry shakes his head.<br/>
+“No, you’re supposed to be in bed until I finished.” Alea hums and takes a step back.<br/>
+“Then I might go back to bed.” Harry nods firmly and picks up the tray, frowning as the tea pot wobbles. Alea walks backwards, staring at his tray and Harry follows as they walk out of the kitchen, through the hall and back into her room. As Alea sits down on her bed Harry smiles and holds out the tray.<br/>
+“Happy mother’s day <abbr title="mother.">màthair.</abbr>” Alea laughs and reaches out, grasping the edges of the tray and setting it beside her. Harry bounces over to sit on the other side of the tray and grins at Alea.<br/>
+“Thank you <abbr title="my son.">mo mhac.</abbr>” Harry grins widely and bounces in place rocking the tray, Alea laughs and stills the tea pot with a hand. <br/>
+“<abbr title="I love you my mother.">Gaol a thoirt ort do mhàthair.</abbr>” Alea brushes her hand over his forehead with a small smile. <br/>
+“<abbr title="and I love you my son.">Agus tha gaol agam ort cho math ri mo mhac.</abbr>” </p><p> </p>
+<hr/><p> </p><p>~July 30, 1991~<br/>
+~Fae Cottage, Tote, Isle of Skye~<br/>
+Harry sits at his desk and scribbles over his notes as he reads through his Latin textbook. While the class itself was rather informal, being run primarily by a squashed looking Fae who spent most of his day teaching the young boys who ran the length of the market to sharpen and wield a variety of blades his recommendations for textbooks and the weekly lecture organised by the Heritage Preservation society were well worth the work to understand. The other weekly lectures, on plant life, animal husbandry, history, weaving, metalwork, runes, potions, mathematics, philosophy, politics, and very rarely, if someone could convince one of the Elder Fae out of their dens, on the Old Gods and the Battles both won and lost for control of the Isles. Today had been a mathematics lecture and while the first hour had been simple enough for him to understand as the older students filtered into the room and the discussion moved onto more advanced topics he had given up and started to work on the exercises the lecturer, a rather relaxed Goblin, had written in the dirt at his feet. <br/>
+Alea always left him in the lecture hall for the full three hours they ran for, and when the lectures were on History he would pay attention throughout. But for the lectures on mathematics, or philosophy or politics he usually stopped listening about halfway through. <br/>
+He was working on his Latin because tomorrow that was what the lecture would be about. And if he looked over the textbook now he was more likely to be able to ask questions tomorrow. <br/>
+A knock on his door has him putting down his fountain pen and turning around. “Yes mum?” Alea smiles and steps though the door.<br/>
+“Gringotts sent a letter, the mail box if full again.” Harry frowns at the woman who adopted him, at his request, three years ago. <br/>
+“But we emptied it last week.” Alea shrugs and steps back.<br/>
+“Something must have come up, I need to head in to check it out. Do you want to eat in Diagon tonight?” Harry straitens and nods.<br/>
+“Can we eat in Eventu Alley?” Alea tilts her head slightly. <br/>
+“You want something spicy then?” Harry nods. <br/>
+“I want Samosas too.” Alea sighs but nods. <br/>
+“At least they do a good vegetation menu.” Harry bounces out of his seat and ducks slightly to scoop his overnight bag from the floor near his desk. <br/>
+“Are we celebrating Lùnastal this year?” Alea hums and nods. <br/>
+“If we can make it to the Market we will, but otherwise we might just do something small.” Harry stuffs a set of clean clothes into his bag and stands over his pile of books for a moment. “Don’t bother taking your text books, we will be back before the lecture tomorrow.” Harry stuffs a few of the smaller note books into his bag and tugs the sting closed. <br/>
+“Is my travel pack still in the bathroom?” Alea nods and Harry disappears past her through the door. <br/>
+“Make sure your at the door in half a hour Harry!” Alea slips to her own room, if he was in that much of a hurry she had best pack her own things. </p><p>~Seelie Court Rooms, London~<br/>
+“Do you mind waiting here while I head to Gringotts?” Harry peers over his book at Alea standing in the door to the suite they had commandeered for the evening. The Brownie in charge of the building always let them in though so it was slightly less rude than that. <br/>
+“It’s late though…” Harry glances out a window at the artificially bright street. <br/>
+“Griphook sent a note, they want the box cleared tonight before anymore come in tomorrow.” Harry sighs and nods.<br/>
+“Yeah, probably a good idea.” Alea smiles and glances at the book he was reading when she came in.<br/>
+“I thought you finished those.” Harry draws the book closer to him. <br/>
+“I did, but it’s good to practice.” Alea taps her fingers on the doorway. <br/>
+“If you want more then I can get you some, in fact…” She slips into the suite and out of sight. Harry slips a strip of ribbon between the books pages and drops it onto the table beside him. As he starts tapping his feet Alea appears and places a well worn thick text in his lap. “This was the version that Mother read to me as a child, Elnaril used it as well so the language might be a little old but it should be readable.” Harry uses careful hands to open the cover and then runs a finger over hand painted script. <br/>
+“Are you sure?” Alea laughs.<br/>
+“This one was the copy, the original belonged to Grandfather and I think Uncle has it placed behind glass somewhere.” Harry grins and hugs the book to his chest.<br/>
+“Thanks.” Alea waves a hand and walks back to the door.<br/>
+“See you in an hour or so, don’t stay up too late if I take longer.” Harry nods and sinks into his chair, book now perched before his face. Alea laughs and shuts the door behind her. <br/>
+Harry looses himself in the written word, the poetic stanzas of warriors long dead and people lost to time, the tales woven by time into myths and the songs warning of trouble found in untamed forests and on wild mountains. <br/>
+The knock on the door has Harry sitting up and glancing out at a darkened street. A half drunk glass of milk and empty plate of biscuits has him checking his place in the book and wincing slightly. Placing another ribbon from his pocket between the pages he was reading to mark his place he puts the book down and stretches as he slides to his feet. When the knocking becomes closer to a banging he frowns and jogs to the door.<br/>
+“Who’s there?” The door rattles in place as the noise stops. <br/>
+“Hagrid, Rubeus Hagrid, Keeper of Keys and Grounds at Hogwarts.” Harry frowns and places a hand on the door knob. It lay cool under his grip so he turned it and let the door swing open. “Well ‘ello there Harry.” Harry lets his eyes trail all the way to the small black eyes of the man in front of him. There weren’t many people so tall, even at the more popular market festivals, so who was he? <br/>
+“Why are you here?” Hagrid, that was the name he used first at least, blinks. <br/>
+“Well I got ‘ur Hogwarts letter.” Harry blinks back.<br/>
+“I wasn’t aware I was enrolled.” Hagrid frowns and his eyes disapear under thick brows. <br/>
+“‘Cause you are, ‘ur parents put you down when you were born.” Harry raises an eyebrow.<br/>
+“But I wasn’t raised by my parents, so how would I know that?” Hagrid’s mouth turns down and Harry steps aside to open the doorway. “Come in and sit down, Mum should be back soon.” He glances at the clock in the hallway. “She should have been back more than an hour ago but anyway.” Hagrid steps into the room and shivers. <br/>
+“Strong ward that.” Harry shrugs and turns away from the door. The coffee table is piled with things for tea and more of the biscuits he was snaking on earlier. <br/>
+“Serve yourself.” Harry snags a biscuit and curls up in one of the armchairs, leaving the largest for Hagrid to lower himself into. <br/>
+“Well this is yours.” Harry takes the letter, raising an eyebrow at the address. <br/>
+“Harry Potter-Le Fey, the second bedroom, the first floor west suite, Seelie Court Rooms, London.” He raises an eyebrow. “A little exact don’t you think?” Hagrid shrugs and pore a dash of milk into his tea. <br/>
+“The letters a spelled with correct address.” Harry frowns and lays the letter next to his seat, glancing at the door before looking at Hagrid again. “What you doin’ here Harry?” Harry tilts his head.<br/>
+“We stay here when we visit London, it’s easier than renting a room and nicer than most of the places in the Wizarding district.” Hagrid huffs.<br/>
+“Nothing wrong with the Leaky Cauldron.” Harry glances around the room. <br/>
+“But they don’t rent anything larger than and double and you share a bathroom with the other guests.” Hagrid grunts and dumps a third spoon of sugar in his tea, stirring it roughly. <br/>
+“Where are the Dursleys then?” Harry tilts his head.<br/>
+“The who?” The spoon clangs against the saucer. <br/>
+“Your Aunt and Uncle, you were supposed to live with them.” Harry sinks a little more into his chair.<br/>
+“They gave me to Mum when I was four.” Hagrid growls.<br/>
+“They what?” Harry watches the mans plate sized hands. <br/>
+“They surrendered all rights to me.” Harry sighs and Hagrid spins in his seat to face the woman in the doorway.<br/>
+“Hey Mum.” Alea takes measured steps to stand next to Harry.<br/>
+“Harry, is there a reason you’re still up?” Harry glances at the book next to the armchair closest to the window. “Ah, well then.” She steps around him and seats herself in the chair between Hagrid and Harry. “My name is Alea Le Fey, I have been acting as Harry’s Guardian and Regent for the last six years and his mother for the last three.” Hagrid grunts and Harry pushes the letter in front of him to his mother.  <br/>
+“Rubeus Hagrid, Keeper of Keys and Grounds and Hogwarts.” Alea hums and pulls a letter out of a pocket. The ink on the parchment envelope is the same green as the one on the table and as she passes it to Harry he takes note of the address. ‘Harry James Potter-Le Fey, Potter Account Mail Box, Gringotts London Branch’. Harry glances at Alea who waves at him and opens the letter now in her hand. Harry flicks open the unsealed envelope and pulls out the three sheets of parchment inside.  The first had a letter head proclaiming it was from ‘Hogwarts School of Witchcraft and Wizardry’. He flattened it and started to read.  <br/>
+‘Headmaster: Albus Dumbledore<br/>
+(Order of Merlin, First Class, Grand Sorc., Chf. Warlock, Supreme Mugwump, International Confed. of Wizards)<br/>
+Dear Mr Potter-Le Fey,<br/>
+We are pleased to inform you that you have a place at Hogwarts School of Witchcraft and Wizardry. Please find enclosed a list of all necessary books and equipment.<br/>
+Term begins on 1 September. We await your owl by no later than 31 July.<br/>
+Yours sincerely,<br/>
+Minerva McGonagall<br/>
+Deputy Headmistress’<br/>
+Harry hums and takes the page Alea passes him, the letters are exactly the same, the lettering not changing in the slightest. He glances at Alea as she goes through the other pages in the newer envelope and glances at Hagrid again. <br/>
+“It’s a bit late, I mean an owl would take more than a day to reach Scotland from here and it’s the 31st today.” Alea looks up and smiles.<br/>
+“Happy Birthday.” Harry grins back.<br/>
+“Thanks.” Hagrid huffs and stands up.<br/>
+“I’ve got something for ya.” Harry shakes his head.<br/>
+“Don’t bother, it’s too late for gift giving.” Hagrid shakes his head back and pulls a large white box out of a coat pocket. <br/>
+“Here.” Harry lifts the lid far enough to see underneath and almost yanks his hands away. Icing isn’t supposed to be that colour of green. <br/>
+“Thanks.” Alea raises and eyebrow and Harry makes a face. With a huff she turns back to Hagrid. <br/>
+“Don’t worry about that, now that you’ve got your letter I can make sure your on the list when I get back.” Harry shakes his head.<br/>
+“That’s all well and good, but I don’t know if I’m going or not, and if you were to head back tonight then how would I get word up there if I do choose to accept?” Hagrid nearly leans all the way out of his chair as he looms over the table. <br/>
+“Not go? Why in Merlin’s name wouldn’t you?” Harry glances at Alea who sighs.<br/>
+“Well I’m not sure I want to send him to a boarding school. Or even if he should go to a school at all, I was home schooled and I see no reason to raise Harry differently.” Hagrid pushes himself to his feet and his voice rumbles in his chest.<br/>
+“But your parents went, it’s the finest school in the world!” Harry brings his knees to his chest and shrugs. Alea frowns at Hagrid.<br/>
+“That is far to big a claim to make, even for one so large as you.” Hagrid thumps back into his chair, Harry tries to ignore the way it creaks. “And it may be one of the oldest schools still running in the Isles but it is no way the best.” Harry rests his chin on his knees and peers through his fringe at the two scowling adults. <br/>
+“It’s the finest Wizarding school.” Hagrid grumbles as he slurps his tea. <br/>
+“It’s the most well known exclusively human school of magic in the English speaking world, yes.” Hagrid pauses. “But I would be far more comfortable sending Harry to a school where he would have peers with the same sort of education as he has.” Harry blinks. <br/>
+“You would let me go the the school in the Market?” Alea pours herself a cup of tea, pouring the hot tea over a spoonful of sugar and stirring. <br/>
+“I’m still thinking about it, I was actually considering the one in Ireland.” Hagrid’s mouth falls open.<br/>
+“But…” Harry frowns. <br/>
+“It’s an awfully long commute.” Alea shrugs. <br/>
+“They do have a boarding program, you could come home on the weekends and spend the school week in the dorm.” Harry frowns. <br/>
+“Wasn’t there some sort of schooling clause in the Potter Account file?” Alea huffs. <br/>
+“I was hopping you forgot that for another few years.” Harry sighs.<br/>
+“What was it?” Alea scowls at her child, and he was now. <br/>
+“You must pass the Ordinary Wizarding tests, which are administered only by recognised wizarding institutions on British soil before you turn seventeen. It was a recently added sub-clause for full inheritance by the Ministry.” Harry rolls his eyes. <br/>
+“So can I take them after attending an unrecognised school for six years?” Alea shakes her head. “Is Hogwarts recognised?” Alea nods and glances at Hagrid with a frown. <br/>
+“I was going to have this conversation with you differently.” Harry stretches out his legs and stands up.<br/>
+“Well then I’m going to bed, if I am going to Hogwarts, which you can work out with Hagrid, then tell me in the morning, we have to be at the market by one to make the first lecture.” Alea sips her tea and nods. “Night.” Harry vanishes into a bedroom and Alea turns dark green eyes on Hagrid. <br/>
+“I was supposed to take him shopping for his supplies tomorrow, I have an errand to run at Gringotts and…” Alea holds up a hand. <br/>
+“Then do that, I will take my son shopping after Lùnastal.” Hagrid frowns. <br/>
+“But Dumbledore said too…” Alea shakes her head.<br/>
+“No, you have already imposed on us to deliver a letter we had 185 copies of.” Hagrid turns pink under his beard. “Let me write a note to Minerva and you can be on your way. I am sure the Cauldron will have a room for you for the night.” Hagrid grunts and bites into a biscuit. Alea stand up and strides over to a desk against the far wall. As she writes out a short message Hagrid finishes his cup of tea and stuffs a few biscuits into a pocket for the trip.  Alea passes over her note as he reaches the door and shuts it behind him, ignoring his narrowed eyes as she does so. <br/>
+Harry peers around the door into his temporary room as she leans her back against the door. “Did I ever have a choice?” Alea shakes her head.<br/>
+“The legislation was changed in the 60’s and I got a letter from the Court last week.” Harry steps out of his room.<br/>
+“I’m sorry that…” Alea shakes her head.<br/>
+“No, I was avoiding going back before I met you, I had no plans to return before I had too.” Harry takes a half step in her direction. “Go to bed, we have lots to do tomorrow and a shopping trip to plan for next week.” Harry sways slightly before stepping back into his room. “I will wake you for breakfast.” Harry nods and shuts the door behind him, Alea lets her head fall back onto the door. This wasn’t how she wanted to start his birthday. </p><p> </p><p> </p>
+  </div>
+  <!--/main-->
+
+    <div class="chapter preface group">
+      <div class="end notes module" id="chapter_1_endnotes" role="complementary">
+        <h3 class="heading">Notes:</h3>
+        <blockquote class="userstuff">
+          <p>The Scotts Gealic should translate as follows:<br/>Mother, my son, I love you my mother, and; and I love you my son.<br/>Corrections are more than welcome...<br/>So, this is the first updated chapter, from here things will be updated slowly and with just as much new material added most times... Sorry for the delay all those who were waiting, HELLO to all who are new and thank you to everyone who has commented, given my work kudos or followed!!!!<br/>Thank you for reading, Comments make updates come faster(in a perfect world).<br/>Love Min.</p>
+        </blockquote>
+      </div>
+    </div>
+
+</div>
+
+<!-- end of cache -->
+
+    </div>
+  
+  
+    </div>
+    <!-- END work skin -->
+  </div>
+  <!-- END work -->
+
+  <!-- BEGIN comment section -->
+  <!-- Gets embedded anywhere we need to list comments on a top-level commentable. We need the local variable "commentable" here. -->
+<div id="feedback" class="feedback" role="complementary">
+
+  <h3 class="landmark heading">Actions</h3>
+
+  <ul class="actions" role="navigation">
+      <li><a href="#main">&#8593; Top</a></li>
+
+
+      <li><a href="/works/5676037/chapters/13111093#workskin">Next Chapter &#8594;</a></li>
+
+
+
+
+      <li>
+        <form id="new_kudo" action="/kudos" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="IdEJRLgBWb5lB6J91wPsBz/8uaQsU9IFbqfSwQ6OKY0/qL1pQoToq4APzujLsBZGFbTqVT9id/BZigVejnsyHw=="/>
+          <input value="5676037" type="hidden" name="kudo[commentable_id]" id="kudo_commentable_id"/>
+          <input value="Work" type="hidden" name="kudo[commentable_type]" id="kudo_commentable_type"/>
+          <input type="submit" name="commit" value="Kudos ♥" id="kudo_submit"/>
+</form>      </li>
+
+
+
+
+        <li id="show_comments_link"><a data-remote="true" href="/comments/show_comments?chapter_id=13075468">Comments (6)</a></li>
+  </ul>
+
+  <div id="kudos_message"></div>
+
+  <h3 class="landmark heading"><a name="comments">Comments</a></h3>
+
+  
+
+    <div id="kudos">
+      <p class="kudos">
+          <a href="/users/CrazyCatBurglar">CrazyCatBurglar</a>, <a href="/users/zuOchi">zuOchi</a>, <a href="/users/sweeetop">sweeetop</a>, <a href="/users/alucardgal">alucardgal</a>, <a href="/users/lavydia">lavydia</a>, <a href="/users/randomperson96">randomperson96</a>, <a href="/users/BellaLuna91">BellaLuna91</a>, <a href="/users/WhatYearAreYouFrom">WhatYearAreYouFrom</a>, <a href="/users/InkWave">InkWave</a>, <a href="/users/edwardyvette">edwardyvette</a>, <a href="/users/altmanr">altmanr</a>, <a href="/users/DarkLadyEris">DarkLadyEris</a>, <a href="/users/LunaSummers">LunaSummers</a>, <a href="/users/CatToole">CatToole</a>, <a href="/users/mssn">mssn</a>, <a href="/users/M1dn1ght_Star">M1dn1ght_Star</a>, <a href="/users/Carols_Sister">Carols_Sister</a>, <a href="/users/littlecupkate">littlecupkate</a>, <a href="/users/Gabbygirl317">Gabbygirl317</a>, <a href="/users/thaffyw">thaffyw</a>, <a href="/users/StormySkies95">StormySkies95</a>, <a href="/users/diamondfilledsky">diamondfilledsky</a>, <a href="/users/PersephoneSong33">PersephoneSong33</a>, <a href="/users/lunarstriker445">lunarstriker445</a>, <a href="/users/k1ttycast1300">k1ttycast1300</a>, <a href="/users/Dianvie">Dianvie</a>, <a href="/users/IntrestingName">IntrestingName</a>, <a href="/users/Idiot1980s">Idiot1980s</a>, <a href="/users/BurnBritain">BurnBritain</a>, <a href="/users/crystalmir">crystalmir</a>, <a href="/users/Tlyna">Tlyna</a>, <a href="/users/Sophia_Rigel215">Sophia_Rigel215</a>, <a href="/users/Emi5810">Emi5810</a>, <a href="/users/Tehz">Tehz</a>, <a href="/users/IamaClone">IamaClone</a>, <a href="/users/Blood_Rose21">Blood_Rose21</a>, <a href="/users/Kruen">Kruen</a>, <a href="/users/Alaskabound">Alaskabound</a>, <a href="/users/Aylnia">Aylnia</a>, <a href="/users/3Numquam_the_Raven7">3Numquam_the_Raven7</a>, <a href="/users/Dark_Phoenix_Rising17">Dark_Phoenix_Rising17</a>, <a href="/users/AMPwriter">AMPwriter</a>, <a href="/users/045">045</a>, <a href="/users/nessadragonhart">nessadragonhart</a>, <a href="/users/Libata">Libata</a>, <a href="/users/Starrywaters">Starrywaters</a>, <a href="/users/WitchOfBreath">WitchOfBreath</a>, <a href="/users/FlamingPhoenix">FlamingPhoenix</a>, <a href="/users/dearestpersephone">dearestpersephone</a>, <a href="/users/PhoenixInferno">PhoenixInferno</a><span id="kudos_more_connector">, and </span><a id="kudos_more_link" data-remote="true" href="/works/5676037/kudos?before=530969528">56 more users</a>
+             as well as 
+          114 guests
+         left kudos on this work!
+      </p>
+</div>
+
+
+    <div id="add_comment_placeholder" title="top level comment">
+      <div id="add_comment">
+        <!-- expects the local variables comment, commentable, and button_name -->
+<div class="post comment" id="comment_form_for_13075468">
+  <form class="new_comment" id="comment_for_13075468" action="/chapters/13075468/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="e6LTr4eUc3Ochz0iX2tVOnt4Q0i0/cvo/vMvB1XcdRBl22eCfRHCZnmPUbdD2K97UTAQuafMbh3J3viY1Slugg=="/>
+    <fieldset>
+      <legend>Post Comment</legend>
+
+
+
+
+
+        <p class="notice">
+          This work&#39;s creator has chosen to moderate comments on the work. Your comment will not appear until it has been approved by the creator.
+        </p>
+
+        <dl>
+          <dt class="landmark">Note:</dt>
+          <dd class="instructions comment_form">All fields are required. Your email address will not be published.</dd>
+          <dt><label for="comment_name_for_13075468">Guest name: </label></dt>
+          <dd>
+            <input id="comment_name_for_13075468" type="text" name="comment[name]"/>
+            <script>var validation_for_comment_name_for_13075468=new LiveValidation('comment_name_for_13075468',{wait:500,onlyOnBlur:false});validation_for_comment_name_for_13075468.add(Validate.Presence,{"failureMessage":"Please enter your name.","validMessage":""});</script>
+          </dd>
+          <dt><label for="comment_email_for_13075468">Guest email: </label></dt>
+          <dd>
+            <input id="comment_email_for_13075468" type="text" name="comment[email]"/>
+            <script>var validation_for_comment_email_for_13075468=new LiveValidation('comment_email_for_13075468',{wait:500,onlyOnBlur:false});validation_for_comment_email_for_13075468.add(Validate.Presence,{"failureMessage":"Please enter your email address.","validMessage":""});</script>
+          </dd>
+        </dl>
+        <p class="footnote">(Plain text with limited HTML <a class="help symbol question modal" title="Html help" aria-controls="#modal" href="/help/html-help.html"><span class="symbol question"><span>?</span></span></a>)</p>
+
+      <p>
+        <label for="comment_content_for_13075468" class="landmark">Comment</label>
+        <textarea id="comment_content_for_13075468" class="comment_form observe_textlength" title="Enter Comment" name="comment[comment_content]">
+</textarea>
+        <input type="hidden" id="controller_name_for_13075468" name="controller_name" value="chapters"/>
+      </p>
+      <p class="character_counter"><span id="comment_content_for_13075468_counter" class="value" data-maxlength="10000" aria-live="polite" aria-valuemax="10000" aria-valuenow="comment_content_for_13075468">10000</span> characters left</p>
+      <script>var validation_for_comment_content_for_13075468=new LiveValidation('comment_content_for_13075468',{wait:500,onlyOnBlur:false});validation_for_comment_content_for_13075468.add(Validate.Presence,{"failureMessage":"Brevity is the soul of wit, but we need your comment to have text in it.","validMessage":""});validation_for_comment_content_for_13075468.add(Validate.Length,{"maximum":"10000","tooLongMessage":"must be less than 10000 characters long."});</script>
+      <p class="submit actions">
+        <input type="submit" name="commit" value="Comment" id="comment_submit_for_13075468" data-disable-with="Please wait..."/>
+      </p>
+    </fieldset>
+</form></div>
+<div class="clear"></div>
+
+      </div>
+    </div>
+
+  <!-- If we have javascript, here is where the comments will be spiffily inserted -->
+  <!-- If not, and show_comments is true, here is where the comments will be rendered -->
+  <div id="comments_placeholder" style="display:none;">
+  </div>
+
+
+</div>
+<!-- END comments -->
+
+  <!-- END comment section -->
+
+
+
+          <div class="clear"><!--presentational--></div>
+        </div>
+        <!-- END main -->
+      </div>
+      <!-- BEGIN footer -->
+<div id="footer" role="contentinfo" class="region">
+	<h3 class="landmark heading">Footer</h3>
+  <ul class="navigation actions" role="navigation">
+    <li class="module group">
+      <h4 class="heading">About the Archive</h4>
+      <ul class="menu">
+        <li><a href="/site_map">Site Map</a></li>
+        <li><a href="/diversity">Diversity Statement</a></li>
+        <li><a href="/tos">Terms of Service</a></li>
+        <li><a href="/dmca">DMCA Policy</a> </li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Contact Us</h4>
+      <ul class="menu">
+        <li><a href="/abuse_reports/new">Report Abuse</a></li>
+        <li><a href="/support">Technical Support and Feedback</a></li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Development</h4>
+      <ul class="menu">
+          <li><a href="https://github.com/otwcode/otwarchive/commits/v0.9.300.1">otwarchive v0.9.300.1</a></li>
+        <li><a href="/known_issues">Known Issues</a></li>
+        <li><a href="http://www.gnu.org/licenses/gpl-2.0.html" title="View License">GPL</a> by the <a href="http://transformativeworks.org/" title="The Organization for Transformative Works">OTW</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!-- END footer -->
+
+    </div>
+    <!-- check to see if this controller/action allow tinymce before we load the gigantor js; see application_helper -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js" type="text/javascript"></script>
+<!-- if user has googleapis blocked for some reason we need a fallback -->
+<script type="text/javascript">if(typeof jQuery=='undefined'){document.write(unescape("%3Cscript src='/javascripts/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));document.write(unescape("%3Cscript src='/javascripts/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));}</script>
+
+
+<script type="text/javascript">$j=jQuery.noConflict();</script>
+<script src="/javascripts/jquery.scrollTo.min.js+jquery.livequery.min.js+rails.js+application.js+bootstrap,_bootstrap-dropdown.min.js+jquery-shuffle.js+jquery.tokeninput.min.js+jquery.trap.min.js+ao3modal.min.js+js.cookie.min.js+filters.min.js.pagespeed.jc.oz6LPTe6O7.js"></script><script>eval(mod_pagespeed_a8hDjzT3l_);</script>
+<script>eval(mod_pagespeed_1nA1vKz9z4);</script>
+<script>eval(mod_pagespeed_AKC4FLip6q);</script>
+<script>eval(mod_pagespeed_gX7XC77lvT);</script>
+<script>eval(mod_pagespeed_5zo0ZWMy4O);</script>
+<script>eval(mod_pagespeed_eCCgOhjhYQ);</script>
+<script>eval(mod_pagespeed_TU1Ln7LKSh);</script>
+<script>eval(mod_pagespeed_qTpbjsXQwh);</script>
+<script>eval(mod_pagespeed_R5FGw2ySDb);</script>
+<script>eval(mod_pagespeed_rqqFCT3xcT);</script>
+
+<script>eval(mod_pagespeed_Gf_4KFhTvB);</script>
+
+
+  <script>function isSupported(){var item="localStoragePolyfill";try{localStorage.setItem(item,item);localStorage.removeItem(item);return true;}catch(e){return false;}}function acceptTOS(){if(isSupported()){localStorage.setItem("accepted_tos","20180523");}else{Cookies.set("accepted_tos","20180523",{expires:365});}}$j(document).ready(function(){if(localStorage.getItem("accepted_tos")!=="20180523"&&Cookies.get("accepted_tos")!=="20180523"){$j("body").prepend("<div id=\"tos_prompt\" class=\"hidden\">\n  <h2 class=\"heading\">\n    <span>Archive of Our Own<\/span>\n  <\/h2>\n  <div class=\"agreement\">\n    <p class=\"summary\">\n      On Archive of Our Own (AO3), users can make profiles, create works and\n            other Content, post comments, give Kudos, create Collections and \n            Bookmarks, participate in Challenges, import works, and more. Any \n            information you publish in a comment, profile, work, or Content that you \n            post or import onto AO3 including in summaries, notes and tags, \n            will be accessible by the public (unless you limit access to a work only \n            to those with AO3 Accounts), and it will be available to \n            AO3 personnel. Be mindful when sharing personal information, \n            including  your religious or political views, health, racial background, \n            country of origin, sexual identity and/or personal relationships. To \n            learn more, check out our <a href=\"/tos\">Terms of Service<\/a> and <a href=\"/tos#privacy\">Privacy Policy<\/a>.\n    <\/p>\n\n    <p class=\"confirmation\">\n      <input type=\"checkbox\" id=\"tos_agree\" />\n      <label for=\"tos_agree\">I have read &amp; understood the new Terms of Service and Privacy Policy<\/label>\n    <\/p>\n\n      <p class=\"submit\">\n        <button name=\"button\" type=\"button\" disabled=\"disabled\" id=\"accept_tos\">I agree/consent to its terms<\/button>\n      <\/p>\n\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    var container = \$j(\"#tos_prompt\");\n    var outer = \$j(\"#outer\");\n    var button = \$j(\"#accept_tos\");\n\n    setTimeout(showTOSPrompt, 1500);\n\n    function showTOSPrompt() {\n      \$j.when(container.fadeIn(500)).done(function() {\n        outer.addClass(\"hidden\").attr(\"aria-hidden\", \"true\");\n      });\n\n      \$j(\"#tos_agree\").on(\"click\", function() {\n        button.attr(\"disabled\", !this.checked);\n        if (this.checked) {\n          button.on(\"click\", function() {\n            acceptTOS();\n            outer.removeClass(\"hidden\").removeAttr(\"aria-hidden\");\n            \$j.when(container.fadeOut(500)).done(function() {\n              container.remove();\n            });\n          });\n        };\n      }).change();\n    };\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+  <script>$j(document).ready(function(){var permitted_hosts=["archiveofourown.org","download.archiveofourown.org","insecure.archiveofourown.org","www.archiveofourown.org","insecure-test.archiveofourown.org","test.archiveofourown.org","testdownload.archiveofourown.org"];var current_host=window.location.hostname;if(!permitted_hosts.includes(current_host)&&Cookies.get("proxy_notice")!=="0"&&window.location.protocol!=="file:"){$j("#skiplinks").after("<div id=\"proxy-notice\">\n  <div class=\"userstuff\">\n    <p class=\"important\">Important message:<\/p>\n    <ol>\n      <li>You are using a proxy site that is not part of the Archive of Our Own.<\/li>\n      <li>The entity that set up the proxy site can see what you submit, including your IP address. If you log in through the proxy site, it can see your password.<\/li>\n    <\/ol>\n    <p class=\"important\">重要提示：<\/p>\n    <ol>\n      <li>您使用的是第三方开发的反向代理网站，此网站并非Archive of Our Own - AO3（AO3作品库）原站。<\/li>\n      <li>代理网站的开发者能够获取您上传至该站点的全部内容，包括您的ip地址。如您通过代理登录AO3，对方将获得您的密码。<\/li>\n    <\/ol>\n    <p class=\"submit\"><button class=\"action\" type=\"button\" id=\"proxy-notice-dismiss\">Dismiss Notice<\/button><\/p>\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    \$j(\"#proxy-notice-dismiss\").on(\"click\", function() {\n      Cookies.set(\"proxy_notice\", \"0\");\n      \$j(\"#proxy-notice\").slideUp();\n    });\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+    <script>$j(document).on("loadedCSRF",function(){$j.post("/works/5676037/hit_count.json")})</script>
+
+
+  </body>
+</html>

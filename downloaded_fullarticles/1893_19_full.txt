@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"f2edcff25e","applicationID":"190034","transactionName":"dgwMEkpfWVsHERpRXlQTFgNKQxpECgxC","queueTime":0,"applicationTime":153,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VQcCWV9RGwIJVFFRAw==",licenseKey:"f2edcff25e",applicationID:"190034"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script>
+    <meta name="keywords" content="fanfiction, transformative works, otw, fair use, archive"/>
+    <meta name="language" content="en-US"/>
+    <meta name="subject" content="fandom"/>
+    <meta name="description" content="An Archive of Our Own, a project of the
+    Organization for Transformative Works"/>
+    <meta name="distribution" content="GLOBAL"/>
+    <meta name="classification" content="transformative works"/>
+    <meta name="author" content="Organization for Transformative Works"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+        Mysteries of Rathlin Academy: Year 1 - To the Lighthouse - Chapter 1 - SBishoptheBard - Harry Potter - J. K. Rowling [Archive of Our Own]
+    </title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/A.1_site_screen_.css.pagespeed.cf.JiR2hT5NxR.css"/>
+<style media="only screen and (max-width: 62em), handheld">#dashboard{clear:both;float:none;margin:1% 3.5%;max-width:100%;padding:0;width:auto}#dashboard,#dashboard.own{border-bottom:10px solid #900;border-top:10px solid #900;padding:.5em 0;border-radius:.25em}#dashboard ul{border:none;display:inline;padding:0;text-align:left}#dashboard li{display:inline}#dashboard a,#dashboard span{display:inline-block;margin:.25em 0}#dashboard .secondary{background:#eee;padding:.375em 0 .625em;box-shadow:inset 2px 2px 5px #bbb}#dashboard .secondary a{margin:.125em 0}#dashboard .landmark{clear:none;float:left}#main,#main.dashboard{float:none;margin:auto;padding-left:3.5%;padding-right:3.5%;width:auto}.logged-in .splash>.module{width:48.5%}.logged-in .splash > div:nth-of-type(odd) {margin-left:0;margin-right:1.5%}.logged-in .splash > div:nth-of-type(even) {margin-left:1.5%;margin-right:0}form.filters{width:auto;min-width:23%;max-width:24%}.filters fieldset{margin-right:0}form.filters dl{margin-left:.25em;margin-right:.25em}#workskin{margin:auto 1.5%}</style>
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 42em), handheld" href="/stylesheets/skins/skin_873_archive_2_0/A.5_site_narrow.handheld_.css.pagespeed.cf.8L0d7x-op8.css"/>
+<link rel="stylesheet" type="text/css" media="speech" href="/stylesheets/skins/skin_873_archive_2_0/A.6_site_speech_.css.pagespeed.cf.Ybb8bLK5Um.css"/>
+<link rel="stylesheet" type="text/css" media="print" href="/stylesheets/skins/skin_873_archive_2_0/A.7_site_print_.css.pagespeed.cf.ry3YZtf8Cz.css"/>
+<!--[if IE 8]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/8_site_screen_IE8_or_lower.css" /><![endif]-->
+<!--[if IE 5]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/9_site_screen_IE5.css" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/10_site_screen_IE6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/11_site_screen_IE7.css" /><![endif]-->
+
+
+
+<!--sandbox for developers	-->
+<style media="screen">#new_work_search fieldset:first-of-type .submit{padding-top:0}.edit_external_author ul ul{margin-left:2.75em}a.resp-sharing-button__link,.resp-sharing-button__icon{display:inline-block}a.resp-sharing-button__link,a.resp-sharing-button__link:hover{text-decoration:none;color:#fff;border:none}.resp-sharing-button{border-radius:5px;transition:25ms ease-out;padding:.5em .75em}.resp-sharing-button__icon svg{width:1em;height:1em;margin-right:.4em;vertical-align:top}.resp-sharing-button__icon{stroke:#fff;fill:none}.resp-sharing-button__icon--solid{fill:#fff;stroke:none}.resp-sharing-button--twitter{background-color:#55acee}.resp-sharing-button--twitter:hover,a:focus .resp-sharing-button--twitter{background-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c}.resp-sharing-button--tumblr:hover,a:focus .resp-sharing-button--tumblr{background-color:#222d3c}.resp-sharing-button--twitter{background-color:#55acee;border-color:#55acee}.resp-sharing-button--twitter:hover,.resp-sharing-button--twitter:active{background-color:#2795e9;border-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c;border-color:#35465c}.resp-sharing-button--tumblr:hover,.resp-sharing-button--tumblr:active{background-color:#222d3c;border-color:#222d3c}</style>
+<script src="/javascripts/livevalidation_standalone.js.pagespeed.jm.oB__Z5piTe.js"></script>
+
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="zhjvI3yGhpa/Hmrbw+VjeDgzDPFjtLBKkFy4+Xtv/1asu6qHUCVLt7jzvP4KOJMTne/8PziOaVhHBq83FIp+Eg=="/>
+
+    
+  </head>
+
+  <body class="logged-out">
+    <div id="outer" class="wrapper">
+      <ul id="skiplinks"><li><a href="#main">Main Content</a></li></ul>
+      <!-- BEGIN BETA CAVEATS! -->
+<noscript>
+  <p id="javascript-warning">
+    While we&#39;ve done our best to make the core functionality of this site accessible without javascript, it will work better with it enabled. Please consider turning it on!
+  </p>
+</noscript>
+<!-- END BETA CAVEATS! --> 
+
+<!-- BEGIN header -->
+
+<div id="header" class="region">
+
+  <h1 class="heading">
+    <a href="/"><span>Archive of Our Own</span><sup> beta</sup><script data-pagespeed-no-defer>(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','http://archiveofourown.org/works/14807213/chapters/34260794','eVfAzEuqgZ',true,false,'yo7ZFtCqQVk');</script><img alt="Archive of Our Own" class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAAqCAMAAAA3b6P4AAACslBMVEWXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACpit0XAAAA5XRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESFBUWFxgZGhscHR4fICEiIyQlJygpKissLi8wMTM0NTY3ODk6Ozw9PkBBQkNFR0hJSktMTU5PUFFSVFVWV1hZWltcXV5fY2RlZmhpamtsbW5vcHFyc3V2d3p7fX5/gIGCg4SFhoeIiouMjY6PkJGSlJWWl5iZmpucnZ6foKGipKWnqKmrrK2ur7CxsrO0tba3uLm6u7y9vr/AwsPFxsfIycrLzM7P0NLT1NXW19na29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+b1plRQAABBRJREFUSMedlvtb1FUQxgcEBMtQggUCxVACu1ApYmRmUqESkCkUREaS4h3JCDONEFPBoBQCJcDIGxkGKYGBkgGSAq4BARIXWWA//0c/7J39LvY0P82cd97nzJlzZuaIKvBRmVqmP/XOrrQNIbOVsNfyjq/3nYrs/1GlWjPe90v28wrgnOiDP7ddeN9WAE47O9DLQI6PksfDMWVjnfuDlCC3b4HbpYcOFjUC9UHKWywtQZNpjTmdgu60uSIis979HRr8bIT4YjVDqV6TFlPgVqjxjBegyM4MfSPepDsm9tAcb5mwHnpfMJmq39C+ZLQCytrfM3deUAylwWYL2+BTc4eICU4aNk/pLgm0DNQuqY+/Nk8zmuX0PmFx83V0eIiIyOPlmq3Wpw+tg1OG7Lk1c8YSzmZsqYhIhLp7pVLy3AugLUqnz73L15boHogUke1cW6ic+5n7QJvhLCLic4cTlmAGRIhdFhfdlcmPpUjCfSj3FpEZ9dQ5W6CFDPrLIc652rj2FWUi0f1wdZGI5DERbg56dlIvO6hyt1UTe8pEZKUa1JEiMVBhDu6GzbHc8LFZUSXHRUTC/oShBHG5DKkmbPUg1xPujSyxSba/sltEREJuA9tl0Qikz9JD8f1ovrjOVtvF7NexRqcsVgOfSIIW6pMDVe7z3zwLHDjFeSfb7GV/P6fXwrqATInuAvraWruB0U2bx4aenqKRJA/MMairhoAsCczr1TWH8dPLfO7w2VRtqKDZFFjsOHBY5JmNX549dzQ5ROQkLY9MQbZvKDCzNgHkGCvaLRGOznS2zQ6e2GJu7gXY7/3kiqQj52ubbo9C143asm2hLsrsD3jV8l2PAbcGsBRN9VuK7B+Gvc3N+WnDKEuqAtlz8FdT37J/5dhdk3vbxUb4Y23UusT08nZAobyTSDeoD8VUmKja3DCVcylk6LB5J7Qcts54Ncv13PVXDMQWLfC9o4SOMxqmd/TqocSKvZirTiIiTusM3NbM5aq9AGccPoYaB73jwn/ItWJ/xQ4RkTWVOupg4VqViEw7ApBTA5l6P9/T8LrV1veHA0RCirQANKU/q193KdZHEiUiMjc2vxUO2E9ml5MlXhn9ANRsVJmAWdUAjAaLiKoRaN9pRX6bdv9VjQD8FGv5HgNuAjS5ioj3Hd3jnyS+7RQfA+BSpONkMFwD5OvOVzEClZNmuV0hE/cAqqOmK7yjD4ENen1Jhpo+y6xt1SXmWoKNEtzS8qOn0Zi3jw7z1hg+BNCZ5m2z/DxmmFuZ7DKbATeBsYKgKX8/C6JNehjfmEZ3DlAb8YC/k1dVlrHx5LHaNNZ7GElzlQdJwOXaOA8REb9sSh2Myw5xn78s/0Fmpzc0V+TmVY1y2lP+h3jF5l9qvPpdnP4I/wITXDY67Xw1sAAAAABJRU5ErkJggg==" data-pagespeed-url-hash="4179492045" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a> 
+  </h1>
+
+    <div id="login" class="dropdown">
+      <p class="user actions" role="menu">
+        <a id="login-dropdown" href="/users/login">Log In</a>
+      </p>
+      <div id="small_login" class="simple login">
+	<form class="new_user" id="new_user_session_small" action="/users/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="GT0jVq+NQTKGFWlmYLG+Y5x/qq6iM14fGj9E55m0FvV7nmbygy6ME4H4v0OpbE4IOaNaYPkJhw3NZVMp9lGXsQ=="/>
+	<dl>
+    <dt>
+      <label for="user_session_login_small">User name or email:</label></dt>
+    <dd><input id="user_session_login_small" type="text" name="user[login]"/></dd>
+    <dt><label for="user_session_password_small">Password:</label></dt>
+    <dd><input id="user_session_password_small" type="password" name="user[password]"/></dd>
+  </dl>
+  <p class="submit actions">
+    <label for="user_remember_me_small" class="action"><input type="checkbox" name="user[remember_me]" id="user_remember_me_small" value="1"/>Remember Me</label>
+    <input type="submit" name="commit" value="Log In"/>
+  </p>
+</form>
+<ul class="footnote actions">
+  <li><a href="/users/password/new">Forgot password?</a></li>
+    <li>
+      <a href="/invite_requests">Get an Invitation</a>
+    </li>
+</ul>
+
+</div>
+
+    </div>
+
+  <h3 class="landmark heading">Site Navigation</h3>
+  <ul class="primary navigation actions" role="navigation">
+    <li class="dropdown">
+      <a href="/menu/fandoms">Fandoms</a>
+      <ul class="menu" role="menu">
+  <li><a href="/media">All Fandoms</a></li>
+        <li id="medium_5"><a href="/media/Anime%20*a*%20Manga/fandoms">Anime &amp; Manga</a></li>
+        <li id="medium_3"><a href="/media/Books%20*a*%20Literature/fandoms">Books &amp; Literature</a></li>
+        <li id="medium_4"><a href="/media/Cartoons%20*a*%20Comics%20*a*%20Graphic%20Novels/fandoms">Cartoons &amp; Comics &amp; Graphic Novels</a></li>
+        <li id="medium_7"><a href="/media/Celebrities%20*a*%20Real%20People/fandoms">Celebrities &amp; Real People</a></li>
+        <li id="medium_2"><a href="/media/Movies/fandoms">Movies</a></li>
+        <li id="medium_6"><a href="/media/Music%20*a*%20Bands/fandoms">Music &amp; Bands</a></li>
+        <li id="medium_8"><a href="/media/Other%20Media/fandoms">Other Media</a></li>
+        <li id="medium_30198"><a href="/media/Theater/fandoms">Theater</a></li>
+        <li id="medium_1"><a href="/media/TV%20Shows/fandoms">TV Shows</a></li>
+        <li id="medium_476"><a href="/media/Video%20Games/fandoms">Video Games</a></li>
+        <li id="medium_9971"><a href="/media/Uncategorized%20Fandoms/fandoms">Uncategorized Fandoms</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/browse">Browse</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works">Works</a></li>
+  <li><a href="/bookmarks">Bookmarks</a></li>
+  <li><a href="/tags">Tags</a></li>
+  <li><a href="/collections">Collections</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/search">Search</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works/search">Works</a></li>
+  <li><a href="/bookmarks/search">Bookmarks</a></li>
+  <li><a href="/tags/search">Tags</a></li>
+  <li><a href="/people/search">People</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/about">About</a>
+      <ul class="menu" role="menu">
+  <li><a href="/about">About Us</a></li>
+  <li><a href="/admin_posts">News</a></li>
+  <li><a href="/faq">FAQ</a></li>
+  <li><a href="/wrangling_guidelines">Wrangling Guidelines</a></li>
+  <li><a href="/donate">Donate or Volunteer</a></li>
+</ul>
+
+    </li>
+	  <li class="search"><form class="search" id="search" action="/works/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+  <fieldset>
+    <legend>Search Works</legend>
+    <p>
+      <label class="landmark" for="site_search">Work Search:</label>
+      <input class="text" id="site_search" aria-describedby="site_search_tooltip" type="text" name="work_search[query]"/>
+      <span class="tip" role="tooltip" id="site_search_tooltip">tip: buffy gen teen AND &quot;no archive warnings apply&quot;</span>
+      <span class="submit actions"><input type="submit" value="Search" class="button"/></span>
+    </p>
+  </fieldset>
+</form></li>
+  </ul>
+
+
+
+  <div class="clear"></div>
+
+</div>
+
+
+
+<!-- END header -->
+
+      <div id="inner" class="wrapper">
+        <!-- BEGIN sidebar -->
+        <!-- END sidebar -->
+
+        <!-- BEGIN main -->
+        <div id="main" class="chapters-show region" role="main">
+          
+          <div class="flash"></div>
+          <!--page description, messages-->
+<!--/descriptions-->
+
+<!--subnav-->
+<!--/subnav-->
+
+  <!-- BEGIN work -->
+  <div class="work"><p class="landmark"><a name="top">&nbsp;</a></p>
+      <!-- BEGIN navigation -->
+<h3 class="landmark heading">Actions</h3>
+<ul class="work navigation actions" role="menu">
+
+
+
+    <li class="chapter entire"><a href="/works/14807213?view_full_work=true">Entire Work</a></li>
+
+
+      <li class="chapter next"><a href="/works/14807213/chapters/34263872#workskin">Next Chapter &#8594;</a></li>
+
+    <li class="chapter" aria-haspopup="true">
+      <noscript>
+        <a href="/works/14807213/navigate">Chapter Index</a>
+      </noscript>
+      <a class="hidden" href="#">Chapter Index</a>
+      <ul id="chapter_index" class="expandable secondary hidden">
+        <li>
+          <form action="/works/14807213/chapters/34260794" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+            <p>
+              <select name="selected_id" id="selected_id"><option selected="selected" value="34260794">1. Home</option>
+<option value="34263872">2. The Rathlin Academy Ferry</option>
+<option value="34309914">3. First Night, First Day</option>
+<option value="36510870">4. The Ben Side Lighthouse</option>
+<option value="41110544">5. Totus Mundus Agit Histrionem</option>
+<option value="46005283">6. A Day With the Boys</option></select>
+              <span class="submit actions"><input type="submit" name="commit" value="Go"/></span>
+            </p>
+</form>        </li>
+        <li><a href="/works/14807213/navigate">Full-page index</a></li>
+      </ul>
+    </li>
+
+
+
+  <li class="comments" id="show_comments_link_top">
+      <a href="#comments">Comments</a>
+  </li>
+
+
+
+    <li class="share hidden">
+      <a class=" modal" title="Share Work" aria-controls="#modal" href="/works/14807213/share">Share</a>
+    </li>
+
+
+    <li class="download" aria-haspopup="true">
+      <a href="#">Download</a>
+      <ul class="expandable secondary">
+          <li><a href="/downloads/14807213/Mysteries%20of%20Rathlin.azw3?updated_at=1562888698">AZW3</a></li>
+          <li><a href="/downloads/14807213/Mysteries%20of%20Rathlin.epub?updated_at=1562888698">EPUB</a></li>
+          <li><a href="/downloads/14807213/Mysteries%20of%20Rathlin.mobi?updated_at=1562888698">MOBI</a></li>
+          <li><a href="/downloads/14807213/Mysteries%20of%20Rathlin.pdf?updated_at=1562888698">PDF</a></li>
+          <li><a href="/downloads/14807213/Mysteries%20of%20Rathlin.html?updated_at=1562888698">HTML</a></li>
+      </ul>
+    </li>
+</ul>
+<!-- END navigation -->
+
+
+<h3 class="landmark heading">Work Header</h3>
+
+<div class="wrapper">
+
+  <dl class="work meta group" role="complementary">
+          <dt class="rating tags">
+
+              Rating:
+          </dt>
+
+          <dd class="rating tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Teen%20And%20Up%20Audiences/works">Teen And Up Audiences</a></li>
+            </ul>
+          </dd>
+          <dt class="warning tags">
+
+              <a href="/tos_faq#tags">Archive Warning</a>:
+          </dt>
+
+          <dd class="warning tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/No%20Archive%20Warnings%20Apply/works">No Archive Warnings Apply</a></li>
+            </ul>
+          </dd>
+          <dt class="category tags">
+
+              Category:
+          </dt>
+
+          <dd class="category tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Gen/works">Gen</a></li>
+            </ul>
+          </dd>
+          <dt class="fandom tags">
+
+              Fandom:
+          </dt>
+
+          <dd class="fandom tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a></li>
+            </ul>
+          </dd>
+          <dt class="freeform tags">
+
+              Additional Tags:
+          </dt>
+
+          <dd class="freeform tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Gender%20or%20Sex%20Swap/works">Gender or Sex Swap</a></li><li><a class="tag" href="/tags/Female%20Harry%20Potter/works">Female Harry Potter</a></li><li><a class="tag" href="/tags/Mystery/works">Mystery</a></li>
+            </ul>
+          </dd>
+
+      <dt class="language">
+        Language:
+      </dt>
+      <dd class="language">
+        English
+      </dd>
+
+
+
+    <dt class="stats">Stats:</dt>
+    <dd class="stats">
+<!-- end of cache -->
+
+      <dl class="stats"><dt class="published">Published:</dt><dd class="published">2018-05-31</dd><dt class="status">Updated:</dt><dd class="status">2019-06-24</dd><dt class="words">Words:</dt><dd class="words">35468</dd><dt class="chapters">Chapters:</dt><dd class="chapters">6/?</dd><dt class="kudos">Kudos:</dt><dd class="kudos">4</dd><dt class="bookmarks">Bookmarks:</dt><dd class="bookmarks"><a href="/works/14807213/bookmarks">2</a></dd><dt class="hits">Hits:</dt><dd class="hits">300</dd></dl>
+      </dd>
+  </dl>
+</div>
+
+
+
+<!-- BEGIN section where work skin applies -->
+<div id="workskin">
+  <div class="preface group">
+    <h2 class="title heading">
+      Mysteries of Rathlin Academy: Year 1 - To the Lighthouse
+    </h2>
+    <h3 class="byline heading">
+      <a rel="author" href="/users/SBishoptheBard/pseuds/SBishoptheBard">SBishoptheBard</a>
+    </h3>
+
+
+        <div class="summary module" role="complementary">
+          <h3 class="heading">Summary:</h3>
+            <blockquote class="userstuff">
+              <p>Krystelle Gandy is your typical young British witch at Rathlin Academy of Arts (and Magic), a school as ancient as Hogwarts and with just as many secrets. As she starts her first year, she'll befriend a collection of familiar faces from the Adventures of Harriet Potter by Kleinnak. Between all of them, they may yet discover what haunts the Ben Side Lighthouse, and why it's been acting out...</p>
+            </blockquote>
+        </div>
+
+        <div class="notes module" role="complementary">
+  <h3 class="heading">Notes:</h3>
+
+    <ul class="associations">
+
+
+        <li>
+            Inspired by
+
+            <a href="/works/2230386">The Adventures of Harriet Potter: Year 1(Definitive Edition)</a> by <a rel="author" href="/users/Kleinnak/pseuds/Kleinnak">Kleinnak</a>.
+        </li>
+
+    </ul>
+
+    <blockquote class="userstuff">
+      <p>The Potterverse setting is owned by JK Rowling</p>
+    </blockquote>
+
+</div>
+
+
+  </div>
+
+
+
+    <div id="chapters">
+      <!-- This partial requires local variable 'chapter' -->
+<div class="chapter" id="chapter-1">
+  <!-- chapter management -->
+
+
+  <div class="chapter preface group" role="complementary">
+    <h3 class="title">
+      <a href="/works/14807213/chapters/34260794">Chapter 1</a>: Home
+    </h3>
+
+    <!-- only display byline if different from the main byline -->
+
+
+      <div id="notes" class="notes module">
+        <h3 class="heading">Notes:</h3>
+          <p>
+          (See the end of the chapter for  <a href="/works/14807213/chapters/34260794#chapter_1_endnotes">notes</a>.)
+          </p>
+      </div>
+  </div>
+
+  <!--main content-->
+  <div class="userstuff module" role="article">
+    <h3 class="landmark heading" id="work">Chapter Text</h3>
+    <p align="center">
+  <u> </u>
+</p><p align="center">“<em>Daddy's home - daddy's home - to stay</em><br/> How I've waited for this moment<br/> To be by your side<br/> Your best friend wrote and told me<br/> You had teardrops in your eyes<br/> Daddy's home - daddy's home - to stay”</p><p align="center">-Daddy’s Home, Shep and the Limelights, 1961</p><p> </p><p>Little Fern Mantovani was running. She didn’t think of where, or how far, or how out of breath she was. She didn’t notice that she’d lost her slippers in the mud a few yards back, or even that she’d cut her foot on a rock. She barely noticed the heat and sting of her tears through the rain. As the distance between her and the Academy widened, and the storm came down harder, all the small child could think of was her Daddy, and her awful Mummy.</p><p>Fern’s mind was racing. <em>How could she do this?</em> <em>Daddy’s good. He’s funny and nice and he’s always there when </em><em>Mummy’s </em><em>working. What did he do wrong? Or is it me? Am I in trouble? Is this because I don’t ever clean my room? She’s gonna take me away just for that? </em></p><p>Mummy and Daddy had been fighting when she slipped off to get on the big boat to school. Was that the reason they got a divorce? Maybe if she said she was sorry they’d get back together? It’s not like they’d notice; Mummy was never around anyway. Fern couldn’t even remember the last time she made it to her birthday party. Would Daddy be allowed to go to her next one? It was coming up in March. Daddy said he’d get her a wand for her ninth birthday. He said it was a little early but she was studying hard and she deserved it. Was she not going to be allowed a wand anymore; not ever?</p><p><em>What if that’s why they’re splitting up? Daddy’s a wizard, I’m a witch, and Mummy’s just a Muggle. What if she wants </em>me <em>to be a Muggle like her? Yeah, that must be it. Must be</em><em>. Mummy’s </em><em>just a dumb, stupid Muggle like they said at school. All Muggles are dumb and dirty and they just want to hurt us because we can do things they can’t. They were right, we shouldn’t even let them in at school! They were right they were — </em></p><p>Suddenly Fern’s fist hit a slab of stone. She halted, sliding hard into the wall, and fell backwards into the mud, grasping her poor hurt hand. She could hear her own heartbeat in her ears and feel it in her head as she curled up and heaved heavily into her own belly, her clothes soaked through from the rain. She felt numb to everything, wanting nothing more than to just fall asleep right here and never ever wake up.</p><p>“Who approaches, Mistress Artemis?”</p><p><br/> The voice was warm and flowery, like a lady in a commercial. Fern’s ear perked up. Who said that? </p><p>“A child, Calla. Hurt and betrayed.” This voice sounded older.</p><p>“She is lost.” This voice sounded deep, strong, but still like a lady.</p><p><br/> “Aye, Ariana,” the old voice agreed, “and I suspect she will not be found.” </p><p>“Not for a while yet, mistress.” The warm one sounded sad.</p><p>She could hear them, all different voices, kind and soothing, like Professor Russell from the Big School, the one who tried to keep Mummy out of the dorms.</p><p><em>Mummy…</em> <em>.</em></p><p>Suddenly, she started weeping again, reminded of why she was here.</p><p>“Ahhhh…’tis her parents, mistress. Or am I mistaken?”</p><p>“Her mother, I should think. This has been a long time coming.”</p><p>“Ooo, can I be her new mother? No one would find her here.”</p><p>“No, Calla. The castle is for us alone. People would take notice if we just took in any poor soul to come too close.”</p><p>“Oh, can’t she at least visit, Artemis? Look at her. She’ll catch her death out here.” </p><p>Just then, Fern looked up, wiping her eyes. </p><p>“Who...who’s saying that?” she asked, feeling more curious than scared, “Where are you? Are you ghosts?” </p><p>She felt a hand on her shoulder, soft yet strong, and at this touch, her small form began to relax, her eyes dry. She felt a tender warmth spreading from her shoulder down through her whole body. She closed her eyes again, turned, and as if by instinct, embraced the woman behind her. </p><p>And just like that, for little Fern, all was right with Rathlin Island once more.</p><p align="center">***</p><p>“Feeeeeeern!” Krystelle yelled from underneath Dr. Watkins’ umbrella.</p><p>“Miss Mantovani!” yelled the Deputy Headmaster even louder.</p><p>“Fern! Come on, you’ll get hurt!”</p><p>Krystelle held Dr. Watkins’ electric torch steady as the two trumped through the storm under his umbrella, his cane clicking against the rocks as he limped on. She felt terrible for poor Fern, but she also kind of felt annoyed by her right now. It was well rotten that her parents were getting a divorce, but they said Mrs. Mantovani was going to make Fern a star; bring her into the family business in Paris. That wasn’t so bad, was it?</p><p>“Oh God,” Watkins gasped, stopping them in their tracks, “The castle.” </p><p>“Castle?” said Krystelle, “You mean the ruins?”</p><p>“It’s nothing,” he said, shaking his head, “I was just thinking aloud. Come, step lightly Ms. Gandy, mind you don’t slip.”</p><p>The two continued on, Krystelle clutching her heavy moleskin robes closer as the wind picked up. Her nose crinkled as she faintly smelt the sea on the wind. Daddy had bought them for her two Christmases ago, when he got promoted at Flamel Enterprises. That was before she started going to Rathlin’s primary school, and they were certainly coming in handy now. It had been a particularly cold and stormy February on the island, and here her friend was, lost in it in the middle of the night.</p><p>As they neared the edge of the academy village, and approached the ruins of Robert the Bruce’s castle, they continued calling out to Fern. Now Krystelle was starting to get worried. There was a lot of rocks out this way, and a lot of steep hills down into the water. What if she fell? What if she really hurt herself?</p><p>“Hey!”</p><p>Dr. Watkins flashed his light forward. They both caught a glimpse of faded white and a flash of shining black hair, running towards them.</p><p>“Ms. Mantovani!”</p><p>Hastily, Dr. Watkins hobbled over the rocks and sludge, leaning on his cane the whole way, until he reached Fern in the middle. She was half-covered in mud, her clothes were all soaked through, and she was barefoot, but she was alright.</p><p>“You mustn’t ever do that again, young lady,” said Watkins,“I can’t imagine what hardship you must be going through right now, but you could have really hurt yourself out here, or worse.”</p><p>“I know, Professor,” said Fern, glumly “And I’m sorry.”</p><p>Krystelle smiled a little, and walked over to them.</p><p>“Hey,” said Krystelle, “What was that for? We were—like—really worried about you.”</p><p>“I’m sorry, Krissie,” said Fern, hanging her head, “I freaked out. It’s just... if you only knew... but it’s ok. The pretty goat ladies; they helped a lot.”</p><p>“Pretty what?”</p><p>“Oh!” Fern covered her mouth, looking up at Watkins, who was now looking both cross and surprised as he bit his lip under his moustache.</p><p>“Professor?” said Krystelle, puzzled.</p><p>“It’s nothing,” said Fern, quickly, “Let’s just get back home.”</p><p>And so the three of them, huddled under the large black umbrella, doubled back to the Academy, as Krystelle occasionally looked back at the old castle, unable to shake the sudden feeling that they were all being watched.</p><p align="center">***</p><p align="center">THREE YEARS LATER </p><p>“Give up!” Krystelle demanded, “We’ve got you surrounded, dark one! It’s over for you and your evil master!” She called out over the log which was her cover, Wizard Cracker firmly in hand</p><p>“Never!” replied Dora. She spoke defiantly, raising her own Wizard Cracker to the sky from atop the treehouse.</p><p>The famous Auror-Detective Krystelle Gandy had been hot on the trail of one of You-Know-Who’s last loyal Death Eaters; Dirty Dora the Dangerous. Finally, she’d tracked her down to her secret lair; the Tower of Grawshook. This was their final showdown. After all her adventures, her legacy would be decided here and now. Dirty Dora Flamel was coming with her, either in chains or in a body bag.</p><p>Just then, small red sparks shot up from behind every bush in the garden.</p><p>“What was that?”asked Krystelle, forcefully.</p><p>“Haha, there goes your backup, Auror-Detective!” said Dora,“My goblin minions have made short work of them. It’s just you and me now, babe.”</p><p>“You fiend!” said Krystelle, shaking her fist, “Their deaths will be avenged!”</p><p>Wasting no more time, the famous Krystelle Gandy hopped over the log and made a beeline straight for the treehouse.</p><p><br/> “Take this, goody goody!" </p><p>Dirty Dora peeked her head out the window and popped her Cracker down at the young heroine, who zig-zagged and rolled forward just in time to avoid the blast of confettii and glitter. At last she was at the trunk of the tree, and the ladder to the Tower of Grawshook.</p><p>“Oh yeah?” said Dirty Dora, laughing from above, “Well let’s see how you like this. Attack, my goblin minions!”</p><p>The infamous Death Eater then took a barrel from the side and dumped it down. A collection of several small stuffed goblin dolls sunk their claws into the Auror-Detective’s sundress, and giving high-pitched squeaks as they meekly kicked and headbutted her with their cottony forms.</p><p>“Ack!” yelled Krystelle, trying not to laugh as the little things tickled her, “Back, servants of You-Know-Who! Back!”</p><p>After quickly dusting the dolls off of her, Krystelle pulled another Cracker from her dress front pocket, and continued upward.</p><p>When at last she found herself inside the fiend’s layer, she held her Cracker forward with a flourish, and was confused momentarily when she found no one there. All she did find was a small stack of white cards in the dead center of the small wooden room. Krystelle picked up the stack, and turned it over.</p><p>
+  <em>3</em>
+</p><p>Krystelle threw the card on the ground.</p><p>
+  <em>2</em>
+</p><p>Krystelle apprehensively turned to the next card, discarding the old one again.</p><p>
+  <em>1</em>
+</p><p>Finally, she got to the last card.</p><p>
+  <em>Boom </em>
+</p><p>At once, the paper erupted in tiny sparks, the hot specks stinging Krystelle’s bare feet, and some even shooting up her dress. Outside, over the sound of firecrackers, she heard someone dying of laughter on the lawn.</p><p>Shaking off the shock of it all, Krystelle ran straight back to the window, and saw Dora rolling back and forth on the grass, clutching her sides as she pointed and laughed.</p><p>“Once again, evil— hahaha— has triumphed! Thanks—hehe—to Dirty Dora!”</p><p>“Oh yeah?”</p><p>Krystelle immediately shot back down the ladder, ran to Dora, and dog-piled onto her.</p><p>“Haha, ow, hey!”</p><p>“Evil will never win so long as Auror-Detective Gandy is around!”</p><p>“Nuh-huh, you’re dead, I just killed you!”</p><p>“No, no I’m not!”</p><p>They kept wrestling, tickling, and laughing like that, not knowing that both their fathers were looking on them from the sliding glass door of the Gandy home, softly giggling at their children’s play.</p><p>After a mere few minutes, both girls finally lost their breath, and collapsed on their backs, side by side, looking up at the clear summer sky.</p><p>“Seriously, though,” said Krystelle, “You did get me good.”</p><p>“I know, right?”</p><p>“Only fair I guess. I fell for my own trick. But how did you get out of the treehouse so fast?”</p><p>“I set up another ladder in the back-window before you woke up this morning.”</p><p>Krystelle laughed.</p><p>“Wow! You planned that far ahead?”</p><p>“Of course. Dirty Dora hasn’t avoided capture this long for nothing!” she poked Krystelle’s side playfully.</p><p>They sat in silence for a while like that, hand in hand in the grass, looking up at the clouds, silently wondering to themselves what they looked like.</p><p>Krystelle still couldn’t believe it was really almost over. In a month or so, she and Dora were going to go off to two separate schools; she to Rathlin Academy, and Dora to bloody Hogwarts, the most famous school for witchcraft in all of Europe! No more would they be limited to kid magic like wizard crackers or toys. Their parents were going to buy them their own wands, so they could learn to do real, grown-up magic.</p><p>She should have been elated, and she supposed she was, but in that moment, with her best friend close beside her, she could only think about being sent off to the island all alone, for the first time. It was a lonely, blue feeling.</p><p>“Hey, Dora?”</p><p>“Yeah?”</p><p>“I’m gonna really miss you.”</p><p>“Awww,” Dora rolled over and cuddled into Krystelle’s shoulder, “I’m gonna miss you too, Krissie. It won’t be so bad, though. Daddy’ll make sure we don’t fall out of touch! He’s always bugging me to write people more.”</p><p>“I know, it’s just...I spend so much time on that bloody island. And this time Dad says I can stay for summer if I end up wanting to. So, it could be almost a year before we see each other again.”</p><p>“Yeah…” Dora snuggled into her friend more, “Oh well,. It’s still like a month off, right? We still have to go to Diagon Alley and get our stuff. Oh my gosh, we’re gonna get our wands together! Our first wands! That’s so mad!”</p><p>Krystelle smiled and nodded.</p><p>“Yeah….”</p><p>And again, the two young girls lay there with each other in silence, basking in the others company, until Daddy and Mr. Flamel called them in for lunch </p><p align="center"> </p><p align="center">***</p><p align="center"> </p><p>Meanwhile, thousands of miles away, another much more severe game of cat and mouse was underway, as it had been for the past year. A woman, tall and fit, with her blonde hair braided into two ponytails, sat at her desk by the light of several dozen candles, looking to the world like a woman on a mission, as her strong blue eyes scanned the case files before her over and over.</p><p>On the wall in front of her, a collage of newspaper clippings, both wizarding and Muggle, as well as at least a hundred photographs and documents, were pinned and connected to each other with lengths of red string. At the center of the myriad of evidence, was a blurred black-and-white photo of a silhouetted figure disappearing into a panicked crowd.</p><p>This was the photo that had made Janna personally insist on taking this case up, the picture of the man who’d taken over her life in more ways than one. It had been taken at JFK airport, just after the first attack, but an overly-curious young shutterbug. On the photo, a sticky note read:</p><p>
+  <em>The Man in White</em>
+</p><p>It had all started last year in New York City, with the attack on Juliet Cruisers airline. February 14th, 1990. On the day in question, one of the walkways from the plane to the terminal at JFK airport, was bombed through ostensibly Muggle means. Three prominent wizarding figures, including Fleur Eloise, the French ambassador to the International Confederation of Wizards, died in the attack, and several more were wounded.</p><p align="center"> </p><p align="center">
+  <em>The New York Phantom</em>
+</p><p align="center">
+  <b>FOREIGN NATIONALS SLAIN IN AIRPORT BOMBING<br/> MUGGLE FOUL PLAY SUSPECTED</b>
+</p><p align="center"> </p><p>At first the Muggle police sought to blame some terrorist organization for the crime. Upon closer inspection, however, it became evident that this was a witch or wizard who did it, and the Muggle Relations Division of the US Auror Office took over.</p><p>The bomb in question was indeed made from Muggle explosives, but the trigger was magical. A recreation of the scene after the fact also found a sizable portion of the underside of the walkway itself was missing. This seemed to suggest the explosives, while Muggle in nature, were transfigured out of a portion of the walkway. The evidence was building more and more that it was magical, not Muggle foul play to blame.</p><p>Janna and her partner, Evan Miller, were both assigned to the case. She kept copies of his notes safe and of course investigated alongside him. For a while the investigation went nowhere. They kept finding leads, and every lead got them only to one dead end after another. However, that changed last April. The <em>modus operandi</em> had been the same, Muggle explosives set off by magical means, and a survivor had witnessed the Man in White fleeing the scene.</p><p> </p><p align="center">
+  <b>PROMINENT WIZARDING HUB ATTACKED<br/> MUGGLES TO BLAME? </b>
+</p><p align="center">
+  <em>April 1, 1991</em>
+</p><p> </p><p>The attack had been on a place known simply as the Outpost, a combination post office and transport hub situated in North Dakota. Like much of the heartland, the wizarding populace of the state was very much isolated from the rest of the nation, much less the world. They thought it was just some prank when it first when dark, but when magical law enforcement arrived on the scene, to see the building engulfed in flames, they quickly discovered that was not the case. This Outpost was a keystone of wizarding society for most of the state, and someone blew it to hell, sending the whole place into a chaotic dumpster fire; no post, no Floo connection, no new Apparation licenses, and worst of all, no contact with the MACUSA.</p><p>Four days after taking the case…Evan Miller disappeared. He just didn’t show up for work that morning. Janna ran to his house worried, only to find it a wreck, and him nowhere to be found. Janna was inconsolable for a week before she was able to get back to work. He only agreed to take the case because she’d begged him to. What’s more, she loved Evan; they both came from Finland on the same boat, and solved dozens of cases together. He was like a little brother to her.</p><p><br/> Since then, Janna had been working triple time, investigating JFK, the Outpost,<em> and </em>Evan’s disappearance. She reckoned she’d slept about twelve hours in the past four days alone. Coffee and potions alone kept her head upright, much less awake, and her deterioration had not gone unnoticed. The captain was insisting she take on another partner to take up night duty for her. Janna looked up at the lock. Eight o’clock PM. They were due here any minute. </p><p>Just then there was a knock at her door. It was gentle, yet Janna was so engrossed in her study that she was startled for a moment.</p><p>“Come in,” the Auror called. There was a noticeable hint of a Scandinavian accent to her voice.</p><p>The door opened, and inside was her captain, Colin Nathan, with a girl no older than 18 in tow. The girl had short black hair and thick black-rimmed glasses, but a handsome face, by all accounts.</p><p>“Lieutenant Janna Cambridge,” said Captain Nathan,, “May I introduce Sergeant Mary Visage? Sergeant Visage, Lieutenant Cambridge.”</p><p>“Ah, yes,” said Janna, standing to greet her, “It’s a pleasure to meet you, dear.”</p><p>“Now I meant what I said before,” said the Captain, sternly, “She’ll be taking over this case at night, so give her a quick brief and get yourself <em>home </em>for God sakes.”</p><p>“Aye, captain,” said Janna, begrudgingly</p><p>“Alrighty then,” said Nathan, smiling in relief, “Miss, I leave you in the lieutenant’s good care. Good luck.”</p><p>He then shook the girl’s hand, and took his leave. Apprehensively, the young Mary Visage took a deep breath, then stood tall, wearing a smile of sudden confidence.</p><p>“Have a seat,” said Janna.</p><p>“Thanks.”</p><p>She plopped down on the nearby office chair, and rolled forward towards the desk.</p><p>“Gosh,” gasped Mary, “this case is only a year old?”</p><p>“I’ve been working <em>very</em> hard on it.”</p><p>“I can believe it. Sorry to hear about Sergeant Miller by the way. All the guys down at the academy said he was—is, sorry, a great guy.”</p><p>“Thank you,” said Janna. She appreciated the gesture. It was more than some of the boys down here were willing to give.</p><p>“Right,” said the young Auror, smiling, “So anything I should know before I get started?”</p><p>“Let’s see...they said you’re a pureblood. Do you know much about Juliet Cruisers?”</p><p>“Not really. I was still finishing training then, and I sort of phased out whenever Muggle stuff came up. Airplanes? Man, what do those guys think they’re doing?”</p><p>“Well that’s a mindset I hope you’ve broken away from. This <em>is </em>‘Muggle Relations’ after all.”</p><p>“Right, of course I have.”</p><p>“Well, Juliet Cruisers is essentially a specialized airline (that’s what they call an airplane company), which introduces wizarding people to the Muggle world, for those who for one reason or another want or have to live in it. On the way they give them brief orientations and tutorials and the like.”</p><p>“Ahhh ok, sounds simple enough. Crazy, but simple. Anything you can tell me about the suspect? This Man in White?”</p><p>“Well we discovered that this MO is not new, nor was the appearance of this man. He’s been sighted at similar assassinations and war atrocities all across the wizarding world. Muggle explosives against wizarding targets. His identity, unknown; in the international auror community, he’s known only as ‘The Man in White’.”</p><p>“Any other questions? Everything you need is right here. It’s all labeled and dated, so you shouldn’t have any trouble finding your way around it.”</p><p>“One last question. Any leads as to his motivation?”</p><p>“Not much. The international attacks are completely erratic, often contradictory. He’ll kill a politician that’s for one thing, only to bomb the office of that politician’s competition. Here in the states, however, there does seem to be one common thread to the two attacks.”</p><p>“What’s that?”</p><p>“First, all three of the victims at JFK were vocal supporters of President Shensuken’s new civil rights bill. Second, North Dakota is mostly Libertarian, strongly Secessionist even. However, that’s only in the more populated areas. The more rural areas, those with close regular contact with Native American reservations, are mostly Progressive. These are also the areas who depended on the Outpost the most.”</p><p>“Ergo, there are probably more in those areas who support the president than oppose him.”</p><p>“Precisely.”</p><p>“So the attacks have been politically motivated?”</p><p>“It’s possible. At any rate it’s all we’ve got.”</p><p>“Right. Well, thanks Lieutenant. I think I can take it from here. You go on ahead home.”</p><p>“Thank you, dear. I’ll see you in the morning…”</p><p align="center"> </p><p align="center">***</p><p align="center"> </p><p> </p><p>“Hey Dad, Mom’s home!”</p><p>Holly Cambridge darted from her place at the dinner table, leaving a small whirlwind of homework in her wake, as she ran headlong into Mom's waiting arms at the door. She heard Dad laughing softly behind her.</p><p>“Hey, girl,” he said softly, over his newspaper, “Saved you a plate for dinner, it’s in the icebox”</p><p>“Thank you, love,” said Mom, still holding Holly tight. </p><p>“New partner finally come today?" asked Holly, "You haven’t come home this early in months.”</p><p>“As a matter of fact, yes. She’s a nice girl, from what I could see. It’ll definitely help having another pair of eyes in the office. How about you, cub? How was your day?”</p><p>“Fantastic!” replied Holly, beaming “We won another game! You know what that means, right?”</p><p>“The Firebrands are making it to regionals?”</p><p>“Yeah!” said Holly, suddenly jumping in place, “They start next week, Friday! And if we win two of those, we make it to the Junior Cup! I know it's bad times right now over at work, but do you think you could <em>please </em>come, Mom? Just this once?”</p><p>“Well...I did say I have a new partner, right? Perhaps I could—”</p><p>“Thank you thank you thank you!”</p><p>Holly hugged her Mom tighter. She couldn’t remember the last time Mom had made it to one of her games, even though she always asked her about it, made sure she was doing well.</p><p>Holly had been playing soccer since was old enough to walk, but she only started training in the Texas Junior Cup when she turned eight. Mom took her to camp in Arizona for two summers, then this summer she had made it onto the Dallas Firebrands as a midfielder. Coach loved her; she had never let the ball get past her once since joining the team.</p><p>It was such a shame that Mom never got to see it, though. The Junior Cup had only been on for a month when Mom's partner disappeared. Holly had offered to help about a hundred times by now, but Mom said no.</p><p>“Now, enough of that,” said Mom (though she still smiled), “Is your homework done?”</p><p>“Mostly,” said Holly, nodding, “I finished History, Swedish, and Lilith helped with Potions. I just need to finish with Science. Dad and I are going through the chapter on atoms.”</p><p>“Goodness, really?”</p><p>"Yeah, it's cool, but nothing as cool as the magic stuff. I don't <em>have </em>to keep up these Muggle studies, do I? I'm in seventh grade, shouldn't I be getting ready for high school by now?" </p><p>“Ahhhh, well...it’s funny you ask—”</p><p>A knock from behind her interrupted them.</p><p>“Oh, that’ll be him then?” Dad asked.</p><p>“It must be!” said Mom, “Speak of the devil, huh?”</p><p>She turned back around. Holly was confused for a second. Who could be visiting now? It was almost ten o'clock. </p><p>“Janna!” a man’s voice said, cheerfully.</p><p>“Sherrod,” replied Mom, just as happy, "It's been too long!" </p><p>She hugged the man, and then let him in. He was tall and thin, with short, uncombed black hair with some stubble on his face, a black suit, and a grey handkerchief around his neck.</p><p>“Holly,” said Mom, “This is Professor Howe. He’s a teacher, well, more like a principal. He’s the headmaster of a school in Northern Ireland.”</p><p>“A pleasure to finally meet you, miss." <br/> <br/> Professor Howe bowed, and offered her his hand, which she politely shook.</p><p>“Alright, Xavier?” asked Professor Howe, waving at Dad, “I’ve not seen you since, how long? Even longer than ol’ Janna here. Word is you’re a military man now?”</p><p>“Hah, yes and no,” said Dad, looking shy, “I work for IWDS, that’s—”</p><p>“The International Weapons Development and Sanctions Board,” the professor interrupted Dad, “I am quite familiar with them. So research and development, then? Certainly a splendid use of your Ph.D, considering. I perceive that the company sent you to Fort Hood to advise the research project there. So it’s only incidentally that you’re working for the Muggle American army. Am I correct?”</p><p>“Um… yeah, exactly. How did you know? Actually... how’d you know <em>any</em> of that?”</p><p>“It’s what he does, love,” said Mom, shrugging, “Don’t get him started on how he figured it out, you’ll not hear the end of it for a while yet.”</p><p>“Ahh, your wife knows me too well. But enough chatter. I believe we have business with your daughter, no?”</p><p>“Me?” said Holly, startled. </p><p>Professor Howe smiled. <br/> <br/> "Shall we move this conversation into the den? I believe Miss Holly will want to be sitting down for this.”</p><p>“Sure,” replied Dad, nodding, “Come along, love, we’ll finish your chemistry in just a bit. I reckon you’re gonna like what Professor Howe has to say.”</p><p>The four of them all made their way from the entry hall and dining room, left through the kitchen to the spacious family living room. Professor Howe took a seat on the leather chair, while Holly and her parents sat opposite him on the couch. Holly felt curiously at ease with the professor, as he crossed his legs and sat in the chair as comfortably as if it had always been his favorite. He had a silly look in his eye, yet his face was mostly serious. Something about the professor just made her feel safer somehow.</p><p>“Well now, Miss Holly,” said Professor Howe, “As I understand it, you’ve been playing football for a while now?”</p><p>Holly nodded enthusiastically.</p><p>Professor Howe laughed. <br/> <br/> “It definitely sounds like you’ve quite a career under your belt. I’m curious, how would you like to advance in this even further?”</p><p>“What do you mean?" said Holly, "The National Youth Championship Series? Gosh, that would be neat! We’d have to win the cup first though, to move onto nationals.”</p><p>“Indeed so. However, I was thinking a bit...higher up than any youth organization. Oh the youth league has done well right by you, as far as I can see, but how would you like to play in the big leagues? I’m talking, dear Holly, about FIFA.”</p><p>“FIFA?” gasped Holly, “But I’m only twelve!" </p><p>“Perhaps for now. However, FIFA has been known to accept players out of junior leagues as young as teenagers.”</p><p>“Ah, he’s right, love,” said Mom, “They’re letting them in younger and younger all the time. I hear they’re looking at this one lass in Australia for their own national team, she’s not even fourteen yet.”   </p><p>“And as competitive as you are in the Junior Cup, you’re prime scouting material if I ever saw it. And it just so happens that a brand new women’s club has just been founded across the water. The Nottingham Forest LFC.”</p><p>“Ohhh, I’ve heard of that! Mrs. Weston, Mom's friend, she’s a talent scout for Team Nottingham! Wait…have you been planning this?”</p><p>Mom looked away, blushing a bit.</p><p>“Perhaps,” she said with a giggle.</p><p>"Ahhh," Dad cut in, "Excuse me? Janna? Why is this the first I've been hearing about this?" <br/><br/>Mom looked to him, blankly. <br/><br/>"What do you mean? She's always told you she wants to play professionally." <br/><br/>"<em>Every </em>kid athlete says they want that at their age. This isn't something we should just jump into without--" <br/><br/>"I <em>do </em>want it!" said Holly, a little indignant, "Dad, I promise you I really do." <br/><br/>Dad scrunched his face, and Professor Howe cleared his throat before carrying on. </p><p>“Hence why I am here, my dear,” the Professor said  “In a couple years or so, you’ll already qualify for FIFA membership, but that still leaves some minor rules with Nottingham. It’s in their charter that you must have been a resident of the United Kingdom for at least six months prior to trying out.”</p><p>“Awww,” said Holly, “But I haven’t been back to Britain since I was five. So where does that leave me?”</p><p>“I am glad you asked!”   </p><p>Professor Howe reached into his coat pocket, and pulled out an envelope, then handing it to Holly. The envelope was addressed to her, and on the back there was a symbol: a lion in the middle of a circled belt, pressed on an orange wax seal. She ripped it open, and pulled out a letter.</p><p>
+  <em>Dearest Holly Cambridge,</em>
+</p><p>
+  <em>You are cordially invited to embark on an adventure one part spiritual and one part magical, in your pursuit of an educated mind; to get to know the arts as the most powerful force in human life; to join a tradition of students and educators stretching back hundreds of years, on one of the most ancient and storied of the British Isles. Without further ado, we are pleased to inform you that you have been accepted to Rathlin Junior Academy of Arts And Magic.</em>
+</p><p>Holly leapt out of her seat.</p><p>“Rathlin?!” she all but screamed, “<em>The </em>Rathlin Academy? Oh...but this is dated for <em>next </em>school year.”</p><p>“That’s right, cub,” said Mom, smiling, “I'm arranging for you to go to a regular school stateside, just so you can get used to a proper school. Then you finish up your contract with the Firebrands next summer, go to Rathlin the school year after this one, then the summer after next, you can try out for Team Nottingham!”</p><p>“I can?!”</p><p>“And, hehe, not to make any promises, but well... Terri, Mrs. Weston I mean, she really loves how you play.”</p><p>Holly grabbed both of her parents by the necks in as tight a hug as her little arms could muster, as Dad requested in vain for her to calm down.</p><p>“Thank you, oh my god t<em>hank you!</em> You’re the best parents in the world!”</p><p>“Well don’t thank us,” said Mom humbly, “It was all Professor Howe’s idea.”</p><p>"Yes, <em>certainly </em>don't thank us," said Dad, grumbling. </p><p>“Indeed,” said Professor Howe, “Rathlin has had its eyes on you for a while, Miss Holly. And I just figured you had about had it with homeschool.”</p><p>"So sure," said Dad, "Take our only daughter off to the other side of the world so she can join a bloody--" <br/><br/>"Xavier!" hissed Mom, "That's <em>enough</em>. Don't you <em>dare </em>ruin this for her." <br/><br/>Dad crossed his arms and just kept grumbling under his mustache. <br/><br/>"What do I know? I'm just her bloody father is all..." </p><p>Holly ignored him. Dad could be a bit of a crybaby sometimes, and he worried too much, but he <em>did </em>know this is what she always wanted. He would respect that eventually. She then turned around, sped around the coffee table, and stopped just short of jumping in his lap to hug him. Instead, she took a deep breath, and merely took his hand in her own and shook it furiously.</p><p>“Thank you Professor Howe, I won’t let you down!”</p><p align="center">***</p><p align="center"> </p><p>Several Apparations and a wizarding boat ride across the Atlantic later, Professor Sherrod Howe had finally returned home, to his humble cottage in the Academy village by Bruce’s castle. With his bag firmly in hand, and a great deal of stress built up in his back, aching for a hot bath, he swaggered on through the front door, to the elated holler of his wards, welcoming him home.</p><p>Of course, little Colm was the first to reach him, and the loudest in noticing him. Sherrod didn’t know what he just broke or knocked over as Colm ran to give him a hug, and he didn’t quite care. Returning home was always a joy for him.</p><p>“Oi Finn!” the lad all but shrieked, “Finn! Finnbar! Finn! He’s home! Oi wanker, he’s home! You hear, stupid? Sherrod’s back!”</p><p>Sherrod cringed at Colm’s choice of words, even if he knew the lad couldn’t help himself. He was much more relived as he saw Colm’s big brother turn round the corner to the door, considerably slower and calmer. At his side was a girl of the same age, slightly shorter. She’d stayed on the island enough as a village counselor that Sherrod recognized her immediately as Finn’s best friend, Portia Figg.</p><p>“Ahhh, there he is!” Colm said, separating from Sherrod and crossing his arms, “With Fig Tree Girl, both as fat and ugly as ever. EEEEEK! ‘I’m going slightly mad! I’m going slightly mad! It finally HAAAAA-pened.’ EEEK!”</p><p>In a flash, Colm rushed on all fours up the stairs, turned right, smacked his head with a hard thud on the railing, and continued into his room unperturbed.</p><p>“If he persists like that, you absolutely have my permission to hit him,” Sherrod assured.</p><p>“Ahhh, I’ll hold you to that, sir,” replied Finn, cocking his eyebrow, “Have a nice trip, Mr. Howe?”</p><p>“Indeed so, Mr. Negus,” said Sherrod with a knowing wink, “Sorry about the boy’s behavior, Miss Figg. I assure you I don’t condone that.”</p><p>Portia shrugged.</p><p>“S’allright, professor,” Portia assured, “I’m a big girl, I can take it. I just hate how he treats Finn.”</p><p>“Aw, my knight in shining armor,” teased Finn, nudging her side, “Don’t worry yourself, mate. That’s just his annoying as feck way of saying he loves us…although I <em>will </em>hit him for it, Howe, don’t worry.”</p><p>Sherrod laughed.</p><p>“I just got to hope he grows out of those mental episodes,” Finn said, shaking his head, “Else he’ll have a go with the wrong fellow someday, someone who won’t go so easy on him.”</p><p>“My worries exactly, sadly,” Sherrod agreed.</p><p>“Anyway,” said Finn, “You must be exhausted, eh? We’ll go ahead and let you rest upstairs.”</p><p>“Yeah, professor,” said Miss Portia, “We got dinner all ready for ourselves earlier. You want us to bring you something up?”</p><p>“Thank you kindly, sir, and you madam” Sherrod tipped his hat, “I already ate as well, but thanks for the offer. And in all seriously, don’t pay your brother any mind on my account. That’s what sound-proof charms are for, eh?”</p><p>Sherrod smiled, bid them adieu, and continued up the stairs. Just before turning left to get to his own bedroom, Colm popped out of the broom closet, holding a toilet paper roll like a microphone.</p><p>“Is this the reeeeeal life, Sherrod? Or is this just faaaaantasy? Caught in a laaaandslide, no escape from reaaaaaality?”</p><p>“All of the above, matey,” Sherrod chuckled, rolled his eyes, and moved past him.</p><p><em>At least he has good taste</em>.</p><p>Wasting no more time, he entered his quarters, locked the door behind him, charmed the room to keep sound both in and out, removed his coat and ascot, and sunk into his armchair by the fireplace.</p><p>He knew he was taking a risk, bringing the Cambridge girl here. A risk too few people knew about. Rathlin was no Hogwarts, and Sherrod was certainly no Albus Dumbledore. He knew he couldn’t keep her as safe on the island as the castle, but this was a matter both Sherrod and Janna had agreed was not Albus’ business, and so left him out of it for now.</p><p><em>Albus may be the most powerful wizard of the age</em>, thought Sherrod, <em>But this….</em></p><p>“<em>Accio </em>prophecy,” Sherrod incanted with a wave of his wand.</p><p>In a flash the rubbish on his desk across the room ruffled, and a small blue-dyed scroll flew through the air, into Sherrod’s hand. The scroll was a copy of the report Sherrod had given to the Department of Mysteries about four years ago, concerning the vision of a very close acquaintance of his. Sherrod found it helped to read such things over again, not to remember them, but merely to contemplate them.</p><p><em>Not everyone has the luxury of a Pensieve</em>, Sherrod thought, smirking.</p><p>Sherrod then unrolled the scroll wearily, and read through it for what had to’ve been the thousandth time.</p><p> </p><p>
+  <em>The Man in White will sunder Merlin’s Field, after starting the fire in the north.</em>
+</p><p>
+  <em>A young protégé, a motherless daughter of two nations, is to make her first debut there, as her guardian, the Man in White’s hunter, looks on helplessly. The protégé will be both a soldier and a victim of two wars to come; one against brothers, and one against a foe who has made himself nameless. The Man in White will aid in his unnatural return. </em>
+</p><p>
+  <em>Relationships will fray and bend, while new alliances are forged which will last till the next age.</em>
+</p><p>
+  <em>Progress will be halted as blood flows, on both sides of the sea, then flourish as the corpses grow cold.</em>
+</p><p>
+  <em>Hope can be salvaged, but not before pagans are once again driven from Salem.</em>
+</p><p> </p><p>As Sherrod reread the words over and over again, he outstretched both hands. In each, a violin and bow materialized. Relishing their familiar texture and smell, he propped the violin under his chin, and began to strum a tune which Sherrod fancied as both haunting and comforting, a tune Sherrod had written himself long ago. As he played, he allowed himself to relax, and become lost in his endless thoughts and calculations.</p><p> It truly was good to be back home.</p><p align="center"> </p>
+  </div>
+  <!--/main-->
+
+    <div class="chapter preface group">
+      <div class="end notes module" id="chapter_1_endnotes" role="complementary">
+        <h3 class="heading">Notes:</h3>
+        <blockquote class="userstuff">
+          <p>Fern Mandovani, Krystelle Gandy, and Portia Figg are owned by littlebityamelie<br/>Dora Flamel, Finn and Colm Negus are owned by the-mind-of-kleinnak<br/>Janna, Holly, and Xavier Cambridge are owned by EH-Indigo<br/>Sherrod Howe and Jefferson Watkins are owned by Sir Arthur Conan Doyle</p>
+        </blockquote>
+      </div>
+    </div>
+
+</div>
+
+<!-- end of cache -->
+
+    </div>
+  
+  
+    </div>
+    <!-- END work skin -->
+  </div>
+  <!-- END work -->
+
+  <!-- BEGIN comment section -->
+  <!-- Gets embedded anywhere we need to list comments on a top-level commentable. We need the local variable "commentable" here. -->
+<div id="feedback" class="feedback" role="complementary">
+
+  <h3 class="landmark heading">Actions</h3>
+
+  <ul class="actions" role="navigation">
+      <li><a href="#main">&#8593; Top</a></li>
+
+
+      <li><a href="/works/14807213/chapters/34263872#workskin">Next Chapter &#8594;</a></li>
+
+
+
+
+      <li>
+        <form id="new_kudo" action="/kudos" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="30NrPhyYuE1gNXwXBD9aPsb9F/GFFEAh0eRIABYwHS694C6aMDt1bGfYqjLN4qpVYyHnP94umTMGvl/OedWcag=="/>
+          <input value="14807213" type="hidden" name="kudo[commentable_id]" id="kudo_commentable_id"/>
+          <input value="Work" type="hidden" name="kudo[commentable_type]" id="kudo_commentable_type"/>
+          <input type="submit" name="commit" value="Kudos ♥" id="kudo_submit"/>
+</form>      </li>
+
+
+
+
+  </ul>
+
+  <div id="kudos_message"></div>
+
+  <h3 class="landmark heading"><a name="comments">Comments</a></h3>
+
+  
+
+    <div id="kudos">
+      <p class="kudos">
+          <a href="/users/LilRed7503">LilRed7503</a> and <a href="/users/Kleinnak">Kleinnak</a>
+             as well as 
+          2 guests
+         left kudos on this work!
+      </p>
+</div>
+
+
+    <div id="add_comment_placeholder" title="top level comment">
+      <div id="add_comment">
+        <!-- expects the local variables comment, commentable, and button_name -->
+<div class="post comment" id="comment_form_for_34260794">
+  <form class="new_comment" id="comment_for_34260794" action="/chapters/34260794/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="GV2EF1uhW0aR6U80D1BrWgpMzC8dd2kinTmuISrAelp7/sGzdwKWZ5YEmRHGjZsxr5A84UZNsDBKY7nvRSX7Hg=="/>
+    <fieldset>
+      <legend>Post Comment</legend>
+
+
+
+
+
+
+        <dl>
+          <dt class="landmark">Note:</dt>
+          <dd class="instructions comment_form">All fields are required. Your email address will not be published.</dd>
+          <dt><label for="comment_name_for_34260794">Guest name: </label></dt>
+          <dd>
+            <input id="comment_name_for_34260794" type="text" name="comment[name]"/>
+            <script>var validation_for_comment_name_for_34260794=new LiveValidation('comment_name_for_34260794',{wait:500,onlyOnBlur:false});validation_for_comment_name_for_34260794.add(Validate.Presence,{"failureMessage":"Please enter your name.","validMessage":""});</script>
+          </dd>
+          <dt><label for="comment_email_for_34260794">Guest email: </label></dt>
+          <dd>
+            <input id="comment_email_for_34260794" type="text" name="comment[email]"/>
+            <script>var validation_for_comment_email_for_34260794=new LiveValidation('comment_email_for_34260794',{wait:500,onlyOnBlur:false});validation_for_comment_email_for_34260794.add(Validate.Presence,{"failureMessage":"Please enter your email address.","validMessage":""});</script>
+          </dd>
+        </dl>
+        <p class="footnote">(Plain text with limited HTML <a class="help symbol question modal" title="Html help" aria-controls="#modal" href="/help/html-help.html"><span class="symbol question"><span>?</span></span></a>)</p>
+
+      <p>
+        <label for="comment_content_for_34260794" class="landmark">Comment</label>
+        <textarea id="comment_content_for_34260794" class="comment_form observe_textlength" title="Enter Comment" name="comment[comment_content]">
+</textarea>
+        <input type="hidden" id="controller_name_for_34260794" name="controller_name" value="chapters"/>
+      </p>
+      <p class="character_counter"><span id="comment_content_for_34260794_counter" class="value" data-maxlength="10000" aria-live="polite" aria-valuemax="10000" aria-valuenow="comment_content_for_34260794">10000</span> characters left</p>
+      <script>var validation_for_comment_content_for_34260794=new LiveValidation('comment_content_for_34260794',{wait:500,onlyOnBlur:false});validation_for_comment_content_for_34260794.add(Validate.Presence,{"failureMessage":"Brevity is the soul of wit, but we need your comment to have text in it.","validMessage":""});validation_for_comment_content_for_34260794.add(Validate.Length,{"maximum":"10000","tooLongMessage":"must be less than 10000 characters long."});</script>
+      <p class="submit actions">
+        <input type="submit" name="commit" value="Comment" id="comment_submit_for_34260794" data-disable-with="Please wait..."/>
+      </p>
+    </fieldset>
+</form></div>
+<div class="clear"></div>
+
+      </div>
+    </div>
+
+  <!-- If we have javascript, here is where the comments will be spiffily inserted -->
+  <!-- If not, and show_comments is true, here is where the comments will be rendered -->
+  <div id="comments_placeholder" style="display:none;">
+  </div>
+
+
+</div>
+<!-- END comments -->
+
+  <!-- END comment section -->
+
+
+
+          <div class="clear"><!--presentational--></div>
+        </div>
+        <!-- END main -->
+      </div>
+      <!-- BEGIN footer -->
+<div id="footer" role="contentinfo" class="region">
+	<h3 class="landmark heading">Footer</h3>
+  <ul class="navigation actions" role="navigation">
+    <li class="module group">
+      <h4 class="heading">About the Archive</h4>
+      <ul class="menu">
+        <li><a href="/site_map">Site Map</a></li>
+        <li><a href="/diversity">Diversity Statement</a></li>
+        <li><a href="/tos">Terms of Service</a></li>
+        <li><a href="/dmca">DMCA Policy</a> </li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Contact Us</h4>
+      <ul class="menu">
+        <li><a href="/abuse_reports/new">Report Abuse</a></li>
+        <li><a href="/support">Technical Support and Feedback</a></li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Development</h4>
+      <ul class="menu">
+          <li><a href="https://github.com/otwcode/otwarchive/commits/v0.9.300.1">otwarchive v0.9.300.1</a></li>
+        <li><a href="/known_issues">Known Issues</a></li>
+        <li><a href="http://www.gnu.org/licenses/gpl-2.0.html" title="View License">GPL</a> by the <a href="http://transformativeworks.org/" title="The Organization for Transformative Works">OTW</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!-- END footer -->
+
+    </div>
+    <!-- check to see if this controller/action allow tinymce before we load the gigantor js; see application_helper -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js" type="text/javascript"></script>
+<!-- if user has googleapis blocked for some reason we need a fallback -->
+<script type="text/javascript">if(typeof jQuery=='undefined'){document.write(unescape("%3Cscript src='/javascripts/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));document.write(unescape("%3Cscript src='/javascripts/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));}</script>
+
+
+<script type="text/javascript">$j=jQuery.noConflict();</script>
+<script src="/javascripts/jquery.scrollTo.min.js+jquery.livequery.min.js+rails.js+application.js+bootstrap,_bootstrap-dropdown.min.js+jquery-shuffle.js+jquery.tokeninput.min.js+jquery.trap.min.js+ao3modal.min.js+js.cookie.min.js+filters.min.js.pagespeed.jc.oz6LPTe6O7.js"></script><script>eval(mod_pagespeed_a8hDjzT3l_);</script>
+<script>eval(mod_pagespeed_1nA1vKz9z4);</script>
+<script>eval(mod_pagespeed_AKC4FLip6q);</script>
+<script>eval(mod_pagespeed_gX7XC77lvT);</script>
+<script>eval(mod_pagespeed_5zo0ZWMy4O);</script>
+<script>eval(mod_pagespeed_eCCgOhjhYQ);</script>
+<script>eval(mod_pagespeed_TU1Ln7LKSh);</script>
+<script>eval(mod_pagespeed_qTpbjsXQwh);</script>
+<script>eval(mod_pagespeed_R5FGw2ySDb);</script>
+<script>eval(mod_pagespeed_rqqFCT3xcT);</script>
+
+<script>eval(mod_pagespeed_Gf_4KFhTvB);</script>
+
+
+  <script>function isSupported(){var item="localStoragePolyfill";try{localStorage.setItem(item,item);localStorage.removeItem(item);return true;}catch(e){return false;}}function acceptTOS(){if(isSupported()){localStorage.setItem("accepted_tos","20180523");}else{Cookies.set("accepted_tos","20180523",{expires:365});}}$j(document).ready(function(){if(localStorage.getItem("accepted_tos")!=="20180523"&&Cookies.get("accepted_tos")!=="20180523"){$j("body").prepend("<div id=\"tos_prompt\" class=\"hidden\">\n  <h2 class=\"heading\">\n    <span>Archive of Our Own<\/span>\n  <\/h2>\n  <div class=\"agreement\">\n    <p class=\"summary\">\n      On Archive of Our Own (AO3), users can make profiles, create works and\n            other Content, post comments, give Kudos, create Collections and \n            Bookmarks, participate in Challenges, import works, and more. Any \n            information you publish in a comment, profile, work, or Content that you \n            post or import onto AO3 including in summaries, notes and tags, \n            will be accessible by the public (unless you limit access to a work only \n            to those with AO3 Accounts), and it will be available to \n            AO3 personnel. Be mindful when sharing personal information, \n            including  your religious or political views, health, racial background, \n            country of origin, sexual identity and/or personal relationships. To \n            learn more, check out our <a href=\"/tos\">Terms of Service<\/a> and <a href=\"/tos#privacy\">Privacy Policy<\/a>.\n    <\/p>\n\n    <p class=\"confirmation\">\n      <input type=\"checkbox\" id=\"tos_agree\" />\n      <label for=\"tos_agree\">I have read &amp; understood the new Terms of Service and Privacy Policy<\/label>\n    <\/p>\n\n      <p class=\"submit\">\n        <button name=\"button\" type=\"button\" disabled=\"disabled\" id=\"accept_tos\">I agree/consent to its terms<\/button>\n      <\/p>\n\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    var container = \$j(\"#tos_prompt\");\n    var outer = \$j(\"#outer\");\n    var button = \$j(\"#accept_tos\");\n\n    setTimeout(showTOSPrompt, 1500);\n\n    function showTOSPrompt() {\n      \$j.when(container.fadeIn(500)).done(function() {\n        outer.addClass(\"hidden\").attr(\"aria-hidden\", \"true\");\n      });\n\n      \$j(\"#tos_agree\").on(\"click\", function() {\n        button.attr(\"disabled\", !this.checked);\n        if (this.checked) {\n          button.on(\"click\", function() {\n            acceptTOS();\n            outer.removeClass(\"hidden\").removeAttr(\"aria-hidden\");\n            \$j.when(container.fadeOut(500)).done(function() {\n              container.remove();\n            });\n          });\n        };\n      }).change();\n    };\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+  <script>$j(document).ready(function(){var permitted_hosts=["archiveofourown.org","download.archiveofourown.org","insecure.archiveofourown.org","www.archiveofourown.org","insecure-test.archiveofourown.org","test.archiveofourown.org","testdownload.archiveofourown.org"];var current_host=window.location.hostname;if(!permitted_hosts.includes(current_host)&&Cookies.get("proxy_notice")!=="0"&&window.location.protocol!=="file:"){$j("#skiplinks").after("<div id=\"proxy-notice\">\n  <div class=\"userstuff\">\n    <p class=\"important\">Important message:<\/p>\n    <ol>\n      <li>You are using a proxy site that is not part of the Archive of Our Own.<\/li>\n      <li>The entity that set up the proxy site can see what you submit, including your IP address. If you log in through the proxy site, it can see your password.<\/li>\n    <\/ol>\n    <p class=\"important\">重要提示：<\/p>\n    <ol>\n      <li>您使用的是第三方开发的反向代理网站，此网站并非Archive of Our Own - AO3（AO3作品库）原站。<\/li>\n      <li>代理网站的开发者能够获取您上传至该站点的全部内容，包括您的ip地址。如您通过代理登录AO3，对方将获得您的密码。<\/li>\n    <\/ol>\n    <p class=\"submit\"><button class=\"action\" type=\"button\" id=\"proxy-notice-dismiss\">Dismiss Notice<\/button><\/p>\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    \$j(\"#proxy-notice-dismiss\").on(\"click\", function() {\n      Cookies.set(\"proxy_notice\", \"0\");\n      \$j(\"#proxy-notice\").slideUp();\n    });\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+    <script>$j(document).on("loadedCSRF",function(){$j.post("/works/14807213/hit_count.json")})</script>
+
+
+  </body>
+</html>

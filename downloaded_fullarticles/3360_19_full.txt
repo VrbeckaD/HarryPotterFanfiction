@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"f2edcff25e","applicationID":"190034","transactionName":"dgwMEkpfWVsHERpRXlQTFgNKQxpECgxC","queueTime":0,"applicationTime":84,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VQcCWV9RGwIJVFFRAw==",licenseKey:"f2edcff25e",applicationID:"190034"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script>
+    <meta name="keywords" content="fanfiction, transformative works, otw, fair use, archive"/>
+    <meta name="language" content="en-US"/>
+    <meta name="subject" content="fandom"/>
+    <meta name="description" content="An Archive of Our Own, a project of the
+    Organization for Transformative Works"/>
+    <meta name="distribution" content="GLOBAL"/>
+    <meta name="classification" content="transformative works"/>
+    <meta name="author" content="Organization for Transformative Works"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+        Взгляни на дом свой, Ангел - Chapter 1 - HaruIchigo - Fantastic Beasts and Where to Find Them (Movies) [Archive of Our Own]
+    </title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/A.1_site_screen_.css.pagespeed.cf.JiR2hT5NxR.css"/>
+<style media="only screen and (max-width: 62em), handheld">#dashboard{clear:both;float:none;margin:1% 3.5%;max-width:100%;padding:0;width:auto}#dashboard,#dashboard.own{border-bottom:10px solid #900;border-top:10px solid #900;padding:.5em 0;border-radius:.25em}#dashboard ul{border:none;display:inline;padding:0;text-align:left}#dashboard li{display:inline}#dashboard a,#dashboard span{display:inline-block;margin:.25em 0}#dashboard .secondary{background:#eee;padding:.375em 0 .625em;box-shadow:inset 2px 2px 5px #bbb}#dashboard .secondary a{margin:.125em 0}#dashboard .landmark{clear:none;float:left}#main,#main.dashboard{float:none;margin:auto;padding-left:3.5%;padding-right:3.5%;width:auto}.logged-in .splash>.module{width:48.5%}.logged-in .splash > div:nth-of-type(odd) {margin-left:0;margin-right:1.5%}.logged-in .splash > div:nth-of-type(even) {margin-left:1.5%;margin-right:0}form.filters{width:auto;min-width:23%;max-width:24%}.filters fieldset{margin-right:0}form.filters dl{margin-left:.25em;margin-right:.25em}#workskin{margin:auto 1.5%}</style>
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 42em), handheld" href="/stylesheets/skins/skin_873_archive_2_0/A.5_site_narrow.handheld_.css.pagespeed.cf.8L0d7x-op8.css"/>
+<link rel="stylesheet" type="text/css" media="speech" href="/stylesheets/skins/skin_873_archive_2_0/A.6_site_speech_.css.pagespeed.cf.Ybb8bLK5Um.css"/>
+<link rel="stylesheet" type="text/css" media="print" href="/stylesheets/skins/skin_873_archive_2_0/A.7_site_print_.css.pagespeed.cf.ry3YZtf8Cz.css"/>
+<!--[if IE 8]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/8_site_screen_IE8_or_lower.css" /><![endif]-->
+<!--[if IE 5]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/9_site_screen_IE5.css" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/10_site_screen_IE6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/11_site_screen_IE7.css" /><![endif]-->
+
+
+
+<!--sandbox for developers	-->
+<style media="screen">#new_work_search fieldset:first-of-type .submit{padding-top:0}.edit_external_author ul ul{margin-left:2.75em}a.resp-sharing-button__link,.resp-sharing-button__icon{display:inline-block}a.resp-sharing-button__link,a.resp-sharing-button__link:hover{text-decoration:none;color:#fff;border:none}.resp-sharing-button{border-radius:5px;transition:25ms ease-out;padding:.5em .75em}.resp-sharing-button__icon svg{width:1em;height:1em;margin-right:.4em;vertical-align:top}.resp-sharing-button__icon{stroke:#fff;fill:none}.resp-sharing-button__icon--solid{fill:#fff;stroke:none}.resp-sharing-button--twitter{background-color:#55acee}.resp-sharing-button--twitter:hover,a:focus .resp-sharing-button--twitter{background-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c}.resp-sharing-button--tumblr:hover,a:focus .resp-sharing-button--tumblr{background-color:#222d3c}.resp-sharing-button--twitter{background-color:#55acee;border-color:#55acee}.resp-sharing-button--twitter:hover,.resp-sharing-button--twitter:active{background-color:#2795e9;border-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c;border-color:#35465c}.resp-sharing-button--tumblr:hover,.resp-sharing-button--tumblr:active{background-color:#222d3c;border-color:#222d3c}</style>
+<script src="/javascripts/livevalidation_standalone.js.pagespeed.jm.oB__Z5piTe.js"></script>
+
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="SXtwiaz4uUpm+zPRext+NnesSQmwiV+Uf5/n1fifkKVO2H4MywWQ42cH6653UUdO9B54GFzdLOnZ7jETmE+khA=="/>
+
+    
+  </head>
+
+  <body class="logged-out">
+    <div id="outer" class="wrapper">
+      <ul id="skiplinks"><li><a href="#main">Main Content</a></li></ul>
+      <!-- BEGIN BETA CAVEATS! -->
+<noscript>
+  <p id="javascript-warning">
+    While we&#39;ve done our best to make the core functionality of this site accessible without javascript, it will work better with it enabled. Please consider turning it on!
+  </p>
+</noscript>
+<!-- END BETA CAVEATS! --> 
+
+<!-- BEGIN header -->
+
+<div id="header" class="region">
+
+  <h1 class="heading">
+    <a href="/"><span>Archive of Our Own</span><sup> beta</sup><script data-pagespeed-no-defer>(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','http://archiveofourown.org/works/13645983/chapters/31340484','eVfAzEuqgZ',true,false,'akY8MrpNQC4');</script><img alt="Archive of Our Own" class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAAqCAMAAAA3b6P4AAACslBMVEWXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACpit0XAAAA5XRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESFBUWFxgZGhscHR4fICEiIyQlJygpKissLi8wMTM0NTY3ODk6Ozw9PkBBQkNFR0hJSktMTU5PUFFSVFVWV1hZWltcXV5fY2RlZmhpamtsbW5vcHFyc3V2d3p7fX5/gIGCg4SFhoeIiouMjY6PkJGSlJWWl5iZmpucnZ6foKGipKWnqKmrrK2ur7CxsrO0tba3uLm6u7y9vr/AwsPFxsfIycrLzM7P0NLT1NXW19na29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+b1plRQAABBRJREFUSMedlvtb1FUQxgcEBMtQggUCxVACu1ApYmRmUqESkCkUREaS4h3JCDONEFPBoBQCJcDIGxkGKYGBkgGSAq4BARIXWWA//0c/7J39LvY0P82cd97nzJlzZuaIKvBRmVqmP/XOrrQNIbOVsNfyjq/3nYrs/1GlWjPe90v28wrgnOiDP7ddeN9WAE47O9DLQI6PksfDMWVjnfuDlCC3b4HbpYcOFjUC9UHKWywtQZNpjTmdgu60uSIis979HRr8bIT4YjVDqV6TFlPgVqjxjBegyM4MfSPepDsm9tAcb5mwHnpfMJmq39C+ZLQCytrfM3deUAylwWYL2+BTc4eICU4aNk/pLgm0DNQuqY+/Nk8zmuX0PmFx83V0eIiIyOPlmq3Wpw+tg1OG7Lk1c8YSzmZsqYhIhLp7pVLy3AugLUqnz73L15boHogUke1cW6ic+5n7QJvhLCLic4cTlmAGRIhdFhfdlcmPpUjCfSj3FpEZ9dQ5W6CFDPrLIc652rj2FWUi0f1wdZGI5DERbg56dlIvO6hyt1UTe8pEZKUa1JEiMVBhDu6GzbHc8LFZUSXHRUTC/oShBHG5DKkmbPUg1xPujSyxSba/sltEREJuA9tl0Qikz9JD8f1ovrjOVtvF7NexRqcsVgOfSIIW6pMDVe7z3zwLHDjFeSfb7GV/P6fXwrqATInuAvraWruB0U2bx4aenqKRJA/MMairhoAsCczr1TWH8dPLfO7w2VRtqKDZFFjsOHBY5JmNX549dzQ5ROQkLY9MQbZvKDCzNgHkGCvaLRGOznS2zQ6e2GJu7gXY7/3kiqQj52ubbo9C143asm2hLsrsD3jV8l2PAbcGsBRN9VuK7B+Gvc3N+WnDKEuqAtlz8FdT37J/5dhdk3vbxUb4Y23UusT08nZAobyTSDeoD8VUmKja3DCVcylk6LB5J7Qcts54Ncv13PVXDMQWLfC9o4SOMxqmd/TqocSKvZirTiIiTusM3NbM5aq9AGccPoYaB73jwn/ItWJ/xQ4RkTWVOupg4VqViEw7ApBTA5l6P9/T8LrV1veHA0RCirQANKU/q193KdZHEiUiMjc2vxUO2E9ml5MlXhn9ANRsVJmAWdUAjAaLiKoRaN9pRX6bdv9VjQD8FGv5HgNuAjS5ioj3Hd3jnyS+7RQfA+BSpONkMFwD5OvOVzEClZNmuV0hE/cAqqOmK7yjD4ENen1Jhpo+y6xt1SXmWoKNEtzS8qOn0Zi3jw7z1hg+BNCZ5m2z/DxmmFuZ7DKbATeBsYKgKX8/C6JNehjfmEZ3DlAb8YC/k1dVlrHx5LHaNNZ7GElzlQdJwOXaOA8REb9sSh2Myw5xn78s/0Fmpzc0V+TmVY1y2lP+h3jF5l9qvPpdnP4I/wITXDY67Xw1sAAAAABJRU5ErkJggg==" data-pagespeed-url-hash="4179492045" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a> 
+  </h1>
+
+    <div id="login" class="dropdown">
+      <p class="user actions" role="menu">
+        <a id="login-dropdown" href="/users/login">Log In</a>
+      </p>
+      <div id="small_login" class="simple login">
+	<form class="new_user" id="new_user_session_small" action="/users/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="HbWuloBzkjRpvw8xss5oIQqRdPaC4egnpFkhFy3cWnMaFqAT5467nWhD106+hFFZiSNF5261m1oCKPfRTQxuUg=="/>
+	<dl>
+    <dt>
+      <label for="user_session_login_small">User name or email:</label></dt>
+    <dd><input id="user_session_login_small" type="text" name="user[login]"/></dd>
+    <dt><label for="user_session_password_small">Password:</label></dt>
+    <dd><input id="user_session_password_small" type="password" name="user[password]"/></dd>
+  </dl>
+  <p class="submit actions">
+    <label for="user_remember_me_small" class="action"><input type="checkbox" name="user[remember_me]" id="user_remember_me_small" value="1"/>Remember Me</label>
+    <input type="submit" name="commit" value="Log In"/>
+  </p>
+</form>
+<ul class="footnote actions">
+  <li><a href="/users/password/new">Forgot password?</a></li>
+    <li>
+      <a href="/invite_requests">Get an Invitation</a>
+    </li>
+</ul>
+
+</div>
+
+    </div>
+
+  <h3 class="landmark heading">Site Navigation</h3>
+  <ul class="primary navigation actions" role="navigation">
+    <li class="dropdown">
+      <a href="/menu/fandoms">Fandoms</a>
+      <ul class="menu" role="menu">
+  <li><a href="/media">All Fandoms</a></li>
+        <li id="medium_5"><a href="/media/Anime%20*a*%20Manga/fandoms">Anime &amp; Manga</a></li>
+        <li id="medium_3"><a href="/media/Books%20*a*%20Literature/fandoms">Books &amp; Literature</a></li>
+        <li id="medium_4"><a href="/media/Cartoons%20*a*%20Comics%20*a*%20Graphic%20Novels/fandoms">Cartoons &amp; Comics &amp; Graphic Novels</a></li>
+        <li id="medium_7"><a href="/media/Celebrities%20*a*%20Real%20People/fandoms">Celebrities &amp; Real People</a></li>
+        <li id="medium_2"><a href="/media/Movies/fandoms">Movies</a></li>
+        <li id="medium_6"><a href="/media/Music%20*a*%20Bands/fandoms">Music &amp; Bands</a></li>
+        <li id="medium_8"><a href="/media/Other%20Media/fandoms">Other Media</a></li>
+        <li id="medium_30198"><a href="/media/Theater/fandoms">Theater</a></li>
+        <li id="medium_1"><a href="/media/TV%20Shows/fandoms">TV Shows</a></li>
+        <li id="medium_476"><a href="/media/Video%20Games/fandoms">Video Games</a></li>
+        <li id="medium_9971"><a href="/media/Uncategorized%20Fandoms/fandoms">Uncategorized Fandoms</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/browse">Browse</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works">Works</a></li>
+  <li><a href="/bookmarks">Bookmarks</a></li>
+  <li><a href="/tags">Tags</a></li>
+  <li><a href="/collections">Collections</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/search">Search</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works/search">Works</a></li>
+  <li><a href="/bookmarks/search">Bookmarks</a></li>
+  <li><a href="/tags/search">Tags</a></li>
+  <li><a href="/people/search">People</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/about">About</a>
+      <ul class="menu" role="menu">
+  <li><a href="/about">About Us</a></li>
+  <li><a href="/admin_posts">News</a></li>
+  <li><a href="/faq">FAQ</a></li>
+  <li><a href="/wrangling_guidelines">Wrangling Guidelines</a></li>
+  <li><a href="/donate">Donate or Volunteer</a></li>
+</ul>
+
+    </li>
+	  <li class="search"><form class="search" id="search" action="/works/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+  <fieldset>
+    <legend>Search Works</legend>
+    <p>
+      <label class="landmark" for="site_search">Work Search:</label>
+      <input class="text" id="site_search" aria-describedby="site_search_tooltip" type="text" name="work_search[query]"/>
+      <span class="tip" role="tooltip" id="site_search_tooltip">tip: buffy gen teen AND &quot;no archive warnings apply&quot;</span>
+      <span class="submit actions"><input type="submit" value="Search" class="button"/></span>
+    </p>
+  </fieldset>
+</form></li>
+  </ul>
+
+
+
+  <div class="clear"></div>
+
+</div>
+
+
+
+<!-- END header -->
+
+      <div id="inner" class="wrapper">
+        <!-- BEGIN sidebar -->
+        <!-- END sidebar -->
+
+        <!-- BEGIN main -->
+        <div id="main" class="chapters-show region" role="main">
+          
+          <div class="flash"></div>
+          <!--page description, messages-->
+<!--/descriptions-->
+
+<!--subnav-->
+<!--/subnav-->
+
+  <!-- BEGIN work -->
+  <div class="work"><p class="landmark"><a name="top">&nbsp;</a></p>
+      <!-- BEGIN navigation -->
+<h3 class="landmark heading">Actions</h3>
+<ul class="work navigation actions" role="menu">
+
+
+
+    <li class="chapter entire"><a href="/works/13645983?view_full_work=true">Entire Work</a></li>
+
+
+      <li class="chapter next"><a href="/works/13645983/chapters/31641333#workskin">Next Chapter &#8594;</a></li>
+
+    <li class="chapter" aria-haspopup="true">
+      <noscript>
+        <a href="/works/13645983/navigate">Chapter Index</a>
+      </noscript>
+      <a class="hidden" href="#">Chapter Index</a>
+      <ul id="chapter_index" class="expandable secondary hidden">
+        <li>
+          <form action="/works/13645983/chapters/31340484" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+            <p>
+              <select name="selected_id" id="selected_id"><option selected="selected" value="31340484">1. Chapter 1</option>
+<option value="31641333">2. Chapter 2</option>
+<option value="31872522">3. Часть 3</option>
+<option value="32082279">4. Chapter 4</option>
+<option value="32587497">5. Chapter 5</option>
+<option value="37214027">6. Chapter 6</option></select>
+              <span class="submit actions"><input type="submit" name="commit" value="Go"/></span>
+            </p>
+</form>        </li>
+        <li><a href="/works/13645983/navigate">Full-page index</a></li>
+      </ul>
+    </li>
+
+
+
+  <li class="comments" id="show_comments_link_top">
+      <a data-remote="true" href="/comments/show_comments?chapter_id=31340484">Comments </a>
+  </li>
+
+
+
+    <li class="share hidden">
+      <a class=" modal" title="Share Work" aria-controls="#modal" href="/works/13645983/share">Share</a>
+    </li>
+
+
+    <li class="download" aria-haspopup="true">
+      <a href="#">Download</a>
+      <ul class="expandable secondary">
+          <li><a href="/downloads/13645983/Vzghliani%20na%20dom%20svoi.azw3?updated_at=1552928228">AZW3</a></li>
+          <li><a href="/downloads/13645983/Vzghliani%20na%20dom%20svoi.epub?updated_at=1552928228">EPUB</a></li>
+          <li><a href="/downloads/13645983/Vzghliani%20na%20dom%20svoi.mobi?updated_at=1552928228">MOBI</a></li>
+          <li><a href="/downloads/13645983/Vzghliani%20na%20dom%20svoi.pdf?updated_at=1552928228">PDF</a></li>
+          <li><a href="/downloads/13645983/Vzghliani%20na%20dom%20svoi.html?updated_at=1552928228">HTML</a></li>
+      </ul>
+    </li>
+</ul>
+<!-- END navigation -->
+
+
+<h3 class="landmark heading">Work Header</h3>
+
+<div class="wrapper">
+
+  <dl class="work meta group" role="complementary">
+          <dt class="rating tags">
+
+              Rating:
+          </dt>
+
+          <dd class="rating tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Explicit/works">Explicit</a></li>
+            </ul>
+          </dd>
+          <dt class="warning tags">
+
+              <a href="/tos_faq#tags">Archive Warning</a>:
+          </dt>
+
+          <dd class="warning tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Graphic%20Depictions%20Of%20Violence/works">Graphic Depictions Of Violence</a></li>
+            </ul>
+          </dd>
+          <dt class="category tags">
+
+              Categories:
+          </dt>
+
+          <dd class="category tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/M*s*M/works">M/M</a></li><li><a class="tag" href="/tags/F*s*M/works">F/M</a></li>
+            </ul>
+          </dd>
+          <dt class="fandom tags">
+
+              Fandoms:
+          </dt>
+
+          <dd class="fandom tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Fantastic%20Beasts%20and%20Where%20to%20Find%20Them%20(Movies)/works">Fantastic Beasts and Where to Find Them (Movies)</a></li><li><a class="tag" href="/tags/Silent%20Hill%20(Video%20Game%20Series)/works">Silent Hill (Video Game Series)</a></li>
+            </ul>
+          </dd>
+          <dt class="relationship tags">
+
+              Relationships:
+          </dt>
+
+          <dd class="relationship tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Credence%20Barebone*s*Original%20Percival%20Graves/works">Credence Barebone/Original Percival Graves</a></li><li><a class="tag" href="/tags/Original%20Percival%20Graves*s*Original%20Male%20Character(s)/works">Original Percival Graves/Original Male Character(s)</a></li>
+            </ul>
+          </dd>
+          <dt class="freeform tags">
+
+              Additional Tags:
+          </dt>
+
+          <dd class="freeform tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Angst/works">Angst</a></li><li><a class="tag" href="/tags/Drama/works">Drama</a></li><li><a class="tag" href="/tags/Horror/works">Horror</a></li>
+            </ul>
+          </dd>
+
+      <dt class="language">
+        Language:
+      </dt>
+      <dd class="language">
+        Русский
+      </dd>
+
+
+      <dt class="collections">
+        Collections:
+      </dt>
+      <dd class="collections">
+        <a href="/collections/Beasts">Beasts</a>
+      </dd>
+
+    <dt class="stats">Stats:</dt>
+    <dd class="stats">
+<!-- end of cache -->
+
+      <dl class="stats"><dt class="published">Published:</dt><dd class="published">2018-02-11</dd><dt class="status">Updated:</dt><dd class="status">2018-09-10</dd><dt class="words">Words:</dt><dd class="words">23634</dd><dt class="chapters">Chapters:</dt><dd class="chapters">6/?</dd><dt class="comments">Comments:</dt><dd class="comments">4</dd><dt class="kudos">Kudos:</dt><dd class="kudos">21</dd><dt class="bookmarks">Bookmarks:</dt><dd class="bookmarks"><a href="/works/13645983/bookmarks">4</a></dd><dt class="hits">Hits:</dt><dd class="hits">344</dd></dl>
+      </dd>
+  </dl>
+</div>
+
+
+
+<!-- BEGIN section where work skin applies -->
+<div id="workskin">
+  <div class="preface group">
+    <h2 class="title heading">
+      Взгляни на дом свой, Ангел
+    </h2>
+    <h3 class="byline heading">
+      <a rel="author" href="/users/HaruIchigo/pseuds/HaruIchigo">HaruIchigo</a>
+    </h3>
+
+
+        <div class="summary module" role="complementary">
+          <h3 class="heading">Summary:</h3>
+            <blockquote class="userstuff">
+              <p>Вместо того чтобы сбежать во Францию Криденс решает найти своих родителей. Персиваль Грейвз идёт по его следу и поиски приводят его в Сайлент Хилл, штат Мэн.</p>
+            </blockquote>
+        </div>
+
+        <div class="notes module" role="complementary">
+  <h3 class="heading">Notes:</h3>
+
+
+
+
+
+    <blockquote class="userstuff">
+      <p>Спасибо .doc за помощь с матчастью!</p>
+    </blockquote>
+
+</div>
+
+
+  </div>
+
+
+
+    <div id="chapters">
+      <!-- This partial requires local variable 'chapter' -->
+<div class="chapter" id="chapter-1">
+  <!-- chapter management -->
+
+
+  <div class="chapter preface group" role="complementary">
+    <h3 class="title">
+      <a href="/works/13645983/chapters/31340484">Chapter 1</a>
+    </h3>
+
+    <!-- only display byline if different from the main byline -->
+
+
+  </div>
+
+  <!--main content-->
+  <div class="userstuff module" role="article">
+    <h3 class="landmark heading" id="work">Chapter Text</h3>
+    <p>
+  <i>Look homeward Angel now, and melt with ruth...<br/><b>Джон Мильтон </b></i>
+</p><p>
+  <i>Солнце – бледная монета. Его свет не пробивается через сизую пелену, - облако всё плотнее, всё чернее.<br/>Первобытный гул закипает в своём гробу, но крики слышны за ним, крики всегда слышны за ним. <br/>И скрежет. Всегда этот скрежет, будто чьи-то сломанные, окровавленные ногти бессильно скребут по дереву…</i>
+</p><p>
+  <i>“Я защищу тебя”.</i>
+</p><p>
+  <i>Они уже ничего не могли сделать, но и уйти не могли. Какая-то сила заставляла их смотреть.</i>
+</p><p>
+  <i>“Ты можешь мне верить”.</i>
+</p><p>
+  <i>Кто-то из них сказал, что с завтрашнего дня зарядят дожди, и кто-то из них ответил, что это будет дерьмово, дороги развезёт.</i>
+</p><p>
+  <i>“Ты особенный”.</i>
+</p><p>
+  <i>Неужели вы не понимаете, что нельзя было иначе? В конце концов, есть закон, и это разумный закон…</i>
+</p><p>
+  <i>Чёрное облако закрыло солнце. </i>
+</p><p>
+  <i>Впереди - последний жар лета, за спиной - холод осеннего вечера.</i>
+</p><p>
+  <i>Кто-то попросил сигарету, и все вдруг засмеялись. Они смеялись и смеялись, во всю силу молодых глоток, хохотали, подвывая, и всё не могли остановиться....</i>
+</p><p>– Сэр?</p><p>Персиваль открыл глаза и несколько мгновений пытался понять, где находится. <br/>Чёрно-белые часы под потолком показывали без пяти два, хотя он точно помнил, что закрыл глаза всего на минуту, в половину второго. <br/>Белесое солнце заливало полупустой дайнер. Зелёные стены, полы в чёрно-белую клетку, красные диваны, две мухи, бесконечно вьющиеся над стойкой.<br/>Он давно не был в таких местах. Давно не пил кофе посреди уютного, захолустного нигде.<br/>–Была тяжёлая поездка, сэр? – спросила официантка, наливая ему кофе. Персиваль спросоня не мог сфокусироваться на её лице, только выбившийся рыжий локон маячил перед ним. – Все жалуются, что в Брамс трудно добираться, но что поделать, к нам там редко ездят, водители автобусов даже не хотят тратить бензин.<br/>Персиваль, пользовавшийся служебной сетью каминов, проехал на тряском автобусе лишь последние несколько миль, и не разделял немажеских жалоб, но из вежливости кивнул. <br/>– Вообще-то, мне нужно в Сайлент Хилл. Местные часто туда ездят?<br/>Официантка замерла на секунду, прижав кофейник к груди, словно от чего-то защищаясь.<br/>– О, Сайлент Хилл… там прекрасные виды на озеро, очень романтично. Из-за того случая с пароходиком туристы его невзлюбили, и если вас кто-то подвезёт, то разве что с оказией.  <br/>Персиваль раскрыл папку, лежавшую на столе, и бережно вынул из неё газетную вырезку с неподвижной маггловской фотографией. Под гордым заголовком “Теперь быстрее! Лонг-Айлендская Железная Дорога запускает улучшенный состав” пассажиры толпились у входа в вагон, и среди них юноша в потрёпанной чёрной шляпе с узкими полями потеряно и печально смотрел в камеру, обведённый красным карандашом.<br/>– Кто-нибудь подвозил недавно этого молодого человека? Вы видели его?<br/>Девушка склонилась над вырезкой.<br/>– Да… неделю назад или около того. Я подумала, что он продаёт Библии или из этих, мормонов. Ваш родственник?<br/>– Племянник. Он сбежал из дома и его мать места себе не находит. Почему вы решили, что он продаёт Библии?<br/>– Я не знаю. Иногда видишь в людях что-то эдакое. – Она задумчиво погладила фотографию. – Такой чистенький, опрятный, но одет бедно. Застенчивый, тихий. Он так странно сказал… а, вспомнила: он сказал что, кажется, из Сайлент Хилла. “Кажется”, понимаете? Я сразу заподозрила неладное,  а теперь оказывается, что он сбежал из дома. Вы пастор?<br/>Персиваль одёрнул рукав мантии и усмехнулся. Он привык, что из-за любви к чёрно-белой гамме его принимают за священника.<br/>– Я дальше от пастора, чем вы можете себе представить. Так кто его отвёз?<br/>– Никто. – Официантка почла за лучшее не расспрашивать. – Он пересчитал свои медяки и сказал, что пойдёт пешком, бедняжка. С тех пор не возвращался. Может быть, осел в городе, может быть двинулся в Пэллвилль или Салемс Лот или ещё куда-нибудь. Здесь много маленьких, уютных городков. <br/>Персиваль поблагодарил и убрал вырезку обратно. Он знал эти “уютные городки“ на месте индейских кладбищ и стоянок духов. На карте они отмечались особо, и авроры-шерифы, поддерживающие в них порядок, чаще других подавали в отставку.<br/>Ни Сайлент Хилл ни Шепардс Глен не выделялись на этом фоне: те же мрачные истории о мстительных индейских шаманах, приступы безумия, неожиданные трагические смерти. Пасторальная Америка, которую Персиваль знал как глава магической безопасности, росла на костной муке коренного народа и страшных сказках у костра. Он не любил её. Убийцы, спекулянты, террористы, воры и тёмные маги были ему понятней, он знал как справляться с ними. И старался не вглядываться во тьму. </p><p>Но тьма пришла сама.</p><p>Это был день, когда Тина дежурила по немажеским газетам, добросовестно подчёркивая все странные происшествия и подозрительные объявления. Её взгляд зацепился за знакомые черты, и газета тут же легла на стол к Персивалю.<br/>– Мы должны найти его, сэр. – Тина готова была сорваться в погоню прямо сейчас, но её лицо выражало скорее материнскую озабоченность, чем служебное рвение. – Он же совсем один, ему грустно и страшно… я хочу сказать, он может снова не сдержать обскура и пострадают люди. Нужно поговорить с ним, объяснить, что мы ему не враги! Я могу начать расследование?<br/>– Можешь, но никакой самодеятельности. – Персиваль подумал, что “не враги” это не то слово, которым можно описать отношение МАКУСА к обскуриалу. – Обо всём докладывай лично мне. <br/>Тина просияла.<br/>– Спасибо, сэр! Я… честно говоря, я уже начала. Этот поезд идёт до Огасты, Мэн. На фото седьмой вагон. Проводник согласился со мной поговорить сегодня в три.<br/>Персиваль скрестил руки на груди, не скрывая раздражения.<br/>– Ты была настолько уверена, что я соглашусь, или продолжила бы расследование в обход? Хорошо подумай над ответом, от него может зависеть твоя карьера. <br/>Краска залила её щёки, блестящие глаза забегали.<br/>– Нет, сэр, я бы никогда не стала в обход… никогда.<br/>– Правильный ответ. Свободна.<br/>– Да, сэр. <br/>Она выбежала из кабинета своим обычным заячьим шагом, от возбуждения неспособная идти спокойно. Персивалю нравилось её рвение, он часто советовал Серафине быть снисходительнее к молодым аврорам, имея в виду Тину, но в этом деле ему не хотелось чужого вмешательства. <br/>Криденс был его проблемой и его виной.<br/>Персиваль прекрасно понимал, что не может вести расследование в одиночку, – это было слишком похоже на Гриндевальда, под разными предлогами снявшего с дела всех имевших отношение к “чёрному вихрю“ и Бэрбоунам. Могли пойти разговоры.<br/>И всё же...<br/>Это он пообещал Криденсу новую жизнь и новый мир. Он мог пройти мимо в тот зимний день, но не прошёл.</p><p>В глубине его памяти Нью-Йорк посетило, наконец, “белое Рождество”, но снег не падал, а летел в лицо, колкий и зернистый, едва прикрывал карнизы, превращался в кашу на тротуарах. <br/>На перекрёстках Санта-Клаусы собирали пожертвования, нестройные хоры славили Рождество. Один такой хор был Персивалю знаком: Вторые Салемцы в подчёркнуто традиционных нарядах. Попечители и Мэри Лу Бэрбоун кутались в бархат, украшали цилиндры и чепцы остролистом, на девочках платья и накидки сидели неловко, как с чужого плеча, а парень, которому не хватило наряда, дрожал в осеннем костюме и пытался убрать порозовевшие кончики ушей поглубже под шляпу. Он почти не пел, только открывал рот, ссутулившись и шмыгая носом. Персиваль, проходя мимо, подивился, как обычно, его выносливости: когда бы старший Бэрбоун ни попадался ему на глаза, зрелище оставалось невесёлым. Вот и в этот раз порыв ветра сорвал с него шляпу, и секунду поколебавшись между ней и увлечённой матерью, пугавшей прохожих застывшей улыбкой, он бросился за шляпой в грязный переулок. Грейвз последовал за ним.<br/>Он был в хорошем расположении духа, – отцовский семейный ужин удался, весь клан настроен был как-то особенно любовно и внимательно друг к другу; и в еде и в спиртном и в разговорах они соблюдали баланс и деликатность, так что в конце концов Персиваль почувствовал себя дома.<br/>Они были виноваты в том, что он, поддавшись благодушию, решил вернуть мальчишке шляпу, – пусть думает, что случилось рождественское чудо, и ветер принёс её обратно.<br/>И ветер действительно принёс её, но безо всякого участия Персиваля: шляпа просто сделала круг и легла в протянутую руку.<br/>Бэрбоун воззрился на неё в ужасе. Его лицо конвульсивно подёргивалось и кривилось, от сдерживаемых слёз и отвращения. В конце концов, он прижал шляпу к груди и, съёжившись, бессильно сполз по стене. <br/>И тогда Персиваль принял решение.<br/>– Значит, маг среди Бэрбоунов…</p><p>***<br/>Он без особой надежды оставил в пустом участке записку, хотя знал, что Мерриуэзер, окружной аврор-шериф, вряд ли явится. Сова вернулась от него без ответа. Официантка сказала, что тот умер зимой. <br/>До Сайлент Хилла его подвёз местный врач на новеньком, сияющем роллс-ройсе, дико и неуместно смотревшемся в этих местах. Персиваль, презиравший немажескую технику за медлительность, не заработал от этой поездки ничего кроме раздражения и боли в спине от постоянной тряски. Мысли о шерифе не давали ему покоя – почему не назначили нового? <br/>Конечно он знал, почему. Гриндевальд занимался только тем, что было ему интересно, подписывал бумаги не глядя, и оставил после себя только хаос, который Персивалю пришлось приводить в порядок. Кому было дело до какого-то местечкового аврора!<br/>“Ты сам всё разрушил”, – подсказывал знакомый внутренний голос, похожий на голос Гриндевальда. – “Своей слабостью. Это был всего лишь зачарованный гроб в неглубокой могиле, ты мог бы выбраться гораздо раньше”.  <br/>Он отмахнулся от этих мыслей. Поздно. Слишком поздно себя винить.<br/>– ...ужасные туманы, знаете ли, – донёсся до него звучный голос врача. – Плотные, как вата, на расстоянии вытянутой руки уже ничего не видно! Не обижайтесь, старина, но водить в такую погоду невозможно, так что я высажу вас на окраине. Мне ещё предстоит долгая поездка в Эшфилд, но чёрт побери…<br/>Персиваль снова перестал слушать. <br/>Врач, как и обещал, высадил его у помятого, облупившегося указателя “Добро пожаловать в Сайлент Хилл”. Туман нахлынул на лобовое стекло автомобиля,  холодный, сухой. Персиваль, не прощаясь, шагнул в него, как шагают в холодную воду –  задержав дыхание. Ни позади ни впереди не осталось ничего. Гигантские силуэты елей выступали из мглы чтоб тут же скрыться вновь. Тишина и молчание. <br/>Даже через полчаса пути никто не попался ему навстречу. Дома на окраине выглядели заброшенными: стёкла замутились, дверные петли слиплись от ржавчины, нестриженные газоны топорщились колючим кустарником. “Курортный городок” оказался ещё большим захолустьем, чем он предполагал.</p><p>В Брамсе он купил туристическую карту, но в таком тумане она была бесполезна: повороты и ориентиры сливались в сплошную серость. “Люмос” светил, но не освещал. <br/>Как во сне. <br/>Иногда ему снились такие города, печальные и покинутые, полустёртые бомбёжкой с лица земли; он просыпался в щемящем одиночестве, со слезами на глазах, и потом, врываясь в МАКУСА, раздавая приказы, споря с Серафиной, в глубине души радовался, что выбрался из мёртвых городов, к людям. Хотя бы на день.<br/>Конечно, Сайлент Хилл не умер – просто туман искажал его.<br/>По правую руку во мгле пряталась маленькая лютеранская церковь, сторожащая кладбище. Он мысленно отметил её как важное место, – могли остаться записи о крещении. <br/>У первого поворота и остановился, сверяясь с картой, как вдруг что-то привлекло его внимание. <br/>Какой-то силуэт, странно искажённый, двигался к нему. Перестук шагов, глухой и дробный, доносился сразу отовсюду и ниоткуда. В тумане что-то хрипело и клокотало.<br/>– Эй! – позвал Персиваль. Перестук прекратился. Хрипы замерли.<br/>Силуэт медленно выступил из тумана и оказался коротко стриженной девушкой, почти девочкой, в синем платье с матросским воротником. В руках она сжимала бутылку колы, и с хлюпаньем пыталась высосать трубочкой последние капли. <br/>Ничего странного.<br/>– Мне нужен отель “Лэйквью”. Знаете, как туда добраться? – спросил Персиваль. Хлюпанье прекратилась.<br/>– Вы когда-нибудь видели парад, мистер? –  вдруг  произнесла девушка, наклонив голову к плечу, словно прислушивалась к чему-то.  <br/>– Много раз. Но не в такую погоду.<br/>Персиваль шагнул вперёд, сокращая расстояние. Незнакомка попятилась, и вдруг, бросилась обратно.<br/>Он не стал её преследовать – городские сумасшедшие его не интересовали, а кроме них вряд ли кто-то решился бы выходить из дома в  серое ничто. </p><p>Где-то вдалеке мерно скрежетало по камням железо, словно везде и нигде. Среди абсолютно тишины скрежет казался зловещим, от него вставали дыбом волосы на затылке. <br/>“Всего лишь немажеская стройка”, – успокаивал он себя, и тут же скептически спрашивал: “В тумане?”<br/>Аврорское чутьё заставило его свернуть в переулок, на зады какого-то ресторана, и из сырого угла возле мусорных баков, щурясь на неясные силуэты вдали, он увидел “парад”.<br/>Люди в грязных льняных рясах и кожаных колпаках медленно шествовали мимо. За ними, стеная и дрожа, тащились худые существа, похожие на инфери – они охаживали себя плётками по голыи, серым плечам, и выли, и ныли как отвратительный хор. Некоторые звенели ржавыми кандалами, некоторые волокли огромные кресты, обитые железом, и скрежетали ими по брусчатке, высекая искры.<br/>Персиваль замер, вцепившись в волшебную палочку. Он не знал, что делать, он даже не был уверен, что это  “парад” людей. Инстинкт говорил ему одно: бежать. Чувство долга говорило вмешаться. Но Персиваль послушался инстинкта.<br/>Он медленно и бесшумно отступал в переулок, думая о том, что ещё посмеётся надо всем этим, когда туман рассеется… но не находил, над чем смеяться.<br/>Только в середине переулка он повернулся наконец спиной к параду… и едва не столкнулся с каким-то мужчиной.<br/>Мужчина проворно отскочил, и направил на него палочку, но Персиваль успел раньше: магия сковала незнакомца по рукам и ногам, поставила на колени.<br/>Волшебник был молод и высок; непослушные, кудрявые волосы заплетены в короткую, торчащую косу, на щеках густая встопорщенная щетина…<br/>Персиваль не узнавал пижонский костюм: бархатную мантию винного цвета, красный жилет, белую рубашку и лиловый полосатый галстук, чёрные брюки, высокие ботинки, но вот лицо было ему знакомо.<br/>– Криденс…<br/>Он снял чары, но не убрал палочку. Что-то не сходилось, Криденс не мог за несколько дней из “продавца библий” превратиться в волшебника-модника.<br/>– Мистер Грейвз! Мистер Персиваль Грейвз? – Юноша поднялся, стараясь держать руки на виду. – Шериф Кредан Винсент, сэр. Округ Толука, значок номер сто тридцать восемь. Я могу показать удостоверение.<br/>– Показывайте.<br/>Персиваль знал, что в округе больше нет шерифа. И на аврора этот авантюрист похож был меньше всего. Тем не менее, удостоверение с колдографией и печатью, было настоящим. <br/>Кредан. То же лицо, почти то же имя. <br/>– Вы очевидно не Мерриуэзер, но я не помню, чтобы подписывал приказ о вашем назначении.<br/>Молодой шериф задумался. <br/>– Это было полгода назад, зимой. Может… назначением занимались не вы? Простите, сэр.<br/>Персиваль вздохнул и спрятал палочку. Ну конечно, Гриндевальд мог неглядя подмахнуть любую бумажку, а потом зашвырнуть подальше. Следы его “работы” до сих пор всплывали то тут, то там.<br/>– Раз уж мы так удачно встретились, доложите, какого боггарта здесь происходит. Что это за “парад”?<br/>– Парад, сэр? Я ничего не видел. Я живу в Брамсе, мне поступил вызов из Сайлент Хилла. Я взял магомер и аппарировал сюда, но… – Кредан достал из кармана маленький прибор не больше портсигара, с табло и стрелкой, как у радио. – Теперь никакого сигнала, только помехи иногда. Уровень опасности стандартный. <br/>– Эти игрушки ещё не доработаны, не полагайтесь на них. Откуда был сигнал?<br/>– Кажется, из Вудсайда. Это многоквартирный дом. <br/>Персиваль задумался и по-привычке быстро кивнул, соглашаясь сам с собой.<br/>– Значит – сначала туда. Возможно, мы имеем дело с иллюзиями, их удобно транслировать в тумане. Вы знаете город?<br/>– В основном по карте, сэр. Был пару раз. В солнечные дни тут приветливее. – Даже его голос был голосом Криденса, но  интонации совсем другие, уверенные.<br/>– И родственников у вас нет? Брат? Двоюродный брат? Кто-то умерший или пропавший во младенчестве?<br/>Кредан озадаченно посмотрел на него, приподнял изогнутую бровь.<br/>– Ээ… нет, я единственный ребёнок. А что? Я вам кого-то напоминаю? Сэр.<br/>– Да. Что ж, пока будем считать это совпадением. Я ищу молодого человека примерно вашего возраста. Его семья жила или живёт здесь. У него мало денег, и если он не нашёл родных, то останавливался в самом дешёвом месте. <br/>– Скажите мне имя и фамилию, я аппарирую к себе, и сразу найду...<br/>– Бесполезно. Он известен под другим именем, зарегистрированные в Сайлент Хилле маги о пропавших детях никогда не заявляли. Конечно, они могут что-то знать, вы найдёте адреса и займётесь опросом. <br/>– Слушаюсь, сэр. – Кредан улыбнулся. Знакомые карие глаза искрились незнакомым, неуместным здесь весельем. <br/>Персиваль лишь однажды видел, как Криденс улыбается. Сам приложил много усилий чтоб выманить эту улыбку, как пугливого зверька из норы.</p><p>***<br/>Персиваль выбрал неприметное кафе на углу, недалеко от того места где Криденс раздавал листовки и как можно дальше от ресторанов, где обедал он сам. Не самое фешенебельное заведение, но ему не хотелось отвлекать мальчика от главного, пускать ему пыль в глаза.<br/>Впрочем, Криденсу хватило и этого: он смотрел на меню словно на список пыточных инструментов.<br/>– Спасибо, я не голоден. Просто выпью воды.<br/>– Ваш обычный завтрак, – сказал Персиваль официанту. – И горячий шоколад.<br/>Он заметил как при словах “горячий шоколад” Криденс прикусил губу.<br/>– Я не знаю, как отблагодарить, сэр. – пробормотал он. – У меня ничего нет, а мне очень нужно научиться сдерживать… вы понимаете.  Вы же волшебник, вы можете меня научить. Я никому не хочу плохого.<br/>Персиваль не ожидал этого. Он полагал, что Бэрбоун попросится в магический мир, захочет учиться, как любой нормальный человек. <br/>Он подумал, с лёгким отвращением, что только совершенно сломанное доктриной Салемцев существо могло изобрести такой выход из сложившейся ситуации.<br/>Ему не нравилось считать красивого, многообещающего юного мага “существом”, но характер тот пока не проявил. <br/>– Что, по-твоему, такое магия? Поклонение Сатане? Нарушение законов? <br/>Губы Криденса задрожали.<br/>– Порчи. Убийства, – едва слышно выговорил он. – Всё плохое. Колдуны и ведьмы это те, у кого в душе зло. Она так говорит. Мама. <br/>Персиваль едва удержался от того чтобы поинтересоваться, зачем тогда мальчишка вообще пришёл на встречу. <br/>Не стоило грубить ему. Сомнения молодых следовало направлять.<br/>– Я тебя разочарую. Магия никак не связана с моралью, с ней рождаются, как с музыкальным слухом, например. Сдерживание скорее всего тебя уничтожит. Если ты готов пойти на самоубийство ради капризов какой-то женщины, которая даже не твоя родная мать, нам не о чем разговаривать. Мне жаль. <br/>После такой отповеди кто-то из них должен был развернуться и уйти, но Персиваль этого делать не собирался, а Криденс, к его удовольствию, не захотел.<br/>– Я не хочу убивать себя.<br/>– Это разумно. – После удара нужно было погладить, обычно это работало. – Мой мальчик, у тебя есть дар. Ты можешь использовать его во благо, если только захочешь.<br/>Он провёл кончиками пальцев по краю вазочки, которая должна была, видимо, создавать уют. Из вазочки торчала пара несчастных маргариток.<br/>Под его прикосновением цветы ожили, подняли головки. Их слабые, бледные лепестки налились алым, набухли, свиваясь в тугой бутон, потянулись вверх. Мёртвые маргаритки превратились в тёмные, сладко пахнущие розы. <br/>Простейшая трансфигурация, но Криденс смотрел не дыша и приоткрыв рот. <br/>– Если только захочешь, – повторил Персиваль, внимательно вглядываясь в его лицо. Больше восхищения, чем страха. Отлично. – Я покажу тебе новый мир. <br/>Он инстинктивно протянул руку и коснулся пальцев юноши. Тот быстро отвёл глаза и покраснел, но даже не шевельнулся, только лёгкая улыбка на миг тронула губы. Персиваль тепло улыбнулся в ответ.<br/> – Я хочу встретиться с тобой ещё раз, – тихо проговорил он...</p><p>***<br/>“Почему я ничего не сделал”? – всё спрашивал себя Персиваль, вспоминая “парад”.<br/>“А что ты мог сделать?”<br/>Что нужно было сделать? На этот случай у МАКУСА  не было никаких инструкций, и даже простое “колдовать на поражение” здесь не подходило. <br/>Что чаще всего делают немаги, сталкиваясь с тем, чего не могут объяснить? Просто притворяются, что им показалось. Раньше эта стратегия всегда забавляла его, но теперь казалась единственно верной. <br/>Пока нет объяснения, лучше забыть об этом. <br/>– Город выглядит заброшенным, – заметил он просто чтобы отвлечься, разрушить тишину. – Не похоже на курорт.<br/>– Никто не поедет в такую даль просто чтобы полюбоваться озером. – Кредан усмехнулся. – Город живёт за счёт шахт в основном, а туристы… говорят, после того случая с “Маленькой Баронессой” их стало совсем мало.<br/>– С пароходом? – Персиваль вспомнил разговор с официанткой. –  Бывает, что суда тонут. Но озеро от этого не меняется.<br/>– Есть места, где ничего не случается просто так. Даже немаги это чувствуют. Как собаки. <br/>Сравнение немагов с собаками показалось Персивалю циничным, но позабавило, – парень оказался остёр на язык. в отличие от Криденса, на которого был так похож внешне.<br/>Только внешне. Мальчик не выглядел таким самоуверенным<br/>По дороге до Вудсайда им так никто и не встретился. Странные тени возникали в тумане на краю зрения, но стоило Персивалю обернуться, как всё исчезало.<br/>Двухэтажный многоквартирный дом не представлял из себя ничего интересного снаружи, но что-то тревожное пряталось в тёмных, безжизненных окнах. Ни движения, ни света. <br/>Железная дверь с трудом поддалась, заскрипев петлями, оставляя на ладони липкую, холодную слизь. Пот покойника.<br/>Персиваль достал из кармана накрахмаленный платок и брезгливо вытер руку прежде, чем взяться за палочку. <br/>Кредан засветил люмос, и озабоченно сверился с магомером. Магомер молчал. <br/>– Пока ничего, больше никакого сигнала. В Вудсайде не живут маги, это может быть покушение или…<br/>– Не гадайте зря, просто будьте наготове. Я осматриваю второй этаж, вы – первый. <br/>Персиваль не верил, что нарушитель всё ещё здесь. Жертва, вызвавшая авроров – возможно, но не преступник. Слишком много времени прошло. <br/>Если только…<br/>Он вспомнил воспоминания, которыми поделилась с ним Тина: серая гниль, серая пыль облепившая тоннель, скользящая по стене. Миллионы частиц обскура, спрятавшегося в темноте, в тишине. <br/>Дом был пуст, грязен и заброшен, – такое место понравилось бы чудовищу.<br/>Под ногами хрустело стекло, вдалеке стонали трубы. Ржавые пятна на обоях соединялись в причудливые формы: будто сотни окровавленных ладоней шарили по стенам в темноте. <br/>Кое-где доски пола прогибались под ногой, и казалось, будто всё здание надсадно дышит.<br/>Куда подевались люди? Несмотря на разруху Персивалю всё время казалось, что кто-то был здесь совсем недавно: забил досками окна, оставил тряпьё и газеты в беспорядке, но не так, как их бросают бродяги. <br/>Так, будто в страхе убегал.</p><p>Первое послание от живых встретило его в конце коридора, в тупике.<br/>“ВЗГЛЯНИ НА ДОМ СВОЙ, АНГЕЛ”<br/>Бурая, потёкшая краска напоминала кровь. Проверять Персиваль не стал. <br/>Он наугад толкнул левую дверь и оказался в крошечной прихожей.<br/>Когда-то аппартаменты Вудсайда были со вкусом обставлены и отделаны, но время оставило только едва заметные силуэты птиц на обоях и потемневшие останки мебели. Ворс ковров слипся и хлюпал болотом, но за этим хлюпаньем слышался другой звук, будто кто-то полоскал горло…<br/>Персиваль замер, прислушиваясь.<br/>Ничего. <br/>Тень, метнувшаяся в приоткрытой двери ванной, оказалась его собственным отражением в зеркале. <br/>“Нет, я не один”, – подумал он, вглядываясь в своё мутное отражение, пытаясь разглядеть что-нибудь подозрительное за спиной. И был вознаграждён: что-то красное трепетало за дверью спальни, какой-то лоскут.<br/>– Полиция, – на всякий случай громко произнёс Персиваль. – Оставайтесь на месте. <br/>Лоскут исчез во мраке. <br/>Ну разумеется. <br/>Персиваль бесшумно развернулся на каблуках и аппарировал к двери. Он чувствовал, как магия вибрирует на кончиках пальцев: кто бы ни ждал в темноте, скрыться он не успеет.<br/>Силуэт в бордовом не шевельнулся даже когда Персиваль подошёл ближе. Без головы, без конечностей, розово и жирно блестящий в магическом свете, а вокруг – такие же розовые, бескровные куски мяса…<br/>Персивалю понадобилась пара ужасных мгновений прежде, чем он узнал портновский манекен и муляжи, разбросанные по комнате. На манекене кто-то забыл недошитую мантию винного цвета: рукав валялся отдельно, размеченные мелом швы торчали наружу. <br/>Ветер, задувавший в распахнутое  окно, шевелил полы мантии, и ткань шуршала, дышала, создавая иллюзию жизни. <br/>Остальное – пустота. </p><p>Он вышел из квартиры с неприятным чувством, будто упустил нечто важное. Будто Вудсайд насмехался над ним, скаля гнилые зубы. <br/>За каждой дверью – грязные человеческие норы, вонь разложения. Дом имитировал жизнь: где-то бесконечно лилась из крана вода, где-то бормотало забытое радио, мигал оставленный в прихожих свет. Все квартиры казались одной квартирой: та же планировка, та же мебель, и войдя в последнюю Персиваль ожидал ту же разруху…</p><p>Лампочка качалась под потолком, метались тени. Какое-то существо – не человек, просто бесформенный комок плоти без головы, без рук, как если бы сиамских близнецов соединили телами, оставив лишь две пары ног и подобие туловища, – визжало и извивалось в руках огромного палача. <br/>Тени метались по мускулистому торсу, кожаному фартуку в пятнах засхошей крови, по странной железной маске-пирамиде, скрывавшей голову великана.  Гигантский окровавленный пенис раз за разом вонзался глубоко между распяленных ног визжащего, бьющегося в агонии существа.<br/>Это была не иллюзия. Не боггарт, не вампир. Слишком реальными были звуки, запах. И когда палач медленно повернул к Персивалю ржавое острие пирамиды, когда отшвырнул свою жертву, поздно было отступать и думать о правилах, о целесообразности.<br/>– Авада к…<br/>Он не успел договорить. Что-то ударило его в грудь, сшибая с ног, ломая рёбра, разрывая кожу.<br/>Палочка выпала из разом ослабевшей руки. Тени и свет скользили по гигантскому клинку, и единственным звуком было тяжёлое, хриплое дыхание палача.<br/>Бульканье крови из рассечённых лёгких вместо крика. <br/>Корчась в агонии, Персиваль схватился за клинок, пытаясь остановить его, но неудержимая сила пришпилила его к стене как бабочку.<br/>И всё-таки, он пытался упереться каблуками в землю, надавить, выдернуть меч, хотя кровь из распоротого живота заливала рубашку и брюки, капала на пол. Сознание стремительно ускользало от него, и он понимал, что это – в последний раз, и если сейчас он даст слабину, то больше не очнётся...</p><p>Где-то далеко, на самой границе тусклого света палач отшвырнул его труп так, что кровавый след протянулся через коридор.<br/>Где-то во тьме кто-то тащил его труп по грязному полу.<br/>Где-то за гранью уходящего сознания последнее, что Персиваль увидел – как Криденс наклонился к нему и прижал палец к губам.<br/>– Ш-ш-ш…</p>
+  </div>
+  <!--/main-->
+
+
+</div>
+
+<!-- end of cache -->
+
+    </div>
+  
+  
+    </div>
+    <!-- END work skin -->
+  </div>
+  <!-- END work -->
+
+  <!-- BEGIN comment section -->
+  <!-- Gets embedded anywhere we need to list comments on a top-level commentable. We need the local variable "commentable" here. -->
+<div id="feedback" class="feedback" role="complementary">
+
+  <h3 class="landmark heading">Actions</h3>
+
+  <ul class="actions" role="navigation">
+      <li><a href="#main">&#8593; Top</a></li>
+
+
+      <li><a href="/works/13645983/chapters/31641333#workskin">Next Chapter &#8594;</a></li>
+
+
+
+
+      <li>
+        <form id="new_kudo" action="/kudos" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="xh2tLfUs7V3IKMOfyAUKCLgcluDleJz3jcDyANJknoTBvqOoktHE9MnUG+DETzNwO66n8Qks74orsSTGsrSqpQ=="/>
+          <input value="13645983" type="hidden" name="kudo[commentable_id]" id="kudo_commentable_id"/>
+          <input value="Work" type="hidden" name="kudo[commentable_type]" id="kudo_commentable_type"/>
+          <input type="submit" name="commit" value="Kudos ♥" id="kudo_submit"/>
+</form>      </li>
+
+
+
+
+        <li id="show_comments_link"><a data-remote="true" href="/comments/show_comments?chapter_id=31340484">Comments (2)</a></li>
+  </ul>
+
+  <div id="kudos_message"></div>
+
+  <h3 class="landmark heading"><a name="comments">Comments</a></h3>
+
+  
+
+    <div id="kudos">
+      <p class="kudos">
+          <a href="/users/Lana_Weatherwax">Lana_Weatherwax</a>, <a href="/users/forspass">forspass</a>, <a href="/users/that_adler_girl">that_adler_girl</a>, <a href="/users/PantaRhei">PantaRhei</a>, <a href="/users/xixikalka">xixikalka</a>, <a href="/users/Halinis">Halinis</a>, <a href="/users/SarahV">SarahV</a>, <a href="/users/marrin">marrin</a>, <a href="/users/Lerime">Lerime</a>, <a href="/users/Cassimira">Cassimira</a>, and <a href="/users/danshia">danshia</a>
+             as well as 
+          10 guests
+         left kudos on this work!
+      </p>
+</div>
+
+
+    <div id="add_comment_placeholder" title="top level comment">
+      <div id="add_comment">
+        <!-- expects the local variables comment, commentable, and button_name -->
+<div class="post comment" id="comment_form_for_31340484">
+  <form class="new_comment" id="comment_for_31340484" action="/chapters/31340484/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="E3u5o3qrDoiuacP0AqVi9Rc1/UeId73sG0Du5fzQyw4U2LcmHVYnIa+VG4sO71uNlIfMVmQjzpG9MTgjnAD/Lw=="/>
+    <fieldset>
+      <legend>Post Comment</legend>
+
+
+
+
+
+
+        <dl>
+          <dt class="landmark">Note:</dt>
+          <dd class="instructions comment_form">All fields are required. Your email address will not be published.</dd>
+          <dt><label for="comment_name_for_31340484">Guest name: </label></dt>
+          <dd>
+            <input id="comment_name_for_31340484" type="text" name="comment[name]"/>
+            <script>var validation_for_comment_name_for_31340484=new LiveValidation('comment_name_for_31340484',{wait:500,onlyOnBlur:false});validation_for_comment_name_for_31340484.add(Validate.Presence,{"failureMessage":"Please enter your name.","validMessage":""});</script>
+          </dd>
+          <dt><label for="comment_email_for_31340484">Guest email: </label></dt>
+          <dd>
+            <input id="comment_email_for_31340484" type="text" name="comment[email]"/>
+            <script>var validation_for_comment_email_for_31340484=new LiveValidation('comment_email_for_31340484',{wait:500,onlyOnBlur:false});validation_for_comment_email_for_31340484.add(Validate.Presence,{"failureMessage":"Please enter your email address.","validMessage":""});</script>
+          </dd>
+        </dl>
+        <p class="footnote">(Plain text with limited HTML <a class="help symbol question modal" title="Html help" aria-controls="#modal" href="/help/html-help.html"><span class="symbol question"><span>?</span></span></a>)</p>
+
+      <p>
+        <label for="comment_content_for_31340484" class="landmark">Comment</label>
+        <textarea id="comment_content_for_31340484" class="comment_form observe_textlength" title="Enter Comment" name="comment[comment_content]">
+</textarea>
+        <input type="hidden" id="controller_name_for_31340484" name="controller_name" value="chapters"/>
+      </p>
+      <p class="character_counter"><span id="comment_content_for_31340484_counter" class="value" data-maxlength="10000" aria-live="polite" aria-valuemax="10000" aria-valuenow="comment_content_for_31340484">10000</span> characters left</p>
+      <script>var validation_for_comment_content_for_31340484=new LiveValidation('comment_content_for_31340484',{wait:500,onlyOnBlur:false});validation_for_comment_content_for_31340484.add(Validate.Presence,{"failureMessage":"Brevity is the soul of wit, but we need your comment to have text in it.","validMessage":""});validation_for_comment_content_for_31340484.add(Validate.Length,{"maximum":"10000","tooLongMessage":"must be less than 10000 characters long."});</script>
+      <p class="submit actions">
+        <input type="submit" name="commit" value="Comment" id="comment_submit_for_31340484" data-disable-with="Please wait..."/>
+      </p>
+    </fieldset>
+</form></div>
+<div class="clear"></div>
+
+      </div>
+    </div>
+
+  <!-- If we have javascript, here is where the comments will be spiffily inserted -->
+  <!-- If not, and show_comments is true, here is where the comments will be rendered -->
+  <div id="comments_placeholder" style="display:none;">
+  </div>
+
+
+</div>
+<!-- END comments -->
+
+  <!-- END comment section -->
+
+
+
+          <div class="clear"><!--presentational--></div>
+        </div>
+        <!-- END main -->
+      </div>
+      <!-- BEGIN footer -->
+<div id="footer" role="contentinfo" class="region">
+	<h3 class="landmark heading">Footer</h3>
+  <ul class="navigation actions" role="navigation">
+    <li class="module group">
+      <h4 class="heading">About the Archive</h4>
+      <ul class="menu">
+        <li><a href="/site_map">Site Map</a></li>
+        <li><a href="/diversity">Diversity Statement</a></li>
+        <li><a href="/tos">Terms of Service</a></li>
+        <li><a href="/dmca">DMCA Policy</a> </li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Contact Us</h4>
+      <ul class="menu">
+        <li><a href="/abuse_reports/new">Report Abuse</a></li>
+        <li><a href="/support">Technical Support and Feedback</a></li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Development</h4>
+      <ul class="menu">
+          <li><a href="https://github.com/otwcode/otwarchive/commits/v0.9.300.1">otwarchive v0.9.300.1</a></li>
+        <li><a href="/known_issues">Known Issues</a></li>
+        <li><a href="http://www.gnu.org/licenses/gpl-2.0.html" title="View License">GPL</a> by the <a href="http://transformativeworks.org/" title="The Organization for Transformative Works">OTW</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!-- END footer -->
+
+    </div>
+    <!-- check to see if this controller/action allow tinymce before we load the gigantor js; see application_helper -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js" type="text/javascript"></script>
+<!-- if user has googleapis blocked for some reason we need a fallback -->
+<script type="text/javascript">if(typeof jQuery=='undefined'){document.write(unescape("%3Cscript src='/javascripts/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));document.write(unescape("%3Cscript src='/javascripts/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));}</script>
+
+
+<script type="text/javascript">$j=jQuery.noConflict();</script>
+<script src="/javascripts/jquery.scrollTo.min.js+jquery.livequery.min.js+rails.js+application.js+bootstrap,_bootstrap-dropdown.min.js+jquery-shuffle.js+jquery.tokeninput.min.js+jquery.trap.min.js+ao3modal.min.js+js.cookie.min.js+filters.min.js.pagespeed.jc.oz6LPTe6O7.js"></script><script>eval(mod_pagespeed_a8hDjzT3l_);</script>
+<script>eval(mod_pagespeed_1nA1vKz9z4);</script>
+<script>eval(mod_pagespeed_AKC4FLip6q);</script>
+<script>eval(mod_pagespeed_gX7XC77lvT);</script>
+<script>eval(mod_pagespeed_5zo0ZWMy4O);</script>
+<script>eval(mod_pagespeed_eCCgOhjhYQ);</script>
+<script>eval(mod_pagespeed_TU1Ln7LKSh);</script>
+<script>eval(mod_pagespeed_qTpbjsXQwh);</script>
+<script>eval(mod_pagespeed_R5FGw2ySDb);</script>
+<script>eval(mod_pagespeed_rqqFCT3xcT);</script>
+
+<script>eval(mod_pagespeed_Gf_4KFhTvB);</script>
+
+
+  <script>function isSupported(){var item="localStoragePolyfill";try{localStorage.setItem(item,item);localStorage.removeItem(item);return true;}catch(e){return false;}}function acceptTOS(){if(isSupported()){localStorage.setItem("accepted_tos","20180523");}else{Cookies.set("accepted_tos","20180523",{expires:365});}}$j(document).ready(function(){if(localStorage.getItem("accepted_tos")!=="20180523"&&Cookies.get("accepted_tos")!=="20180523"){$j("body").prepend("<div id=\"tos_prompt\" class=\"hidden\">\n  <h2 class=\"heading\">\n    <span>Archive of Our Own<\/span>\n  <\/h2>\n  <div class=\"agreement\">\n    <p class=\"summary\">\n      On Archive of Our Own (AO3), users can make profiles, create works and\n            other Content, post comments, give Kudos, create Collections and \n            Bookmarks, participate in Challenges, import works, and more. Any \n            information you publish in a comment, profile, work, or Content that you \n            post or import onto AO3 including in summaries, notes and tags, \n            will be accessible by the public (unless you limit access to a work only \n            to those with AO3 Accounts), and it will be available to \n            AO3 personnel. Be mindful when sharing personal information, \n            including  your religious or political views, health, racial background, \n            country of origin, sexual identity and/or personal relationships. To \n            learn more, check out our <a href=\"/tos\">Terms of Service<\/a> and <a href=\"/tos#privacy\">Privacy Policy<\/a>.\n    <\/p>\n\n    <p class=\"confirmation\">\n      <input type=\"checkbox\" id=\"tos_agree\" />\n      <label for=\"tos_agree\">I have read &amp; understood the new Terms of Service and Privacy Policy<\/label>\n    <\/p>\n\n      <p class=\"submit\">\n        <button name=\"button\" type=\"button\" disabled=\"disabled\" id=\"accept_tos\">I agree/consent to its terms<\/button>\n      <\/p>\n\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    var container = \$j(\"#tos_prompt\");\n    var outer = \$j(\"#outer\");\n    var button = \$j(\"#accept_tos\");\n\n    setTimeout(showTOSPrompt, 1500);\n\n    function showTOSPrompt() {\n      \$j.when(container.fadeIn(500)).done(function() {\n        outer.addClass(\"hidden\").attr(\"aria-hidden\", \"true\");\n      });\n\n      \$j(\"#tos_agree\").on(\"click\", function() {\n        button.attr(\"disabled\", !this.checked);\n        if (this.checked) {\n          button.on(\"click\", function() {\n            acceptTOS();\n            outer.removeClass(\"hidden\").removeAttr(\"aria-hidden\");\n            \$j.when(container.fadeOut(500)).done(function() {\n              container.remove();\n            });\n          });\n        };\n      }).change();\n    };\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+  <script>$j(document).ready(function(){var permitted_hosts=["archiveofourown.org","download.archiveofourown.org","insecure.archiveofourown.org","www.archiveofourown.org","insecure-test.archiveofourown.org","test.archiveofourown.org","testdownload.archiveofourown.org"];var current_host=window.location.hostname;if(!permitted_hosts.includes(current_host)&&Cookies.get("proxy_notice")!=="0"&&window.location.protocol!=="file:"){$j("#skiplinks").after("<div id=\"proxy-notice\">\n  <div class=\"userstuff\">\n    <p class=\"important\">Important message:<\/p>\n    <ol>\n      <li>You are using a proxy site that is not part of the Archive of Our Own.<\/li>\n      <li>The entity that set up the proxy site can see what you submit, including your IP address. If you log in through the proxy site, it can see your password.<\/li>\n    <\/ol>\n    <p class=\"important\">重要提示：<\/p>\n    <ol>\n      <li>您使用的是第三方开发的反向代理网站，此网站并非Archive of Our Own - AO3（AO3作品库）原站。<\/li>\n      <li>代理网站的开发者能够获取您上传至该站点的全部内容，包括您的ip地址。如您通过代理登录AO3，对方将获得您的密码。<\/li>\n    <\/ol>\n    <p class=\"submit\"><button class=\"action\" type=\"button\" id=\"proxy-notice-dismiss\">Dismiss Notice<\/button><\/p>\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    \$j(\"#proxy-notice-dismiss\").on(\"click\", function() {\n      Cookies.set(\"proxy_notice\", \"0\");\n      \$j(\"#proxy-notice\").slideUp();\n    });\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+    <script>$j(document).on("loadedCSRF",function(){$j.post("/works/13645983/hit_count.json")})</script>
+
+
+  </body>
+</html>

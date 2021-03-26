@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"f2edcff25e","applicationID":"190034","transactionName":"dgwMEkpfWVsHERpFWUcIEUlLWFpA","queueTime":0,"applicationTime":127,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VQcCWV9RGwIJVFFRAw==",licenseKey:"f2edcff25e",applicationID:"190034"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script>
+    <meta name="keywords" content="fanfiction, transformative works, otw, fair use, archive"/>
+    <meta name="language" content="en-US"/>
+    <meta name="subject" content="fandom"/>
+    <meta name="description" content="An Archive of Our Own, a project of the
+    Organization for Transformative Works"/>
+    <meta name="distribution" content="GLOBAL"/>
+    <meta name="classification" content="transformative works"/>
+    <meta name="author" content="Organization for Transformative Works"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+        Dark Room Eroticas - FireflyingGirl - Harry Potter - J. K. Rowling [Archive of Our Own]
+    </title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/1_site_screen_.css"/>
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 62em), handheld" href="/stylesheets/skins/skin_873_archive_2_0/4_site_midsize.handheld_.css"/>
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 42em), handheld" href="/stylesheets/skins/skin_873_archive_2_0/5_site_narrow.handheld_.css"/>
+<link rel="stylesheet" type="text/css" media="speech" href="/stylesheets/skins/skin_873_archive_2_0/6_site_speech_.css"/>
+<link rel="stylesheet" type="text/css" media="print" href="/stylesheets/skins/skin_873_archive_2_0/7_site_print_.css"/>
+<!--[if IE 8]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/8_site_screen_IE8_or_lower.css" /><![endif]-->
+<!--[if IE 5]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/9_site_screen_IE5.css" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/10_site_screen_IE6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/11_site_screen_IE7.css" /><![endif]-->
+
+
+
+<!--sandbox for developers	-->
+<link rel="stylesheet" media="screen" href="/stylesheets/sandbox.css"/>
+<script src="/javascripts/livevalidation_standalone.js"></script>
+
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="d4DJx7qROurl78VVjsSh0eYWafKMVtsDUx6IZzpLaOxbGYhCe8OSF/NdE/0rMePVlM+NORJhqNjFyvfETxpmjg=="/>
+
+    
+  </head>
+
+  <body class="logged-out">
+    <div id="outer" class="wrapper">
+      <ul id="skiplinks"><li><a href="#main">Main Content</a></li></ul>
+      <!-- BEGIN BETA CAVEATS! -->
+<noscript>
+  <p id="javascript-warning">
+    While we&#39;ve done our best to make the core functionality of this site accessible without javascript, it will work better with it enabled. Please consider turning it on!
+  </p>
+</noscript>
+<!-- END BETA CAVEATS! --> 
+
+<!-- BEGIN header -->
+
+<div id="header" class="region">
+
+  <h1 class="heading">
+    <a href="/"><span>Archive of Our Own</span><sup> beta</sup><img alt="Archive of Our Own" class="logo" src="/images/ao3_logos/logo_42.png"/></a> 
+  </h1>
+
+    <div id="login" class="dropdown">
+      <p class="user actions" role="menu">
+        <a id="login-dropdown" href="/users/login">Log In</a>
+      </p>
+      <div id="small_login" class="simple login">
+	<form class="new_user" id="new_user_session_small" action="/users/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="oMmCKKop8RBZldWT5ohxPg5ioqcZKAZyjVdh0LmcDWqMUMOta3tZ7U8nAztDfTM6fLtGbIcfdakbgx5zzM0DCA=="/>
+	<dl>
+    <dt>
+      <label for="user_session_login_small">User name or email:</label></dt>
+    <dd><input id="user_session_login_small" type="text" name="user[login]"/></dd>
+    <dt><label for="user_session_password_small">Password:</label></dt>
+    <dd><input id="user_session_password_small" type="password" name="user[password]"/></dd>
+  </dl>
+  <p class="submit actions">
+    <label for="user_remember_me_small" class="action"><input type="checkbox" name="user[remember_me]" id="user_remember_me_small" value="1"/>Remember Me</label>
+    <input type="submit" name="commit" value="Log In"/>
+  </p>
+</form>
+<ul class="footnote actions">
+  <li><a href="/users/password/new">Forgot password?</a></li>
+    <li>
+      <a href="/invite_requests">Get an Invitation</a>
+    </li>
+</ul>
+
+</div>
+
+    </div>
+
+  <h3 class="landmark heading">Site Navigation</h3>
+  <ul class="primary navigation actions" role="navigation">
+    <li class="dropdown">
+      <a href="/menu/fandoms">Fandoms</a>
+      <ul class="menu" role="menu">
+  <li><a href="/media">All Fandoms</a></li>
+        <li id="medium_5"><a href="/media/Anime%20*a*%20Manga/fandoms">Anime &amp; Manga</a></li>
+        <li id="medium_3"><a href="/media/Books%20*a*%20Literature/fandoms">Books &amp; Literature</a></li>
+        <li id="medium_4"><a href="/media/Cartoons%20*a*%20Comics%20*a*%20Graphic%20Novels/fandoms">Cartoons &amp; Comics &amp; Graphic Novels</a></li>
+        <li id="medium_7"><a href="/media/Celebrities%20*a*%20Real%20People/fandoms">Celebrities &amp; Real People</a></li>
+        <li id="medium_2"><a href="/media/Movies/fandoms">Movies</a></li>
+        <li id="medium_6"><a href="/media/Music%20*a*%20Bands/fandoms">Music &amp; Bands</a></li>
+        <li id="medium_8"><a href="/media/Other%20Media/fandoms">Other Media</a></li>
+        <li id="medium_30198"><a href="/media/Theater/fandoms">Theater</a></li>
+        <li id="medium_1"><a href="/media/TV%20Shows/fandoms">TV Shows</a></li>
+        <li id="medium_476"><a href="/media/Video%20Games/fandoms">Video Games</a></li>
+        <li id="medium_9971"><a href="/media/Uncategorized%20Fandoms/fandoms">Uncategorized Fandoms</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/browse">Browse</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works">Works</a></li>
+  <li><a href="/bookmarks">Bookmarks</a></li>
+  <li><a href="/tags">Tags</a></li>
+  <li><a href="/collections">Collections</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/search">Search</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works/search">Works</a></li>
+  <li><a href="/bookmarks/search">Bookmarks</a></li>
+  <li><a href="/tags/search">Tags</a></li>
+  <li><a href="/people/search">People</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/about">About</a>
+      <ul class="menu" role="menu">
+  <li><a href="/about">About Us</a></li>
+  <li><a href="/admin_posts">News</a></li>
+  <li><a href="/faq">FAQ</a></li>
+  <li><a href="/wrangling_guidelines">Wrangling Guidelines</a></li>
+  <li><a href="/donate">Donate or Volunteer</a></li>
+</ul>
+
+    </li>
+	  <li class="search"><form class="search" id="search" action="/works/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+  <fieldset>
+    <legend>Search Works</legend>
+    <p>
+      <label class="landmark" for="site_search">Work Search:</label>
+      <input class="text" id="site_search" aria-describedby="site_search_tooltip" type="text" name="work_search[query]"/>
+      <span class="tip" role="tooltip" id="site_search_tooltip">tip: words:100</span>
+      <span class="submit actions"><input type="submit" value="Search" class="button"/></span>
+    </p>
+  </fieldset>
+</form></li>
+  </ul>
+
+
+
+  <div class="clear"></div>
+
+</div>
+
+
+
+<!-- END header -->
+
+      <div id="inner" class="wrapper">
+        <!-- BEGIN sidebar -->
+        <!-- END sidebar -->
+
+        <!-- BEGIN main -->
+        <div id="main" class="works-show region" role="main">
+          
+          <div class="flash"></div>
+          <!--page description, messages-->
+<ul class="landmark skip">
+  <li><a name="top">&nbsp;</a></li>
+  <li><a href="#work">Skip header</a></li>
+</ul>
+
+<!--/descriptions-->
+
+<!--subnav-->
+<!--/subnav-->
+
+<!-- BEGIN revealed -->
+<!-- BEGIN work -->
+<!--work description, metadata, notes and messages-->
+    <!-- BEGIN navigation -->
+<h3 class="landmark heading">Actions</h3>
+<ul class="work navigation actions" role="menu">
+
+
+
+
+
+
+  <li class="comments" id="show_comments_link_top">
+      <a data-remote="true" href="/comments/show_comments?work_id=15589608">Comments </a>
+  </li>
+
+
+
+    <li class="share hidden">
+      <a class=" modal" title="Share Work" aria-controls="#modal" href="/works/15589608/share">Share</a>
+    </li>
+
+
+    <li class="download" aria-haspopup="true">
+      <a href="#">Download</a>
+      <ul class="expandable secondary">
+          <li><a href="/downloads/15589608/Dark%20Room%20Eroticas.azw3?updated_at=1597791186">AZW3</a></li>
+          <li><a href="/downloads/15589608/Dark%20Room%20Eroticas.epub?updated_at=1597791186">EPUB</a></li>
+          <li><a href="/downloads/15589608/Dark%20Room%20Eroticas.mobi?updated_at=1597791186">MOBI</a></li>
+          <li><a href="/downloads/15589608/Dark%20Room%20Eroticas.pdf?updated_at=1597791186">PDF</a></li>
+          <li><a href="/downloads/15589608/Dark%20Room%20Eroticas.html?updated_at=1597791186">HTML</a></li>
+      </ul>
+    </li>
+</ul>
+<!-- END navigation -->
+
+
+<h3 class="landmark heading">Work Header</h3>
+
+<div class="wrapper">
+
+  <dl class="work meta group" role="complementary">
+          <dt class="rating tags">
+
+              Rating:
+          </dt>
+
+          <dd class="rating tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Explicit/works">Explicit</a></li>
+            </ul>
+          </dd>
+          <dt class="warning tags">
+
+              <a href="/tos_faq#tags">Archive Warning</a>:
+          </dt>
+
+          <dd class="warning tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/No%20Archive%20Warnings%20Apply/works">No Archive Warnings Apply</a></li>
+            </ul>
+          </dd>
+          <dt class="category tags">
+
+              Category:
+          </dt>
+
+          <dd class="category tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/M*s*M/works">M/M</a></li>
+            </ul>
+          </dd>
+          <dt class="fandom tags">
+
+              Fandom:
+          </dt>
+
+          <dd class="fandom tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a></li>
+            </ul>
+          </dd>
+          <dt class="relationship tags">
+
+              Relationship:
+          </dt>
+
+          <dd class="relationship tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter*s*Severus%20Snape/works">Harry Potter/Severus Snape</a></li>
+            </ul>
+          </dd>
+          <dt class="character tags">
+
+              Characters:
+          </dt>
+
+          <dd class="character tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter/works">Harry Potter</a></li><li><a class="tag" href="/tags/Severus%20Snape/works">Severus Snape</a></li><li><a class="tag" href="/tags/Luna%20Lovegood/works">Luna Lovegood</a></li><li><a class="tag" href="/tags/George%20Weasley/works">George Weasley</a></li><li><a class="tag" href="/tags/Hermione%20Granger/works">Hermione Granger</a></li><li><a class="tag" href="/tags/Ron%20Weasley/works">Ron Weasley</a></li>
+            </ul>
+          </dd>
+          <dt class="freeform tags">
+
+              Additional Tags:
+          </dt>
+
+          <dd class="freeform tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Shameless%20Smut/works">Shameless Smut</a></li><li><a class="tag" href="/tags/Tooth-Rotting%20Fluff/works">Tooth-Rotting Fluff</a></li><li><a class="tag" href="/tags/Anal%20Fingering/works">Anal Fingering</a></li><li><a class="tag" href="/tags/Anal%20Sex/works">Anal Sex</a></li><li><a class="tag" href="/tags/Blow%20Jobs/works">Blow Jobs</a></li><li><a class="tag" href="/tags/Rimming/works">Rimming</a></li><li><a class="tag" href="/tags/Post-War/works">Post-War</a></li><li><a class="tag" href="/tags/Breathplay/works">Breathplay</a></li>
+            </ul>
+          </dd>
+
+      <dt class="language">
+        Language:
+      </dt>
+      <dd class="language">
+        English
+      </dd>
+
+
+
+    <dt class="stats">Stats:</dt>
+    <dd class="stats">
+<!-- end of cache -->
+
+      <dl class="stats"><dt class="published">Published:</dt><dd class="published">2018-08-06</dd><dt class="words">Words:</dt><dd class="words">13280</dd><dt class="chapters">Chapters:</dt><dd class="chapters">1/1</dd><dt class="comments">Comments:</dt><dd class="comments">25</dd><dt class="kudos">Kudos:</dt><dd class="kudos">372</dd><dt class="bookmarks">Bookmarks:</dt><dd class="bookmarks"><a href="/works/15589608/bookmarks">59</a></dd><dt class="hits">Hits:</dt><dd class="hits">5920</dd></dl>
+      </dd>
+  </dl>
+</div>
+
+
+
+<!-- BEGIN section where work skin applies -->
+<div id="workskin">
+  <div class="preface group">
+    <h2 class="title heading">
+      Dark Room Eroticas
+    </h2>
+    <h3 class="byline heading">
+      <a rel="author" href="/users/FireflyingGirl/pseuds/FireflyingGirl">FireflyingGirl</a>
+    </h3>
+
+
+        <div class="summary module" role="complementary">
+          <h3 class="heading">Summary:</h3>
+            <blockquote class="userstuff">
+              <p>To the experimental wizards of England:<br/>Hereby we announce the new date of our Dark Room Eroticas for all wizards from age 21.</p><p>Harry finds an invitation to an anonymous orgy by change and is instantly delighted. He takes part,<br/>not knowing that a certain dark-haired potionsmaster is there, too.</p>
+            </blockquote>
+        </div>
+
+        <div class="notes module" role="complementary">
+  <h3 class="heading">Notes:</h3>
+
+    <ul class="associations">
+
+
+        <li>
+            A translation of
+
+            <a href="/external_works/403887">Dark Room Eroticas</a> by Mabji.
+        </li>
+
+    </ul>
+
+    <blockquote class="userstuff">
+      <p>This is my first translation from German to English and I'm very excited to finally upload this.<br/>A special thanks to the Author Mabji (https://archiveofourown.org/users/Mabji/pseuds/Mabji or https://www.fanfiktion.de/u/Mabji), I'm very grateful that I was allowed to translate this awesome story!</p><p>English isn't my native language and therefore I can't be certain that I found all mistakes.<br/>If you do find any grammar, spelling or other mistakes, just tell me and I'll change them.</p><p>Have fun reading!</p>
+    </blockquote>
+
+    <p class="jump">(See the end of the work for <a href="#work_endnotes">more notes</a>.)</p>
+</div>
+
+
+  </div>
+
+
+<!--/descriptions-->
+
+<!--chapter content-->
+    <div id="chapters" role="article">
+        <h3 class="landmark heading" id="work">Work Text:</h3>
+          <div class="userstuff"><p>Harry knocked on the plain office door and then slipped in as George cheerful voice answered.<br/>
+“Harry, it’s great that we could meet up so fast!” </p><p>The dark-haired man found himself in a bone-crushing embrace before he could even utter a word and was immediately pushed into a chair.</p><p>“Uhm, Hi Georgie. What’s up? It sounded rather urgent in your letter. Did something happen?” he asked kindly, although he wanted to grumble at the Weasley for thwarting his plans.<br/>
+Actually, he hadn’t planned to do anything today – if you ignored lazing around, eating and sleeping – but he really did deserve that after all the stress in his shop.<br/>
+Apparently some very fine gala was hosted by the ministry and everyone had come running into Luna's and his shop, because they needed new festival robes. But today was Saturday and every second Saturday he was free.</p><p>Therefore the letter from George hadn’t exactly been welcome and he had preferred to get this over with as fast as possible, so that afterwards he had the rest of the day for himself.</p><p>„Nah, nothing happened, but I could use your help. Well, it’s about that…,” but George was interrupted by another knock.<br/>
+“Boss, in the front is a customer asking for the dissolving trick underwear. Could you take over? I’m a bit uncomfortable with him.”<br/>
+George heaved a heavy sigh and then nodded to his co-worker. “I’ll be right there. Sorry, Harry. Only takes a minute, I promise. Can I leave you alone for that? “<br/>
+The green-eyed just waved casually with one hand and shooed him out of the office.</p><p>Frankly, he was slightly annoyed, however.<br/>
+He could have been taking a long, hot bath now, really soaking in it till his tense muscles became a soft mass of liquorice. And while he was at it, he could let his hands wander a bit, until they finally arrive where he wanted them to be in the first place.<br/>
+In the hot water it would be easy to relax and enjoy. He would start with a gentle caress, nothing more but a brush directly over his skin, enhanced with the movement of water billowing around his shaft. Then he would eventually grab himself decidedly, his free hand sliding lower so he could easily push a finger into himself.<br/>
+The stroking would become harder and faster, the penetration deeper and rougher until he would finally give in to completion.</p><p>Instead, however, he had to sit here.<br/>
+He kept sliding down his chair, until he almost fell over. It's been almost 10 minutes now.<br/>
+Annoyed he got up and began to pace back and forth. He really liked George, but patience had never been his strong suit!<br/>
+Damn, he hadn’t had an orgasm for two weeks!</p><p>He whirled around again but tore a pile of documents from a crowded side table with his cloak. Rolling his eyes at his mishap, he began to recollect the things. Apparently, the redhead wasn’t very organized, because there were a lot of letters, bills and advertising messed up. Then his gaze fell onto a brick-red leaflet, at the bottom of the mess.<br/>
+As curious as ever, he picked up the parchment and began to read.</p><p>~~~<br/>
+To the experimental wizards of England:<br/>
+Hereby we announce the new date of our Dark Room Eroticas for all wizards from age 21.<br/>
+The meeting will be held on Friday, 29.6.<br/>
+Start is this time at 19:00.</p><p>The rules are the same as always, but for all newbies here is everything worth knowing:<br/>
+1: Any sexual act may only take place in full agreement. The sole participation in this happening is not a general agreement to all practices! If your partner withdraws, that is a rejection!<br/>
+2: Light is strictly forbidden! As well as all spells which make it possible for one to take in their surroundings in the dark or to recognize their fellow human beings.<br/>
+3: These meetings are 100 percent anonymous. You must not proclaim your name, but if you do, you will be banished immediately.<br/>
+4: Just as, if you happen to recognize another participant's voice, you may not use that knowledge to extract any benefit from it. If you act against this, you must expect to be charged promptly.<br/>
+5: To prevent disease, there is a strong hygiene spell over the place of event.<br/>
+6: Otherwise, you have exactly two hours to cuddle, kiss, caress, fondle and copulate as much as you wish, with as many partners as you desire.<br/>
+7: These meetings are for men only!</p><p>The participation fee is 20 Galleons and must be submitted together with the registration form by 15.6. Please abstain from your real name in the registration form, come up with something creative, we will use your chosen name for future correspondence.<br/>
+We look forward to your participation!<br/>
+Your Dark Room Erotica Team<br/>
+~~~</p><p>Blinking his eyes, Harry stared at the paper. He had to misunderstand something, so he reread the note.<br/>
+But nothing changed in meaning. This was clearly ... well ... That was an invitation for gay wizards to an anonymous orgy.</p><p>All the blood in Harry's body seemed to have spontaneously turned into lava and was now on his way down to his groin. Holy Salazar, that was really the hottest thing he could possibly imagine!<br/>
+A bunch of aroused men looking for sex in a dark room where no one could know that he is Harry Potter! Brilliant! That was just perfect!</p><p>It had been six years since Ginny broke up with him because he simply couldn’t get it up, no matter how hard she had tried.<br/>
+It really had not lacked in attempts.<br/>
+Ginny had stripped for him, licking him from top to bottom, rubbed him between her breasts, massaged him, tried dirty talk and blowjobs ceaselessly and even offered him anal sex.</p><p>Without any success.<br/>
+This failure had insinuated so much self-doubt that she had cheated on him at the end of their relationship just to feel desired. Or at least that was her meagre explanation for her infidelity.</p><p>When, for the first time in ages, he had been alone at Grimmauld Place after that violent ending of their relationship, he had begun to explore himself.<br/>
+Results hadn’t been long in coming! (No pun intended.)</p><p>It wasn’t that he was completely unarousable; it was just not Ginny who came to his mind when he stroked himself, but Charlie Weasley, Draco Malfoy or Kingsley. Attractive men who stood out for their self-confidence and their strength.</p><p>He had tried to find a partner, and he had already thought to have found that in Vas D'Oreiller, but then it turned out that he had only wanted him, because he was Harry Fucking Potter.<br/>
+He still couldn't believe that he had given his virginity to this asshole. After that he had kept away from everyone. He didn't want to see his love life spread out in such bright colours in the press once again.</p><p>But this gave him the ideal solution to pursue his urges, without struggling to disguise his identity!</p><p>In his enthusiasm, he had almost forgotten where he was, but he instantly came back to reality when he heard footsteps approaching the office.<br/>
+Hastily he pocketed the dark red leaflet and threw himself back in his chair, not a second too early.</p><p>George came in, grinning apologetically. "Some customers are just crazy, but to whom do I say that. You certainly have enough of those on your back, right?"<br/>
+Harry tried to cover his nervousness with a laugh. "Oh yeah. Just recently there was a guy who wanted us to make a cape out of fish soup leather. You can’t imagine how much the stuff stinks as well as it scratches."<br/>
+For a moment they just sat there and grinned in silence.</p><p>"Well, now about why I asked to meet. It’s sure a lot to ask, but I didn’t know who else to ask. I would like to buy a house, as a surprise for Angelina to our first wedding anniversary, but I would like to have a second opinion. Someone who looks at the house with neutral eyes and tells me if he sees anything amiss. I would have asked Ron, but with Rosie recently born into this world, he needs every minute of sleep."</p><p>"Of course, no problem. Do you already have a house in mind?"<br/>
+George shook his head. They sat there for a while, Harry listening to what his friend had imagined and how he even got the gift idea.<br/>
+The green-eyed, however, listened with only half an ear. His thoughts circled ceaselessly around the document, which was safely stowed away in his robe pocket.</p><p>After over an hour, they finally said their goodbyes, agreeing that George would just get in touch when he found something.<br/>
+He apparated home immediately and pulled out the note while he quickly kicked off his boots.</p><p>The registration form was on the back. He didn’t even think about whether it was really such a clever idea to attend this event. He had already decided long ago!<br/>
+The registration form was filled in quickly, only the name caused him some problems. He eventually chose Earl Gray - his favorite tea. He grabbed 20 galleons out of his wallet and then sent his owl Makita. More than satisfied, he finally went to his well-deserved bath.<br/>
+It wasn’t hard to get going, when he imagined how strangers' hands grasped at him, pinching his nipples as he was pulled slightly but firmly by the hair, as a hot, pulsating cock was pressed against his lips until he opened his mouth and allowed himself to be conquered.<br/>
+He could almost taste the salty savor of thick cum on his tongue. He finally came with a suppressed scream even before he had managed to insert the first finger into his ass.</p><p>Merlin, he couldn’t wait! Too bad it was a full month until the 29th.</p><p>He lingered in the water for a while, until it got too cold.<br/>
+In only a bathrobe he sat alone at dinner, when Makita came roaring in again and handed him a parchment scroll.<br/>
+A braided leather bracelet was wrapped around the paper. It was pretty. Black and gray leather stripes in different thicknesses had been used. Carefully, he put it aside, before unrolling the document.</p><p>Dear Mr. Gray,<br/>
+We are pleased about your participation in the Dark Room Event.<br/>
+Your registration fee has been paid.<br/>
+The bracelet that was sent to you is a portkey. It will take you directly to the venue on 29.6, so you only have to carry it that day.<br/>
+Here is another piece of information: If you prefer to resume the top part, please wear the bracelet on your right arm, for bottom on the left, if you do not care, then attach it as an anklet. This handling will make it easier for all participants in the dark to find their way.<br/>
+Please do not worry about your clothes. They are going to be magically removed before you start, and you get it back when the 2 hours have passed.<br/>
+Best regards<br/>
+Your Dark Room Erotica Team</p><p>A broad smile crossed Harry's face and with unquestionable certainty he pulled the bracelet over his left wrist.<br/>
+It would be better if he always wore it before he lost it!</p><p>oOoOoOoOo</p><p>Severus grabbed the towel and began to dry himself off properly.<br/>
+He still felt like he was impure, but he couldn’t do anything about it. If that didn’t change, after he had already completely soaped and showered four times, then he couldn’t help himself any longer. Naked as he was, he sat down on the edge of the bathtub and started applying cream to his maltreated body.<br/>
+It wouldn’t do much, but at least his scars wouldn’t feel as rough for a while as usual and the added herbs would hopefully give him a pleasant smell.</p><p>Uncertain he stepped in front of the floor-length mirror and looked at himself.<br/>
+He had never been attractive, but since the last war, it has definitely been a disaster. His leg was covered with deep claw marks, a gift from Greyback, his neck was a battlefield thanks to Nagini, and he didn’t even want to start with the Dark Mark, which was still recognizable on his arm.<br/>
+In one sentence: Nobody would ever find him desirable!<br/>
+Why should they? He was far too thin, too pale and then his hair.<br/>
+Added to this was his bad reputation.<br/>
+He would never find a man who would accept him the way he was.</p><p>He sighed dejectedly and hung his head.<br/>
+Then his eyes fell on the leather bracelet that was waiting for him on the edge of the sink. A quick smile twitched around the corner of his mouth. The Dark Room Eroticas at least offered him the opportunity to pretend that he was loved.<br/>
+Years ago he had heard about these events from Lucius and had been there regularly since then. Since the meetings were only every 3 months, he had often found time.<br/>
+Tenderly, he picked up the leather bracelet and carefully wrapped it around his right wrist. He could hardly wait. There were only a few hours left. He already had an excited pull in his stomach and has been walking around permanently with a half hard-on for a week. For the last four days, he had forbidden himself to masturbate so that he could really get it up today.</p><p>Instead of dressing himself completely, he just threw on a bathrobe over his bony shoulders and tied his hair into a tight knot at the nape of his neck.<br/>
+Why would he try to dress up if nobody would ever see him?<br/>
+He went down to his dark kitchen and began to eat. It was just the remains of a lentil soup, he hadn’t even reheated it. He would go out of his way if he had someone to share his meal with.<br/>
+Merlin, he would gladly prepare a feast for his partner every evening.</p><p>He shook his head at himself.<br/>
+This happened every time he participated in a Dark Room Event. He immensely looked forward to feel and experience physical closeness but at the same time it made him painfully aware of what really lacked in his life. As well as he normally managed to keep his thoughts from this topic, at least when he was awake, as easy collapsed this protective mechanism before the Dark Rooms.<br/>
+But that was the price he had to pay. Rather the proximity of a stranger than none at all.</p><p>After dinner he returned to the bathroom again. Thoroughly he brushed his teeth and used the toilet again, which meant that he had to wash himself with water again to be really clean.<br/>
+The nervousness was getting worse, but he knew that it would fade away as soon as the portkey activated. There were only minutes left. He wondered if he should put on aftershave, but decided against it. That would be too much.<br/>
+He always avoided men, who he could already smell, before he buried his nose in the crook of his neck.</p><p>As the last minute set in, he tracked the ticking of the pointer impatiently with his eyes. He wanted to accelerate the pointer with his finger.<br/>
+Then finally it was time. The bracelet began to glow and he felt a familiar tug behind his navel.<br/>
+Seconds later he was surrounded by impenetrable darkness and the gentle sound of moving people. The anticipation and excitement in the room was practically palatable, and Severus felt his member finally straighten up. He had been waiting so long!<br/>
+Three months was a long time.</p><p>"Good evening gentlemen!" whispered a gentle woman's voice. "Everything is prepared for you, we wish you a lot of fun, but ask you again to stand to the rules."<br/>
+An approving murmur went through the invisible group, then a soft gong clinked and Severus bathrobe dissolved into nothing.<br/>
+The dark-haired didn’t hesitate long.<br/>
+He stretched out his fingers in the blackness and searched until he meets the first man. Under his fingers he clearly stroked about a backside, he could feel the moving muscles while the other one turned around.<br/>
+Severus ran his fingers over his flank and eventually to his shoulders and down his left arm. There wasn’t a bracelet at his wrist. The search continued.</p><p>He slowly withdrew and felt his way around, however finding the next man by stepping on his foot.<br/>
+The former teacher was lucky, the bracelet was left. A smile settled over Severus' thin lips unseen by his counterpart, and then he wasted no more time and leaned forward until his lips met the other ones.<br/>
+The stranger returned the kiss hard and fierce. Severus deepened it quickly and the other's hands delved into his hair.<br/>
+Firmly. Too firmly.<br/>
+Distracted by the pain on his scalp, he withdrew. He didn’t like it that much when he was pulled.<br/>
+He tried to grab the man's hands and put them on his butt. There, the guy could properly grasp him and massage, if he wanted. But it didn’t work. After continuing the kiss, it only took seconds for the hands to get back into his hair and to tear at it.</p><p>With a displeased growl he withdrew.<br/>
+He might be lonely, but he wouldn’t waste his time here enduring pain. And the kiss hadn’t even been really good!<br/>
+It went on for him, but he had to reject the next man, too. That might be overly critical of him, but the guy just had a terribly whiny voice.<br/>
+Tearful and too high. After a short while his ears rang.<br/>
+Subsequently, a bottom stumbled into his arms, who stank so much of vanilla that the Potions Master gagged. He just put him back on his feet and sent him away.</p><p>Slowly impatience stirred in him. He usually found a partner for the evening faster.<br/>
+Instead of feeling forward, he stopped and listened. Further to his left, he could make out a distinct moan, but right beside him it was quiet. But if he listened carefully, he could make out cautious steps on the thick, rubber-covered bedding that covered the floor, approaching him.<br/>
+He turned to the sound and when it was right in front of him, he grabbed the man in front of him and pulled him in a tight hug. The other uttered a silent gasp, but immediately afterwards he seemed to submit to his fate and snuggled against the warm body Severus could offer him.</p><p>The potions master didn’t need to check it. Such behavior was typical for a man who would submit.<br/>
+Interested, the long-haired leaned forward and nosed at the offered neck.<br/>
+He not only found that the man in his arms was about 10 cm shorter than himself but also that he smelled very pleasant. He could smell a subtle shower gel and leather.<br/>
+Severus bit his earlobe playfully and was given a low, throaty moan in response, which sent shivers down his spine.</p><p>Satisfied, he pulled the smaller one closer to his chest and held him there. He was in the mood for a tender, slow lovemaking and not for anything too hastily. But would his companion join in, or would he become restless? He waited for a response, and received it when the man gently wrapped his arms around his waist and stroked all of the skin he could reach.<br/>
+The happy sigh was already over his lips, before he even became aware of it.</p><p>He took a determined step forward and then another. The man who’d stumbled briefly seemed to understand what he wanted to do, letting him push him backwards out of the center until they reached a quieter corner.<br/>
+One more time he inhaled the smell of the stranger, then his lips searched the other ones. They were much fuller than his, but that only made the kiss better. He nudged his tongue and felt the short man shudder in his arms.<br/>
+Their mouths slipped lazily together, then Severus seized the initiative and let his tongue taste the foreign. A surprising sweetness received him there, but also an underlying tartness, like dark chocolate.</p><p>Severus arousal continued to grow.<br/>
+The man was perfect for this evening!<br/>
+With determination he pushed him to the ground until he lay flat on his back, then he followed and covered him with his own body.<br/>
+They fit together easily. His partner had automatically spread his legs for him, so he could slide in between. The difference in height between them was now an advantage, because although Severus hip was lower, their faces were aligned. It would be easy to continue kissing.</p><p>The man under him turned his pelvis slightly and now pressed the foreign, plump member with determination against his.<br/>
+A deep trembling seized Severus' body. His first climax wouldn’t be long in coming, though he hadn’t done anything more than kissing and caressing the man below, but he had already been aroused half the day.<br/>
+Once again his lips found the tempting lips and with pleasure he sucked the tongue into his own mouth to be able to caress it there. At the same time, he set his hips to a rocking rhythm that perfectly ground their shafts against each other.</p><p>While Severus resumed stimulating their erections, the stranger began to become more curious.<br/>
+His hands quickly found themselves in Severus' hair, but instead of tearing at it, he just let his fingers slide through until he hit the hair tie. For a moment he played with his ponytail, then he went on searching and promptly found the deep furrows on the Potions Master's neck.<br/>
+Both of them froze at the same time. Either the man would be disgusted and repulse him now, or bypass the scars spaciously.<br/>
+He waited, but then he was surprised. The shorter man did neither. Instead, he broke free of their kiss and then pressed his full lips tender on the rough skin.<br/>
+The long-haired man escaped a deep moan and he let his pelvis circle faster. Apparently encouraged, the man beneath him let his tongue brush over it now as well, while he too growled heatedly.</p><p>Merlin, this was good. No one had been able to give him such intoxicating feelings at this damned place.<br/>
+His hand reached into short, tousled hair and pressed the head even closer to his neck.<br/>
+The little one's legs snaked tightly around his waist and now he trusted towards him with his thrusts. Severus could feel the first drops of their precome spilling out between them and the extra moisture just increased the pleasure that the long haired felt.</p><p>And suddenly the man below him threw his head back, his legs tightened even more and a hoarse whimper escaped him before hot semen spurted between them.<br/>
+Severus shuddered from head to toe as his groin tightened and he also reached his climax.</p><p>Gentle hands stroked his sweaty hair while he tried to catch his breath. But the other one didn’t seem to be in a hurry.<br/>
+He tenderly caressed Severus neck and shoulders, while he lay with his head on his chest, listening to how his heartbeat gradually normalized.<br/>
+The former teacher couldn’t help but wonder. The young man felt great, he had to be slim and well built, though he also seemed to have scars. For example, under Severus cheek was a galleon-sized rough spot.<br/>
+In addition, he was tender and sensitive.</p><p>How come that such a man found himself at an orgy?<br/>
+Certainly it would be no problem for him to find a good partner for himself. Unless, of course, he wanted to experiment, but that he was still so quiet under him and didn’t show the intention to look for another companion indicated otherwise.<br/>
+But Severus wouldn’t risk his luck by pulling away from him. He would certainly find no one who met his needs as well as his short man!</p><p>With a satisfied smile he raised his head and started to nibble on the young man’s neck. Experimenting, he licked with his tongue over the now salty skin, then briefly buried his teeth in it or sucked it between his lips, clearly intending to leave a mark on it.<br/>
+As he gently grazed his teeth over his Adam's apple, he gasped and suddenly became hard again. His hands had found their way to the long-haired's butt and pulled him as close as possible.<br/>
+This gesture had something possessive to it, but it pleased the potions master quite exceedingly!<br/>
+He let his hands dance as light as a feather over the shorter one's torso, until he felt the hard beads to which his nipples had contracted. He tugged lightly on them and got a rearing for it.</p><p>The stranger was so wonderfully sensitive, he loved that!<br/>
+Severus wasn’t a particularly greedy person when it came to sex. At least not in the original sense. The greatest satisfaction he didn’t draw from penetration or orgasms, but from the knowledge to have given another person true ecstasy. The more a man groaned for him, the more he trembled in his arms, the more he had to hold on to him, when a climax rolled over him, the happier Severus became!<br/>
+And the man below him responded to the smallest caress with a bliss that almost brought tears to Severus's eyes.<br/>
+It was almost as if he already knew the body inside out. As if he knew exactly which buttons he had to press to bestow the best time of his life to the short man. It was as if they weren’t strangers, but confidants!</p><p>The potions master couldn’t help it. He desperately needed more!<br/>
+He rose from the other, which he commented with a discontented grumble, but seconds later, Severus had simply rolled him around and now lay down on the back of the short one. Even now he let his mouth continue to irritate the skin of the other. Almost in slow motion, he wandered deeper and deeper from the neck of the man below him, leaving more than one hickey on his way to lower located regions.<br/>
+Arriving at his ass, he didn’t hold back anymore. He bit hard, earning a surprised squeak, which was immediately replaced by a moan as he licked his tongue over the irritated skin.</p><p>The long-haired breathed in with relish. So far down, his companion smelled different, not like leather, but instead of their mixed seed and something darker, which could only be a heavy load of pheromones. There could hardly be anything more erotic!<br/>
+Playfully, Severus let his long nose tickle through the man's column as he slowly pulled his butt cheeks apart.<br/>
+He could feel the man's big thigh muscles twitching as he let his warm breath wafted over the well-hidden muscle ring.<br/>
+"Please!" The short one pleaded flatly, his voice just a soft whisper.<br/>
+Severus' heart lacerated. What would he give if he could hear this plea from now on more often? What would he do to see this man's face?</p><p>Instead of indulging in these senseless wishes, he complied and put his lips over the sensitive skin.<br/>
+As a reward, he received a muffled cry, which was replaced by a gasp when Severus first dashed forward his tongue to lick across the narrow entrance.<br/>
+The Potions master would have enjoyed it under other circumstances to maintain that sweet torture for hours, to get his partner to come only through his tongue play, but these meetings were too rare. So after a few minutes, in which he had enjoyed the man’s trembling, groaning, and backward pushes, he gently withdrew and replaced his tongue with one of his long fingers.</p><p>Only for this he had learned a wandless lubrication spell an eternity before.<br/>
+His slippery finger penetrated smoothly, albeit slowly and deliberately, the man below him.<br/>
+Severus lazily worked his finger through the tight muscle ring again and again, pulling back quickly as he lay halfway on and half beside the short man.<br/>
+Who had now degenerated into a trembling, moaning muscle mass, completely subjected to the Potions master.<br/>
+It was wonderful!</p><p>In the darkness, his partner found his free hand and held on tightly from the second Severus cautiously thrust a second finger into him.<br/>
+Merlin, he was so tight! The long-haired man could hardly wait to replace his fingers with his hard cock. But he wouldn’t hurt him if he could prevent it. Before that, he added his third finger.<br/>
+As he changed the angle of his hand, he knew that he had found the short one's prostate, because he jumped violently and then pulled Severus' hand to his mouth, where he bit his finger gently.<br/>
+"Now! Please!" he demanded with moist lips against the fingers of the long-haired, who didn’t need to be told twice.</p><p>With a flowing movement, he withdrew his fingers completely from his ass, which was acknowledged with a bite in the back of his hand, then rolled completely onto his companion and got into position without loosening their hands from each other. He liked it somehow that his partner was seeking support in him.<br/>
+Then he entered the stranger’s body as if in slow motion.<br/>
+He couldn’t help but let his head slump forward until he came to rest between his partner’s shoulder blades and he could press his lips against the salty skin.</p><p>After three months of abstinence, he really could no longer call himself impartial, but it still felt indescribable to him.<br/>
+He didn’t think it had ever felt like coming home when he slid into another man, but that was what he felt now with him.<br/>
+It was an overwhelming mix of emotions and impressions.<br/>
+Intoxicating and scary to the same, Severus loved every second!</p><p>It wasn’t hard to find his prostate again and soon he met it every time he invaded him.<br/>
+Severus had the impression that the man was now barely able to control his body; the pressing back on him and twitching had become purely intuitive.<br/>
+But he kept the rhythm slow, no matter how much the short one tried to push him to increase his speed, because he knew that sometimes the journey could be the reward, and this long, drawn out love-making could satisfy them more deeply than any hasty orgasm ever could.<br/>
+He wouldn’t want to trade this moment for anything in this world!</p><p>He reared up under him as Severus slowly twisted his hips, penetrating him all the way.<br/>
+"I can’t take it anymore!" the shivering man said hoarsely. "Please! You drive me out of my mind"<br/>
+Severus smiled, then he took pity, already too close to his orgasm to prevent it from happening any longer. He closed his arms around him, held him firmly against him, and then pushed himself with all his force into the damp heat.<br/>
+"Then don’t hold back," he growled breathlessly into the ear of his companion. "Come for me!"<br/>
+Severus was able to bury himself three more times, then the body in his arms began to writhe and the man whimpered, pulling the Potions Master's fingers into his mouth.<br/>
+He came untouched and dragged the long-haired with him over the cliff of salvation.</p><p>It was quite possible that Severus vision had briefly gone black, but in the darkness of the room he couldn’t be sure.<br/>
+But when he returned to earth from his high, his partner had somehow turned under him and caught him in a gentle hug. The former teacher could sense the tiredness that he now felt in every sluggish movement of the man beneath him. Nevertheless, he didn’t hesitate to stroke Severus back and through his hair.</p><p>That's how it had to be, right? In a real relationship it would look very similar, like now?<br/>
+Petting, without any reason. Without further ulterior motives, because what else could the short man want from him?<br/>
+He already got two orgasms from him. He could just turn away and wait for the Portkey to carry him away from here, as all the other men had always done. But he didn’t.<br/>
+He held on to Severus, giving him more than just sexual pleasure, and Severus suddenly felt desperate!</p><p>As hard as he could, he clung to the man, never wanting to let him go.<br/>
+'Mine!' shot through his head. 'He’s mine! You just can’t take him away from me! '<br/>
+He began to tremble again, but not with excitement this time.<br/>
+His companion, sensing that something was wrong with him, wrapped his arms and legs tightly around the body lying on top of him.<br/>
+"Shh. Everything is all right!“, he murmured insistently.<br/>
+He couldn’t have guessed that this would upset Severus even more. Maybe he chose the wrong partner for the night. This was too much, it was too real and too close!<br/>
+"Did I do something wrong?" asked the young man, still out of breath.<br/>
+And though he couldn’t hear what the man said when he whispered like that, he heard concern nevertheless.<br/>
+Severus shook his head.</p><p>Instead of giving him an answer he probably deserved, Severus raised his head and pressed his lips against his to initiate another deep kiss.<br/>
+He tried to express all his wishes into this kiss, in the hope that the man would understand him, even without having to embarrass himself by verbalizing them.<br/>
+Their time together would soon end, and he didn’t want to waste the last few minutes wallowing in self-pity, but enjoy what he had experienced tonight, even though his yearning for more would slowly kill him in the weeks ahead.</p><p>The Potions master couldn’t tell how long they kissed, until finally the dull gong sounded again and Severus was suddenly wrapped in his bathrobe again.<br/>
+He already missed the warmth of the stranger on his.<br/>
+Hastily he parted from his partner. "I'll be back in three months!" he whispered as a clear invitation. It was the last thing he could do, he got no answer, because the next moment everywhere in the room the faint glow of the bracelets gleamed and the men were all torn away from each other</p><p>Severus arrived alone in his brightly lit bathroom.<br/>
+Blinded he buried his face in his hands and groaned.<br/>
+Staggering, he scuffled into his bedroom and dropped on the soft mattress.<br/>
+He lay there in the darkness, staring at the ceiling. In another situation, the night could have been perfect and he would surely have fallen asleep happily long ago. He had felt loved, needed and especially wanted. He hadn’t expected that much before the evening.<br/>
+But the fact that he was now alone in his huge bed hurt in a way he could hardly describe, no matter how satisfied his other needs might be.</p><p>In the end, it was only the hope for another meeting with the short man in three months, at the next dark room event, which prevented the long-haired from crying himself to sleep that night.</p><p>oOoOoOoOo</p><p>Harry couldn’t help but turn in front of his bedroom mirror and look at himself from all sides. Never in his life has he felt as attractive as now, where hundreds of hickeys and love bites adorned his body.<br/>
+A hot shiver ran down his naked skin as he recalled how they had gotten there.<br/>
+By Salazar, if he hadn’t worn the clear evidence of the last night on his own flesh, he probably would have mistaken it for a dream.</p><p>But it had been real and it had been amazing.<br/>
+The green eyed couldn’t deny that he had been a little intimidated when he arrived in the dark hall. He had felt terribly defenseless, so completely naked and without his wand within reach.<br/>
+Therefore, he had remained a little at the border at the beginning, had listened and waited briefly for the springing of a trap. But that didn’t happen, instead there were gasps and smacking and groaning and grunts and, Merlin, it was just hot!</p><p>When he finally overcame his timidity, he first met a couple who had already been shagging, but had without further ado included him when they had felt his hands. But since he didn’t want to share the attention of his partner, he had continued his search.</p><p>And there he had found him! The prince with the long and soft hair, the scarred neck and the bewitching herbal scent.<br/>
+It might be ridiculous, but Harry had already started calling him a prince in his mind. Princes had long hair, hadn’t they?<br/>
+And who could kiss like that just had to be a prince!<br/>
+Harry shuddered again, remembering what the foreign man had done to him yesterday, and he could watch himself in the mirror getting hard.</p><p>Previous to yesterday, the Gryffindor had always considered Vas an experienced lover, but his ex was nothing compared to the prince!<br/>
+The strong arms, the elegant and slim body. The hot lips that had robbed him of the ability to think straight. The clever tongue that had done things he didn’t even dare to speak out loud in the daylight.<br/>
+Harry had gone to this dark room event, expecting to get a good fuck. How could he have expected the devotion, tenderness and depth? How could he have prepared himself for the longing that echoed in each of their kisses? How could the prince know what exactly Harry needed?<br/>
+Or had it been the prince's needs that had transferred to Harry?</p><p>And then this last kiss!<br/>
+Harry dropped to his knees in front of his mirror and grabbed his throbbing erection. With practiced movements he drove himself quickly to his climax, recalling the kiss in his head again.<br/>
+The stranger didn’t know him at all, but with that kiss he had shown Harry that he wanted him, that he needed him, and how much he would give.<br/>
+Harry came with a trembling scream over his hand and the floor, the man's words still in his ears. "I'll be back in three months"</p><p>His prince could be certain that he too would come back and hopefully he would have the luck to find the long-haired in the crowd of strangers!</p><p>oOoOoOoOo</p><p>Severus laid the Daily Prophet, in which he had read until a few seconds ago, on the table in front of him and stirred lost in his thoughts his morning coffee.</p><p>A large portrait photo of Harry Potter stared up at him from the newspaper and the former teacher could barely avert his gaze from these eyes.<br/>
+The green emeralds that the young man called his own, and who had much less in common with Lily’s than he used to think, looked strangely mesmerizing to the long-haired.<br/>
+They were also the real reason that the potions master had even become aware of the article about the Chosen one.</p><p>The report was about the claim of a young woman to have been knocked up by the beloved hero.<br/>
+This statement caused quite a sensation a few days ago.<br/>
+Severus could only shake his head about it. Apparently, the wizarding world had already repressed the account of Potters homosexuality four years ago. For the long-haired, on the other hand, was the revelation still firmly etched into his mind, however reluctant he might admit.<br/>
+The narrative of Potter’s disgusting ex-boyfriend and his shrewd reaction had worked too well together.</p><p>In this story, however, from the beginning to the end, nothing added up, so the claim of the dubious lady could only be a big and rather brash lie.<br/>
+And today's article had confirmed his belief.<br/>
+In truth, the unborn child was originated from Zabini Blaise. Even at school, the Slytherin couldn’t keep his dick in his pants, where it belonged.<br/>
+The expectant parents had hoped that with this bad story to part Potter from a decent amount of his cash.<br/>
+Stupid that the green eyed hadn’t played along.<br/>
+There was something stirring in Severus that came close to feeling proud of the Gryffindor.</p><p>At first, the young man simply hadn’t commented on the accusations, but pulled the strings behind the scenes and thus got a paternity test in a quick procedure.<br/>
+Which of course was negative, what else?<br/>
+There was a quote from him that was bursting with self-confidence: "I’ve slept with only one person in the last three years. I can assure you that I would prefer the company of this man to every single woman on this planet, and even if wizards could conceive, I would be the one to deal with conception. So I'm not worried and the ladies might want to keep in mind that I'm gay, even if it might be hard for them! "</p><p>This statement had caused turmoil and speculations.<br/>
+Not because Potter had finally come to appreciate sarcasm and black humor, as Severus kindly ascertained, but because of the aforementioned man.<br/>
+Only one partner in three years? So Potter is going steady? Who was the man that could conquer the hero? And how did they get to know each other?<br/>
+Severus had instantly lost interest in the shoddy article.</p><p>And yet his gaze was still caught up in the photo.<br/>
+His former student looked good, his eyes had a dark glow, and the corners of his mouth didn’t manage to hold back a mischievous smile.<br/>
+In the last few years he had simply matured.<br/>
+His appearance had become more relaxed. The tousle-head had finally learned to ignore rumors and bounce provocations off.</p><p>Five months ago, when they coincidental met at the Ministry, they had been able to receive each other in a friendly way and to exchange some nice words.<br/>
+Severus had appreciated the conversation.<br/>
+Potter had become a desirable man and Severus wished for him that his partner appreciated him.<br/>
+The hero deserved it!</p><p>Eventually he put the newspaper aside and took the last sip of his coffee. Potter could certainly have any wizard he wanted and yet he seemed to have already committed himself.</p><p>Severus wondered if the man from the Dark Room was in a relationship. The long-haired man still couldn’t assess the man's motives for attending the meeting.<br/>
+Reluctance stirred in him, as he tried to imagine how the short man voluntarily went into the hands of many different men, which made no sense, because firstly, he didn’t really know the man and secondly, he had done the same thing in the last few years himself! So he had no right to judge the short man.</p><p>And yet, something inside him was balking at the idea.<br/>
+Maybe it was because his man had been so incredibly sensitive. Someone who responded so intensely to all caresses probably didn’t have too much experience.<br/>
+Only at the thought, that he might have been the first in years, maybe even the first man ever to touch the man that way, he got hard.<br/>
+He had to get relief this morning, even before he could open his apothecary for the daily madness.</p><p>oOoOoOoOo</p><p>Pure relief flooded Harry as he finally closed the bookkeeping. He hated math! And that didn’t get any better because the subject hadn’t been taught at Hogwarts.<br/>
+Good that he could always count on Hermione, who had taught him everything necessary to keep the shop running.</p><p>Groaning, he stood up and went to his small office window, which pointed directly at Diagon Alley. He sniffed appreciatively his herbal tea and looked out. There is a vibrant hustle and bustle, as always. From here he could see George's shop, which had been overrun by teenagers again. The summer holidays had started! Until the end of it, the one-eared was going to have barely a spare minute. But that's how the whirlwind liked it best, as Harry knew very well.</p><p>He had still been standing at the window, looking at people when a familiar figure caught his eye.<br/>
+Severus Snape wound his way through the crowds. Even though the spy was still a long way off, the Gryffindor had no trouble identifying him.<br/>
+The flowing, elegant cloak; the long, black hair; the floating, predatory gait. It couldn’t be anyone else!<br/>
+Harry had always admired and envied his former teacher for his demeanor. He didn’t know anyone who had the same effect on entering a room as Severus did. And he didn’t know anyone who could disappear so well into the shadows nevertheless.<br/>
+While he had finished his graduation, he had tried for a while to imitate Snape's gait, but failed miserably. At least Ron had something to laugh about.</p><p>And yet he noticed something else about the man.<br/>
+It wasn’t that their fellow humans went out of the way of the dark-haired man. Snape hadn’t had a bad reputation for a long time; Harry had taken care of that. But the long-haired himself seemed to avoid any contact. If someone came too close, he immediately withdrew.<br/>
+He didn’t allow for touch.<br/>
+At school, Harry had been watching this worriedly.<br/>
+Seeing the same phenomenon now made him wonder why the man hadn’t left this protection mechanism behind.<br/>
+It used to be a necessity for the spy to keep everyone at a distance, Harry realized. If he had let someone close to him, if someone had learned of his task, his life would have been in the greatest danger. But his everyday life had changed now.</p><p>Harry marveled if Severus might feel lonely.<br/>
+Could it be that the long-haired wasn’t even aware that he himself was the reason for his isolation?<br/>
+Snape was stopped only a few yards away from Harry's shop by an old witch. The green-eyed man watched as Snape listened politely and answered after a while, the witch seemed to jump for joy.<br/>
+Snape smiled, but it looked stiff and fake.<br/>
+Harry wondered what had to happen to make the man laugh honestly. Maybe he should just go out and hug him firmly and surprisingly from behind. Sometimes a hug could work wonders!</p><p>Then, however, he shook his head decisively. Harry was suddenly certain, that a simple hug wouldn’t help against real loneliness<br/>
+That was what his prince had shown him. Harry himself had often been lonely in the last three years, even though he had a self-chosen family and fantastic friends.<br/>
+In the nights he still went to bed alone. No one who could warm him in cold nights, no one who looked after him when he wasn’t feeling well, no one he could love.<br/>
+That was what his prince missed, too; otherwise he would never have kissed him so longingly. And Harry guessed that was exactly what Snape was lacking! A loving partner.</p><p>But Harry couldn’t be that for him, even if he had wanted to. That had nothing to do with Snape's exterior. Although many would never believe him, he found Severus quite attractive.<br/>
+It was Snape who wouldn’t want him, there had just been too much between them, even though they now had found a friendly base.<br/>
+Besides, Harry had every intention of finding his prince again!<br/>
+The long-haired man was finally able to tear himself away from the lady and disappeared in the crowd with a waving cloak.<br/>
+Harry gazed after him. He wished the man luck finding his love. He had more than earned it!</p><p>There was a soft knock on the door, then Luna came in.<br/>
+"Harry, Makita just brought a letter for you. Very nice color! I think I'm going to design a dress in that color hue" the blonde warbled dreamy, handing Harry a cherry-red envelope.<br/>
+This put a broad smile on the face of the green-eyed.</p><p>oOoOoOoOo</p><p>As Severus came home six weeks after the Dark Room Event, he immediately found the cherry-red envelope on his doormat, which could only mean one thing.<br/>
+Avidly, he tore the paper apart and found in it the long-awaited invitation to the next Dark Room. He scanned the contents briefly.<br/>
+This time it was the 17.9 at 20:00 clock. That was a Wednesday evening, if he remembered correctly.<br/>
+But didn’t he already have to be at an event on that day?</p><p>For a moment, panic stirred in him. He definitely didn’t want to miss the chance to meet his short one again.<br/>
+But he was lucky. It was the 27.9, which was already planned.<br/>
+That night he had to attend a fundraising gala at the Ministry, that’ll be dull as dishwater, but Draco had insisted on his presence.<br/>
+And since his godchild had organized the event, Severus had let himself finally be persuaded, even if he wasn’t happy with it.</p><p>He immediately filled out the application as usual, but this time it wasn’t just the sex with strangers that he looked forward to. Actually, it was just the sex with the short man he was looking forward to, and the kissing and caressing.<br/>
+Merlin, he even missed the smell of leather, which is why he had recently bought some leather gloves. Which was completely stupid, considering it was midsummer.<br/>
+He was really an idiot!</p><p>But he couldn’t help it, that over the past six weeks his thoughts had drifted again and again to the events in the darkness. The stranger had given him masturbation material for years and probably didn’t even know it!</p><p>He sent the application back and then took care of the household before settling down for dinner.<br/>
+It was just after nine, Severus was sitting in his living room reading a novel, as his eagle owl returned.<br/>
+This time, the new bracelet was made of red silk threads, in which green beads had been incorporated. It almost cries out for Gryffindor and Slytherin colors combined.</p><p>The potions master just snorted in amusement, then putthe piece of jewelry on. It was the meaning and the promise behind it that counted, not the ridiculous colors!<br/>
+By Salazar, he just had to find him again!</p><p>Just before he wanted to go to bed another idea flashed through his mind. It might be forbidden to use spells in the Dark Room that made him able to see, but there was never any other magic mentioned, was there?<br/>
+There might be a pretty good opportunity to help his luck a little bit! After all, for what else was he one of the best potions masters in the country?<br/>
+Felix Felicis! Felix could help him to find the short man.</p><p>That night, the long-haired man didn’t get any sleep. He spent the hours over his cauldron, a big smile on his face and the anticipation clearly recognizable.</p><p>oOoOoOoOo</p><p>Like last time, Harry landed in deepest darkness.<br/>
+Finally, finally, finally!<br/>
+After the dizziness had settled halfway, he noticed that he wasn’t standing on thick cushions this time, but on a fluffy carpet. Apparently, the venue changed from time to time. Maybe it was better that way, because Harry wasn’t sure how legal it was in the wizarding world to earn his living with sex orgies, and so it was definitely hard to track them down.</p><p>Grinning, he buried his bare toes in the soft wool and then opened himself to the mood in the room.<br/>
+Today, it seemed stronger to him, he already knew what to expect. He certainly didn’t feel shyness.<br/>
+Instead, the atmosphere had an electrifying effect on him, and he thoroughly enjoyed sliding his hand into his crotch and helping the fast-growing erection to full glory with purposeful movements.<br/>
+Three months was way too long between two events! Maybe he should write to the Dark Room Erotica team and suggest more frequent dates.</p><p>But all that was now subsidiary, because Harry knew perfectly well that his prince had to be somewhere in this room!<br/>
+"Welcome gentlemen!" greeted the same gentle woman's voice as three months ago, and Harry grimaced. The voice reminded him too much of Luna. Not sexy at all!<br/>
+Harry didn’t fully listen to her; the excitement inside him was too big for him to concentrate.<br/>
+But as the gong sounded, he immediately began to blunder about. He really hoped that the prince had kept his promise and appeared, but the odds of missing him were likely high.<br/>
+Merlin, he didn’t even know how many men had gathered here. Nevertheless, he wanted to try it.</p><p>He followed his nose.<br/>
+This also told him right away that he could make a big bow around the first two men. His prince would never put that much perfume on! He wished all at once that his sense of smell wasn’t so stunted. He wasn’t sure that he would recognize the desired herbal odor without doubt.<br/>
+Three times, he had already thought to have inhaled the erotic scent, but when he reached for the corresponding men, he had to realize that he had been wrong. No long hair, no deep furrows in the slender neck.<br/>
+With a nose like Snape's, that wouldn’t have happened!</p><p>Meanwhile about 10 minutes had already passed.<br/>
+Harry could already hear loud moaning and the unmistakable sound of naked bodies rhythmically striking each other. Like last time, he wondered about the hurry some people seemed to have. A slow seduction was much better than a quick in and out.<br/>
+The longing in Harry's chest intensified again.<br/>
+He continued his research, brushing past men and immediately leaving them if they didn’t have the traits he sought.<br/>
+More minutes passed. If he didn’t get his arse in gear soon, he might run out empty-handed this evening.</p><p>He stopped. The green-eyed man felt torn.<br/>
+He was definitely here for the prince, but if he couldn’t find the man, it would be a waste not to seek another partner. After all, he had paid for this and he had promised the stranger nothing!<br/>
+Still, it somehow felt like betrayal for Harry!<br/>
+He sighed and wanted to go in search of the next man, when he was suddenly embraced by tight, strong arms from behind and he was pulled against a warm chest.<br/>
+A hot length pressed between his buttocks, demanding his attention.</p><p>The Gryffindor shuddered violently as he drank in the mixture of sage, chamomile and peppermint. The tousle-head knew instantly that he had more luck than a person in his entire life deserved.<br/>
+"Found!" growled a voice soundlessly.<br/>
+Harry couldn’t help but sigh blissfully. Then he spun around and downright threw himself onto the other man. He had spent three months longing for this body and the persuasiveness that he inhered.<br/>
+He needed him now! And immediately!<br/>
+All at once he understood why the others were in such a hurry.</p><p>His lips found those of the prince, and he groaned as his tongue instantly found access to Harry's mouth.<br/>
+They staggered against each other and the young man handed over the lead to the taller man again, at least for now.<br/>
+He had made some plans for tonight!<br/>
+The prince led them, like the last time, out of the crowd until they had some privacy.<br/>
+The green-eyed took the first chance he had and dropped to his knees in front of the man. In the last nights he had often dreamed of doing this!</p><p>Slowly he leaned forward, pushing his face appreciative into the man's crotch and inhaling. He smelled nice, clean and manly.<br/>
+The prince shuddered as he understood what Harry was about to do. In next to no time, his hands were buried in Harry's hair.<br/>
+The kneeling man grinned, and then for the first time he licked devotedly over the hot shaft, which he had previously ignored.<br/>
+The long-haired cried out, and it was only now that Harry realized how dark his voice normally must be when speaking. That was hot!<br/>
+He repeated the movement and the foreign hands clawed briefly at his scalp, but relaxed again as if he didn’t want to hurt him.</p><p>But Harry just started! Even before the long-haired could realize it, the green-eyed had taken him completely into his mouth. The cock twitched in the moisture of his mouth, and he could taste the first drops of precome.<br/>
+That was deeply erotic!<br/>
+He gently slid his hands up the strong legs of the man, then grabbed him firmly by the butt. It was much easier for him to keep his balance and control the man's movements.<br/>
+In addition, the guy had a delightful butt, as he was pleased to discover.</p><p>Slowly he increased his pace and became bolder.<br/>
+He let his tongue slither under the foreskin of the man and teased the tip of his cock; the legs of the man trembled so suddenly that they threatened to give away beneath him.<br/>
+But Harry no longer knew mercy. Once again he increased the speed of his movements, whirling his tongue around the hot manhood and imitating to swallow.<br/>
+As his prince moaned harder and could barely hold back just thrusting unconditionally into his throat, Harry grabbed his own erection and began to work with fast, practiced jerks.<br/>
+The next time the slender fingers dug into his scalp, Harry knew that there was no way back.</p><p>The prince's knees buckled slightly, but the green-eyed man held him upright with all his might as he came into Harry's mouth with a deep groan.<br/>
+Even as Harry swallowed, he felt his own orgasm racing closer and he finally spilled his semen over the carpet and feet of the man, with a whimper of his own.<br/>
+Exhausted from his orgasm, his strength faded and the prince and he collapsed. Together they came to rest on the floor.<br/>
+The long-haired man was sweaty and breathing fast, but that didn’t bother the Gryffindor at all. He cuddled trustingly on the man's chest and listened to his heartbeat for a while.</p><p>Soon his fingers stroked his short hair.<br/>
+"What a greeting," the prince mumbled softly. The green eyed man heard the contentment only too clearly. He chuckled softly.<br/>
+"My pleasure," he replied ingenuously. "I was hoping to meet you again tonight. I was looking for you. After the last time I often dreamed of a recurrence! "<br/>
+He had spoken without worrying about the volume of his words or the meaning behind them.<br/>
+He knew, however, right away that he had done something wrong when the man grew stiff beneath him and sucked in a sharp breath. In the next second, the prince suddenly tried to get away from him and wriggle out from under him.</p><p>Harry panicked. What had he done wrong?<br/>
+"Wait! I'm sorry!" he pleaded, wrapping his arms tightly around the foreign and yet familiar body beneath him. The man remained silent and seemed to wait. "I didn’t mean to be brash. Just forget my words. Please, don’t go away!"<br/>
+The man remained motionless, Harry trying to soothe him by letting his hands stroke over all the skin he could reach and spread kisses over the man's neck.<br/>
+After a minute, the other spoke flatly. "What exactly are you looking for here? What are your motivations to participate in these events?"<br/>
+Harry sighed softly. So that was the problem? He didn’t want to talk about it, but if the stranger feared that he was becoming too attached, at least part of it would have to be revealed.<br/>
+But before he answered, he made himself comfortable again on the long-haired man's chest.</p><p>"My life is complicated. I can’t find a partner because nobody seems to see beyond my money and my name. Nobody wants to get to know my true self. I tried and failed catastrophically. But a life without sex is ... boring! Nevertheless, I would rather have sex with one and the same person than with hundreds of different men. And you are a sex god! "<br/>
+He spread more kisses over the man's neck, licking over the tempting scars that just felt intriguing. He had long discovered that he had a scar kink.<br/>
+The prince was silent again, but seemed to have relaxed.<br/>
+"Does it make me a bad man that I can’t forgo any interpersonal and physical contact? Maybe I'm weak, but nobody is perfect"<br/>
+"No!" The prince suddenly said. His voice was tight, as if he were close to tears. "No, it does not make you a bad man, just a lonely one"</p><p>The man's arms came up to him and embraced him. The next second, Harry found himself on his back, the weight of the long-haired man above him.<br/>
+Then longing lips met his. If their kisses were already unbelievable, they were now melting his heart. It didn’t take long before Harry got hard again under the sheer tide of emotion that resonated with it.<br/>
+He whimpered and wrapped his legs around the other's hip. As he slid his fingers to his butt, he found a surprise.</p><p>"I've already prepared me for you at home" Harry whispered explanatory and licked the ear of the long-haired, who commented this with a purr.<br/>
+"I would like to ride you today, if I may." The long groaning and turning around again was answer enough for him. Harry didn’t even think long, but raised his hip slightly. The prince positioned himself and assisted the green-eyed man to sink slowly onto the plump cock.<br/>
+He was wider than Harry remembered, but also so much better than he could dream of. Simply nothing could compare with this.<br/>
+To get used to feeling that full, he let his pelvis circle a few times leisurely. He was briefly annoyed that it was so dark here. He would have liked to look into the prince’s face now, who was contently groaning.</p><p>"Merlin, it just feels so good to have you in me!" the tousle-head whispered quivering.<br/>
+He started a slow rhythm that went all the more deeper. Consistent and devastating, enchanting and awesome.<br/>
+If he could take in the other man a little further, they would certainly merge and never separate again.<br/>
+Or at least it felt like it, while the dick in his ass repeatedly rubbed over his prostate and produced feelings of pure happiness.</p><p>His hands were clenched into his hip, and Harry could already feel his legs twitching. His torso wound himself under Harry's, rearing up.<br/>
+As the man started thrusting into him from below, Harry couldn’t help but lean forward and start another wild kiss.<br/>
+But what really kicked him over the edge was the moment when the prince raised a hand to his throat and  squeezed lightly. Adrenaline flooded his body in one go, coupled with the happiness in his blood and the knowledge that the man didn’t really want to hurt him.<br/>
+In the next second, Harry contracted into a quivering, trembling mess and he came all over the prince's belly.</p><p>It wasn’t until he came down from his high that he noticed that the long-haired man was pushing himself into him with deep, quick thrusts, his arms clasped around Harry's torso.<br/>
+With a throaty cry, he came moments later and spilled his seeds into the green-eyed. The Gryffindor tried to capture the scream in his mouth. However, it only ended in another round of snogging, albeit a slower one.<br/>
+He smiled into the kiss.<br/>
+When they finally parted, Harry wanted to slip away from his prince, but the latter continued to hold him.<br/>
+"Stay where you are," he breathed in Harry's hair.<br/>
+So he did just that. Here he felt most comfortable anyway and fuck the mess he had made! He stroked his hands over the other's skin, trying to memorize every bump.</p><p>The gong sounded way too fast afterwards.<br/>
+He had the feeling to be bereft.<br/>
+But then the next shock came. His prince took his face one last time into his hands, gave him a gentle kiss, then he whispered stifled: "Farewell!"<br/>
+"What? Why?" he asked hurt, but he didn’t get an answer anymore, as the Portkey carried him away.</p><p>He crashed too hard onto the floor of his bedroom, his legs just buckled under him and he fell.<br/>
+Why? It had all been good towards the end, so why 'farewell'? That sounded in his ears extremely like a final parting. Was it so bad that he wanted to build a little familiarity with the man he slept with regularly?<br/>
+Or was the prince just not interested in sleeping exclusively with him? Had he got bored of Harry?</p><p>He felt the first tears beginning to run down his cheeks. He couldn’t understand that, but inexplicably this hurt even more than the betrayal of Vas!</p><p>oOoOoOoOo</p><p>Severus dropped heavily into his reading chair and buried his face in his hands. Something like this could really only happen to him! He didn’t know whether he should laugh or cry.</p><p>Harry Potter! His short one was none other than Saint Potter, the damned Chosen One and war hero himself.<br/>
+The Potions master had almost been given a heart attack when he recognized the young man's voice. Perhaps he would never have noticed if he hadn’t had Felix in his mind, he had immediately whispered the name assigned to the voice while Severus had wondered why it seemed strangely familiar to him.<br/>
+That was really unbelievable! He had slept with Harry Potter and enjoyed it more than a little bit! For even three months, he had longed to be with the man again.</p><p>Who could ever have expected the Gryffindor to be such a gracious and skillful lover?<br/>
+That Potter was a bottom, he had already read in the newspaper article from months ago, but this was just too much.<br/>
+Then something else came to mind.<br/>
+'I've slept with only one person in the last three years. I can assure you that I would prefer the company of this man to every single woman on this planet. '<br/>
+Had this been a lie? It just couldn’t be that the green-eyed man had meant him. The guy could have anyone. It was simply impossible for him to have lived like a monk for three years.</p><p>Potter himself had told him that life without sex was boring.<br/>
+So had he really lived for three years without it, only to run into him when he first takes part in the Dark Room Eroticas?<br/>
+That would be just too much of a coincidence. It couldn’t be that fate played so cruelly with him. Potter must have lied to the reporters.<br/>
+But in stark contrast to this was the sensibility of the young man. Severus himself had suggested that his companion was quite inexperienced and therefore sensitive.<br/>
+This situation really made him want to tear his hair out!</p><p>He looked up, and the first thing he saw was the leather gloves he had recently bought.<br/>
+Of course Potter smelt of leather, he produced daily capes and vests and trousers and what else not with the material. Stupid, that he didn’t notice that earlier!<br/>
+Merlin, he was really up shit creek!<br/>
+He knew he had been well on the way to fall in love with the short man. The fact that he had never seen his face and hadn’t talked to him hadn’t mattered. Sometimes a touch could say more than 1000 words. And Harry's touch had told him so much about him. How could he have ever thought the Gryffindor arrogant and conceited? All his caresses had only spoken of longing and tenderness; his kisses had tasted of love and security.</p><p>Something seemed to break in Severus' chest.<br/>
+Harry would never want him. It didn’t matter what Severus thought he felt for the man. In the last few years, too much had happened between them that Harry could condone.<br/>
+And the worst part was that Severus himself was to blame. It was he who had shouted at him and humiliated the Gryffindor again and again.<br/>
+He had fucked this up himself.</p><p>Harry could never know!<br/>
+If the green-eyed man discovered that he slept with his hated former teacher; if he found out that Severus had slept with him, even though he knew who he was holding in his arms, the man would publicly expose and ridicule him.<br/>
+That mustn’t happen!<br/>
+He wouldn’t go to the dark rooms anymore; from today to the end of his live he would stay alone. Alone, but at least safe!</p><p>His gaze fell on the bracelet on his wrist.<br/>
+He knew he should take it off and throw it away, but he just couldn’t. Nothing else will remain in his life, but no one could take away his memories!<br/>
+He would keep it as a reminder of the brief moment of security he had found in Harry Potter's arms.</p><p>oOoOoOoOo</p><p>"Harry, smile a bit more, what's been going on with you in the last few days?" Hermione said worriedly and ruffled his hair.<br/>
+Harry just grumbled and stirred in his herbal tea, which reminded him far too much of the prince's scent.</p><p>He had no desire to converse, he didn‘t even know why he had let himself be persuaded to come to this stupid fundraiser gala. It would have been easier if he had just sent a check and otherwise drowned himself in his bathtub. Or at least he could have tried.<br/>
+Instead, he had to sit here idle, to smile and be sympathetic, though he wasn‘t in the least interested in the people around him, hoping that none of the reporters would ask him for his opinion on anything</p><p>He took a sip of his tea and in the next second he felt like crying.<br/>
+At the moment everything was somehow reminding him of the prince.<br/>
+Everywhere seemed to be men with long hair.<br/>
+With every deep voice, the green-eyed man inevitably flinched as expectation spread in him. Kingsley had almost given him a heart attack earlier!<br/>
+The tousle-head knew only too well, that this was ridiculous. People didn‘t fall in love with men whom one had never seen, and with whom one had never talked.<br/>
+And yet that was exactly what happened to him! God, he hated his life!</p><p>"Cheer up, mate!" Ron said encouragingly and clapped him on the shoulders. "If it cheers you up, look at Snape. The guy is being felt up by an old drooling witch! "<br/>
+Ron laughed aloud, but Harry didn‘t even turn around.<br/>
+He hadn‘t the slightest interest in making fun of the other man. He stood up. "I‘ll go and get something to eat, I think"<br/>
+He found himself in front of the buffet, just staring at food for minutes without even having a plate in his hand. He first noticed that he was behaving strangely when Luna poked him in the ribs and looked at him with her plate-sized blue eyes.<br/>
+Of course, the blonde had noticed that something was wrong with him. They saw each other daily, working in confined spaces, and Luna had an empathic flair. You couldn‘t hide anything from her. He had told her everything about the prince.</p><p>"You don‘t know it yet, but it's going to be fine, Harry!" she warbled confidently, and the green-eyed man could only shake his head at her certainty. Luna grinned. "How about you go over to Professor Snape? You always like to talk to the man and the professor could use a little cheering up!"<br/>
+"He's not a professor anymore, Luna!" He said, but followed her gaze anyway. In fact, the long-haired seemed to be in a jam right now. The old witch, with whom Harry had watched him in Diagon Alley, stood by him, seeming a bit too pushy.<br/>
+Her flushed cheeks told Harry that the lady had probably had too many of the free sparkling wine</p><p>The Gryffindor had just decided it wouldn‘t hurt to talk to the potions master, a few sarcastic wits might lift his spirits, but that's when it happened!<br/>
+The old woman grabbed Snape tightly by the arm, and as he tried to pull away, his right sleeve slid up automatically. Underneath appeared a bracelet, which Harry knew only too well.<br/>
+Red silk and green glass beads! In his head, several puzzle pieces were linking together and it clicked.<br/>
+The green-eyed man felt himself paling abruptly.<br/>
+"Harry? Is everything ok? You look a bit sick. "<br/>
+"I have to get some fresh air!" he gasped and fled the dance hall in front of Luna's worried look.</p><p>He didn‘t stop until he found an empty balcony.<br/>
+That just couldn‘t be! And yet everything fit so well together that there simply couldn‘t be any other explanation.<br/>
+Snape had long hair, a long nose, scars on his neck and of course he would smell of herbs, the guy had his own pharmacy damn it! The deep voice was additional evidence.<br/>
+Oh my god, he had slept with Severus Snape several times without even knowing it!<br/>
+The bracelet was the best proof that could exist.</p><p>Then he let out a laugh as he realized the full extent of his situation.<br/>
+Severus Snape wasn‘t only the half-blood prince for whom he had a crush during his schooldays, but also his prince.<br/>
+How tremendously exemplary that he had chosen to name the long-haired man his prince.<br/>
+How could it be, that one would fall in love two times with the same man and both times didn‘t know who he was in reality?<br/>
+And how the hell could Snape be the prince? Was there really so much tenderness behind this hardened mask?<br/>
+He could hardly imagine it.</p><p>But if Severus was the prince, why did he say farewell to Harry? Was it because he was too intimate? Had Snape's stupid self-defense mechanism put him to flight?<br/>
+No! He suddenly realized that Snape must have recognized him, that night ten days ago. Of course, Snape had recognized him by the voice as he talked to him, they had shouted at each other for years after all.<br/>
+The question was much more, why Harry hadn‘t recognized the man when he had moaned unrestrained in his ear. On the other hand, he had never heard Snape moan before.<br/>
+Wait a minute, the potions master had recognized him and still he had sex with him! Snape hadn‘t slept with a stranger, but with him, with Harry Potter, his hated ex-student, and the number one nuisance!</p><p>But only after he explained to the long-haired why he had come to these meetings, Harry recalled.<br/>
+Snape had wanted to pull away from him. The man had acknowledged his reasons, perhaps even understood them. Snape knew he was feeling lonely!<br/>
+And now everything fit together. It was probably the man‘s protective mechanism who had led him to withdrawal. He had bid farewell to Harry so that he wouldn‘t recognize him the next or the next but one time.<br/>
+Severus was scared to be rejected by him!</p><p>His heart made a jump and now he knew what he had to do.<br/>
+He tried to look confident as he stepped back into the hall, but inside he died a thousand deaths and his Gryffindor bravery was barely enough. Nevertheless, he managed to persuade his legs to move to the Potions master.<br/>
+The old woman was gone by now.<br/>
+"Good evening, Severus!" he said friendly. His voice fortunately revealed nothing of his agitation.<br/>
+Snape flinched slightly, and when his eyes found those of Harry's, the younger one briefly saw panic flickering in them.<br/>
+"Mr. Potter, how nice. To what do I owe the doubtful pleasure?"<br/>
+His voice sounded distant and aloof as always, but Harry didn‘t buy it. Their shoulders touched slightly. Normally, the former teacher would have long ago backed away, but now he didn‘t even seem to notice how close Harry was to him.<br/>
+There was a smile on the face of the tousle-head.</p><p>"You know, Severus, the only reason I don‘t pounce at you at this very second and fuck you over the next table is that there are a lot of reporters around here. For sure, that would make good copy."<br/>
+The long-haired man blinked. His head seemed to work very fast. "I don‘t have the faintest idea what you are talking about, Mr. Potter, but I would recommend you to stop drinking more of the champagne tonight. One misdirected offer this evening is quite enough. "<br/>
+Harry laughed softly. "Yes, I saw that" he confirmed, letting his little finger glide inconspicuously into the man's right sleeve and brush over the bracelet underneath. "Too bad that I know you're lying at the other point"<br/>
+The long-haired man didn‘t even try to pull his arm away. Instead, he trembled from head to toe as Harry touched him.</p><p>"I can explain!" gasped the man.<br/>
+Harry shook his head. "I don‘t think that's necessary. I didn‘t come here to complain. I'm here because I want to ask you out for a date!"<br/>
+He spoke so softly that only the man next to him could understand him and let his gaze wander unimportantly and calmly through the masses, but his finger was still caressing Severus' wrist, hidden by Snape's billowing cloak.<br/>
+The older man gasped again. "You can‘t be serious!"<br/>
+Harry couldn‘t help but chuckle.</p><p>"Oh yes! I mean it very much. Of course, the normal order is totally twisted. Traditionally, you first go out together before you finally have sex. But when was anything ever normal between us?" he asked cheeky.<br/>
+It was really hard to stand so quiet next to Snape, knowing exactly what they both could do instead and how good that would feel.<br/>
+The Potions master suddenly turned his hand and wrapped it around Harry's finger vice-like. "No! You have no idea what you are getting into. I'm not a man, who you can use and then throw away, Potter! What would your friends say if they see you with me? I also have feelings and I want a partner who can stick by me in public without being ashamed of me. "<br/>
+"Good, whatever you want!"</p><p>Severus' head whirled around as if he had expected Harry to protest more, but he had obviously not expected the Gryffindor side inside the green-eyed one!<br/>
+Already in the next second, the younger had grabbed his former teacher by the collar and pulled down to him. It was the most natural thing in the world for him to press his lips on Severus' for a kiss. They had kissed each other often enough and yet he knew he would never get enough of it.<br/>
+He sighed blissfully and enjoyed the well-known taste of the man.<br/>
+The Potions Master returned the kiss immediately.</p><p>Then hell broke loose around them.<br/>
+Somewhere a woman cried out, and Harry had guessed that it was the drooling witch which had just harassed Snape.<br/>
+The hectic clicking of cameras was approaching menacingly, but Harry didn‘t care.<br/>
+As they parted, Severus looked at him with frank eyes. There was a clear desire and tenderness to see.<br/>
+There was a tingle of anticipation in Harry for all the days he would spend with this man from now on.</p><p>"Look what it brought you, Potter!" the man growled softly but lovingly. "From now on you will never get rid of me again. You are mine now! I don‘t share with anyone!"<br/>
+Harry laughed softly and snuggled against the long-haired man. "I don‘t have any problems with that, but maybe you better get me home quickly before the reporters try to take me away from you"<br/>
+Severus didn‘t need to hear that twice.</p><p>With a whirl of Snape's cloak, the two men had disappeared. Only the journalists were left, almost jumping for joy.<br/>
+The next morning, everyone in the wizarding world knew that Harry Potter and Severus Snape were a couple; the photo of them kissing was on the front page of virtually every newspaper.<br/>
+The two men didn‘t care. In bed, which they wouldn‘t leave anyway for the next few days, they didn‘t hear anything of the hustle and bustle about theirselves.</p></div>
+        <!-- end cache -->
+    </div>
+<!--/chapter-->
+
+    <!--afterword-->
+    <div class="afterword preface group" role="complementary">
+        <!--work endnotes-->
+<div id="work_endnotes" class="end notes module">
+  <h3 class="heading">Notes:</h3>
+  <blockquote class="userstuff"><p>I hope you liked it! If you want, you can leave a comment! I'm always happy about a little feedback ^^</p></blockquote>
+</div>
+<!--/work endnotes-->
+    </div>
+    <!--/afterword-->
+
+  </div>
+  <!-- END work skin -->
+<!-- END work -->
+
+<!-- BEGIN comment section -->
+<!-- Gets embedded anywhere we need to list comments on a top-level commentable. We need the local variable "commentable" here. -->
+<div id="feedback" class="feedback" role="complementary">
+
+  <h3 class="landmark heading">Actions</h3>
+
+  <ul class="actions" role="navigation">
+      <li><a href="#main">&#8593; Top</a></li>
+
+
+
+
+
+
+      <li>
+        <form id="new_kudo" action="/kudos" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="NEGZCiyQ4zntE64DqLVBOt204mRwXIrm7BRiaQAr7f8Y2NiP7cJLxPuheKsNQAM+r20Gr+5r+T16wB3KdXrjnQ=="/>
+          <input value="15589608" type="hidden" name="kudo[commentable_id]" id="kudo_commentable_id"/>
+          <input value="Work" type="hidden" name="kudo[commentable_type]" id="kudo_commentable_type"/>
+          <input type="submit" name="commit" value="Kudos ♥" id="kudo_submit"/>
+</form>      </li>
+
+
+
+
+        <li id="show_comments_link"><a data-remote="true" href="/comments/show_comments?work_id=15589608">Comments (25)</a></li>
+  </ul>
+
+  <div id="kudos_message"></div>
+
+  <h3 class="landmark heading"><a name="comments">Comments</a></h3>
+
+  
+
+    <div id="kudos">
+      <p class="kudos">
+          <a href="/users/Joas_lover13">Joas_lover13</a>, <a href="/users/Emie123">Emie123</a>, <a href="/users/KayyBabe21">KayyBabe21</a>, <a href="/users/Rubybookwyrm">Rubybookwyrm</a>, <a href="/users/Snarrylove143">Snarrylove143</a>, <a href="/users/futureghost">futureghost</a>, <a href="/users/Witchy_Clover">Witchy_Clover</a>, <a href="/users/NogitsuneFox">NogitsuneFox</a>, <a href="/users/Biene80">Biene80</a>, <a href="/users/LoserAkuma">LoserAkuma</a>, <a href="/users/Valya001">Valya001</a>, <a href="/users/MyNekoLove">MyNekoLove</a>, <a href="/users/Jayysstar">Jayysstar</a>, <a href="/users/jamjjoon">jamjjoon</a>, <a href="/users/longtimenospooning">longtimenospooning</a>, <a href="/users/vannalikesgreen">vannalikesgreen</a>, <a href="/users/ChuvaDeCristal">ChuvaDeCristal</a>, <a href="/users/M_Wolf_39">M_Wolf_39</a>, <a href="/users/MaddyMay16">MaddyMay16</a>, <a href="/users/TabzieCat">TabzieCat</a>, <a href="/users/AbigalLaukur">AbigalLaukur</a>, <a href="/users/ElaineofAstolat">ElaineofAstolat</a>, <a href="/users/ActualFandomTrash_SomebodyHelp">ActualFandomTrash_SomebodyHelp</a>, <a href="/users/LadySupersoaker">LadySupersoaker</a>, <a href="/users/ruxicaprince">ruxicaprince</a>, <a href="/users/Hunion75">Hunion75</a>, <a href="/users/May92">May92</a>, <a href="/users/Dearith">Dearith</a>, <a href="/users/wendymarlowe">wendymarlowe</a>, <a href="/users/Popcornapocalypse">Popcornapocalypse</a>, <a href="/users/celtica25">celtica25</a>, <a href="/users/Arkane">Arkane</a>, <a href="/users/Neverlands_potato">Neverlands_potato</a>, <a href="/users/Isobelprince">Isobelprince</a>, <a href="/users/Hufflescout">Hufflescout</a>, <a href="/users/emoeyes31">emoeyes31</a>, <a href="/users/ijg">ijg</a>, <a href="/users/vicslarry">vicslarry</a>, <a href="/users/JPMColor">JPMColor</a>, <a href="/users/Tami_Lane">Tami_Lane</a>, <a href="/users/Melissa_molloy81">Melissa_molloy81</a>, <a href="/users/Fujoshisnarry">Fujoshisnarry</a>, <a href="/users/dawnesha121">dawnesha121</a>, <a href="/users/SailorSayuri">SailorSayuri</a>, <a href="/users/dnt_care_anymore">dnt_care_anymore</a>, <a href="/users/LavenderMalaise">LavenderMalaise</a>, <a href="/users/Harripotter">Harripotter</a>, <a href="/users/GoldMoonFlower">GoldMoonFlower</a>, <a href="/users/dandelion_wishes22">dandelion_wishes22</a>, <a href="/users/Teddyeddyt">Teddyeddyt</a><span id="kudos_more_connector">, and </span><a id="kudos_more_link" data-remote="true" href="/works/15589608/kudos?before=1769314577">161 more users</a>
+             as well as 
+          161 guests
+         left kudos on this work!
+      </p>
+</div>
+
+
+    <div id="add_comment_placeholder" title="top level comment">
+      <div id="add_comment">
+        <!-- expects the local variables comment, commentable, and button_name -->
+<div class="post comment" id="comment_form_for_15589608">
+  <form class="new_comment" id="comment_for_15589608" action="/works/15589608/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="0wws+uNmNyMUoFVeJB7/TeUzdhPS9uFOnkg6U5ul1B//lW1/IjSf3gISg/aB671Jl+qS2EzBkpUInEXw7vTafQ=="/>
+    <fieldset>
+      <legend>Post Comment</legend>
+
+
+
+
+
+
+        <dl>
+          <dt class="landmark">Note:</dt>
+          <dd class="instructions comment_form">All fields are required. Your email address will not be published.</dd>
+          <dt><label for="comment_name_for_15589608">Guest name: </label></dt>
+          <dd>
+            <input id="comment_name_for_15589608" type="text" name="comment[name]"/>
+            <script>var validation_for_comment_name_for_15589608=new LiveValidation('comment_name_for_15589608',{wait:500,onlyOnBlur:false});validation_for_comment_name_for_15589608.add(Validate.Presence,{"failureMessage":"Please enter your name.","validMessage":""});</script>
+          </dd>
+          <dt><label for="comment_email_for_15589608">Guest email: </label></dt>
+          <dd>
+            <input id="comment_email_for_15589608" type="text" name="comment[email]"/>
+            <script>var validation_for_comment_email_for_15589608=new LiveValidation('comment_email_for_15589608',{wait:500,onlyOnBlur:false});validation_for_comment_email_for_15589608.add(Validate.Presence,{"failureMessage":"Please enter your email address.","validMessage":""});</script>
+          </dd>
+        </dl>
+        <p class="footnote">(Plain text with limited HTML <a class="help symbol question modal" title="Html help" aria-controls="#modal" href="/help/html-help.html"><span class="symbol question"><span>?</span></span></a>)</p>
+
+      <p>
+        <label for="comment_content_for_15589608" class="landmark">Comment</label>
+        <textarea id="comment_content_for_15589608" class="comment_form observe_textlength" title="Enter Comment" name="comment[comment_content]">
+</textarea>
+        <input type="hidden" id="controller_name_for_15589608" name="controller_name" value="works"/>
+      </p>
+      <p class="character_counter"><span id="comment_content_for_15589608_counter" class="value" data-maxlength="10000" aria-live="polite" aria-valuemax="10000" aria-valuenow="comment_content_for_15589608">10000</span> characters left</p>
+      <script>var validation_for_comment_content_for_15589608=new LiveValidation('comment_content_for_15589608',{wait:500,onlyOnBlur:false});validation_for_comment_content_for_15589608.add(Validate.Presence,{"failureMessage":"Brevity is the soul of wit, but we need your comment to have text in it.","validMessage":""});validation_for_comment_content_for_15589608.add(Validate.Length,{"maximum":"10000","tooLongMessage":"must be less than 10000 characters long."});</script>
+      <p class="submit actions">
+        <input type="submit" name="commit" value="Comment" id="comment_submit_for_15589608" data-disable-with="Please wait..."/>
+      </p>
+    </fieldset>
+</form></div>
+<div class="clear"></div>
+
+      </div>
+    </div>
+
+  <!-- If we have javascript, here is where the comments will be spiffily inserted -->
+  <!-- If not, and show_comments is true, here is where the comments will be rendered -->
+  <div id="comments_placeholder" style="display:none;">
+  </div>
+
+
+</div>
+<!-- END comments -->
+
+<!-- END comment section -->
+<!-- END revealed -->
+
+
+
+          <div class="clear"><!--presentational--></div>
+        </div>
+        <!-- END main -->
+      </div>
+      <!-- BEGIN footer -->
+<div id="footer" role="contentinfo" class="region">
+	<h3 class="landmark heading">Footer</h3>
+  <ul class="navigation actions" role="navigation">
+    <li class="module group">
+      <h4 class="heading">About the Archive</h4>
+      <ul class="menu">
+        <li><a href="/site_map">Site Map</a></li>
+        <li><a href="/diversity">Diversity Statement</a></li>
+        <li><a href="/tos">Terms of Service</a></li>
+        <li><a href="/dmca">DMCA Policy</a> </li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Contact Us</h4>
+      <ul class="menu">
+        <li><a href="/abuse_reports/new">Report Abuse</a></li>
+        <li><a href="/support">Technical Support and Feedback</a></li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Development</h4>
+      <ul class="menu">
+          <li><a href="https://github.com/otwcode/otwarchive/commits/v0.9.300.1">otwarchive v0.9.300.1</a></li>
+        <li><a href="/known_issues">Known Issues</a></li>
+        <li><a href="http://www.gnu.org/licenses/gpl-2.0.html" title="View License">GPL</a> by the <a href="http://transformativeworks.org/" title="The Organization for Transformative Works">OTW</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!-- END footer -->
+
+    </div>
+    <!-- check to see if this controller/action allow tinymce before we load the gigantor js; see application_helper -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js" type="text/javascript"></script>
+<!-- if user has googleapis blocked for some reason we need a fallback -->
+<script type="text/javascript">if(typeof jQuery=='undefined'){document.write(unescape("%3Cscript src='/javascripts/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));document.write(unescape("%3Cscript src='/javascripts/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));}</script>
+
+
+<script type="text/javascript">$j=jQuery.noConflict();</script>
+<script src="/javascripts/jquery.scrollTo.min.js"></script>
+<script src="/javascripts/jquery.livequery.min.js"></script>
+<script src="/javascripts/rails.js"></script>
+<script src="/javascripts/application.js"></script>
+<script src="/javascripts/bootstrap/bootstrap-dropdown.min.js"></script>
+<script src="/javascripts/jquery-shuffle.js"></script>
+<script src="/javascripts/jquery.tokeninput.min.js"></script>
+<script src="/javascripts/jquery.trap.min.js"></script>
+<script src="/javascripts/ao3modal.min.js"></script>
+<script src="/javascripts/js.cookie.min.js"></script>
+
+<script src="/javascripts/filters.min.js"></script>
+
+
+  <script>function isSupported(){var item="localStoragePolyfill";try{localStorage.setItem(item,item);localStorage.removeItem(item);return true;}catch(e){return false;}}function acceptTOS(){if(isSupported()){localStorage.setItem("accepted_tos","20180523");}else{Cookies.set("accepted_tos","20180523",{expires:365});}}$j(document).ready(function(){if(localStorage.getItem("accepted_tos")!=="20180523"&&Cookies.get("accepted_tos")!=="20180523"){$j("body").prepend("<div id=\"tos_prompt\" class=\"hidden\">\n  <h2 class=\"heading\">\n    <span>Archive of Our Own<\/span>\n  <\/h2>\n  <div class=\"agreement\">\n    <p class=\"summary\">\n      On Archive of Our Own (AO3), users can make profiles, create works and\n            other Content, post comments, give Kudos, create Collections and \n            Bookmarks, participate in Challenges, import works, and more. Any \n            information you publish in a comment, profile, work, or Content that you \n            post or import onto AO3 including in summaries, notes and tags, \n            will be accessible by the public (unless you limit access to a work only \n            to those with AO3 Accounts), and it will be available to \n            AO3 personnel. Be mindful when sharing personal information, \n            including  your religious or political views, health, racial background, \n            country of origin, sexual identity and/or personal relationships. To \n            learn more, check out our <a href=\"/tos\">Terms of Service<\/a> and <a href=\"/tos#privacy\">Privacy Policy<\/a>.\n    <\/p>\n\n    <p class=\"confirmation\">\n      <input type=\"checkbox\" id=\"tos_agree\" />\n      <label for=\"tos_agree\">I have read &amp; understood the new Terms of Service and Privacy Policy<\/label>\n    <\/p>\n\n      <p class=\"submit\">\n        <button name=\"button\" type=\"button\" disabled=\"disabled\" id=\"accept_tos\">I agree/consent to its terms<\/button>\n      <\/p>\n\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    var container = \$j(\"#tos_prompt\");\n    var outer = \$j(\"#outer\");\n    var button = \$j(\"#accept_tos\");\n\n    setTimeout(showTOSPrompt, 1500);\n\n    function showTOSPrompt() {\n      \$j.when(container.fadeIn(500)).done(function() {\n        outer.addClass(\"hidden\").attr(\"aria-hidden\", \"true\");\n      });\n\n      \$j(\"#tos_agree\").on(\"click\", function() {\n        button.attr(\"disabled\", !this.checked);\n        if (this.checked) {\n          button.on(\"click\", function() {\n            acceptTOS();\n            outer.removeClass(\"hidden\").removeAttr(\"aria-hidden\");\n            \$j.when(container.fadeOut(500)).done(function() {\n              container.remove();\n            });\n          });\n        };\n      }).change();\n    };\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+  <script>$j(document).ready(function(){var permitted_hosts=["archiveofourown.org","download.archiveofourown.org","insecure.archiveofourown.org","www.archiveofourown.org","insecure-test.archiveofourown.org","test.archiveofourown.org","testdownload.archiveofourown.org"];var current_host=window.location.hostname;if(!permitted_hosts.includes(current_host)&&Cookies.get("proxy_notice")!=="0"&&window.location.protocol!=="file:"){$j("#skiplinks").after("<div id=\"proxy-notice\">\n  <div class=\"userstuff\">\n    <p class=\"important\">Important message:<\/p>\n    <ol>\n      <li>You are using a proxy site that is not part of the Archive of Our Own.<\/li>\n      <li>The entity that set up the proxy site can see what you submit, including your IP address. If you log in through the proxy site, it can see your password.<\/li>\n    <\/ol>\n    <p class=\"important\">重要提示：<\/p>\n    <ol>\n      <li>您使用的是第三方开发的反向代理网站，此网站并非Archive of Our Own - AO3（AO3作品库）原站。<\/li>\n      <li>代理网站的开发者能够获取您上传至该站点的全部内容，包括您的ip地址。如您通过代理登录AO3，对方将获得您的密码。<\/li>\n    <\/ol>\n    <p class=\"submit\"><button class=\"action\" type=\"button\" id=\"proxy-notice-dismiss\">Dismiss Notice<\/button><\/p>\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    \$j(\"#proxy-notice-dismiss\").on(\"click\", function() {\n      Cookies.set(\"proxy_notice\", \"0\");\n      \$j(\"#proxy-notice\").slideUp();\n    });\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+    <script>$j(document).on("loadedCSRF",function(){$j.post("/works/15589608/hit_count.json")})</script>
+
+
+  </body>
+</html>

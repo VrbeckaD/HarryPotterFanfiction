@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"f2edcff25e","applicationID":"190034","transactionName":"dgwMEkpfWVsHERpFWUcIEUlLWFpA","queueTime":0,"applicationTime":63,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VQcCWV9RGwIJVFFRAw==",licenseKey:"f2edcff25e",applicationID:"190034"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script>
+    <meta name="keywords" content="fanfiction, transformative works, otw, fair use, archive"/>
+    <meta name="language" content="en-US"/>
+    <meta name="subject" content="fandom"/>
+    <meta name="description" content="An Archive of Our Own, a project of the
+    Organization for Transformative Works"/>
+    <meta name="distribution" content="GLOBAL"/>
+    <meta name="classification" content="transformative works"/>
+    <meta name="author" content="Organization for Transformative Works"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+        Greatfather Winter - LunasWufei - Harry Potter - J. K. Rowling [Archive of Our Own]
+    </title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/1_site_screen_.css"/>
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 62em), handheld" href="/stylesheets/skins/skin_873_archive_2_0/4_site_midsize.handheld_.css"/>
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 42em), handheld" href="/stylesheets/skins/skin_873_archive_2_0/5_site_narrow.handheld_.css"/>
+<link rel="stylesheet" type="text/css" media="speech" href="/stylesheets/skins/skin_873_archive_2_0/6_site_speech_.css"/>
+<link rel="stylesheet" type="text/css" media="print" href="/stylesheets/skins/skin_873_archive_2_0/7_site_print_.css"/>
+<!--[if IE 8]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/8_site_screen_IE8_or_lower.css" /><![endif]-->
+<!--[if IE 5]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/9_site_screen_IE5.css" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/10_site_screen_IE6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/11_site_screen_IE7.css" /><![endif]-->
+
+
+
+<!--sandbox for developers	-->
+<link rel="stylesheet" media="screen" href="/stylesheets/sandbox.css"/>
+<script src="/javascripts/livevalidation_standalone.js"></script>
+
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="/jTZ4VejBds3iYMRAMRMEMDXG/WISLXSIHoiogu80N97b07VW9c6VW+y+3h58zfhAdEAtRHJY5UoccOi/uDs+A=="/>
+
+    
+  </head>
+
+  <body class="logged-out">
+    <div id="outer" class="wrapper">
+      <ul id="skiplinks"><li><a href="#main">Main Content</a></li></ul>
+      <!-- BEGIN BETA CAVEATS! -->
+<noscript>
+  <p id="javascript-warning">
+    While we&#39;ve done our best to make the core functionality of this site accessible without javascript, it will work better with it enabled. Please consider turning it on!
+  </p>
+</noscript>
+<!-- END BETA CAVEATS! --> 
+
+<!-- BEGIN header -->
+
+<div id="header" class="region">
+
+  <h1 class="heading">
+    <a href="/"><span>Archive of Our Own</span><sup> beta</sup><img alt="Archive of Our Own" class="logo" src="/images/ao3_logos/logo_42.png"/></a> 
+  </h1>
+
+    <div id="login" class="dropdown">
+      <p class="user actions" role="menu">
+        <a id="login-dropdown" href="/users/login">Log In</a>
+      </p>
+      <div id="small_login" class="simple login">
+	<form class="new_user" id="new_user_session_small" action="/users/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="PKUOqd13GAGa9igbr/Nf6FN9HO/llgmHjYy1Vf7P0ei5/pmd0QMnj8LNUHLWxCQZknsHr3wX38CFh1RVC5Ptzw=="/>
+	<dl>
+    <dt>
+      <label for="user_session_login_small">User name or email:</label></dt>
+    <dd><input id="user_session_login_small" type="text" name="user[login]"/></dd>
+    <dt><label for="user_session_password_small">Password:</label></dt>
+    <dd><input id="user_session_password_small" type="password" name="user[password]"/></dd>
+  </dl>
+  <p class="submit actions">
+    <label for="user_remember_me_small" class="action"><input type="checkbox" name="user[remember_me]" id="user_remember_me_small" value="1"/>Remember Me</label>
+    <input type="submit" name="commit" value="Log In"/>
+  </p>
+</form>
+<ul class="footnote actions">
+  <li><a href="/users/password/new">Forgot password?</a></li>
+    <li>
+      <a href="/invite_requests">Get an Invitation</a>
+    </li>
+</ul>
+
+</div>
+
+    </div>
+
+  <h3 class="landmark heading">Site Navigation</h3>
+  <ul class="primary navigation actions" role="navigation">
+    <li class="dropdown">
+      <a href="/menu/fandoms">Fandoms</a>
+      <ul class="menu" role="menu">
+  <li><a href="/media">All Fandoms</a></li>
+        <li id="medium_5"><a href="/media/Anime%20*a*%20Manga/fandoms">Anime &amp; Manga</a></li>
+        <li id="medium_3"><a href="/media/Books%20*a*%20Literature/fandoms">Books &amp; Literature</a></li>
+        <li id="medium_4"><a href="/media/Cartoons%20*a*%20Comics%20*a*%20Graphic%20Novels/fandoms">Cartoons &amp; Comics &amp; Graphic Novels</a></li>
+        <li id="medium_7"><a href="/media/Celebrities%20*a*%20Real%20People/fandoms">Celebrities &amp; Real People</a></li>
+        <li id="medium_2"><a href="/media/Movies/fandoms">Movies</a></li>
+        <li id="medium_6"><a href="/media/Music%20*a*%20Bands/fandoms">Music &amp; Bands</a></li>
+        <li id="medium_8"><a href="/media/Other%20Media/fandoms">Other Media</a></li>
+        <li id="medium_30198"><a href="/media/Theater/fandoms">Theater</a></li>
+        <li id="medium_1"><a href="/media/TV%20Shows/fandoms">TV Shows</a></li>
+        <li id="medium_476"><a href="/media/Video%20Games/fandoms">Video Games</a></li>
+        <li id="medium_9971"><a href="/media/Uncategorized%20Fandoms/fandoms">Uncategorized Fandoms</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/browse">Browse</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works">Works</a></li>
+  <li><a href="/bookmarks">Bookmarks</a></li>
+  <li><a href="/tags">Tags</a></li>
+  <li><a href="/collections">Collections</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/search">Search</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works/search">Works</a></li>
+  <li><a href="/bookmarks/search">Bookmarks</a></li>
+  <li><a href="/tags/search">Tags</a></li>
+  <li><a href="/people/search">People</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/about">About</a>
+      <ul class="menu" role="menu">
+  <li><a href="/about">About Us</a></li>
+  <li><a href="/admin_posts">News</a></li>
+  <li><a href="/faq">FAQ</a></li>
+  <li><a href="/wrangling_guidelines">Wrangling Guidelines</a></li>
+  <li><a href="/donate">Donate or Volunteer</a></li>
+</ul>
+
+    </li>
+	  <li class="search"><form class="search" id="search" action="/works/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+  <fieldset>
+    <legend>Search Works</legend>
+    <p>
+      <label class="landmark" for="site_search">Work Search:</label>
+      <input class="text" id="site_search" aria-describedby="site_search_tooltip" type="text" name="work_search[query]"/>
+      <span class="tip" role="tooltip" id="site_search_tooltip">tip: austen words:10000-50000 sort:title</span>
+      <span class="submit actions"><input type="submit" value="Search" class="button"/></span>
+    </p>
+  </fieldset>
+</form></li>
+  </ul>
+
+
+
+  <div class="clear"></div>
+
+</div>
+
+
+
+<!-- END header -->
+
+      <div id="inner" class="wrapper">
+        <!-- BEGIN sidebar -->
+        <!-- END sidebar -->
+
+        <!-- BEGIN main -->
+        <div id="main" class="works-show region" role="main">
+          
+          <div class="flash"></div>
+          <!--page description, messages-->
+<ul class="landmark skip">
+  <li><a name="top">&nbsp;</a></li>
+  <li><a href="#work">Skip header</a></li>
+</ul>
+
+<!--/descriptions-->
+
+<!--subnav-->
+<!--/subnav-->
+
+<!-- BEGIN revealed -->
+<!-- BEGIN work -->
+<!--work description, metadata, notes and messages-->
+    <!-- BEGIN navigation -->
+<h3 class="landmark heading">Actions</h3>
+<ul class="work navigation actions" role="menu">
+
+
+
+
+
+
+  <li class="comments" id="show_comments_link_top">
+      <a data-remote="true" href="/comments/show_comments?work_id=21783037">Comments </a>
+  </li>
+
+
+
+    <li class="share hidden">
+      <a class=" modal" title="Share Work" aria-controls="#modal" href="/works/21783037/share">Share</a>
+    </li>
+
+
+    <li class="download" aria-haspopup="true">
+      <a href="#">Download</a>
+      <ul class="expandable secondary">
+          <li><a href="/downloads/21783037/Greatfather%20Winter.azw3?updated_at=1576269658">AZW3</a></li>
+          <li><a href="/downloads/21783037/Greatfather%20Winter.epub?updated_at=1576269658">EPUB</a></li>
+          <li><a href="/downloads/21783037/Greatfather%20Winter.mobi?updated_at=1576269658">MOBI</a></li>
+          <li><a href="/downloads/21783037/Greatfather%20Winter.pdf?updated_at=1576269658">PDF</a></li>
+          <li><a href="/downloads/21783037/Greatfather%20Winter.html?updated_at=1576269658">HTML</a></li>
+      </ul>
+    </li>
+</ul>
+<!-- END navigation -->
+
+
+<h3 class="landmark heading">Work Header</h3>
+
+<div class="wrapper">
+
+  <dl class="work meta group" role="complementary">
+          <dt class="rating tags">
+
+              Rating:
+          </dt>
+
+          <dd class="rating tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Teen%20And%20Up%20Audiences/works">Teen And Up Audiences</a></li>
+            </ul>
+          </dd>
+          <dt class="warning tags">
+
+              <a href="/tos_faq#tags">Archive Warning</a>:
+          </dt>
+
+          <dd class="warning tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Major%20Character%20Death/works">Major Character Death</a></li>
+            </ul>
+          </dd>
+          <dt class="category tags">
+
+              Category:
+          </dt>
+
+          <dd class="category tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Gen/works">Gen</a></li>
+            </ul>
+          </dd>
+          <dt class="fandom tags">
+
+              Fandom:
+          </dt>
+
+          <dd class="fandom tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a></li>
+            </ul>
+          </dd>
+          <dt class="relationship tags">
+
+              Relationship:
+          </dt>
+
+          <dd class="relationship tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Sirius%20Black%20*a*%20Harry%20Potter/works">Sirius Black &amp; Harry Potter</a></li>
+            </ul>
+          </dd>
+          <dt class="character tags">
+
+              Characters:
+          </dt>
+
+          <dd class="character tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter/works">Harry Potter</a></li><li><a class="tag" href="/tags/Santa%20Claus/works">Santa Claus</a></li><li><a class="tag" href="/tags/Dobby%20(Harry%20Potter)/works">Dobby (Harry Potter)</a></li><li><a class="tag" href="/tags/Albus%20Dumbledore/works">Albus Dumbledore</a></li><li><a class="tag" href="/tags/Dolores%20Umbridge/works">Dolores Umbridge</a></li><li><a class="tag" href="/tags/Hogwarts%20Staff/works">Hogwarts Staff</a></li><li><a class="tag" href="/tags/Hogwarts%20Students/works">Hogwarts Students</a></li>
+            </ul>
+          </dd>
+          <dt class="freeform tags">
+
+              Additional Tags:
+          </dt>
+
+          <dd class="freeform tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/I%20could%20have%20typed%20every%20character/works">I could have typed every character</a></li><li><a class="tag" href="/tags/but%20I%20had%20a%20case%20of%20the%20lazy/works">but I had a case of the lazy</a></li>
+            </ul>
+          </dd>
+
+      <dt class="language">
+        Language:
+      </dt>
+      <dd class="language">
+        English
+      </dd>
+
+      <dt class="series">
+        Series:
+      </dt>
+      <dd class="series">
+        <span class="series"><a class="previous" href="/works/21782866">&#8592; Previous Work</a><span class="divider"> </span><span class="position">Part 38 of the <a href="/series/1556170">Snippets and Fix-Its</a> series</span><span class="divider"> </span><a class="next" href="/works/21783304">Next Work &#8594;</a></span>
+      </dd>
+
+
+    <dt class="stats">Stats:</dt>
+    <dd class="stats">
+<!-- end of cache -->
+
+      <dl class="stats"><dt class="published">Published:</dt><dd class="published">2019-12-13</dd><dt class="words">Words:</dt><dd class="words">4143</dd><dt class="chapters">Chapters:</dt><dd class="chapters">1/1</dd><dt class="comments">Comments:</dt><dd class="comments">1</dd><dt class="kudos">Kudos:</dt><dd class="kudos">97</dd><dt class="bookmarks">Bookmarks:</dt><dd class="bookmarks"><a href="/works/21783037/bookmarks">11</a></dd><dt class="hits">Hits:</dt><dd class="hits">1074</dd></dl>
+      </dd>
+  </dl>
+</div>
+
+
+
+<!-- BEGIN section where work skin applies -->
+<div id="workskin">
+  <div class="preface group">
+    <h2 class="title heading">
+      Greatfather Winter
+    </h2>
+    <h3 class="byline heading">
+      <a rel="author" href="/users/LunasWufei/pseuds/LunasWufei">LunasWufei</a>
+    </h3>
+
+
+
+        <div class="notes module" role="complementary">
+  <h3 class="heading">Notes:</h3>
+
+
+
+
+
+    <blockquote class="userstuff">
+      <p>Disclaimer: Don’t own anything except the plot. </p><p>I had another idea for another Christmas themed snippet, and I am going to try and be as lighthearted as possible with this, everything goes the goods guys way, cause I like it. Anyway, here we go.</p>
+    </blockquote>
+
+    <p class="jump">(See the end of the work for <a href="#work_endnotes">more notes</a>.)</p>
+</div>
+
+
+  </div>
+
+
+<!--/descriptions-->
+
+<!--chapter content-->
+    <div id="chapters" role="article">
+        <h3 class="landmark heading" id="work">Work Text:</h3>
+          <div class="userstuff"><p> </p><p> </p><p>
+  <span>Fifteen year old Harry Potter rubbed the back of his hand as he walked the halls of Hogwarts, it was a little past midnight, but he was fine as he had his cloak on. His lovely new scar, courtesy of Prof. Umbridge, was still kind of sore, even after two days of no detention. Prof. McGonagall canceled his last week of detention, seeing as it was the holiday season. He had given her a smile of gratitude after that, but it was gone once Umbridge said he was getting double detention once the new year started, as he deserved. That almost put a sour mood on his whole vacation, but he tried not to let it get to him. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>He sighed as he walked into the great hall, loving the decorations for Christmas, and smiling brightly as it was officially Christmas day, and that meant a beautiful feast in the morning and gifts from his family. He paused softly when he saw a figure by the large Christmas tree, having been in the process of taking his glasses off and cleaning them when he noticed it. He started walking, the tables large enough for him not to slam into them, when he noticed they were wearing all red. Ah, it was probably Hagrid, getting into the spirit of things. He took off his cloak, folding it gently over his arm, so he wouldn’t scare his largest friend.</span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“You’re up later than usual, Hagrid.” Harry said, putting his glasses on when he was about ten feet from the large man, who stopped and stood up. It was then that Harry noticed that no, this was not Hagrid. He blinked a few times… then his jaw dropped before he stuttered softly. “Bloody hell, you’re Santa!” He blurted out, before he put his hands over his mouth as the man laughed, and by Merlin it couldn’t be more authentic if he tried!</span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“Ho, Ho, Ho! Watch that language Harry.” Santa said, waving a finger with a twinkle in his eyes that Harry couldn’t help but smile at. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“Sorry, Mr. Claus.” Harry said, chastised, but still awed. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“Ho, ho. No, no… Santa is fine.” Santa said, before going over and sitting on one of the benches in the great hall, Harry going right after, smiling at the man. “What are you doing awake young man? It’s past your bedtime, I am sure.” He said, and Harry shrugged softly, before speaking. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“I couldn’t sleep.” Harry said, unconsciously stroking his hand, something that Santa noticed, but said nothing about. “What are you doing here, Santa?” He asked, and he got a soft chuckle from the man. “Right… it's Christmas.” He said, feeling a little silly. Then, he perked up with a bright smile. “I wanted to thank you… for those really, really nice socks in first year. That… was you, right?” He asked, and Santa nodded with a bright smile, his cheeks so rosy. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“Yes indeed, young Harry.” Santa said, smiling still. “I like to grace the first years of all the magical schools with something small, special that they can appreciate.” He said, and Harry nodded. “In these darker times though, perhaps a little something extra is needed, though.” He said, and then looked at Harry with a searching glance. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“What do you want most, for Christmas, Harry.” Santa asked, and Harry’s eyes widened. He started to think, there were so many possibilities! He frowned and thought, then he seemed about to speak, then he stopped and went back to thinking. After a few minutes he spoke, his tone heavy with a heartfelt desire. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“I… I love the Weasleys, and Hermione is great… but I’d like a family to be able to go home to. To miss through the year, but know that I will see them once I am out of school.” Harry said, and Santa nodded, stroking his bearded chin. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“Well, Harry, I will see what I can do for you.” Santa started. “It is no easy task, but I assure you I will try my best, if my name isn’t Santa Claus!” He said, his trademark ho’s following his words. Harry smiled, that was what he needed to hear. Even if it never happened, to hear a man such as this promise him such a thing, it made him feel worlds better. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“Thank you, Santa… thank you!” Harry said, and in a rare bit of him still being just a kid, he gave the large jolly man a hug. He got one right back, and then pulled away with a slightly bashful smile, and a muttered apology. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“No, need for that. We can all use a hug from time to time.” Santa said, and then he turned and cleared his throat. “Dobby.” He said, and said elf appeared in the blink of an eye. He gasped at the man in the big red suit, and in the next blink he was dressed like a proper Christmas elf. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“What can Dobby be doing for Greatfather Winter, and Master Harry Potter sirs?” Dobby asked, his two most favorite people ever standing in front of him. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“Well, Mr. Dobby.” Santa said, and Harry could swear Dobby was about to faint. “I need a fresh gingerbread cookie for Harry here, and a nice warm glass of milk for him as well, if you please.” He said, and Dobby nodded before vanishing with a ~pop~. He arrived just as he left moments later, and presented them to Harry. “Thank you, Dobby.” He said, and Dobby beamed brightly. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“Yes, thank you, Dobby.” Harry said, taking a bite and sighing. “Oh, this is so good. Did you make this?” Harry asked, and at Dobby’s nod, he smiled again. “Excellent, Dobby… really great.” Dobby did almost faint that time, but he caught himself. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“You are most welcome, great master Harry Potter sir! Dobby is so very, very pleased to serve his great master Harry Potter sir.” Dobby said, before squeaking and leaving, a bow the last thing he gave the two men. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“I think I know what He’d want for Christmas, Harry, if you’re willing of course.” Santa said, and Harry nodded in understanding. “Well, off you go then, to bed with you Harry.” He wriggled his nose. “No getting caught now.” He said with a wink, and Harry nodded, finishing his cookie and milk before he thanked Santa one more time, and then he was off to bed after vanishing. Santa got up with a stretch, looking at the tree with a pleased smile, and then vanishing with the sounds of sleigh bells, and then there was silence. </span>
+</p><p> </p><p align="center">
+  <span>
+    <br/>
+  </span>
+  <span>~GFW~</span>
+</p><p>
+  <br/>
+  <br/>
+  <br/>
+</p><p>
+  <span>Christmas at Hogwarts dawned bright and cheery, despite everything that had been going on that year. In fact, it seemed to be even more so than usual, especially once everyone got into the great hall. Everyone was there, even Madame Pomfrey, who had no ill students whatsoever. Prof. Trelawney, in a bit of rarity, was also sitting at the table. Her over-sized glasses making her eyes, as per usual, look like that of an over excited insect. Dumbledore rose, as he usually did right before feasts, and smiled as everyone looked at him. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“My dear, dear students, first I wish to greet you with a Happy Christmas!” Dumbledore said, getting it returned right back at him. “As per tradition, since Merlin knows when, we will be having our first years receiving gifts at the end of the feast.” He said, and the first years all gasped, looking up at him with wonderment. “Nothing overly extravagant, of course, just a little something. No-one knows just who does it, but it’s been here since before I was even born.” He chuckled at the light laughter that followed him, and was about to speak when he was interrupted. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“Hem-hem.” Coughed one Dolores Umbridge. “If you do not know who has done it, Headmaster, then I do not believe it should be allowed. Who knows who could harm our students.” She said, and then hesitated at the </span>
+  <em>
+    <span>furious</span>
+  </em>
+  <span> glare that was given to her, by the headmaster. His tone, while not completely cold, made her shudder in a terrible way. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“You will <strong>not</strong> take this from the children, Dolores. The elves, not to mention the castle itself, would not allow them to come to harm. Sit. <em>Down</em>.” Dumbledore all but growled, and she nodded, sitting before he smiled and turned to the children. “Let us enjoy a lovely, morning feast.” He said, and the food appeared, just as he sat down. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>The feast, as always, was magnificent and enjoyed. There was always a rivalry between houses, except on this day. There were no colors, no blood status, even from the most die hard of purists and the like. The feast finished, and after a few more minutes of resting, Dumbledore stood again. He raised his wand with a bright smile. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“Happy Christmas!” Dumbledore said, swaying his wand lightly from the tree, and sending out the gifts. To his, and everyone else’s surprise, </span>
+  <em>
+    <span>everyone</span>
+  </em>
+  <span> got a gift. Why, even he did. By Merlin, even Prof. Umbridge did! He chuckled softly and his eyes twinkled brightly. “Well, let us all enjoy a small tiding of good will on this most festive of days!” He said, and then sat down, just as everyone started opening their gifts. He would wait, he loved the expressions of the children, and he had so much more to watch this year. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p align="center">
+  <span>~GFW~</span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>Hermione looked at the small box she got, and tilted her head, but smiled. Oh, this was so nice. She opened the box and took out a small mirror, it was shaped like a book. She frowned slightly and ran her finger down its surface, gasping when an index came up, like a book. She then started scrolling, magic was a wonderful thing, and noticed titles from all kinds of books. Familiar books… books from the Hogwarts Library! She gasped softly and then pressed her finger to a title, one from the </span>
+  <em>
+    <span>restricted section,</span>
+  </em>
+  <span> and the book opened! Just as she was about to start reading, the ‘page’ shimmered, and she saw the faces of her bewildered parents, the living room tree right behind them. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“Hermione?” Her mother asked, and said girl started to tear up, before she started to speak with her parents. What a gift! </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p align="center">
+  <span>~GFW~</span>
+</p><p> </p><p>
+  <span>Ron looked at his box, a bit small, but he didn’t care. Sometimes the best gifts came in small packages. He smiled and opened it up, tilting his head softly before he picked up a small note. He blinked and read it, then his eyes went wide. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p align="center">
+  <em>
+    <span>“I.O.U. One Chess match. ~Santa Claus.” </span>
+  </em>
+</p><p> </p><p>
+  <span>Ron gawped softly, stroking the lettering, and feeling the magic in the golden letters. He shuddered and picked up the other thing inside, nearly dropping that. There, staring at him, chuckling softly, was Santa Claus. It was a chocolate frog card, and he knew… he just </span>
+  <em>
+    <span>knew</span>
+  </em>
+  <span> that it was the only one… ever. He stroked it softly, smiling brightly before putting it back in the box. Oh, Happy Christmas indeed!</span>
+</p><p>
+  <br/>
+  <br/>
+</p><p align="center">
+  <span>~GFW~</span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>Harry looked at his box, it was flat and long, like a folder. He hummed and opened it, and at the top he saw official Ministry lettering, and he started to pant softly. He swallowed thickly, and his eyes shot to the red stamp at the bottom, covering Sirius Black’s name. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p align="center">
+  <u>
+    <b>EXONERATED</b>
+  </u>
+</p><p> </p><p>
+  <span>Harry laughed, soft at first, and then there was a whoop of joy from him! He hugged the papers to him, sniffing softly. Santa had come through for him, he had given him the family he so desired. He wiped his eyes, smiling brightly as he looked it over again, oh this day could not get any better!</span>
+</p><p>
+  <br/>
+  <br/>
+</p><p align="center">
+  <span>~GFW~</span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>Multiple members, of multiple houses got very similar packages. Ranging from soft shiny baubles, to intricate jewelry and the like. They all came with a note, all very similar as well, but with their own personal touch and names to go with them. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p align="center">
+  <em>
+    <span>“There is always another way. When the time comes, there will be a home, a safe place for you. ~Santa Claus.”</span>
+  </em>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>They could all feel the magic in it, familiar magic, transportation magic. Children of those who were expected to go into the dark, who were expected to serve a mad man, they received a way out… an escape Clause. Some chuckled, eyes misting in thanks, others just put it away with a soft nod to themselves. They would, they </span>
+  <em>
+    <span>could</span>
+  </em>
+  <span> trust in Santa, every child knew that. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p align="center">
+  <span>~GFW~</span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>Severus spent a long time looking at his box, wondering just what it could be. He, several times, hesitated and moved his hand away before he could open it. He finally took a deep breath and opened the box, eyes softening and then brightening at it’s contents. Inside rested a small portrait frame, and the picture was that of him and Lily when they were so very young. When their friendship still meant something to them, when their troubles were nothing. It was a picture that had never been taken before, but Severus knew that it would be his to cherish forever. He picked it up and sighed, enjoying the smile on his face, along with his old, dearest friend. There would be no sorrow tonight, that he was sure of. </span>
+</p><p> </p><p align="center">
+  <span>
+    <br/>
+  </span>
+  <span>~GFW~</span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>Minerva had a rather impressive pout at the top contents of her gift, especially as her nose picked up exactly what it was. Inside was a small cat toy, nearly soaked with catnip. She huffed and picked it up, then gasped at what it had been sitting on. She put the toy to the side and picked up a similar picture frame as Severus has received, but this picture was different. It was one of the more missed pictures of her and her husband, one she had lost in a fire two decades ago. It was a picture of them laughing softly, his face covered in wedding cake, as they shared a kiss shortly after. Oh, there would be many happy tears tonight. </span>
+</p><p> </p><p align="center">
+  <span>
+    <br/>
+  </span>
+  <span>~GFW~</span>
+</p><p> </p><p>
+  <span>Sybill blinked as she looked into her box, it was shaped like a glasses case. She didn’t understand, though, as she was wearing her glasses. She shrugged and picked up the new pair, and took off her old ones. A few more blinks to adjust to the lack of vision, before she put the new ones on. They fit far better on her face, and when her eyes adjusted she gasped and leaned back, hand on her heart. She could </span>
+  <strong>See</strong>
+  <span>. Everything that had been clouded was clear as day, and in the case there was a note. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p align="center">
+  <em>
+    <span>“Your prescription was a bit off, Sybill, I hope you don’t mind me adjusting that for you. ~Santa Claus.”</span>
+  </em>
+</p><p>
+  <span>Her soft laughter had some professors looking at her, but they smiled as it was a happy one, and to be completely honest, those new glasses looked marvelous on the woman. </span>
+</p><p> </p><p align="center">
+  <span>~GFW~</span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>No body saw what Dumbledore received, but they all knew that whatever it had been was enough to make him at least look  ten years younger. No potion, no spell, but some kind of information that would give him happiness for the rest of his days. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p align="center">
+  <span>~GFW~</span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>Neville was glaring at his gift, it was wrong, and it had been very similar to Harry’s package. He frowned and then moved just a bit, when Harry sat next to him. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“Is this some kind of sick joke?” Neville asked, showing Harry the papers. Harry took them gingerly, and noticed a similar stamp on the papers, but it was much larger. </span>
+</p><p> </p><p align="center">
+  <span>
+    <br/>
+  </span>
+  <u>
+    <b>HEALED</b>
+  </u>
+</p><p> </p><p>
+  <span>Harry looked over the papers, and then noticed everything was as official as his had been. He smiled at his friend, giving the papers back and shaking his head. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“No, Mate… its real.” Harry said, and showed Neville his own papers, and Neville’s eyes went wide. He took the papers and bolted out of the great hall, there was no way he was staying in the castle another second. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p align="center">
+  <span>~GFW~</span>
+</p><p> </p><p>
+  <span>Luna opened her slightly larger box, not noticing the air holes on the side. Her head tilted, like a curious bird, before she yelped softly as something jumped from the box and clung to her desperately. Her hand went to the back of the creature on her chest, and her other went to the note in the box. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p align="center">
+  <em>
+    <span>“He was scared and alone, poachers got his mother, do take care of him, will you? ~Santa Claus.”</span>
+  </em>
+</p><p> </p><p>
+  <span>Luna looked down at the creature, a small, six eyed and striped gorilla like creature. His stripes were a slightly dull red and blue, but surely they would grow more vibrant with age. The most defining features were the growing, but short, </span>
+  <em>
+    <span>crumpled</span>
+  </em>
+  <span> horns on his head. Luna gasped and snuggled it close, getting a pleased noise in return, before she started to speak to him, offering him some vegetables that had appeared shortly after the note was read. </span>
+</p><p> </p><p align="center">
+  <span>
+    <br/>
+  </span>
+  <span>~GFW~</span>
+</p><p>
+  <br/>
+  <br/>
+  <br/>
+</p><p>
+  <span>“WHAT IS THE MEANING OF THIS!?” Prof. Umbridge screamed, standing in all her ire. She drew the attention of most of the hall, and then the whispers and murmurs got the attention of the rest of the hall. In her hand, darkening her fingers, was the largest piece of coal anyone present had ever seen. She was about to start screeching again when she was silenced, by the headmaster. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“Do not make me remove you from the hall, Dolores. You can rant and rave in your own time, or perhaps tomorrow.” Dumbledore said, and though he was very much in charge, he was still in a good mood. “It seems, whomever decided to gift everyone this year, decided you deserved coal. Perhaps you should think on that, in your quiet silence. Now, once again, sit down.” He said, and she huffed before she dropped the coal on the table and stormed off. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>Dumbledore shook his head, and with a wave of his wand the coal vanished, along with its marks on the table. The students went back to enjoying their gifts, the chattering going back to more pleasant things, it was a marvelous day after all. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p align="center">
+  <span>~GFW~</span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>The next day dawned bright and cheery, just like the day before. It was boxing day, and though the normal cease-fire in terms of rivalries was lifted, there was still a distinct lack of said rivalry around. Prof. Umbridge was still fuming at the table, wanting nothing more than to rip into everyone and get the information she so desired. She really couldn’t give her ‘favorite’ student detention, there were no classes and the like, they were all on vacation after all. She was about to call attention to the students, to try and get someone to confess, when the doors opened. Immediately the headmaster was up, a stern look on his face, ready to jump into the defense of the children if needed.</span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“Identify yourself.” Dumbledore said, his tone brokering no argument, whatsoever, as to the desired outcome of his statement. </span>
+</p><p> </p><p>
+  <span>“Greatfather Winter, is my favorite, my boy.” The man said, his robes were </span>
+  <em>
+    <span>immaculate</span>
+  </em>
+  <span>, in their beautiful red and white trim. His beard fluffy and just as white, his eyes twinkling and vibrant. Dumbledore faltered softly at being called a boy, but then he watched the man in red get almost bowled over by Harry Potter. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“Thank you, Santa.” Harry said, and due to the silence of the hall, everyone heard. Then, there were gasps of delight and murmurs of merriment. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“You’re most welcome young man, now… I think there is someone behind me who wants to see you.” Santa said, and Harry moved to see Sirius, arms wide open. Harry ran to the other man, actually bowling him over, tears of joy on his face. None were afraid, they had all heard, and most had seen proof, of the papers clearing Sirius Black. They knew they were real, Santa did not make fake things like that. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“Sirius Black?!” Prof. Umbridge said, coming out from behind the table, waddling really, with her wand in hand. “Move, boy! This man is a wanted criminal!” She said, and was waylaid by the headmaster, he was allowed to apparate in his castle. He held a hand up, waiting for her to stop. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“He was cleared, of all charges, Madame.” Dumbledore said, the sputtering witch looking at him confused. “Signed by the minister himself.” He said, and she huffed and stowed her wand. Dumbledore then turned and smiled at the jolly man, who was getting thanks and waves from various students, and then he was surprised when Argus came up to him, speaking in hushed tones. Santa nodded and patted him on the shoulder, before Argus came up to Dumbledore. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“I got a job offer, Albus… going to be working with the the Claus’ you see.” Argus said, and Dumbledore chuckled softly. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“Do what you must, my old friend.” Dumbledore said, patting the man on the shoulder just as Santa did. “Do keep in touch, will you? You know my floo address.” He said, a twinkle in his eye, and Argus nodded before going off to pack to leave, Mrs. Norris purring in his arms. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>Santa looked around and then came up to Dumbledore, shaking the man’s hand and smiling brightly. He had brought a few of his elves, perhaps three dozen or so, and they vanished to help the Hogwarts elves. He moved to the head table and sat beside the venerable headmaster, smiling brightly as his own glasses were perched on his nose just like Dumbledore's. </span>
+</p><p> </p><p>
+  <span>“I hope you don’t mind me dropping in, but it is not often I get to be around so many children.” Santa said, and Dumbledore waved it off, smiling brightly. Sure, he was one hundred and thirteen years old, but this was Santa for Merlin’s sake! “I was wondering, if you would be agreeable to have me… enjoy a few months here, before the season starts for me again.” He asked, chuckling softly. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“My good sir, I would see nothing at all wrong with that, I assure you.” Dumbledore said, and even Umbridge couldn’t say anything to that. All evidence pointed to it, from the elves, to the beard and the rosy cheeks. This man was Santa Claus, he was as light as they came. Sure, he had no stake in the ministry, but he was here… for the children. She huffed as she watched the exchange, she’d have to talk to minister! </span>
+</p><p> </p><p align="center">
+  <span>
+    <br/>
+  </span>
+  <span>~GFW~</span>
+</p><p> </p><p>
+  <span>There were a few things certain in life, Cornelius Fudge thought to himself, and one of them was the man he had just spoken to: Greatfather Winter. He sat down at his desk at the ministry, and held his head in his hands. This was… the news he had received was </span>
+  <em>
+    <span>monumental</span>
+  </em>
+  <span>. To say the absolute least, that was for sure. He took a deep breath and pressed a rune on his desk, a mirror appearing. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“Amelia Bones.” Fudge said to the mirror, and it shimmered for a moment before a surprised Head of the DMLE appeared. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“Minister?” Bones asked, and he took a deep breath before speaking. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>“I need you in here immediately, Amelia. You and Scrimgeour, and perhaps Shacklebolt. There is no time to waste, at all.” Fudge said, so very… very serious, and she nodded before closing the connection. Good sweet Merlin, what a way to start the new year. </span>
+</p><p> </p><p align="center">
+  <span>
+    <br/>
+  </span>
+  <span>~GFW~</span>
+</p><p> </p><p>
+  <span>The next several months were a whirlwind of news and activity, and not all of it was good news and business. Many prominent members of the Wizengamot were tried and convicted for being terrorists, and enemies of the state. Some managed to flee, but there would be a constant look out for them in the future, they would have no place safe to hide. </span>
+</p><p>
+  <br/>
+  <br/>
+</p><p>
+  <span>The man who styled himself a lord, the one called Voldemort, was no match for a people that were willing and able to defend themselves. He tried a takeover, but it was met not only with resistance, but determination. It also didn’t help, that the literal Lord of the Light, was there to help. Tom Riddle had closed his heart to Santa, to the love and merriment the man brought wherever he went, so it was fitting that his demise was assisted in such a way. </span>
+</p><p> </p><p>
+  <span>Santa took no joy in it of course, another child harmed that he could not save. However, he had saved so many others by helping to put one lost soul down. He would stay in the castle until September, where he greeted the children on their first day, and was then off. He left with a smile on his face, and the inhabitants of the castle and Hogsmeade got to witness the first reindeer flight of the season, the bells tinkling, the snow falling, a sign of pure sweet things to come. </span>
+</p><p>
+  <br/>
+  <br/>
+  <br/>
+</p><p> </p></div>
+        <!-- end cache -->
+    </div>
+<!--/chapter-->
+
+    <!--afterword-->
+    <div class="afterword preface group" role="complementary">
+        <!--work endnotes-->
+<div id="work_endnotes" class="end notes module">
+  <h3 class="heading">Notes:</h3>
+  <blockquote class="userstuff"><p>And that was it, just something festive for the season. It’s not really meant to be a lot of sense making, or anything at the end there. I just didn’t want to put it off completely. Either way, enjoy if you can! Happy Holidays to everyone! </p></blockquote>
+</div>
+<!--/work endnotes-->
+        <!--series links, backwards and forwards-->
+<div id="series" class="series module">
+  <h3 class="heading">Series this work belongs to:</h3>
+  <ul>
+      <li><span class="series"><a class="previous" href="/works/21782866">&#8592; Previous Work</a><span class="divider"> </span><span class="position">Part 38 of the <a href="/series/1556170">Snippets and Fix-Its</a> series</span><span class="divider"> </span><a class="next" href="/works/21783304">Next Work &#8594;</a></span></li>
+  </ul>
+</div>
+<!--/series links-->
+    </div>
+    <!--/afterword-->
+
+  </div>
+  <!-- END work skin -->
+<!-- END work -->
+
+<!-- BEGIN comment section -->
+<!-- Gets embedded anywhere we need to list comments on a top-level commentable. We need the local variable "commentable" here. -->
+<div id="feedback" class="feedback" role="complementary">
+
+  <h3 class="landmark heading">Actions</h3>
+
+  <ul class="actions" role="navigation">
+      <li><a href="#main">&#8593; Top</a></li>
+
+
+
+
+
+
+      <li>
+        <form id="new_kudo" action="/kudos" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="qZw1JixHcFqhAwiWZcOIjD3kZjS5s2nCe8hUHtjxlmssx6ISIDNP1Pk4cP8c9PN9/OJ9dCAyv4Vzw7UeLa2qTA=="/>
+          <input value="21783037" type="hidden" name="kudo[commentable_id]" id="kudo_commentable_id"/>
+          <input value="Work" type="hidden" name="kudo[commentable_type]" id="kudo_commentable_type"/>
+          <input type="submit" name="commit" value="Kudos ♥" id="kudo_submit"/>
+</form>      </li>
+
+
+
+
+        <li id="show_comments_link"><a data-remote="true" href="/comments/show_comments?work_id=21783037">Comments (1)</a></li>
+  </ul>
+
+  <div id="kudos_message"></div>
+
+  <h3 class="landmark heading"><a name="comments">Comments</a></h3>
+
+  
+
+    <div id="kudos">
+      <p class="kudos">
+          <a href="/users/ChibiPanda8888">ChibiPanda8888</a>, <a href="/users/Scoobydoobydis">Scoobydoobydis</a>, <a href="/users/spacekid96">spacekid96</a>, <a href="/users/Horatio_Is_King">Horatio_Is_King</a>, <a href="/users/petitesmate">petitesmate</a>, <a href="/users/Kohakuryu">Kohakuryu</a>, <a href="/users/GreXorN1X">GreXorN1X</a>, <a href="/users/TheiaSalazarRiddle">TheiaSalazarRiddle</a>, <a href="/users/EM1">EM1</a>, <a href="/users/TimeLadyHope">TimeLadyHope</a>, <a href="/users/eule99">eule99</a>, <a href="/users/OnlyBooks">OnlyBooks</a>, <a href="/users/Emmie4">Emmie4</a>, <a href="/users/PandaCatXD">PandaCatXD</a>, <a href="/users/KawaiiSuperher0">KawaiiSuperher0</a>, <a href="/users/5H4D35">5H4D35</a>, <a href="/users/AquilaTreadway">AquilaTreadway</a>, <a href="/users/benjaeger">benjaeger</a>, <a href="/users/the_devil_spaw">the_devil_spaw</a>, <a href="/users/Marieluc">Marieluc</a>, <a href="/users/Noxxia">Noxxia</a>, <a href="/users/Humanhufflepuff">Humanhufflepuff</a>, <a href="/users/katzchen">katzchen</a>, <a href="/users/Miss_Dragon">Miss_Dragon</a>, <a href="/users/ElephantSadness">ElephantSadness</a>, <a href="/users/Sita22">Sita22</a>, <a href="/users/Lupa_Valkyrie_Cain_Grimm">Lupa_Valkyrie_Cain_Grimm</a>, <a href="/users/IamTooBusyReading">IamTooBusyReading</a>, <a href="/users/Kimera20">Kimera20</a>, <a href="/users/Grazip06">Grazip06</a>, <a href="/users/CordeliaFaith">CordeliaFaith</a>, <a href="/users/Misslili0208">Misslili0208</a>, <a href="/users/3Rose_Everheart1">3Rose_Everheart1</a>, <a href="/users/Pantastically_me23">Pantastically_me23</a>, <a href="/users/LeeChoonHee">LeeChoonHee</a>, <a href="/users/ohwowimqueer">ohwowimqueer</a>, <a href="/users/Rxria">Rxria</a>, <a href="/users/fanwitch">fanwitch</a>, <a href="/users/paters02">paters02</a>, <a href="/users/Nightowl343">Nightowl343</a>, <a href="/users/emma7241">emma7241</a>, <a href="/users/trash_can_fran">trash_can_fran</a>, <a href="/users/Drarryship1357">Drarryship1357</a>, <a href="/users/Sha_Rusha">Sha_Rusha</a>, <a href="/users/Multiplelifes">Multiplelifes</a>, <a href="/users/thisisnotmyname">thisisnotmyname</a>, <a href="/users/Shinri_Tsukiko">Shinri_Tsukiko</a>, <a href="/users/PwincessSapphire">PwincessSapphire</a>, <a href="/users/jenn2779">jenn2779</a>, <a href="/users/NGBW">NGBW</a><span id="kudos_more_connector">, and </span><a id="kudos_more_link" data-remote="true" href="/works/21783037/kudos?before=1958313901">20 more users</a>
+             as well as 
+          27 guests
+         left kudos on this work!
+      </p>
+</div>
+
+
+    <div id="add_comment_placeholder" title="top level comment">
+      <div id="add_comment">
+        <!-- expects the local variables comment, commentable, and button_name -->
+<div class="post comment" id="comment_form_for_21783037">
+  <form class="new_comment" id="comment_for_21783037" action="/works/21783037/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="XuT+72Z218mq20rSr4SfvJ29507v7Y5MB8DKl5oUxfjbv2nbagLoR/LgMrvWs+RNXLv8DnZsWAsPyyuXb0j53w=="/>
+    <fieldset>
+      <legend>Post Comment</legend>
+
+
+
+
+
+
+        <dl>
+          <dt class="landmark">Note:</dt>
+          <dd class="instructions comment_form">All fields are required. Your email address will not be published.</dd>
+          <dt><label for="comment_name_for_21783037">Guest name: </label></dt>
+          <dd>
+            <input id="comment_name_for_21783037" type="text" name="comment[name]"/>
+            <script>var validation_for_comment_name_for_21783037=new LiveValidation('comment_name_for_21783037',{wait:500,onlyOnBlur:false});validation_for_comment_name_for_21783037.add(Validate.Presence,{"failureMessage":"Please enter your name.","validMessage":""});</script>
+          </dd>
+          <dt><label for="comment_email_for_21783037">Guest email: </label></dt>
+          <dd>
+            <input id="comment_email_for_21783037" type="text" name="comment[email]"/>
+            <script>var validation_for_comment_email_for_21783037=new LiveValidation('comment_email_for_21783037',{wait:500,onlyOnBlur:false});validation_for_comment_email_for_21783037.add(Validate.Presence,{"failureMessage":"Please enter your email address.","validMessage":""});</script>
+          </dd>
+        </dl>
+        <p class="footnote">(Plain text with limited HTML <a class="help symbol question modal" title="Html help" aria-controls="#modal" href="/help/html-help.html"><span class="symbol question"><span>?</span></span></a>)</p>
+
+      <p>
+        <label for="comment_content_for_21783037" class="landmark">Comment</label>
+        <textarea id="comment_content_for_21783037" class="comment_form observe_textlength" title="Enter Comment" name="comment[comment_content]">
+</textarea>
+        <input type="hidden" id="controller_name_for_21783037" name="controller_name" value="works"/>
+      </p>
+      <p class="character_counter"><span id="comment_content_for_21783037_counter" class="value" data-maxlength="10000" aria-live="polite" aria-valuemax="10000" aria-valuenow="comment_content_for_21783037">10000</span> characters left</p>
+      <script>var validation_for_comment_content_for_21783037=new LiveValidation('comment_content_for_21783037',{wait:500,onlyOnBlur:false});validation_for_comment_content_for_21783037.add(Validate.Presence,{"failureMessage":"Brevity is the soul of wit, but we need your comment to have text in it.","validMessage":""});validation_for_comment_content_for_21783037.add(Validate.Length,{"maximum":"10000","tooLongMessage":"must be less than 10000 characters long."});</script>
+      <p class="submit actions">
+        <input type="submit" name="commit" value="Comment" id="comment_submit_for_21783037" data-disable-with="Please wait..."/>
+      </p>
+    </fieldset>
+</form></div>
+<div class="clear"></div>
+
+      </div>
+    </div>
+
+  <!-- If we have javascript, here is where the comments will be spiffily inserted -->
+  <!-- If not, and show_comments is true, here is where the comments will be rendered -->
+  <div id="comments_placeholder" style="display:none;">
+  </div>
+
+
+</div>
+<!-- END comments -->
+
+<!-- END comment section -->
+<!-- END revealed -->
+
+
+
+          <div class="clear"><!--presentational--></div>
+        </div>
+        <!-- END main -->
+      </div>
+      <!-- BEGIN footer -->
+<div id="footer" role="contentinfo" class="region">
+	<h3 class="landmark heading">Footer</h3>
+  <ul class="navigation actions" role="navigation">
+    <li class="module group">
+      <h4 class="heading">About the Archive</h4>
+      <ul class="menu">
+        <li><a href="/site_map">Site Map</a></li>
+        <li><a href="/diversity">Diversity Statement</a></li>
+        <li><a href="/tos">Terms of Service</a></li>
+        <li><a href="/dmca">DMCA Policy</a> </li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Contact Us</h4>
+      <ul class="menu">
+        <li><a href="/abuse_reports/new">Report Abuse</a></li>
+        <li><a href="/support">Technical Support and Feedback</a></li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Development</h4>
+      <ul class="menu">
+          <li><a href="https://github.com/otwcode/otwarchive/commits/v0.9.300.1">otwarchive v0.9.300.1</a></li>
+        <li><a href="/known_issues">Known Issues</a></li>
+        <li><a href="http://www.gnu.org/licenses/gpl-2.0.html" title="View License">GPL</a> by the <a href="http://transformativeworks.org/" title="The Organization for Transformative Works">OTW</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!-- END footer -->
+
+    </div>
+    <!-- check to see if this controller/action allow tinymce before we load the gigantor js; see application_helper -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js" type="text/javascript"></script>
+<!-- if user has googleapis blocked for some reason we need a fallback -->
+<script type="text/javascript">if(typeof jQuery=='undefined'){document.write(unescape("%3Cscript src='/javascripts/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));document.write(unescape("%3Cscript src='/javascripts/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));}</script>
+
+
+<script type="text/javascript">$j=jQuery.noConflict();</script>
+<script src="/javascripts/jquery.scrollTo.min.js"></script>
+<script src="/javascripts/jquery.livequery.min.js"></script>
+<script src="/javascripts/rails.js"></script>
+<script src="/javascripts/application.js"></script>
+<script src="/javascripts/bootstrap/bootstrap-dropdown.min.js"></script>
+<script src="/javascripts/jquery-shuffle.js"></script>
+<script src="/javascripts/jquery.tokeninput.min.js"></script>
+<script src="/javascripts/jquery.trap.min.js"></script>
+<script src="/javascripts/ao3modal.min.js"></script>
+<script src="/javascripts/js.cookie.min.js"></script>
+
+<script src="/javascripts/filters.min.js"></script>
+
+
+  <script>function isSupported(){var item="localStoragePolyfill";try{localStorage.setItem(item,item);localStorage.removeItem(item);return true;}catch(e){return false;}}function acceptTOS(){if(isSupported()){localStorage.setItem("accepted_tos","20180523");}else{Cookies.set("accepted_tos","20180523",{expires:365});}}$j(document).ready(function(){if(localStorage.getItem("accepted_tos")!=="20180523"&&Cookies.get("accepted_tos")!=="20180523"){$j("body").prepend("<div id=\"tos_prompt\" class=\"hidden\">\n  <h2 class=\"heading\">\n    <span>Archive of Our Own<\/span>\n  <\/h2>\n  <div class=\"agreement\">\n    <p class=\"summary\">\n      On Archive of Our Own (AO3), users can make profiles, create works and\n            other Content, post comments, give Kudos, create Collections and \n            Bookmarks, participate in Challenges, import works, and more. Any \n            information you publish in a comment, profile, work, or Content that you \n            post or import onto AO3 including in summaries, notes and tags, \n            will be accessible by the public (unless you limit access to a work only \n            to those with AO3 Accounts), and it will be available to \n            AO3 personnel. Be mindful when sharing personal information, \n            including  your religious or political views, health, racial background, \n            country of origin, sexual identity and/or personal relationships. To \n            learn more, check out our <a href=\"/tos\">Terms of Service<\/a> and <a href=\"/tos#privacy\">Privacy Policy<\/a>.\n    <\/p>\n\n    <p class=\"confirmation\">\n      <input type=\"checkbox\" id=\"tos_agree\" />\n      <label for=\"tos_agree\">I have read &amp; understood the new Terms of Service and Privacy Policy<\/label>\n    <\/p>\n\n      <p class=\"submit\">\n        <button name=\"button\" type=\"button\" disabled=\"disabled\" id=\"accept_tos\">I agree/consent to its terms<\/button>\n      <\/p>\n\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    var container = \$j(\"#tos_prompt\");\n    var outer = \$j(\"#outer\");\n    var button = \$j(\"#accept_tos\");\n\n    setTimeout(showTOSPrompt, 1500);\n\n    function showTOSPrompt() {\n      \$j.when(container.fadeIn(500)).done(function() {\n        outer.addClass(\"hidden\").attr(\"aria-hidden\", \"true\");\n      });\n\n      \$j(\"#tos_agree\").on(\"click\", function() {\n        button.attr(\"disabled\", !this.checked);\n        if (this.checked) {\n          button.on(\"click\", function() {\n            acceptTOS();\n            outer.removeClass(\"hidden\").removeAttr(\"aria-hidden\");\n            \$j.when(container.fadeOut(500)).done(function() {\n              container.remove();\n            });\n          });\n        };\n      }).change();\n    };\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+  <script>$j(document).ready(function(){var permitted_hosts=["archiveofourown.org","download.archiveofourown.org","insecure.archiveofourown.org","www.archiveofourown.org","insecure-test.archiveofourown.org","test.archiveofourown.org","testdownload.archiveofourown.org"];var current_host=window.location.hostname;if(!permitted_hosts.includes(current_host)&&Cookies.get("proxy_notice")!=="0"&&window.location.protocol!=="file:"){$j("#skiplinks").after("<div id=\"proxy-notice\">\n  <div class=\"userstuff\">\n    <p class=\"important\">Important message:<\/p>\n    <ol>\n      <li>You are using a proxy site that is not part of the Archive of Our Own.<\/li>\n      <li>The entity that set up the proxy site can see what you submit, including your IP address. If you log in through the proxy site, it can see your password.<\/li>\n    <\/ol>\n    <p class=\"important\">重要提示：<\/p>\n    <ol>\n      <li>您使用的是第三方开发的反向代理网站，此网站并非Archive of Our Own - AO3（AO3作品库）原站。<\/li>\n      <li>代理网站的开发者能够获取您上传至该站点的全部内容，包括您的ip地址。如您通过代理登录AO3，对方将获得您的密码。<\/li>\n    <\/ol>\n    <p class=\"submit\"><button class=\"action\" type=\"button\" id=\"proxy-notice-dismiss\">Dismiss Notice<\/button><\/p>\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    \$j(\"#proxy-notice-dismiss\").on(\"click\", function() {\n      Cookies.set(\"proxy_notice\", \"0\");\n      \$j(\"#proxy-notice\").slideUp();\n    });\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+    <script>$j(document).on("loadedCSRF",function(){$j.post("/works/21783037/hit_count.json")})</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"f2edcff25e","applicationID":"190034","transactionName":"dgwMEkpfWVsHERpRXlQTFgNKQxpECgxC","queueTime":0,"applicationTime":74,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VQcCWV9RGwIJVFFRAw==",licenseKey:"f2edcff25e",applicationID:"190034"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script>
+    <meta name="keywords" content="fanfiction, transformative works, otw, fair use, archive"/>
+    <meta name="language" content="en-US"/>
+    <meta name="subject" content="fandom"/>
+    <meta name="description" content="An Archive of Our Own, a project of the
+    Organization for Transformative Works"/>
+    <meta name="distribution" content="GLOBAL"/>
+    <meta name="classification" content="transformative works"/>
+    <meta name="author" content="Organization for Transformative Works"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+        Lily Evans and the Garden of Gryffindor - Chapter 1 - FeBee - Harry Potter - J. K. Rowling [Archive of Our Own]
+    </title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/A.1_site_screen_.css.pagespeed.cf.JiR2hT5NxR.css"/>
+<style media="only screen and (max-width: 62em), handheld">#dashboard{clear:both;float:none;margin:1% 3.5%;max-width:100%;padding:0;width:auto}#dashboard,#dashboard.own{border-bottom:10px solid #900;border-top:10px solid #900;padding:.5em 0;border-radius:.25em}#dashboard ul{border:none;display:inline;padding:0;text-align:left}#dashboard li{display:inline}#dashboard a,#dashboard span{display:inline-block;margin:.25em 0}#dashboard .secondary{background:#eee;padding:.375em 0 .625em;box-shadow:inset 2px 2px 5px #bbb}#dashboard .secondary a{margin:.125em 0}#dashboard .landmark{clear:none;float:left}#main,#main.dashboard{float:none;margin:auto;padding-left:3.5%;padding-right:3.5%;width:auto}.logged-in .splash>.module{width:48.5%}.logged-in .splash > div:nth-of-type(odd) {margin-left:0;margin-right:1.5%}.logged-in .splash > div:nth-of-type(even) {margin-left:1.5%;margin-right:0}form.filters{width:auto;min-width:23%;max-width:24%}.filters fieldset{margin-right:0}form.filters dl{margin-left:.25em;margin-right:.25em}#workskin{margin:auto 1.5%}</style>
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 42em), handheld" href="/stylesheets/skins/skin_873_archive_2_0/A.5_site_narrow.handheld_.css.pagespeed.cf.8L0d7x-op8.css"/>
+<link rel="stylesheet" type="text/css" media="speech" href="/stylesheets/skins/skin_873_archive_2_0/A.6_site_speech_.css.pagespeed.cf.Ybb8bLK5Um.css"/>
+<link rel="stylesheet" type="text/css" media="print" href="/stylesheets/skins/skin_873_archive_2_0/A.7_site_print_.css.pagespeed.cf.ry3YZtf8Cz.css"/>
+<!--[if IE 8]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/8_site_screen_IE8_or_lower.css" /><![endif]-->
+<!--[if IE 5]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/9_site_screen_IE5.css" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/10_site_screen_IE6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/11_site_screen_IE7.css" /><![endif]-->
+
+
+
+<!--sandbox for developers	-->
+<style media="screen">#new_work_search fieldset:first-of-type .submit{padding-top:0}.edit_external_author ul ul{margin-left:2.75em}a.resp-sharing-button__link,.resp-sharing-button__icon{display:inline-block}a.resp-sharing-button__link,a.resp-sharing-button__link:hover{text-decoration:none;color:#fff;border:none}.resp-sharing-button{border-radius:5px;transition:25ms ease-out;padding:.5em .75em}.resp-sharing-button__icon svg{width:1em;height:1em;margin-right:.4em;vertical-align:top}.resp-sharing-button__icon{stroke:#fff;fill:none}.resp-sharing-button__icon--solid{fill:#fff;stroke:none}.resp-sharing-button--twitter{background-color:#55acee}.resp-sharing-button--twitter:hover,a:focus .resp-sharing-button--twitter{background-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c}.resp-sharing-button--tumblr:hover,a:focus .resp-sharing-button--tumblr{background-color:#222d3c}.resp-sharing-button--twitter{background-color:#55acee;border-color:#55acee}.resp-sharing-button--twitter:hover,.resp-sharing-button--twitter:active{background-color:#2795e9;border-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c;border-color:#35465c}.resp-sharing-button--tumblr:hover,.resp-sharing-button--tumblr:active{background-color:#222d3c;border-color:#222d3c}</style>
+<script src="/javascripts/livevalidation_standalone.js.pagespeed.jm.oB__Z5piTe.js"></script>
+
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="z9TsnQiM6Xx+KR1KD/Z3PsOny6dm0IKIj6RYr50BIxf/dTK+vGty9m6k+Ud8ooczNz3p9Wl8ydXxr2JgVJbPIQ=="/>
+
+    
+  </head>
+
+  <body class="logged-out">
+    <div id="outer" class="wrapper">
+      <ul id="skiplinks"><li><a href="#main">Main Content</a></li></ul>
+      <!-- BEGIN BETA CAVEATS! -->
+<noscript>
+  <p id="javascript-warning">
+    While we&#39;ve done our best to make the core functionality of this site accessible without javascript, it will work better with it enabled. Please consider turning it on!
+  </p>
+</noscript>
+<!-- END BETA CAVEATS! --> 
+
+<!-- BEGIN header -->
+
+<div id="header" class="region">
+
+  <h1 class="heading">
+    <a href="/"><span>Archive of Our Own</span><sup> beta</sup><script data-pagespeed-no-defer>(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','http://archiveofourown.org/works/20743736/chapters/49286897','eVfAzEuqgZ',true,false,'qgnWpC0d7lM');</script><img alt="Archive of Our Own" class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAAqCAMAAAA3b6P4AAACslBMVEWXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACpit0XAAAA5XRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESFBUWFxgZGhscHR4fICEiIyQlJygpKissLi8wMTM0NTY3ODk6Ozw9PkBBQkNFR0hJSktMTU5PUFFSVFVWV1hZWltcXV5fY2RlZmhpamtsbW5vcHFyc3V2d3p7fX5/gIGCg4SFhoeIiouMjY6PkJGSlJWWl5iZmpucnZ6foKGipKWnqKmrrK2ur7CxsrO0tba3uLm6u7y9vr/AwsPFxsfIycrLzM7P0NLT1NXW19na29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+b1plRQAABBRJREFUSMedlvtb1FUQxgcEBMtQggUCxVACu1ApYmRmUqESkCkUREaS4h3JCDONEFPBoBQCJcDIGxkGKYGBkgGSAq4BARIXWWA//0c/7J39LvY0P82cd97nzJlzZuaIKvBRmVqmP/XOrrQNIbOVsNfyjq/3nYrs/1GlWjPe90v28wrgnOiDP7ddeN9WAE47O9DLQI6PksfDMWVjnfuDlCC3b4HbpYcOFjUC9UHKWywtQZNpjTmdgu60uSIis979HRr8bIT4YjVDqV6TFlPgVqjxjBegyM4MfSPepDsm9tAcb5mwHnpfMJmq39C+ZLQCytrfM3deUAylwWYL2+BTc4eICU4aNk/pLgm0DNQuqY+/Nk8zmuX0PmFx83V0eIiIyOPlmq3Wpw+tg1OG7Lk1c8YSzmZsqYhIhLp7pVLy3AugLUqnz73L15boHogUke1cW6ic+5n7QJvhLCLic4cTlmAGRIhdFhfdlcmPpUjCfSj3FpEZ9dQ5W6CFDPrLIc652rj2FWUi0f1wdZGI5DERbg56dlIvO6hyt1UTe8pEZKUa1JEiMVBhDu6GzbHc8LFZUSXHRUTC/oShBHG5DKkmbPUg1xPujSyxSba/sltEREJuA9tl0Qikz9JD8f1ovrjOVtvF7NexRqcsVgOfSIIW6pMDVe7z3zwLHDjFeSfb7GV/P6fXwrqATInuAvraWruB0U2bx4aenqKRJA/MMairhoAsCczr1TWH8dPLfO7w2VRtqKDZFFjsOHBY5JmNX549dzQ5ROQkLY9MQbZvKDCzNgHkGCvaLRGOznS2zQ6e2GJu7gXY7/3kiqQj52ubbo9C143asm2hLsrsD3jV8l2PAbcGsBRN9VuK7B+Gvc3N+WnDKEuqAtlz8FdT37J/5dhdk3vbxUb4Y23UusT08nZAobyTSDeoD8VUmKja3DCVcylk6LB5J7Qcts54Ncv13PVXDMQWLfC9o4SOMxqmd/TqocSKvZirTiIiTusM3NbM5aq9AGccPoYaB73jwn/ItWJ/xQ4RkTWVOupg4VqViEw7ApBTA5l6P9/T8LrV1veHA0RCirQANKU/q193KdZHEiUiMjc2vxUO2E9ml5MlXhn9ANRsVJmAWdUAjAaLiKoRaN9pRX6bdv9VjQD8FGv5HgNuAjS5ioj3Hd3jnyS+7RQfA+BSpONkMFwD5OvOVzEClZNmuV0hE/cAqqOmK7yjD4ENen1Jhpo+y6xt1SXmWoKNEtzS8qOn0Zi3jw7z1hg+BNCZ5m2z/DxmmFuZ7DKbATeBsYKgKX8/C6JNehjfmEZ3DlAb8YC/k1dVlrHx5LHaNNZ7GElzlQdJwOXaOA8REb9sSh2Myw5xn78s/0Fmpzc0V+TmVY1y2lP+h3jF5l9qvPpdnP4I/wITXDY67Xw1sAAAAABJRU5ErkJggg==" data-pagespeed-url-hash="4179492045" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a> 
+  </h1>
+
+    <div id="login" class="dropdown">
+      <p class="user actions" role="menu">
+        <a id="login-dropdown" href="/users/login">Log In</a>
+      </p>
+      <div id="small_login" class="simple login">
+	<form class="new_user" id="new_user_session_small" action="/users/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="UR2Jn4e3kt48J1lAGnODcnpmyR5yv+WmQAYc1uTnpqphvFe8M1AJVCyqvU1pJ3N/jvzrTH0Trvs+DSYZLXBKnA=="/>
+	<dl>
+    <dt>
+      <label for="user_session_login_small">User name or email:</label></dt>
+    <dd><input id="user_session_login_small" type="text" name="user[login]"/></dd>
+    <dt><label for="user_session_password_small">Password:</label></dt>
+    <dd><input id="user_session_password_small" type="password" name="user[password]"/></dd>
+  </dl>
+  <p class="submit actions">
+    <label for="user_remember_me_small" class="action"><input type="checkbox" name="user[remember_me]" id="user_remember_me_small" value="1"/>Remember Me</label>
+    <input type="submit" name="commit" value="Log In"/>
+  </p>
+</form>
+<ul class="footnote actions">
+  <li><a href="/users/password/new">Forgot password?</a></li>
+    <li>
+      <a href="/invite_requests">Get an Invitation</a>
+    </li>
+</ul>
+
+</div>
+
+    </div>
+
+  <h3 class="landmark heading">Site Navigation</h3>
+  <ul class="primary navigation actions" role="navigation">
+    <li class="dropdown">
+      <a href="/menu/fandoms">Fandoms</a>
+      <ul class="menu" role="menu">
+  <li><a href="/media">All Fandoms</a></li>
+        <li id="medium_5"><a href="/media/Anime%20*a*%20Manga/fandoms">Anime &amp; Manga</a></li>
+        <li id="medium_3"><a href="/media/Books%20*a*%20Literature/fandoms">Books &amp; Literature</a></li>
+        <li id="medium_4"><a href="/media/Cartoons%20*a*%20Comics%20*a*%20Graphic%20Novels/fandoms">Cartoons &amp; Comics &amp; Graphic Novels</a></li>
+        <li id="medium_7"><a href="/media/Celebrities%20*a*%20Real%20People/fandoms">Celebrities &amp; Real People</a></li>
+        <li id="medium_2"><a href="/media/Movies/fandoms">Movies</a></li>
+        <li id="medium_6"><a href="/media/Music%20*a*%20Bands/fandoms">Music &amp; Bands</a></li>
+        <li id="medium_8"><a href="/media/Other%20Media/fandoms">Other Media</a></li>
+        <li id="medium_30198"><a href="/media/Theater/fandoms">Theater</a></li>
+        <li id="medium_1"><a href="/media/TV%20Shows/fandoms">TV Shows</a></li>
+        <li id="medium_476"><a href="/media/Video%20Games/fandoms">Video Games</a></li>
+        <li id="medium_9971"><a href="/media/Uncategorized%20Fandoms/fandoms">Uncategorized Fandoms</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/browse">Browse</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works">Works</a></li>
+  <li><a href="/bookmarks">Bookmarks</a></li>
+  <li><a href="/tags">Tags</a></li>
+  <li><a href="/collections">Collections</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/search">Search</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works/search">Works</a></li>
+  <li><a href="/bookmarks/search">Bookmarks</a></li>
+  <li><a href="/tags/search">Tags</a></li>
+  <li><a href="/people/search">People</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/about">About</a>
+      <ul class="menu" role="menu">
+  <li><a href="/about">About Us</a></li>
+  <li><a href="/admin_posts">News</a></li>
+  <li><a href="/faq">FAQ</a></li>
+  <li><a href="/wrangling_guidelines">Wrangling Guidelines</a></li>
+  <li><a href="/donate">Donate or Volunteer</a></li>
+</ul>
+
+    </li>
+	  <li class="search"><form class="search" id="search" action="/works/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+  <fieldset>
+    <legend>Search Works</legend>
+    <p>
+      <label class="landmark" for="site_search">Work Search:</label>
+      <input class="text" id="site_search" aria-describedby="site_search_tooltip" type="text" name="work_search[query]"/>
+      <span class="tip" role="tooltip" id="site_search_tooltip">tip: katekyou &quot;alternate universe&quot; sort:&gt;words</span>
+      <span class="submit actions"><input type="submit" value="Search" class="button"/></span>
+    </p>
+  </fieldset>
+</form></li>
+  </ul>
+
+
+
+  <div class="clear"></div>
+
+</div>
+
+
+
+<!-- END header -->
+
+      <div id="inner" class="wrapper">
+        <!-- BEGIN sidebar -->
+        <!-- END sidebar -->
+
+        <!-- BEGIN main -->
+        <div id="main" class="chapters-show region" role="main">
+          
+          <div class="flash"></div>
+          <!--page description, messages-->
+<!--/descriptions-->
+
+<!--subnav-->
+<!--/subnav-->
+
+  <!-- BEGIN work -->
+  <div class="work"><p class="landmark"><a name="top">&nbsp;</a></p>
+      <!-- BEGIN navigation -->
+<h3 class="landmark heading">Actions</h3>
+<ul class="work navigation actions" role="menu">
+
+
+
+    <li class="chapter entire"><a href="/works/20743736?view_full_work=true">Entire Work</a></li>
+
+
+      <li class="chapter next"><a href="/works/20743736/chapters/49652657#workskin">Next Chapter &#8594;</a></li>
+
+    <li class="chapter" aria-haspopup="true">
+      <noscript>
+        <a href="/works/20743736/navigate">Chapter Index</a>
+      </noscript>
+      <a class="hidden" href="#">Chapter Index</a>
+      <ul id="chapter_index" class="expandable secondary hidden">
+        <li>
+          <form action="/works/20743736/chapters/49286897" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+            <p>
+              <select name="selected_id" id="selected_id"><option selected="selected" value="49286897">1. Summer Part 1</option>
+<option value="49652657">2. Summer Part 2</option>
+<option value="49898135">3. Diagon Alley</option>
+<option value="50251937">4. The Hogwarts Express</option>
+<option value="50833552">5. Back to School</option>
+<option value="50865991">6. Into the Garden</option>
+<option value="51355441">7. Passageways</option>
+<option value="51508516">8. In Godrics Garden</option>
+<option value="52533634">9. Hogsmeade</option>
+<option value="52772833">10. Quidditch</option>
+<option value="52947643">11. That Old Black Magic</option>
+<option value="53170120">12. Christmas</option>
+<option value="53663410">13. Godrics Hollow</option>
+<option value="53970406">14. Valentines Day</option>
+<option value="55945033">15. Return to the Forbidden Forest</option>
+<option value="55945195">16. Chapter 16</option>
+<option value="55945339">17. Into the Garden</option>
+<option value="55945720">18. Third Year's End</option></select>
+              <span class="submit actions"><input type="submit" name="commit" value="Go"/></span>
+            </p>
+</form>        </li>
+        <li><a href="/works/20743736/navigate">Full-page index</a></li>
+      </ul>
+    </li>
+
+
+
+  <li class="comments" id="show_comments_link_top">
+      <a href="#comments">Comments</a>
+  </li>
+
+
+
+    <li class="share hidden">
+      <a class=" modal" title="Share Work" aria-controls="#modal" href="/works/20743736/share">Share</a>
+    </li>
+
+
+    <li class="download" aria-haspopup="true">
+      <a href="#">Download</a>
+      <ul class="expandable secondary">
+          <li><a href="/downloads/20743736/Lily%20Evans%20and%20the.azw3?updated_at=1585356733">AZW3</a></li>
+          <li><a href="/downloads/20743736/Lily%20Evans%20and%20the.epub?updated_at=1585356733">EPUB</a></li>
+          <li><a href="/downloads/20743736/Lily%20Evans%20and%20the.mobi?updated_at=1585356733">MOBI</a></li>
+          <li><a href="/downloads/20743736/Lily%20Evans%20and%20the.pdf?updated_at=1585356733">PDF</a></li>
+          <li><a href="/downloads/20743736/Lily%20Evans%20and%20the.html?updated_at=1585356733">HTML</a></li>
+      </ul>
+    </li>
+</ul>
+<!-- END navigation -->
+
+
+<h3 class="landmark heading">Work Header</h3>
+
+<div class="wrapper">
+
+  <dl class="work meta group" role="complementary">
+          <dt class="rating tags">
+
+              Rating:
+          </dt>
+
+          <dd class="rating tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/General%20Audiences/works">General Audiences</a></li>
+            </ul>
+          </dd>
+          <dt class="warning tags">
+
+              <a href="/tos_faq#tags">Archive Warning</a>:
+          </dt>
+
+          <dd class="warning tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Choose%20Not%20To%20Use%20Archive%20Warnings/works">Creator Chose Not To Use Archive Warnings</a></li>
+            </ul>
+          </dd>
+          <dt class="fandom tags">
+
+              Fandom:
+          </dt>
+
+          <dd class="fandom tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a></li>
+            </ul>
+          </dd>
+          <dt class="character tags">
+
+              Characters:
+          </dt>
+
+          <dd class="character tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Marauders%20(Harry%20Potter)/works">Marauders (Harry Potter)</a></li><li><a class="tag" href="/tags/Lily%20Evans%20Potter/works">Lily Evans Potter</a></li><li><a class="tag" href="/tags/Severus%20Snape/works">Severus Snape</a></li><li><a class="tag" href="/tags/Minerva%20McGonagall/works">Minerva McGonagall</a></li><li><a class="tag" href="/tags/Marlene%20McKinnon/works">Marlene McKinnon</a></li><li><a class="tag" href="/tags/Gideon%20Prewett/works">Gideon Prewett</a></li><li><a class="tag" href="/tags/Fabian%20Prewett/works">Fabian Prewett</a></li><li><a class="tag" href="/tags/Caradoc%20Dearborn/works">Caradoc Dearborn</a></li><li><a class="tag" href="/tags/Molly%20Weasley/works">Molly Weasley</a></li><li><a class="tag" href="/tags/Petunia%20Evans%20Dursley/works">Petunia Evans Dursley</a></li><li><a class="tag" href="/tags/Lily%20Evan&#39;s%20Mother/works">Lily Evan&#39;s Mother</a></li><li><a class="tag" href="/tags/Lily%20Evan&#39;s%20Father/works">Lily Evan&#39;s Father</a></li><li><a class="tag" href="/tags/Lily%20Evan&#39;s%20Nanna/works">Lily Evan&#39;s Nanna</a></li><li><a class="tag" href="/tags/Original%20Male%20Character(s)/works">Original Male Character(s)</a></li><li><a class="tag" href="/tags/Benjy%20Fenwick/works">Benjy Fenwick</a></li><li><a class="tag" href="/tags/Emmeline%20Vance/works">Emmeline Vance</a></li>
+            </ul>
+          </dd>
+          <dt class="freeform tags">
+
+              Additional Tags:
+          </dt>
+
+          <dd class="freeform tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Hogwarts%20Third%20Year/works">Hogwarts Third Year</a></li><li><a class="tag" href="/tags/Marauders%20Era%20(Harry%20Potter)/works">Marauders Era (Harry Potter)</a></li><li><a class="tag" href="/tags/Camping/works">Camping</a></li><li><a class="tag" href="/tags/Puzzles/works">Puzzles</a></li><li><a class="tag" href="/tags/Character%20building/works">Character building</a></li><li><a class="tag" href="/tags/Lily%20learning%20to%20fight%20back/works">Lily learning to fight back</a></li><li><a class="tag" href="/tags/It&#39;s%20hard%20work/works">It&#39;s hard work</a></li><li><a class="tag" href="/tags/but%20those%20Prewett%20boys%20help*d*/works">but those Prewett boys help.</a></li><li><a class="tag" href="/tags/Vague%20overtones%20towards%20romance/works">Vague overtones towards romance</a></li><li><a class="tag" href="/tags/Not%20Beta%20Read/works">Not Beta Read</a></li><li><a class="tag" href="/tags/Marauders%20are%20little%20shits/works">Marauders are little shits</a></li><li><a class="tag" href="/tags/Bets/works">Bets</a></li><li><a class="tag" href="/tags/Pranking/works">Pranking</a></li><li><a class="tag" href="/tags/Lily%20Evan&#39;s%20being%20a%20little%20shit/works">Lily Evan&#39;s being a little shit</a></li>
+            </ul>
+          </dd>
+
+      <dt class="language">
+        Language:
+      </dt>
+      <dd class="language">
+        English
+      </dd>
+
+      <dt class="series">
+        Series:
+      </dt>
+      <dd class="series">
+        <span class="series"><a class="previous" href="/works/18954436">&#8592; Previous Work</a><span class="divider"> </span><span class="position">Part 4 of the <a href="/series/1262720">Lily Evans</a> series</span></span>
+      </dd>
+
+
+    <dt class="stats">Stats:</dt>
+    <dd class="stats">
+<!-- end of cache -->
+
+      <dl class="stats"><dt class="published">Published:</dt><dd class="published">2019-09-23</dd><dt class="status">Completed:</dt><dd class="status">2020-03-27</dd><dt class="words">Words:</dt><dd class="words">77785</dd><dt class="chapters">Chapters:</dt><dd class="chapters">18/18</dd><dt class="kudos">Kudos:</dt><dd class="kudos">3</dd><dt class="bookmarks">Bookmarks:</dt><dd class="bookmarks"><a href="/works/20743736/bookmarks">1</a></dd><dt class="hits">Hits:</dt><dd class="hits">220</dd></dl>
+      </dd>
+  </dl>
+</div>
+
+
+
+<!-- BEGIN section where work skin applies -->
+<div id="workskin">
+  <div class="preface group">
+    <h2 class="title heading">
+      Lily Evans and the Garden of Gryffindor
+    </h2>
+    <h3 class="byline heading">
+      <a rel="author" href="/users/FeBee/pseuds/FeBee">FeBee</a>
+    </h3>
+
+
+        <div class="summary module" role="complementary">
+          <h3 class="heading">Summary:</h3>
+            <blockquote class="userstuff">
+              <p>Lily and the Marauders return for their third year.The Evan's Family is rocked by sadness and Lily starts dreaming about strange things happening in the Garden. Will she solve the puzzle before it's too late? Will the Marauders have learnt their lesson after the previous years shenanigans.</p>
+            </blockquote>
+        </div>
+
+        <div class="notes module" role="complementary">
+  <h3 class="heading">Notes:</h3>
+
+
+
+
+
+    <blockquote class="userstuff">
+      <p>As usual I am not JK Rowling, though there may be a sprinkle of her words in this work, if you have seen it before then it is not mine.</p><p>Here commences Year 3 at Hogwarts for Lily Evans. I have 17 Chapters written and have been editing, but am starting to go cross-eyed so I'll just start posting and we shall see how we get on.</p><p>:)</p><p>You don't have to have read the prior stories, however there is some continuation.</p>
+    </blockquote>
+
+</div>
+
+
+  </div>
+
+
+
+    <div id="chapters">
+      <!-- This partial requires local variable 'chapter' -->
+<div class="chapter" id="chapter-1">
+  <!-- chapter management -->
+
+
+  <div class="chapter preface group" role="complementary">
+    <h3 class="title">
+      <a href="/works/20743736/chapters/49286897">Chapter 1</a>: Summer Part 1
+    </h3>
+
+    <!-- only display byline if different from the main byline -->
+
+
+  </div>
+
+  <!--main content-->
+  <div class="userstuff module" role="article">
+    <h3 class="landmark heading" id="work">Chapter Text</h3>
+    <p> </p>
+<p><span class="Apple-converted-space">  </span>Lily lazed in the shade of the willow enjoying the first day of her summer holidays.</p>
+<p><span class="Apple-converted-space">  </span>“Lily,” her mother’s melodious voice issued from inside the house.</p>
+<p><span class="Apple-converted-space">  </span>“Coming Mum,” Lily sighed, so much for just relaxing for the day. “Come on Lion,” she called to the cat like creature resting above her in the branches of the tree. The furry creature flicked his tail indignantly before deigning to jump from his perch and saunter after her. She giggled a little mischievously as she remembered Tuney’s squeals of horror when the kitten had been presented to their mother on her last birthday. Since then Tuney had avoided the odd looking ‘cat’. So much so, that anyone would think he was a carrier for the plague. Lily mused that it was almost like Tuney had a radar for things that were magical. Even more amusing was watching Lion as he deliberately put himself into Tuney’s path. He was sitting at her door making small meeping mews to wake her up in the morning before her alarm went off. He was there when she emerged from the shower, and every night when she came home, he was sitting in the lounge room watching, tail twitching and yellow eyes gleaming as they followed the tall girl as she walked to the kitchen for dinner and stayed staring at her as she ate her meal.</p>
+<p><span class="Apple-converted-space">  </span>“Oh, I wondered where Lion had got to,” Mrs Evans said as Lily entered the kitchen the kitten scampering in quickly after her, narrowly avoiding the closing door.</p>
+<p><span class="Apple-converted-space">  </span>“He’s been following me around since I got home,” Lily shrugged. Well… when he hadn’t been stalking Tuney!</p>
+<p><span class="Apple-converted-space">  </span>“Most intelligent cat I ever saw, he actually fetches things for Nanna Anne when she asks! Especially on the days she‘s feeling poorly. I saw her ask him for her bed socks the other day and as calm as you please he jumped into her drawer, dug out a pair and carried them to her in his mouth! Now before I forget an owl arrived for you.” She indicated the grey fluffy bird perched on the back of one of the dining room chairs.</p>
+<p><span class="Apple-converted-space">  </span>“Thanks Mum. How’s Nanna?” Lily asked as she reached to remove the note from the bird’s claw.</p>
+<p><span class="Apple-converted-space">  </span>“Not doing so well, but that’s to be expected, there is only one cure for what she has.” Lily’s Mother gave a little huff to clear a suddenly tight throat. “Now that I have gotten your attention away from your books, what are you up to today?”</p>
+<p><span class="Apple-converted-space">  </span>“Well, I need to feed the Smith’s and the Jones’ dogs, and I’m looking after the Peterson twins tonight from seven till ten,” Lily recited as she opened the note and scanned the messy script quickly.</p>
+<p> </p>
+<p>
+  <em>Dear Squirt,</em>
+</p>
+<p>
+  <em>Mum and Dad decided we are to stay at Molly’s for the hols. We know it is a bit earlier than expected but do you want to come round today? Molly can apparate over to pick you up at ten and bring you home whenever you like. Send a reply back with Errol.</em>
+</p>
+<p>
+  <em>F and G</em>
+</p>
+<p> </p>
+<p><span class="Apple-converted-space">  </span>Lily glanced up from the letter to find her mother looking at her.</p>
+<p><span class="Apple-converted-space">  </span>“Change of plans?” her Mum raised an eyebrow an amused smile on her face.</p>
+<p><span class="Apple-converted-space">  </span>“Yeah, can I go round to Molly’s today?” Lily asked eyes full of hope. “I’ll feed the dogs when I get back before I head to the Peterson’s.”</p>
+<p><span class="Apple-converted-space">  </span>“That’s the young lady we met on the platform?” Mrs Evans confirmed.</p>
+<p><span class="Apple-converted-space">  </span>“Yeah,” Lily nodded as she folded the note in half.</p>
+<p><span class="Apple-converted-space">  </span>“Well I was going to take Eva and Harry out today, but I can drop you off if it is on the way.”</p>
+<p><span class="Apple-converted-space">  </span>“Oh, she’ll come and pick me up.”</p>
+<p><span class="Apple-converted-space">  </span>“When?”</p>
+<p><span class="Apple-converted-space">  </span>Lily glanced down at the note, “At ten, if I send a reply straight away.”</p>
+<p><span class="Apple-converted-space">  </span>“Well alright then,” her mother agreed, “but I want you home in time to eat before you go out this evening.”</p>
+<p><span class="Apple-converted-space">  </span>“Alright, Mum.”</p>
+<p>Lily quickly penned a reply.</p>
+<p> </p>
+<p>
+  <em>Dear Gid and Fabe,</em>
+</p>
+<p>
+  <em>I have been cleared to come. The address is 8 Hedge Row, Cokeworth.</em>
+</p>
+<p>
+  <em>Thanks.</em>
+</p>
+<p>
+  <em>Lily.</em>
+</p>
+<p> </p>
+<p><span class="Apple-converted-space">  </span>“Here you go Errol,” she cooed to the owl as she gave him the letter, “Please take this to Gid or Fabe.” Errol hooted once and then took off out of the kitchen window. After watching him fly away she turned back around as her Mum spoke.</p>
+<p><span class="Apple-converted-space">  </span>“How about you duck in and see Nanna before you go?”<span class="Apple-converted-space"> </span></p>
+<p> </p>
+<p><span class="Apple-converted-space">  </span>Lily knocked quietly on the door to the downstairs bedroom.</p>
+<p><span class="Apple-converted-space">  </span>“Come in,” a frail voice called.</p>
+<p><span class="Apple-converted-space">  </span>Lily pushed the door open, Lion pushed passed her rubbing himself against her legs as he entered the room first. He stalked over to the bed, jumped up and curled in a ball at Anne’s side. Anne absentmindedly reached down and began to pat him, a rumble sounded in the room as he began to purr.</p>
+<p><span class="Apple-converted-space">  </span>“How are you feeling Nanna?”</p>
+<p><span class="Apple-converted-space">  </span>“Tired,” the old women smiled wearily, “but don’t worry about me. Your Da told me you had a rough year.” Anne reached out with her free hand and took Lily’s hand in her own.</p>
+<p><span class="Apple-converted-space">  </span>“Yeah,” Lily agreed “I’m not real sure I want to go back.”</p>
+<p><span class="Apple-converted-space">    </span>Anne frowned, “You can’t let those who hate stop you. When Rose was at school there was a movement against kids like her too.”<span class="Apple-converted-space"> </span></p>
+<p><span class="Apple-converted-space">  </span>“I just want to know why. I think if I could figure that out, I’d feel better.”</p>
+<p><span class="Apple-converted-space">  </span>“The big thing to remember is that it isn’t about you, even though it’s easy to think that it is.”</p>
+<p><span class="Apple-converted-space">  </span>“What’s it about then Nan? Because when they’re telling me I’m not welcome to sleep in our dorm, it sure feels like it is about me,” she said with hitch in her voice and a furrowed brow.</p>
+<p><span class="Apple-converted-space">  </span>“It’s about them.” Anne squeezed her hand. “For example, who was the worst in your room?”</p>
+<p><span class="Apple-converted-space">  </span>“Allison,” Lily’s scowl deepened as the memories returned full force.</p>
+<p><span class="Apple-converted-space">  </span>“And where does she come from?” Anne noted the girl’s confused expression. “What type of family is she from? What’s her heritage?”</p>
+<p><span class="Apple-converted-space"> </span>Lily shrugged “She’s a pureblood I think.” Then she explained, “Her parents, grandparents and great grandparents are all witches and wizards, back I don’t know how many generations.” Anne nodded her understanding.</p>
+<p><span class="Apple-converted-space">  </span>“And how does she do at school? Is she top of the class?”</p>
+<p><span class="Apple-converted-space">  </span>Lily considered the question for a moment, “Well she’s average I guess. I didn’t really pay attention to anyone else’s results, but she’s not the top.” Lily knew that she occupied that position herself, which had been quite a surprise.</p>
+<p><span class="Apple-converted-space">  </span>“And what’s she like as a person?”</p>
+<p><span class="Apple-converted-space">  </span>“Mmm,” Lily thought for a moment “She seems like she’s pretty spoilt. She received gifts from home every week, it doesn’t seem like too many people have ever told her no. but we never really talked at all. I wasn’t important enough.”</p>
+<p><span class="Apple-converted-space">  </span>“So, she’s probably used to getting her own way?” The old women paused until a nod was received. “To summarise she is used to being praised as the best, her every need met and in her own eyes she is the most important person in the world. Then she goes to school and you waltz in there with your muggle parents and score better than her, you’re sweet and kind and the teachers love you. You have a friend already and you have the confidence to not care who approves of him. My guess, and it is only a guess mind, is that she is jealous. She’s used to having everything her own way and then you beat her.”</p>
+<p><span class="Apple-converted-space">  </span>“But that’s not fair! I worked really hard for my grades,” protested Lily.</p>
+<p><span class="Apple-converted-space">  </span>“Yes, I agree it is unfair, but she doesn’t see that. So, she uses what she has, her standing as a Pureblood and gets onto the other girls, which is easy to do because you’re always studying or with Sev.”</p>
+<p><span class="Apple-converted-space">  </span>“Mmm, so what do I do about it?” Lily frowned.</p>
+<p><span class="Apple-converted-space">  </span>“Well there’s not much you can do about her, apart from ignoring her.<span class="Apple-converted-space">  </span>I very much doubt that you want to make friends with her after everything that happened, but finding other friends is good. Remus and those boys seem like they could turn out alright in time if they learn from this and grow up and if they don’t then see who else is around. Don’t just limit yourself to your house either.”</p>
+<p><span class="Apple-converted-space">  </span>“Even Remus turned against me Nan,” Lily sniffed mournfully.</p>
+<p><span class="Apple-converted-space">  </span>“Hmm, the pressure that friends apply can be a hard thing to break,” the old woman commented sagely, “especially if you’ve never had one before.”</p>
+<p><span class="Apple-converted-space">  </span>“He was the first to apologise, and he seemed to mean it,” Lily tilted her head to one side as she considered the boy.</p>
+<p><span class="Apple-converted-space">  </span>“Are you going to hold it against him?”</p>
+<p><span class="Apple-converted-space">  </span>“I…I don’t think so. What is it Dad always says - Forgive but don’t forget.”</p>
+<p><span class="Apple-converted-space">  </span>“Your father can be smart sometimes, he gets that from me. The best thing you can do is be yourself! You used to be such a cheeky little thing. That sense of fun is still hidden in you somewhere, I’ve a feeling those boys that have invited you over will help you to find it again.”</p>
+<p><span class="Apple-converted-space">  </span>Suddenly a crack was heard in the garden, startling the pair and causing Lion to hiss. A second later a knock was heard at the back door.</p>
+<p><span class="Apple-converted-space">  </span>“That’ll be Molly! Love you Nanna I’ll see you when I get back,” Lily said with a grin, giving the old women a brief hug and a kiss on the cheek, before she bolted from the room. The old women smiled as she watched her granddaughter run out the door, pleased that the girl hadn’t lost her all of joyful spirit.</p>
+<p> </p>
+<p>Crack</p>
+<p>Molly led Lily towards a two-story ramshackle house that looked like it was held together by magic.</p>
+<p><span class="Apple-converted-space">  </span>“Welcome to the Burrow.”<span class="Apple-converted-space"> </span></p>
+<p><span class="Apple-converted-space">  </span>The pair walked into the comfortable kitchen where Gideon and Fabian were sitting. Gideon was playing a game with a boy whose hair was as red as his own, while Fabian was supporting a younger child who was determinedly pushing to stand in his lap. They looked up as the two girls entered.</p>
+<p><span class="Apple-converted-space">  </span>“This one will be walking soon Moll,” Fabian smiled at his sister.</p>
+<p><span class="Apple-converted-space">  </span>“Shush you! Don’t wish that on me just yet! Now, who’s for a cuppa?”</p>
+<p><span class="Apple-converted-space">  </span>The boys laughed, “We’ve got work to do Moll!”</p>
+<p><span class="Apple-converted-space">  </span>“Actually, I need some advice first,” Lily pulled a notebook and a pen out of her bag.</p>
+<p><span class="Apple-converted-space">  </span>“What’s that?” Gideon asked fascinated as she clicked it to make the tip protrude.</p>
+<p><span class="Apple-converted-space">  </span>“It’s a pen.” She passed it across for him to inspect, and he spent several minutes clicking the nib in and out, while she laughed at him.</p>
+<p><span class="Apple-converted-space">  </span>“We have to get Arthur one!” Gideon enthused while Molly rolled her eyes as she bustled around the kitchen.</p>
+<p><span class="Apple-converted-space">  </span>“Back to the question?” Lily suggested still giggling.</p>
+<p><span class="Apple-converted-space">  </span>“Oh yeah, alright,” Gideon finally agreed giving the pen back.</p>
+<p><span class="Apple-converted-space">  </span>Lily paused and took a deep breath before speaking, “Due to the things that happened at the end of last year, I didn’t get to choose my electives. Dumbledore said that if I am going back to school I have until the end of the week to decide my new subjects, and I don’t know what I should choose.”</p>
+<p>“We’re not even going to comment on the possibility of you not coming back, because that would make us really sad and doesn’t bare thinking about,” Fabian said. “Though we will just say making such a decision has consequences, such as all your Family being <em>Oblivated</em>,”</p>
+<p>“That’s having your memories wiped,” interjected Gideon seeing the confused look Lily was wearing.</p>
+<p>“Not to mention,” Fabe shot a glare at his brother for interrupting as he continued speaking,” You would have your magic bound, as a precaution, as you would no longer be learning how to control it.” Lily nodded her understanding.</p>
+<p><span class="Apple-converted-space"> </span>Molly cleared her throat and changed the subject, “What you choose depends on what you want to do after school and what subjects you enjoy.”<span class="Apple-converted-space"> </span></p>
+<p><span class="Apple-converted-space"> </span>“It’s hard to know what jobs there are in the wizarding world and I have no clue about the subjects,” Lily stated.</p>
+<p><span class="Apple-converted-space">   </span>“Don’t worry Squirt. We’ll give you the run down. Let’s start with the subjects. Divination is just about creative writing, so as long as you’ve a good imagination, it’s an easy pass,” Gideon suggested.</p>
+<p><span class="Apple-converted-space">  </span>“Why is that?”</p>
+<p><span class="Apple-converted-space">  </span>“Well, true Seer’s are rare, aren’t they? And for myself, I wonder how much use the lessons are if you haven’t the talent,” he shrugged.</p>
+<p><span class="Apple-converted-space">  </span>“What else?”<span class="Apple-converted-space"> </span></p>
+<p><span class="Apple-converted-space">  </span>“There’s muggle studies.”</p>
+<p><span class="Apple-converted-space">  </span>“I think I’m all good with that one, though it might be interesting to see how the average wizard thinks of us,” Lily laughed.</p>
+<p><span class="Apple-converted-space">  </span>“It would be another easy pass for you though.”</p>
+<p><span class="Apple-converted-space">  </span>“I’ve never taken the easy option,” they all laughed at that.</p>
+<p><span class="Apple-converted-space">  </span>“Well then, there’s ancient runes. Useful if you wish to be a healer or curse breaker, and definitely needed if you wish to study alchemy or warding,” Gideon recited.</p>
+<p><span class="Apple-converted-space">  </span>“Then there’s Arithmancy- which is the study of the magical properties of numbers. Useful in curse breaking and also in potions and can be applied in a divination like fashion as well,” Fabian added.</p>
+<p><span class="Apple-converted-space"> </span>“Oh and last but not least is Care of Magical Creatures, which is just what it sounds like!” Molly chuckled when the tiny boy who was now sitting on Fabian’s lap took advantage of the slight lull in conversation while Lily thought over the options, to let out a massive sneeze that covered the older boy in snot. His mother passed Fabian a damp cloth to clean up the mess.<span class="Apple-converted-space"> </span></p>
+<p><span class="Apple-converted-space">  </span>“I like the sound of that second last one, I enjoyed maths at my old school,” Lily enthused “But I’m not sure what else. What did you guys take?”</p>
+<p><span class="Apple-converted-space">  </span>“Well I want to be an Auror,” Gideon said proudly. “None of the electives really helped as the requirements are covered by our base subjects, so I took Care of Magical Creatures and Ancient Runes, because they sounded fun.”</p>
+<p><span class="Apple-converted-space">  </span>“Same,” said Fabian. “An Auror is like the magical equivalent of a pleez-man,” he added by way of explanation.</p>
+<p><span class="Apple-converted-space">  </span>“Policeman?” Lily suggested, seeing his nod she continued. “But I don’t know what I want to be yet,” Lily looked worried. “I don’t even know what jobs there are!”</p>
+<p><span class="Apple-converted-space">  </span>“That’s alright, you can just take ones that you are interested in then. Try and keep your options open. Then you could also choose the same ones as your friends so that if you don’t like it at least you won’t be alone in classes.” Molly’s statement was met with an awkward silence, the boys exchanged sad looks as they thought about the previous year and Lily wondered what Severus would choose.</p>
+<p><span class="Apple-converted-space">  </span>“Can I take three?” Lily finally broke the silence</p>
+<p><span class="Apple-converted-space">  </span>“Yes but it would be a lot of work,” warned Gideon.</p>
+<p><span class="Apple-converted-space">  </span>“Care of Magical Creatures, Arithmancy and Ancient Runes all sound interesting, so I might just take them all. I can drop one if I don’t like it or its too much can’t I?” she looked around at the others uncertainly.</p>
+<p><span class="Apple-converted-space">  </span>“Yeah you can, I think Marly’s taking those, so she might be able to tutor you if you get into trouble. Do you know what your mate’s taking?”</p>
+<p><span class="Apple-converted-space">  </span>“We didn’t discuss it,” she shook her head. “Could I borrow Errol to send this to Professor McGonagal?” Lily asked Molly holding up the note she had written.</p>
+<p><span class="Apple-converted-space">  </span>“Of course,” Errol was given the note and sent on his way.<span class="Apple-converted-space">  </span>“Well if you don’t get moving, you won’t get anything done.” Molly shooed them out of the kitchen.</p>
+<p><span class="Apple-converted-space">  </span>“Right,” Gideon said “let’s head outside and start. Molly and Arthur planted a heap of fruit trees in the paddock a couple of years back, we can practice there,” he said as he led the way.</p>
+<p> </p>
+<p><span class="Apple-converted-space">  </span>Gideon and Fabian had a quick discussion about what they were going to show Lily first. They had decided that if she had a means of defending herself then she would be much more confident and some of her timidity should disappear. When they reached the field, Gideon turned to the others, “Okay, let’s start with a basic shield, you can use this to block those pesky blighters who send trip jinxes your way, and that incisus curse. If you’d demonstrate please Fabe.”</p>
+<p><span class="Apple-converted-space">  </span>Fabian aimed his wand at Gideon “Offendimus.”</p>
+<p><span class="Apple-converted-space">  </span>“Protego.” Gideon moved his wand in a circular motion and the jinx was blocked. “Now practice the incantation first.”</p>
+<p><span class="Apple-converted-space">  </span>“Protego?”</p>
+<p><span class="Apple-converted-space">  </span>“That’s right but with more confidence and concentrate on what you want the shield to do. Visualise it, a circular shield of energy.”</p>
+<p><span class="Apple-converted-space">  </span>“Protego.”</p>
+<p><span class="Apple-converted-space">  </span>“That’s better, now the wand action.” He demonstrated again, Lily copied.<span class="Apple-converted-space"> </span></p>
+<p><span class="Apple-converted-space">  </span>“Looks good. Now all together.”</p>
+<p><span class="Apple-converted-space">  </span>“Protego,” she whipped her wand in a circle, and felt the air move in front of her.</p>
+<p><span class="Apple-converted-space">  </span>“Alright, I’ll jinx you and you block, on three. One, two, three. Offendimus!” Gideon flicked his wand down.</p>
+<p><span class="Apple-converted-space">  </span>“Protego,” the jinx rebounded towards Gideon.</p>
+<p><span class="Apple-converted-space">  </span>“That’s it Squirt!” even though Gideon hadn’t used his full power, the boys were delighted with her first efforts.</p>
+<p><span class="Apple-converted-space">  </span>“Now if they would only warn me before they curse,” she laughed.</p>
+<p><span class="Apple-converted-space">  </span>“We have a plan for that to, don’t worry, but for now we need to teach you a few other spells. Let’s practice that again.”</p>
+<p>
+  <span class="Apple-converted-space">  </span>
+</p>
+<p><span class="Apple-converted-space"> </span>“Now I know you saw this one last year, but we want to look at how you are doing it. Expelliarmus.”</p>
+<p><span class="Apple-converted-space">  </span>Lily demonstrated on Fabian and he lost his grip on his wand. Disappointingly it fell to the ground a few feet away.</p>
+<p><span class="Apple-converted-space">  </span>“Not bad, though I think you can do it with more power.<span class="Apple-converted-space">  </span>Concentrate on seeing his wand either go flying away from him or boomeranging to you.”</p>
+<p><span class="Apple-converted-space">  </span>Lily closed her eyes for a moment and then said “Expelliarmus!” Fabian’s wand flew from his hand straight at Lily, who dodged out of the way. Gideon bent over laughing.</p>
+<p><span class="Apple-converted-space">  </span>“Lily, you’re supposed to catch it!”</p>
+<p><span class="Apple-converted-space">  </span>“Sorry, I thought it was going to take my eye out,” red faced she grimaced in embarrassment.</p>
+<p><span class="Apple-converted-space">  </span>“Come on do it again!”</p>
+<p> </p>
+<p><span class="Apple-converted-space">  </span>“Unca Gid, Unca Gid!” the small boy called as he ran across the field as fast as his little legs could carry him.</p>
+<p><span class="Apple-converted-space">  </span>“Bill!” Gideon responded as he turned to face the boy who launched himself at his uncle. “Are you supposed to be out of the house?” he grunted as he caught the boy and lifted him higher into the air.</p>
+<p><span class="Apple-converted-space">  </span>“No,” the boy chortled kicking his feet wildly “But Mummy’s feeding Charlie and I snuckeded away!” He squealed a he was settled on Gideons hip.</p>
+<p><span class="Apple-converted-space">  </span>“Come on Bill!” Gideon tried, unsuccessfully, to look stern as he took a step back towards the house. “Your mum will be worried!”</p>
+<p><span class="Apple-converted-space">  </span>“Aww Unca Gid, I wanna go fly, please!” he implored, blue eyes opened wide and a pout on his lips. It was awfully difficult not to give in to someone who looked so sweet. Lily folded first.</p>
+<p><span class="Apple-converted-space">  </span>“Go on,” she said, “I could use a break.”</p>
+<p><span class="Apple-converted-space">  </span>“I’ll let Moll know where he is, so she doesn’t worry!” Fabian said, and he started jogging towards the house. “And I’ll grab the brooms on the way back,” he called over his shoulder.<span class="Apple-converted-space"> </span></p>
+<p>“Unca Gid down!” Bill squirmed until his request was complied with and then made his way to stand looking at Lily.</p>
+<p><span class="Apple-converted-space">  </span>“Are you Unca Gid’s Girlfriend?” Bill asked as he turned his blue eyes to look up at Lily.</p>
+<p><span class="Apple-converted-space">  </span>“No,” she blushed.</p>
+<p><span class="Apple-converted-space">  </span>“Why not? Do you have a boyfriend?”</p>
+<p><span class="Apple-converted-space">  </span>“I’m a bit young yet,” she shook her head with a smile.</p>
+<p><span class="Apple-converted-space"> </span>“You can be my girlfriend if you like,” the small red-haired boy grabbed Lily’s hand with a huge grin on his face.</p>
+<p><span class="Apple-converted-space"> </span>“Your nephew is rather precocious,” Lily giggled to Gideon.</p>
+<p><span class="Apple-converted-space">  </span>Fabian returned with the promised broomsticks and a hamper full of sandwiches which were quickly devoured. Then the boys mounted and began to fly, watching them made Lily wish she could fly too, they looked so free.</p>
+<p><span class="Apple-converted-space">  </span>“Knut for your thoughts Squirt?” Gideon asked as he landed nearby.</p>
+<p><span class="Apple-converted-space">  </span>“I think I’d like to learn how to fly.”</p>
+<p><span class="Apple-converted-space"> </span>Gideon grinned.</p>
+<p> </p>
+<p> </p>
+<p>A week later.</p>
+<p><span class="Apple-converted-space">  </span>“Alright there Squirt?” Fabian asked as Lily followed Molly into the kitchen at the Burrow a scowl marring her features.</p>
+<p><span class="Apple-converted-space">  </span>“Been better,” she replied. “I’m so sorry Molly.”</p>
+<p><span class="Apple-converted-space">  </span>“I suppose she must have been surprised,” Molly commented an amused expression on her face.</p>
+<p><span class="Apple-converted-space">  </span>“Well she must have been surprised a lot this week then,” Lily scoffed.</p>
+<p>Gideon and Fabian exchanged glances.</p>
+<p><span class="Apple-converted-space">  </span>“Care to share?”</p>
+<p><span class="Apple-converted-space">  </span>“My <em>darling</em>,” Lily drawled the word “sister made some rather unfortunate comments when Molly arrived today.”</p>
+<p><span class="Apple-converted-space">  </span>“Yes, well, having someone pop up right in front of you would give you a bit of a start, and to be fair I was a bit clumsy today so it was much noisier than usual,” Molly excused Petunia’s poor behaviour.</p>
+<p><span class="Apple-converted-space">  </span>“Anyway, what are we learning today?” Lily changed the topic.</p>
+<p><span class="Apple-converted-space">  </span>“We thought we would have a game of tag today,” the boys grinned at her.</p>
+<p><span class="Apple-converted-space">  </span>“Tag? What are you seven?” Lily scoffed “Besides you both have long legs, I’d be a goner.”</p>
+<p><span class="Apple-converted-space">  </span>“You’re a witch Lily,” Fabian rolled his eyes “It’ll be magical tag.”</p>
+<p><span class="Apple-converted-space">  </span>“We’ll teach you a spell which will hit your target with a coloured dot. Then we’ll go to the orchard and hide amongst the trees and when you see someone you shoot them, when the times up we come in and count up.”</p>
+<p><span class="Apple-converted-space"> </span>“So how do we keep score?”</p>
+<p><span class="Apple-converted-space">  </span>“Different coloured dots.”</p>
+<p><span class="Apple-converted-space">  </span>“I dibs red,” she grinned.</p>
+<p><span class="Apple-converted-space">  </span>“All right, I’ll take blue, and you Fabe.”</p>
+<p><span class="Apple-converted-space">  </span>“Purple.”</p>
+<p><span class="Apple-converted-space">  </span>“Alright the incantation is colovaria spottus, and the wand movement is a quick flick.” He demonstrated sending a blue spot to mark the settee.</p>
+<p><span class="Apple-converted-space">  </span>“Oi! Take it out side, you lot!” Molly scolded as she waved her wand over the couch erasing the errant colour.</p>
+<p><span class="Apple-converted-space"> </span>It wasn’t long before happy shouts rang through the yard, Molly smiled as she folded the washing. An hour later the trio came back in perspiring heavily and covered in multicoloured dots.<span class="Apple-converted-space">  </span>She laughed at Lily who was by far the worst hit.</p>
+<p><span class="Apple-converted-space">  </span>“It’s not fair,” pouted the girl “My hair gives me away.” She tugged at the long pony tail that hung down her back.</p>
+<p><span class="Apple-converted-space">  </span>“Well next time you come, I’ll have to show you some spells, so you can change that.”</p>
+<p><span class="Apple-converted-space">  </span>“Would you Molly? That would be… I would….really?”</p>
+<p><span class="Apple-converted-space">  </span>Molly laughed at the gushing girl, “Yes, I will, really, it isn’t a problem. Now what are you lot doing after lunch?”</p>
+<p><span class="Apple-converted-space">  </span>“We thought we would teach Lily how to fly,” Lily’s head whipped around so fast her hair flicked her in the face.</p>
+<p><span class="Apple-converted-space">  </span>“Really?”</p>
+<p><span class="Apple-converted-space">  </span>“Really, really.”<span class="Apple-converted-space"> </span></p>
+<p> </p>
+<p>Sandwiches eaten, Fabian grabbed three broomsticks from the shed and they headed back to the field leaving Molly to wrangle Bill who was protesting vehemently that he didn’t need an afternoon nap and much would rather go flying with Unca Gid and Unca Fabe!</p>
+<p><span class="Apple-converted-space">  </span>“Alright then, I’ll stay lower then you, so I can catch you if you fall ok?” Fabian reassured the nervous girl. “Not that you will!”</p>
+<p><span class="Apple-converted-space">  </span>“Do you remember how to mount?” Lily demonstrated “and kick off?” she pushed hard against the ground and rose a little then lent forwards and landed with a nervous smile.</p>
+<p><span class="Apple-converted-space">  </span>“So now kick off pull up on the broom slightly to get a bit more height then lean forward just a little and we’ll head over to the trees.” Lily did as instructed flying steadily towards the orchard.</p>
+<p><span class="Apple-converted-space"> </span>“Ok corners next. We’ll take off, then instead of going straight, we’ll go around the field. If you gently lean to the side, the broom will turn that way and go down slightly. If you just want to turn, gently pull the broomstick the way you want to go, you apply pressure with your hands and thighs.” Lily nodded, pushed off and did a lap of the field. They then repeated the circuit in the opposite direction.</p>
+<p><span class="Apple-converted-space">  </span>“Doing well!” Fabian encouraged as he flew next to her “I don’t think you need me down below anymore. Let’s go again but a bit faster.”</p>
+<p><span class="Apple-converted-space">  </span>Slowly Lily’s confidence grew, by the end of the day she could dodge through the trees and was nearly keeping up with the boys.</p>
+<p><span class="Apple-converted-space">  </span>“I can’t believe it! You should try out for the team this year,” said Gideon.</p>
+<p><span class="Apple-converted-space">  </span>“Thanks but no. I don’t like the idea of those bludgers!” she shuddered.</p>
+<p><span class="Apple-converted-space">  </span>“Too right, they hurt. We had best take you back, so Moll can take you home.”</p>
+<p><span class="Apple-converted-space">  </span>“Thanks for everything.” Lily gave each boy a quick hug when they arrived back at the Burrow before grabbing hold of Molly’s arm and disappearing with a pop.</p>
+<p><span class="Apple-converted-space">  </span>“Well what are we going to teach her next time?” Fabian asked his brother.</p>
+<p><span class="Apple-converted-space">  </span>“I think we need to talk to Arthur. I mean, protego is great but she can’t very well walk around school casting that all the time, can she?”</p>
+<p><span class="Apple-converted-space">  </span>“Yeah not as often as they curse her at any rate, she’d be exhausted.”</p>
+<p> </p>
+<p><span class="Apple-converted-space">  </span>Lily curled up in the chair beside Nanna Anne’s bed and read as the old women slept.</p>
+<p><span class="Apple-converted-space">  </span>Knock, knock, knock.</p>
+<p><span class="Apple-converted-space">  </span>She quietly rose and answered the back door.</p>
+<p><span class="Apple-converted-space">  </span>“Sev what are you doing here?” she whispered noting his black eye. “Come in and let’s put something cold on that. Mum’ll be back in a moment. You can stay here the night.” He didn’t say anything as she sat him down on the sofa. Grabbing a bag of peas from the freezer she wrapped them in a tea towel and pressed them gently to his face.</p>
+<p><span class="Apple-converted-space"> </span>Ten minutes later footsteps could be heard on the drive and Mrs Evans walked in accompanied by Eva and Harry. The blonde headed twins ran to Lily for a hug before noticing the teenage boy and tentatively smiling at him.</p>
+<p><span class="Apple-converted-space">  </span>“Sev are you alright?” Mrs Evans asked with a concerned frown noticing the impromptu ice pack immediately.</p>
+<p><span class="Apple-converted-space">  </span>“Not the best,” he muttered grudgingly accepting hugs from the children. Mrs Evans pulled away the cold bag and looked at his face.</p>
+<p><span class="Apple-converted-space">  </span>“Well you’re going to have a splendid black eye. You’ll be staying for the night. Lily go set up a mattress in your room, he can sleep in there.”</p>
+<p><span class="Apple-converted-space">  </span>“It’s ok, I won’t stay long, don’t go to any trouble. I don’t want to be a bother,” Sev asserted.</p>
+<p><span class="Apple-converted-space">  </span>“You’re not going back there, not tonight,” Mrs Evans was firm. “I’ll send Ewan down to let your Mum know where you are when he gets home from work.” Severus gave up on the argument; even he had to admit that sometimes it was nice to be cared for.</p>
+<p><span class="Apple-converted-space">  </span>“What happened Sev?” little Eva asked patting his knee with her small hand.</p>
+<p><span class="Apple-converted-space">  </span>“My Dad got a bit angry.”<span class="Apple-converted-space"> </span></p>
+<p>Bang.</p>
+<p><span class="Apple-converted-space"> </span>A glass that had been sitting on the kitchen bench burst showering the room in shards. Eva jumped in fright and began to cry. At the sudden noise Lily came thundering down the stairs.<span class="Apple-converted-space"> </span></p>
+<p>“What’s going on? Is everyone ok?” Looking at the pieces glass on the floor “Was that you Sev?” he shook his head.</p>
+<p><span class="Apple-converted-space">  </span>Lily crouched down in front of Eva and wiped her tears “What’s the matter Eva?”</p>
+<p><span class="Apple-converted-space">  </span>“I’m scared! What if Sev’s Dada hurts him? Like my Dada hurt my Mama,” Sev and Lily exchanged a look- could it have been accidental magic?</p>
+<p><span class="Apple-converted-space">  </span>“Sev is going to stay with us for a bit, so we’ll look after him ok?”<span class="Apple-converted-space"> </span></p>
+<p>This seemed to reassure the small girl. The crying dwindled to a sniffle and she wiped her eyes (and nose) with her hands. “Ok.”</p>
+<p><span class="Apple-converted-space">  </span>“Now run out the back and play.” Lily gave both the little ones hugs and sent them out the back to play before grabbing the hoover and beginning to clean up the mess.</p>
+<p> </p>
+<p>It had taken a while, but Lily had studied the book that Severus had given her for her last birthday thoroughly, filling a whole notepad with extra notes and formulae. In the end she was sure that she had done it!<span class="Apple-converted-space">  </span>Created a new spell. Well, if she was truthful it wasn’t a completely new spell, more like an adaption of an old one, but that adaption, if it worked, would surely solve one of her biggest problems at Hogwarts. Looking at her notes again she felt a small ball in her chest that she hadn’t felt for a long time, pride.</p>
+<p> </p>
+<p><span class="Apple-converted-space">   </span>Another week passed, and Lily returned to the Burrow, it was a Saturday and for once Arthur was home.</p>
+<p><span class="Apple-converted-space">  </span>“Hello Mr Weasley,” Lily greeted him as she walked into the house ahead of his wife. “I wanted to ask you something, if you have the time?”</p>
+<p><span class="Apple-converted-space">  </span>“Well anything as long as I can ask you some questions too,” the man gave a good-natured grin.</p>
+<p><span class="Apple-converted-space">  </span>“Sure,” she readily agreed, “Well I want to make up a spell; in fact, I think I have already. Could I show it to you and could we test it?”</p>
+<p><span class="Apple-converted-space">  </span>“Why did you want to make up a spell?” he turned his astonished face to look at his brothers-in-law, they both shrugged.</p>
+<p><span class="Apple-converted-space">  </span>“Well I couldn’t find anything that did what I wanted, and my friend gave me a book that kind of explains how to create spells. The easiest way is by adapting an already known spell, which is what I think I’ve done, so now I want to test it out. I figured I should try it with a proper grown up wizard like you or Molly first, just in case I got it wrong.”</p>
+<p><span class="Apple-converted-space">  </span>“Well, alright then, what is it supposed to do?”</p>
+<p><span class="Apple-converted-space">  </span>“It should put a protective shield on the skin to help prevent cuts and small hexes like the Incisus curse. The incantation is Protego Dermis and you just point the wand at the middle of your forehead.”</p>
+<p><span class="Apple-converted-space">  </span>“Ok, give us a demonstration.”</p>
+<p><span class="Apple-converted-space">  </span>“I’ve never tried it before but… ok here goes….” She took a deep breath and then said clearly, “Protego Dermis.” Nothing happened, Lily was disappointed.</p>
+<p><span class="Apple-converted-space">  </span>“Don’t give up yet,” the older wizard stated calmly. “Were you concentrating hard enough? Determination and focus are what decide if a spell is going to work for you, try again, be forceful, visualise the effect that you want.”<span class="Apple-converted-space"> </span></p>
+<p><span class="Apple-converted-space">  </span>“PROTEGO DERMIS!” she shouted, and a visible golden web extended from her wand and settled over her skin to disappear a moment later.<span class="Apple-converted-space"> </span></p>
+<p><span class="Apple-converted-space">  </span>“It tingles!” She exclaimed excitedly. “Can we test it now?”</p>
+<p><span class="Apple-converted-space">  </span>Arthur hesitated slightly “With the Incisus hex? Are you sure?”</p>
+<p><span class="Apple-converted-space">  </span>“Yes please, if I can get this to work, it will make a big difference to all the Muggleborns at school.”</p>
+<p><span class="Apple-converted-space">  </span>“Ok, are you ready? - Incisus,” his effort was at best, half-hearted as he wasn’t confident her spell had worked but still the light beamed from his wand, Lily flinched instinctively and then looked at her arm.</p>
+<p><span class="Apple-converted-space">  </span>“Nothing!” she let out a happy squeal, “Now how do I make it stay on for long periods of time?”</p>
+<p><span class="Apple-converted-space">  </span>“In general, the strength of the spell is also decided by the strength and determination of the caster.”</p>
+<p><span class="Apple-converted-space">  </span>“So I just need to practice?”<span class="Apple-converted-space"> </span></p>
+<p><span class="Apple-converted-space">  </span>“Given that all indications are that you are quite the strong witch I would say yes.”</p>
+<p><span class="Apple-converted-space">  </span>“That was bloody brilliant!” the oldest brother crowed.</p>
+<p><span class="Apple-converted-space">  </span>“Gideon!” Molly scolded. “I’ll tell Mother!”</p>
+<p><span class="Apple-converted-space">  </span>“But Moll,” whined Gideon, “It was incredible!”<span class="Apple-converted-space"> </span></p>
+<p><span class="Apple-converted-space">  </span>“Now what other spells are you going to teach me?” She turned her beaming face to the boys.<span class="Apple-converted-space"> </span></p>
+<p><span class="Apple-converted-space">  </span>“We aren’t teaching you anything else!” Lily’s smile fell.</p>
+<p><span class="Apple-converted-space">  </span>“Until you teach us how you did that!” and the trio went out into the yard to practice once more. After consultation with Arthur, Gideon and Fabian planned to teach Lily Protego Duo and the summoning charm before the end of the holidays. When they returned to school they would seek advice from the Professors on appropriate spells.<span class="Apple-converted-space"> </span></p>
+<p>The spells weren’t the only lessons they taught Lily that holidays. To encourage her situational awareness, they spent days practicing tripping her randomly as she ran around the orchard playing tag. Over time Lily became quite adept at dodging and blocking tripping hexes and she would start each day at the Burrow by applying the skin shield which they would then test whenever they stopped between lessons, until she could make it last two hours before she needed to redo it. Satisfied that they were making progress Lily was much happier to return to Hogwarts.</p>
+  </div>
+  <!--/main-->
+
+
+</div>
+
+<!-- end of cache -->
+
+    </div>
+  
+  
+    </div>
+    <!-- END work skin -->
+  </div>
+  <!-- END work -->
+
+  <!-- BEGIN comment section -->
+  <!-- Gets embedded anywhere we need to list comments on a top-level commentable. We need the local variable "commentable" here. -->
+<div id="feedback" class="feedback" role="complementary">
+
+  <h3 class="landmark heading">Actions</h3>
+
+  <ul class="actions" role="navigation">
+      <li><a href="#main">&#8593; Top</a></li>
+
+
+      <li><a href="/works/20743736/chapters/49652657#workskin">Next Chapter &#8594;</a></li>
+
+
+
+
+      <li>
+        <form id="new_kudo" action="/kudos" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="4V0lg+wU//YoYdco1GfDlDVN8goGs3+1Uzp9GtYLzJLR/PugWPNkfDjsMyWnMzOZwdfQWAkfNOgtMUfVH5wgpA=="/>
+          <input value="20743736" type="hidden" name="kudo[commentable_id]" id="kudo_commentable_id"/>
+          <input value="Work" type="hidden" name="kudo[commentable_type]" id="kudo_commentable_type"/>
+          <input type="submit" name="commit" value="Kudos ♥" id="kudo_submit"/>
+</form>      </li>
+
+
+
+
+  </ul>
+
+  <div id="kudos_message"></div>
+
+  <h3 class="landmark heading"><a name="comments">Comments</a></h3>
+
+  
+
+    <div id="kudos">
+      <p class="kudos">
+          3 guests
+         left kudos on this work!
+      </p>
+</div>
+
+
+    <div id="add_comment_placeholder" title="top level comment">
+      <div id="add_comment">
+        <!-- expects the local variables comment, commentable, and button_name -->
+<div class="post comment" id="comment_form_for_49286897">
+  <form class="new_comment" id="comment_for_49286897" action="/chapters/49286897/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="U3QX5uZfukpO3XBJ2qOevSWRTSkkten06iKnCcCxLulj1cnFUrghwF5QlESp926w0QtveysZoqmUKZ3GCSbC3w=="/>
+    <fieldset>
+      <legend>Post Comment</legend>
+
+
+
+
+
+        <p class="notice">
+          This work&#39;s creator has chosen to moderate comments on the work. Your comment will not appear until it has been approved by the creator.
+        </p>
+
+        <dl>
+          <dt class="landmark">Note:</dt>
+          <dd class="instructions comment_form">All fields are required. Your email address will not be published.</dd>
+          <dt><label for="comment_name_for_49286897">Guest name: </label></dt>
+          <dd>
+            <input id="comment_name_for_49286897" type="text" name="comment[name]"/>
+            <script>var validation_for_comment_name_for_49286897=new LiveValidation('comment_name_for_49286897',{wait:500,onlyOnBlur:false});validation_for_comment_name_for_49286897.add(Validate.Presence,{"failureMessage":"Please enter your name.","validMessage":""});</script>
+          </dd>
+          <dt><label for="comment_email_for_49286897">Guest email: </label></dt>
+          <dd>
+            <input id="comment_email_for_49286897" type="text" name="comment[email]"/>
+            <script>var validation_for_comment_email_for_49286897=new LiveValidation('comment_email_for_49286897',{wait:500,onlyOnBlur:false});validation_for_comment_email_for_49286897.add(Validate.Presence,{"failureMessage":"Please enter your email address.","validMessage":""});</script>
+          </dd>
+        </dl>
+        <p class="footnote">(Plain text with limited HTML <a class="help symbol question modal" title="Html help" aria-controls="#modal" href="/help/html-help.html"><span class="symbol question"><span>?</span></span></a>)</p>
+
+      <p>
+        <label for="comment_content_for_49286897" class="landmark">Comment</label>
+        <textarea id="comment_content_for_49286897" class="comment_form observe_textlength" title="Enter Comment" name="comment[comment_content]">
+</textarea>
+        <input type="hidden" id="controller_name_for_49286897" name="controller_name" value="chapters"/>
+      </p>
+      <p class="character_counter"><span id="comment_content_for_49286897_counter" class="value" data-maxlength="10000" aria-live="polite" aria-valuemax="10000" aria-valuenow="comment_content_for_49286897">10000</span> characters left</p>
+      <script>var validation_for_comment_content_for_49286897=new LiveValidation('comment_content_for_49286897',{wait:500,onlyOnBlur:false});validation_for_comment_content_for_49286897.add(Validate.Presence,{"failureMessage":"Brevity is the soul of wit, but we need your comment to have text in it.","validMessage":""});validation_for_comment_content_for_49286897.add(Validate.Length,{"maximum":"10000","tooLongMessage":"must be less than 10000 characters long."});</script>
+      <p class="submit actions">
+        <input type="submit" name="commit" value="Comment" id="comment_submit_for_49286897" data-disable-with="Please wait..."/>
+      </p>
+    </fieldset>
+</form></div>
+<div class="clear"></div>
+
+      </div>
+    </div>
+
+  <!-- If we have javascript, here is where the comments will be spiffily inserted -->
+  <!-- If not, and show_comments is true, here is where the comments will be rendered -->
+  <div id="comments_placeholder" style="display:none;">
+  </div>
+
+
+</div>
+<!-- END comments -->
+
+  <!-- END comment section -->
+
+
+
+          <div class="clear"><!--presentational--></div>
+        </div>
+        <!-- END main -->
+      </div>
+      <!-- BEGIN footer -->
+<div id="footer" role="contentinfo" class="region">
+	<h3 class="landmark heading">Footer</h3>
+  <ul class="navigation actions" role="navigation">
+    <li class="module group">
+      <h4 class="heading">About the Archive</h4>
+      <ul class="menu">
+        <li><a href="/site_map">Site Map</a></li>
+        <li><a href="/diversity">Diversity Statement</a></li>
+        <li><a href="/tos">Terms of Service</a></li>
+        <li><a href="/dmca">DMCA Policy</a> </li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Contact Us</h4>
+      <ul class="menu">
+        <li><a href="/abuse_reports/new">Report Abuse</a></li>
+        <li><a href="/support">Technical Support and Feedback</a></li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Development</h4>
+      <ul class="menu">
+          <li><a href="https://github.com/otwcode/otwarchive/commits/v0.9.300.1">otwarchive v0.9.300.1</a></li>
+        <li><a href="/known_issues">Known Issues</a></li>
+        <li><a href="http://www.gnu.org/licenses/gpl-2.0.html" title="View License">GPL</a> by the <a href="http://transformativeworks.org/" title="The Organization for Transformative Works">OTW</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!-- END footer -->
+
+    </div>
+    <!-- check to see if this controller/action allow tinymce before we load the gigantor js; see application_helper -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js" type="text/javascript"></script>
+<!-- if user has googleapis blocked for some reason we need a fallback -->
+<script type="text/javascript">if(typeof jQuery=='undefined'){document.write(unescape("%3Cscript src='/javascripts/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));document.write(unescape("%3Cscript src='/javascripts/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));}</script>
+
+
+<script type="text/javascript">$j=jQuery.noConflict();</script>
+<script src="/javascripts/jquery.scrollTo.min.js+jquery.livequery.min.js+rails.js+application.js+bootstrap,_bootstrap-dropdown.min.js+jquery-shuffle.js+jquery.tokeninput.min.js+jquery.trap.min.js+ao3modal.min.js+js.cookie.min.js+filters.min.js.pagespeed.jc.oz6LPTe6O7.js"></script><script>eval(mod_pagespeed_a8hDjzT3l_);</script>
+<script>eval(mod_pagespeed_1nA1vKz9z4);</script>
+<script>eval(mod_pagespeed_AKC4FLip6q);</script>
+<script>eval(mod_pagespeed_gX7XC77lvT);</script>
+<script>eval(mod_pagespeed_5zo0ZWMy4O);</script>
+<script>eval(mod_pagespeed_eCCgOhjhYQ);</script>
+<script>eval(mod_pagespeed_TU1Ln7LKSh);</script>
+<script>eval(mod_pagespeed_qTpbjsXQwh);</script>
+<script>eval(mod_pagespeed_R5FGw2ySDb);</script>
+<script>eval(mod_pagespeed_rqqFCT3xcT);</script>
+
+<script>eval(mod_pagespeed_Gf_4KFhTvB);</script>
+
+
+  <script>function isSupported(){var item="localStoragePolyfill";try{localStorage.setItem(item,item);localStorage.removeItem(item);return true;}catch(e){return false;}}function acceptTOS(){if(isSupported()){localStorage.setItem("accepted_tos","20180523");}else{Cookies.set("accepted_tos","20180523",{expires:365});}}$j(document).ready(function(){if(localStorage.getItem("accepted_tos")!=="20180523"&&Cookies.get("accepted_tos")!=="20180523"){$j("body").prepend("<div id=\"tos_prompt\" class=\"hidden\">\n  <h2 class=\"heading\">\n    <span>Archive of Our Own<\/span>\n  <\/h2>\n  <div class=\"agreement\">\n    <p class=\"summary\">\n      On Archive of Our Own (AO3), users can make profiles, create works and\n            other Content, post comments, give Kudos, create Collections and \n            Bookmarks, participate in Challenges, import works, and more. Any \n            information you publish in a comment, profile, work, or Content that you \n            post or import onto AO3 including in summaries, notes and tags, \n            will be accessible by the public (unless you limit access to a work only \n            to those with AO3 Accounts), and it will be available to \n            AO3 personnel. Be mindful when sharing personal information, \n            including  your religious or political views, health, racial background, \n            country of origin, sexual identity and/or personal relationships. To \n            learn more, check out our <a href=\"/tos\">Terms of Service<\/a> and <a href=\"/tos#privacy\">Privacy Policy<\/a>.\n    <\/p>\n\n    <p class=\"confirmation\">\n      <input type=\"checkbox\" id=\"tos_agree\" />\n      <label for=\"tos_agree\">I have read &amp; understood the new Terms of Service and Privacy Policy<\/label>\n    <\/p>\n\n      <p class=\"submit\">\n        <button name=\"button\" type=\"button\" disabled=\"disabled\" id=\"accept_tos\">I agree/consent to its terms<\/button>\n      <\/p>\n\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    var container = \$j(\"#tos_prompt\");\n    var outer = \$j(\"#outer\");\n    var button = \$j(\"#accept_tos\");\n\n    setTimeout(showTOSPrompt, 1500);\n\n    function showTOSPrompt() {\n      \$j.when(container.fadeIn(500)).done(function() {\n        outer.addClass(\"hidden\").attr(\"aria-hidden\", \"true\");\n      });\n\n      \$j(\"#tos_agree\").on(\"click\", function() {\n        button.attr(\"disabled\", !this.checked);\n        if (this.checked) {\n          button.on(\"click\", function() {\n            acceptTOS();\n            outer.removeClass(\"hidden\").removeAttr(\"aria-hidden\");\n            \$j.when(container.fadeOut(500)).done(function() {\n              container.remove();\n            });\n          });\n        };\n      }).change();\n    };\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+  <script>$j(document).ready(function(){var permitted_hosts=["archiveofourown.org","download.archiveofourown.org","insecure.archiveofourown.org","www.archiveofourown.org","insecure-test.archiveofourown.org","test.archiveofourown.org","testdownload.archiveofourown.org"];var current_host=window.location.hostname;if(!permitted_hosts.includes(current_host)&&Cookies.get("proxy_notice")!=="0"&&window.location.protocol!=="file:"){$j("#skiplinks").after("<div id=\"proxy-notice\">\n  <div class=\"userstuff\">\n    <p class=\"important\">Important message:<\/p>\n    <ol>\n      <li>You are using a proxy site that is not part of the Archive of Our Own.<\/li>\n      <li>The entity that set up the proxy site can see what you submit, including your IP address. If you log in through the proxy site, it can see your password.<\/li>\n    <\/ol>\n    <p class=\"important\">重要提示：<\/p>\n    <ol>\n      <li>您使用的是第三方开发的反向代理网站，此网站并非Archive of Our Own - AO3（AO3作品库）原站。<\/li>\n      <li>代理网站的开发者能够获取您上传至该站点的全部内容，包括您的ip地址。如您通过代理登录AO3，对方将获得您的密码。<\/li>\n    <\/ol>\n    <p class=\"submit\"><button class=\"action\" type=\"button\" id=\"proxy-notice-dismiss\">Dismiss Notice<\/button><\/p>\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    \$j(\"#proxy-notice-dismiss\").on(\"click\", function() {\n      Cookies.set(\"proxy_notice\", \"0\");\n      \$j(\"#proxy-notice\").slideUp();\n    });\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+    <script>$j(document).on("loadedCSRF",function(){$j.post("/works/20743736/hit_count.json")})</script>
+
+
+  </body>
+</html>

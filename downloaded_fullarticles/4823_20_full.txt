@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"f2edcff25e","applicationID":"190034","transactionName":"dgwMEkpfWVsHERpRXlQTFgNKQxpECgxC","queueTime":0,"applicationTime":73,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VQcCWV9RGwIJVFFRAw==",licenseKey:"f2edcff25e",applicationID:"190034"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script>
+    <meta name="keywords" content="fanfiction, transformative works, otw, fair use, archive"/>
+    <meta name="language" content="en-US"/>
+    <meta name="subject" content="fandom"/>
+    <meta name="description" content="An Archive of Our Own, a project of the
+    Organization for Transformative Works"/>
+    <meta name="distribution" content="GLOBAL"/>
+    <meta name="classification" content="transformative works"/>
+    <meta name="author" content="Organization for Transformative Works"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+        Agent Abracadabra - Chapter 1 - pine_jay - Harry Potter - J. K. Rowling [Archive of Our Own]
+    </title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/A.1_site_screen_.css.pagespeed.cf.JiR2hT5NxR.css"/>
+<style media="only screen and (max-width: 62em), handheld">#dashboard{clear:both;float:none;margin:1% 3.5%;max-width:100%;padding:0;width:auto}#dashboard,#dashboard.own{border-bottom:10px solid #900;border-top:10px solid #900;padding:.5em 0;border-radius:.25em}#dashboard ul{border:none;display:inline;padding:0;text-align:left}#dashboard li{display:inline}#dashboard a,#dashboard span{display:inline-block;margin:.25em 0}#dashboard .secondary{background:#eee;padding:.375em 0 .625em;box-shadow:inset 2px 2px 5px #bbb}#dashboard .secondary a{margin:.125em 0}#dashboard .landmark{clear:none;float:left}#main,#main.dashboard{float:none;margin:auto;padding-left:3.5%;padding-right:3.5%;width:auto}.logged-in .splash>.module{width:48.5%}.logged-in .splash > div:nth-of-type(odd) {margin-left:0;margin-right:1.5%}.logged-in .splash > div:nth-of-type(even) {margin-left:1.5%;margin-right:0}form.filters{width:auto;min-width:23%;max-width:24%}.filters fieldset{margin-right:0}form.filters dl{margin-left:.25em;margin-right:.25em}#workskin{margin:auto 1.5%}</style>
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 42em), handheld" href="/stylesheets/skins/skin_873_archive_2_0/A.5_site_narrow.handheld_.css.pagespeed.cf.8L0d7x-op8.css"/>
+<link rel="stylesheet" type="text/css" media="speech" href="/stylesheets/skins/skin_873_archive_2_0/A.6_site_speech_.css.pagespeed.cf.Ybb8bLK5Um.css"/>
+<link rel="stylesheet" type="text/css" media="print" href="/stylesheets/skins/skin_873_archive_2_0/A.7_site_print_.css.pagespeed.cf.ry3YZtf8Cz.css"/>
+<!--[if IE 8]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/8_site_screen_IE8_or_lower.css" /><![endif]-->
+<!--[if IE 5]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/9_site_screen_IE5.css" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/10_site_screen_IE6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/11_site_screen_IE7.css" /><![endif]-->
+
+
+
+<!--sandbox for developers	-->
+<style media="screen">#new_work_search fieldset:first-of-type .submit{padding-top:0}.edit_external_author ul ul{margin-left:2.75em}a.resp-sharing-button__link,.resp-sharing-button__icon{display:inline-block}a.resp-sharing-button__link,a.resp-sharing-button__link:hover{text-decoration:none;color:#fff;border:none}.resp-sharing-button{border-radius:5px;transition:25ms ease-out;padding:.5em .75em}.resp-sharing-button__icon svg{width:1em;height:1em;margin-right:.4em;vertical-align:top}.resp-sharing-button__icon{stroke:#fff;fill:none}.resp-sharing-button__icon--solid{fill:#fff;stroke:none}.resp-sharing-button--twitter{background-color:#55acee}.resp-sharing-button--twitter:hover,a:focus .resp-sharing-button--twitter{background-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c}.resp-sharing-button--tumblr:hover,a:focus .resp-sharing-button--tumblr{background-color:#222d3c}.resp-sharing-button--twitter{background-color:#55acee;border-color:#55acee}.resp-sharing-button--twitter:hover,.resp-sharing-button--twitter:active{background-color:#2795e9;border-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c;border-color:#35465c}.resp-sharing-button--tumblr:hover,.resp-sharing-button--tumblr:active{background-color:#222d3c;border-color:#222d3c}</style>
+<script src="/javascripts/livevalidation_standalone.js.pagespeed.jm.oB__Z5piTe.js"></script>
+
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="icsnBR36WElaH0SVDKYDlMOrLoLWgppFXVfbEP3JIMgrwyM+nn/X1xx3tBFrTm1zHNz6mF4uMyLMRacYpA4EBg=="/>
+
+    
+  </head>
+
+  <body class="logged-out">
+    <div id="outer" class="wrapper">
+      <ul id="skiplinks"><li><a href="#main">Main Content</a></li></ul>
+      <!-- BEGIN BETA CAVEATS! -->
+<noscript>
+  <p id="javascript-warning">
+    While we&#39;ve done our best to make the core functionality of this site accessible without javascript, it will work better with it enabled. Please consider turning it on!
+  </p>
+</noscript>
+<!-- END BETA CAVEATS! --> 
+
+<!-- BEGIN header -->
+
+<div id="header" class="region">
+
+  <h1 class="heading">
+    <a href="/"><span>Archive of Our Own</span><sup> beta</sup><script data-pagespeed-no-defer>(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','http://archiveofourown.org/works/11939049/chapters/26988951','eVfAzEuqgZ',true,false,'0HeSS31AP2M');</script><img alt="Archive of Our Own" class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAAqCAMAAAA3b6P4AAACslBMVEWXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACpit0XAAAA5XRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESFBUWFxgZGhscHR4fICEiIyQlJygpKissLi8wMTM0NTY3ODk6Ozw9PkBBQkNFR0hJSktMTU5PUFFSVFVWV1hZWltcXV5fY2RlZmhpamtsbW5vcHFyc3V2d3p7fX5/gIGCg4SFhoeIiouMjY6PkJGSlJWWl5iZmpucnZ6foKGipKWnqKmrrK2ur7CxsrO0tba3uLm6u7y9vr/AwsPFxsfIycrLzM7P0NLT1NXW19na29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+b1plRQAABBRJREFUSMedlvtb1FUQxgcEBMtQggUCxVACu1ApYmRmUqESkCkUREaS4h3JCDONEFPBoBQCJcDIGxkGKYGBkgGSAq4BARIXWWA//0c/7J39LvY0P82cd97nzJlzZuaIKvBRmVqmP/XOrrQNIbOVsNfyjq/3nYrs/1GlWjPe90v28wrgnOiDP7ddeN9WAE47O9DLQI6PksfDMWVjnfuDlCC3b4HbpYcOFjUC9UHKWywtQZNpjTmdgu60uSIis979HRr8bIT4YjVDqV6TFlPgVqjxjBegyM4MfSPepDsm9tAcb5mwHnpfMJmq39C+ZLQCytrfM3deUAylwWYL2+BTc4eICU4aNk/pLgm0DNQuqY+/Nk8zmuX0PmFx83V0eIiIyOPlmq3Wpw+tg1OG7Lk1c8YSzmZsqYhIhLp7pVLy3AugLUqnz73L15boHogUke1cW6ic+5n7QJvhLCLic4cTlmAGRIhdFhfdlcmPpUjCfSj3FpEZ9dQ5W6CFDPrLIc652rj2FWUi0f1wdZGI5DERbg56dlIvO6hyt1UTe8pEZKUa1JEiMVBhDu6GzbHc8LFZUSXHRUTC/oShBHG5DKkmbPUg1xPujSyxSba/sltEREJuA9tl0Qikz9JD8f1ovrjOVtvF7NexRqcsVgOfSIIW6pMDVe7z3zwLHDjFeSfb7GV/P6fXwrqATInuAvraWruB0U2bx4aenqKRJA/MMairhoAsCczr1TWH8dPLfO7w2VRtqKDZFFjsOHBY5JmNX549dzQ5ROQkLY9MQbZvKDCzNgHkGCvaLRGOznS2zQ6e2GJu7gXY7/3kiqQj52ubbo9C143asm2hLsrsD3jV8l2PAbcGsBRN9VuK7B+Gvc3N+WnDKEuqAtlz8FdT37J/5dhdk3vbxUb4Y23UusT08nZAobyTSDeoD8VUmKja3DCVcylk6LB5J7Qcts54Ncv13PVXDMQWLfC9o4SOMxqmd/TqocSKvZirTiIiTusM3NbM5aq9AGccPoYaB73jwn/ItWJ/xQ4RkTWVOupg4VqViEw7ApBTA5l6P9/T8LrV1veHA0RCirQANKU/q193KdZHEiUiMjc2vxUO2E9ml5MlXhn9ANRsVJmAWdUAjAaLiKoRaN9pRX6bdv9VjQD8FGv5HgNuAjS5ioj3Hd3jnyS+7RQfA+BSpONkMFwD5OvOVzEClZNmuV0hE/cAqqOmK7yjD4ENen1Jhpo+y6xt1SXmWoKNEtzS8qOn0Zi3jw7z1hg+BNCZ5m2z/DxmmFuZ7DKbATeBsYKgKX8/C6JNehjfmEZ3DlAb8YC/k1dVlrHx5LHaNNZ7GElzlQdJwOXaOA8REb9sSh2Myw5xn78s/0Fmpzc0V+TmVY1y2lP+h3jF5l9qvPpdnP4I/wITXDY67Xw1sAAAAABJRU5ErkJggg==" data-pagespeed-url-hash="4179492045" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a> 
+  </h1>
+
+    <div id="login" class="dropdown">
+      <p class="user actions" role="menu">
+        <a id="login-dropdown" href="/users/login">Log In</a>
+      </p>
+      <div id="small_login" class="simple login">
+	<form class="new_user" id="new_user_session_small" action="/users/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="p8LdditpvGM7zkbrV4SjhxMoW61lMxicIyJrj4hgzVMFytlNqOwz/X2mtm8wbM1gzF+Pt+2fsfuyMBeH0afpnQ=="/>
+	<dl>
+    <dt>
+      <label for="user_session_login_small">User name or email:</label></dt>
+    <dd><input id="user_session_login_small" type="text" name="user[login]"/></dd>
+    <dt><label for="user_session_password_small">Password:</label></dt>
+    <dd><input id="user_session_password_small" type="password" name="user[password]"/></dd>
+  </dl>
+  <p class="submit actions">
+    <label for="user_remember_me_small" class="action"><input type="checkbox" name="user[remember_me]" id="user_remember_me_small" value="1"/>Remember Me</label>
+    <input type="submit" name="commit" value="Log In"/>
+  </p>
+</form>
+<ul class="footnote actions">
+  <li><a href="/users/password/new">Forgot password?</a></li>
+    <li>
+      <a href="/invite_requests">Get an Invitation</a>
+    </li>
+</ul>
+
+</div>
+
+    </div>
+
+  <h3 class="landmark heading">Site Navigation</h3>
+  <ul class="primary navigation actions" role="navigation">
+    <li class="dropdown">
+      <a href="/menu/fandoms">Fandoms</a>
+      <ul class="menu" role="menu">
+  <li><a href="/media">All Fandoms</a></li>
+        <li id="medium_5"><a href="/media/Anime%20*a*%20Manga/fandoms">Anime &amp; Manga</a></li>
+        <li id="medium_3"><a href="/media/Books%20*a*%20Literature/fandoms">Books &amp; Literature</a></li>
+        <li id="medium_4"><a href="/media/Cartoons%20*a*%20Comics%20*a*%20Graphic%20Novels/fandoms">Cartoons &amp; Comics &amp; Graphic Novels</a></li>
+        <li id="medium_7"><a href="/media/Celebrities%20*a*%20Real%20People/fandoms">Celebrities &amp; Real People</a></li>
+        <li id="medium_2"><a href="/media/Movies/fandoms">Movies</a></li>
+        <li id="medium_6"><a href="/media/Music%20*a*%20Bands/fandoms">Music &amp; Bands</a></li>
+        <li id="medium_8"><a href="/media/Other%20Media/fandoms">Other Media</a></li>
+        <li id="medium_30198"><a href="/media/Theater/fandoms">Theater</a></li>
+        <li id="medium_1"><a href="/media/TV%20Shows/fandoms">TV Shows</a></li>
+        <li id="medium_476"><a href="/media/Video%20Games/fandoms">Video Games</a></li>
+        <li id="medium_9971"><a href="/media/Uncategorized%20Fandoms/fandoms">Uncategorized Fandoms</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/browse">Browse</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works">Works</a></li>
+  <li><a href="/bookmarks">Bookmarks</a></li>
+  <li><a href="/tags">Tags</a></li>
+  <li><a href="/collections">Collections</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/search">Search</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works/search">Works</a></li>
+  <li><a href="/bookmarks/search">Bookmarks</a></li>
+  <li><a href="/tags/search">Tags</a></li>
+  <li><a href="/people/search">People</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/about">About</a>
+      <ul class="menu" role="menu">
+  <li><a href="/about">About Us</a></li>
+  <li><a href="/admin_posts">News</a></li>
+  <li><a href="/faq">FAQ</a></li>
+  <li><a href="/wrangling_guidelines">Wrangling Guidelines</a></li>
+  <li><a href="/donate">Donate or Volunteer</a></li>
+</ul>
+
+    </li>
+	  <li class="search"><form class="search" id="search" action="/works/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+  <fieldset>
+    <legend>Search Works</legend>
+    <p>
+      <label class="landmark" for="site_search">Work Search:</label>
+      <input class="text" id="site_search" aria-describedby="site_search_tooltip" type="text" name="work_search[query]"/>
+      <span class="tip" role="tooltip" id="site_search_tooltip">tip: &quot;uchiha sasuke/uzumaki naruto&quot; angst kudos&gt;10</span>
+      <span class="submit actions"><input type="submit" value="Search" class="button"/></span>
+    </p>
+  </fieldset>
+</form></li>
+  </ul>
+
+
+
+  <div class="clear"></div>
+
+</div>
+
+
+
+<!-- END header -->
+
+      <div id="inner" class="wrapper">
+        <!-- BEGIN sidebar -->
+        <!-- END sidebar -->
+
+        <!-- BEGIN main -->
+        <div id="main" class="chapters-show region" role="main">
+          
+          <div class="flash"></div>
+          <!--page description, messages-->
+<!--/descriptions-->
+
+<!--subnav-->
+<!--/subnav-->
+
+  <!-- BEGIN work -->
+  <div class="work"><p class="landmark"><a name="top">&nbsp;</a></p>
+      <!-- BEGIN navigation -->
+<h3 class="landmark heading">Actions</h3>
+<ul class="work navigation actions" role="menu">
+
+
+
+    <li class="chapter entire"><a href="/works/11939049?view_full_work=true">Entire Work</a></li>
+
+
+      <li class="chapter next"><a href="/works/11939049/chapters/27085029#workskin">Next Chapter &#8594;</a></li>
+
+    <li class="chapter" aria-haspopup="true">
+      <noscript>
+        <a href="/works/11939049/navigate">Chapter Index</a>
+      </noscript>
+      <a class="hidden" href="#">Chapter Index</a>
+      <ul id="chapter_index" class="expandable secondary hidden">
+        <li>
+          <form action="/works/11939049/chapters/26988951" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+            <p>
+              <select name="selected_id" id="selected_id"><option selected="selected" value="26988951">1. Pilot: Part 1</option>
+<option value="27085029">2. Pilot: Part 2</option></select>
+              <span class="submit actions"><input type="submit" name="commit" value="Go"/></span>
+            </p>
+</form>        </li>
+        <li><a href="/works/11939049/navigate">Full-page index</a></li>
+      </ul>
+    </li>
+
+
+
+  <li class="comments" id="show_comments_link_top">
+      <a data-remote="true" href="/comments/show_comments?chapter_id=26988951">Comments </a>
+  </li>
+
+
+
+    <li class="share hidden">
+      <a class=" modal" title="Share Work" aria-controls="#modal" href="/works/11939049/share">Share</a>
+    </li>
+
+
+    <li class="download" aria-haspopup="true">
+      <a href="#">Download</a>
+      <ul class="expandable secondary">
+          <li><a href="/downloads/11939049/Agent%20Abracadabra.azw3?updated_at=1504344777">AZW3</a></li>
+          <li><a href="/downloads/11939049/Agent%20Abracadabra.epub?updated_at=1504344777">EPUB</a></li>
+          <li><a href="/downloads/11939049/Agent%20Abracadabra.mobi?updated_at=1504344777">MOBI</a></li>
+          <li><a href="/downloads/11939049/Agent%20Abracadabra.pdf?updated_at=1504344777">PDF</a></li>
+          <li><a href="/downloads/11939049/Agent%20Abracadabra.html?updated_at=1504344777">HTML</a></li>
+      </ul>
+    </li>
+</ul>
+<!-- END navigation -->
+
+
+<h3 class="landmark heading">Work Header</h3>
+
+<div class="wrapper">
+
+  <dl class="work meta group" role="complementary">
+          <dt class="rating tags">
+
+              Rating:
+          </dt>
+
+          <dd class="rating tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Teen%20And%20Up%20Audiences/works">Teen And Up Audiences</a></li>
+            </ul>
+          </dd>
+          <dt class="warning tags">
+
+              <a href="/tos_faq#tags">Archive Warning</a>:
+          </dt>
+
+          <dd class="warning tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Major%20Character%20Death/works">Major Character Death</a></li>
+            </ul>
+          </dd>
+          <dt class="category tags">
+
+              Category:
+          </dt>
+
+          <dd class="category tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Gen/works">Gen</a></li>
+            </ul>
+          </dd>
+          <dt class="fandom tags">
+
+              Fandoms:
+          </dt>
+
+          <dd class="fandom tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a></li><li><a class="tag" href="/tags/Agents%20of%20S*d*H*d*I*d*E*d*L*d*D*d*%20(TV)/works">Agents of S.H.I.E.L.D. (TV)</a></li><li><a class="tag" href="/tags/Marvel%20Cinematic%20Universe/works">Marvel Cinematic Universe</a></li>
+            </ul>
+          </dd>
+          <dt class="relationship tags">
+
+              Relationship:
+          </dt>
+
+          <dd class="relationship tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Leo%20Fitz*s*Jemma%20Simmons/works">Leo Fitz/Jemma Simmons</a></li>
+            </ul>
+          </dd>
+          <dt class="character tags">
+
+              Characters:
+          </dt>
+
+          <dd class="character tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter/works">Harry Potter</a></li><li><a class="tag" href="/tags/Skye%20%7C%20Daisy%20Johnson/works">Skye | Daisy Johnson</a></li><li><a class="tag" href="/tags/Phil%20Coulson/works">Phil Coulson</a></li><li><a class="tag" href="/tags/Melinda%20May/works">Melinda May</a></li><li><a class="tag" href="/tags/Leo%20Fitz/works">Leo Fitz</a></li><li><a class="tag" href="/tags/Jemma%20Simmons/works">Jemma Simmons</a></li>
+            </ul>
+          </dd>
+          <dt class="freeform tags">
+
+              Additional Tags:
+          </dt>
+
+          <dd class="freeform tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Crossover/works">Crossover</a></li><li><a class="tag" href="/tags/Alternate%20Universe%20-%20Canon%20Divergence/works">Alternate Universe - Canon Divergence</a></li><li><a class="tag" href="/tags/Physical%20Disability/works">Physical Disability</a></li><li><a class="tag" href="/tags/Not%20Canon%20Compliant%20-%20Harry%20Potter%20and%20the%20Chamber%20of%20Secrets/works">Not Canon Compliant - Harry Potter and the Chamber of Secrets</a></li><li><a class="tag" href="/tags/Master%20of%20Death/works">Master of Death</a></li>
+            </ul>
+          </dd>
+
+      <dt class="language">
+        Language:
+      </dt>
+      <dd class="language">
+        English
+      </dd>
+
+
+
+    <dt class="stats">Stats:</dt>
+    <dd class="stats">
+<!-- end of cache -->
+
+      <dl class="stats"><dt class="published">Published:</dt><dd class="published">2017-08-29</dd><dt class="status">Updated:</dt><dd class="status">2017-09-02</dd><dt class="words">Words:</dt><dd class="words">14441</dd><dt class="chapters">Chapters:</dt><dd class="chapters">2/?</dd><dt class="comments">Comments:</dt><dd class="comments">14</dd><dt class="kudos">Kudos:</dt><dd class="kudos">82</dd><dt class="bookmarks">Bookmarks:</dt><dd class="bookmarks"><a href="/works/11939049/bookmarks">27</a></dd><dt class="hits">Hits:</dt><dd class="hits">1412</dd></dl>
+      </dd>
+  </dl>
+</div>
+
+
+
+<!-- BEGIN section where work skin applies -->
+<div id="workskin">
+  <div class="preface group">
+    <h2 class="title heading">
+      Agent Abracadabra
+    </h2>
+    <h3 class="byline heading">
+      <a rel="author" href="/users/pine_jay/pseuds/pine_jay">pine_jay</a>
+    </h3>
+
+
+        <div class="summary module" role="complementary">
+          <h3 class="heading">Summary:</h3>
+            <blockquote class="userstuff">
+              <p>It's been 7 years since Harry Potter left the Wizarding World behind, and nearly as long since he started partnering with SHIELD for the odd mission. He's got the routine down pat: get contacted by an agent, complete the mission, go underground until he gets bored again. But when Phil Coulson contacts him, it's a different story—a mobile unit. Long term. Between the wizard with a chronic pain disorder, the hacker with muddy allegiances, and the pilot who might know a little too much about the war against Voldemort, Coulson sure does know how to build a winning team. AU from CoS onward; post-DH. Start of season 1. Warnings subject to change.</p>
+            </blockquote>
+        </div>
+
+        <div class="notes module" role="complementary">
+  <h3 class="heading">Notes:</h3>
+
+
+
+
+
+    <blockquote class="userstuff">
+      <p>Harry Potter timeline has been shifted up a few years, so Harry was born in 1988.</p>
+    </blockquote>
+
+</div>
+
+
+  </div>
+
+
+
+    <div id="chapters">
+      <!-- This partial requires local variable 'chapter' -->
+<div class="chapter" id="chapter-1">
+  <!-- chapter management -->
+
+
+  <div class="chapter preface group" role="complementary">
+    <h3 class="title">
+      <a href="/works/11939049/chapters/26988951">Chapter 1</a>: Pilot: Part 1
+    </h3>
+
+    <!-- only display byline if different from the main byline -->
+
+
+  </div>
+
+  <!--main content-->
+  <div class="userstuff module" role="article">
+    <h3 class="landmark heading" id="work">Chapter Text</h3>
+    <p>
+  <em>Johannesburg<br/></em>
+  <em>2013</em>
+</p>
+<p>
+  <em> </em>
+</p>
+<p>Harry idly ran a finger around the rim of his glass as he surveyed the room—groups smiling, chatting over drinks and food while music played in the background; the slight stench of smoke drifting from the cigar lounge, mingling with that of bar food, alcohol, and people; the man in the suit, with the receding hairline and dry smile, making his way straight for Harry’s table.</p>
+<p>He hadn’t had this kind of meeting in a while, the kind that was actually planned—SHIELD had a tendency to just show up wherever he was, whenever they thought he’d be useful and he’d been lazy enough not to hide. This communication had been too interesting to ignore, though, even disregarding the apparent courtesy. He’d never actually met the man in question, but he knew him by reputation; his initial contact with SHIELD had spoken very highly of him.</p>
+<p>“Were you trying to win some sort of favour with the location choice, Agent Coulson?” Harry asked, gesturing to his picked over plate as the other man sat down, surreptitiously casting an anti-eavesdropping charm with his other hand. “I can get fish and chips any old place these days. British fare is increasingly easy to come by.” Coulson snorted slightly.</p>
+<p>“The theme was too good to pass up,” he replied, smirking at the Union Jack throw pillows situated on the couch a few feet away. “Though SHIELD would love to know what you were doing in South Africa to begin with.”</p>
+<p>“I’m sure they would. I’m also sure they wouldn’t be nearly as surprised by my activities as I was when a dead man contacted me to request a meeting.”</p>
+<p>“Technically it was only 40 seconds, everything after is just a bonus.”</p>
+<p>“Really? I heard 8. And that they sent you to Tahiti,” Harry said, taking a sip of his scotch.</p>
+<p>“I won’t even ask where you learned that,” said Coulson, eying the younger man. “But I didn’t travel all the way to Africa to discuss my mortality.”</p>
+<p>“You came to recruit me; no, don’t be surprised, that’s all SHIELD ever wants. What is it this time—some sort of enhanced wizard? One funding shady new tech? Or—no, let me guess—wizards snooping around that battlefield in Manhattan?”</p>
+<p>“Try ‘none of the above.’ I’m not here about your abilities.”</p>
+<p>Green eyes narrowed, emphasizing the dark circles around them. “Then what do you want me for?”</p>
+<p>“I’m putting together a team, a specialized mobile unit. Fury’s been real nice ever since New York, so I’m getting some serious perks—our own ride. No red tape. We pick the ops. It sounded like your kind of thing.”</p>
+<p>Harry leaned back in his chair. Coulson looked earnest in a way most of the other agents Harry had dealt with never did, like he actually wanted Harry rather than just his skills and abilities.</p>
+<p>Barton had been like that, too, and now Harry was hounded by agents whenever he couldn’t be arsed to cover his footsteps.</p>
+<p>“I hate to break it to you, but ‘my kind of thing’ is more beaches and bars.”</p>
+<p>“Really? Your file gave me the impression it was unapproved solo ops and rescuing cats from trees.”</p>
+<p>“That was one time, and nothing’s unapproved if you don’t work for anyone.”</p>
+<p>“If you don’t work for us, would you care to explain how you somehow manage to complete jobs from our mission logs just before they’re assigned?”</p>
+<p>“If I work for you, would you care to explain how I haven’t been paid for any of it?”</p>
+<p>Coulson closed his eyes for a moment, and Harry silently awarded himself a point.</p>
+<p>“Look,” the agent said, threading his fingers together on the table. “I’m not asking you to join SHIELD. Just my team. You can come on as a consultant, if you’d prefer. But my team currently consists of five people, myself included, two of whom aren’t cleared for combat, one who wants to stay as far away from it as possible, and one who is the exact opposite of a team player. I need someone who can help me protect them, and if that person might be able to give us some insight on weird things we see along the way, even better.”</p>
+<p>“I’m not exactly in peak physical condition,” Harry said dryly. “I’d think SHIELD would be aware of that.” The look on Coulson’s face indicated that he was, indeed, aware of the wizard’s affliction.</p>
+<p>“Like I said, I’ve seen your file; it’s nothing we can’t handle. Besides, you haven’t been tied down for the six years you’ve been on our radar. You’re running from something and that’s okay, but that doesn’t mean you have to be alone while you do it.”</p>
+<p>Harry wasn’t sure how long the silence between them stretched on. He stared at Coulson, one hand resting on the table and the other gripping the seat of his chair. Johannesburg’s night life danced on around them, uncaring of the standoff between agent and reluctant consultant.</p>
+<p>“I don’t have to join.”</p>
+<p>“No.”</p>
+<p>“And you’ll be in charge of everything? SHIELD’s bureaucracy won’t have any say?”</p>
+<p>“They’ll barely be able to touch us.”</p>
+<p>“And you’re sure <em>I’m</em> the person you want to bring on.”</p>
+<p>“I know everything that’s in your file.”</p>
+<p>A slight moment of hesitation. He had no personal experience with Agent Coulson to draw from, but the man seemed sincere, and Barton had trusted him—and Harry had quite literally trusted Barton with his life on multiple occasions.</p>
+<p>Besides, life had been getting a little dull. “Okay.” Coulson brightened immediately.</p>
+<p>“Great! When will you be ready to leave?”</p>
+<p>“I have everything with me right now.”</p>
+<p>“I’ll signal the quinjet,” Coulson said, pulling out his phone. “You need to finish up?”</p>
+<p>Harry downed his scotch and stood in response. Coulson’s eyes flicked disapprovingly between the wizard and the half empty plate of food, and he sighed.</p>
+<p>“Alright. Let’s get going.”</p>
+<p>They walked in silence, and Harry had to bite his tongue to keep from commenting on the large SHIELD logo on the side of the SUV. Coulson and Harry both climbed into the back of the vehicle. The driver was large and muscular, with a shaven head and a stony expression, but he nodded sharply and turned the ignition key when Coulson barked out orders in a language Harry didn’t recognize. A dark screen flickered into place between the front and back of the car, and they began to move.</p>
+<p>“He won’t be able to hear us; we need to go over any sensitive details now, because we won’t have a privacy screen on the quinjet.”</p>
+<p>Harry maintained eye contact with Coulson as he drew his wand and cast his own privacy spells around them. “Well, that is always an option when you’re sure it won’t be noticed,” the agent allowed. “But for now, let’s go over what you’ll need to know between now and the next time we’ll be able to speak alone.</p>
+<p>“I actually wasn’t aware of your connection to the wizarding world when I went to Fury about getting you on my team. I knew about you and I knew about magic, but everything is kept very need-to-know in that department.”</p>
+<p>“I’m sure the ICW isn’t very happy that such a large muggle organization needs to know anything at all.”</p>
+<p>“Yet another reason I don’t envy Fury’s job. Muggle, huh? They call us no-majes back home; I’m honestly not sure which one is more degrading.”</p>
+<p>“Be glad you’ve never had to deal with the rest of the blood purity system,” Harry told him. “It’s ridiculous.”</p>
+<p>“I’m not surprised. But, back on topic: aside from you and me, Agent May is the only one who will know that you’re a wizard. You’ll meet her when we reach the bus—she and I worked a case involving the wizarding world several years back, so there’s no reason for her not to know. It needs to be a secret from everyone else unless it’s a matter of life and death and there’s no alternative; you know the drill.”</p>
+<p>Harry nodded, familiar with the directives. “Typical Statute of Secrecy stuff.” He wrangled his mokeskin pouch from under his shirt and dug around inside, pulling out two miniature bags that were quickly restored to normal size. “Big, strong, and silent won’t question these, yeah?” he asked, jerking his chin toward the driver’s seat.</p>
+<p>“Should be fine,” Coulson agreed, interest coloring his voice. “What all can you do? The wizards we worked with weren’t very keen to show off.”</p>
+<p>“A lot, and I’m not surprised; the Statute of Secrecy is taken very seriously. I can lend you some books if you’d like. You can pass them on to—what was it?—Agent May if she’s interested. If you can guarantee the information will be kept off record?”</p>
+<p>“Of course; SHIELD’s agreement with the ICW is…stringent. In fact, you technically fall under it as well, so if you ever feel like filling May or me in on those massive gaps in your file, you can be assured it’ll all be confidential.”</p>
+<p>“Hmm.” That offer was…well, tempting wasn’t the word. He barely wanted to think about the seven years he’d spent away from British wizarding society, much less the time prior to that. It was <em>relieving</em>, in a way, though, to know that if he ever did have to divulge anything greater SHIELD wouldn’t have access to it.</p>
+<p>The rest of the ride to the airfield was spent with Harry showing off various minor spells, and explaining what he could do in a fire fight. By the time they were walking onto the quinjet, Coulson was practically vibrating with the need to read those books.</p>
+<p> </p>
+<p align="center">* * *</p>
+<p>
+  <em>Undisclosed SHIELD Airfield</em>
+</p>
+<p align="center"> </p>
+<p>The hangar was gigantic, but still not nearly as impressive as the massive black plane it housed. He could see it from several hundred meters away, a distance that was closing rapidly thanks to Lola.</p>
+<p>“Is that the ride you mentioned?” Harry asked, nodding to the plane as he ran his fingertips over Lola’s interior. After the multitude of warnings about respecting the car, Harry was tempted to introduce Coulson to his Firebolt and his motorcycle—the older man seemed to have a soft spot for tricked out rides. The plane only served to support that theory.</p>
+<p>“You bet it is. The Bus. Officially it’s an airborne mobile command center, but for us it’ll be our home-away-from-SHIELD.”</p>
+<p>Coulson smoothly parked Lola on the bus’ ramp and got out, required “Don’t touch Lola” order rolling just as smoothly off his tongue. Harry followed suit, grabbing his two black rucksacks from the back.</p>
+<p>Three others seemed to be loading their gear as well—one of them looked like, well, a spy, while the other two practically screamed “Nerd!” <em>The specialist and the scientists.</em></p>
+<p> “Harry, these are Agents Leo Fitz, Jemma Simmons, and Grant Ward,” Coulson introduced as Harry drew nearer. “Fitz and Simmons are our engineer and our biochemist, respectively, while Ward is our specialist. You’ll likely be partnered with him on most missions.” Harry nodded to the taller man, who didn’t seem very pleased with the idea of being partnered with anyone. “Everyone, this is Harry Potter, SHIELD consultant.”</p>
+<p>“Consultant?” questioned Ward, looking Harry up and down. “Sir, you brought me on for risk assessment. Why wasn’t I made aware of this? There’s no way he’s old enough to—“</p>
+<p>“Last minute addition. You’ll receive his basic file, but he’s mostly classified. I can assure you, though, he comes highly recommended.” Ward didn’t look any happier, and Harry felt a twinge of irritation at Coulson’s wording. “Now, you two come upstairs, I’ll show you the bunks. Fitzsimmons, I’ll send Potter back down to you after he’s issued a comm.”</p>
+<p>The two scientists grinned and nodded, hefting up more equipment and falling directly into a too-familiar pattern of banter that made Harry’s heart skip a beat. <em>Merlin help me.</em></p>
+<p>Jaw clenched, Harry adjusted his grip on his bags and followed Ward up the spiral staircase, tuning out Coulson’s running commentary. From the inside the plane—the “bus”—seemed even more absurdly big, and the idea that it would soon be flying was practically unthinkable. The level Coulson stepped off on appeared to have been designed as a fusion between an office building and a very modern sort of bar lounge. The trio stopped just short of the bunks, and a woman approached from further down.</p>
+<p>Coulson was about to greet her, but did a double take when he glanced back at Harry. “You alright?”</p>
+<p>Harry paused for a split second before realizing that his knuckles were white and his jaw ached slightly. “I’m fine,” he assured. Coulson stared a moment longer and turned his attention to the woman.</p>
+<p>“May, this is our specialist, Agent Grant Ward, and our consultant, Harry Potter. Ward, Potter, this is Agent Melinda May, our pilot.”</p>
+<p>May looked both men up and down, then gave a nearly imperceptible jerk of the head. “If you’re gonna unpack you’d better do it quickly, wheels up in five.” She turned on her heel and left without another word. Ward stared after her with widened eyes.</p>
+<p>“Is that—?”</p>
+<p>“She’s just the pilot.” Coulson’s tone was firm and brokered no argument, but Ward just looked at him in disbelief.</p>
+<p>“Melinda May is just the pilot,” he said faintly. “What game are you really playing here, sir?” Coulson raised an eyebrow.</p>
+<p>“Better stow your gear before you take off. There’s three free bunks, you can take your pick. Fitzsimmons already chose theirs.” He strode away, hands in his pockets.</p>
+<p>Harry and Ward stood in awkward silence for a moment, until Harry moved for the bed on the far end, with a buffer bunk between him and Fitzsimmons. He almost thought he heard Ward groan, but the man was expressionless as he claimed the bed between the common area and other-Fitzsimmons’. Sliding the door shut behind him, he tossed his bags into the corner and cast a silent sticking charm to keep them from moving around during takeoff, figuring he could unpack later.</p>
+<p>The bunk was small, but far from the tightest quarters Harry had ever lived in—of course, living in a cupboard for ten years made that a hard thing to beat. He did wish there weren’t giant gaps above and under the door, but, again, prior experiences meant he’d slept in more public places as well. There was a small nightstand with a bolted down lamp, a window that he was sure would be nice when it wasn’t showing him the middle of the hangar wall, and a large flat screen TV hung at one end that displayed the SHIELD logo.</p>
+<p>He’d almost forgotten how self-involved they were.</p>
+<p>Kicking off his shoes, Harry kneeled on the bed so he could get closer to the screen. He ran his fingers over the frame, but didn’t find any dents or bumps to indicate observation equipment. A quick glance around the small space came up with nothing either, not that he’d expected it to. As he slipped his shoes back on he chewed his lip, and reached out to turn the TV off. His phone followed, and he raised his left hand with a deep, centering breath. With the exhale came a pulse of pure magical energy spreading outward from his palm. He nearly drew blood as he bit down on his lip and forced the magic to stop and dissipate when it hit the walls and door.</p>
+<p>Satisfied that he’d disabled any bugs or cameras in his personal quarters, Harry knelt by his bags and drew out a stack of books, shrunk them, and stowed them in his mokeskin pouch. He then departed the bunk and headed for the common area as the plane roared to life. Ward was already seated in one of the plush chairs, seatbelt on, closely perusing a SHIELD folder. Harry sat a short distance away and buckled himself in, drawing out his phone to switch it back on.</p>
+<p>He looked up to find Ward looking at him. Harry nodded to the folder. “My file?” Ward nodded, lips pursing and jaw clenching in what could only be disapproval.</p>
+<p>“If you can even call it a file,” he said sourly. “How does SHIELD have next to nothing on you? Why would Coulson even let an unknown like you on this team, especially one with a known medical problem?”</p>
+<p>They began accelerating; light suddenly blasted through the windows behind Ward as they pulled out of the hangar, and Harry’s stomach soared with the plane. Liftoff wasn’t nearly as exciting in a plane as it was on a broom, but he still loved it. He sighed dramatically.</p>
+<p>“If you <em>must</em> know, I keep a Coulson voodoo doll under my pillow so that I can influence him through my dreams every night. I also have one of Nick Fury and Pope Francis.”</p>
+<p>Ward’s eyes narrowed briefly. “Okay, I get it, it’s classified. But that doesn’t mean I trust you.”</p>
+<p>“Probably a good call. The next step in my master plan is to obtain hair, blood, nail clippings, or urine from everyone else on this plane and make more voodoo dolls. Still not clear on how I’ll fit all of them under my pillow, though…”</p>
+<p>“Potter, my office. Ward, please go let Agent May know there’ll be a briefing as soon as she can get us on autopilot,” Coulson said as he ascended the stairs. Ward threw a frustrated look at Harry, unbuckled, and stalked off. Harry unbuckled himself, and fought down a smirk when Coulson turned to him.</p>
+<p><em>“Voodoo dolls?”</em> the older man asked as soon as Ward was gone. “Seriously?”</p>
+<p>“I have to save ‘It’s classified’ for special occasions, or else it’ll get old.”</p>
+<p>Coulson just shook his head and turned, clearly expecting Harry to follow. He led the younger man into what was clearly his office, and Harry closed the door behind him. Coulson watched as the wizard reached into that strange pouch around his neck and pulled out a handful of miniature books, which were placed on the desk and promptly turned full-size. They were all solid colors, with no other identifying features—not even titles.  “There you go. I transfigured the covers ages ago so I wouldn’t have to worry about muggles seeing them.”</p>
+<p>“Fantastic. I have something for you, too.” Coulson reached into his desk drawer and produced three things: a comm receiver, a plastic card, and a gun. He held up the receiver. “Take this down to Fitzsimmons, they’ll get you outfitted with the new in-ear comm. This,” he continued, handing over the card, “is essentially your badge. You’ll want to keep it with you at all times, especially in the field or in a SHIELD facility.”</p>
+<p>“Do I want to know where you got the photo?” Harry asked, turning the card over in his hands. It looked like a typical ID, but the SHIELD eagle was in the background and he knew for a fact that he’d never posed for a picture. It listed his name and labelled him “SHIELD Consultant.” Coulson just smiled.</p>
+<p>“Now, I’m assuming you’ve already managed to sneak one of these through security, but you’ve been cleared to be issued this one.” Coulson slid the pistol across the desk, along with a couple magazines. “Please use it on ops.”</p>
+<p>“Sure thing,” Harry murmured, dropping the card and the receiver in his pocket and picking up the gun. “Holster?”</p>
+<p>“Downstairs, there should be a box outside the lab. You need to go down there anyway, and bring Fitzsimmons up for a briefing when they’ve finished.” Harry nodded and left the room.</p>
+<p>Coulson quickly stowed the large stack of books in one of the bottom drawers of his desk, and locked it. <em>“Voodoo dolls...” </em>he breathed, scrubbing a hand over his face.</p>
+<p> </p>
+<p align="center">* * *</p>
+<p align="center"> </p>
+<p>As cool as the new plane was, Harry quickly found himself longing for somewhere more recognizable. He hated not knowing where everything was, and his short trip down to the lab was plagued by the awful feeling of being caught between familiar—he knew where the lab was and how to get there—and unfamiliar—he really wasn’t sure of anything else.</p>
+<p>Fitzsimmons were bustling around the lab when he arrived, and his chest seized when he heard them bickering—even through the glass, their tones were clear. <em>That</em> was a familiarity he could do without.</p>
+<p>The receiver was in his hand when he walked through the lab doors, but suddenly Fitz had it and Simmons was swabbing his cheeks.</p>
+<p>“I—Coulson sent me down?” Simmons turned and beamed at him.</p>
+<p>“Oh, that’s excellent, another Brit on board! Do you hear that, Fitz?” The engineer hit the receiver with a hammer, glanced between Harry and Simmons, and returned his attention to the shattered remains.</p>
+<p>“Yeah, that’s great, Jemma. Listen, I just need to get this I.D.I.S. chip out and you can have your earpiece in a few minutes,” he directed at Harry, Scottish brogue evident. “The new in-ear comms don’t need external receivers anymore.”</p>
+<p>“I’m encoding it with your DNA. The tech’s absolutely fascinating!” Simmons gushed from the lab bench, where she was doing...something with the swab she’d so unceremoniously shoved in his mouth.</p>
+<p>“Er, great. I-I just need to step out for a moment, Coulson said there was a weapons box down here,” Harry said, holding up the gun in explanation. He quickly left the lab and went to the pile of still-packed boxes by the SUV, careful to face away from the glass separating him from the duo.</p>
+<p>No one had warned him that Jemma Simmons could pass for a straight-haired Hermione Granger.</p>
+<p>Harry forced himself to breathe. He could get through this; worst-case scenario, he could very easily disappear at their next stop. But she reminded him of the Hermione he’d befriended their first year at Hogwarts, and if that wasn’t bad enough, she came with her own smartened-up version of Ron Weasley.</p>
+<p><em>Merlin,</em> he missed them so much.</p>
+<p>Another breath, and he turned his attention to the storage bins. They were clearly labelled, so he pulled down the one he needed and helped himself to a hip holster that he clipped on before re-entering the lab.</p>
+<p>
+  <em>Not Hermione, not Hermione, not Hermione.</em>
+</p>
+<p>“I nearly forgot, Coulson wants us for a briefing when you’re done with that,” he said, fighting to keep his voice even. He fidgeted with the holster, making sure the gun was secure. “Do you know where the briefing room is? I guess it slipped his mind when we were talking.”</p>
+<p>“The command center, yeah, upper deck—“</p>
+<p>“That semi-circular room—“</p>
+<p>“Between the lounge and our quarters.”</p>
+<p>Harry stared. <em>They talk like the twins.</em> That didn’t make it any better.</p>
+<p>“Great,” he said, and moved as close to the door as he could. He watched them work.</p>
+<p>They made everything look so <em>easy,</em> and Harry had no clue what they were doing. He’d done his best to catch up on things like math and science when he’d gone back to the muggle world, but this was far beyond his capabilities. Most SHIELD tech was, to be fair—he could use some of it, but anything beyond that was hopeless. Somehow, though, these two made the science even more unbelievable, and he wasn’t sure why; perhaps it was the way they moved so easily, flowed around each other, just <em>knew</em> where the other was going to be and accounted for that in their motions.</p>
+<p>Harry forced himself to look away.</p>
+<p>“So, a consultant? I have to say, that was unexpected. When we were brought on, we were told it would be us, a specialist, a pilot, and Coulson. Isn’t that right, Fitz?”</p>
+<p>“Yeah. What does consultant mean, anyway? In this case? Though I suppose that’s probably classified.”</p>
+<p>“I don’t even know, myself,” Harry admitted, making the pair pause and look at him. “Coulson tracked me down in South Africa. I’ve worked cases with SHIELD before—yes, all classified—but never anything like this, anything so...long term. From what I understand he just wanted someone else who can fight, but...I think I intrigue him.”</p>
+<p>“Because of whatever we’re not allowed to know,” Fitz clarified.</p>
+<p>“Yeah.” Harry had unconsciously taken a couple steps further into the lab. He could do this. She wasn’t Hermione, and he could move past the similarities.</p>
+<p>Fitz, thankfully, was neither redheaded nor English, and that made him infinitely easier to talk to. “Well, here, that’s done,” the engineer said, handing Harry a small earpiece. “Shall we head up? Simmons?”</p>
+<p>“Of course!” She smiled at Harry as she passed him and he did his best to smile back, but he felt like he could throw up. Maybe he couldn’t do this.</p>
+<p>
+  <em>Just breathe, Potter.</em>
+</p>
+<p>He followed the scientists up, only paying enough attention to know that Simmons was talking about the history of the bus and Fitz was interjecting occasionally. He focused on his breathing instead, forcing all unnecessary tension out of his body. The lounge was completely abandoned, and the trio found the rest of the team already in the command center.</p>
+<p>Harry turned his attention to May; he felt confident of his measure of Ward, at least until they actually started working, and he honestly wasn’t sure if he’d ever figure Coulson out, but he’d only briefly met May. She was an unknown, and more than that, she was an unknown who knew about magic.</p>
+<p>A quick once-over was enough to give the impression that she would remain an unknown for a very long time. She had the ultimate poker face, and she stood at attention, ready to fight, eyes fixed on Coulson.</p>
+<p>Though, the black tactical gear was a bit overkill in Harry’s opinion. And <em>of course</em> it had SHIELD eagles on the shoulders. He narrowed his eyes and looked around the room.</p>
+<p>“The glass,” he said, drawing everyone’s attention. “You put the logo on the <em>glass? Inside</em> the plane?”</p>
+<p>“A little bit of pride in one’s workplace never hurt anyone,” Coulson said, glancing up from his tablet.</p>
+<p>“The glass,” Harry repeated. “And the car. <em>And</em> your pilot. And that’s not counting the screensaver on every computer and TV in here. I’d like to see your definition of a lot of pride.”</p>
+<p>May glanced at her shoulders and then raised her eyebrows at Harry; Coulson looked like he was trying not to laugh. “Remind me to show you the top of the Bus sometime,” he said, reaching for something beneath the table. “And here, have a water.”</p>
+<p>Harry nearly fumbled the bottle Coulson tossed him; the label read “Purified H20,” and the SHIELD logo was printed on it not once, but twice. “You have got to be kidding me.” Coulson was shaking with repressed laughter.</p>
+<p>“Sir,” Ward intervened, glaring at Harry. “Aren’t we here for a briefing?”</p>
+<p>Coulson smirked at Harry before turning his attention to the rest of the team. “Yes. We have new intel, a possible routing point for an organization known as the Rising Tide.” Coulson swiped an image from the table onto the large screen on the wall.</p>
+<p>“The hacking group?” Harry asked, adjusting his glasses and moving closer. A red circle blinked around Los Angeles.</p>
+<p>“They have a history of interfering with SHIELD,” Ward said.</p>
+<p>“And you’re not gonna like what they’ve put out there this time,” Coulson said, putting something else up on the screen. A video started to play.</p>
+<p><em>“The secret is out,”</em> came a girl’s voice. Coulson fast forwarded to a hooded man holding a woman landing in a street with enough force to break the asphalt beneath him.</p>
+<p>
+  <em>“Something impossible just happened. What are you going to do about it?”</em>
+</p>
+<p>“We’re headed to LA,” said Coulson, stopping the video and bringing up an image of their mystery man. “Fitzsimmons, May, you’re going to check out where this went down. That man pulled the woman out of a building that had just exploded. Potter, Ward, you’re going to come with me to the Rising Tide routing point. It appears to be an alleyway, but we don’t know what kind of security there will be, if any. I want you both at the top of your game.”</p>
+<p>“Yes sir,” they answered together.</p>
+<p>“Alright then. Let’s find this guy before someone else does.”</p>
+<p> </p>
+<p align="center">* * *</p>
+<p>
+  <em>Los Angeles, California</em>
+</p>
+<p>
+  <em> </em>
+</p>
+<p>“A van,” Harry said in disbelief. “Your routing point for the notorious hacking group that interferes with your multi-billion dollar government organization is a van in an alley?”</p>
+<p>“Let’s go,” Ward said, straightening his tie and stepping into the street without a second thought.</p>
+<p>“You realize they’re probably using that cafe’s wifi.” Harry sped up to keep pace with Ward, while Coulson followed. “Have you ever used public wifi? It’s awful. They managed to hack your multi-billion dollar government organization with a van and public wifi.”</p>
+<p>“We already knew they were good,” Coulson said before Ward could retort. “Right now we need to focus on getting the information we need. Come on.”</p>
+<p>Coulson pushed past them and continued to the van. Harry let himself drift back as both agents adjusted their blazers before sliding open the van door with a clang. <em>I should get a suit,</em> Harry decided, suddenly overly conscious of his t-shirt, jeans, and weathered leather jacket.</p>
+<p>A girl sat in front of a laptop in the van, staring at them with wide eyes. “Some kid, in a van, with a laptop,” Harry muttered.</p>
+<p>“She looks older than you,” Ward shot back quietly. Their superior ignored them.</p>
+<p>“Uh, can I help you?” the girl asked, eyes shooting between the three of them.</p>
+<p>“I certainly hope so.” The world seemed to slow down when Coulson showed her his badge—then she lunged. Ward easily got her in a bear hug, but not before she threw a poorly-formed punch at his stomach. Coulson cuffed her and took an elbow, while Ward flanked her other side. Harry suppressed an eye roll, and followed them back to the SHIELD SUV amidst stares; of course, he stumbled slightly, but Ward couldn’t see him so he only blushed a little.</p>
+<p>“Guard her,” was Coulson’s only direction as he very nearly manhandled her into the back seat, producing a bag from...somewhere, and placing it over her head, then buckling her in despite protests. Harry mock-saluted, climbing in beside her while Coulson and Ward returned to the alley.</p>
+<p>“What the hell are you doing?” she yelled, voice muffled by the bag.</p>
+<p>“Er, bringing you in for questioning, I believe,” Harry said, doing his best to infuse his voice with boredom. In reality he was caught between disapproval of Coulson’s actions, and equal parts amusement and pity for the furious, handcuffed girl with a bag on her head.</p>
+<p>“Well—no, Mr. British Accent, this is <em>America,</em> you can’t just grab someone out of their hou—<em>van</em>, stick a bag over their head, and call it questioning!”</p>
+<p>Moral dissent aside, Harry couldn’t help but be a little glad for the bag covering her head—it kept her from seeing the smirk on his face. One downside to life avoiding SHIELD was generally as little contact with other people as possible, which meant that a good verbal spar was a valued commodity, and sometimes getting people all riled up just felt so <em>good.</em></p>
+<p>“I did say <em>‘bringing you in,’</em> and that’s <em>Agent</em> British Accent to you.”</p>
+<p>“You’re not an agent.”</p>
+<p>“Excuse me?”</p>
+<p>“I saw you for a second pre-bag, you’re, like, twelve. Okay, sixteen. Eighteen,” she amended at Harry’s indignant spluttering. “And you’re not wearing a suit.”</p>
+<p>“I could be undercover.”</p>
+<p>“With two actual agents wearing suits?”</p>
+<p>Harry’s retort was interrupted by the boot opening; Ward was stowing a computer and what looked like several external hard drives. Coulson got behind the wheel, and Ward climbed in the passenger seat.</p>
+<p>“Everything good?”</p>
+<p>“Does SHIELD usually do bring your kid to work days?” the girl asked before Harry could open his mouth. Ward twisted around and shot him a questioning look; Harry could only scowl.</p>
+<p>“Pardon?” Harry could see Coulson’s brow furrow slightly in the mirror.</p>
+<p>“I mean, British Accent’s your son, right?”</p>
+<p>“Oh, what, it’s not even ‘Mister’ anymore? I need to get a suit,” Harry complained.</p>
+<p>
+  <em>“What?”</em>
+</p>
+<p>“She doesn’t believe I’m an agent.”</p>
+<p>Ward turned back to the front and pinched the bridge of his nose. “You’re not.”</p>
+<p>“Yeah, but she should have at least believed me.”</p>
+<p>“So why is he here, if he’s not an agent? And could someone <em>please</em> get this bag off my head?”</p>
+<p>“I’d love to know that, too,” Ward muttered, ignoring her request. Coulson sighed—very long-suffering, rolled eyes and all—and fixed Ward with a look.</p>
+<p>“Mr. Potter is a consultant.” He carefully enunciated each word. “And I’m afraid that removing the bag would be too much of a security risk.”</p>
+<p>The rest of the drive back to the airfield was mostly silent, save for bag-girl’s struggling and occasional protests. Once he and Ward had her and her equipment out, Coulson tossed Harry the keys.</p>
+<p>“We’ve got the questioning, could you go check on Fitzsimmons and May? Coordinates should already be in the GPS.” Harry nodded brusquely, striding to the driver’s side.</p>
+<p>Driving was nice. Not as much as flying, but there was speed and the alone time was nice aside—he couldn’t believe that he’d only been recruited, what, that morning? Yesterday? What was the time difference, anyway? Harry yawned; he’d managed to grab some sleep on the quinjet, but they weren’t exactly the most comfortable vessels in the world and he hadn’t been fully prepared to let his guard down. That, at least, probably explained his slight light-headedness.</p>
+<p>This team was already shaping up to be more than he’d signed up for. Probably-enhanced person jumping out of a building to save a woman? He could deal with that. Mouthy tech girls in vans? Sure. Hell, even Ward, for all his nosiness and arrogance, wasn’t <em>that</em> annoying.</p>
+<p>Coulson and May, though? Granted, he hadn’t spent much time with either—he’d barely even <em>seen</em> May—and Coulson seemed nice enough, but there was something about them both that put him off. And he couldn’t quite put his finger on it, which made it all about ten times worse. And, on top of <em>that</em>, was Simmons.</p>
+<p>She wasn’t Hermione.</p>
+<p>He punched the gas.</p>
+  </div>
+  <!--/main-->
+
+
+</div>
+
+<!-- end of cache -->
+
+    </div>
+  
+  
+    </div>
+    <!-- END work skin -->
+  </div>
+  <!-- END work -->
+
+  <!-- BEGIN comment section -->
+  <!-- Gets embedded anywhere we need to list comments on a top-level commentable. We need the local variable "commentable" here. -->
+<div id="feedback" class="feedback" role="complementary">
+
+  <h3 class="landmark heading">Actions</h3>
+
+  <ul class="actions" role="navigation">
+      <li><a href="#main">&#8593; Top</a></li>
+
+
+      <li><a href="/works/11939049/chapters/27085029#workskin">Next Chapter &#8594;</a></li>
+
+
+
+
+      <li>
+        <form id="new_kudo" action="/kudos" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="+R8pCLGQCG8zE/O7Y0tYgagHpgpNxgBIBx9ZnOavZzRbFy0zMhWH8XV7Az8EozZmd3ByEMVqqS+WDSWUv2hD+g=="/>
+          <input value="11939049" type="hidden" name="kudo[commentable_id]" id="kudo_commentable_id"/>
+          <input value="Work" type="hidden" name="kudo[commentable_type]" id="kudo_commentable_type"/>
+          <input type="submit" name="commit" value="Kudos ♥" id="kudo_submit"/>
+</form>      </li>
+
+
+
+
+        <li id="show_comments_link"><a data-remote="true" href="/comments/show_comments?chapter_id=26988951">Comments (7)</a></li>
+  </ul>
+
+  <div id="kudos_message"></div>
+
+  <h3 class="landmark heading"><a name="comments">Comments</a></h3>
+
+  
+
+    <div id="kudos">
+      <p class="kudos">
+          <a href="/users/regret874203849375847427364984">regret874203849375847427364984</a>, <a href="/users/CompuPanda">CompuPanda</a>, <a href="/users/k811">k811</a>, <a href="/users/Sad_Boi_Hour">Sad_Boi_Hour</a>, <a href="/users/Wolfwill">Wolfwill</a>, <a href="/users/Loarza">Loarza</a>, <a href="/users/Emqm9">Emqm9</a>, <a href="/users/Bookworms75">Bookworms75</a>, <a href="/users/SaltedCracker">SaltedCracker</a>, <a href="/users/Samantha__Rose">Samantha__Rose</a>, <a href="/users/Firestarmice">Firestarmice</a>, <a href="/users/CelliMoon">CelliMoon</a>, <a href="/users/Nihochu">Nihochu</a>, <a href="/users/Shadowfire23">Shadowfire23</a>, <a href="/users/AJIxumik">AJIxumik</a>, <a href="/users/Raninbury">Raninbury</a>, <a href="/users/PotterinPakistan">PotterinPakistan</a>, <a href="/users/talenkarr">talenkarr</a>, <a href="/users/SlytherinSlayer">SlytherinSlayer</a>, <a href="/users/Hmmphry">Hmmphry</a>, <a href="/users/clockscry">clockscry</a>, <a href="/users/Aristaeia">Aristaeia</a>, <a href="/users/FFLover_4ever">FFLover_4ever</a>, <a href="/users/VannahBananah">VannahBananah</a>, <a href="/users/Magic_Muffins">Magic_Muffins</a>, <a href="/users/Rotom310">Rotom310</a>, <a href="/users/Shewolf1990">Shewolf1990</a>, <a href="/users/fallingthroughspacex">fallingthroughspacex</a>, <a href="/users/RavensVigil">RavensVigil</a>, <a href="/users/AmyIsARealPhelps">AmyIsARealPhelps</a>, <a href="/users/WyrdWard">WyrdWard</a>, <a href="/users/Dolorem_Ipsum">Dolorem_Ipsum</a>, <a href="/users/Morningstar1">Morningstar1</a>, <a href="/users/mightypotato">mightypotato</a>, <a href="/users/Kitsuki">Kitsuki</a>, <a href="/users/SidyKittyCat">SidyKittyCat</a>, <a href="/users/SupahJapah">SupahJapah</a>, <a href="/users/ArwenScamander">ArwenScamander</a>, <a href="/users/Tpo117">Tpo117</a>, <a href="/users/death123">death123</a>, <a href="/users/Jazz_s_shadow">Jazz_s_shadow</a>, <a href="/users/spectacledbear">spectacledbear</a>, <a href="/users/eckles71">eckles71</a>, <a href="/users/Pygmychi">Pygmychi</a>, <a href="/users/gwmclintock88">gwmclintock88</a>, <a href="/users/Sumerki">Sumerki</a>, <a href="/users/jadejabberwock">jadejabberwock</a>, <a href="/users/RavensSinger">RavensSinger</a>, <a href="/users/rdavignon">rdavignon</a>, <a href="/users/ravenienne">ravenienne</a><span id="kudos_more_connector">, and </span><a id="kudos_more_link" data-remote="true" href="/works/11939049/kudos?before=818968995">4 more users</a>
+             as well as 
+          28 guests
+         left kudos on this work!
+      </p>
+</div>
+
+
+    <div id="add_comment_placeholder" title="top level comment">
+      <div id="add_comment">
+        <!-- expects the local variables comment, commentable, and button_name -->
+<div class="post comment" id="comment_form_for_26988951">
+  <form class="new_comment" id="comment_for_26988951" action="/chapters/26988951/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="RFWYR4wdIpTohYBNAJwbNYWe028J9hfowReVYsGhoF/mXZx8D5itCq7tcMlndHXSWukHdYFavo9QBelqmGaEkQ=="/>
+    <fieldset>
+      <legend>Post Comment</legend>
+
+
+
+
+
+
+        <dl>
+          <dt class="landmark">Note:</dt>
+          <dd class="instructions comment_form">All fields are required. Your email address will not be published.</dd>
+          <dt><label for="comment_name_for_26988951">Guest name: </label></dt>
+          <dd>
+            <input id="comment_name_for_26988951" type="text" name="comment[name]"/>
+            <script>var validation_for_comment_name_for_26988951=new LiveValidation('comment_name_for_26988951',{wait:500,onlyOnBlur:false});validation_for_comment_name_for_26988951.add(Validate.Presence,{"failureMessage":"Please enter your name.","validMessage":""});</script>
+          </dd>
+          <dt><label for="comment_email_for_26988951">Guest email: </label></dt>
+          <dd>
+            <input id="comment_email_for_26988951" type="text" name="comment[email]"/>
+            <script>var validation_for_comment_email_for_26988951=new LiveValidation('comment_email_for_26988951',{wait:500,onlyOnBlur:false});validation_for_comment_email_for_26988951.add(Validate.Presence,{"failureMessage":"Please enter your email address.","validMessage":""});</script>
+          </dd>
+        </dl>
+        <p class="footnote">(Plain text with limited HTML <a class="help symbol question modal" title="Html help" aria-controls="#modal" href="/help/html-help.html"><span class="symbol question"><span>?</span></span></a>)</p>
+
+      <p>
+        <label for="comment_content_for_26988951" class="landmark">Comment</label>
+        <textarea id="comment_content_for_26988951" class="comment_form observe_textlength" title="Enter Comment" name="comment[comment_content]">
+</textarea>
+        <input type="hidden" id="controller_name_for_26988951" name="controller_name" value="chapters"/>
+      </p>
+      <p class="character_counter"><span id="comment_content_for_26988951_counter" class="value" data-maxlength="10000" aria-live="polite" aria-valuemax="10000" aria-valuenow="comment_content_for_26988951">10000</span> characters left</p>
+      <script>var validation_for_comment_content_for_26988951=new LiveValidation('comment_content_for_26988951',{wait:500,onlyOnBlur:false});validation_for_comment_content_for_26988951.add(Validate.Presence,{"failureMessage":"Brevity is the soul of wit, but we need your comment to have text in it.","validMessage":""});validation_for_comment_content_for_26988951.add(Validate.Length,{"maximum":"10000","tooLongMessage":"must be less than 10000 characters long."});</script>
+      <p class="submit actions">
+        <input type="submit" name="commit" value="Comment" id="comment_submit_for_26988951" data-disable-with="Please wait..."/>
+      </p>
+    </fieldset>
+</form></div>
+<div class="clear"></div>
+
+      </div>
+    </div>
+
+  <!-- If we have javascript, here is where the comments will be spiffily inserted -->
+  <!-- If not, and show_comments is true, here is where the comments will be rendered -->
+  <div id="comments_placeholder" style="display:none;">
+  </div>
+
+
+</div>
+<!-- END comments -->
+
+  <!-- END comment section -->
+
+
+
+          <div class="clear"><!--presentational--></div>
+        </div>
+        <!-- END main -->
+      </div>
+      <!-- BEGIN footer -->
+<div id="footer" role="contentinfo" class="region">
+	<h3 class="landmark heading">Footer</h3>
+  <ul class="navigation actions" role="navigation">
+    <li class="module group">
+      <h4 class="heading">About the Archive</h4>
+      <ul class="menu">
+        <li><a href="/site_map">Site Map</a></li>
+        <li><a href="/diversity">Diversity Statement</a></li>
+        <li><a href="/tos">Terms of Service</a></li>
+        <li><a href="/dmca">DMCA Policy</a> </li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Contact Us</h4>
+      <ul class="menu">
+        <li><a href="/abuse_reports/new">Report Abuse</a></li>
+        <li><a href="/support">Technical Support and Feedback</a></li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Development</h4>
+      <ul class="menu">
+          <li><a href="https://github.com/otwcode/otwarchive/commits/v0.9.300.1">otwarchive v0.9.300.1</a></li>
+        <li><a href="/known_issues">Known Issues</a></li>
+        <li><a href="http://www.gnu.org/licenses/gpl-2.0.html" title="View License">GPL</a> by the <a href="http://transformativeworks.org/" title="The Organization for Transformative Works">OTW</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!-- END footer -->
+
+    </div>
+    <!-- check to see if this controller/action allow tinymce before we load the gigantor js; see application_helper -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js" type="text/javascript"></script>
+<!-- if user has googleapis blocked for some reason we need a fallback -->
+<script type="text/javascript">if(typeof jQuery=='undefined'){document.write(unescape("%3Cscript src='/javascripts/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));document.write(unescape("%3Cscript src='/javascripts/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));}</script>
+
+
+<script type="text/javascript">$j=jQuery.noConflict();</script>
+<script src="/javascripts/jquery.scrollTo.min.js+jquery.livequery.min.js+rails.js+application.js+bootstrap,_bootstrap-dropdown.min.js+jquery-shuffle.js+jquery.tokeninput.min.js+jquery.trap.min.js+ao3modal.min.js+js.cookie.min.js+filters.min.js.pagespeed.jc.oz6LPTe6O7.js"></script><script>eval(mod_pagespeed_a8hDjzT3l_);</script>
+<script>eval(mod_pagespeed_1nA1vKz9z4);</script>
+<script>eval(mod_pagespeed_AKC4FLip6q);</script>
+<script>eval(mod_pagespeed_gX7XC77lvT);</script>
+<script>eval(mod_pagespeed_5zo0ZWMy4O);</script>
+<script>eval(mod_pagespeed_eCCgOhjhYQ);</script>
+<script>eval(mod_pagespeed_TU1Ln7LKSh);</script>
+<script>eval(mod_pagespeed_qTpbjsXQwh);</script>
+<script>eval(mod_pagespeed_R5FGw2ySDb);</script>
+<script>eval(mod_pagespeed_rqqFCT3xcT);</script>
+
+<script>eval(mod_pagespeed_Gf_4KFhTvB);</script>
+
+
+  <script>function isSupported(){var item="localStoragePolyfill";try{localStorage.setItem(item,item);localStorage.removeItem(item);return true;}catch(e){return false;}}function acceptTOS(){if(isSupported()){localStorage.setItem("accepted_tos","20180523");}else{Cookies.set("accepted_tos","20180523",{expires:365});}}$j(document).ready(function(){if(localStorage.getItem("accepted_tos")!=="20180523"&&Cookies.get("accepted_tos")!=="20180523"){$j("body").prepend("<div id=\"tos_prompt\" class=\"hidden\">\n  <h2 class=\"heading\">\n    <span>Archive of Our Own<\/span>\n  <\/h2>\n  <div class=\"agreement\">\n    <p class=\"summary\">\n      On Archive of Our Own (AO3), users can make profiles, create works and\n            other Content, post comments, give Kudos, create Collections and \n            Bookmarks, participate in Challenges, import works, and more. Any \n            information you publish in a comment, profile, work, or Content that you \n            post or import onto AO3 including in summaries, notes and tags, \n            will be accessible by the public (unless you limit access to a work only \n            to those with AO3 Accounts), and it will be available to \n            AO3 personnel. Be mindful when sharing personal information, \n            including  your religious or political views, health, racial background, \n            country of origin, sexual identity and/or personal relationships. To \n            learn more, check out our <a href=\"/tos\">Terms of Service<\/a> and <a href=\"/tos#privacy\">Privacy Policy<\/a>.\n    <\/p>\n\n    <p class=\"confirmation\">\n      <input type=\"checkbox\" id=\"tos_agree\" />\n      <label for=\"tos_agree\">I have read &amp; understood the new Terms of Service and Privacy Policy<\/label>\n    <\/p>\n\n      <p class=\"submit\">\n        <button name=\"button\" type=\"button\" disabled=\"disabled\" id=\"accept_tos\">I agree/consent to its terms<\/button>\n      <\/p>\n\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    var container = \$j(\"#tos_prompt\");\n    var outer = \$j(\"#outer\");\n    var button = \$j(\"#accept_tos\");\n\n    setTimeout(showTOSPrompt, 1500);\n\n    function showTOSPrompt() {\n      \$j.when(container.fadeIn(500)).done(function() {\n        outer.addClass(\"hidden\").attr(\"aria-hidden\", \"true\");\n      });\n\n      \$j(\"#tos_agree\").on(\"click\", function() {\n        button.attr(\"disabled\", !this.checked);\n        if (this.checked) {\n          button.on(\"click\", function() {\n            acceptTOS();\n            outer.removeClass(\"hidden\").removeAttr(\"aria-hidden\");\n            \$j.when(container.fadeOut(500)).done(function() {\n              container.remove();\n            });\n          });\n        };\n      }).change();\n    };\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+  <script>$j(document).ready(function(){var permitted_hosts=["archiveofourown.org","download.archiveofourown.org","insecure.archiveofourown.org","www.archiveofourown.org","insecure-test.archiveofourown.org","test.archiveofourown.org","testdownload.archiveofourown.org"];var current_host=window.location.hostname;if(!permitted_hosts.includes(current_host)&&Cookies.get("proxy_notice")!=="0"&&window.location.protocol!=="file:"){$j("#skiplinks").after("<div id=\"proxy-notice\">\n  <div class=\"userstuff\">\n    <p class=\"important\">Important message:<\/p>\n    <ol>\n      <li>You are using a proxy site that is not part of the Archive of Our Own.<\/li>\n      <li>The entity that set up the proxy site can see what you submit, including your IP address. If you log in through the proxy site, it can see your password.<\/li>\n    <\/ol>\n    <p class=\"important\">重要提示：<\/p>\n    <ol>\n      <li>您使用的是第三方开发的反向代理网站，此网站并非Archive of Our Own - AO3（AO3作品库）原站。<\/li>\n      <li>代理网站的开发者能够获取您上传至该站点的全部内容，包括您的ip地址。如您通过代理登录AO3，对方将获得您的密码。<\/li>\n    <\/ol>\n    <p class=\"submit\"><button class=\"action\" type=\"button\" id=\"proxy-notice-dismiss\">Dismiss Notice<\/button><\/p>\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    \$j(\"#proxy-notice-dismiss\").on(\"click\", function() {\n      Cookies.set(\"proxy_notice\", \"0\");\n      \$j(\"#proxy-notice\").slideUp();\n    });\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+    <script>$j(document).on("loadedCSRF",function(){$j.post("/works/11939049/hit_count.json")})</script>
+
+
+  </body>
+</html>

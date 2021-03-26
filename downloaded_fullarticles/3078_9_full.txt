@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"f2edcff25e","applicationID":"190034","transactionName":"dgwMEkpfWVsHERpFWUcIEUlLWFpA","queueTime":0,"applicationTime":148,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VQcCWV9RGwIJVFFRAw==",licenseKey:"f2edcff25e",applicationID:"190034"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script>
+    <meta name="keywords" content="fanfiction, transformative works, otw, fair use, archive"/>
+    <meta name="language" content="en-US"/>
+    <meta name="subject" content="fandom"/>
+    <meta name="description" content="An Archive of Our Own, a project of the
+    Organization for Transformative Works"/>
+    <meta name="distribution" content="GLOBAL"/>
+    <meta name="classification" content="transformative works"/>
+    <meta name="author" content="Organization for Transformative Works"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+        Snakebite - YAJJ - Fullmetal Alchemist - All Media Types [Archive of Our Own]
+    </title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/1_site_screen_.css"/>
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 62em), handheld" href="/stylesheets/skins/skin_873_archive_2_0/4_site_midsize.handheld_.css"/>
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 42em), handheld" href="/stylesheets/skins/skin_873_archive_2_0/5_site_narrow.handheld_.css"/>
+<link rel="stylesheet" type="text/css" media="speech" href="/stylesheets/skins/skin_873_archive_2_0/6_site_speech_.css"/>
+<link rel="stylesheet" type="text/css" media="print" href="/stylesheets/skins/skin_873_archive_2_0/7_site_print_.css"/>
+<!--[if IE 8]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/8_site_screen_IE8_or_lower.css" /><![endif]-->
+<!--[if IE 5]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/9_site_screen_IE5.css" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/10_site_screen_IE6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/11_site_screen_IE7.css" /><![endif]-->
+
+
+
+<!--sandbox for developers	-->
+<link rel="stylesheet" media="screen" href="/stylesheets/sandbox.css"/>
+<script src="/javascripts/livevalidation_standalone.js"></script>
+
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="LNaOXKk65JmJ+tFruMI3vLR4aPzkL3Z5jrP0cTl7jisPfr0EWD9PSgOrN9zcZthYp/K1SX4n4oNzoU77XzJpmQ=="/>
+
+    
+  </head>
+
+  <body class="logged-out">
+    <div id="outer" class="wrapper">
+      <ul id="skiplinks"><li><a href="#main">Main Content</a></li></ul>
+      <!-- BEGIN BETA CAVEATS! -->
+<noscript>
+  <p id="javascript-warning">
+    While we&#39;ve done our best to make the core functionality of this site accessible without javascript, it will work better with it enabled. Please consider turning it on!
+  </p>
+</noscript>
+<!-- END BETA CAVEATS! --> 
+
+<!-- BEGIN header -->
+
+<div id="header" class="region">
+
+  <h1 class="heading">
+    <a href="/"><span>Archive of Our Own</span><sup> beta</sup><img alt="Archive of Our Own" class="logo" src="/images/ao3_logos/logo_42.png"/></a> 
+  </h1>
+
+    <div id="login" class="dropdown">
+      <p class="user actions" role="menu">
+        <a id="login-dropdown" href="/users/login">Log In</a>
+      </p>
+      <div id="small_login" class="simple login">
+	<form class="new_user" id="new_user_session_small" action="/users/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="AUSWshiDr8GPy/V2Arc0bH1Z82TXEgg/laG2c0yvehsi7KXq6YYEEgWaE8FmE9uIbtMu0U0anMVoswz5KuadqQ=="/>
+	<dl>
+    <dt>
+      <label for="user_session_login_small">User name or email:</label></dt>
+    <dd><input id="user_session_login_small" type="text" name="user[login]"/></dd>
+    <dt><label for="user_session_password_small">Password:</label></dt>
+    <dd><input id="user_session_password_small" type="password" name="user[password]"/></dd>
+  </dl>
+  <p class="submit actions">
+    <label for="user_remember_me_small" class="action"><input type="checkbox" name="user[remember_me]" id="user_remember_me_small" value="1"/>Remember Me</label>
+    <input type="submit" name="commit" value="Log In"/>
+  </p>
+</form>
+<ul class="footnote actions">
+  <li><a href="/users/password/new">Forgot password?</a></li>
+    <li>
+      <a href="/invite_requests">Get an Invitation</a>
+    </li>
+</ul>
+
+</div>
+
+    </div>
+
+  <h3 class="landmark heading">Site Navigation</h3>
+  <ul class="primary navigation actions" role="navigation">
+    <li class="dropdown">
+      <a href="/menu/fandoms">Fandoms</a>
+      <ul class="menu" role="menu">
+  <li><a href="/media">All Fandoms</a></li>
+        <li id="medium_5"><a href="/media/Anime%20*a*%20Manga/fandoms">Anime &amp; Manga</a></li>
+        <li id="medium_3"><a href="/media/Books%20*a*%20Literature/fandoms">Books &amp; Literature</a></li>
+        <li id="medium_4"><a href="/media/Cartoons%20*a*%20Comics%20*a*%20Graphic%20Novels/fandoms">Cartoons &amp; Comics &amp; Graphic Novels</a></li>
+        <li id="medium_7"><a href="/media/Celebrities%20*a*%20Real%20People/fandoms">Celebrities &amp; Real People</a></li>
+        <li id="medium_2"><a href="/media/Movies/fandoms">Movies</a></li>
+        <li id="medium_6"><a href="/media/Music%20*a*%20Bands/fandoms">Music &amp; Bands</a></li>
+        <li id="medium_8"><a href="/media/Other%20Media/fandoms">Other Media</a></li>
+        <li id="medium_30198"><a href="/media/Theater/fandoms">Theater</a></li>
+        <li id="medium_1"><a href="/media/TV%20Shows/fandoms">TV Shows</a></li>
+        <li id="medium_476"><a href="/media/Video%20Games/fandoms">Video Games</a></li>
+        <li id="medium_9971"><a href="/media/Uncategorized%20Fandoms/fandoms">Uncategorized Fandoms</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/browse">Browse</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works">Works</a></li>
+  <li><a href="/bookmarks">Bookmarks</a></li>
+  <li><a href="/tags">Tags</a></li>
+  <li><a href="/collections">Collections</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/search">Search</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works/search">Works</a></li>
+  <li><a href="/bookmarks/search">Bookmarks</a></li>
+  <li><a href="/tags/search">Tags</a></li>
+  <li><a href="/people/search">People</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/about">About</a>
+      <ul class="menu" role="menu">
+  <li><a href="/about">About Us</a></li>
+  <li><a href="/admin_posts">News</a></li>
+  <li><a href="/faq">FAQ</a></li>
+  <li><a href="/wrangling_guidelines">Wrangling Guidelines</a></li>
+  <li><a href="/donate">Donate or Volunteer</a></li>
+</ul>
+
+    </li>
+	  <li class="search"><form class="search" id="search" action="/works/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+  <fieldset>
+    <legend>Search Works</legend>
+    <p>
+      <label class="landmark" for="site_search">Work Search:</label>
+      <input class="text" id="site_search" aria-describedby="site_search_tooltip" type="text" name="work_search[query]"/>
+      <span class="tip" role="tooltip" id="site_search_tooltip">tip: katekyou &quot;alternate universe&quot; sort:&gt;words</span>
+      <span class="submit actions"><input type="submit" value="Search" class="button"/></span>
+    </p>
+  </fieldset>
+</form></li>
+  </ul>
+
+
+
+  <div class="clear"></div>
+
+</div>
+
+
+
+<!-- END header -->
+
+      <div id="inner" class="wrapper">
+        <!-- BEGIN sidebar -->
+        <!-- END sidebar -->
+
+        <!-- BEGIN main -->
+        <div id="main" class="works-show region" role="main">
+          
+          <div class="flash"></div>
+          <!--page description, messages-->
+<ul class="landmark skip">
+  <li><a name="top">&nbsp;</a></li>
+  <li><a href="#work">Skip header</a></li>
+</ul>
+
+<!--/descriptions-->
+
+<!--subnav-->
+<!--/subnav-->
+
+<!-- BEGIN revealed -->
+<!-- BEGIN work -->
+<!--work description, metadata, notes and messages-->
+    <!-- BEGIN navigation -->
+<h3 class="landmark heading">Actions</h3>
+<ul class="work navigation actions" role="menu">
+
+
+
+
+
+
+  <li class="comments" id="show_comments_link_top">
+      <a data-remote="true" href="/comments/show_comments?work_id=16656958">Comments </a>
+  </li>
+
+
+
+    <li class="share hidden">
+      <a class=" modal" title="Share Work" aria-controls="#modal" href="/works/16656958/share">Share</a>
+    </li>
+
+
+    <li class="download" aria-haspopup="true">
+      <a href="#">Download</a>
+      <ul class="expandable secondary">
+          <li><a href="/downloads/16656958/Snakebite.azw3?updated_at=1542519033">AZW3</a></li>
+          <li><a href="/downloads/16656958/Snakebite.epub?updated_at=1542519033">EPUB</a></li>
+          <li><a href="/downloads/16656958/Snakebite.mobi?updated_at=1542519033">MOBI</a></li>
+          <li><a href="/downloads/16656958/Snakebite.pdf?updated_at=1542519033">PDF</a></li>
+          <li><a href="/downloads/16656958/Snakebite.html?updated_at=1542519033">HTML</a></li>
+      </ul>
+    </li>
+</ul>
+<!-- END navigation -->
+
+
+<h3 class="landmark heading">Work Header</h3>
+
+<div class="wrapper">
+
+  <dl class="work meta group" role="complementary">
+          <dt class="rating tags">
+
+              Rating:
+          </dt>
+
+          <dd class="rating tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/General%20Audiences/works">General Audiences</a></li>
+            </ul>
+          </dd>
+          <dt class="warning tags">
+
+              <a href="/tos_faq#tags">Archive Warning</a>:
+          </dt>
+
+          <dd class="warning tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/No%20Archive%20Warnings%20Apply/works">No Archive Warnings Apply</a></li>
+            </ul>
+          </dd>
+          <dt class="category tags">
+
+              Category:
+          </dt>
+
+          <dd class="category tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Gen/works">Gen</a></li>
+            </ul>
+          </dd>
+          <dt class="fandom tags">
+
+              Fandoms:
+          </dt>
+
+          <dd class="fandom tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Fullmetal%20Alchemist%20-%20All%20Media%20Types/works">Fullmetal Alchemist - All Media Types</a></li><li><a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a></li>
+            </ul>
+          </dd>
+          <dt class="relationship tags">
+
+              Relationship:
+          </dt>
+
+          <dd class="relationship tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Minerva%20McGonagall%20*a*%20Roy%20Mustang/works">Minerva McGonagall &amp; Roy Mustang</a></li>
+            </ul>
+          </dd>
+          <dt class="character tags">
+
+              Characters:
+          </dt>
+
+          <dd class="character tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Roy%20Mustang/works">Roy Mustang</a></li><li><a class="tag" href="/tags/Minerva%20McGonagall/works">Minerva McGonagall</a></li><li><a class="tag" href="/tags/Peeves%20(Harry%20Potter)/works">Peeves (Harry Potter)</a></li><li><a class="tag" href="/tags/Horace%20Slughorn/works">Horace Slughorn</a></li><li><a class="tag" href="/tags/Solf%20J%20Kimblee/works">Solf J Kimblee</a></li><li><a class="tag" href="/tags/Chris%20%22Madam%20Christmas%22%20Mustang/works">Chris &quot;Madam Christmas&quot; Mustang</a></li>
+            </ul>
+          </dd>
+          <dt class="freeform tags">
+
+              Additional Tags:
+          </dt>
+
+          <dd class="freeform tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Ranowa&#39;s%20Harry%20Potter%20AU/works">Ranowa&#39;s Harry Potter AU</a></li><li><a class="tag" href="/tags/MamaMcGonagall/works">MamaMcGonagall</a></li><li><a class="tag" href="/tags/Alternate%20Universe%20-%20Harry%20Potter%20Setting/works">Alternate Universe - Harry Potter Setting</a></li><li><a class="tag" href="/tags/Schoolyard%20Bullies/works">Schoolyard Bullies</a></li><li><a class="tag" href="/tags/slughorn*d**d**d**d**d*%20sucks%20suffice%20to%20say/works">slughorn..... sucks suffice to say</a></li>
+            </ul>
+          </dd>
+
+      <dt class="language">
+        Language:
+      </dt>
+      <dd class="language">
+        English
+      </dd>
+
+
+
+    <dt class="stats">Stats:</dt>
+    <dd class="stats">
+<!-- end of cache -->
+
+      <dl class="stats"><dt class="published">Published:</dt><dd class="published">2018-11-18</dd><dt class="words">Words:</dt><dd class="words">4173</dd><dt class="chapters">Chapters:</dt><dd class="chapters">1/1</dd><dt class="comments">Comments:</dt><dd class="comments">7</dd><dt class="kudos">Kudos:</dt><dd class="kudos">219</dd><dt class="bookmarks">Bookmarks:</dt><dd class="bookmarks"><a href="/works/16656958/bookmarks">24</a></dd><dt class="hits">Hits:</dt><dd class="hits">1363</dd></dl>
+      </dd>
+  </dl>
+</div>
+
+
+
+<!-- BEGIN section where work skin applies -->
+<div id="workskin">
+  <div class="preface group">
+    <h2 class="title heading">
+      Snakebite
+    </h2>
+    <h3 class="byline heading">
+      <a rel="author" href="/users/YAJJ/pseuds/YAJJ">YAJJ</a>
+    </h3>
+
+
+        <div class="summary module" role="complementary">
+          <h3 class="heading">Summary:</h3>
+            <blockquote class="userstuff">
+              <p>When Minerva McGonagall was out on patrol, she didn't expect to return with a new son in the form of a lonely first year.</p>
+            </blockquote>
+        </div>
+
+        <div class="notes module" role="complementary">
+  <h3 class="heading">Notes:</h3>
+
+    <ul class="associations">
+      <li>For <a href="/users/Ranowa/gifts">Ranowa</a>.</li>
+
+
+
+    </ul>
+
+    <blockquote class="userstuff">
+      <p>Thank Ranowa for the idea! I love this universe too much to not mess around with it.</p>
+    </blockquote>
+
+</div>
+
+
+  </div>
+
+
+<!--/descriptions-->
+
+<!--chapter content-->
+    <div id="chapters" role="article">
+        <h3 class="landmark heading" id="work">Work Text:</h3>
+          <div class="userstuff"><p>
+  <span>Minerva McGonagall found that she often fancied late night patrols. She was an introvert by nature and, after hours and days on end of being surrounded by students and faculty alike—</span>
+  <em>
+    <span>none</span>
+  </em>
+  <span> of which she’d give up for the world, by the way—it was a pleasure to wander the halls of her home away from home unburdened. Patrols were relatively uneventful—mostly just making sure that the students weren’t wandering about the halls at times well past their bedtimes. </span>
+</p><p>
+  <span>It was on these patrols that she thought up lesson plans over the next week or two or three. Thought up assignments, thought up imaginary arguments (that she always seemed to win), thought up poetry, anything really. These were peaceful and quiet times with her thoughts, and she would happily take another professor’s late night patrol if asked—politely, of course. </span>
+</p><p>
+  <span>But there was still, on the occasion, a time when action needed to be taken. </span>
+</p><p>
+  <span>The action taken did depend on the action being done of course—sometimes as simple as escorting a student to bed, to scolding certain tricky pranksters (she’d already caught one Maes Hughes once or twice, though it was only his first year), to soothing a homesick first year. Though in the case of the homesick first year, it was rarely the wrinkly face of Professor Minerva McGonagall that greeted them.</span>
+</p><p>
+  <span>“Good evening, Peeves,” McGonagall said as she wandered the halls to the wayward poltergeist. She tried not to engage in pleasantries with the spirit, but she found it a better idea especially in the evening for two reasons: to save her ginger locks from annihilation via ball of mud or whatever atrocity Peeves had thought up, and to remind him that she knew he was there and that he had best keep himself in line. Few creatures would dare cross McGonagall—unfortunately, Peeves was one of a few who, on the occasion, would. </span>
+</p><p>
+  <span>“Evening Madam,” said Peeves in a way that told McGonagall to be wary of the next hall, hanging upside down from a spire. “A boy I did saw, a boy, Madam.” His voice echoed with laughter. </span>
+</p><p>
+  <span>“Oh </span>
+  <em>
+    <span>did</span>
+  </em>
+  <span> you, now?” Everyone, after all, knew that you simply didn’t believe Peeves, for your own safety or sanity.</span>
+</p><p>
+  <span>“I did, Madam, just opposite there!” Peeves pointed down a dark hallway not far from the stairwell to the Slytherin common room. “Out of bed he was! Student out of bed!”</span>
+</p><p>
+  <span>McGonagall lifted her brows into her hairline, peering down the dark corridor. She saw nothing—though perhaps for obvious reasons. But she knew better than to wander down dark corridors anywhere near to Peeves. “Was he now? And if I find one of your… happy little accidents, instead?”</span>
+</p><p>
+  <span>“You won’t, Madam, you won’t!” chirped the poltergeist, giggling as he started swinging on his perch. “My happy little accident is just down there, it is!” Then his face went slack, like he realized he </span>
+  <em>
+    <span>probably</span>
+  </em>
+  <span> shouldn’t have said so, and sped off like a Nimbus. </span>
+</p><p>
+  <span>McGonagall just shook her head and peered back down that dark corridor. She pulled out her wand and lit up her wand. Spying nothing sinister, she took a few steps down the corridor. Student out of bed? Can’t have that. </span>
+</p><p>
+  <span>She picked her way down the corridor, silencing her wand as the lamplight grew steadier nearer to the Slytherin Dungeon. </span>
+</p><p>
+  <span>Then, she heard a tiny sound. Not unlike a little sniffle. She paused, listening in. Another homesick first year, eh? Easy fix. A little odd so late in the year, but it was one she’d happily take care of, then send the little thing back to bed. </span>
+</p><p>
+  <span>So, as she normally did when she encountered a young first year, she pocketed her wand and activated the change. </span>
+</p><p>
+  <span>Being an animagus was truly like nothing else she had ever done before. Many of her magical endeavors, she may look back on and decide she would have been better off never having done them, but this certainly wasn’t one of them. If she had the choice to relive her life, knowing what all she had done in this one, the only change she may make was making the decision to become an animagus sooner. </span>
+</p><p>
+  <span>Minerva stepped out of her robes and kicked them to the side, ensuring her wand would not be crushed by a passersby. Then she trotted toward the sound, long ginger tail curling toward her back. </span>
+</p><p>
+  <span>And there, sat at the foot of a statue of Alcott the Ostentatious, a wizard from centuries before their time, there sat a boy. </span>
+</p><p>
+  <span>Minerva knew the boy, she thought. Of course, she dealt with so many students on a day to day basis that it wasn’t always easy to tell one from the other, especially when his face was covered and he was curled up, hiding himself from view. But judging by the proximity of the Slytherin dungeons, and his general size, she could surmise this was indeed a Slytherin first year and, if she had to guess, one young Roy Mustang. </span>
+</p><p>
+  <span>The young Slytherin was in her shared Transfiguration class with the Gryffindors. A smart boy, he generally aced his quizzes, and seemed to understand the content far better than most of his peers. However, he seemed to be a loner, even isolated in his own house. He studied to himself, and even paired up with a (generally mouthy) Gryffindor before taking sides with a Slytherin. The one time she remembered he looked toward a Slytherin, his own housemate had sneered him into submission. She didn’t know what was going on in that house, but Mustang always seemed able to handle it. She knew the home he was raised in; she and Mustang’s foster mother used to run in similar circles, and had bumped into one another from time to time. Chris Mustang was very much a “stand on your own two feet” and “suffer no fools gladly” sort of woman, and she had no doubts that similar traits had been taught to her foster child.</span>
+</p><p>
+  <span>She meowed to get his attention, but he didn’t seem to notice. He breathed a shuddering sob into his arms, one that McGonagall felt deep in her soul, and buried himself further away. </span>
+</p><p>
+  <span>McGonagall twitched her tail tip and padded closer, flicking her ears up. She meowed scratchily, a little louder, and finally the boy’s breath caught, and he glanced up. </span>
+</p><p>
+  <span>She purred a little trill and got closer, rubbing her back against his knee. </span>
+</p><p>
+  <span>“A—a cat?” He wondered, voice scratchy. He lifted a hand to wipe at his eyes, watching her still. </span>
+</p><p>
+  <span>McGonagall purred in agreement and headbutted his knee. She had gotten very good at playing the part of an affectionate cat for a lonely young student. </span>
+</p><p>
+  <span>“What are you doing here?” He wondered, sniffling. She glanced up to his face and spotted with displeasure how red his eyes were and how his cheeks shone with tears. How long had this little child been out here? Didn’t Slughorn run bed checks at night? Wouldn’t he have noticed his lonely first year wasn’t anywhere in the dorms?</span>
+</p><p>
+  <span>Instead, she purred again and hopped into his lap, and waited for the long haul. After all, this was when they got talky. </span>
+</p><p>
+  <span>McGonagall generally took this form for aching students for a few reasons. It was easier to talk to a furry face about what bothered them than it was a professor, who may see and judge them the next day. McGonagall had no intentions to judge this poor thing tomorrow, but he wouldn’t know that, nor would any other suffering student. It also made her classes easier; she could still be the firm hand of an unrelenting professor, and be the one soothing their aches and pains, without the two intermingling. Though there were a few women on board in this school, it was still mostly dominated by men, and she had had more than one wizard try to talk her down for being a woman, and this way they had little ammo. Nevermind that a student who knew they had been soothed by a professor the day before may try to put that act back on, should she catch them up to something they ought not be doing. </span>
+</p><p>
+  <span>The boy stayed silent for a few more moments, tears meandering down his face and falling onto her fur. She twirled in his lap, danced her way over his legs, then stretched up with a paw on his shoulder to sniff at his nose. </span>
+</p><p>
+  <span>It took another two seconds. </span>
+</p><p>
+  <span>“I w-wanna go home,” he finally said, lowering his head over her just enough that he nearly touched his forehead to her. </span>
+</p><p>
+  <span>This wouldn’t be the first homesick declaration McGonagall had heard, and it wouldn’t be the last. It wasn’t even the saddest way it had been seen. She had seen many a student weeping their eyes out uncontrollably, hardly able to blubber out the words. </span>
+</p><p>
+  <span>She stretched up her head to bump her ears against his nose, putting on a light purr for his sake. Urging him to keep talking. </span>
+</p><p>
+  <span>He dropped one hand into his lap to rest around her paws, the other one wiping miserably at his face. “I miss my aunt,” he mumbled.</span>
+</p><p>
+  <em>
+    <span>I understand</span>
+  </em>
+  <span>, McGonagall didn’t say, but she could remember, decades ago, her first year at Hogwarts how much she had missed her mummy and daddy. How desperately she had wanted them there with her. </span>
+</p><p>
+  <span>“A-and I know that—” Mustang fought back a hard sniff, curling himself in tighter. “I know Auntie Chris alw-ways said I had to fight my battles but I—it’s n-n-not </span>
+  <em>
+    <span>fair</span>
+  </em>
+  <span>, it’s not </span>
+  <em>
+    <span>fair.</span>
+  </em>
+  <span>”</span>
+</p><p>
+  <span>She purred out half a question, emerald eyes bright. </span>
+</p><p>
+  <span>“I didn’t e-even do </span>
+  <em>
+    <span>anything</span>
+  </em>
+  <span>,” the boy sobbed, lifting one shoulder. “I t-try to m-make friends like my aunt said, I do, and then they get… get </span>
+  <em>
+    <span>mad</span>
+  </em>
+  <span> and they tell me—to leave them alone—and then I </span>
+  <em>
+    <span>do</span>
+  </em>
+  <span> but—they…”</span>
+</p><p>
+  <span>They? Who was ‘they’ meant to be? Mustang wasn’t exactly liked as far as she knew, but she hadn’t noticed an outright </span>
+  <em>
+    <span>dislike</span>
+  </em>
+  <span> of him. Who was he talking about?</span>
+</p><p>
+  <span>“They hunt me </span>
+  <em>
+    <span>down</span>
+  </em>
+  <span>,” he wept again, “wherever I am they </span>
+  <em>
+    <span>find me</span>
+  </em>
+  <span> and I don’t even get </span>
+  <em>
+    <span>why</span>
+  </em>
+  <span>. They don’t even—they hardly say anything but they </span>
+  <em>
+    <span>find me</span>
+  </em>
+  <span>, in the library or in the Great Hall or in the dorms they </span>
+  <em>
+    <span>find me</span>
+  </em>
+  <span>. They… I…” He hiccupped hard, once, then swiped at his cheek again. “</span>
+  <em>
+    <span>Blood traitor</span>
+  </em>
+  <span>. I don-n’t get why they keep </span>
+  <em>
+    <span>saying that</span>
+  </em>
+  <span>. I didn’t d-do anything. I-I’m a S-Slytherin just like them, ‘n’ I d-do ev-verything just like th-they do but they still—</span>
+  <em>
+    <span>I don’t even know what that means.</span>
+  </em>
+  <span>”</span>
+</p><p>
+  <em>
+    <span>Were</span>
+  </em>
+  <span> the kids in Slytherin house teasing this young wizard? Relentlessly, apparently, if they ‘hunted him down’ like he so claimed, and she doubted if the boy would be </span>
+  <em>
+    <span>so</span>
+  </em>
+  <span> upset if he was lying or making it up. </span>
+</p><p>
+  <span>She trilled a little and waved her tail, touching her nose to his and twitching her whiskers. </span>
+</p><p>
+  <span>“It’s just—I don’t—understand,” Mustang said, whispered out under his breath. “Why can’t they just leave me alone? But they all—they </span>
+  <em>
+    <span>follow me</span>
+  </em>
+  <span> and I—I don’t…” He lowered his head in shame and suddenly put both arms around her and yanked her in close, so suddenly she mewled. “I know my aunt always says that I should </span>
+  <em>
+    <span>never </span>
+  </em>
+  <span>quit, always s-stand my ground and not let people push me around but… I don’t… </span>
+  <em>
+    <span>want to be here anymore</span>
+  </em>
+  <span>…”</span>
+</p><p>
+  <span>And, that. </span>
+  <em>
+    <span>That </span>
+  </em>
+  <span>was different. </span>
+</p><p>
+  <span>That wasn’t simple homesickness. That wasn’t a young child being away from home for the first time. Yes, he missed his aunt, and he missed his home, but if it was homesickness, he would have said that he wanted to go home.</span>
+</p><p>
+  <span>But </span>
+  <em>
+    <span>not wanting to be here</span>
+  </em>
+  <span> implied that he wanted to be </span>
+  <em>
+    <span>anywhere</span>
+  </em>
+  <span> else but this school. Whether that was at home or not, this child really didn’t care, he just couldn’t stand to be here anymore. That was something that McGonagall couldn’t comprehend. </span>
+</p><p>
+  <span>Ever since her childhood, this school had been like a second home. This school was wonderful. It was fun and open and inviting, and it smelled as much like home as the Scottish moors. But McGonagall had always been well liked. She had always been diligent in her studies, and an athletic star. She hadn’t exactly been a socialite, but she had been well-liked in her house and out of it. </span>
+</p><p>
+  <span>For this boy, it was different. If he was as intensely disliked as he seemed to think, if he was teased so relentlessly to the point of tears, day in and day out, then this school was a nightmare. And if this school, even just for one lonely little child, was a nightmare, then she had failed in her duty as a professor and caretaker, as had every other professor here.</span>
+</p><p>
+  <em>
+    <span>Especially </span>
+  </em>
+  <span>a certain Head of Slytherin House. </span>
+</p><p>
+  <span>“I want my </span>
+  <em>
+    <span>aunt</span>
+  </em>
+  <span>,” the boy gasped, shaking, burying his nose into her neck fur. “Sh-she’d be ash-shamed that I didn’t—</span>
+  <em>
+    <span>stand up for myself</span>
+  </em>
+  <span>, but I don’t care, I don’t want to </span>
+  <em>
+    <span>be here anymore</span>
+  </em>
+  <span>!”</span>
+</p><p>
+  <em>
+    <span>Oh no, no she wouldn’t</span>
+  </em>
+  <span>, McGonagall couldn’t say, nosing his ear. She wasn’t a mother herself, had no children of her own, but she felt that was because every student was one of her own. Maybe it wasn’t physical, and maybe it wasn’t</span>
+  <em>
+    <span> so</span>
+  </em>
+  <span> intensely maternal, but she would do anything for these children. Even—</span>
+  <em>
+    <span>especially</span>
+  </em>
+  <span>—this little Slytherin. </span>
+</p><p>
+  <span>Oh. Oh, this couldn’t be good. </span>
+</p><p>
+  <span>“I don’t even care. Will it be the same if I go to Beauxbatons? Or Durmstrangs? Auntie Chris said she wants me to get a good… </span>
+  <em>
+    <span>education</span>
+  </em>
+  <span> since I’m ‘gifted’, whatever that means, but I just… I don’t </span>
+  <em>
+    <span>want to</span>
+  </em>
+  <span>.” </span>
+</p><p>
+  <span>McGonagall nosed his ear quietly, sniffing at the ends of his hair. Her purr echoed through her throat quietly—she didn’t know if it was helping him, but a cat’s purr was supposed to be great for calming, and had proven successful before. </span>
+</p><p>
+  <span>“But she’ll… be embarrassed of me,” Mustang finally mumbled, lifting up a hand from her and swiping at his eyes. He seemed to be calming down a little, finally. “If I… </span>
+  <em>
+    <span>quit</span>
+  </em>
+  <span>. And she wanted me… </span>
+  <em>
+    <span>so bad</span>
+  </em>
+  <span>… to have this… I…”</span>
+</p><p>
+  <em>
+    <span>You’re better than they are. Stronger than they are.</span>
+  </em>
+  <span> McGonagall remembered days of bullies, of being one of only five girls in her entire </span>
+  <em>
+    <span>year</span>
+  </em>
+  <span>, versus twenty or thirty boys. Her mother sending her letters of encouragement, reminding her that whatever they said, whatever they tried, it was through her magical skill as a youth and her ability </span>
+  <em>
+    <span>alone</span>
+  </em>
+  <span> that earned her her place amongst the Hogwarts students, and that made her better than they could ever hope to be.</span>
+</p><p>
+  <span>“I don’t want to… but… I’ll stay through exams,” he finally seemed to decide, releasing a shaky breath. </span>
+</p><p>
+  <em>
+    <span>Good. You put in all that work throughout the rest of the year, and we’ll see something come of it yet. Maybe by the end of the school year, it will be better</span>
+  </em>
+  <span>. She would </span>
+  <em>
+    <span>make </span>
+  </em>
+  <span>it better, need be. No child deserved this ache and fear, not in such a wonderful place. </span>
+</p><p>
+  <span>Mustang dropped his other arm from her and turned his head, touching his cheek to her head. “Thanks, kitty.”</span>
+</p><p>
+  <span>McGonagall purred a little, rubbing her head against his and her body against his arms. She hopped down from his lap and tittered on the ground, then turned back up to him. </span>
+  <em>
+    <span>It’s time for bed now.</span>
+  </em>
+</p><p>
+  <span>Mustang blinked down at her, big eyes shining wet with tears. “I can’t—go back. I can’t get in.”</span>
+</p><p>
+  <span>She tittered out a meow. He couldn’t get in? He had to know his password. The head of house should have told every student if he didn’t have it posted. </span>
+</p><p>
+  <span>“The pass—word changed,” Mustang continued, his voice sounding so small. “Because of the thing going on in Hufflepuff house.”</span>
+</p><p>
+  <span>McGonagall, of course, knew. It was the same thing that got her to change Gryffindor’s password. </span>
+</p><p>
+  <span>“It changed while I was in the library tonight. K-Kimblee was… there, so I asked him the password bef-fore he left, and he said he’d go grab it b-because he couldn’t remember, and then he never came back.”</span>
+</p><p>
+  <span>McGonagall made an unimpressed noise at the back of her throat. This poor little creature couldn’t even get back into his own bed—no wonder he was so upset. </span>
+</p><p>
+  <span>She tittered about for a moment, dancing on her toes, and thought enough was enough. She, at least, knew the password for all the houses in case of emergencies. She thought this probably qualified. </span>
+</p><p>
+  <span>So, she turned back the way she had come, waved her tail as if in farewell, and trotted off. </span>
+</p><p>
+  <span>She heard, at the edge of her hearing, the way that Mustang’s voice shook, calling for her and then dissolving into another shaky cry. She transformed quickly and dressed back into her robes. She righted everything—there could be not a hair out of place on cool and collected Minerva McGonagall—then walked in place for a few seconds to convince the child she was just on the way. </span>
+</p><p>
+  <span>She rounded the corner then, fully human, glasses resting on the edge of her nose, cool emerald eyes watching him—waiting. </span>
+</p><p>
+  <span>And he looked up at her, with all the fear of a boy who knew he was about to be in big trouble, and for something that wasn’t even his fault, no less. </span>
+</p><p>
+  <span>She came to a stop and looked down at him, waiting still, watching. “Mister Mustang.”</span>
+</p><p>
+  <span>“I can-n’t… get back in,” Mustang said, voice unbearably soft. He nodded in the general direction of the Slytherin dormitories. </span>
+</p><p>
+  <span>She didn’t say anything for a few moments, then she sighed and leaned down to collect the bag she noticed on his opposite side. Three classes worth of books were in there, and those books weren’t exactly light. He would break his back if he kept this up. “I know.” </span>
+</p><p>
+  <span>Then, bag in hand, she turned back toward the Slytherin dungeons. She didn’t move, waiting for him to collect himself and catch up. He was on his feet after a moment of confusion, looking up at her with big wet eyes filled with far too much pain for an eleven year old who was supposed to be in the safest place in wizarding Britain. </span>
+</p><p>
+  <span>Without another word, she lead him back to the dungeons. </span>
+</p><p>
+  <span>“P-Professor—I don’t know the password to get in.”</span>
+</p><p>
+  <span>“I know it, Mister Mustang. I won’t have a first year out of bed this late so close to end of year exams. You need all the rest you can get.” </span>
+</p><p>
+  <span>“Oh. Am I in trouble…?”</span>
+</p><p>
+  <span>McGonagall sighed softly through her nose, looking down to the little one trailing after her. “Not this time, no. Next time it happens, though, we’ll have to see.” Her eyes twinkled with mirth, but he didn’t seem to catch the sarcasm. He looked down, watching his feet chase after her robes.</span>
+</p><p>
+  <span>The silence stretched on for a few minutes. In reality, it didn’t take very long to reach the Slytherin dungeons, but she was purposely walking slow, stalling, thinking she should say </span>
+  <em>
+    <span>something</span>
+  </em>
+  <span> considering what she just heard, but not quite knowing what. What advice could she give that wouldn’t just sound like his aunt’s repeated rhetoric? What could she say that wouldn’t sound as if she was dismissing the past several months of torment and how strong he was, facing them? And what in Merlin’s name could she say, that would still make it sound as if she didn’t know about it?</span>
+</p><p>
+  <span>Finally, it wasn’t quite what she wanted to say but, for now, it would do. She said, “you know there’s no shame in giving in.”</span>
+</p><p>
+  <span>Mustang turned big bright eyes up to her. </span>
+</p><p>
+  <span>“Really, there isn’t. If you gave it the good fight, went the long haul and gave it your all, then I don’t see anything wrong with resting when you’re tired. And while you’re at it, you can prove everyone right in everything that they’ve been thinking about you.”</span>
+</p><p>
+  <span>He sniffed a little and fisted his robe, still watching her. </span>
+</p><p>
+  <span>“Or,” she went on. “You can prove them all wrong. Make them know that, for everything they ever thought about you, you had twice the gumption and drive, and all the ability to prove it. You can take what the world throws at you lying down, or you can take it and throw it right back in its face. And if I know anything about your aunt, then I know which one she’d want for you.”</span>
+</p><p>
+  <span>Mustang’s eyes quickly went back down to the floor and he turned his head sharply, not having a word. He stopped when she did at the wall entrance to Slytherin Dungeon. </span>
+</p><p>
+  <em>
+    <span>“Snakebite</span>
+  </em>
+  <span>,” McGonagall said sharply, watching the bricks, waiting for them to separate like they did in Diagon Alley. </span>
+</p><p>
+  <span>And indeed they did, opening up like a maw. Mustang watched with huge eyes, muttering the new password under his breath (as well as a few well placed curses that McGonagall pretended she didn’t hear. She thought he was deserving of them).</span>
+</p><p>
+  <span>“Good night, Mister Mustang.”</span>
+</p><p>
+  <span>“Night, Professor McGonagall. ...Thanks.”</span>
+</p><p>
+  <span>McGonagall nodded at him, tapping his shoulders to push him in and handing him his bookbag. “See you in class tomorrow.”</span>
+</p><p>
+  <span>“Yeah… see you.” The boy fought off a yawn as he turned back into the dungeon and headed off to bed. McGonagall didn’t at all doubt that he was tired. It was well past the bedtime he was likely used to. </span>
+</p><p>
+  <span>The bricks waited for a few seconds, waiting to know if she was stepping through, but after a few more moments, they started folding back from one another to close up the gaping hole. Once the wall was closed up, the boy safely inside, McGonagall turned back on her heel and headed toward the staffroom. </span>
+</p><p>
+  <span>She knew that getting attached to this little Slytherin—something she could already feel happening deep in her </span>
+  <em>
+    <span>soul</span>
+  </em>
+  <span>, judging by the plan already circling about in her head—was maybe not the </span>
+  <em>
+    <span>best</span>
+  </em>
+  <span> idea, since she dealt with hundreds of students daily and needed to care for each of them as much as the other. But that… </span>
+  <em>
+    <span>definitely</span>
+  </em>
+  <span> wasn’t what this was at all. Not at all. She was just… trying to fix something that should have been fixed ages ago. And if part of that included yelling at Horace Slughorn because he was so negligent that he didn’t even notice a little first year out of bed hours after lights out, because </span>
+  <em>
+    <span>someone</span>
+  </em>
+  <span> had neglected to tell him the new password? Well, then that was the way it was going to have to be. </span>
+</p><p>
+  <span>After all, Gryffindor or not, it was her job to take care of her students and ensure that they received the best education possible here at Hogwarts, and that simply could not happen for a child who was teased relentlessly, day in and day out.</span>
+</p>
+<hr/><p> </p><p>
+  <span>At breakfast, Roy was pulled aside by Professor Slughorn and handed a slip of paper. He looked a little grumpy and sleepy, looking like someone who didn’t want to be crossed right then. </span>
+</p><p>
+  <span>On the slip of paper, when Roy risked a glance, was one word. </span>
+  <em>
+    <span>Snakebite</span>
+  </em>
+  <span>. Right. The new password, that Professor McGonagall had told him when she brought him back to bed. </span>
+</p><p>
+  <span>Last night was a little… bizarre. He’d had a bit of a fit—looking back, it was a little ridiculous, </span>
+  <em>
+    <span>hardly</span>
+  </em>
+  <span> something to cry over. He had just been frustrated, and he </span>
+  <em>
+    <span>did</span>
+  </em>
+  <span> miss his aunt… Regardless, he’d gotten upset, and had been comforted… by a cat? He had no clue where it had come from, or where it had gone. But then McGonagall had shown up and gotten him back into his dorms. She had an interesting word of advice for him, too. He didn’t really know where it had come from… but he appreciated it all the same. She was right. Whatever they thought of him—a blood traitor, werewolf bait, </span>
+  <em>
+    <span>whatever</span>
+  </em>
+  <span>—it was his job to prove that it was all wrong. He was better than that—hell, he was better than </span>
+  <em>
+    <span>them</span>
+  </em>
+  <span>, and that was that. </span>
+</p><p>
+  <span>Professor Slughorn also informed him that his schedule was being switched around, and he would start going to Transfiguration and Charms with the Ravenclaws and Hufflepuffs, when his class went to Charms and Transfiguration respectively. They needed work, he claimed, on Transfiguration and McGonagall claimed Roy was her best student (doubtful), whereas his Charms scores needed a little work, and Hufflepuffs were some of the best Charms students out there. </span>
+</p><p>
+  <span>He didn’t know what that would mean in the face of his housemates; if it was going to put a stop to it because he saw them less, or if it was going to increase because he needed “special help”.</span>
+</p><p>
+  <span>No matter. He’d face it the way he’d always done at this school. </span>
+</p><p>
+  <span>Alone. </span>
+</p></div>
+        <!-- end cache -->
+    </div>
+<!--/chapter-->
+
+
+  </div>
+  <!-- END work skin -->
+<!-- END work -->
+
+<!-- BEGIN comment section -->
+<!-- Gets embedded anywhere we need to list comments on a top-level commentable. We need the local variable "commentable" here. -->
+<div id="feedback" class="feedback" role="complementary">
+
+  <h3 class="landmark heading">Actions</h3>
+
+  <ul class="actions" role="navigation">
+      <li><a href="#main">&#8593; Top</a></li>
+
+
+
+
+
+
+      <li>
+        <form id="new_kudo" action="/kudos" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="to+WIXjeEHJTcJAWWp1MaIW0YNwmX7Ti0ky3c8tELl+VJ6V5idu7odkhdqE+OaOMlj69abxXIBgvXg35rQ3J7Q=="/>
+          <input value="16656958" type="hidden" name="kudo[commentable_id]" id="kudo_commentable_id"/>
+          <input value="Work" type="hidden" name="kudo[commentable_type]" id="kudo_commentable_type"/>
+          <input type="submit" name="commit" value="Kudos ♥" id="kudo_submit"/>
+</form>      </li>
+
+
+
+
+        <li id="show_comments_link"><a data-remote="true" href="/comments/show_comments?work_id=16656958">Comments (7)</a></li>
+  </ul>
+
+  <div id="kudos_message"></div>
+
+  <h3 class="landmark heading"><a name="comments">Comments</a></h3>
+
+  
+
+    <div id="kudos">
+      <p class="kudos">
+          <a href="/users/IvoryAnimeLover">IvoryAnimeLover</a>, <a href="/users/CatInAFedora">CatInAFedora</a>, <a href="/users/pink_potato">pink_potato</a>, <a href="/users/Quillium">Quillium</a>, <a href="/users/TheOneAndOnlyFin">TheOneAndOnlyFin</a>, <a href="/users/CopperedTwine">CopperedTwine</a>, <a href="/users/shadowcat500">shadowcat500</a>, <a href="/users/KediKat">KediKat</a>, <a href="/users/shawarma_rice">shawarma_rice</a>, <a href="/users/Minty_Choco">Minty_Choco</a>, <a href="/users/ghostlyeris">ghostlyeris</a>, <a href="/users/bookworm83197">bookworm83197</a>, <a href="/users/ilostmymrbls">ilostmymrbls</a>, <a href="/users/fangirl_at_the_disco61">fangirl_at_the_disco61</a>, <a href="/users/viciouspandalove">viciouspandalove</a>, <a href="/users/Comic_Sansy">Comic_Sansy</a>, <a href="/users/Acnologia777">Acnologia777</a>, <a href="/users/Torath">Torath</a>, <a href="/users/Eiyoko">Eiyoko</a>, <a href="/users/head_in_the_clouds27">head_in_the_clouds27</a>, <a href="/users/cat_in_the_hat">cat_in_the_hat</a>, <a href="/users/MediocreSavant">MediocreSavant</a>, <a href="/users/ArdentCo">ArdentCo</a>, <a href="/users/Darkanimefox">Darkanimefox</a>, <a href="/users/HistoryArt">HistoryArt</a>, <a href="/users/Amahami">Amahami</a>, <a href="/users/Blazher">Blazher</a>, <a href="/users/WinterIron">WinterIron</a>, <a href="/users/BastetWrites">BastetWrites</a>, <a href="/users/cry_me_a_table">cry_me_a_table</a>, <a href="/users/GhostQueen24">GhostQueen24</a>, <a href="/users/ChytryHarry">ChytryHarry</a>, <a href="/users/JessSprinkles">JessSprinkles</a>, <a href="/users/SatyrMythology">SatyrMythology</a>, <a href="/users/Redbaron7885">Redbaron7885</a>, <a href="/users/Bubble_Tea26">Bubble_Tea26</a>, <a href="/users/Chibiyorgh">Chibiyorgh</a>, <a href="/users/KnowThatILoved">KnowThatILoved</a>, <a href="/users/distractionpie">distractionpie</a>, <a href="/users/Freeperson3968">Freeperson3968</a>, <a href="/users/ikanasi">ikanasi</a>, <a href="/users/39smooth">39smooth</a>, <a href="/users/VanityShion">VanityShion</a>, <a href="/users/Appleslover19">Appleslover19</a>, <a href="/users/Kessya">Kessya</a>, <a href="/users/MegaFluffyDuck">MegaFluffyDuck</a>, <a href="/users/Hewwo_meme">Hewwo_meme</a>, <a href="/users/kittywitchy">kittywitchy</a>, <a href="/users/RedPanda">RedPanda</a>, <a href="/users/space_turtle_jam">space_turtle_jam</a><span id="kudos_more_connector">, and </span><a id="kudos_more_link" data-remote="true" href="/works/16656958/kudos?before=1963599064">85 more users</a>
+             as well as 
+          84 guests
+         left kudos on this work!
+      </p>
+</div>
+
+
+    <div id="add_comment_placeholder" title="top level comment">
+      <div id="add_comment">
+        <!-- expects the local variables comment, commentable, and button_name -->
+<div class="post comment" id="comment_form_for_16656958">
+  <form class="new_comment" id="comment_for_16656958" action="/works/16656958/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="oobBnPbkfjn3he1yWPrLWXboCHt/DfTIteLhZC7lmKyBLvLEB+HV6n3UC8U8XiS9ZWLVzuUFYDJI8FvuSKx/Hg=="/>
+    <fieldset>
+      <legend>Post Comment</legend>
+
+
+
+
+
+
+        <dl>
+          <dt class="landmark">Note:</dt>
+          <dd class="instructions comment_form">All fields are required. Your email address will not be published.</dd>
+          <dt><label for="comment_name_for_16656958">Guest name: </label></dt>
+          <dd>
+            <input id="comment_name_for_16656958" type="text" name="comment[name]"/>
+            <script>var validation_for_comment_name_for_16656958=new LiveValidation('comment_name_for_16656958',{wait:500,onlyOnBlur:false});validation_for_comment_name_for_16656958.add(Validate.Presence,{"failureMessage":"Please enter your name.","validMessage":""});</script>
+          </dd>
+          <dt><label for="comment_email_for_16656958">Guest email: </label></dt>
+          <dd>
+            <input id="comment_email_for_16656958" type="text" name="comment[email]"/>
+            <script>var validation_for_comment_email_for_16656958=new LiveValidation('comment_email_for_16656958',{wait:500,onlyOnBlur:false});validation_for_comment_email_for_16656958.add(Validate.Presence,{"failureMessage":"Please enter your email address.","validMessage":""});</script>
+          </dd>
+        </dl>
+        <p class="footnote">(Plain text with limited HTML <a class="help symbol question modal" title="Html help" aria-controls="#modal" href="/help/html-help.html"><span class="symbol question"><span>?</span></span></a>)</p>
+
+      <p>
+        <label for="comment_content_for_16656958" class="landmark">Comment</label>
+        <textarea id="comment_content_for_16656958" class="comment_form observe_textlength" title="Enter Comment" name="comment[comment_content]">
+</textarea>
+        <input type="hidden" id="controller_name_for_16656958" name="controller_name" value="works"/>
+      </p>
+      <p class="character_counter"><span id="comment_content_for_16656958_counter" class="value" data-maxlength="10000" aria-live="polite" aria-valuemax="10000" aria-valuenow="comment_content_for_16656958">10000</span> characters left</p>
+      <script>var validation_for_comment_content_for_16656958=new LiveValidation('comment_content_for_16656958',{wait:500,onlyOnBlur:false});validation_for_comment_content_for_16656958.add(Validate.Presence,{"failureMessage":"Brevity is the soul of wit, but we need your comment to have text in it.","validMessage":""});validation_for_comment_content_for_16656958.add(Validate.Length,{"maximum":"10000","tooLongMessage":"must be less than 10000 characters long."});</script>
+      <p class="submit actions">
+        <input type="submit" name="commit" value="Comment" id="comment_submit_for_16656958" data-disable-with="Please wait..."/>
+      </p>
+    </fieldset>
+</form></div>
+<div class="clear"></div>
+
+      </div>
+    </div>
+
+  <!-- If we have javascript, here is where the comments will be spiffily inserted -->
+  <!-- If not, and show_comments is true, here is where the comments will be rendered -->
+  <div id="comments_placeholder" style="display:none;">
+  </div>
+
+
+</div>
+<!-- END comments -->
+
+<!-- END comment section -->
+<!-- END revealed -->
+
+
+
+          <div class="clear"><!--presentational--></div>
+        </div>
+        <!-- END main -->
+      </div>
+      <!-- BEGIN footer -->
+<div id="footer" role="contentinfo" class="region">
+	<h3 class="landmark heading">Footer</h3>
+  <ul class="navigation actions" role="navigation">
+    <li class="module group">
+      <h4 class="heading">About the Archive</h4>
+      <ul class="menu">
+        <li><a href="/site_map">Site Map</a></li>
+        <li><a href="/diversity">Diversity Statement</a></li>
+        <li><a href="/tos">Terms of Service</a></li>
+        <li><a href="/dmca">DMCA Policy</a> </li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Contact Us</h4>
+      <ul class="menu">
+        <li><a href="/abuse_reports/new">Report Abuse</a></li>
+        <li><a href="/support">Technical Support and Feedback</a></li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Development</h4>
+      <ul class="menu">
+          <li><a href="https://github.com/otwcode/otwarchive/commits/v0.9.300.1">otwarchive v0.9.300.1</a></li>
+        <li><a href="/known_issues">Known Issues</a></li>
+        <li><a href="http://www.gnu.org/licenses/gpl-2.0.html" title="View License">GPL</a> by the <a href="http://transformativeworks.org/" title="The Organization for Transformative Works">OTW</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!-- END footer -->
+
+    </div>
+    <!-- check to see if this controller/action allow tinymce before we load the gigantor js; see application_helper -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js" type="text/javascript"></script>
+<!-- if user has googleapis blocked for some reason we need a fallback -->
+<script type="text/javascript">if(typeof jQuery=='undefined'){document.write(unescape("%3Cscript src='/javascripts/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));document.write(unescape("%3Cscript src='/javascripts/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));}</script>
+
+
+<script type="text/javascript">$j=jQuery.noConflict();</script>
+<script src="/javascripts/jquery.scrollTo.min.js"></script>
+<script src="/javascripts/jquery.livequery.min.js"></script>
+<script src="/javascripts/rails.js"></script>
+<script src="/javascripts/application.js"></script>
+<script src="/javascripts/bootstrap/bootstrap-dropdown.min.js"></script>
+<script src="/javascripts/jquery-shuffle.js"></script>
+<script src="/javascripts/jquery.tokeninput.min.js"></script>
+<script src="/javascripts/jquery.trap.min.js"></script>
+<script src="/javascripts/ao3modal.min.js"></script>
+<script src="/javascripts/js.cookie.min.js"></script>
+
+<script src="/javascripts/filters.min.js"></script>
+
+
+  <script>function isSupported(){var item="localStoragePolyfill";try{localStorage.setItem(item,item);localStorage.removeItem(item);return true;}catch(e){return false;}}function acceptTOS(){if(isSupported()){localStorage.setItem("accepted_tos","20180523");}else{Cookies.set("accepted_tos","20180523",{expires:365});}}$j(document).ready(function(){if(localStorage.getItem("accepted_tos")!=="20180523"&&Cookies.get("accepted_tos")!=="20180523"){$j("body").prepend("<div id=\"tos_prompt\" class=\"hidden\">\n  <h2 class=\"heading\">\n    <span>Archive of Our Own<\/span>\n  <\/h2>\n  <div class=\"agreement\">\n    <p class=\"summary\">\n      On Archive of Our Own (AO3), users can make profiles, create works and\n            other Content, post comments, give Kudos, create Collections and \n            Bookmarks, participate in Challenges, import works, and more. Any \n            information you publish in a comment, profile, work, or Content that you \n            post or import onto AO3 including in summaries, notes and tags, \n            will be accessible by the public (unless you limit access to a work only \n            to those with AO3 Accounts), and it will be available to \n            AO3 personnel. Be mindful when sharing personal information, \n            including  your religious or political views, health, racial background, \n            country of origin, sexual identity and/or personal relationships. To \n            learn more, check out our <a href=\"/tos\">Terms of Service<\/a> and <a href=\"/tos#privacy\">Privacy Policy<\/a>.\n    <\/p>\n\n    <p class=\"confirmation\">\n      <input type=\"checkbox\" id=\"tos_agree\" />\n      <label for=\"tos_agree\">I have read &amp; understood the new Terms of Service and Privacy Policy<\/label>\n    <\/p>\n\n      <p class=\"submit\">\n        <button name=\"button\" type=\"button\" disabled=\"disabled\" id=\"accept_tos\">I agree/consent to its terms<\/button>\n      <\/p>\n\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    var container = \$j(\"#tos_prompt\");\n    var outer = \$j(\"#outer\");\n    var button = \$j(\"#accept_tos\");\n\n    setTimeout(showTOSPrompt, 1500);\n\n    function showTOSPrompt() {\n      \$j.when(container.fadeIn(500)).done(function() {\n        outer.addClass(\"hidden\").attr(\"aria-hidden\", \"true\");\n      });\n\n      \$j(\"#tos_agree\").on(\"click\", function() {\n        button.attr(\"disabled\", !this.checked);\n        if (this.checked) {\n          button.on(\"click\", function() {\n            acceptTOS();\n            outer.removeClass(\"hidden\").removeAttr(\"aria-hidden\");\n            \$j.when(container.fadeOut(500)).done(function() {\n              container.remove();\n            });\n          });\n        };\n      }).change();\n    };\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+  <script>$j(document).ready(function(){var permitted_hosts=["archiveofourown.org","download.archiveofourown.org","insecure.archiveofourown.org","www.archiveofourown.org","insecure-test.archiveofourown.org","test.archiveofourown.org","testdownload.archiveofourown.org"];var current_host=window.location.hostname;if(!permitted_hosts.includes(current_host)&&Cookies.get("proxy_notice")!=="0"&&window.location.protocol!=="file:"){$j("#skiplinks").after("<div id=\"proxy-notice\">\n  <div class=\"userstuff\">\n    <p class=\"important\">Important message:<\/p>\n    <ol>\n      <li>You are using a proxy site that is not part of the Archive of Our Own.<\/li>\n      <li>The entity that set up the proxy site can see what you submit, including your IP address. If you log in through the proxy site, it can see your password.<\/li>\n    <\/ol>\n    <p class=\"important\">重要提示：<\/p>\n    <ol>\n      <li>您使用的是第三方开发的反向代理网站，此网站并非Archive of Our Own - AO3（AO3作品库）原站。<\/li>\n      <li>代理网站的开发者能够获取您上传至该站点的全部内容，包括您的ip地址。如您通过代理登录AO3，对方将获得您的密码。<\/li>\n    <\/ol>\n    <p class=\"submit\"><button class=\"action\" type=\"button\" id=\"proxy-notice-dismiss\">Dismiss Notice<\/button><\/p>\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    \$j(\"#proxy-notice-dismiss\").on(\"click\", function() {\n      Cookies.set(\"proxy_notice\", \"0\");\n      \$j(\"#proxy-notice\").slideUp();\n    });\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+    <script>$j(document).on("loadedCSRF",function(){$j.post("/works/16656958/hit_count.json")})</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"f2edcff25e","applicationID":"190034","transactionName":"dgwMEkpfWVsHERpRXlQTFgNKQxpECgxC","queueTime":0,"applicationTime":72,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VQcCWV9RGwIJVFFRAw==",licenseKey:"f2edcff25e",applicationID:"190034"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script>
+    <meta name="keywords" content="fanfiction, transformative works, otw, fair use, archive"/>
+    <meta name="language" content="en-US"/>
+    <meta name="subject" content="fandom"/>
+    <meta name="description" content="An Archive of Our Own, a project of the
+    Organization for Transformative Works"/>
+    <meta name="distribution" content="GLOBAL"/>
+    <meta name="classification" content="transformative works"/>
+    <meta name="author" content="Organization for Transformative Works"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+        Prewitt Princess - Chapter 1 - PetraAmia - Harry Potter - J. K. Rowling [Archive of Our Own]
+    </title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/A.1_site_screen_.css.pagespeed.cf.JiR2hT5NxR.css"/>
+<style media="only screen and (max-width: 62em), handheld">#dashboard{clear:both;float:none;margin:1% 3.5%;max-width:100%;padding:0;width:auto}#dashboard,#dashboard.own{border-bottom:10px solid #900;border-top:10px solid #900;padding:.5em 0;border-radius:.25em}#dashboard ul{border:none;display:inline;padding:0;text-align:left}#dashboard li{display:inline}#dashboard a,#dashboard span{display:inline-block;margin:.25em 0}#dashboard .secondary{background:#eee;padding:.375em 0 .625em;box-shadow:inset 2px 2px 5px #bbb}#dashboard .secondary a{margin:.125em 0}#dashboard .landmark{clear:none;float:left}#main,#main.dashboard{float:none;margin:auto;padding-left:3.5%;padding-right:3.5%;width:auto}.logged-in .splash>.module{width:48.5%}.logged-in .splash > div:nth-of-type(odd) {margin-left:0;margin-right:1.5%}.logged-in .splash > div:nth-of-type(even) {margin-left:1.5%;margin-right:0}form.filters{width:auto;min-width:23%;max-width:24%}.filters fieldset{margin-right:0}form.filters dl{margin-left:.25em;margin-right:.25em}#workskin{margin:auto 1.5%}</style>
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 42em), handheld" href="/stylesheets/skins/skin_873_archive_2_0/A.5_site_narrow.handheld_.css.pagespeed.cf.8L0d7x-op8.css"/>
+<link rel="stylesheet" type="text/css" media="speech" href="/stylesheets/skins/skin_873_archive_2_0/A.6_site_speech_.css.pagespeed.cf.Ybb8bLK5Um.css"/>
+<link rel="stylesheet" type="text/css" media="print" href="/stylesheets/skins/skin_873_archive_2_0/A.7_site_print_.css.pagespeed.cf.ry3YZtf8Cz.css"/>
+<!--[if IE 8]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/8_site_screen_IE8_or_lower.css" /><![endif]-->
+<!--[if IE 5]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/9_site_screen_IE5.css" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/10_site_screen_IE6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/11_site_screen_IE7.css" /><![endif]-->
+
+
+
+<!--sandbox for developers	-->
+<style media="screen">#new_work_search fieldset:first-of-type .submit{padding-top:0}.edit_external_author ul ul{margin-left:2.75em}a.resp-sharing-button__link,.resp-sharing-button__icon{display:inline-block}a.resp-sharing-button__link,a.resp-sharing-button__link:hover{text-decoration:none;color:#fff;border:none}.resp-sharing-button{border-radius:5px;transition:25ms ease-out;padding:.5em .75em}.resp-sharing-button__icon svg{width:1em;height:1em;margin-right:.4em;vertical-align:top}.resp-sharing-button__icon{stroke:#fff;fill:none}.resp-sharing-button__icon--solid{fill:#fff;stroke:none}.resp-sharing-button--twitter{background-color:#55acee}.resp-sharing-button--twitter:hover,a:focus .resp-sharing-button--twitter{background-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c}.resp-sharing-button--tumblr:hover,a:focus .resp-sharing-button--tumblr{background-color:#222d3c}.resp-sharing-button--twitter{background-color:#55acee;border-color:#55acee}.resp-sharing-button--twitter:hover,.resp-sharing-button--twitter:active{background-color:#2795e9;border-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c;border-color:#35465c}.resp-sharing-button--tumblr:hover,.resp-sharing-button--tumblr:active{background-color:#222d3c;border-color:#222d3c}</style>
+<script src="/javascripts/livevalidation_standalone.js.pagespeed.jm.oB__Z5piTe.js"></script>
+
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="DLLeWzA8KP1kJeAd1IJtbizRhuUnyj7R2meC/dirAQ8au5MtkxFRAhDiELgeYVq3AJlrR/uu9X0B0TnRppfXRQ=="/>
+
+    
+  </head>
+
+  <body class="logged-out">
+    <div id="outer" class="wrapper">
+      <ul id="skiplinks"><li><a href="#main">Main Content</a></li></ul>
+      <!-- BEGIN BETA CAVEATS! -->
+<noscript>
+  <p id="javascript-warning">
+    While we&#39;ve done our best to make the core functionality of this site accessible without javascript, it will work better with it enabled. Please consider turning it on!
+  </p>
+</noscript>
+<!-- END BETA CAVEATS! --> 
+
+<!-- BEGIN header -->
+
+<div id="header" class="region">
+
+  <h1 class="heading">
+    <a href="/"><span>Archive of Our Own</span><sup> beta</sup><script data-pagespeed-no-defer>(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','http://archiveofourown.org/works/14411514/chapters/33283698','eVfAzEuqgZ',true,false,'unJPsZs4vy4');</script><img alt="Archive of Our Own" class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAAqCAMAAAA3b6P4AAACslBMVEWXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACpit0XAAAA5XRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESFBUWFxgZGhscHR4fICEiIyQlJygpKissLi8wMTM0NTY3ODk6Ozw9PkBBQkNFR0hJSktMTU5PUFFSVFVWV1hZWltcXV5fY2RlZmhpamtsbW5vcHFyc3V2d3p7fX5/gIGCg4SFhoeIiouMjY6PkJGSlJWWl5iZmpucnZ6foKGipKWnqKmrrK2ur7CxsrO0tba3uLm6u7y9vr/AwsPFxsfIycrLzM7P0NLT1NXW19na29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+b1plRQAABBRJREFUSMedlvtb1FUQxgcEBMtQggUCxVACu1ApYmRmUqESkCkUREaS4h3JCDONEFPBoBQCJcDIGxkGKYGBkgGSAq4BARIXWWA//0c/7J39LvY0P82cd97nzJlzZuaIKvBRmVqmP/XOrrQNIbOVsNfyjq/3nYrs/1GlWjPe90v28wrgnOiDP7ddeN9WAE47O9DLQI6PksfDMWVjnfuDlCC3b4HbpYcOFjUC9UHKWywtQZNpjTmdgu60uSIis979HRr8bIT4YjVDqV6TFlPgVqjxjBegyM4MfSPepDsm9tAcb5mwHnpfMJmq39C+ZLQCytrfM3deUAylwWYL2+BTc4eICU4aNk/pLgm0DNQuqY+/Nk8zmuX0PmFx83V0eIiIyOPlmq3Wpw+tg1OG7Lk1c8YSzmZsqYhIhLp7pVLy3AugLUqnz73L15boHogUke1cW6ic+5n7QJvhLCLic4cTlmAGRIhdFhfdlcmPpUjCfSj3FpEZ9dQ5W6CFDPrLIc652rj2FWUi0f1wdZGI5DERbg56dlIvO6hyt1UTe8pEZKUa1JEiMVBhDu6GzbHc8LFZUSXHRUTC/oShBHG5DKkmbPUg1xPujSyxSba/sltEREJuA9tl0Qikz9JD8f1ovrjOVtvF7NexRqcsVgOfSIIW6pMDVe7z3zwLHDjFeSfb7GV/P6fXwrqATInuAvraWruB0U2bx4aenqKRJA/MMairhoAsCczr1TWH8dPLfO7w2VRtqKDZFFjsOHBY5JmNX549dzQ5ROQkLY9MQbZvKDCzNgHkGCvaLRGOznS2zQ6e2GJu7gXY7/3kiqQj52ubbo9C143asm2hLsrsD3jV8l2PAbcGsBRN9VuK7B+Gvc3N+WnDKEuqAtlz8FdT37J/5dhdk3vbxUb4Y23UusT08nZAobyTSDeoD8VUmKja3DCVcylk6LB5J7Qcts54Ncv13PVXDMQWLfC9o4SOMxqmd/TqocSKvZirTiIiTusM3NbM5aq9AGccPoYaB73jwn/ItWJ/xQ4RkTWVOupg4VqViEw7ApBTA5l6P9/T8LrV1veHA0RCirQANKU/q193KdZHEiUiMjc2vxUO2E9ml5MlXhn9ANRsVJmAWdUAjAaLiKoRaN9pRX6bdv9VjQD8FGv5HgNuAjS5ioj3Hd3jnyS+7RQfA+BSpONkMFwD5OvOVzEClZNmuV0hE/cAqqOmK7yjD4ENen1Jhpo+y6xt1SXmWoKNEtzS8qOn0Zi3jw7z1hg+BNCZ5m2z/DxmmFuZ7DKbATeBsYKgKX8/C6JNehjfmEZ3DlAb8YC/k1dVlrHx5LHaNNZ7GElzlQdJwOXaOA8REb9sSh2Myw5xn78s/0Fmpzc0V+TmVY1y2lP+h3jF5l9qvPpdnP4I/wITXDY67Xw1sAAAAABJRU5ErkJggg==" data-pagespeed-url-hash="4179492045" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a> 
+  </h1>
+
+    <div id="login" class="dropdown">
+      <p class="user actions" role="menu">
+        <a id="login-dropdown" href="/users/login">Log In</a>
+      </p>
+      <div id="small_login" class="simple login">
+	<form class="new_user" id="new_user_session_small" action="/users/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="4j2b8y2dS/GkxbzuLGiVQt/ogBNQSQy4Bjd6D0CkjBL0NNaFjrAyDtACTEvmi6Kb86BtsYwtxxTdgcEjPphaWA=="/>
+	<dl>
+    <dt>
+      <label for="user_session_login_small">User name or email:</label></dt>
+    <dd><input id="user_session_login_small" type="text" name="user[login]"/></dd>
+    <dt><label for="user_session_password_small">Password:</label></dt>
+    <dd><input id="user_session_password_small" type="password" name="user[password]"/></dd>
+  </dl>
+  <p class="submit actions">
+    <label for="user_remember_me_small" class="action"><input type="checkbox" name="user[remember_me]" id="user_remember_me_small" value="1"/>Remember Me</label>
+    <input type="submit" name="commit" value="Log In"/>
+  </p>
+</form>
+<ul class="footnote actions">
+  <li><a href="/users/password/new">Forgot password?</a></li>
+    <li>
+      <a href="/invite_requests">Get an Invitation</a>
+    </li>
+</ul>
+
+</div>
+
+    </div>
+
+  <h3 class="landmark heading">Site Navigation</h3>
+  <ul class="primary navigation actions" role="navigation">
+    <li class="dropdown">
+      <a href="/menu/fandoms">Fandoms</a>
+      <ul class="menu" role="menu">
+  <li><a href="/media">All Fandoms</a></li>
+        <li id="medium_5"><a href="/media/Anime%20*a*%20Manga/fandoms">Anime &amp; Manga</a></li>
+        <li id="medium_3"><a href="/media/Books%20*a*%20Literature/fandoms">Books &amp; Literature</a></li>
+        <li id="medium_4"><a href="/media/Cartoons%20*a*%20Comics%20*a*%20Graphic%20Novels/fandoms">Cartoons &amp; Comics &amp; Graphic Novels</a></li>
+        <li id="medium_7"><a href="/media/Celebrities%20*a*%20Real%20People/fandoms">Celebrities &amp; Real People</a></li>
+        <li id="medium_2"><a href="/media/Movies/fandoms">Movies</a></li>
+        <li id="medium_6"><a href="/media/Music%20*a*%20Bands/fandoms">Music &amp; Bands</a></li>
+        <li id="medium_8"><a href="/media/Other%20Media/fandoms">Other Media</a></li>
+        <li id="medium_30198"><a href="/media/Theater/fandoms">Theater</a></li>
+        <li id="medium_1"><a href="/media/TV%20Shows/fandoms">TV Shows</a></li>
+        <li id="medium_476"><a href="/media/Video%20Games/fandoms">Video Games</a></li>
+        <li id="medium_9971"><a href="/media/Uncategorized%20Fandoms/fandoms">Uncategorized Fandoms</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/browse">Browse</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works">Works</a></li>
+  <li><a href="/bookmarks">Bookmarks</a></li>
+  <li><a href="/tags">Tags</a></li>
+  <li><a href="/collections">Collections</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/search">Search</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works/search">Works</a></li>
+  <li><a href="/bookmarks/search">Bookmarks</a></li>
+  <li><a href="/tags/search">Tags</a></li>
+  <li><a href="/people/search">People</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/about">About</a>
+      <ul class="menu" role="menu">
+  <li><a href="/about">About Us</a></li>
+  <li><a href="/admin_posts">News</a></li>
+  <li><a href="/faq">FAQ</a></li>
+  <li><a href="/wrangling_guidelines">Wrangling Guidelines</a></li>
+  <li><a href="/donate">Donate or Volunteer</a></li>
+</ul>
+
+    </li>
+	  <li class="search"><form class="search" id="search" action="/works/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+  <fieldset>
+    <legend>Search Works</legend>
+    <p>
+      <label class="landmark" for="site_search">Work Search:</label>
+      <input class="text" id="site_search" aria-describedby="site_search_tooltip" type="text" name="work_search[query]"/>
+      <span class="tip" role="tooltip" id="site_search_tooltip">tip: katekyou &quot;alternate universe&quot; sort:&gt;words</span>
+      <span class="submit actions"><input type="submit" value="Search" class="button"/></span>
+    </p>
+  </fieldset>
+</form></li>
+  </ul>
+
+
+
+  <div class="clear"></div>
+
+</div>
+
+
+
+<!-- END header -->
+
+      <div id="inner" class="wrapper">
+        <!-- BEGIN sidebar -->
+        <!-- END sidebar -->
+
+        <!-- BEGIN main -->
+        <div id="main" class="chapters-show region" role="main">
+          
+          <div class="flash"></div>
+          <!--page description, messages-->
+<!--/descriptions-->
+
+<!--subnav-->
+<!--/subnav-->
+
+  <!-- BEGIN work -->
+  <div class="work"><p class="landmark"><a name="top">&nbsp;</a></p>
+      <!-- BEGIN navigation -->
+<h3 class="landmark heading">Actions</h3>
+<ul class="work navigation actions" role="menu">
+
+
+
+    <li class="chapter entire"><a href="/works/14411514?view_full_work=true">Entire Work</a></li>
+
+
+      <li class="chapter next"><a href="/works/14411514/chapters/33372165#workskin">Next Chapter &#8594;</a></li>
+
+    <li class="chapter" aria-haspopup="true">
+      <noscript>
+        <a href="/works/14411514/navigate">Chapter Index</a>
+      </noscript>
+      <a class="hidden" href="#">Chapter Index</a>
+      <ul id="chapter_index" class="expandable secondary hidden">
+        <li>
+          <form action="/works/14411514/chapters/33283698" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+            <p>
+              <select name="selected_id" id="selected_id"><option selected="selected" value="33283698">1. The Begining</option>
+<option value="33372165">2. Letters of the Past</option></select>
+              <span class="submit actions"><input type="submit" name="commit" value="Go"/></span>
+            </p>
+</form>        </li>
+        <li><a href="/works/14411514/navigate">Full-page index</a></li>
+      </ul>
+    </li>
+
+
+
+  <li class="comments" id="show_comments_link_top">
+      <a href="#comments">Comments</a>
+  </li>
+
+
+
+    <li class="share hidden">
+      <a class=" modal" title="Share Work" aria-controls="#modal" href="/works/14411514/share">Share</a>
+    </li>
+
+
+    <li class="download" aria-haspopup="true">
+      <a href="#">Download</a>
+      <ul class="expandable secondary">
+          <li><a href="/downloads/14411514/Prewitt%20Princess.azw3?updated_at=1524790093">AZW3</a></li>
+          <li><a href="/downloads/14411514/Prewitt%20Princess.epub?updated_at=1524790093">EPUB</a></li>
+          <li><a href="/downloads/14411514/Prewitt%20Princess.mobi?updated_at=1524790093">MOBI</a></li>
+          <li><a href="/downloads/14411514/Prewitt%20Princess.pdf?updated_at=1524790093">PDF</a></li>
+          <li><a href="/downloads/14411514/Prewitt%20Princess.html?updated_at=1524790093">HTML</a></li>
+      </ul>
+    </li>
+</ul>
+<!-- END navigation -->
+
+
+<h3 class="landmark heading">Work Header</h3>
+
+<div class="wrapper">
+
+  <dl class="work meta group" role="complementary">
+          <dt class="rating tags">
+
+              Rating:
+          </dt>
+
+          <dd class="rating tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Mature/works">Mature</a></li>
+            </ul>
+          </dd>
+          <dt class="warning tags">
+
+              <a href="/tos_faq#tags">Archive Warning</a>:
+          </dt>
+
+          <dd class="warning tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Choose%20Not%20To%20Use%20Archive%20Warnings/works">Creator Chose Not To Use Archive Warnings</a></li>
+            </ul>
+          </dd>
+          <dt class="fandom tags">
+
+              Fandom:
+          </dt>
+
+          <dd class="fandom tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a></li>
+            </ul>
+          </dd>
+          <dt class="character tags">
+
+              Characters:
+          </dt>
+
+          <dd class="character tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Hermione%20Granger/works">Hermione Granger</a></li><li><a class="tag" href="/tags/Draco%20Malfoy/works">Draco Malfoy</a></li><li><a class="tag" href="/tags/Theodore%20Nott/works">Theodore Nott</a></li><li><a class="tag" href="/tags/Narcissa%20Black%20Malfoy/works">Narcissa Black Malfoy</a></li><li><a class="tag" href="/tags/Molly%20Weasley/works">Molly Weasley</a></li><li><a class="tag" href="/tags/Arthur%20Weasley/works">Arthur Weasley</a></li><li><a class="tag" href="/tags/Tom%20Riddle%20%7C%20Voldemort/works">Tom Riddle | Voldemort</a></li><li><a class="tag" href="/tags/Fabian%20Prewett/works">Fabian Prewett</a></li><li><a class="tag" href="/tags/Selwyn%20(Harry%20Potter)/works">Selwyn (Harry Potter)</a></li>
+            </ul>
+          </dd>
+          <dt class="freeform tags">
+
+              Additional Tags:
+          </dt>
+
+          <dd class="freeform tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Original%20Character(s)/works">Original Character(s)</a></li><li><a class="tag" href="/tags/Post-Hogwarts/works">Post-Hogwarts</a></li>
+            </ul>
+          </dd>
+
+      <dt class="language">
+        Language:
+      </dt>
+      <dd class="language">
+        English
+      </dd>
+
+
+
+    <dt class="stats">Stats:</dt>
+    <dd class="stats">
+<!-- end of cache -->
+
+      <dl class="stats"><dt class="published">Published:</dt><dd class="published">2018-04-23</dd><dt class="status">Updated:</dt><dd class="status">2018-04-26</dd><dt class="words">Words:</dt><dd class="words">16139</dd><dt class="chapters">Chapters:</dt><dd class="chapters">2/?</dd><dt class="kudos">Kudos:</dt><dd class="kudos">5</dd><dt class="bookmarks">Bookmarks:</dt><dd class="bookmarks"><a href="/works/14411514/bookmarks">2</a></dd><dt class="hits">Hits:</dt><dd class="hits">82</dd></dl>
+      </dd>
+  </dl>
+</div>
+
+
+
+<!-- BEGIN section where work skin applies -->
+<div id="workskin">
+  <div class="preface group">
+    <h2 class="title heading">
+      Prewitt Princess
+    </h2>
+    <h3 class="byline heading">
+      <a rel="author" href="/users/PetraAmia/pseuds/PetraAmia">PetraAmia</a>
+    </h3>
+
+
+        <div class="summary module" role="complementary">
+          <h3 class="heading">Summary:</h3>
+            <blockquote class="userstuff">
+              <p>A powerful witch seeks understanding after her world changes, and she finds more than she bargained for when she steps out on her own. Memories of stolen glances and a pull that is undeniable take her to the last place she expected to go.</p>
+            </blockquote>
+        </div>
+
+        <div class="notes module" role="complementary">
+  <h3 class="heading">Notes:</h3>
+
+
+
+
+
+    <blockquote class="userstuff">
+      <p>I do not own anything HP. </p><p>This story is... very different than the way I usually write, and its not so much a story in a straight line, its a bit more backwards and forwards than that. I do apologize, but that is the way this story came to me and the way I put it on proverbial paper.  Feel free to review! </p><p>Much Love, <br/>XXXXPetra</p>
+    </blockquote>
+
+</div>
+
+
+  </div>
+
+
+
+    <div id="chapters">
+      <!-- This partial requires local variable 'chapter' -->
+<div class="chapter" id="chapter-1">
+  <!-- chapter management -->
+
+
+  <div class="chapter preface group" role="complementary">
+    <h3 class="title">
+      <a href="/works/14411514/chapters/33283698">Chapter 1</a>: The Begining
+    </h3>
+
+    <!-- only display byline if different from the main byline -->
+
+
+  </div>
+
+  <!--main content-->
+  <div class="userstuff module" role="article">
+    <h3 class="landmark heading" id="work">Chapter Text</h3>
+    <p> </p><p> </p><p>
+  <span>The establishment was quite ordinary from any outside perspective. Nothing particular on the outside to say, to any normal person, that anything extraordinary happened on the inside. No, to the untrained eye it looked just like any other building on that street. However to the woman standing on the street looking up, this building had much promise, so much. Key in hand, she entered the main door and took the trek up the four flights of stairs unto the large loft apartment. Once upon a time she would have never pictured herself here, or at least here alone. She had spent so many years of her life pining for someone who couldn’t return her affections the way she needed. Last month her decision to move into her own place was cemented when an old schoolmate came knocking. </span>
+</p><p> </p><p>
+  <span>This space, this place, was a new beginning for her. An open canvas to begin the rest of her life. There was so much darkness, she just wanted light. The wide open space called to her, called to a side of her she had long since forgotten. As a child she had loved art, she  danced, she wrote, she drew, she let her imagination run wild. That side of her was tamped down as she grew, she threw herself into her studies and forgot all about her art. School was long over, it had been for a few years, and she wandered, lost. After school she felt listless, unwanted. No longer a “valuable tool” or some pawn in an old man’s schemes, she felt useless. </span>
+</p><p> </p><p>
+  <span>She sighed and reached into her beaded bag to pull out the necessary elements. She turned and locked the door, pressed her back against it and breathed. Fresh rosemary and Sage filled her senses as she pulled them from the bag. She set them on the counter to her right, then pulled out a rather odd looking broom. Four candles soon followed and, with a wave of her hand, she floated them to their respective corners of the space. She pulled out a bowl she filled with water, and some salt, then stood in the center and began the motions, began casting her circle, and then her protection wards. Pausing only to retrieve a slim wand from the bag. </span>
+</p><p> </p><p>
+  <span>Once she was sure everything was done and settled, once the magic surrounded her and helped her relax, did she start pulling items out of the bag in earnest. The west side of the loft was to be her bedroom space. The undetectable extension charm on the beaded bag helped her carry her entire life. It helped on the run during the war, but now…. It carried all the belongings she held dear. Seemingly as impossible as it was to any outsider, she pulled out a beautiful, carved, wooden, four poster bed. A tall dresser, an armoire, and a vanity followed it in short order. The ability to hold them in one hand was perhaps one of her favorites. A Featherlight charm. </span>
+</p><p> </p><p>
+  <span>The southernmost space was her work space for her artful expression. An easel, a desk, and a potions lab now took up that corner.  A large cupboard stood against the wall, also with an extension charm, held all of her potion components. Roll after roll of parchment, canvas, and cloth followed, leaning themselves against the wall until she got proper storage for them. Little pots and bottles flew from her bag as she waved her hands across the room, sending them to their new home on some shelves. </span>
+</p><p> </p><p>
+  <span>Twirling about, she pulled book after book out of her bag and finally some bookshelves she set up to the easternmost point in the space. An overstuffed armchair came next, followed by some lamps, a small table, a large wooden desk, and a high leatherback chair. Sufficiently satisfied that her mini library was contained for now, she turned to the rest of the space. Dishes flew out of the bag and into the cupboards of the kitchen. Towels were sorted and sent of to their homes, spices, food, and toiletries were zooming from one corner to the other putting themselves away. A large cushioned couch and loveseat zoomed overhead landing in the center of the unused space. A coffee table, another overstuffed chair, and candles followed them. She turned to the floo and sent a wave of magic to it, cleaning it out and testing it’s connection. There was no connect to the floo network here, she would need to handle that soon. </span>
+</p><p> </p><p>
+  <span>Once her bag was unloaded of its possessions she looked at the space. The Things were beautiful, she had spent a small mint gathering the necessary supplies to furnish her space, but now they needed an…. Earthy touch. Twirling about, yet again, she Sent her magic out. The wooden furniture took on a more ethereal like appearance. Moss green covered the walls, and the ceiling seemed lit by stars.  Hanging baskets dropped from the sky in varying lengths, filled with various plants she would need. She pondered a moment, and decided she was indeed going to need to get an aquarium for some of the water plants she was going to need. Bright rune symbols glowed on the walls, floor, and momentarily the ceiling, before they settled into the building. Effectively shielding her and making the place unplottable. </span>
+</p><p> </p><p>
+  <span>A smile slid it's way onto her face. She had never felt so free, so at home. Her magic surrounded her, made her safe. She could take on the world like this, not that she wanted to, of course. Right now, just like the rest of the world she wanted peace. Small crystals hung from the baskets, catching the light, others lay in bowls seated on different surfaces. The space finally felt more her own, it was her sanctuary. She was missing a few things here and there, perhaps a screen or two by the bed, and art, she wanted art. Some personal touches wouldn’t hurt either…. For now though, she was content. Many things had happened in such a short period of time for her…. She needed to find herself. She took off time from work, she bought this place, and now she needed to enjoy some simplicity. </span>
+</p><p> </p><p>
+  <span>First, she needed to do some shopping. Food, mostly, was what she required, but it never hurt to stop and pick up something that caught her eye. She pulled a simple gown out, and put on a fresh cloak, she didn't want to be recognised today, she wanted relaxation. Dumping a potion on her hair, she slipped it into a simple braid, and cast a subtle glamor over her features. Positively unassuming, she cast a shielding charm and exited her new home. She grabbed her beaded bag, keys, and wand on the way out and cast a protective charm or two on her door and entrance to the stairwell before exiting the building and heading to the nearest apparition point. </span>
+</p><p> </p><p>
+  <span>Diagon Alley was quiet, it was only a tuesday morning, but she expected it to be busier. It wasn’t quite yet time for school shopping, so that might be why it was. She stopped in a few shops looking at their bits and bobs, she picked up a trinket here and there, paid for with a handful of sickles and knuts. Madame Malkins loomed up and she sighed, she really should get a few dress robes to attend some functions coming up that she was obligated to attend. Walking in she recognised a few faces, luckily they didn’t recognise her. A woman stood near the back on one of the platforms seamstresses asked models to stand on to make adjustments. The witch was powerful, and she licked her lips in nervousness when the witch turned to speak to Malkin. </span>
+</p><p> </p><p>
+  <span>“I was hoping for something in a blue…. Not quite sure which shade, but I think a blue would be nice. What do you think?” The Witch looked at the proprietor and pushed back a stray strand of hair. </span>
+</p><p> </p><p>
+  <span>“An Ice blue perhaps? Maybe a royal blue. Something deep in color? You could go with either one, your skin tone is fair….” Madame Malkin walked a tight circle around the witch and nodded. “Either would suit, I do have something in the colors you could try, it won’t fit at first, of course….” </span>
+</p><p> </p><p>
+  <span>“Why not an amethyst?” She could not keep silent,Malkin seemed demure, but she could see the mockery. Call it her new sense of self, but she couldn’t let that stand. . The witch turned fully to look at her and she could see a look of shock register across her face. She dropped the glamour fully and nodded to a fabric she could see. “This would suit you much better,” She said pulling it from the rack. “Perhaps if you paired it with opals somewhere. Perhaps in you hair? It would look quite lovely with your complexion.” </span>
+</p><p> </p><p>
+  <span>“She is quite right, I wouldn’t be one to suggest such, but she is right. It would suit you. “ Madame Malkin stiffly bowed out in search of something on the other side of the shop. </span>
+</p><p> </p><p>
+  <span>“I… I could not be seen in such a color.” The Witch looked at herself in the mirror. “It is a color of happiness, I should not have such a thing.” </span>
+</p><p> </p><p>
+  <span>“You should not say such a thing, everyone deserves happiness. You were convicted of no crime, you have no punishment that you need endure. You are alive, and you should wear any color that suits you.” The bolt of fabric wrapped itself around the witch </span>
+</p><p> </p><p>
+  <span>“My family name is seen as nothing but distasteful, shameful…. I should not…” </span>
+</p><p> </p><p>
+  <span>“You are a Malfoy, true, you are also a Black. Both lines are of a powerful lineage. I know that you may not be looked on as favorably as you once were, but five years is a long time to be making amends for a crime you did not commit. You saved the wizarding world, even though you take no credit. You will not diminish that in my eyes.” She spun some magic and The Witch turned to look at herself in the mirror and gasped. “The color suits you, deep on the bottom and fragile on top. The opals in your hair are a must. I insist. You will be wearing this to the minister’s gala correct?” </span>
+</p><p> </p><p>
+  <span>“I was unaware that I was invited to such a prestigious event.” The Witch ran a hand softly over the fabric, almost as if afraid to touch it. </span>
+</p><p> </p><p>
+  <span>“You just have not received your personal invitation as of yet, I shall send you one later today with all the details, you shall be my guest.” The Witch stuttered slightly. “I can pull many strings, and I have never used the invitations that I can hand out at any time. You should not be shunned Narcissa. I will not allow it, you are to come to the Gala.” </span>
+</p><p> </p><p>
+  <span>“That is… overly generous of you…” Narcissa turned to look at her. “You needn’t spare your pity on me. What happened in my house…” </span>
+</p><p> </p><p>
+  <span>“You were forced to endure much, You had little to no control over your sister, not a single person did in my opinion. She was wretched and vile, and quite touched if you would like my personal opinion. Bellatrix was in league with a madman who played the pureblood fantasies of the Sacred Twenty- Eight. Its an interesting ploy considering he was a halfblood himself.” She mused and walked over to the wall of fabric. “Tom Riddle was a creation of a love potion gone wrong. He had a magical mother and a muggle father who didn’t even know he existed. Well, that was until he showed up at his door and murdered him, and his grandparents. I assume Tom never told the story.” </span>
+</p><p> </p><p>
+  <span>“How is it you know such a  story?” Narcissa didn’t like talking about this topic at all, but found she was intrigued. </span>
+</p><p> </p><p>
+  <span>“Harry, it seems that Harry and Dumbledore traveled through a pensive and reclaimed some memories. He was able to learn quite a lot about Tom that way. Enough to stop him. You were deceived by someone who wanted power, he wanted to be great…. He was an evil being, not because he used dark arts, but because he wanted destruction of people he assumed had done him wrong. He hated both Muggles and Wizards alike. He wanted to be king, and have everyone grovel. He used dark magic because it was a scare tactic, he had no ability to forgive or to love.” </span>
+</p><p> </p><p>
+  <span>“Love? Love is nothing more than words….” </span>
+</p><p> </p><p>
+  <span>“Love is a powerful thing. It was your love for your son that led you to lie to the darkest wizard, it was love that saved Harry Potter in Godric’s Hollow. It was love that conquered that day on the battlefield….. There is many different kinds of Love Mrs. Malfoy, you need to understand how important that really is.” She turned to Narcissa and waited for the next question she knew would be coming…. “As for Forgiveness…. Forgiveness can be it’s own kind of love. Harry forgave you and your son, he asked for leniency for your husband. Can you imagine what life would have been like if Tom Riddle could have just forgiven his mother for being mortal, forgiven his mother for falling in love with a muggle. If he was able to forgive an imperfect society that has nothing to do with magical children in a muggle world until they turn 11.” </span>
+</p><p> </p><p>
+  <span>“Forgiveness is more than we had ever hoped to receive. So,  we had never asked for forgiveness. Terrible things have come from our home, we let monsters gather strength and power in our house. We do not deserve forgiveness.” Narcissa stepped down from her stool. “We have much to atone for and forgiveness is not easily forthcoming.” </span>
+</p><p> </p><p>
+  <span>“I have had quite a revelation over the last few weeks, and I know that forgiveness can be a hard thing to both give and receive.” She smiled lightly at the Witch. “It’s funny to find out that you belong in a world vastly different to the the one you are used to. I grew up knowing that I had gifts, my mum… she told me it was our secret…. That I couldn’t tell anyone. I hadn’t realized….. She knew what I was. She knew I was a wizard, but she couldn’t tell me.” </span>
+</p><p> </p><p>
+  <span>“Muggles shouldn’t know about wizards at all, secrecy is very important to the ministry. There have been times where revealing the secret was a matter of life or death.That would mean that...” Narcissa raised a hand as if to reach out to her, only to realize what she was doing. </span>
+</p><p> </p><p>
+  <span>“My mother was a Witch… once, as was my Father.” Narcissa recoiled as if she were slapped. “Both of my parents were born into the Sacred 28, yet they were not both so…. In tune to the pure blood belief. They married in secret, and I was conceived. My father knew that he was about to walk into a battle that he wasn’t going to walk away from and begged my mother to take me someplace safe. There was a muggle couple that watched me when my father had Order business to take care of, so she left me with them and ran after my father. They never came back.” </span>
+</p><p> </p><p>
+  <span>“That story is nearly improbable! How could someone come up with such a thing.” Narcissa couldn’t believe the tale. It.. it simply…. “No one from the Sacred 28 would have left a magical child in the hands of some Muggle couple.” </span>
+</p><p> </p><p>
+  <span>“My father wrote me a letter, to be delivered when I was 18. With all the confusion and record loss we had… it was hard to determine…. Who was his daughter. My mother had the foresight to do the same, and the stories matched. The letters arrived at the doorstep of the muggle couple a month after my birthday, but I was long gone and so were they. Professor McGonagall had collected the letters and kept them in Hogwarts. Unknowing what they were, once the war was over and the rebuilding started they were forgotten…. Until recently. I just received them….” </span>
+</p><p> </p><p>
+  <span>“Who were your Parents?” Narcissa shouldn’t ask, she should never ask anything from the woman before her, yet she couldn’t help it. </span>
+</p><p> </p><p>
+  <span>“</span>
+  <span>Wilfreda Selwyn and Fabian Prewett.” She locked eyes with the witch. “They both claim that she was hidden away from the sacred twenty eight when things started to get gloomy, she was put into order custody and she met Fabian there. Once they found out that she was with child, they both retreated further away from the mayhem….  The wonderful muggles that I thought of as parents did the best they could, and in the end I saved them. I am no longer Hermione Granger, Muggle born however.” </span>
+</p><p> </p><p>
+  <span>“You are a Selwyn and a Prewett?” It looked as though Narcissa was about to faint. </span>
+</p><p> </p><p>
+  <span>“I am, I had blood taken and examined and my lineage tested…. It hasn’t been made official in the court of public opinion though yet, and I would like to keep it that way up until the Gala…. “ Hermione smiled. </span>
+</p><p> </p><p>
+  <span>“Is that why you have told me? Because you know that I talk to no one? ” There was no hint of malice, just cool acceptance. Narcissa knew her fate. </span>
+</p><p> </p><p>
+  <span>“Merlin no!” Hermione laughed, “I decided to tell you and perhaps, hope that you could teach me a thing or two…. Molly Weasley is my aunt but I cannot see going to her for aid on this matter. You are a quite neutral party.” </span>
+</p><p> </p><p>
+  <span>“I would graciously open up my home to you.” She paused here, only to search for the correct words, “I would understand if you did not accept that offer, with what had happened in my home.” Her eyes fell to Hermione’s arm of their own accord. There was slight tightening around her lips. </span>
+</p><p> </p><p>
+  <span>“I would be glad to come to your home. My place isn’t quite the grand scale nor the space for learning things that I will need to learn I am sure. Please buy the dress, as a token of my gratitude at your assistance and indulge me in coming to the Gala. I am sure that you and your son could do with some socializing.” </span>
+</p><p> </p><p>
+  <span>“But of course. Shall I owl you?” Narcissa looked at the girl for what seemed like the first time. She could see it there. She knew Wilfreda when she was but a child, but the resemblance was there. </span>
+</p><p> </p><p>
+  <span>“I will owl you, if that is quite alright. I just moved, and I haven’t gotten anything sorted yet.” She put out her hand as for a shake and Narcissa extended hers. “I do appreciate all and any help you can give me.” </span>
+</p><p> </p><p>
+  <span>“But of course.” was all Narcissa could say as the girl whisked her off to the register. “I am not sure I am a worthy recipient of such a gift as you have bestowed upon me.” </span>
+</p><p> </p><p>
+  <span>Hermione may, at one time, felt such a thrill at those words. All she had ever wanted at one time was to fit into a world of wonder, a world of magic. Now…. The words were a not so pleasant reminder of times gone by that need to be forgotten. “Think nothing of it.” Hermione dismissed the words and pulled Narcissa out into the street. “Today is a new day.” </span>
+</p><p> </p><p>
+  <span>“That, indeed it is.” Narcissa murmured, perhaps to herself. The wheels in her head were turning. Hermione could see that, and she had hoped Narcissa would be a little faster on the uptake than that. </span>
+</p><p> </p><p>
+  <span>“I plan on taking this place by storm, you know.” Narcissa glanced sharply at her. “Things need to change, and we both know it. The Order thinks they are superior now that the war is done and they are bashing everyone that confronts them. It is not quite agreeable. I have been working in the Ministry for a while now and I suppose I see more of it than you do.” Hermione led her over to a neat little cafe. “Did you know that most of the laws that have been passed recently are quite biased, one way or another?” Hermione glanced up at the menu and then to her guest. “Would you like a cuppa? I admit I am a bit famished, I could go for something a bit more substantial.” </span>
+</p><p> </p><p>
+  <span>“I am not sure that I would be served in such an establishment, as things currently stand.” Narcissa looked up at the menu, “but perhaps, I could offer you a nice lunch at my home? I am sure that the elves would be pleased honor you with a meal.” </span>
+</p><p> </p><p>
+  <span>“I accept.” </span>
+</p><p><br/>
+<br/>
+</p>
+<hr/><p> </p><p> </p><p>
+  <em>
+    <span>“Hermione…. There is someone here to see you. Out in the garden.” Molly looked flushed, worried even. </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>“Thank you Molly!” Hermione smiled at her and stood from the chair she had been sitting. She closed the book and walked out to the garden, to see a tall slim man there. “Excuse me?” She called as she approached and stopped in shock at the face of the man who turned to her. </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>“Granger,” He nodded stiffly. “I wanted to speak with you, about a rather important matter.” </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>“I see…” She glanced quickly, and spread out her magic to check to see if he was alone. “What can I help you with Mr Nott?” </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>“The matter is…. Sensitive. I would rather not have this conversation in such an open space, I know however that I am permitted no closer to the Weasley home. I ask that you come to my office at your convenience of course.” He was thin lipped, like this conversation was hurting him. He held out a business card, which Hermione took. </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>“I am afraid I am at a loss as to what kind of sensitive business I might have with you Nott.” She flipped the card a few times in her hands as she searched his face. </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>“I am a lawyer, and something has come to my attention that I think you need to see.” He took a deep breath, “As you are well aware, when someone dies, there is a will.” She nodded, “In this case I have two wills with your name on them and some documents that I think you need to see to believe.” He stuck his hand in his pockets. “I did not bring the documents with me, I was unaware if I could bring them on the premises.” </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>“Are they cursed?” Hermione laughed as she saw him stiffen. “No then? Alright, give me a few moments. I will change and grab my bag, and we can go inspect those documents.” He looked closely at her and she smiled. It looked like adventure was coming, right as she needed it most. </span>
+  </em>
+</p><p><br/>
+<br/>
+</p>
+<hr/><p> </p><p> </p><p>
+  <span>“Please have a seat Ms….. well, now I am at a loss as to call you Granger or Prewett.” Narcissa sat across from her at the pristine table. </span>
+</p><p> </p><p>
+  <span>“Prewett is fine, however, I believe that we are past all that, Hermione, please.” Hermione smiled and watched as a house popped in with a tray of tea. </span>
+</p><p> </p><p>
+  <span>“Hermione, then. Mopsy, would you be so kind as to bring Hermione and I some refreshments?” Mopsy squeaked in what Hermione hoped was glee before disappearing with a pop. “Sugar?” </span>
+</p><p> </p><p>
+  <span>“Please.” Hermione looked about the room, it was not the same drawing room that she saw sometimes in her nightmares, thank goodness for that. Her eyes lingered on the rather bare walls. “If I may, what was this room used for previously? There is nothing on the walls to indicate?” </span>
+</p><p> </p><p>
+  <span>“This was once a morning room of sorts. I would take my tea here often and admire the garden. When the war was over the ministry confiscated many things to test if there was dark magic here, some things have yet to be returned.” Narcissa pursed her lips and sipped her tea. </span>
+</p><p> </p><p>
+  <span>“How awful.” Hermione stared at what she assumed was some rather large windows hidden behind large drab curtains. “This room has such promise. Those windows, there would be so much light!” Hermione couldn’t help but feel slightly trapped in the drabness. Her hands itched to rip the curtains from the windows. </span>
+</p><p> </p><p>
+  <span>“Once this room held light and happiness, but now it is quite like the Malfoy name, a shell of its former self.” The bitterness dripped like venom from her lips, and Hermione could see her fingers tighten around the handle of her cup. </span>
+</p><p> </p><p>
+  <span>“You need a cleansing.” Hermione stood and flared her magic outwards. “Each room needs to be washed clean the smell of death and decay. The aura of the building is off…. You need more light, more color. A chance to gather happiness.” </span>
+</p><p> </p><p>
+  <span>“I doubt very much that this house could collect happiness. Even if it was burnt to the ground.” The sound of his voice startled her, and she turned quickly. There, in the shadows, lounging against a door frame was the silhouette of a man. </span>
+</p><p> </p><p>
+  <span>“There was once happiness here.” She stated simply and raised her arms, “ each day is a new beginning. It’s time to learn from your experiences. They may be good, they may be bad, but you need to learn from each and every one.” She twirled once and the walls lit with runes. The ceiling began to shimmer. The beaded bag she set on the table lifted and out came her small bowl of water, her broom, the salt, the sage, and candles. She cleansed the room, she had to, in her bones this needed to happen. </span>
+</p><p> </p><p>
+  <span>Narcissa watched the magic float around this witch, her eyes turned to the door where she knew her son lounged. He no longer looked so nonchalant, he stood at attention. His eyes fixed on the magical creature before him. He moved slowly into the room, and stood by his mother’s side, one hand on her shoulder. The magic whirled, the curtains dropped from the windows, and in their place beautiful lace grew. The room filled with light, the floors gleamed as if they were freshly polished, the windows shined with renewal. A moss green color spread across the walls, and Narcissa let out the breath she was holding. This was beautiful magic, old magic. </span>
+</p><p> </p><p>
+  <span>Hermione had closed her eyes as she felt the change, and as the magic pulled back into her, she opened them and dropped her arms. The room felt clean, warm, comfortable. The only thing that seemed stiff and unsure was the pair at the table. “I got a bit carried away, please excuse me.” </span>
+</p><p> </p><p>
+  <span>“No, my dear, that was beautiful. Never say that something like that was not. Quite a bit of old magic, something I hadn’t seen in such a very long time.” Narcissa refilled her tea cup and heard the elf pop back into the room with some sandwiches and cakes. Mopsy gasped and almost dropped her tray.</span>
+</p><p> </p><p>
+  <span>“Thank you Mopsy.” The beautiful male voice called to her and she couldn’t stop her gaze from shooting up to his. The elf squeaked and disappeared with a pop, yet still Hermione held Draco’s eyes. “I never expected to see you in this house again.” He spoke softly, almost so much that Hermione strained to hear him. </span>
+</p><p> </p><p>
+  <span>“Today is a new day Draco.” His eyes flashed as she said his name, something she couldn’t quite place. “I was telling you mother such when I ran into her today in Madame Malkin’s. I have invited you both to the Gala coming up if you would do me the honor?” </span>
+</p><p> </p><p>
+  <span>Draco watched her breathe, the rise and fall of her chest in the simple gown and robe she wore. Her words sounded like music and he wanted nothing more than to hear her continue to talk. She had used his given name, and it had done something to him. An ache consumed him, not the sullen one he normally felt, but an ache unlike any he had experienced thus far. “The Ministry Gala?” He rumbled out finally as her words sunk in. </span>
+</p><p> </p><p>
+  <span>“The same.” Hermione smiled and Draco’s breath caught. “I had hoped you would accompany me. I came to see if you mother would help me with some studying I am afraid is much overdue.” She sat in her chair and watched his face. </span>
+</p><p> </p><p>
+  <span>“Studying?” He wanted to laugh, much was different about the witch in front of him, but not that much. </span>
+</p><p> </p><p>
+  <span>“Yes Draco,” his mother chided. He could hear her laughter and he couldn’t help but smile. “It seems that Hermione here has come into some knowledge that was once lost to her. She needs some tutelage on pureblood customs.” Draco’s nose crinkle in disgust. </span>
+</p><p> </p><p>
+  <span>“Seem’s I am some lost heiress, to not one but two pureblood families.” She smiled sweetly, and Draco wanted the floor to swallow him. “My mother and father were both from the upper crust of Wizarding society. It will be announced at the Gala, I suppose. Kingsley said that I had until then to decide how to go about it. I want to know what I am getting myself into and your family is the only family that I actually know. Quite good fortune that I bumped into your mother in that shop.” </span>
+</p><p> </p><p>
+  <span>“An Heiress?” He choked it out, he wasn’t sure how he had managed. Draco poured himself into a chair and busied himself with tea. He needed something to do with his hands before they started shaking. A quick glance at his mother confirmed that the wheels were turning behind her eyes. “I had not heard that there was a lost princess anywhere.” </span>
+</p><p> </p><p>
+  <span>“That would be because no one was told I was missing, or that I was alive. My muggle family knew, but they had to keep my parents secrets.” Hermione sipped from the cup and watched Draco digest the news. “I believe that you are familiar with the Selwyn family?” Draco nodded slowly. He remembered that name from his learings on ancestry so many years ago, quite a few of the Selwyn clan were from Slytherin if he recalled correctly. “My mother was a Selwyn, killed during the first Wizarding War. My father, also killed during the war, was a Prewett.” </span>
+</p><p> </p><p>
+  <span>“Prewett?” He let the name slide off his tongue as memories invaded his brain. “Relative of the Weasley clan?” </span>
+</p><p> </p><p>
+  <span>“Quite, Molly Weasley is my aunt.” Hermione sipped her tea and watched the shock pass across his face. “Was a real shock, when I found out. Ronald and I were never meant to be, we both knew that and came to terms with that quite quickly when the war was over, but once i found out I knew why.” </span>
+</p><p> </p><p>
+  <span>“When did you find out my dear? You never got to tell me.” Narcissa watched the play between the pair. </span>
+</p><p> </p><p>
+  <span>“Only a few weeks ago, a former student in our year showed up on my doorstep and asked me to come down to his office to look at some documents that he had stored there. My eyes only, of course.” She plucked a sandwich off the plate and nibbled a corner. “Once we reviewed the documents in question, my parent’s will’s, I didn’t believe him until he produced the letters, and a journals. Seems my mother and father both kept a diary, from the moment I was born, up until they dropped me off at my now Muggle family home.” </span>
+</p><p> </p><p>
+  <span>Draco couldn’t help but watch her lips, the way that the words flowed from her mouth. He watched her a lot more than he cared to admit in school, and seeing her so close and actually talking to him was a little, unnerving. Shame hit him in waves, he suppose it was something that always happened, but he knew how he had treated this woman. How awful he was in school. His left arm twitched, thankfully hidden by the table. “Someone from our year informed you?” He managed, barely. </span>
+</p><p> </p><p>
+  <span>“Indeed.” She swallowed a bit more tea, Draco watched the motion. “Theodore Nott, he was a housemate of yours I believe.” She smiled sweetly, and Draco had the urge to throttle one of his only friends. “Was less than pleased to see me originally, he had no clue why my name was on the will’s nor the text of the letters and journals. Only after we had gone through things, and really did some research was he able to authenticate not only the letters, but my lineage as well. Quite through.” Narcissa resisted the unladylike urge to snort into her tea. If the look on her son’s face was any indication, poor Theo had a howler or a hex coming for him. “I hope I could ask a favor of you Draco.” </span>
+</p><p> </p><p>
+  <span>The freeness in which she used his given name pleased him in ways that he couldn’t quite understand. There seemed to be some pull to her, which he always dismissed as lothing. He was raised to hate those beneath him. World firmly turned on its ear, now that Hermione was no longer the hated vermin his father told him about. He no longer felt that way about any muggle born children. He had, upon occasion, ventured out into the muggle world to explore and enjoy some of the simple things muggles liked to do. “Anything.” he said the word with conviction. He knew down in his bones that there was no request he wouldn’t go to the ends of the earth to complete for the vision in front of him. He knew not whether it was of self hatred for the git he was as a child, or something more. </span>
+</p><p> </p><p>
+  <span>“Would you do me the honor of being my dance partner?” His breath caught and his eyes jumped to meet hers. “I do need an escort to the Gala, and I am not the most graceful on the dance floor. If I remember correctly, you dance beautifully. You were something to see at the yule ball.” Her face flushed, he was so caught in her eyes he almost missed it. </span>
+</p><p> </p><p>
+  <span>“It would be my pleasure to be your partner for the Gala.” The words rumbled out and he stood. He approached her slowly, afraid she might bolt. That all of this was some strange dream. “Perhaps,” he smiled as he got closer and held out his hand, “we could both use a refresher course before then?”  </span>
+</p><p> </p><p>
+  <span>Hermione looked at his palm, and then up into his eyes. Something crackled in the air between them but they took no notice. Her hand fit softly in his as she rose. Narcissa stood, and backed out of the room quietly, smiling and raising her wand to start some soft music. The children needed time alone. </span>
+</p><p> </p>
+<hr/><p> </p><p> </p><p>
+  <em>
+    <span>“Is this a joke?” Her voice didn’t raise, it never wavered. Somewhere deep inside she seemed to splinter. </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>Theodore Nott sat back in his chair, he couldn’t believe what he had been reading either. “I assure you… This is no joke. Everything here is legal and legitimate. I may have only taken over the business from my father, but anything I do is legal. The only thing left right now that my father had any interest in was the last will and testaments of the sacred 28. This is what my family did for generations, we are just solicitors. Everything that deals with those cannot be tampered with.” He templed his hands in front of his face. “My father was many things, but he took the sacred 28 seriously.” </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>Hermione slumped back in her chair and offered him a wobbly smile. “Well then Nott, I guess you should be seeing more of me. Until I make any legal changes to my name, please call me Hermione.” He lifted one eyebrow but didn't say anything else. “I assume that there is a test to see if this is true. Something? I just can’t believe that no one knew….” </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>“There is… There is a test. I will need a small blood sample.” He stood and walked over to a very unassuming wall. He pulled a random book from a shelf and the wall opened. </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>“How very scooby-doo…” Hermione murmured under her breath, silently cursing Harry’s Tele. </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>They walked into the room behind the wall and there as a small cauldron off to one side and what looked like an hourglass sitting beside it. “Usually this test is used to determine if someone was born to one family or an other. It became quite a scandal when the man of the manor had an illegitimate child. This test determined if they belonged to a noble house, and then we could break it down further to determine which house.” He waved his hand and the dust cleared the room. “Step on the podium….. Hermione.” there was a slightly raised platform that she assumed was the podium. “I will need your hand, i will prick your finger and place it over the glass.”</span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>She raised her palm and felt him stick her finger with a needle. Her hand was placed over the hourglass, once the drop of blood fell inside the hourglass turned a bright gold color. “You are born from one of the noble house.” He removed her hand and pricked her finger again. He turned the hourglass over and repeated the process. This time the outline of the glass was gold, and silver and orange swirled inside. Nott crossed the room and flipped a few pages in an old tome. “Most noble house of Selwyn: Silver” he read and flipped a few more, “Most noble house of Prewett: Orange”  Straightening, he turned to her and bowed. “Let me be the first to say welcome back, princess.” </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>Hermione couldn’t stop the bark of laughter. “I am no princess, I’m a mudblood” </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>Nott cringed. “No Hermione, you are a Princess. You are a rare jewel. Some of us purebloods may not have known who you truly were, but some of us knew you were a very powerful witch. We may have hid behind our pureblood principles when we thought you were a muggle born, we may have used foul names to keep up our image…. But some of us thought much more highly of you than we could let on.” </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>Hermione paced across the room and back into Nott’s office. “That is very hard to believe, not after the years of hearing Mudblood whispered behind my back, or to my face.” </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>“We were children raised to believe that anyone that wasn’t a pureblood was beneath us. When we first started classes, yea, we did say those things. We did believe them because that is what we were taught. As the years went by Hermione, things changed. That fourth year especially, you blew us all away. For me and a few of my brethren, i believe it was third year. When you punched Draco Malfoy in the nose that did it.” Hermione had the decency to blush as he sat across from her. “It was bloody brilliant.” He smiled at her and she laughed. “Even Draco’s view of you changed quite drastically. That Yule ball…. It put quite a wallop on him.” </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>“That is beyond hard to believe.” Hermione murmured, but she thought back. Fourth year had been hard with Harry and Ron fighting…. She had seen more of him that year than ever before. </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>“Is is to hard to think that a git like Malfoy saw you as something more than just a muggle born? I assure you, he did.” </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>“Rubbish.” Hermione stood, “I need a few days to wrap my mind around this. Can you be discreet?” Nott nodded and handed her the letters and journals. “Thank you Nott…” </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>“Theo, if you please. Owl me any time to arrange a meeting or pop by, I am here most days.” He walked her to the door and she nodded. “Welcome to the pureblood nobility, princess. I might suggest you find yourself a sponsor or think about it. A noble woman who can guide you through the ins and outs of pureblood society.” </span>
+  </em>
+</p><p> </p><p>
+  <em>
+    <span>“I will see what i can do. Thank you, Theo.”</span>
+  </em>
+</p><p><br/>
+<br/>
+</p>
+<hr/><p> </p><p> </p><p>
+  <span>Draco stood with Hermione and listened to the music play softly behind him, before adjusting her in his arms and moving to the beat. It was slow, and he was much closer than should be proper, but, it was something he felt he needed to do. Hermione flowed with him and she let her magic spiral outward. His magic was more reserved, much more subdued. It caused her to frown, and he tilted her chin up with a touch of his finger. “What is wrong?” </span>
+</p><p> </p><p>
+  <span>“Your magic…. It's so faint.” He looked startled, but she continued as they swayed. “You have hidden your magic away. You fear it, what it can do.”</span>
+</p><p> </p><p>
+  <span>“I have seen magic do many dark things, perhaps I am just wary.” He looked down his nose at her, at her height, her head was at his chin. She fit into his arms beautifully, and he couldn't help but hold her tighter. He could feel the magic around him and knew it to be hers. </span>
+</p><p> </p><p>
+  <span>“Yes, but you are not as dark as you think you are Draco. Your magic is not tainted like so many others.” He could feel her magic trying to draw strength from his, to pull his out. </span>
+</p><p> </p><p>
+  <span>“Tell that to the people I have hurt, tell that to the ones that lost their lives. … if I had been stronger…..” </span>
+</p><p> </p><p>
+  <span>“But you are strong Draco. You are alive. When the time came for you to kill, you could not. You spared a life Draco, in the face of unimaginable evil, you did not succumb. How on earth could you ever believe you were weak?” Her hand was on his face, lightly stroking his cheek. “Once upon a time I may have thought you a coward, hiding behind lies and tradition, but not any more. I know better. So should you.” </span>
+</p><p> </p><p>
+  <span>He wanted to blame it on some madness, on her magic, anything, but he knew deep down that this was just something he </span>
+  <em>
+    <span>needed</span>
+  </em>
+  <span> to do. His lips sought hers, the kiss was hungry on his part, demanding, wanton. She met him with all her passion, he could feel his magic now, entwining with hers, still muted, but there. Hermione’s hand at the back of his neck, fingers lightly pulling at his long hair. </span>
+  <em>
+    <span>Merlin</span>
+  </em>
+  <span> she tasted divine. That pull that he always felt magnified, and he now embraced it. The hand at her waist pulled her flush with his body, his other hand reached into her hair. </span>
+</p><p> </p><p>
+  <span>They pulled apart to breathe, his forehead resting on hers. “Forgive me…” </span>
+</p><p> </p><p>
+  <span>“Don’t…” She whispered and looked up at him. “Do not apologise for that.” Her hand brushed a stray lock of hair from in front of his eyes. “I had noticed that there has always been something between us. We hid behind hate for too long.” </span>
+</p><p> </p><p>
+  <span>“Something between us? I called you vile names, and you punched me once if I recall.” He laughed and let his thumb slide across her cheek. </span>
+</p><p> </p><p>
+  <span>“Mmm…. There had always been a pull, “ his breath caught as he heard her speak the words. “My eyes would seek you in class, just to see if you were there. I wrote it off to childish hatred, but there was always something more. I will admit that you did make me quite angry third year, and you deserved that punch.” </span>
+</p><p> </p><p>
+  <span>“I did, indeed” He chuckled and closed his eyes, engulfing himself in her. Her scent surrounded him, calmed him, warmed him. </span>
+</p><p> </p><p>
+  <span>“Yet…. fourth year, something changed…” He inhaled sharply. He remembered fourth year. He remembered the Yule ball, and her walking down the stairs into the arms of that Bulgarian brute. She was a vision, and it was in that moment that Draco had known he was lost. That the pull wasn’t hate. “You were so dashing out there on the dancefloor, even if your partner was much less so. The way you moved was impressive, I don’t think there was a dance that I didn’t watch you at some point.” </span>
+</p><p> </p><p>
+  <span>“I could say the same for you. I was a git, in school. I know that, and I apologise for my rudeness. Not because of your earlier revelations, but because it’s true. I treated you badly, and I apologise. I realised that year, fourth, that I couldn’t keep my eyes off you either. Fifth year was hard for me, I tried to keep you out of things with Umbridge, but... “ He opened his eyes to look down at her shy smile. “Sixth was the most difficult for me, the things that I was in charge of, the things I had to do….” </span>
+</p><p> </p><p>
+  <span>“You survived Draco, you really did. Theo and I talked for a long time a few days ago. There were…. Things that needed said. He told me how you kept the younger children safe in school as much as you could seventh year, Neville vouched for you and how you helped them in the room of requirement. How you wanted none of the praise,” Draco had to close his eyes at the sound of her praise. </span>
+  <em>
+    <span>Most definitely a Howler, and a jinx that right bastard. </span>
+  </em>
+  <span>“You did more than anyone thought you could have. It took awhile for me to realize, and I had to stay at Theo’s for a few days…. He has an amazing library, did you know?” </span>
+</p><p> </p><p>
+  <span>Draco stiffened and pulled back from her slightly. “Theo’s? You stayed at his home?” </span>
+</p><p> </p><p>
+  <span>“No, not exactly. He had a flat above his office he let me stay in until I could find my new place. He did however, let me use of his family library to do research on my mother.” She smiled at the hint of something that had slid behind his eyes. “I got the keys to my new place today, and I then bumped into your mother on my search for food.” </span>
+</p><p> </p><p>
+  <span>“You haven’t eaten?” He led her back to her chair and the table, “please eat and then we can talk.” </span>
+</p><p> </p><p>
+  <span>“You will eat with me?” She asked softly, and he pulled a chair closer to her own as she sat. He picked up a sandwich off the tray and nibbled on his own. “I know from Theo that things have been…. Different for the pureblood society, but not much. Care to teach me a thing or two?” </span>
+</p><p> </p><p>
+  <span>“As you wish.” He smiled cheekily and watched her finish her sandwich. “I had the wonderful fortune of spending some time in muggle London. I am not the same prat you went to school with, I admit, and I enjoy muggle movies, they are quite fascinating.” </span>
+</p><p> </p><p>
+  <span>Hermione laughed, because she could hear the teasing note to his voice, and that mischievous glint in his eyes. Draco’s smile lit the room, followed by a rumble of his laughter. Narcissa, who watched the ending of the scene from the doorway was quite glad Hermione had gotten rid of those hideous curtains. </span>
+</p>
+  </div>
+  <!--/main-->
+
+
+</div>
+
+<!-- end of cache -->
+
+    </div>
+  
+  
+    </div>
+    <!-- END work skin -->
+  </div>
+  <!-- END work -->
+
+  <!-- BEGIN comment section -->
+  <!-- Gets embedded anywhere we need to list comments on a top-level commentable. We need the local variable "commentable" here. -->
+<div id="feedback" class="feedback" role="complementary">
+
+  <h3 class="landmark heading">Actions</h3>
+
+  <ul class="actions" role="navigation">
+      <li><a href="#main">&#8593; Top</a></li>
+
+
+      <li><a href="/works/14411514/chapters/33372165#workskin">Next Chapter &#8594;</a></li>
+
+
+
+
+      <li>
+        <form id="new_kudo" action="/kudos" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="DvBvn6DWowrm6+wRDFVusEjoLPl+uAt0nUtoJKMeTSIY+SLpA/va9ZIsHLTGtllpZKDBW6LcwNhG/dMI3SKbaA=="/>
+          <input value="14411514" type="hidden" name="kudo[commentable_id]" id="kudo_commentable_id"/>
+          <input value="Work" type="hidden" name="kudo[commentable_type]" id="kudo_commentable_type"/>
+          <input type="submit" name="commit" value="Kudos ♥" id="kudo_submit"/>
+</form>      </li>
+
+
+
+
+  </ul>
+
+  <div id="kudos_message"></div>
+
+  <h3 class="landmark heading"><a name="comments">Comments</a></h3>
+
+  
+
+    <div id="kudos">
+      <p class="kudos">
+          <a href="/users/soulsiphon">soulsiphon</a>, <a href="/users/Smngrfl88">Smngrfl88</a>, and <a href="/users/Rachel394">Rachel394</a>
+             as well as 
+          2 guests
+         left kudos on this work!
+      </p>
+</div>
+
+
+    <div id="add_comment_placeholder" title="top level comment">
+      <div id="add_comment">
+        <!-- expects the local variables comment, commentable, and button_name -->
+<div class="post comment" id="comment_form_for_33283698">
+  <form class="new_comment" id="comment_for_33283698" action="/chapters/33283698/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="rLb6PWmasXSx5SJzdwupTi6NPZ0+IXK4gbML4YtMDrG6v7dLyrfIi8Ui0ta96J6XAsXQP+JFuRRaBbDN9XDY+w=="/>
+    <fieldset>
+      <legend>Post Comment</legend>
+
+
+
+
+
+
+        <dl>
+          <dt class="landmark">Note:</dt>
+          <dd class="instructions comment_form">All fields are required. Your email address will not be published.</dd>
+          <dt><label for="comment_name_for_33283698">Guest name: </label></dt>
+          <dd>
+            <input id="comment_name_for_33283698" type="text" name="comment[name]"/>
+            <script>var validation_for_comment_name_for_33283698=new LiveValidation('comment_name_for_33283698',{wait:500,onlyOnBlur:false});validation_for_comment_name_for_33283698.add(Validate.Presence,{"failureMessage":"Please enter your name.","validMessage":""});</script>
+          </dd>
+          <dt><label for="comment_email_for_33283698">Guest email: </label></dt>
+          <dd>
+            <input id="comment_email_for_33283698" type="text" name="comment[email]"/>
+            <script>var validation_for_comment_email_for_33283698=new LiveValidation('comment_email_for_33283698',{wait:500,onlyOnBlur:false});validation_for_comment_email_for_33283698.add(Validate.Presence,{"failureMessage":"Please enter your email address.","validMessage":""});</script>
+          </dd>
+        </dl>
+        <p class="footnote">(Plain text with limited HTML <a class="help symbol question modal" title="Html help" aria-controls="#modal" href="/help/html-help.html"><span class="symbol question"><span>?</span></span></a>)</p>
+
+      <p>
+        <label for="comment_content_for_33283698" class="landmark">Comment</label>
+        <textarea id="comment_content_for_33283698" class="comment_form observe_textlength" title="Enter Comment" name="comment[comment_content]">
+</textarea>
+        <input type="hidden" id="controller_name_for_33283698" name="controller_name" value="chapters"/>
+      </p>
+      <p class="character_counter"><span id="comment_content_for_33283698_counter" class="value" data-maxlength="10000" aria-live="polite" aria-valuemax="10000" aria-valuenow="comment_content_for_33283698">10000</span> characters left</p>
+      <script>var validation_for_comment_content_for_33283698=new LiveValidation('comment_content_for_33283698',{wait:500,onlyOnBlur:false});validation_for_comment_content_for_33283698.add(Validate.Presence,{"failureMessage":"Brevity is the soul of wit, but we need your comment to have text in it.","validMessage":""});validation_for_comment_content_for_33283698.add(Validate.Length,{"maximum":"10000","tooLongMessage":"must be less than 10000 characters long."});</script>
+      <p class="submit actions">
+        <input type="submit" name="commit" value="Comment" id="comment_submit_for_33283698" data-disable-with="Please wait..."/>
+      </p>
+    </fieldset>
+</form></div>
+<div class="clear"></div>
+
+      </div>
+    </div>
+
+  <!-- If we have javascript, here is where the comments will be spiffily inserted -->
+  <!-- If not, and show_comments is true, here is where the comments will be rendered -->
+  <div id="comments_placeholder" style="display:none;">
+  </div>
+
+
+</div>
+<!-- END comments -->
+
+  <!-- END comment section -->
+
+
+
+          <div class="clear"><!--presentational--></div>
+        </div>
+        <!-- END main -->
+      </div>
+      <!-- BEGIN footer -->
+<div id="footer" role="contentinfo" class="region">
+	<h3 class="landmark heading">Footer</h3>
+  <ul class="navigation actions" role="navigation">
+    <li class="module group">
+      <h4 class="heading">About the Archive</h4>
+      <ul class="menu">
+        <li><a href="/site_map">Site Map</a></li>
+        <li><a href="/diversity">Diversity Statement</a></li>
+        <li><a href="/tos">Terms of Service</a></li>
+        <li><a href="/dmca">DMCA Policy</a> </li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Contact Us</h4>
+      <ul class="menu">
+        <li><a href="/abuse_reports/new">Report Abuse</a></li>
+        <li><a href="/support">Technical Support and Feedback</a></li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Development</h4>
+      <ul class="menu">
+          <li><a href="https://github.com/otwcode/otwarchive/commits/v0.9.300.1">otwarchive v0.9.300.1</a></li>
+        <li><a href="/known_issues">Known Issues</a></li>
+        <li><a href="http://www.gnu.org/licenses/gpl-2.0.html" title="View License">GPL</a> by the <a href="http://transformativeworks.org/" title="The Organization for Transformative Works">OTW</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!-- END footer -->
+
+    </div>
+    <!-- check to see if this controller/action allow tinymce before we load the gigantor js; see application_helper -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js" type="text/javascript"></script>
+<!-- if user has googleapis blocked for some reason we need a fallback -->
+<script type="text/javascript">if(typeof jQuery=='undefined'){document.write(unescape("%3Cscript src='/javascripts/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));document.write(unescape("%3Cscript src='/javascripts/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));}</script>
+
+
+<script type="text/javascript">$j=jQuery.noConflict();</script>
+<script src="/javascripts/jquery.scrollTo.min.js+jquery.livequery.min.js+rails.js+application.js+bootstrap,_bootstrap-dropdown.min.js+jquery-shuffle.js+jquery.tokeninput.min.js+jquery.trap.min.js+ao3modal.min.js+js.cookie.min.js+filters.min.js.pagespeed.jc.oz6LPTe6O7.js"></script><script>eval(mod_pagespeed_a8hDjzT3l_);</script>
+<script>eval(mod_pagespeed_1nA1vKz9z4);</script>
+<script>eval(mod_pagespeed_AKC4FLip6q);</script>
+<script>eval(mod_pagespeed_gX7XC77lvT);</script>
+<script>eval(mod_pagespeed_5zo0ZWMy4O);</script>
+<script>eval(mod_pagespeed_eCCgOhjhYQ);</script>
+<script>eval(mod_pagespeed_TU1Ln7LKSh);</script>
+<script>eval(mod_pagespeed_qTpbjsXQwh);</script>
+<script>eval(mod_pagespeed_R5FGw2ySDb);</script>
+<script>eval(mod_pagespeed_rqqFCT3xcT);</script>
+
+<script>eval(mod_pagespeed_Gf_4KFhTvB);</script>
+
+
+  <script>function isSupported(){var item="localStoragePolyfill";try{localStorage.setItem(item,item);localStorage.removeItem(item);return true;}catch(e){return false;}}function acceptTOS(){if(isSupported()){localStorage.setItem("accepted_tos","20180523");}else{Cookies.set("accepted_tos","20180523",{expires:365});}}$j(document).ready(function(){if(localStorage.getItem("accepted_tos")!=="20180523"&&Cookies.get("accepted_tos")!=="20180523"){$j("body").prepend("<div id=\"tos_prompt\" class=\"hidden\">\n  <h2 class=\"heading\">\n    <span>Archive of Our Own<\/span>\n  <\/h2>\n  <div class=\"agreement\">\n    <p class=\"summary\">\n      On Archive of Our Own (AO3), users can make profiles, create works and\n            other Content, post comments, give Kudos, create Collections and \n            Bookmarks, participate in Challenges, import works, and more. Any \n            information you publish in a comment, profile, work, or Content that you \n            post or import onto AO3 including in summaries, notes and tags, \n            will be accessible by the public (unless you limit access to a work only \n            to those with AO3 Accounts), and it will be available to \n            AO3 personnel. Be mindful when sharing personal information, \n            including  your religious or political views, health, racial background, \n            country of origin, sexual identity and/or personal relationships. To \n            learn more, check out our <a href=\"/tos\">Terms of Service<\/a> and <a href=\"/tos#privacy\">Privacy Policy<\/a>.\n    <\/p>\n\n    <p class=\"confirmation\">\n      <input type=\"checkbox\" id=\"tos_agree\" />\n      <label for=\"tos_agree\">I have read &amp; understood the new Terms of Service and Privacy Policy<\/label>\n    <\/p>\n\n      <p class=\"submit\">\n        <button name=\"button\" type=\"button\" disabled=\"disabled\" id=\"accept_tos\">I agree/consent to its terms<\/button>\n      <\/p>\n\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    var container = \$j(\"#tos_prompt\");\n    var outer = \$j(\"#outer\");\n    var button = \$j(\"#accept_tos\");\n\n    setTimeout(showTOSPrompt, 1500);\n\n    function showTOSPrompt() {\n      \$j.when(container.fadeIn(500)).done(function() {\n        outer.addClass(\"hidden\").attr(\"aria-hidden\", \"true\");\n      });\n\n      \$j(\"#tos_agree\").on(\"click\", function() {\n        button.attr(\"disabled\", !this.checked);\n        if (this.checked) {\n          button.on(\"click\", function() {\n            acceptTOS();\n            outer.removeClass(\"hidden\").removeAttr(\"aria-hidden\");\n            \$j.when(container.fadeOut(500)).done(function() {\n              container.remove();\n            });\n          });\n        };\n      }).change();\n    };\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+  <script>$j(document).ready(function(){var permitted_hosts=["archiveofourown.org","download.archiveofourown.org","insecure.archiveofourown.org","www.archiveofourown.org","insecure-test.archiveofourown.org","test.archiveofourown.org","testdownload.archiveofourown.org"];var current_host=window.location.hostname;if(!permitted_hosts.includes(current_host)&&Cookies.get("proxy_notice")!=="0"&&window.location.protocol!=="file:"){$j("#skiplinks").after("<div id=\"proxy-notice\">\n  <div class=\"userstuff\">\n    <p class=\"important\">Important message:<\/p>\n    <ol>\n      <li>You are using a proxy site that is not part of the Archive of Our Own.<\/li>\n      <li>The entity that set up the proxy site can see what you submit, including your IP address. If you log in through the proxy site, it can see your password.<\/li>\n    <\/ol>\n    <p class=\"important\">重要提示：<\/p>\n    <ol>\n      <li>您使用的是第三方开发的反向代理网站，此网站并非Archive of Our Own - AO3（AO3作品库）原站。<\/li>\n      <li>代理网站的开发者能够获取您上传至该站点的全部内容，包括您的ip地址。如您通过代理登录AO3，对方将获得您的密码。<\/li>\n    <\/ol>\n    <p class=\"submit\"><button class=\"action\" type=\"button\" id=\"proxy-notice-dismiss\">Dismiss Notice<\/button><\/p>\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    \$j(\"#proxy-notice-dismiss\").on(\"click\", function() {\n      Cookies.set(\"proxy_notice\", \"0\");\n      \$j(\"#proxy-notice\").slideUp();\n    });\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+    <script>$j(document).on("loadedCSRF",function(){$j.post("/works/14411514/hit_count.json")})</script>
+
+
+  </body>
+</html>
