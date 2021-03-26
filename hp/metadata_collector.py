@@ -70,8 +70,9 @@ def main():
                                       quotechar='"', quoting=csv.QUOTE_MINIMAL)
         catalogue_writer.writerow(CATEGORIES)
 
-        all_known_files = [name for name in os.listdir(DOWNLOAD_PATH)
-                           if name.endswith(".txt") and name.split(".")[0].isdigit()]
+        all_known_files = sorted([name for name in os.listdir(DOWNLOAD_PATH)
+                                  if name.endswith(".txt") and name.split(".")[0].isdigit()],
+                                 key=lambda r: int(r.split(".")[0]))
         for signpost_no, filename in enumerate(all_known_files):
             path = os.path.join(DOWNLOAD_PATH, filename)
             with codecs.open(path, encoding="utf8") as f:
