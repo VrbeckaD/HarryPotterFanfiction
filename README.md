@@ -45,4 +45,13 @@ To replicate the experiments from my diploma thesis:
     Not all url lists defined in `downloaded_url_lists` are always successful, in our case,
     1821 of url lists weren't successfully processed and we obtained only 63600 records.
     
-    
+## Experiments
+
+### Lovers' matrix
+
+To generate lovers' matrix, open jupyter notebook https://github.com/VrbeckaD/HarryPotterFanfiction/blob/polishing/hp/notebooks/relation_graph.ipynb:
+
+```bash
+jupyter notebook hp/notebook/relation_graph.ipynb
+```
+
