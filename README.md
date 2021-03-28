@@ -5,6 +5,14 @@
 This software was created to support the diploma thesis of Dominika Vrbecká.
 Feel free to contact me at 451002@mail.muni.cz.
 
+## Used texts
+
+The texts used in this project were crawled from `https://archiveofourown.org` (a fan-created,
+fan-run, nonprofit, noncommercial archive for transformative fanworks, 
+like fanfiction, fanart, fan videos, and podfic).
+Data can be used only under Fair Usage Policy, e.g. for academic purposes.
+Data cannot be sold or used in commercial projects without approval from all authors of texts.
+
 ## Installation
 
 To replicate the experiments from my diploma thesis:
