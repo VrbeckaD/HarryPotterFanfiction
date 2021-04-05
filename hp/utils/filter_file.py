@@ -1,4 +1,4 @@
-from hp import FULLDOWNLOAD_PATH, CSV_CATALOGUE_PATH
+from hp import FULLDOWNLOAD_PATH, PARTIAL_CATALOGUE_PATH
 import os
 from io import StringIO
 from html.parser import HTMLParser
@@ -30,7 +30,7 @@ def strip_tags(html):
 
 
 def iter_files():
-    with codecs.open(CSV_CATALOGUE_PATH, encoding="cp1250") as catalogue_file:
+    with codecs.open(PARTIAL_CATALOGUE_PATH, encoding="cp1250") as catalogue_file:
         lines = catalogue_file.readlines()
         records = [line.strip("\n").split(";") for line in lines]
         lookup_dictionary = dict((record[0], record[1:]) for record in records)

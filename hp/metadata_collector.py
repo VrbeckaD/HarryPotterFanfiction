@@ -8,7 +8,7 @@ from typing import Tuple
 
 import requests
 
-from hp import DOWNLOAD_PATH, FULLDOWNLOAD_PATH
+from hp import DOWNLOAD_PATH, FULLDOWNLOAD_PATH, FULL_CATALOGUE_PATH
 
 if not os.path.isdir(FULLDOWNLOAD_PATH):
     os.makedirs(FULLDOWNLOAD_PATH)
@@ -69,7 +69,7 @@ def get_text_from_web(text_path: str, text_block_with_id: str) -> Tuple[str, str
 
 def main():
     """Vytvoří katalog se všemi metatagy pro všechny dokumenty zmíněné v rozcestnících ve složce DOWNLOAD_PATH."""
-    path = os.path.abspath(os.path.join(__file__, '..', 'HP_catalogue.csv'))
+    path = FULL_CATALOGUE_PATH
     with codecs.open(path, 'w', encoding="utf8") as csvfile:
         catalogue_writer = csv.writer(csvfile, delimiter=',',
                                       quotechar='"', quoting=csv.QUOTE_MINIMAL)

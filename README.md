@@ -49,9 +49,122 @@ To replicate the experiments from my diploma thesis:
 
 ### Lovers' matrix
 
-To generate lovers' matrix, open jupyter notebook https://github.com/VrbeckaD/HarryPotterFanfiction/blob/polishing/hp/notebooks/relation_graph.ipynb:
+To generate lovers' matrix, call script with minimal frequency of character to be used (default 50):
 
 ```bash
-jupyter notebook hp/notebook/relation_graph.ipynb
+python -m  hp.relation_matrix_generator -m 50
+python -m  hp.relation_matrix_generator -m 50 -f het
+python -m  hp.relation_matrix_generator -m 50 -f slash
+python -m  hp.relation_matrix_generator -m 50 -f explicit
+
 ```
 
+Example for `python -m  hp.relation_matrix_generator -m 50`
+```bash
+Nechme si jen jména s frekvencí 50 a větší, zbyde nám 96 jmen.
+Nyní provedeme kontrolu a zjistíme, jestli mají postavy "sebevztahy". U toho vytvoříme matici vztahů.
+    * Sebevztah Original Character 30
+    * Sebevztah Original Female Character 11
+    * Sebevztah Original Male Character 11
+    * Sebevztah Hermione Granger 2
+    * Sebevztah Albus Dumbledore 2
+    * Sebevztah Gellert Grindelwald 2
+    * Sebevztah Harry Potter 2
+    * Sebevztah Lily Evans Potter 1
+    * Sebevztah Tom Riddle 1
+    * Sebevztah Blaise Zabini 1
+    * Sebevztah Pansy Parkinson 1
+V matici získáme 1064 vztahů.
+Pro ilustraci vztahy Harryho Pottera:
+    * Severus Snape
+    * Tom Riddle
+    * Ginny Weasley
+    * Hermione Granger
+    * Voldemort
+    * Ron Weasley
+    * Sirius Black
+    * Luna Lovegood
+    * Cedric Diggory
+    * Pansy Parkinson
+    * Blaise Zabini
+    * Original Female Character
+    * Neville Longbottom
+    * Daphne Greengrass
+    * Lucius Malfoy
+    * Charlie Weasley
+    * Original Male Character
+    * Theodore Nott
+    * Albus Dumbledore
+    * Remus Lupin
+    * Tony Stark
+    * Teddy Lupin
+    * George Weasley
+    * Original Character
+    * Fleur Delacour
+    * Loki 
+    * Dudley Dursley
+    * Other
+    * Fenrir Greyback
+    * James Potter
+    * Nymphadora Tonks
+    * Regulus Black
+    * Reader
+    * Lily Evans Potter
+    * Cho Chang
+    * Scorpius Malfoy
+    * Petunia Evans Dursley
+    * Fred Weasley
+    * Steve Rogers
+    * Marcus Flint
+    * James Bucky Barnes
+    * Bill Weasley
+    * Oliver Wood
+    * Minerva McGonagall
+    * Lily Luna Potter
+    * Narcissa Black Malfoy
+    * Rubeus Hagrid
+    * Viktor Krum
+    * Vernon Dursley
+    * Salazar Slytherin
+    * Albus Severus Potter
+    * Percy Weasley
+    * Dean Winchester
+    * Bellatrix Black Lestrange
+    * Original Percival Graves
+    * Bartemius Crouch Jr.
+    * Arthur Weasley
+    * Molly Weasley
+    * Parvati Patil
+    * Katie Bell
+    * Astoria Greengrass
+    * Cormac McLaggen
+    * Newt Scamander
+    * Kingsley Shacklebolt
+    * Dean Thomas
+    * Rodolphus Lestrange
+    * Rose Weasley
+    * Lavender Brown
+    * Gellert Grindelwald
+    * Millicent Bulstrode
+    * Sherlock Holmes
+    * Seamus Finnigan
+    * Andromeda Black Tonks
+    * James Sirius Potter
+    * Victoire Weasley
+    * Padma Patil
+    * Crowley 
+    * Theseus Scamander
+    * John Watson
+    * Abraxas Malfoy
+    * Newt Scamander
+    * Nagini
+    * Hannah Abbott
+    * Credence Barebone
+    * Angelina Johnson
+
+
+```
+
+Matrix will be stored into `lovers_matrix.csv` (`lovers_matrix_het.csv`, `lovers_matrix_slash.csv`,
+`lovers_matrix_explicit.csv`) and displayed in `relations.html` (`relations_het.html`, 
+`relations_slash.html`, `relations_explicit.html`).
