@@ -168,3 +168,13 @@ Pro ilustraci vztahy Harryho Pottera:
 Matrix will be stored into `lovers_matrix.csv` (`lovers_matrix_het.csv`, `lovers_matrix_slash.csv`,
 `lovers_matrix_explicit.csv`) and displayed in `relations.html` (`relations_het.html`, 
 `relations_slash.html`, `relations_explicit.html`).
+
+
+Visualize data using jupyter notebooks:
+
+```bash
+jupyter notebook hp/notebooks/visualization_of_relations.ipynb
+jupyter notebook hp/notebooks/visualization_of_relations-EXPLICIT.ipynb
+jupyter notebook hp/notebooks/visualization_of_relations-HET.ipynb
+jupyter notebook hp/notebooks/visualization_of_relations-SLASH.ipynb
+```
