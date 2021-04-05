@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"f2edcff25e","applicationID":"190034","transactionName":"dgwMEkpfWVsHERpRXlQTFgNKQxpECgxC","queueTime":0,"applicationTime":90,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VQcCWV9RGwIJVFFRAw==",licenseKey:"f2edcff25e",applicationID:"190034"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script>
+    <meta name="keywords" content="fanfiction, transformative works, otw, fair use, archive"/>
+    <meta name="language" content="en-US"/>
+    <meta name="subject" content="fandom"/>
+    <meta name="description" content="An Archive of Our Own, a project of the
+    Organization for Transformative Works"/>
+    <meta name="distribution" content="GLOBAL"/>
+    <meta name="classification" content="transformative works"/>
+    <meta name="author" content="Organization for Transformative Works"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+        Becoming Better - Chapter 1 - Turtle_Steed - Harry Potter - J. K. Rowling [Archive of Our Own]
+    </title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/A.1_site_screen_.css.pagespeed.cf.JiR2hT5NxR.css"/>
+<style media="only screen and (max-width: 62em), handheld">#dashboard{clear:both;float:none;margin:1% 3.5%;max-width:100%;padding:0;width:auto}#dashboard,#dashboard.own{border-bottom:10px solid #900;border-top:10px solid #900;padding:.5em 0;border-radius:.25em}#dashboard ul{border:none;display:inline;padding:0;text-align:left}#dashboard li{display:inline}#dashboard a,#dashboard span{display:inline-block;margin:.25em 0}#dashboard .secondary{background:#eee;padding:.375em 0 .625em;box-shadow:inset 2px 2px 5px #bbb}#dashboard .secondary a{margin:.125em 0}#dashboard .landmark{clear:none;float:left}#main,#main.dashboard{float:none;margin:auto;padding-left:3.5%;padding-right:3.5%;width:auto}.logged-in .splash>.module{width:48.5%}.logged-in .splash > div:nth-of-type(odd) {margin-left:0;margin-right:1.5%}.logged-in .splash > div:nth-of-type(even) {margin-left:1.5%;margin-right:0}form.filters{width:auto;min-width:23%;max-width:24%}.filters fieldset{margin-right:0}form.filters dl{margin-left:.25em;margin-right:.25em}#workskin{margin:auto 1.5%}</style>
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 42em), handheld" href="/stylesheets/skins/skin_873_archive_2_0/A.5_site_narrow.handheld_.css.pagespeed.cf.8L0d7x-op8.css"/>
+<link rel="stylesheet" type="text/css" media="speech" href="/stylesheets/skins/skin_873_archive_2_0/A.6_site_speech_.css.pagespeed.cf.Ybb8bLK5Um.css"/>
+<link rel="stylesheet" type="text/css" media="print" href="/stylesheets/skins/skin_873_archive_2_0/A.7_site_print_.css.pagespeed.cf.ry3YZtf8Cz.css"/>
+<!--[if IE 8]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/8_site_screen_IE8_or_lower.css" /><![endif]-->
+<!--[if IE 5]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/9_site_screen_IE5.css" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/10_site_screen_IE6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/11_site_screen_IE7.css" /><![endif]-->
+
+
+
+<!--sandbox for developers	-->
+<style media="screen">#new_work_search fieldset:first-of-type .submit{padding-top:0}.edit_external_author ul ul{margin-left:2.75em}a.resp-sharing-button__link,.resp-sharing-button__icon{display:inline-block}a.resp-sharing-button__link,a.resp-sharing-button__link:hover{text-decoration:none;color:#fff;border:none}.resp-sharing-button{border-radius:5px;transition:25ms ease-out;padding:.5em .75em}.resp-sharing-button__icon svg{width:1em;height:1em;margin-right:.4em;vertical-align:top}.resp-sharing-button__icon{stroke:#fff;fill:none}.resp-sharing-button__icon--solid{fill:#fff;stroke:none}.resp-sharing-button--twitter{background-color:#55acee}.resp-sharing-button--twitter:hover,a:focus .resp-sharing-button--twitter{background-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c}.resp-sharing-button--tumblr:hover,a:focus .resp-sharing-button--tumblr{background-color:#222d3c}.resp-sharing-button--twitter{background-color:#55acee;border-color:#55acee}.resp-sharing-button--twitter:hover,.resp-sharing-button--twitter:active{background-color:#2795e9;border-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c;border-color:#35465c}.resp-sharing-button--tumblr:hover,.resp-sharing-button--tumblr:active{background-color:#222d3c;border-color:#222d3c}</style>
+<script src="/javascripts/livevalidation_standalone.js.pagespeed.jm.oB__Z5piTe.js"></script>
+
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="I2DivY2VsIUfebhqIXUplnS01K6TA68RRZ94+G/oHEkqyNSeSD5IcWyVERRLsv2Vp/y8cw4IrM47q72JwfIC5g=="/>
+
+    
+  </head>
+
+  <body class="logged-out">
+    <div id="outer" class="wrapper">
+      <ul id="skiplinks"><li><a href="#main">Main Content</a></li></ul>
+      <!-- BEGIN BETA CAVEATS! -->
+<noscript>
+  <p id="javascript-warning">
+    While we&#39;ve done our best to make the core functionality of this site accessible without javascript, it will work better with it enabled. Please consider turning it on!
+  </p>
+</noscript>
+<!-- END BETA CAVEATS! --> 
+
+<!-- BEGIN header -->
+
+<div id="header" class="region">
+
+  <h1 class="heading">
+    <a href="/"><span>Archive of Our Own</span><sup> beta</sup><img alt="Archive of Our Own" class="logo" src="/images/ao3_logos/xlogo_42.png.pagespeed.ic.ax-awMa4j4.png"/></a> 
+  </h1>
+
+    <div id="login" class="dropdown">
+      <p class="user actions" role="menu">
+        <a id="login-dropdown" href="/users/login">Log In</a>
+      </p>
+      <div id="small_login" class="simple login">
+	<form class="new_user" id="new_user_session_small" action="/users/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="Tr1Y7Dkez72hGIo5uOhmGn1uNLkScnBUaTkFkZ4R48hHFW7P/LU3SdL0I0fSL7IZriZcZI95c4sXDcDgMAv9Zw=="/>
+	<dl>
+    <dt>
+      <label for="user_session_login_small">User name or email:</label></dt>
+    <dd><input id="user_session_login_small" type="text" name="user[login]"/></dd>
+    <dt><label for="user_session_password_small">Password:</label></dt>
+    <dd><input id="user_session_password_small" type="password" name="user[password]"/></dd>
+  </dl>
+  <p class="submit actions">
+    <label for="user_remember_me_small" class="action"><input type="checkbox" name="user[remember_me]" id="user_remember_me_small" value="1"/>Remember Me</label>
+    <input type="submit" name="commit" value="Log In"/>
+  </p>
+</form>
+<ul class="footnote actions">
+  <li><a href="/users/password/new">Forgot password?</a></li>
+    <li>
+      <a href="/invite_requests">Get an Invitation</a>
+    </li>
+</ul>
+
+</div>
+
+    </div>
+
+  <h3 class="landmark heading">Site Navigation</h3>
+  <ul class="primary navigation actions" role="navigation">
+    <li class="dropdown">
+      <a href="/menu/fandoms">Fandoms</a>
+      <ul class="menu" role="menu">
+  <li><a href="/media">All Fandoms</a></li>
+        <li id="medium_5"><a href="/media/Anime%20*a*%20Manga/fandoms">Anime &amp; Manga</a></li>
+        <li id="medium_3"><a href="/media/Books%20*a*%20Literature/fandoms">Books &amp; Literature</a></li>
+        <li id="medium_4"><a href="/media/Cartoons%20*a*%20Comics%20*a*%20Graphic%20Novels/fandoms">Cartoons &amp; Comics &amp; Graphic Novels</a></li>
+        <li id="medium_7"><a href="/media/Celebrities%20*a*%20Real%20People/fandoms">Celebrities &amp; Real People</a></li>
+        <li id="medium_2"><a href="/media/Movies/fandoms">Movies</a></li>
+        <li id="medium_6"><a href="/media/Music%20*a*%20Bands/fandoms">Music &amp; Bands</a></li>
+        <li id="medium_8"><a href="/media/Other%20Media/fandoms">Other Media</a></li>
+        <li id="medium_30198"><a href="/media/Theater/fandoms">Theater</a></li>
+        <li id="medium_1"><a href="/media/TV%20Shows/fandoms">TV Shows</a></li>
+        <li id="medium_476"><a href="/media/Video%20Games/fandoms">Video Games</a></li>
+        <li id="medium_9971"><a href="/media/Uncategorized%20Fandoms/fandoms">Uncategorized Fandoms</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/browse">Browse</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works">Works</a></li>
+  <li><a href="/bookmarks">Bookmarks</a></li>
+  <li><a href="/tags">Tags</a></li>
+  <li><a href="/collections">Collections</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/search">Search</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works/search">Works</a></li>
+  <li><a href="/bookmarks/search">Bookmarks</a></li>
+  <li><a href="/tags/search">Tags</a></li>
+  <li><a href="/people/search">People</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/about">About</a>
+      <ul class="menu" role="menu">
+  <li><a href="/about">About Us</a></li>
+  <li><a href="/admin_posts">News</a></li>
+  <li><a href="/faq">FAQ</a></li>
+  <li><a href="/wrangling_guidelines">Wrangling Guidelines</a></li>
+  <li><a href="/donate">Donate or Volunteer</a></li>
+</ul>
+
+    </li>
+	  <li class="search"><form class="search" id="search" action="/works/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+  <fieldset>
+    <legend>Search Works</legend>
+    <p>
+      <label class="landmark" for="site_search">Work Search:</label>
+      <input class="text" id="site_search" aria-describedby="site_search_tooltip" type="text" name="work_search[query]"/>
+      <span class="tip" role="tooltip" id="site_search_tooltip">tip: &quot;sherlock (tv)&quot; m/m NOT &quot;sherlock holmes/john watson&quot;</span>
+      <span class="submit actions"><input type="submit" value="Search" class="button"/></span>
+    </p>
+  </fieldset>
+</form></li>
+  </ul>
+
+
+
+  <div class="clear"></div>
+
+</div>
+
+
+
+<!-- END header -->
+
+      <div id="inner" class="wrapper">
+        <!-- BEGIN sidebar -->
+        <!-- END sidebar -->
+
+        <!-- BEGIN main -->
+        <div id="main" class="chapters-show region" role="main">
+          
+          <div class="flash"></div>
+          <!--page description, messages-->
+<!--/descriptions-->
+
+<!--subnav-->
+<!--/subnav-->
+
+  <!-- BEGIN work -->
+  <div class="work"><p class="landmark"><a name="top">&nbsp;</a></p>
+      <!-- BEGIN navigation -->
+<h3 class="landmark heading">Actions</h3>
+<ul class="work navigation actions" role="menu">
+
+
+
+    <li class="chapter entire"><a href="/works/23258557?view_full_work=true">Entire Work</a></li>
+
+
+      <li class="chapter next"><a href="/works/23258557/chapters/57525547#workskin">Next Chapter &#8594;</a></li>
+
+    <li class="chapter" aria-haspopup="true">
+      <noscript>
+        <a href="/works/23258557/navigate">Chapter Index</a>
+      </noscript>
+      <a class="hidden" href="#">Chapter Index</a>
+      <ul id="chapter_index" class="expandable secondary hidden">
+        <li>
+          <form action="/works/23258557/chapters/55695964" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+            <p>
+              <select name="selected_id" id="selected_id"><option selected="selected" value="55695964">1. Chelsea Alley</option>
+<option value="57525547">2. Hermione Granger: A Work In Progress</option>
+<option value="59583475">3. Azrael and Charmeine</option></select>
+              <span class="submit actions"><input type="submit" name="commit" value="Go"/></span>
+            </p>
+</form>        </li>
+        <li><a href="/works/23258557/navigate">Full-page index</a></li>
+      </ul>
+    </li>
+
+
+
+  <li class="comments" id="show_comments_link_top">
+      <a data-remote="true" href="/comments/show_comments?chapter_id=55695964">Comments </a>
+  </li>
+
+
+
+    <li class="share hidden">
+      <a class=" modal" title="Share Work" aria-controls="#modal" href="/works/23258557/share">Share</a>
+    </li>
+
+
+    <li class="download" aria-haspopup="true">
+      <a href="#">Download</a>
+      <ul class="expandable secondary">
+          <li><a href="/downloads/23258557/Becoming%20Better.azw3?updated_at=1591857111">AZW3</a></li>
+          <li><a href="/downloads/23258557/Becoming%20Better.epub?updated_at=1591857111">EPUB</a></li>
+          <li><a href="/downloads/23258557/Becoming%20Better.mobi?updated_at=1591857111">MOBI</a></li>
+          <li><a href="/downloads/23258557/Becoming%20Better.pdf?updated_at=1591857111">PDF</a></li>
+          <li><a href="/downloads/23258557/Becoming%20Better.html?updated_at=1591857111">HTML</a></li>
+      </ul>
+    </li>
+</ul>
+<!-- END navigation -->
+
+
+<h3 class="landmark heading">Work Header</h3>
+
+<div class="wrapper">
+
+  <dl class="work meta group" role="complementary">
+          <dt class="rating tags">
+
+              Rating:
+          </dt>
+
+          <dd class="rating tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Mature/works">Mature</a></li>
+            </ul>
+          </dd>
+          <dt class="warning tags">
+
+              <a href="/tos_faq#tags">Archive Warning</a>:
+          </dt>
+
+          <dd class="warning tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Choose%20Not%20To%20Use%20Archive%20Warnings/works">Creator Chose Not To Use Archive Warnings</a></li>
+            </ul>
+          </dd>
+          <dt class="category tags">
+
+              Category:
+          </dt>
+
+          <dd class="category tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/F*s*M/works">F/M</a></li>
+            </ul>
+          </dd>
+          <dt class="fandom tags">
+
+              Fandom:
+          </dt>
+
+          <dd class="fandom tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a></li>
+            </ul>
+          </dd>
+          <dt class="relationship tags">
+
+              Relationships:
+          </dt>
+
+          <dd class="relationship tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Hermione%20Granger*s*Draco%20Malfoy/works">Hermione Granger/Draco Malfoy</a></li><li><a class="tag" href="/tags/Harry%20Potter*s*Ginny%20Weasley/works">Harry Potter/Ginny Weasley</a></li><li><a class="tag" href="/tags/Luna%20Lovegood*s*Ron%20Weasley/works">Luna Lovegood/Ron Weasley</a></li>
+            </ul>
+          </dd>
+          <dt class="character tags">
+
+              Characters:
+          </dt>
+
+          <dd class="character tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Theodore%20Nott/works">Theodore Nott</a></li><li><a class="tag" href="/tags/Blaise%20Zabini/works">Blaise Zabini</a></li><li><a class="tag" href="/tags/Ginny%20Weasley/works">Ginny Weasley</a></li><li><a class="tag" href="/tags/Astoria%20Greengrass/works">Astoria Greengrass</a></li>
+            </ul>
+          </dd>
+          <dt class="freeform tags">
+
+              Additional Tags:
+          </dt>
+
+          <dd class="freeform tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Hogwarts%20Eighth%20Year/works">Hogwarts Eighth Year</a></li><li><a class="tag" href="/tags/Head%20Boy%20Draco%20Malfoy/works">Head Boy Draco Malfoy</a></li><li><a class="tag" href="/tags/Head%20Girl%20Hermione%20Granger/works">Head Girl Hermione Granger</a></li><li><a class="tag" href="/tags/Harry%20Potter%20Epilogue%20What%20Epilogue%20%7C%20EWE/works">Harry Potter Epilogue What Epilogue | EWE</a></li>
+            </ul>
+          </dd>
+
+      <dt class="language">
+        Language:
+      </dt>
+      <dd class="language">
+        English
+      </dd>
+
+
+
+    <dt class="stats">Stats:</dt>
+    <dd class="stats">
+<!-- end of cache -->
+
+      <dl class="stats"><dt class="published">Published:</dt><dd class="published">2020-03-22</dd><dt class="status">Updated:</dt><dd class="status">2020-06-11</dd><dt class="words">Words:</dt><dd class="words">14259</dd><dt class="chapters">Chapters:</dt><dd class="chapters">3/?</dd><dt class="comments">Comments:</dt><dd class="comments">4</dd><dt class="kudos">Kudos:</dt><dd class="kudos">26</dd><dt class="bookmarks">Bookmarks:</dt><dd class="bookmarks"><a href="/works/23258557/bookmarks">9</a></dd><dt class="hits">Hits:</dt><dd class="hits">545</dd></dl>
+      </dd>
+  </dl>
+</div>
+
+
+
+<!-- BEGIN section where work skin applies -->
+<div id="workskin">
+  <div class="preface group">
+    <h2 class="title heading">
+      Becoming Better
+    </h2>
+    <h3 class="byline heading">
+      <a rel="author" href="/users/Turtle_Steed/pseuds/Turtle_Steed">Turtle_Steed</a>
+    </h3>
+
+
+        <div class="summary module" role="complementary">
+          <h3 class="heading">Summary:</h3>
+            <blockquote class="userstuff">
+              <p>Draco and Hermione return to school as Head Boy and Head Girl - and discover friendship and perhaps something more along the way of becoming better.</p>
+            </blockquote>
+        </div>
+
+        <div class="notes module" role="complementary">
+  <h3 class="heading">Notes:</h3>
+
+
+
+
+
+    <blockquote class="userstuff">
+      <p>Hi!  I suspect this is the beginning of what will become a moderate length story.  Please enjoy!</p>
+    </blockquote>
+
+    <p class="jump">(See the end of the work for <a href="/chapters/59583475#work_endnotes">more notes</a>.)</p>
+</div>
+
+
+  </div>
+
+
+
+    <div id="chapters">
+      <!-- This partial requires local variable 'chapter' -->
+<div class="chapter" id="chapter-1">
+  <!-- chapter management -->
+
+
+  <div class="chapter preface group" role="complementary">
+    <h3 class="title">
+      <a href="/works/23258557/chapters/55695964">Chapter 1</a>: Chelsea Alley
+    </h3>
+
+    <!-- only display byline if different from the main byline -->
+
+
+  </div>
+
+  <!--main content-->
+  <div class="userstuff module" role="article">
+    <h3 class="landmark heading" id="work">Chapter Text</h3>
+    <p> </p>
+<p>War has a way of changing things.  Changing people. </p>
+<p>Changing the very fabric of society.  Even when war has gasped its last breath, and released the world from its clutches, the scar lingers for a time – sometimes forever, if one was unlucky enough.</p>
+<p>Immediately after a war, between the celebrating, the cheering, and the reunions the pain trickles on.  It can be felt in the bite of the wind, seen in the gleam of the silver nails that once pinned flyers along the streets, scented in even the quiet places of the world – the libraries, churches, classrooms.  What once smelled of parchment, ink, dust, opportunity, now smells different – metallic, almost electric. The scent of violent spells collected in small spaces.  The scent of blood soaking into the wood of the floor.  The faint musk of smoke in the air, a remnant of a home that was once full of life and love. </p>
+<p>Hermione swore, it was if every cell, every molecule on this planet had changed in what they were calling the ‘Second Wizarding War.’  They had named it, as if it was part of the past.  Something that could be forgotten, placed into the record books as if it was something that happened to other people. </p>
+<p>She thought the bench underneath her, on a deserted street by the name of Charing Cross Road, might be a completely different bench – a different grain of wood, a metal re-purposed from elsewhere.  She didn’t remember the coppery rust on the metal railings, or the slight give in the planks that formed to make a seat.  Maybe the dark magic that had leaked into the earth had aged it prematurely – or maybe she was changed.  Somehow seeing the world more… realistic.  As if the rose-tinted glasses that she had viewed the wizarding world with when she approached this street as a girl had lifted and revealed the rot and reality of the world. </p>
+<p>It was three months after the 'Battle of Hogwarts' – another name, another battle that didn’t happen to other people.  Like the lives that were lost were an acceptable price to pay.  Like the destruction of Europe’s greatest wizarding school was an expected loss.  It was abstract, except for those who were there.</p>
+<p>The world still hadn’t recovered.  The muggle newspapers were confused – accusatory.  Blaming a terrorist group from the Middle East for the mysterious disappearances of innocents throughout Europe.  Blaming a bomb, a gunman, an accident for the death of thousands.  People were still scared, muggle and magical a-like.  The streets remained barren, especially at this back street on the outer ring of London, the traffic of wizarding folk heading into the Leaky Cauldron from the nearby apparition point a thin trickle. </p>
+<p>Voldemort’s Death Eaters were still being rounded up – though many had surrendered directly after the battle and in the coming weeks.  The muggle newspapers were flabbergasted at the sudden return of monotony.  Afraid it was the build up for something more.  Had the terrorist group given up?  Or are they just laying in wait? </p>
+<p>Hermione had been relieved at first.  The end of the war had felt like breathing for the first time in a long time – like she had been holding her breath underwater.  Seeing Harry happy, truly happy, for the first time in a long time was refreshing.  Having Ron in the way that she had always wanted him. It had felt like a reward for their suffering. </p>
+<p>But days passed.  And slowly, so slowly that she almost didn’t notice it, she began to feel as though she was slipping into the water again – with her head above the surface this time.  It trickled by, like she had dipped her toes, but then she was waist deep, and then it was up to her chest, and then her neck and the waves constantly pushed and pulled her with words like ‘rebuilding’ and ‘hero’ and ‘Golden Girl.’ </p>
+<p>She felt like she was choking on words like ‘fairytale’ and ‘love’ and ‘wedding.’  Not that Ronald understood that these things were strangling her.  He felt like it was what they deserved, what they had been waiting on.  But she couldn’t <em>breathe. </em></p>
+<p>So, she had taken two weeks when the world was drowning her, heading to Australia in search of her parents.  Her parents, of course, who had no memory of her ever existing.  Not that it was due to any action other than her own. </p>
+<p>But, when she found them in Australia, the cool water that both drowned her and soothed her, suddenly became boiling.  She found them, or a record of them really.  An ad for their dental practice in the paper for a small town outside of Melbourne. </p>
+<p>And then, the obituary for her father.  Michael Rodney Granger, age 58, dead from an automobile accident.  Much loved by his beautiful wife of 25 years, and father of a set of Irish setters. </p>
+<p>There was no official obituary for her mother.  Just an article concerning a fire at a private residence two weeks after her father’s death.  A single casualty died in the fire, as well as a pair of family dogs.  There was a touching blurb in a paper in which employees at the practice they had worked talked about how lovely the Grangers were.</p>
+<p>Her father had died just two weeks before Voldemort’s defeat.  Her mother died the day after the battle of Hogwarts. </p>
+<p>Their deaths were labeled as accidents, but Hermione had stood in the ruins of what had been their home.  She had scented the magic in the breeze that blew over the ruins.  The very fabric of the earth screamed against the abomination against life. </p>
+<p>They had been killed by either a stray set of Death Eaters – at least two if her calculations were correct. </p>
+<p>And so, the water that strangled her boiled her alive, her soul changed, completely and utterly. </p>
+<p>She supposed, maybe the world was not all that different.  Perhaps she was the one who had been changed by the war. </p>
+<p>Who knew? </p>
+<p>All she knew now is that she had to escape that infernal court room beneath the surface of the city.  The Golden Trio, and more than a few witnesses, were testifying against Death Eaters- some that she recognized and some she did not.  But after two days, and six long morning hours of listening to the pleas of the people who had murdered her friends, hated her for her birth, and had orphaned her, she thought she thought her head would explode.  Or that she would accidentally blow up a quarter of the Ministry’s court rooms. </p>
+<p>Regardless, when she had requested a break, Harry had taken one look at her face and echoed her request.  Ron had been snoozing through the morning, between glaring at the random Death Eater on the stand, and had just blinked sleepily at her as she ran from the room. </p>
+<p>She had felt like the pressure of the earth above her was literally pushing her into the ground as she sprinted towards the apparition point in the lobby of the Ministry.  The personnel walking the hallways and gathering in the lobbies to deliver paper, attend meeting and the like, stared as she ran past.  She must have been a sight, Britain’s Golden Girl, long, brown, curly hair blowing in the wind behind her.  Panic in her eyes.  She had barely made it to the street outside of the Leaky Cauldron before the embers of her panic turned into flames. </p>
+<p>Hermione glanced at her watch, pulling back the sleeve on her left arm only slightly.  Never farther up.  She swore, even now, she could hear the echoes of that bitch's screaming in her ear as she carved into her flesh every time she looked at that cursed scar.  <em>Mudblood. </em></p>
+<p>Good.  She still had ten minutes before she had to return. </p>
+<p>She only wondered vaguely if Ron had tried to follow her.  To be honest, she wasn’t sure she cared anymore.  Something ached in her chest, as if something that had once been there was missing. </p>
+<p>She sighed, pulling her sleeves back down and shoving her cool fingers under her arms.  She had left her coat in her haste to leave, and her long-sleeved dress was thin enough that she was chilling in the London air. Her fingers brushed over her wand, and she closed her eyes and tried to remember what this street had looked like she was eleven. </p>
+<p>She had been so excited to be a witch. </p>
+<p>Hermione supposed she still was- but she wondered why exactly it had to have been this way. </p>
+<p>The scent of a nearby bakery wafted past her – the scent of cinnamon and cream in the air.  Her stomach grumbled feebly, and she regretted forgetting her pocketbook in her rush to leave the courtroom.  It was buried under her coat on the seat next to where she had been settled.  She could head to Gringott’s for some cash, or <em>Accio </em>her purse to her, but by the time it arrived it would be time to leave. </p>
+<p>The bench protested as someone sat down next to her.  Far enough away that she didn’t feel the brush of the breeze of the movement, but she stiffened none the less.  Whoever it was smelled lovely, fresh.  Cologne, like grass and parchment, a hint of lemon.  Great.  A man.  She hoped he would leave her alone. </p>
+<p>She was somewhat of a celebrity these days, and she swore if one stranger asked her how she managed to be the brains of Britain’s most famous wizarding trio ‘you know, considering,’ she may hex them into the next century. </p>
+<p>She didn’t bother to open her eyes, willing the stranger away.  She heard the opening of a wrapper, and suddenly the delectable cinnamon scent was much stronger.  She frowned as her stomach growled at her again. </p>
+<p>
+  <em> Breath in.  Breath out.  Everything will be okay.  Get up and try again another day.</em>
+</p>
+<p>Something her mother used to hum to her quietly as a girl, when she was crying over something or another. </p>
+<p>She had always believed it, growing up, but now she wondered.  There wasn’t always a rainbow after the rain, was there?</p>
+<p>The wrapper crinkled next to her, and she heard the sliding of something down the bench, towards her. </p>
+<p>Reluctantly, she opened her eyes to examine the nearby stranger. </p>
+<p>She was nearly startled out of her seat by piercing grey eyes.  They were sunken into a pale face, one that had once been pointy but with a smattering of stubble over the jaw that softened the edges.  Painfully handsome, even with the bruises under his eyes that showed the tell-tale signs of little sleep.  The slight crinkle on either side of his eyes, and a wrinkle on his forehead that revealed unease even if the face was blank as it examined her. </p>
+<p>Draco Malfoy was sitting on the bench with her, scooted as far away from her as the bench allowed, and a pale hand was pushing a silver wrapper towards her, with a set of plastic silverware balanced carefully on top.  When he drew his hand away, the thick ring on his hand gleamed in the dusty London sunlight.  She caught her eye on the emerald with an emblazoned <em>M</em> glimmering, the dragon spinning gracefully around the emerald, spelled to never stop moving. </p>
+<p>But it was the words that surrounded the gem, engraved into the white gold, that set her heart into a rapid pace. </p>
+<p><em>Sanctimonia Vincet Semper.  </em>Purity will always conquer.  Her stomach clenched. </p>
+<p>Hermione was shocked to see him of all people, pushing food towards her as though it was meant for her.  She simply looked at the delectable scented wrapper and raised a single eyebrow as she turned her gaze from the offering back to his face. </p>
+<p>It was silent for a minute.  Malfoy’s face did not change from his careful mask, although his gaze burned over her.  Like he was trying to read her mind. </p>
+<p>He stared at her so long that she nearly jumped with he spoke up, his voice certainly deeper than she remembered.</p>
+<p>“Why?”</p>
+<p>After a moment, she managed to tear her eyes away from the man, and instead looked back down at the wrapper.</p>
+<p>“What is this?” She managed to ask.  Her voice was hoarser than she would have liked.  She hoped he didn’t read that as fear. </p>
+<p>Malfoy was sitting more still than she thought humanly possible.  He was resting on the bench across from the Leaky Cauldron, out in muggle London for the whole world to see, in a crisp set of satin black robes.  She flicked her gaze from the wrapper to a woman who was blatantly staring at Malfoy as she strolled past them.  She supposed he looked strange to the muggle folk, but she knew they would look strange to wizarding folk as well.  The most famous muggleborn and the youngest Death Eater, sharing a bench at lunchtime. </p>
+<p>“A Chelsea bun.  Or so they say.  They look like they’ve been coated in a sugar,” Malfoy spoke quietly.  “The man who sold them had an American accent.”</p>
+<p>Hermione just stared.</p>
+<p>“Don’t avoid the question.  I want to know why, Granger.” </p>
+<p>Hermione blinked at him.  The silver of his tie was the exact shade of his eyes.  It was unsettling. </p>
+<p>“Did you buy that for me?” </p>
+<p>“That’s typically what it means when someone slides something towards you.”</p>
+<p>Hermione stared, “But why?”</p>
+<p>“That’s what I’m asking, Granger.  Are you typically this daft?  I thought you were supposed to be the ‘brightest witch of our age.’” </p>
+<p>She narrowed her eyes at him, straightening in her seat. “What do you want?  What do you mean, why?  And I don’t want your bloody Chelsea bun.” </p>
+<p>Malfoy sneered at her and looked like he wanted to say something in retort.  But he didn’t.  After a moment, he smoothed his hands out over his robes to straighten some invisible wrinkles and swallowed.</p>
+<p>“I want to know why you testified in support of myself and my family.”</p>
+<p>Oh.  Right.  The Malfoy’s trial had been yesterday, and while still painful to complete, both Harry and Hermione had gone against protests of members of the Order and the Ministry in favor of a lenient sentence for the Malfoy family.  She had not been able to look at any of them, but Harry, bless him, had stared the trio down in a calculating way. </p>
+<p>She knew that Dumbledore was gone, and had been a complicated person, but his spirit most definitely lived on in her best friend.</p>
+<p>Hermione had taken one look at Lucius Malfoy’s blonde hair and had instantly been thrown into that blasted drawing room. </p>
+<p>Regardless, she had said her part.</p>
+<p>
+  <em>She cleared her throat, approaching the podium that looked over the floor of the massive dungeon in which the Malfoy family sat- secured to a bench with an enchanted sort of chains before the plum-robed Wizengamot themselves.  A few months earlier she would have looked up exactly how these chains were enchanted, but lately, she couldn't bring herself to find her curiosity.  She had seen the gleam of their hair as they entered, and while Harry was brave and Ronald had scowled at their arrival, she had avoided looking at them at all.  She brushed the small statement she had prepared for this moment flat against the podium and spoke with her wand at her throat so that her voice echoed around the room.</em>
+</p>
+<p>
+  <em>“I am here to give a statement concerning the arrests of the Malfoy family, and to express my opinion concerning their sentencing.  All three family members that sit before us were involved with Lord Voldemort as members of his cult, but I believe this is more complicated than a simple case of bigotry and ignorance.</em>
+</p>
+<p>
+  <em>Draco, while complicated, has shown great bravery in turning against Lord Voldemort during the Battle of Hogwarts.  It is my belief that his love for his family is what lead to him refusing to join Voldemort’s side in those final moments, and that the actions he completed for Voldemort’s side were made completely out of fear for his parents well-being, as well as his own.  We have had a complicated past, but I believe if Draco had been raised under different circumstances that the events of the past year would have gone much differently based from his actions.  </em>
+</p>
+<p>
+  <em>Narcissa is likely the person here, other than Harry of course, who is most responsible for the defeat of Lord Voldemort,” the Wizengamot stirred at this statement, but Hermione cleared her throat and continued without looking up at the crowd.</em>
+</p>
+<p>
+  <em>“Mrs. Malfoy lied directly to Lord Voldemort’s face when he asked her to verify Harry’s death.  While it may not have been for noble causes, it was a lie made from love of her son.  Lucius, perhaps, is the Malfoy who is hardest to argue for, but it is my belief the Lucius completed most actions out of love for his wife and son as well.</em>
+</p>
+<p>
+  <em>As a principle, actions made in the name of love should not be severely punished, as love has shown us time and time again to be the most powerful form of magic.”</em>
+</p>
+<p>Her voice had shaken as she spoke, out of fear, but never out of uncertainty.  She held no love for the Malfoy’s, but when asked if she believed that the Malfoy’s were evil, she could not truthfully say yes. </p>
+<p>She remembered the way Malfoy had stared in horror as she was tortured in that horrible room.  She remembered how pale he was, and how scared. </p>
+<p>And so, she had testified for them. </p>
+<p>“I think I said why during the trial, Malfoy.  Do you really need me to say it again?”</p>
+<p>His lips thinned, “I don’t believe you.” </p>
+<p>“Love is the most powerful form of magic.  I know that your folk do not believe so, but it does not make it untrue.” </p>
+<p>Malfoy frowned, “Your folk?”</p>
+<p>Bugger.  She didn’t mean for it to sound like… well, the way the pureblood community had referred to her family all those years.  But that was exactly what it had sounded like.</p>
+<p>“I suppose I mean Death Eaters.  Those who supported his cause.” </p>
+<p>He didn’t say anything for a few moments, and just turned his gaze away from her to examine the entrance to the Leaky Cauldron.  Muggles continued to stare at his strange cloths, but most rolled their eyes and looked away as if he was simply a street performer.  He ignored them, apparently oblivious or uncaring of their judgement.  A simple muggle-repelling charm would take care of that, but he either didn't care or wasn't allowed to perform the spell, Hermione assumed.  </p>
+<p>Her stomach growled again, and she looked at the wrapped bun mournfully.  There was no way her pride would allow her to take it.</p>
+<p>“You’re wrong, you know,” he spoke finally.  It was spoken so quietly; she had almost missed it.</p>
+<p>“Am I?”</p>
+<p>“Yes.  We believe in the <em>amor magicae, </em>though perhaps differently than you.  But I do not believe that it was your true reason for testifying for us.  At least not for me.”</p>
+<p>“Oh?” </p>
+<p>“Did you suddenly forget the past oh, seven years of your life?  I called you <em>mudblood</em> for years.  I made fun of your hair, your teeth, your brains.  I <em>hated </em>you.  Why would you testify for me?  I know you Gryffindor’s are noble, but I do not think that you would… throw that all away because you believe I did those awful things because I <em>love </em>my parents.  <em>Of course,</em> I love my parents.  They raised me, they spoiled me.  They tried to protect me.  I’m not a monster!”</p>
+<p>Hermione said nothing.  She examined the cobblestone beneath them. </p>
+<p>“I hurt people.  I let… <em>them</em> into the castle.  I directly resulted in Dumbledore’s death.  I am a <em>Death Eater!</em>” his last sentence came out in a shout.    </p>
+<p>She swallowed and fingered a groove in the grain of the wood. </p>
+<p>He only seemed to grow more agitated at her non-answer, “And take that bloody bun!  I bought it for you, and I had to use <em>muggle </em>money.  Do you know how confusing that is?  Take the damn bun,” he shoved it farther so that the wrapper brushed against her leg. </p>
+<p>“I’m not accepting the bun, so you should just take it if you don’t want it to go to waste.”</p>
+<p>He let out a growl that made her jump, and before she could react, he had flicked his wand over the bun and had his wand stuffed back into his robes before anyone could get a second look. </p>
+<p>“What did you just do?” She asked now, alarmed. </p>
+<p>“If you do not pick up that bun, no one else will be able to move it from that spot on the bench, creating a great mystery that would result in thousands of muggles coming to this precise spot to attempt to remove that Chelsea bun.  I suspect they’ll rename this street Chelsea Alley, or something as equally heinous, and the Leaky Cauldron will be forced to close their doors in fear of discovery because of the new concentration of muggles coming to this location.  They will all get in line, hoping to one day be the person who can pick up the bun in order to declare themselves King or Queen of the Bun.  Of course, no one will be ever be able to do it, because there is only one true master of the bun.  But, unfortunately, that Queen of the Bun is the most <em>stubborn witch</em> the world has ever seen.” </p>
+<p>Hermione stared at him as if he had three heads.  His words made him sound like he was joking, but the look on his face the completely serious.  Since when did Draco Malfoy joke with her?</p>
+<p>“Oh, don’t look at me like that Granger.  Just take the fucking bun.” </p>
+<p>“Aren’t you on probation?” she asked, a bit dazed.</p>
+<p>“Obviously.  I’m allowed magic, I’m just being monitored.  I’m also required to complete my last year of school and three years of Ministry service after I graduate.” </p>
+<p>She stared.  The words<em> ‘why are you telling me this’ </em>were about to slip out of her mouth before she changed her mind, so she made a silent decision instead.  She picked up the silver wrapper, and slowly freed the bun and unwrapped the fork as she stood. </p>
+<p>“Thank you for the bun, Malfoy,” she said, straightening, and brushing her mid-length dress free of wrinkles with her free hand, “I really have to be going.  It’s been… charming.” </p>
+<p>Malfoy stood, his black robes sweeping around him, and he took a step forward like he was going to follow her.</p>
+<p>She started towards the apparition point just around the corner of the Leaky Cauldron.</p>
+<p>“Wait, Granger!  You can’t just take my offering and not answer my question.”</p>
+<p>She stopped right before she stepped into the street but didn’t turn towards him.</p>
+<p>“Why not?  Why would you care for the reasons a <em>mudblood</em> testified for lenient sentencing?” She let out with venom, her voice low.  She wasn't even angry, but somehow the words relieved some of the pressure on her chest. </p>
+<p>He made a quiet strangled sound, one that she was sure wasn’t meant to reach her ears, “Please just answer.” </p>
+<p>Hermione took a bite of the bun.  It really was just as lovely as it smelled, all cinnamon and fluffy goodness.  And he was right, it was very sweet.  She wondered idly if she should have tested it for poisoning or enchantment.  She couldn’t really find it in herself to care even if it was. </p>
+<p>She chewed for a moment before turning towards him.  He was staring at her, and for once his mask looked like it was down.  His cheeks were slightly flushed, bringing some life back into his face, but he was clearly just as affected by the war as she was.  He was perhaps even thinner now that he had been at the end of the war.  He had the makings what looked like several days without shaving, and his hair, which had usually been slick back, now fell with a gentle part, just a few wisps of blonde hair in his eyes.  Standing at full height, he clearly towered over her now, but his shoulders were concave. </p>
+<p>He, for once, looked nothing like his father.  He looked more like a man who had just been through hell. </p>
+<p>She could relate. </p>
+<p>“Perhaps I thought that there was a better man underneath all the insults, Malfoy.  And perhaps, I believe that we all deserve a second chance.” </p>
+<p>His mouth fell open, and then closed. </p>
+<p>“See you at Hogwarts.  McGonagall made me Head Girl.  So, behave yourself this year, Malfoy.  Without Harry and Ron, you Slytherins may have a chance of winning the house cup,” she whipped away from him, stepping into the street to quickly stroll to the apparition point.</p>
+<p>She was just mid-apparition, when she heard him call after her from across the street.</p>
+<p>“Likewise, Granger. As Head Boy, I look forward to ensuring the best house wins-“ her ears popped painfully and she tried not to squeeze her pastry too hard as she landed just inside the lobby of the Ministry.</p>
+<p>Head Boy.</p>
+<p>What <em>was</em> McGonagall thinking? </p>
+  </div>
+  <!--/main-->
+
+
+</div>
+
+<!-- end of cache -->
+
+    </div>
+  
+  
+    </div>
+    <!-- END work skin -->
+  </div>
+  <!-- END work -->
+
+  <!-- BEGIN comment section -->
+  <!-- Gets embedded anywhere we need to list comments on a top-level commentable. We need the local variable "commentable" here. -->
+<div id="feedback" class="feedback" role="complementary">
+
+  <h3 class="landmark heading">Actions</h3>
+
+  <ul class="actions" role="navigation">
+      <li><a href="#main">&#8593; Top</a></li>
+
+
+      <li><a href="/works/23258557/chapters/57525547#workskin">Next Chapter &#8594;</a></li>
+
+
+
+
+      <li>
+        <form id="new_kudo" action="/kudos" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="YgZZMfOARU+xVJotm65D9Fj0+T6UVFTETaLFcUFiD6Jrrm8SNiu9u8K4M1PxaZf3i7yR4wlfVxszlgAA73gRDQ=="/>
+          <input value="23258557" type="hidden" name="kudo[commentable_id]" id="kudo_commentable_id"/>
+          <input value="Work" type="hidden" name="kudo[commentable_type]" id="kudo_commentable_type"/>
+          <input type="submit" name="commit" value="Kudos ♥" id="kudo_submit"/>
+</form>      </li>
+
+
+
+
+        <li id="show_comments_link"><a data-remote="true" href="/comments/show_comments?chapter_id=55695964">Comments (1)</a></li>
+  </ul>
+
+  <div id="kudos_message"></div>
+
+  <h3 class="landmark heading"><a name="comments">Comments</a></h3>
+
+  
+
+    <div id="kudos">
+      <p class="kudos">
+          <a href="/users/MissDeafDreamer83">MissDeafDreamer83</a>, <a href="/users/splushy1">splushy1</a>, <a href="/users/Shinyteef">Shinyteef</a>, <a href="/users/Kittyflyod27">Kittyflyod27</a>, <a href="/users/Indy_Nihilism">Indy_Nihilism</a>, <a href="/users/3am_Reading">3am_Reading</a>, <a href="/users/mmauvahp1">mmauvahp1</a>, <a href="/users/onemorechapter">onemorechapter</a>, <a href="/users/mtfunkzoo">mtfunkzoo</a>, <a href="/users/Genmastone">Genmastone</a>, <a href="/users/Wanderlust_13">Wanderlust_13</a>, <a href="/users/newmommyak">newmommyak</a>, <a href="/users/Kitty_Maria09">Kitty_Maria09</a>, <a href="/users/ekstarr">ekstarr</a>, and <a href="/users/ShadyLaine">ShadyLaine</a>
+             as well as 
+          11 guests
+         left kudos on this work!
+      </p>
+</div>
+
+
+    <div id="add_comment_placeholder" title="top level comment">
+      <div id="add_comment">
+        <!-- expects the local variables comment, commentable, and button_name -->
+<div class="post comment" id="comment_form_for_55695964">
+  <form class="new_comment" id="comment_for_55695964" action="/chapters/55695964/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="AEtK+Pm3GtOLB/47KdOqXHFtVrOpnHJsA5OvIvMmXxQJ43zbPBziJ/jrV0VDFH5foiU+bjSXcbN9p2pTXTxBuw=="/>
+    <fieldset>
+      <legend>Post Comment</legend>
+
+
+
+
+
+
+        <dl>
+          <dt class="landmark">Note:</dt>
+          <dd class="instructions comment_form">All fields are required. Your email address will not be published.</dd>
+          <dt><label for="comment_name_for_55695964">Guest name: </label></dt>
+          <dd>
+            <input id="comment_name_for_55695964" type="text" name="comment[name]"/>
+            <script>var validation_for_comment_name_for_55695964=new LiveValidation('comment_name_for_55695964',{wait:500,onlyOnBlur:false});validation_for_comment_name_for_55695964.add(Validate.Presence,{"failureMessage":"Please enter your name.","validMessage":""});</script>
+          </dd>
+          <dt><label for="comment_email_for_55695964">Guest email: </label></dt>
+          <dd>
+            <input id="comment_email_for_55695964" type="text" name="comment[email]"/>
+            <script>var validation_for_comment_email_for_55695964=new LiveValidation('comment_email_for_55695964',{wait:500,onlyOnBlur:false});validation_for_comment_email_for_55695964.add(Validate.Presence,{"failureMessage":"Please enter your email address.","validMessage":""});</script>
+          </dd>
+        </dl>
+        <p class="footnote">(Plain text with limited HTML <a class="help symbol question modal" title="Html help" aria-controls="#modal" href="/help/html-help.html"><span class="symbol question"><span>?</span></span></a>)</p>
+
+      <p>
+        <label for="comment_content_for_55695964" class="landmark">Comment</label>
+        <textarea id="comment_content_for_55695964" class="comment_form observe_textlength" title="Enter Comment" name="comment[comment_content]">
+</textarea>
+        <input type="hidden" id="controller_name_for_55695964" name="controller_name" value="chapters"/>
+      </p>
+      <p class="character_counter"><span id="comment_content_for_55695964_counter" class="value" data-maxlength="10000" aria-live="polite" aria-valuemax="10000" aria-valuenow="comment_content_for_55695964">10000</span> characters left</p>
+      <script>var validation_for_comment_content_for_55695964=new LiveValidation('comment_content_for_55695964',{wait:500,onlyOnBlur:false});validation_for_comment_content_for_55695964.add(Validate.Presence,{"failureMessage":"Brevity is the soul of wit, but we need your comment to have text in it.","validMessage":""});validation_for_comment_content_for_55695964.add(Validate.Length,{"maximum":"10000","tooLongMessage":"must be less than 10000 characters long."});</script>
+      <p class="submit actions">
+        <input type="submit" name="commit" value="Comment" id="comment_submit_for_55695964" data-disable-with="Please wait..."/>
+      </p>
+    </fieldset>
+</form></div>
+<div class="clear"></div>
+
+      </div>
+    </div>
+
+  <!-- If we have javascript, here is where the comments will be spiffily inserted -->
+  <!-- If not, and show_comments is true, here is where the comments will be rendered -->
+  <div id="comments_placeholder" style="display:none;">
+  </div>
+
+
+</div>
+<!-- END comments -->
+
+  <!-- END comment section -->
+
+
+
+          <div class="clear"><!--presentational--></div>
+        </div>
+        <!-- END main -->
+      </div>
+      <!-- BEGIN footer -->
+<div id="footer" role="contentinfo" class="region">
+	<h3 class="landmark heading">Footer</h3>
+  <ul class="navigation actions" role="navigation">
+    <li class="module group">
+      <h4 class="heading">About the Archive</h4>
+      <ul class="menu">
+        <li><a href="/site_map">Site Map</a></li>
+        <li><a href="/diversity">Diversity Statement</a></li>
+        <li><a href="/tos">Terms of Service</a></li>
+        <li><a href="/dmca">DMCA Policy</a> </li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Contact Us</h4>
+      <ul class="menu">
+        <li><a href="/abuse_reports/new">Report Abuse</a></li>
+        <li><a href="/support">Technical Support and Feedback</a></li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Development</h4>
+      <ul class="menu">
+          <li><a href="https://github.com/otwcode/otwarchive/commits/v0.9.300.1">otwarchive v0.9.300.1</a></li>
+        <li><a href="/known_issues">Known Issues</a></li>
+        <li><a href="http://www.gnu.org/licenses/gpl-2.0.html" title="View License">GPL</a> by the <a href="http://transformativeworks.org/" title="The Organization for Transformative Works">OTW</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!-- END footer -->
+
+    </div>
+    <!-- check to see if this controller/action allow tinymce before we load the gigantor js; see application_helper -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js" type="text/javascript"></script>
+<!-- if user has googleapis blocked for some reason we need a fallback -->
+<script type="text/javascript">if(typeof jQuery=='undefined'){document.write(unescape("%3Cscript src='/javascripts/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));document.write(unescape("%3Cscript src='/javascripts/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));}</script>
+
+
+<script type="text/javascript">$j=jQuery.noConflict();</script>
+<script src="/javascripts/jquery.scrollTo.min.js+jquery.livequery.min.js+rails.js+application.js+bootstrap,_bootstrap-dropdown.min.js+jquery-shuffle.js+jquery.tokeninput.min.js+jquery.trap.min.js+ao3modal.min.js+js.cookie.min.js+filters.min.js.pagespeed.jc.oz6LPTe6O7.js"></script><script>eval(mod_pagespeed_a8hDjzT3l_);</script>
+<script>eval(mod_pagespeed_1nA1vKz9z4);</script>
+<script>eval(mod_pagespeed_AKC4FLip6q);</script>
+<script>eval(mod_pagespeed_gX7XC77lvT);</script>
+<script>eval(mod_pagespeed_5zo0ZWMy4O);</script>
+<script>eval(mod_pagespeed_eCCgOhjhYQ);</script>
+<script>eval(mod_pagespeed_TU1Ln7LKSh);</script>
+<script>eval(mod_pagespeed_qTpbjsXQwh);</script>
+<script>eval(mod_pagespeed_R5FGw2ySDb);</script>
+<script>eval(mod_pagespeed_rqqFCT3xcT);</script>
+
+<script>eval(mod_pagespeed_Gf_4KFhTvB);</script>
+
+
+  <script>function isSupported(){var item="localStoragePolyfill";try{localStorage.setItem(item,item);localStorage.removeItem(item);return true;}catch(e){return false;}}function acceptTOS(){if(isSupported()){localStorage.setItem("accepted_tos","20180523");}else{Cookies.set("accepted_tos","20180523",{expires:365});}}$j(document).ready(function(){if(localStorage.getItem("accepted_tos")!=="20180523"&&Cookies.get("accepted_tos")!=="20180523"){$j("body").prepend("<div id=\"tos_prompt\" class=\"hidden\">\n  <h2 class=\"heading\">\n    <span>Archive of Our Own<\/span>\n  <\/h2>\n  <div class=\"agreement\">\n    <p class=\"summary\">\n      On Archive of Our Own (AO3), users can make profiles, create works and\n            other Content, post comments, give Kudos, create Collections and \n            Bookmarks, participate in Challenges, import works, and more. Any \n            information you publish in a comment, profile, work, or Content that you \n            post or import onto AO3 including in summaries, notes and tags, \n            will be accessible by the public (unless you limit access to a work only \n            to those with AO3 Accounts), and it will be available to \n            AO3 personnel. Be mindful when sharing personal information, \n            including  your religious or political views, health, racial background, \n            country of origin, sexual identity and/or personal relationships. To \n            learn more, check out our <a href=\"/tos\">Terms of Service<\/a> and <a href=\"/tos#privacy\">Privacy Policy<\/a>.\n    <\/p>\n\n    <p class=\"confirmation\">\n      <input type=\"checkbox\" id=\"tos_agree\" />\n      <label for=\"tos_agree\">I have read &amp; understood the new Terms of Service and Privacy Policy<\/label>\n    <\/p>\n\n      <p class=\"submit\">\n        <button name=\"button\" type=\"button\" disabled=\"disabled\" id=\"accept_tos\">I agree/consent to its terms<\/button>\n      <\/p>\n\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    var container = \$j(\"#tos_prompt\");\n    var outer = \$j(\"#outer\");\n    var button = \$j(\"#accept_tos\");\n\n    setTimeout(showTOSPrompt, 1500);\n\n    function showTOSPrompt() {\n      \$j.when(container.fadeIn(500)).done(function() {\n        outer.addClass(\"hidden\").attr(\"aria-hidden\", \"true\");\n      });\n\n      \$j(\"#tos_agree\").on(\"click\", function() {\n        button.attr(\"disabled\", !this.checked);\n        if (this.checked) {\n          button.on(\"click\", function() {\n            acceptTOS();\n            outer.removeClass(\"hidden\").removeAttr(\"aria-hidden\");\n            \$j.when(container.fadeOut(500)).done(function() {\n              container.remove();\n            });\n          });\n        };\n      }).change();\n    };\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+  <script>$j(document).ready(function(){var permitted_hosts=["archiveofourown.org","download.archiveofourown.org","insecure.archiveofourown.org","www.archiveofourown.org","insecure-test.archiveofourown.org","test.archiveofourown.org","testdownload.archiveofourown.org"];var current_host=window.location.hostname;if(!permitted_hosts.includes(current_host)&&Cookies.get("proxy_notice")!=="0"&&window.location.protocol!=="file:"){$j("#skiplinks").after("<div id=\"proxy-notice\">\n  <div class=\"userstuff\">\n    <p class=\"important\">Important message:<\/p>\n    <ol>\n      <li>You are using a proxy site that is not part of the Archive of Our Own.<\/li>\n      <li>The entity that set up the proxy site can see what you submit, including your IP address. If you log in through the proxy site, it can see your password.<\/li>\n    <\/ol>\n    <p class=\"important\">重要提示：<\/p>\n    <ol>\n      <li>您使用的是第三方开发的反向代理网站，此网站并非Archive of Our Own - AO3（AO3作品库）原站。<\/li>\n      <li>代理网站的开发者能够获取您上传至该站点的全部内容，包括您的ip地址。如您通过代理登录AO3，对方将获得您的密码。<\/li>\n    <\/ol>\n    <p class=\"submit\"><button class=\"action\" type=\"button\" id=\"proxy-notice-dismiss\">Dismiss Notice<\/button><\/p>\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    \$j(\"#proxy-notice-dismiss\").on(\"click\", function() {\n      Cookies.set(\"proxy_notice\", \"0\");\n      \$j(\"#proxy-notice\").slideUp();\n    });\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+    <script>$j(document).on("loadedCSRF",function(){$j.post("/works/23258557/hit_count.json")})</script>
+
+
+  </body>
+</html>

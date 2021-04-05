@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"f2edcff25e","applicationID":"190034","transactionName":"dgwMEkpfWVsHERpRXlQTFgNKQxpECgxC","queueTime":0,"applicationTime":144,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VQcCWV9RGwIJVFFRAw==",licenseKey:"f2edcff25e",applicationID:"190034"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script>
+    <meta name="keywords" content="fanfiction, transformative works, otw, fair use, archive"/>
+    <meta name="language" content="en-US"/>
+    <meta name="subject" content="fandom"/>
+    <meta name="description" content="An Archive of Our Own, a project of the
+    Organization for Transformative Works"/>
+    <meta name="distribution" content="GLOBAL"/>
+    <meta name="classification" content="transformative works"/>
+    <meta name="author" content="Organization for Transformative Works"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+        His Darkest Devotion - Chapter 1 - Lomonaaeren - Harry Potter - J. K. Rowling [Archive of Our Own]
+    </title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/A.1_site_screen_.css.pagespeed.cf.JiR2hT5NxR.css"/>
+<style media="only screen and (max-width: 62em), handheld">#dashboard{clear:both;float:none;margin:1% 3.5%;max-width:100%;padding:0;width:auto}#dashboard,#dashboard.own{border-bottom:10px solid #900;border-top:10px solid #900;padding:.5em 0;border-radius:.25em}#dashboard ul{border:none;display:inline;padding:0;text-align:left}#dashboard li{display:inline}#dashboard a,#dashboard span{display:inline-block;margin:.25em 0}#dashboard .secondary{background:#eee;padding:.375em 0 .625em;box-shadow:inset 2px 2px 5px #bbb}#dashboard .secondary a{margin:.125em 0}#dashboard .landmark{clear:none;float:left}#main,#main.dashboard{float:none;margin:auto;padding-left:3.5%;padding-right:3.5%;width:auto}.logged-in .splash>.module{width:48.5%}.logged-in .splash > div:nth-of-type(odd) {margin-left:0;margin-right:1.5%}.logged-in .splash > div:nth-of-type(even) {margin-left:1.5%;margin-right:0}form.filters{width:auto;min-width:23%;max-width:24%}.filters fieldset{margin-right:0}form.filters dl{margin-left:.25em;margin-right:.25em}#workskin{margin:auto 1.5%}</style>
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 42em), handheld" href="/stylesheets/skins/skin_873_archive_2_0/A.5_site_narrow.handheld_.css.pagespeed.cf.8L0d7x-op8.css"/>
+<link rel="stylesheet" type="text/css" media="speech" href="/stylesheets/skins/skin_873_archive_2_0/A.6_site_speech_.css.pagespeed.cf.Ybb8bLK5Um.css"/>
+<link rel="stylesheet" type="text/css" media="print" href="/stylesheets/skins/skin_873_archive_2_0/A.7_site_print_.css.pagespeed.cf.ry3YZtf8Cz.css"/>
+<!--[if IE 8]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/8_site_screen_IE8_or_lower.css" /><![endif]-->
+<!--[if IE 5]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/9_site_screen_IE5.css" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/10_site_screen_IE6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/11_site_screen_IE7.css" /><![endif]-->
+
+
+
+<!--sandbox for developers	-->
+<style media="screen">#new_work_search fieldset:first-of-type .submit{padding-top:0}.edit_external_author ul ul{margin-left:2.75em}a.resp-sharing-button__link,.resp-sharing-button__icon{display:inline-block}a.resp-sharing-button__link,a.resp-sharing-button__link:hover{text-decoration:none;color:#fff;border:none}.resp-sharing-button{border-radius:5px;transition:25ms ease-out;padding:.5em .75em}.resp-sharing-button__icon svg{width:1em;height:1em;margin-right:.4em;vertical-align:top}.resp-sharing-button__icon{stroke:#fff;fill:none}.resp-sharing-button__icon--solid{fill:#fff;stroke:none}.resp-sharing-button--twitter{background-color:#55acee}.resp-sharing-button--twitter:hover,a:focus .resp-sharing-button--twitter{background-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c}.resp-sharing-button--tumblr:hover,a:focus .resp-sharing-button--tumblr{background-color:#222d3c}.resp-sharing-button--twitter{background-color:#55acee;border-color:#55acee}.resp-sharing-button--twitter:hover,.resp-sharing-button--twitter:active{background-color:#2795e9;border-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c;border-color:#35465c}.resp-sharing-button--tumblr:hover,.resp-sharing-button--tumblr:active{background-color:#222d3c;border-color:#222d3c}</style>
+<script src="/javascripts/livevalidation_standalone.js.pagespeed.jm.oB__Z5piTe.js"></script>
+
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="nSmAnpCLauer29p19KoUVgx3ao9Q/Dj9cYEnjtLsk9X3STs8bYg3hK77Slr9Uy55EQkeLZkJd+cOVwxY5YVkGw=="/>
+
+    
+  </head>
+
+  <body class="logged-out">
+    <div id="outer" class="wrapper">
+      <ul id="skiplinks"><li><a href="#main">Main Content</a></li></ul>
+      <!-- BEGIN BETA CAVEATS! -->
+<noscript>
+  <p id="javascript-warning">
+    While we&#39;ve done our best to make the core functionality of this site accessible without javascript, it will work better with it enabled. Please consider turning it on!
+  </p>
+</noscript>
+<!-- END BETA CAVEATS! --> 
+
+<!-- BEGIN header -->
+
+<div id="header" class="region">
+
+  <h1 class="heading">
+    <a href="/"><span>Archive of Our Own</span><sup> beta</sup><script data-pagespeed-no-defer>(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','http://archiveofourown.org/works/20704793/chapters/49183289','eVfAzEuqgZ',true,false,'3e8qKNgMhfs');</script><img alt="Archive of Our Own" class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAAqCAMAAAA3b6P4AAACslBMVEWXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACpit0XAAAA5XRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESFBUWFxgZGhscHR4fICEiIyQlJygpKissLi8wMTM0NTY3ODk6Ozw9PkBBQkNFR0hJSktMTU5PUFFSVFVWV1hZWltcXV5fY2RlZmhpamtsbW5vcHFyc3V2d3p7fX5/gIGCg4SFhoeIiouMjY6PkJGSlJWWl5iZmpucnZ6foKGipKWnqKmrrK2ur7CxsrO0tba3uLm6u7y9vr/AwsPFxsfIycrLzM7P0NLT1NXW19na29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+b1plRQAABBRJREFUSMedlvtb1FUQxgcEBMtQggUCxVACu1ApYmRmUqESkCkUREaS4h3JCDONEFPBoBQCJcDIGxkGKYGBkgGSAq4BARIXWWA//0c/7J39LvY0P82cd97nzJlzZuaIKvBRmVqmP/XOrrQNIbOVsNfyjq/3nYrs/1GlWjPe90v28wrgnOiDP7ddeN9WAE47O9DLQI6PksfDMWVjnfuDlCC3b4HbpYcOFjUC9UHKWywtQZNpjTmdgu60uSIis979HRr8bIT4YjVDqV6TFlPgVqjxjBegyM4MfSPepDsm9tAcb5mwHnpfMJmq39C+ZLQCytrfM3deUAylwWYL2+BTc4eICU4aNk/pLgm0DNQuqY+/Nk8zmuX0PmFx83V0eIiIyOPlmq3Wpw+tg1OG7Lk1c8YSzmZsqYhIhLp7pVLy3AugLUqnz73L15boHogUke1cW6ic+5n7QJvhLCLic4cTlmAGRIhdFhfdlcmPpUjCfSj3FpEZ9dQ5W6CFDPrLIc652rj2FWUi0f1wdZGI5DERbg56dlIvO6hyt1UTe8pEZKUa1JEiMVBhDu6GzbHc8LFZUSXHRUTC/oShBHG5DKkmbPUg1xPujSyxSba/sltEREJuA9tl0Qikz9JD8f1ovrjOVtvF7NexRqcsVgOfSIIW6pMDVe7z3zwLHDjFeSfb7GV/P6fXwrqATInuAvraWruB0U2bx4aenqKRJA/MMairhoAsCczr1TWH8dPLfO7w2VRtqKDZFFjsOHBY5JmNX549dzQ5ROQkLY9MQbZvKDCzNgHkGCvaLRGOznS2zQ6e2GJu7gXY7/3kiqQj52ubbo9C143asm2hLsrsD3jV8l2PAbcGsBRN9VuK7B+Gvc3N+WnDKEuqAtlz8FdT37J/5dhdk3vbxUb4Y23UusT08nZAobyTSDeoD8VUmKja3DCVcylk6LB5J7Qcts54Ncv13PVXDMQWLfC9o4SOMxqmd/TqocSKvZirTiIiTusM3NbM5aq9AGccPoYaB73jwn/ItWJ/xQ4RkTWVOupg4VqViEw7ApBTA5l6P9/T8LrV1veHA0RCirQANKU/q193KdZHEiUiMjc2vxUO2E9ml5MlXhn9ANRsVJmAWdUAjAaLiKoRaN9pRX6bdv9VjQD8FGv5HgNuAjS5ioj3Hd3jnyS+7RQfA+BSpONkMFwD5OvOVzEClZNmuV0hE/cAqqOmK7yjD4ENen1Jhpo+y6xt1SXmWoKNEtzS8qOn0Zi3jw7z1hg+BNCZ5m2z/DxmmFuZ7DKbATeBsYKgKX8/C6JNehjfmEZ3DlAb8YC/k1dVlrHx5LHaNNZ7GElzlQdJwOXaOA8REb9sSh2Myw5xn78s/0Fmpzc0V+TmVY1y2lP+h3jF5l9qvPpdnP4I/wITXDY67Xw1sAAAAABJRU5ErkJggg==" data-pagespeed-url-hash="4179492045" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a> 
+  </h1>
+
+    <div id="login" class="dropdown">
+      <p class="user actions" role="menu">
+        <a id="login-dropdown" href="/users/login">Log In</a>
+      </p>
+      <div id="small_login" class="simple login">
+	<form class="new_user" id="new_user_session_small" action="/users/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="oD1w9AqVjQElhZ+vArRzy/qsefPBV5tIsks+KqLRiQnKXctW95bQYiClD4ALTUnk59INUQii1FLNnRX8lbh+xw=="/>
+	<dl>
+    <dt>
+      <label for="user_session_login_small">User name or email:</label></dt>
+    <dd><input id="user_session_login_small" type="text" name="user[login]"/></dd>
+    <dt><label for="user_session_password_small">Password:</label></dt>
+    <dd><input id="user_session_password_small" type="password" name="user[password]"/></dd>
+  </dl>
+  <p class="submit actions">
+    <label for="user_remember_me_small" class="action"><input type="checkbox" name="user[remember_me]" id="user_remember_me_small" value="1"/>Remember Me</label>
+    <input type="submit" name="commit" value="Log In"/>
+  </p>
+</form>
+<ul class="footnote actions">
+  <li><a href="/users/password/new">Forgot password?</a></li>
+    <li>
+      <a href="/invite_requests">Get an Invitation</a>
+    </li>
+</ul>
+
+</div>
+
+    </div>
+
+  <h3 class="landmark heading">Site Navigation</h3>
+  <ul class="primary navigation actions" role="navigation">
+    <li class="dropdown">
+      <a href="/menu/fandoms">Fandoms</a>
+      <ul class="menu" role="menu">
+  <li><a href="/media">All Fandoms</a></li>
+        <li id="medium_5"><a href="/media/Anime%20*a*%20Manga/fandoms">Anime &amp; Manga</a></li>
+        <li id="medium_3"><a href="/media/Books%20*a*%20Literature/fandoms">Books &amp; Literature</a></li>
+        <li id="medium_4"><a href="/media/Cartoons%20*a*%20Comics%20*a*%20Graphic%20Novels/fandoms">Cartoons &amp; Comics &amp; Graphic Novels</a></li>
+        <li id="medium_7"><a href="/media/Celebrities%20*a*%20Real%20People/fandoms">Celebrities &amp; Real People</a></li>
+        <li id="medium_2"><a href="/media/Movies/fandoms">Movies</a></li>
+        <li id="medium_6"><a href="/media/Music%20*a*%20Bands/fandoms">Music &amp; Bands</a></li>
+        <li id="medium_8"><a href="/media/Other%20Media/fandoms">Other Media</a></li>
+        <li id="medium_30198"><a href="/media/Theater/fandoms">Theater</a></li>
+        <li id="medium_1"><a href="/media/TV%20Shows/fandoms">TV Shows</a></li>
+        <li id="medium_476"><a href="/media/Video%20Games/fandoms">Video Games</a></li>
+        <li id="medium_9971"><a href="/media/Uncategorized%20Fandoms/fandoms">Uncategorized Fandoms</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/browse">Browse</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works">Works</a></li>
+  <li><a href="/bookmarks">Bookmarks</a></li>
+  <li><a href="/tags">Tags</a></li>
+  <li><a href="/collections">Collections</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/search">Search</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works/search">Works</a></li>
+  <li><a href="/bookmarks/search">Bookmarks</a></li>
+  <li><a href="/tags/search">Tags</a></li>
+  <li><a href="/people/search">People</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/about">About</a>
+      <ul class="menu" role="menu">
+  <li><a href="/about">About Us</a></li>
+  <li><a href="/admin_posts">News</a></li>
+  <li><a href="/faq">FAQ</a></li>
+  <li><a href="/wrangling_guidelines">Wrangling Guidelines</a></li>
+  <li><a href="/donate">Donate or Volunteer</a></li>
+</ul>
+
+    </li>
+	  <li class="search"><form class="search" id="search" action="/works/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+  <fieldset>
+    <legend>Search Works</legend>
+    <p>
+      <label class="landmark" for="site_search">Work Search:</label>
+      <input class="text" id="site_search" aria-describedby="site_search_tooltip" type="text" name="work_search[query]"/>
+      <span class="tip" role="tooltip" id="site_search_tooltip">tip: hetalia f/f sort:kudos</span>
+      <span class="submit actions"><input type="submit" value="Search" class="button"/></span>
+    </p>
+  </fieldset>
+</form></li>
+  </ul>
+
+
+
+  <div class="clear"></div>
+
+</div>
+
+
+
+<!-- END header -->
+
+      <div id="inner" class="wrapper">
+        <!-- BEGIN sidebar -->
+        <!-- END sidebar -->
+
+        <!-- BEGIN main -->
+        <div id="main" class="chapters-show region" role="main">
+          
+          <div class="flash"></div>
+          <!--page description, messages-->
+<!--/descriptions-->
+
+<!--subnav-->
+<!--/subnav-->
+
+  <!-- BEGIN work -->
+  <div class="work"><p class="landmark"><a name="top">&nbsp;</a></p>
+      <!-- BEGIN navigation -->
+<h3 class="landmark heading">Actions</h3>
+<ul class="work navigation actions" role="menu">
+
+
+
+    <li class="chapter entire"><a href="/works/20704793?view_full_work=true">Entire Work</a></li>
+
+
+      <li class="chapter next"><a href="/works/20704793/chapters/49369766#workskin">Next Chapter &#8594;</a></li>
+
+    <li class="chapter" aria-haspopup="true">
+      <noscript>
+        <a href="/works/20704793/navigate">Chapter Index</a>
+      </noscript>
+      <a class="hidden" href="#">Chapter Index</a>
+      <ul id="chapter_index" class="expandable secondary hidden">
+        <li>
+          <form action="/works/20704793/chapters/49183289" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+            <p>
+              <select name="selected_id" id="selected_id"><option selected="selected" value="49183289">1. Phoenixes</option>
+<option value="49369766">2. Attempts</option>
+<option value="49606943">3. Conversations</option>
+<option value="49864418">4. Complications</option>
+<option value="50072903">5. Messages</option>
+<option value="50377034">6. Pardons</option>
+<option value="50585918">7. Articles</option>
+<option value="50829181">8. Knowledge</option>
+<option value="51084433">9. Edges</option>
+<option value="51291451">10. Mates</option>
+<option value="51503524">11. Awakenings</option>
+<option value="51732310">12. Approaches</option>
+<option value="51987802">13. Cliffs</option>
+<option value="52418248">14. Understanding</option>
+<option value="52808389">15. Clouds</option>
+<option value="52954453">16. Public</option>
+<option value="53228590">17. Truths</option>
+<option value="53574343">18. Intimacies</option>
+<option value="53815177">19. Surprises</option>
+<option value="54426844">20. Sessions</option>
+<option value="55048552">21. Before</option>
+<option value="55946563">22. Bonds</option>
+<option value="56314162">23. Beds</option>
+<option value="56837116">24. Claims</option>
+<option value="57173152">25. Trials</option>
+<option value="58170628">26. Ties</option>
+<option value="58904302">27. Promises</option>
+<option value="59573602">28. Clarity</option>
+<option value="61328518">29. Destinies</option>
+<option value="62865070">30. Tricks</option>
+<option value="63269956">31. Wands</option>
+<option value="63972958">32. Burns</option>
+<option value="65393386">33. Darkness</option>
+<option value="70755180">34. Patterns</option>
+<option value="73782930">35. Skins</option></select>
+              <span class="submit actions"><input type="submit" name="commit" value="Go"/></span>
+            </p>
+</form>        </li>
+        <li><a href="/works/20704793/navigate">Full-page index</a></li>
+      </ul>
+    </li>
+
+
+
+  <li class="comments" id="show_comments_link_top">
+      <a data-remote="true" href="/comments/show_comments?chapter_id=49183289">Comments </a>
+  </li>
+
+
+
+    <li class="share hidden">
+      <a class=" modal" title="Share Work" aria-controls="#modal" href="/works/20704793/share">Share</a>
+    </li>
+
+
+    <li class="download" aria-haspopup="true">
+      <a href="#">Download</a>
+      <ul class="expandable secondary">
+          <li><a href="/downloads/20704793/His%20Darkest%20Devotion.azw3?updated_at=1616036225">AZW3</a></li>
+          <li><a href="/downloads/20704793/His%20Darkest%20Devotion.epub?updated_at=1616036225">EPUB</a></li>
+          <li><a href="/downloads/20704793/His%20Darkest%20Devotion.mobi?updated_at=1616036225">MOBI</a></li>
+          <li><a href="/downloads/20704793/His%20Darkest%20Devotion.pdf?updated_at=1616036225">PDF</a></li>
+          <li><a href="/downloads/20704793/His%20Darkest%20Devotion.html?updated_at=1616036225">HTML</a></li>
+      </ul>
+    </li>
+</ul>
+<!-- END navigation -->
+
+
+<h3 class="landmark heading">Work Header</h3>
+
+<div class="wrapper">
+
+  <dl class="work meta group" role="complementary">
+          <dt class="rating tags">
+
+              Rating:
+          </dt>
+
+          <dd class="rating tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Mature/works">Mature</a></li>
+            </ul>
+          </dd>
+          <dt class="warning tags">
+
+              <a href="/tos_faq#tags">Archive Warning</a>:
+          </dt>
+
+          <dd class="warning tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Choose%20Not%20To%20Use%20Archive%20Warnings/works">Creator Chose Not To Use Archive Warnings</a></li>
+            </ul>
+          </dd>
+          <dt class="category tags">
+
+              Categories:
+          </dt>
+
+          <dd class="category tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/F*s*M/works">F/M</a></li><li><a class="tag" href="/tags/M*s*M/works">M/M</a></li>
+            </ul>
+          </dd>
+          <dt class="fandom tags">
+
+              Fandom:
+          </dt>
+
+          <dd class="fandom tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a></li>
+            </ul>
+          </dd>
+          <dt class="relationship tags">
+
+              Relationships:
+          </dt>
+
+          <dd class="relationship tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter*s*Tom%20Riddle/works">Harry Potter/Tom Riddle</a></li><li><a class="tag" href="/tags/James%20Potter*s*Lily%20Evans%20Potter/works">James Potter/Lily Evans Potter</a></li><li><a class="tag" href="/tags/Hermione%20Granger*s*Ron%20Weasley/works">Hermione Granger/Ron Weasley</a></li>
+            </ul>
+          </dd>
+          <dt class="character tags">
+
+              Characters:
+          </dt>
+
+          <dd class="character tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter/works">Harry Potter</a></li><li><a class="tag" href="/tags/Tom%20Riddle/works">Tom Riddle</a></li><li><a class="tag" href="/tags/Lily%20Evans%20Potter/works">Lily Evans Potter</a></li><li><a class="tag" href="/tags/James%20Potter/works">James Potter</a></li><li><a class="tag" href="/tags/Sirius%20Black/works">Sirius Black</a></li><li><a class="tag" href="/tags/Peter%20Pettigrew/works">Peter Pettigrew</a></li><li><a class="tag" href="/tags/Minerva%20McGonagall/works">Minerva McGonagall</a></li><li><a class="tag" href="/tags/Nagini%20(Harry%20Potter)/works">Nagini (Harry Potter)</a></li><li><a class="tag" href="/tags/Kingsley%20Shacklebolt/works">Kingsley Shacklebolt</a></li><li><a class="tag" href="/tags/Albus%20Dumbledore/works">Albus Dumbledore</a></li><li><a class="tag" href="/tags/Ron%20Weasley/works">Ron Weasley</a></li><li><a class="tag" href="/tags/Hermione%20Granger/works">Hermione Granger</a></li><li><a class="tag" href="/tags/Molly%20Weasley/works">Molly Weasley</a></li><li><a class="tag" href="/tags/Arthur%20Weasley/works">Arthur Weasley</a></li><li><a class="tag" href="/tags/Minor%20Characters/works">Minor Characters</a></li>
+            </ul>
+          </dd>
+          <dt class="freeform tags">
+
+              Additional Tags:
+          </dt>
+
+          <dd class="freeform tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Alternate%20Universe%20-%20Canon%20Divergence/works">Alternate Universe - Canon Divergence</a></li><li><a class="tag" href="/tags/Alternate%20Universe%20-%20Soulmates/works">Alternate Universe - Soulmates</a></li><li><a class="tag" href="/tags/Soulmate-Identifying%20Marks/works">Soulmate-Identifying Marks</a></li><li><a class="tag" href="/tags/Violence/works">Violence</a></li><li><a class="tag" href="/tags/Gore/works">Gore</a></li><li><a class="tag" href="/tags/Torture/works">Torture</a></li><li><a class="tag" href="/tags/Minor%20Character%20Death/works">Minor Character Death</a></li><li><a class="tag" href="/tags/Order%20of%20the%20Phoenix%20(Harry%20Potter)/works">Order of the Phoenix (Harry Potter)</a></li><li><a class="tag" href="/tags/Politics/works">Politics</a></li><li><a class="tag" href="/tags/Pureblood%20Politics%20(Harry%20Potter)/works">Pureblood Politics (Harry Potter)</a></li><li><a class="tag" href="/tags/Minister%20for%20Magic%20Tom%20Riddle/works">Minister for Magic Tom Riddle</a></li><li><a class="tag" href="/tags/Heavy%20Angst/works">Heavy Angst</a></li><li><a class="tag" href="/tags/Drama/works">Drama</a></li><li><a class="tag" href="/tags/Action*s*Adventure/works">Action/Adventure</a></li><li><a class="tag" href="/tags/Spy%20Harry%20Potter/works">Spy Harry Potter</a></li><li><a class="tag" href="/tags/Suicidal%20Thoughts/works">Suicidal Thoughts</a></li>
+            </ul>
+          </dd>
+
+      <dt class="language">
+        Language:
+      </dt>
+      <dd class="language">
+        English
+      </dd>
+
+
+      <dt class="collections">
+        Collections:
+      </dt>
+      <dd class="collections">
+        <a href="/collections/Harry_Potter_Slash_Stories">Harry Potter Centric Fanfiction</a>, <a href="/collections/sofuckinggood">literally amazing i could read these over and over</a>
+      </dd>
+
+    <dt class="stats">Stats:</dt>
+    <dd class="stats">
+<!-- end of cache -->
+
+      <dl class="stats"><dt class="published">Published:</dt><dd class="published">2019-09-20</dd><dt class="status">Updated:</dt><dd class="status">2021-03-11</dd><dt class="words">Words:</dt><dd class="words">208107</dd><dt class="chapters">Chapters:</dt><dd class="chapters">35/?</dd><dt class="comments">Comments:</dt><dd class="comments">2268</dd><dt class="kudos">Kudos:</dt><dd class="kudos">9028</dd><dt class="bookmarks">Bookmarks:</dt><dd class="bookmarks"><a href="/works/20704793/bookmarks">2292</a></dd><dt class="hits">Hits:</dt><dd class="hits">230343</dd></dl>
+      </dd>
+  </dl>
+</div>
+
+
+
+<!-- BEGIN section where work skin applies -->
+<div id="workskin">
+  <div class="preface group">
+    <h2 class="title heading">
+      His Darkest Devotion
+    </h2>
+    <h3 class="byline heading">
+      <a rel="author" href="/users/Lomonaaeren/pseuds/Lomonaaeren">Lomonaaeren</a>
+    </h3>
+
+
+        <div class="summary module" role="complementary">
+          <h3 class="heading">Summary:</h3>
+            <blockquote class="userstuff">
+              <p>Harry Potter has been hiding in plain sight all his life, since he carries the soul-mark of Minister Tom Riddle on his arm—and a fulfilled soul-bond will double both partners’ power. His parents and godfather are fugitives, members of the Order of the Phoenix, and Harry is a junior Ministry official feeding the Order what information he can. No one, least of all him, expects Harry to come to the sudden notice of Minister Riddle, or be drawn into a dangerous game of deception.</p>
+            </blockquote>
+        </div>
+
+        <div class="notes module" role="complementary">
+  <h3 class="heading">Notes:</h3>
+
+
+
+
+
+    <blockquote class="userstuff">
+      <p>This is a long fic and an extreme AU, as you can see from the summary. The different facets of the AU will be revealed slowly, so roll with the differences at first; in time, all should be revealed.</p>
+    </blockquote>
+
+</div>
+
+
+  </div>
+
+
+
+    <div id="chapters">
+      <!-- This partial requires local variable 'chapter' -->
+<div class="chapter" id="chapter-1">
+  <!-- chapter management -->
+
+
+  <div class="chapter preface group" role="complementary">
+    <h3 class="title">
+      <a href="/works/20704793/chapters/49183289">Chapter 1</a>: Phoenixes
+    </h3>
+
+    <!-- only display byline if different from the main byline -->
+
+
+  </div>
+
+  <!--main content-->
+  <div class="userstuff module" role="article">
+    <h3 class="landmark heading" id="work">Chapter Text</h3>
+    <p><b></b>Harry glanced up as someone called his name. Auror Jalena Whipwood was tapping her wand on her hip as she glared at him from the other side of the common office where the junior employees of the Department of Magical Games and Sports had their desks. Harry stood up at once and made his way across the room to her, bowing his head a little when he got close.</p><p>“Auror Whipwood. What can I do for you?”</p><p>“Time for the monthly interrogation, Potter,” Whipwood said, and spun on her heel to walk down the corridor. She fit her name as far as her leanness and sharp movements went, although her honey-blonde hair that she wore long to her back didn’t. She had supposedly sworn to cut it when she met someone who could defeat her in a duel. Harry stared at her back and dreamed about using a Severing Charm right now.</p><p>But in the end, he managed to subdue his impulse, and a good thing, too, because when Whipwood led him into the small room with the round table usually used for interrogations, Harry found not just Head Auror Kingsley Shacklebolt, a calm man who never made him feel intimidated, but Minister Tom Riddle. Harry’s heart constricted in his throat.</p><p>The name sprawled along his wrist in magically-inked letters seemed to burn.</p><p>Harry reminded himself, as he hadn’t had to do in a while, about the Muggle tattoo of a phoenix rising from broken shackles that covered the words, and which he’d had done long enough ago that most people thought that image was his soul-mark. Harry nodded politely to both men, making the bow of his head deeper to the Minister. “Head Auror Shacklebolt. Minister. Will it be under Veritaserum this time?”</p><p>“Yes, of course,” Minister Riddle said, the smile on his face pleasant if you didn’t look at it too closely. “Concerned, Mr. Potter?”</p><p>“I always am, sir,” Harry said, and made his voice anxious as he sat down across from them and took out his wand to put it on the table. “I really want to succeed in this job.”</p><p>Minister Riddle snorted, his gaze drifting away from Harry, and Harry relaxed a little. He had permitted himself to excel at Quidditch in Hogwarts, but nothing else, because he knew Riddle thought Quidditch only a few steps above a brawl. It meant he had no reason to find Harry interesting. The position in the Department of Magical Games and Sports was a ruse for the same reason.</p><p>Harry did wish he could have taken a different job, but only so that he could have fed more useful information to his parents and godfather. Quidditch schedules and gossip about which Gobstone teams were in debt had limited currency.</p><p>Harry let himself study Riddle from sidelong glances as Shacklebolt read him the long, long list of reasons they would be involving Veritaserum in this interrogation and the rules under which it would be used—things Harry knew so well he could mouth along, but which had to be read every time again, because of Ministry rules.</p><p>No one would deny that Riddle was a handsome man, taller than most wizards, with dark hair silvered at the temples that he wore short and sharply cut at all times. His eyes, dark blue with only a hint of red, could soften or blaze, and he seemed to do the right thing at the right time, always. The phoenix of onyx and diamond that hung on a slender silver chain over his heart, the two jewels making its feathers mixed black and white, might have been an unusual touch, but everyone knew the story.</p><p>Riddle had once borne the soul-mark of the rising black-and-white phoenix on his chest. Then two students who had attacked him at Hogwarts when he was thirteen years old had burned it off. Riddle had had the jeweled phoenix he wore crafted several years afterwards, relying on Pensieve memories of the original mark, and wore it always on a chain exactly the right length to make the phoenix dangle where his mark would have been.</p><p>The two students who had burned him had disappeared on the anniversary of the attack a year later. Then the single sibling they’d each had at Hogwarts had disappeared on the next anniversary. Their parents on the third. And so on, until all of their families and friends and allies were dead.</p><p>Headmaster Dumbledore suspected what Riddle had done to them, but he could never prove enough to arrest Riddle.</p><p>And Riddle walked around with that phoenix in plain sight and no worry over what anyone would say to him.</p><p>Harry turned away when he saw the red-tinged eyes coming back to him. It was expected that the lower-level functionaries of the Ministry would gape at the Minister, but there was only so much servility he could stomach, even for the sake of the deception.</p><p>“Three drops on the tongue, Mr. Potter.”</p><p>Harry opened his mouth. As soon as the three drops began to dissolve on his tongue, he squeezed his fingers into the palm of his left hand.</p><p>That triggered one of the spells he had practiced with Professor Dumbledore until he could cast it windlessly, wordlessly, and without anyone else noticing. His skin might have given a slight spark. Not enough to notice.</p><p>Riddle’s eyes did narrow a little, but he said nothing. Harry let his lips part slightly and his eyes glaze, the way that they would if he was completely under Veritaserum.</p><p>“Are you in contact with any of the malcontents known as the Order of the Phoenix?” Shacklebolt asked, after a few testing questions that proved what Harry’s middle name and birthday were.</p><p>“No,” Harry said. The resistance spell danced under his skin and around his tongue, nullifying the potion before it could force him to speak the truth. Most attempts to resist Veritaserum didn’t work because they tried to prevent the potion from affecting the brain. But giving back control of one’s mouth was simpler and more likely to work.</p><p>Of course, that should have made Harry’s brain blurred and shadowy, and his answers still lies. But Harry had never reacted to attempts to control him exactly like anyone else.</p><p>“What do you think of your godfather and parents?” Shacklebolt was scribbling down the answers as busily as he usually did.</p><p>“They’re fools,” Harry said. He stared straight ahead and ignored the impulse to turn his head just a little to watch Riddle as he leaned forwards. “They rebelled for no good reason and listened to a man who should have advised them better if he was going to advise them.”</p><p>“A rather unusual opinion for a man who was supposedly a devoted son and godson,” Riddle said, his voice soft.</p><p>Harry continued staring straight ahead and said nothing. Riddle wouldn’t catch him that easily. It wasn’t a question, so someone actually drugged with Veritaserum wouldn’t have responded.</p><p>“When and why did you change your mind from being a devoted son and godson?” Riddle asked then.</p><p>“Minister, we’ve found that we get the best results when—”</p><p>“When my godfather was exiled,” Harry said, emotionlessly, in the way that he and Dumbledore had practiced for hour after hour. “I thought they were putting me first. It turned out they were putting their politics first.”</p><p>“Ah. What is your greatest ambition, Mr. Potter?”</p><p>“To be a professional Quidditch player.”</p><p>Riddle made a very soft sound that <em>might </em>have been a scoff if you were listening closely enough. Harry was. “And you harbor no ambition to go into politics? Why not?”</p><p>“No. It made my godfather and my parents abandon me. I needed them and they weren’t there.”</p><p>Far worse than learning the resistance spell itself had been Harry’s learning to speak those deceptions in an emotionless voice. He didn’t <em>want </em>to. He hated the sensation of lying about his love for Sirius and Mum and Dad.</p><p>But it was necessary. They would suffer worse than exile if Riddle caught them. If he knew that Harry sometimes contacted them. For the well-being of those he loved, Harry would face dragonfire.</p><p>And if part of him grimly rejoiced in keeping the soulmate from Riddle that he would have given the world to get, that did nothing bad to his Veritaserum resistance.</p><p>“An interesting perspective,” said Riddle, gazing into his eyes as if searching for something. Harry suspected it was a reflection of the ambition that he bore. Headmaster Dumbledore had said that Riddle was incapable of understanding people different than he was. “So. Tell me, Mr. Potter. What <em>are </em>your political beliefs?”</p><p>“Muggleborns should be able to attend Hogwarts and work in the Ministry.”</p><p>Riddle paused for a long moment and then murmured, “And beyond that?”</p><p>“I think half-bloods should be treated better, too.”</p><p>Riddle leaned back in his chair and shook his head at Shacklebolt. “Head Auror, does this young man have <em>any </em>other beliefs?”</p><p>“Not really,” Shacklebolt said with a slight shrug, as he leaned over to retrieve the Veritaserum antidote. “I don’t see that he needs to, Minister. When we’re questioning young wizards who have suspect family connections, it’s probably better if they don’t have strong convictions.”</p><p>The antidote always made Harry blink and gasp, because the combination of the cold sensation on his tongue along with the resistance spell sparking and dancing beneath his skin was <em>weird. </em>He released the spell and rubbed his jaw, shivering. He avoided Riddle’s gaze, not because he wanted to but because someone who had been asked questions that intense would.</p><p>“Tell me, Mr. Potter, without the potion this time. Why didn’t you flee to join your parents and godfather?”</p><p>“Because I don’t even know where they are,” Harry whispered, and worked dejection into his voice. He ignored Shacklebolt’s hiss. Apparently Riddle shouldn’t be questioning him without the Veritaserum, and Harry shouldn’t be answering without it. But Harry didn’t really care about that part. “They chose their politics over me.”</p><p>“But you could have gone to them when you completed your Hogwarts education.”</p><p>“What, sir? Just run into the wilderness and hoped to find them?” Harry looked up and blinked at Riddle, doing his best imitation of “defiant young man who doesn’t really know how to be defiant.” “I don’t—that’s not the kind of life I want for myself.”</p><p>“So you’re not a freedom fighter?” Riddle looked half-amused, half-bored. This really couldn’t be going better.</p><p>“No, sir. I like Quidditch. I believe certain things, but if the Ministry doesn’t want to let Muggleborns and half-bloods have a fair chance, there’s not much I can do.” Harry stared at his hands this time. “Blood politics always bewildered me…”</p><p>“Along with a great many other things, I imagine.” Riddle’s boredom had won. He stood up and waved a hand at Auror Shacklebolt. “Keep up the good work, Head Auror. I have other business to attend to this morning.” He strode through the door. Listening, Harry imagined he could hear the jeweled phoenix bouncing off the buttons in Riddle’s robe.</p><p>Shacklebolt shook his head a little. “I don’t know why he questioned you, lad. You have a clean record, and the Veritaserum never reveals anything suspect.”</p><p>Harry let out a bitter, brave little sigh. “I know why, sir. It’s always hard to believe that I don’t want to follow my parents. They’re so notorious.”</p><p>“I know.” Shacklebolt leaned forwards and searched his face, but he wasn’t a Legilimens and Harry met his gaze fearlessly. “You know that if someone <em>does </em>suggest you run and join their side, you could come and talk to me, don’t you?”</p><p>Harry looked into Shacklebolt’s earnest eyes and nodded. As far as he knew, the man wasn’t as bad as Riddle. He had never shown any sign of believing in blood purity in all the years that Dumbledore’s allies had observed him. On the other hand, he followed along because he thought that Riddle was <em>good </em>for the Ministry, which only went to show how blind some people could be.</p><p>“Good lad.” Shacklebolt squeezed his shoulder for a minute. “You were excellent at Quidditch at Hogwarts, I’ve heard. You can parlay that into an excellent career in the Department of Magical Games and Sports, as well.”</p><p>Harry grinned and bobbed his head, as empty-eyed a look as Shacklebolt would expect from him. Then he ducked out of the conference room. He waited until he was back in his little shared office to run his fingers over the mark on his right wrist.</p><p><em>Tom Marvolo Riddle, </em>it might say along his wristbone, but the black letters faded now into the open, shattered shackles that his tattooed phoenix was erupting from. It would be hard for Riddle to accidentally touch the words even if he grasped Harry’s hand.</p><p>And he had “tested” Harry when he first came to work at the Ministry, the way he did everyone who had a phoenix image somewhere on their skin. Images were harder to match as soul-marks than words, and Riddle wouldn’t let the chance pass by.</p><p>But of course, touching the phoenix had done nothing, when it was simply Muggle ink. Riddle had let him go at once and turned to walk back into the Ministry.</p><p>Harry sat down at his desk and picked up his quill again.</p><p>There were members of the Order who had thought he was insane to get a phoenix tattoo at all, when it was so similar to what Riddle bore. But Harry had done it for himself, not Riddle. He wanted to carry the reminder, each and every day, of what it would mean if he gave into his own longing for his soulmate and accepted that—monster.</p><p>*</p><p>Lily looked carefully around the clearing in the Forest of Dean. It seemed deserted, but then, most places in the woods looked like that until you started casting the necessary protection spells.</p><p>“It <em>is </em>deserted, Lily-Bell,” James breathed from next to her, tugging the Invisibility Cloak off over his head. Long years of practice kept Lily from flinching about it, but she did give him a single expressive look. James ignored her. “I’m sure that it’s safe for you to send him the Apparition coordinates.”</p><p>Lily nodded and breathed a single, careful breath. It was already dusk, and they would have to hurry if they wanted to send Harry usable coordinates. She brandished her wand, and a second later her silver doe leaped through the evening, seeking out her son.</p><p>They had always been careful never to send their recognizable Patronuses whenever Harry might have someone with him, and yet there was always the first time for slipping up. Lily readied her wand, while James stood next to her in tense silence.</p><p>Ten minutes later, Harry Apparated in.</p><p>Lily felt tears slipping down her face as she extended her hands. Harry caught them, and then he hugged her and she was kissing him desperately on the nose and the cheeks. Harry laughed. Lily felt a trace of tears on his cheeks, as well.</p><p>“You’re taller,” she muttered into his shoulder, where she hid her face for a moment.</p><p>“Am not,” came Harry’s automatic reply, and then James took him from her arms, and Lily wiped away the last of her tears and smiled. James hugged Harry for a much shorter time. <em>Stupid masculine pride, </em>Lily thought idly as she watched James pounding Harry’s back with one hand for a moment.</p><p>“Well, you look taller,” Lily said, before James could demand Harry’s report. “How <em>are </em>you, Harry?”</p><p>Harry gave her a smile with a shadow in it, and Lily softened and reached up to trace her hand over his brow. There was an old, ancient scar there, from the time that Harry had fallen off his broom when he was four years old and split his head open on the oak in front of their cottage door. Some ignorant people had thought the lightning-bolt-shaped scar was his soul-mark, at least until Harry had got the Muggle tattoo.</p><p>Lily reached back almost without thinking, and touched the green stag in the center of her back. She could feel James’s smug look without turning. She rolled her eyes back without turning, knowing he would feel that.</p><p>Knowing he was probably touching the pale lily on his left forearm, too.</p><p>“I had my monthly interrogation today,” Harry began, and Lily steeled herself to listen. She hated hearing about what they put her baby boy through, the Ministry. Yet he was twenty-four now, not a baby anymore, and Lily herself had seen forty-five years, and they had chosen to fight this war.</p><p>James listened to what Harry said with an increasingly grim look. “Do you think there’s any way Riddle could suspect what you are?” he asked.</p><p>Lily stepped forwards and hugged Harry again, ignoring the way he stiffened and muttered, “Mum, geroff.” They never said that Harry was Riddle’s soulmate aloud, except when discussing it with Dumbledore. Not even Sirius knew. There was too much chance that someone could betray them, or would assume Harry was evil and had to be killed for someone he’d had no control over.</p><p>As far as Sirius and Arthur and Molly and the rest knew, “what you are” just referred to Harry being their spy in the Ministry. Which was dangerous enough, honestly.</p><p>“No,” Harry said. “I think he just likes to question everyone from time to time, and try to ‘understand’ them.” The inverted commas he put around the verb could have pierced the sky, Lily thought. “It’s ridiculous. He doesn’t think that anyone without exactly his kind of ambition is worth anything. He asked me about my politics and seemed disbelieving that I didn’t have any.”</p><p>“<em>None</em>?” James asked sharply.</p><p>“I pretended that the Veritaserum forced me to admit that I think Muggleborns and half-bloods should be treated equally. That’s all. I couldn’t hide that anyway, Dad, there are too many people at the Ministry who knew me in Hogwarts.”</p><p>“True enough, “James said, calming down. “But I assume that he wanted to find out if you were ready to follow us.”</p><p>“Yeah, that was what he wanted.”</p><p>Harry stared off into the distance for a moment. Lily couldn’t see well, given the muted <em>Lumos </em>Charm on James’s wand alone and the soft purple light coming from above, but she could make out the edges of the grim set to her jaw.</p><p>It made Lily want to hug him again, but she held back. Two hugs were about as much as Harry would permit at any one meeting—well, three, but the last one had to be saved for when he was leaving. God, it hurt, knowing her son could never be with his soulmate.</p><p>But how <em>could </em>he be with a man who would despise him at best, knowing he was the son of a blood traitor and a supposedly inferior Muggleborn, and who would try to woo him and seduce him at worst? Soulmates gained fourfold power when they were together and truly in love—but it <em>did </em>have to be true love, not one-sided. If Riddle managed to seduce Harry and win his heart, he would only be doubly powerful, not fourfold. That was because Riddle didn’t have a heart to lose, Lily thought.</p><p>But doubly would be bad enough for the Order’s cause. And Harry had understood, even when he was very young and Lily had explained to him who his soulmate was, that some things were more important than an individual’s happiness. He was so brave, her son. So much a Gryffindor.</p><p>“If you ever think that it’s becoming too much,” James said seriously, reaching up to lay a hand on Harry’s shoulder, “the pressure and the lying, let us know. You’d be welcome here, you know that.”</p><p>Harry smiled at them, and the grimness Lily had become half-used to seeing dissolved in instants. “I know, but I’ve been useful where I am, haven’t I? I’ve been able to pass on word of things like that raid that almost caught Sirius?”</p><p>“Yes, and I’m damn grateful for it,” said a voice from the side. Sirius shook off the last remnants of the black dog he’d been for a minute and grinned at Harry. “Hello, kiddo.”</p><p>“Hi, Sirius,” Harry said, and did permit another hug after all.</p><p>“But I mean it,” James insisted, catching Lily’s eye for a second. She nodded. In this case, they spoke as one. “If you want to be here, you’re here. Your life is more important than that bloody information. Your happiness.”</p><p>Harry’s mouth twisted, a little wistfully. “Ron and Hermione did get together, didn’t they?”</p><p>“Yes, last week,” Lily muttered, shaking her head. “I’ve never known someone who was so stubborn about being with their soulmate.”</p><p>“Did you mean Ron or Hermione?” Harry teased. Like Lily, he knew it was both of them. They’d both come close to being arrested for a too-obvious attempt to break into the Department of Mysteries and had to run, and Hermione had wanted to be “more than a pure-blood’s wife” and Ron had still been denying he liked her. At least that was over now.</p><p>“See, that’s another thing,” James interjected, looking back and forth between Lily and Harry. “If you came here, you could be with your friends. I know you’ve missed them.”</p><p>“I do miss them, but...” Harry hesitated. Sirius reached forwards and cuffed the back of his head, the way he used to do when Harry was slow to answer at lessons before Hogwarts, but his eyes were worried. Lily knew the feeling. “I just don’t want to spend much time around people united with their soulmates right now.”</p><p>“Ah, kiddo,” Sirius said in a low voice, and embraced him. Harry hugged him back, but he was already withdrawing. Lily could see it. The life he led away from them was lonely and dangerous, but he seemed almost to prefer it.</p><p>People among the Order would either look at him in pity, the ones who thought his soulmate was dead, or constantly ask him why he wasn’t searching for her. Supposedly by Harry’s age it had become a pull that was impossible to ignore.</p><p>“Going so soon?” Sirius asked, but Harry nodded and kissed Lily on the cheek, hugging her the regulation one more time before he patted Sirius on the shoulder and punched his father. Then he turned and Apparated away.</p><p>Sirius sighed. “Merlin, I would do anything if I could find that kid’s soulmate for him.”</p><p>“I know,” James said, and he exchanged a sad smile with Lily that had all the meaning Padfoot would never know. He draped an arm over her shoulder as they walked back towards the Apparition point that would take them into the Order’s guarded camp.</p><p>Lily closed her eyes tightly. She had her soulmate, the fourfold bond of love and trust and magic and united thoughts.</p><p>But it pained her so much that her son was never to know the same.</p><p>*</p><p>“But I heard that Professor McGonagall’s classes are <em>really </em>hard.”</p><p>Peter smiled and pushed the scroll on the desk back across it, towards young Miss Lavelock. “I think they are both hard and rewarding. In any case, you passed your OWL with an O, Miss Lavelock. You belong in NEWT Transfiguration.”</p><p>“I wish I could just stay in the fifth-year class,” Lavelock whispered desperately. She had white hair that was characteristic of her family, and it fell over her face as she looked down and chewed on her lip.</p><p>“You can still come to me for help,” Peter promised. “Remember that I know the Animagus transformation, too, and I have all the necessary education.”</p><p>“Then why aren’t <em>you </em>teaching NEWT Transfiguration?”</p><p>Long years of practice kept Peter from rolling his eyes, even though he felt like it. Students were all the same in the way they acted when they thought they’d perceived some shortcoming on a teacher’s part and wanted to call them out. “Because I enjoy the younger years,” he said easily. “And because we have time and room and money for multiple Transfiguration professors, now, thanks to Minister Riddle. Professor McGonagall is the senior one and got to choose what she wanted.”</p><p>“Yeah, well...” Lavelock’s voice trailed off into silence. Then she sighed. “I can still come and ask you for help, Professor Pettigrew?”</p><p>“Of course. But you should talk to Professor McGonagall as well. I promise you that she’s not as intimidating as she appears.”</p><p>“You were in Gryffindor House, weren’t you, sir?”</p><p>“Yes. And I can also promise that she’s not as biased against Slytherins as your Housemates might have told you.”</p><p>“Alllll right,” Lavelock said, stretching the sound out to indicate that she was in the thrall of teenage hopelessness, and trailed out the door. Peter waited until he was sure that the door had shut behind her before he chuckled.</p><p>Every now and then he got someone who had become so comfortable and complacent in the forth- and fifth-year courses that they decided Professor McGonagall must be a tyrant simply because she wasn’t him. But in general, Peter and Minerva cooperated well, and now that she had multiple colleagues with expertise in Transfiguration, she had more time for her Deputy Headmistress duties as well as time to concentrate on individual students.</p><p>Although even when she was by herself, she hadn’t done badly, Peter thought idly as he stood up and made sure that the pincushions for the next morning’s class were stored neatly in the bins on his shelves. She’d turned three of them into Animagi, after all.</p><p>Peter winced at the thought. He hadn’t seen Sirius and James in a long time. It had nothing to do with Remus, although that terrible night in their fifth year when Sirius had come up with his <em>great</em> idea to prank Severus Snape had stood between them for months. No, in the end what they couldn’t stomach was Peter’s refusal to join the Order of the Phoenix.</p><p>Or, maybe even more than that, his decision to register as an Animagus and get a proper education in Transfiguration, already with an eye to becoming a professor one day.</p><p>Peter honestly didn’t see what they had to be that upset about. He’d held his silence and never revealed to anyone else that Sirius was a dog and James a stag; they could tell people or not on their own. But he had looked long and hard at Albus Dumbledore the day he had announced that he wanted talented students to join the Order.</p><p>He’d seen a man who was recruiting children to fight his war. More than that, a man who approached only Gryffindors (and now and then a select Hufflepuff). If House prejudices really had no place in a full life, as their professors were forever telling them, how could it have a place in a decision as important as who should fight to free their world?</p><p>That, and, well...</p><p>Peter glanced at the clock, but it was still a few minutes before he would join Minerva to walk to the Great Hall for dinner.</p><p>Albus, and the rest of the Order, saw Riddle as a madman who would someday rise up and eradicate all the Muggleborns in their world, mainly because he pandered the politically-powerful pure-bloods who wanted that. And Peter did think that prejudice was stupid and not something he wanted to emulate.</p><p>But was he the only one who saw Riddle as a <em>politician? </em>Someone who followed that rhetoric when necessary, but also promoted Muggleborns to positions of power and favored half-bloods more than anyone? Someone who steered the Wizengamot as if with a bridle because he could anticipate what they wanted and somehow twist their desires around so that the answer to achieving them focused on him?</p><p>Peter didn’t admire every decision Riddle had made. Some struck him as risky, or made out of laziness, because Riddle didn’t really care about the question under debate and simply went with whatever would please the majority of his supporters.</p><p>But in general, Peter couldn’t imagine someone further from a madman. Someone who had to play the political balancing game he did was simply too clever to fall into madness through the use of Dark rituals the way Albus and the Order believed he had. And if he had been pretending at sanity, he would have been found out by now.</p><p>Peter had chosen a different path than war. If it was a kind of sneaking, sly way of peace, well, that fit with the admiration he felt for Riddle, too.</p><p>And with his Animagus form, even though he didn’t think he needed another reminder of that.</p><p>Someone knocked briskly on the door, although from years of experience, Peter knew by now that the “someone” was Minerva. He smiled as he opened his door, and Minerva nodded to him with the relaxed expression Peter wished she would wear around the students more often. It would help lessen their terror of her.</p><p>“Ready, Professor Pettigrew?” She was always formal like that out in a corridor, where a student might pass and overhear.</p><p>“Yes, Professor McGonagall,” Peter said, and went to fetch his scarf. His seat at the High Table seemed to have a persistent draught.</p><p>*</p><p>“There’s nothing else you need from me, sir?”</p><p>“No, thank you, Auror Shacklebolt,” Tom said, and waited for the Head Auror to depart before he leaned back in his chair and stared into the fire that blazed in a corner of his office. It was high summer, and he knew the others thought it an affectation.</p><p>However, the fire wasn’t for his benefit. A long, lean shadow uncoiled near his feet and slithered towards the fire.</p><p>“<em>You are well, Nagini</em>?” Tom asked, leaning over to let his fingers trail down her back. The smoothness of her scales, and the silvery color of them, comforted him. He had her layered and armored in spells that would turn everything short of a Killing Curse.</p><p><em>“I am well, my human.</em>” Nagini curled up near the fire, although with her head resting on his foot, and stared into the hearth.</p><p>Tom looked down at her. Few people knew of her existence. None knew that she was his familiar, bound to him by such spells that they tugged on his very soul.</p><p>Of course, there was another tug, another bond that should have been completed for the good of his soul and was simply empty, stretching away into midair like smoke. Tom could see it whenever he worked magic that used Nagini’s help.</p><p>If he had his soulmate, then he could use magic that would ensure even the Killing Curse could not take Nagini away. He might achieve immortality, as the most powerful fourfold-bonded pairs supposedly did. It was the only reason he had held back on creating Horcruxes. They promised immortality, but nothing else.</p><p>He could do that. <em>If </em>he had his soulmate.</p><p>Tom’s lips curled in a silent snarl. He had risen to the position of Minister because he wanted the power and because he loved the game of playing one faction off against each other, but also because he wanted security as deep as he could make it. When he found his soulmate, he would not lose them.</p><p>“They must exist,” he muttered in English.</p><p>Nagini lifted her head and locked her bright golden eyes with his. She didn’t understand English most of the time, but she had heard those words often enough to know what they meant. “<em>They exist, or the empty place in your soul would not,</em>” she agreed. “<em>But you have sought them for almost seventy years without finding them. Will you not give this up and find some other way of achieving what you want, my human? Your magic has kept you looking as young as it has, with undiminished strength. You are strong enough to fulfill your desires by yourself.</em>”</p><p>Tom shook his head. “<em>I want them so that I can achieve things that would take me decades or centuries otherwise. Decades or centuries I do not have. And I want them—</em>“ He stopped.</p><p>“<em>Yes</em>?”</p><p>But not even to Nagini could he speak of the other reasons, although she knew them already and Tom also knew that she would never betray his secrets. He reached down and ran a long, slow hand over Nagini’s back. The spells he had on her scales trembled under his touch and made her arch her neck in pleasure.</p><p>“<em>Enough that I want them. I shall have them. I shall court them and make them fall in love with me.</em>”</p><p>Not that Tom believed it would be difficult. Someone who was a true mate to his soul would have the same burning, boundless ambition that he did, and must also welcome the increase in power. They would be unstoppable together, and Tom wanted that.</p><p>He did not want to consider the likely possibilities: that either his soulmate was so young he would have to wait decades more, or that his soulmate knew exactly who Tom was and was avoiding him on purpose.</p><p>
+  <em>I would not be a rival. I would not harm them. Can they not see that?</em>
+</p><p>But such thoughts were for the silence and the fire. Tom settled back and allowed himself ten minutes more before he stood.</p><p>He had to hear a tricky case before the Wizengamot tomorrow, and he needed his rest.</p>
+  </div>
+  <!--/main-->
+
+
+</div>
+
+<!-- end of cache -->
+
+    </div>
+  
+  
+    </div>
+    <!-- END work skin -->
+  </div>
+  <!-- END work -->
+
+  <!-- BEGIN comment section -->
+  <!-- Gets embedded anywhere we need to list comments on a top-level commentable. We need the local variable "commentable" here. -->
+<div id="feedback" class="feedback" role="complementary">
+
+  <h3 class="landmark heading">Actions</h3>
+
+  <ul class="actions" role="navigation">
+      <li><a href="#main">&#8593; Top</a></li>
+
+
+      <li><a href="/works/20704793/chapters/49369766#workskin">Next Chapter &#8594;</a></li>
+
+
+
+
+      <li>
+        <form id="new_kudo" action="/kudos" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="YGjvwJpPvpiOreSdQdaELBIHu3Km2wRi8ZJGyrViuEAKCFRiZ0zj+4uNdLJIL74DD3nP0G8uS3iORG0cggtPjg=="/>
+          <input value="20704793" type="hidden" name="kudo[commentable_id]" id="kudo_commentable_id"/>
+          <input value="Work" type="hidden" name="kudo[commentable_type]" id="kudo_commentable_type"/>
+          <input type="submit" name="commit" value="Kudos ♥" id="kudo_submit"/>
+</form>      </li>
+
+
+
+
+        <li id="show_comments_link"><a data-remote="true" href="/comments/show_comments?chapter_id=49183289">Comments (127)</a></li>
+  </ul>
+
+  <div id="kudos_message"></div>
+
+  <h3 class="landmark heading"><a name="comments">Comments</a></h3>
+
+  
+
+    <div id="kudos">
+      <p class="kudos">
+          <a href="/users/smallquestionsasked">smallquestionsasked</a>, <a href="/users/nymmiah">nymmiah</a>, <a href="/users/quxxn24">quxxn24</a>, <a href="/users/AriadneAa123">AriadneAa123</a>, <a href="/users/Ohcalifornia">Ohcalifornia</a>, <a href="/users/WolfCharm3629">WolfCharm3629</a>, <a href="/users/ArdentKnight">ArdentKnight</a>, <a href="/users/WendyElement">WendyElement</a>, <a href="/users/FanficFanTB">FanficFanTB</a>, <a href="/users/BlueTeddybear201">BlueTeddybear201</a>, <a href="/users/Pandakat678">Pandakat678</a>, <a href="/users/Naydra">Naydra</a>, <a href="/users/JKButterfly16">JKButterfly16</a>, <a href="/users/littsz">littsz</a>, <a href="/users/Mariczka2302">Mariczka2302</a>, <a href="/users/Noraskullbasher">Noraskullbasher</a>, <a href="/users/notyoutoo">notyoutoo</a>, <a href="/users/2days_of_summer">2days_of_summer</a>, <a href="/users/Aki_WildQueen">Aki_WildQueen</a>, <a href="/users/Florentine12">Florentine12</a>, <a href="/users/Sweetie_Nighcore">Sweetie_Nighcore</a>, <a href="/users/caeulio">caeulio</a>, <a href="/users/lovelizzie">lovelizzie</a>, <a href="/users/Silia_28M">Silia_28M</a>, <a href="/users/Harrisad25">Harrisad25</a>, <a href="/users/Metamorfosica">Metamorfosica</a>, <a href="/users/Cedrella_Black">Cedrella_Black</a>, <a href="/users/ayahiraya">ayahiraya</a>, <a href="/users/DustyM80">DustyM80</a>, <a href="/users/00Misty">00Misty</a>, <a href="/users/fletchingarcher">fletchingarcher</a>, <a href="/users/purplesugarland">purplesugarland</a>, <a href="/users/rachel210491">rachel210491</a>, <a href="/users/helminthhh">helminthhh</a>, <a href="/users/Jeffylikesties">Jeffylikesties</a>, <a href="/users/Double3Time">Double3Time</a>, <a href="/users/SofiaAnn09">SofiaAnn09</a>, <a href="/users/Hagertyj30">Hagertyj30</a>, <a href="/users/Addy01">Addy01</a>, <a href="/users/Seomi">Seomi</a>, <a href="/users/SaarKazul">SaarKazul</a>, <a href="/users/rosyplea">rosyplea</a>, <a href="/users/Sorebeb">Sorebeb</a>, <a href="/users/Enailuj">Enailuj</a>, <a href="/users/hyukkie12">hyukkie12</a>, <a href="/users/MoonChii">MoonChii</a>, <a href="/users/Dekamory">Dekamory</a>, <a href="/users/zenlove11">zenlove11</a>, <a href="/users/Keihiro11">Keihiro11</a>, <a href="/users/Eggster">Eggster</a><span id="kudos_more_connector">, and </span><a id="kudos_more_link" data-remote="true" href="/works/20704793/kudos?before=2872574058">4195 more users</a>
+             as well as 
+          4782 guests
+         left kudos on this work!
+      </p>
+</div>
+
+
+    <div id="add_comment_placeholder" title="top level comment">
+      <div id="add_comment">
+        <!-- expects the local variables comment, commentable, and button_name -->
+<div class="post comment" id="comment_form_for_49183289">
+  <form class="new_comment" id="comment_for_49183289" action="/chapters/49183289/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="p3lSbpHIffxLjdAEAxWjrB3tvy+hVS7Q3F8d77z0ejPNGenMbMsgn06tQCsK7JmDAJPLjWigYcqjiTY5i52N/Q=="/>
+    <fieldset>
+      <legend>Post Comment</legend>
+
+
+
+
+
+
+        <dl>
+          <dt class="landmark">Note:</dt>
+          <dd class="instructions comment_form">All fields are required. Your email address will not be published.</dd>
+          <dt><label for="comment_name_for_49183289">Guest name: </label></dt>
+          <dd>
+            <input id="comment_name_for_49183289" type="text" name="comment[name]"/>
+            <script>var validation_for_comment_name_for_49183289=new LiveValidation('comment_name_for_49183289',{wait:500,onlyOnBlur:false});validation_for_comment_name_for_49183289.add(Validate.Presence,{"failureMessage":"Please enter your name.","validMessage":""});</script>
+          </dd>
+          <dt><label for="comment_email_for_49183289">Guest email: </label></dt>
+          <dd>
+            <input id="comment_email_for_49183289" type="text" name="comment[email]"/>
+            <script>var validation_for_comment_email_for_49183289=new LiveValidation('comment_email_for_49183289',{wait:500,onlyOnBlur:false});validation_for_comment_email_for_49183289.add(Validate.Presence,{"failureMessage":"Please enter your email address.","validMessage":""});</script>
+          </dd>
+        </dl>
+        <p class="footnote">(Plain text with limited HTML <a class="help symbol question modal" title="Html help" aria-controls="#modal" href="/help/html-help.html"><span class="symbol question"><span>?</span></span></a>)</p>
+
+      <p>
+        <label for="comment_content_for_49183289" class="landmark">Comment</label>
+        <textarea id="comment_content_for_49183289" class="comment_form observe_textlength" title="Enter Comment" name="comment[comment_content]">
+</textarea>
+        <input type="hidden" id="controller_name_for_49183289" name="controller_name" value="chapters"/>
+      </p>
+      <p class="character_counter"><span id="comment_content_for_49183289_counter" class="value" data-maxlength="10000" aria-live="polite" aria-valuemax="10000" aria-valuenow="comment_content_for_49183289">10000</span> characters left</p>
+      <script>var validation_for_comment_content_for_49183289=new LiveValidation('comment_content_for_49183289',{wait:500,onlyOnBlur:false});validation_for_comment_content_for_49183289.add(Validate.Presence,{"failureMessage":"Brevity is the soul of wit, but we need your comment to have text in it.","validMessage":""});validation_for_comment_content_for_49183289.add(Validate.Length,{"maximum":"10000","tooLongMessage":"must be less than 10000 characters long."});</script>
+      <p class="submit actions">
+        <input type="submit" name="commit" value="Comment" id="comment_submit_for_49183289" data-disable-with="Please wait..."/>
+      </p>
+    </fieldset>
+</form></div>
+<div class="clear"></div>
+
+      </div>
+    </div>
+
+  <!-- If we have javascript, here is where the comments will be spiffily inserted -->
+  <!-- If not, and show_comments is true, here is where the comments will be rendered -->
+  <div id="comments_placeholder" style="display:none;">
+  </div>
+
+
+</div>
+<!-- END comments -->
+
+  <!-- END comment section -->
+
+
+
+          <div class="clear"><!--presentational--></div>
+        </div>
+        <!-- END main -->
+      </div>
+      <!-- BEGIN footer -->
+<div id="footer" role="contentinfo" class="region">
+	<h3 class="landmark heading">Footer</h3>
+  <ul class="navigation actions" role="navigation">
+    <li class="module group">
+      <h4 class="heading">About the Archive</h4>
+      <ul class="menu">
+        <li><a href="/site_map">Site Map</a></li>
+        <li><a href="/diversity">Diversity Statement</a></li>
+        <li><a href="/tos">Terms of Service</a></li>
+        <li><a href="/dmca">DMCA Policy</a> </li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Contact Us</h4>
+      <ul class="menu">
+        <li><a href="/abuse_reports/new">Report Abuse</a></li>
+        <li><a href="/support">Technical Support and Feedback</a></li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Development</h4>
+      <ul class="menu">
+          <li><a href="https://github.com/otwcode/otwarchive/commits/v0.9.300.1">otwarchive v0.9.300.1</a></li>
+        <li><a href="/known_issues">Known Issues</a></li>
+        <li><a href="http://www.gnu.org/licenses/gpl-2.0.html" title="View License">GPL</a> by the <a href="http://transformativeworks.org/" title="The Organization for Transformative Works">OTW</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!-- END footer -->
+
+    </div>
+    <!-- check to see if this controller/action allow tinymce before we load the gigantor js; see application_helper -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js" type="text/javascript"></script>
+<!-- if user has googleapis blocked for some reason we need a fallback -->
+<script type="text/javascript">if(typeof jQuery=='undefined'){document.write(unescape("%3Cscript src='/javascripts/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));document.write(unescape("%3Cscript src='/javascripts/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));}</script>
+
+
+<script type="text/javascript">$j=jQuery.noConflict();</script>
+<script src="/javascripts/jquery.scrollTo.min.js+jquery.livequery.min.js+rails.js+application.js+bootstrap,_bootstrap-dropdown.min.js+jquery-shuffle.js+jquery.tokeninput.min.js+jquery.trap.min.js+ao3modal.min.js+js.cookie.min.js+filters.min.js.pagespeed.jc.oz6LPTe6O7.js"></script><script>eval(mod_pagespeed_a8hDjzT3l_);</script>
+<script>eval(mod_pagespeed_1nA1vKz9z4);</script>
+<script>eval(mod_pagespeed_AKC4FLip6q);</script>
+<script>eval(mod_pagespeed_gX7XC77lvT);</script>
+<script>eval(mod_pagespeed_5zo0ZWMy4O);</script>
+<script>eval(mod_pagespeed_eCCgOhjhYQ);</script>
+<script>eval(mod_pagespeed_TU1Ln7LKSh);</script>
+<script>eval(mod_pagespeed_qTpbjsXQwh);</script>
+<script>eval(mod_pagespeed_R5FGw2ySDb);</script>
+<script>eval(mod_pagespeed_rqqFCT3xcT);</script>
+
+<script>eval(mod_pagespeed_Gf_4KFhTvB);</script>
+
+
+  <script>function isSupported(){var item="localStoragePolyfill";try{localStorage.setItem(item,item);localStorage.removeItem(item);return true;}catch(e){return false;}}function acceptTOS(){if(isSupported()){localStorage.setItem("accepted_tos","20180523");}else{Cookies.set("accepted_tos","20180523",{expires:365});}}$j(document).ready(function(){if(localStorage.getItem("accepted_tos")!=="20180523"&&Cookies.get("accepted_tos")!=="20180523"){$j("body").prepend("<div id=\"tos_prompt\" class=\"hidden\">\n  <h2 class=\"heading\">\n    <span>Archive of Our Own<\/span>\n  <\/h2>\n  <div class=\"agreement\">\n    <p class=\"summary\">\n      On Archive of Our Own (AO3), users can make profiles, create works and\n            other Content, post comments, give Kudos, create Collections and \n            Bookmarks, participate in Challenges, import works, and more. Any \n            information you publish in a comment, profile, work, or Content that you \n            post or import onto AO3 including in summaries, notes and tags, \n            will be accessible by the public (unless you limit access to a work only \n            to those with AO3 Accounts), and it will be available to \n            AO3 personnel. Be mindful when sharing personal information, \n            including  your religious or political views, health, racial background, \n            country of origin, sexual identity and/or personal relationships. To \n            learn more, check out our <a href=\"/tos\">Terms of Service<\/a> and <a href=\"/tos#privacy\">Privacy Policy<\/a>.\n    <\/p>\n\n    <p class=\"confirmation\">\n      <input type=\"checkbox\" id=\"tos_agree\" />\n      <label for=\"tos_agree\">I have read &amp; understood the new Terms of Service and Privacy Policy<\/label>\n    <\/p>\n\n      <p class=\"submit\">\n        <button name=\"button\" type=\"button\" disabled=\"disabled\" id=\"accept_tos\">I agree/consent to its terms<\/button>\n      <\/p>\n\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    var container = \$j(\"#tos_prompt\");\n    var outer = \$j(\"#outer\");\n    var button = \$j(\"#accept_tos\");\n\n    setTimeout(showTOSPrompt, 1500);\n\n    function showTOSPrompt() {\n      \$j.when(container.fadeIn(500)).done(function() {\n        outer.addClass(\"hidden\").attr(\"aria-hidden\", \"true\");\n      });\n\n      \$j(\"#tos_agree\").on(\"click\", function() {\n        button.attr(\"disabled\", !this.checked);\n        if (this.checked) {\n          button.on(\"click\", function() {\n            acceptTOS();\n            outer.removeClass(\"hidden\").removeAttr(\"aria-hidden\");\n            \$j.when(container.fadeOut(500)).done(function() {\n              container.remove();\n            });\n          });\n        };\n      }).change();\n    };\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+  <script>$j(document).ready(function(){var permitted_hosts=["archiveofourown.org","download.archiveofourown.org","insecure.archiveofourown.org","www.archiveofourown.org","insecure-test.archiveofourown.org","test.archiveofourown.org","testdownload.archiveofourown.org"];var current_host=window.location.hostname;if(!permitted_hosts.includes(current_host)&&Cookies.get("proxy_notice")!=="0"&&window.location.protocol!=="file:"){$j("#skiplinks").after("<div id=\"proxy-notice\">\n  <div class=\"userstuff\">\n    <p class=\"important\">Important message:<\/p>\n    <ol>\n      <li>You are using a proxy site that is not part of the Archive of Our Own.<\/li>\n      <li>The entity that set up the proxy site can see what you submit, including your IP address. If you log in through the proxy site, it can see your password.<\/li>\n    <\/ol>\n    <p class=\"important\">重要提示：<\/p>\n    <ol>\n      <li>您使用的是第三方开发的反向代理网站，此网站并非Archive of Our Own - AO3（AO3作品库）原站。<\/li>\n      <li>代理网站的开发者能够获取您上传至该站点的全部内容，包括您的ip地址。如您通过代理登录AO3，对方将获得您的密码。<\/li>\n    <\/ol>\n    <p class=\"submit\"><button class=\"action\" type=\"button\" id=\"proxy-notice-dismiss\">Dismiss Notice<\/button><\/p>\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    \$j(\"#proxy-notice-dismiss\").on(\"click\", function() {\n      Cookies.set(\"proxy_notice\", \"0\");\n      \$j(\"#proxy-notice\").slideUp();\n    });\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+    <script>$j(document).on("loadedCSRF",function(){$j.post("/works/20704793/hit_count.json")})</script>
+
+
+  </body>
+</html>

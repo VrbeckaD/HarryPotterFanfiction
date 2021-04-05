@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"f2edcff25e","applicationID":"190034","transactionName":"dgwMEkpfWVsHERpRXlQTFgNKQxpECgxC","queueTime":0,"applicationTime":71,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VQcCWV9RGwIJVFFRAw==",licenseKey:"f2edcff25e",applicationID:"190034"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script>
+    <meta name="keywords" content="fanfiction, transformative works, otw, fair use, archive"/>
+    <meta name="language" content="en-US"/>
+    <meta name="subject" content="fandom"/>
+    <meta name="description" content="An Archive of Our Own, a project of the
+    Organization for Transformative Works"/>
+    <meta name="distribution" content="GLOBAL"/>
+    <meta name="classification" content="transformative works"/>
+    <meta name="author" content="Organization for Transformative Works"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+        wśród węży stąpaj ostrożnie (szczególnie tych nastoletnich) - Chapter 1 - Cathy_stas - Harry Potter - J. K. Rowling [Archive of Our Own]
+    </title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/A.1_site_screen_.css.pagespeed.cf.JiR2hT5NxR.css"/>
+<style media="only screen and (max-width: 62em), handheld">#dashboard{clear:both;float:none;margin:1% 3.5%;max-width:100%;padding:0;width:auto}#dashboard,#dashboard.own{border-bottom:10px solid #900;border-top:10px solid #900;padding:.5em 0;border-radius:.25em}#dashboard ul{border:none;display:inline;padding:0;text-align:left}#dashboard li{display:inline}#dashboard a,#dashboard span{display:inline-block;margin:.25em 0}#dashboard .secondary{background:#eee;padding:.375em 0 .625em;box-shadow:inset 2px 2px 5px #bbb}#dashboard .secondary a{margin:.125em 0}#dashboard .landmark{clear:none;float:left}#main,#main.dashboard{float:none;margin:auto;padding-left:3.5%;padding-right:3.5%;width:auto}.logged-in .splash>.module{width:48.5%}.logged-in .splash > div:nth-of-type(odd) {margin-left:0;margin-right:1.5%}.logged-in .splash > div:nth-of-type(even) {margin-left:1.5%;margin-right:0}form.filters{width:auto;min-width:23%;max-width:24%}.filters fieldset{margin-right:0}form.filters dl{margin-left:.25em;margin-right:.25em}#workskin{margin:auto 1.5%}</style>
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 42em), handheld" href="/stylesheets/skins/skin_873_archive_2_0/A.5_site_narrow.handheld_.css.pagespeed.cf.8L0d7x-op8.css"/>
+<link rel="stylesheet" type="text/css" media="speech" href="/stylesheets/skins/skin_873_archive_2_0/A.6_site_speech_.css.pagespeed.cf.Ybb8bLK5Um.css"/>
+<link rel="stylesheet" type="text/css" media="print" href="/stylesheets/skins/skin_873_archive_2_0/A.7_site_print_.css.pagespeed.cf.ry3YZtf8Cz.css"/>
+<!--[if IE 8]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/8_site_screen_IE8_or_lower.css" /><![endif]-->
+<!--[if IE 5]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/9_site_screen_IE5.css" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/10_site_screen_IE6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/skins/skin_873_archive_2_0/11_site_screen_IE7.css" /><![endif]-->
+
+
+
+<!--sandbox for developers	-->
+<style media="screen">#new_work_search fieldset:first-of-type .submit{padding-top:0}.edit_external_author ul ul{margin-left:2.75em}a.resp-sharing-button__link,.resp-sharing-button__icon{display:inline-block}a.resp-sharing-button__link,a.resp-sharing-button__link:hover{text-decoration:none;color:#fff;border:none}.resp-sharing-button{border-radius:5px;transition:25ms ease-out;padding:.5em .75em}.resp-sharing-button__icon svg{width:1em;height:1em;margin-right:.4em;vertical-align:top}.resp-sharing-button__icon{stroke:#fff;fill:none}.resp-sharing-button__icon--solid{fill:#fff;stroke:none}.resp-sharing-button--twitter{background-color:#55acee}.resp-sharing-button--twitter:hover,a:focus .resp-sharing-button--twitter{background-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c}.resp-sharing-button--tumblr:hover,a:focus .resp-sharing-button--tumblr{background-color:#222d3c}.resp-sharing-button--twitter{background-color:#55acee;border-color:#55acee}.resp-sharing-button--twitter:hover,.resp-sharing-button--twitter:active{background-color:#2795e9;border-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c;border-color:#35465c}.resp-sharing-button--tumblr:hover,.resp-sharing-button--tumblr:active{background-color:#222d3c;border-color:#222d3c}</style>
+<script src="/javascripts/livevalidation_standalone.js.pagespeed.jm.oB__Z5piTe.js"></script>
+
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Ygl0x/gvvZ19UX1nq5eftevH5c/1yXn0mpiB+3j17ZGXcQ3nu1k0NXX55ndWeuWk38nrp5BD4DHVAui8RbHY9w=="/>
+
+    
+  </head>
+
+  <body class="logged-out">
+    <div id="outer" class="wrapper">
+      <ul id="skiplinks"><li><a href="#main">Main Content</a></li></ul>
+      <!-- BEGIN BETA CAVEATS! -->
+<noscript>
+  <p id="javascript-warning">
+    While we&#39;ve done our best to make the core functionality of this site accessible without javascript, it will work better with it enabled. Please consider turning it on!
+  </p>
+</noscript>
+<!-- END BETA CAVEATS! --> 
+
+<!-- BEGIN header -->
+
+<div id="header" class="region">
+
+  <h1 class="heading">
+    <a href="/"><span>Archive of Our Own</span><sup> beta</sup><script data-pagespeed-no-defer>(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','http://archiveofourown.org/works/11723784/chapters/26408577','eVfAzEuqgZ',true,false,'VcAm79K_FB0');</script><img alt="Archive of Our Own" class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAAqCAMAAAA3b6P4AAACslBMVEWXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACXAACpit0XAAAA5XRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESFBUWFxgZGhscHR4fICEiIyQlJygpKissLi8wMTM0NTY3ODk6Ozw9PkBBQkNFR0hJSktMTU5PUFFSVFVWV1hZWltcXV5fY2RlZmhpamtsbW5vcHFyc3V2d3p7fX5/gIGCg4SFhoeIiouMjY6PkJGSlJWWl5iZmpucnZ6foKGipKWnqKmrrK2ur7CxsrO0tba3uLm6u7y9vr/AwsPFxsfIycrLzM7P0NLT1NXW19na29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+b1plRQAABBRJREFUSMedlvtb1FUQxgcEBMtQggUCxVACu1ApYmRmUqESkCkUREaS4h3JCDONEFPBoBQCJcDIGxkGKYGBkgGSAq4BARIXWWA//0c/7J39LvY0P82cd97nzJlzZuaIKvBRmVqmP/XOrrQNIbOVsNfyjq/3nYrs/1GlWjPe90v28wrgnOiDP7ddeN9WAE47O9DLQI6PksfDMWVjnfuDlCC3b4HbpYcOFjUC9UHKWywtQZNpjTmdgu60uSIis979HRr8bIT4YjVDqV6TFlPgVqjxjBegyM4MfSPepDsm9tAcb5mwHnpfMJmq39C+ZLQCytrfM3deUAylwWYL2+BTc4eICU4aNk/pLgm0DNQuqY+/Nk8zmuX0PmFx83V0eIiIyOPlmq3Wpw+tg1OG7Lk1c8YSzmZsqYhIhLp7pVLy3AugLUqnz73L15boHogUke1cW6ic+5n7QJvhLCLic4cTlmAGRIhdFhfdlcmPpUjCfSj3FpEZ9dQ5W6CFDPrLIc652rj2FWUi0f1wdZGI5DERbg56dlIvO6hyt1UTe8pEZKUa1JEiMVBhDu6GzbHc8LFZUSXHRUTC/oShBHG5DKkmbPUg1xPujSyxSba/sltEREJuA9tl0Qikz9JD8f1ovrjOVtvF7NexRqcsVgOfSIIW6pMDVe7z3zwLHDjFeSfb7GV/P6fXwrqATInuAvraWruB0U2bx4aenqKRJA/MMairhoAsCczr1TWH8dPLfO7w2VRtqKDZFFjsOHBY5JmNX549dzQ5ROQkLY9MQbZvKDCzNgHkGCvaLRGOznS2zQ6e2GJu7gXY7/3kiqQj52ubbo9C143asm2hLsrsD3jV8l2PAbcGsBRN9VuK7B+Gvc3N+WnDKEuqAtlz8FdT37J/5dhdk3vbxUb4Y23UusT08nZAobyTSDeoD8VUmKja3DCVcylk6LB5J7Qcts54Ncv13PVXDMQWLfC9o4SOMxqmd/TqocSKvZirTiIiTusM3NbM5aq9AGccPoYaB73jwn/ItWJ/xQ4RkTWVOupg4VqViEw7ApBTA5l6P9/T8LrV1veHA0RCirQANKU/q193KdZHEiUiMjc2vxUO2E9ml5MlXhn9ANRsVJmAWdUAjAaLiKoRaN9pRX6bdv9VjQD8FGv5HgNuAjS5ioj3Hd3jnyS+7RQfA+BSpONkMFwD5OvOVzEClZNmuV0hE/cAqqOmK7yjD4ENen1Jhpo+y6xt1SXmWoKNEtzS8qOn0Zi3jw7z1hg+BNCZ5m2z/DxmmFuZ7DKbATeBsYKgKX8/C6JNehjfmEZ3DlAb8YC/k1dVlrHx5LHaNNZ7GElzlQdJwOXaOA8REb9sSh2Myw5xn78s/0Fmpzc0V+TmVY1y2lP+h3jF5l9qvPpdnP4I/wITXDY67Xw1sAAAAABJRU5ErkJggg==" data-pagespeed-url-hash="4179492045" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a> 
+  </h1>
+
+    <div id="login" class="dropdown">
+      <p class="user actions" role="menu">
+        <a id="login-dropdown" href="/users/login">Log In</a>
+      </p>
+      <div id="small_login" class="simple login">
+	<form class="new_user" id="new_user_session_small" action="/users/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="66KRnaFBEbDcz6JdSB7gFVzmnkyzvYBHeoNVkQYx5NIe2ui94jeYGNRnOU2185oEaOiQJNY3GYI1GTzWO3XRtA=="/>
+	<dl>
+    <dt>
+      <label for="user_session_login_small">User name or email:</label></dt>
+    <dd><input id="user_session_login_small" type="text" name="user[login]"/></dd>
+    <dt><label for="user_session_password_small">Password:</label></dt>
+    <dd><input id="user_session_password_small" type="password" name="user[password]"/></dd>
+  </dl>
+  <p class="submit actions">
+    <label for="user_remember_me_small" class="action"><input type="checkbox" name="user[remember_me]" id="user_remember_me_small" value="1"/>Remember Me</label>
+    <input type="submit" name="commit" value="Log In"/>
+  </p>
+</form>
+<ul class="footnote actions">
+  <li><a href="/users/password/new">Forgot password?</a></li>
+    <li>
+      <a href="/invite_requests">Get an Invitation</a>
+    </li>
+</ul>
+
+</div>
+
+    </div>
+
+  <h3 class="landmark heading">Site Navigation</h3>
+  <ul class="primary navigation actions" role="navigation">
+    <li class="dropdown">
+      <a href="/menu/fandoms">Fandoms</a>
+      <ul class="menu" role="menu">
+  <li><a href="/media">All Fandoms</a></li>
+        <li id="medium_5"><a href="/media/Anime%20*a*%20Manga/fandoms">Anime &amp; Manga</a></li>
+        <li id="medium_3"><a href="/media/Books%20*a*%20Literature/fandoms">Books &amp; Literature</a></li>
+        <li id="medium_4"><a href="/media/Cartoons%20*a*%20Comics%20*a*%20Graphic%20Novels/fandoms">Cartoons &amp; Comics &amp; Graphic Novels</a></li>
+        <li id="medium_7"><a href="/media/Celebrities%20*a*%20Real%20People/fandoms">Celebrities &amp; Real People</a></li>
+        <li id="medium_2"><a href="/media/Movies/fandoms">Movies</a></li>
+        <li id="medium_6"><a href="/media/Music%20*a*%20Bands/fandoms">Music &amp; Bands</a></li>
+        <li id="medium_8"><a href="/media/Other%20Media/fandoms">Other Media</a></li>
+        <li id="medium_30198"><a href="/media/Theater/fandoms">Theater</a></li>
+        <li id="medium_1"><a href="/media/TV%20Shows/fandoms">TV Shows</a></li>
+        <li id="medium_476"><a href="/media/Video%20Games/fandoms">Video Games</a></li>
+        <li id="medium_9971"><a href="/media/Uncategorized%20Fandoms/fandoms">Uncategorized Fandoms</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/browse">Browse</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works">Works</a></li>
+  <li><a href="/bookmarks">Bookmarks</a></li>
+  <li><a href="/tags">Tags</a></li>
+  <li><a href="/collections">Collections</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/search">Search</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works/search">Works</a></li>
+  <li><a href="/bookmarks/search">Bookmarks</a></li>
+  <li><a href="/tags/search">Tags</a></li>
+  <li><a href="/people/search">People</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/about">About</a>
+      <ul class="menu" role="menu">
+  <li><a href="/about">About Us</a></li>
+  <li><a href="/admin_posts">News</a></li>
+  <li><a href="/faq">FAQ</a></li>
+  <li><a href="/wrangling_guidelines">Wrangling Guidelines</a></li>
+  <li><a href="/donate">Donate or Volunteer</a></li>
+</ul>
+
+    </li>
+	  <li class="search"><form class="search" id="search" action="/works/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+  <fieldset>
+    <legend>Search Works</legend>
+    <p>
+      <label class="landmark" for="site_search">Work Search:</label>
+      <input class="text" id="site_search" aria-describedby="site_search_tooltip" type="text" name="work_search[query]"/>
+      <span class="tip" role="tooltip" id="site_search_tooltip">tip: hetalia f/f sort:kudos</span>
+      <span class="submit actions"><input type="submit" value="Search" class="button"/></span>
+    </p>
+  </fieldset>
+</form></li>
+  </ul>
+
+
+
+  <div class="clear"></div>
+
+</div>
+
+
+
+<!-- END header -->
+
+      <div id="inner" class="wrapper">
+        <!-- BEGIN sidebar -->
+        <!-- END sidebar -->
+
+        <!-- BEGIN main -->
+        <div id="main" class="chapters-show region" role="main">
+          
+          <div class="flash"></div>
+          <!--page description, messages-->
+<!--/descriptions-->
+
+<!--subnav-->
+<!--/subnav-->
+
+  <!-- BEGIN work -->
+  <div class="work"><p class="landmark"><a name="top">&nbsp;</a></p>
+      <!-- BEGIN navigation -->
+<h3 class="landmark heading">Actions</h3>
+<ul class="work navigation actions" role="menu">
+
+
+
+    <li class="chapter entire"><a href="/works/11723784?view_full_work=true">Entire Work</a></li>
+
+
+      <li class="chapter next"><a href="/works/11723784/chapters/26946390#workskin">Next Chapter &#8594;</a></li>
+
+    <li class="chapter" aria-haspopup="true">
+      <noscript>
+        <a href="/works/11723784/navigate">Chapter Index</a>
+      </noscript>
+      <a class="hidden" href="#">Chapter Index</a>
+      <ul id="chapter_index" class="expandable secondary hidden">
+        <li>
+          <form action="/works/11723784/chapters/26408577" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+            <p>
+              <select name="selected_id" id="selected_id"><option selected="selected" value="26408577">1. 1</option>
+<option value="26946390">2. 2</option></select>
+              <span class="submit actions"><input type="submit" name="commit" value="Go"/></span>
+            </p>
+</form>        </li>
+        <li><a href="/works/11723784/navigate">Full-page index</a></li>
+      </ul>
+    </li>
+
+
+
+  <li class="comments" id="show_comments_link_top">
+      <a data-remote="true" href="/comments/show_comments?chapter_id=26408577">Comments </a>
+  </li>
+
+
+
+    <li class="share hidden">
+      <a class=" modal" title="Share Work" aria-controls="#modal" href="/works/11723784/share">Share</a>
+    </li>
+
+
+    <li class="download" aria-haspopup="true">
+      <a href="#">Download</a>
+      <ul class="expandable secondary">
+          <li><a href="/downloads/11723784/wsrod%20wezy%20stapaj.azw3?updated_at=1503856474">AZW3</a></li>
+          <li><a href="/downloads/11723784/wsrod%20wezy%20stapaj.epub?updated_at=1503856474">EPUB</a></li>
+          <li><a href="/downloads/11723784/wsrod%20wezy%20stapaj.mobi?updated_at=1503856474">MOBI</a></li>
+          <li><a href="/downloads/11723784/wsrod%20wezy%20stapaj.pdf?updated_at=1503856474">PDF</a></li>
+          <li><a href="/downloads/11723784/wsrod%20wezy%20stapaj.html?updated_at=1503856474">HTML</a></li>
+      </ul>
+    </li>
+</ul>
+<!-- END navigation -->
+
+
+<h3 class="landmark heading">Work Header</h3>
+
+<div class="wrapper">
+
+  <dl class="work meta group" role="complementary">
+          <dt class="rating tags">
+
+              Rating:
+          </dt>
+
+          <dd class="rating tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Teen%20And%20Up%20Audiences/works">Teen And Up Audiences</a></li>
+            </ul>
+          </dd>
+          <dt class="warning tags">
+
+              <a href="/tos_faq#tags">Archive Warning</a>:
+          </dt>
+
+          <dd class="warning tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/No%20Archive%20Warnings%20Apply/works">No Archive Warnings Apply</a></li>
+            </ul>
+          </dd>
+          <dt class="category tags">
+
+              Categories:
+          </dt>
+
+          <dd class="category tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/F*s*F/works">F/F</a></li><li><a class="tag" href="/tags/F*s*M/works">F/M</a></li><li><a class="tag" href="/tags/M*s*M/works">M/M</a></li><li><a class="tag" href="/tags/Multi/works">Multi</a></li>
+            </ul>
+          </dd>
+          <dt class="fandom tags">
+
+              Fandom:
+          </dt>
+
+          <dd class="fandom tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a></li>
+            </ul>
+          </dd>
+          <dt class="relationship tags">
+
+              Relationships:
+          </dt>
+
+          <dd class="relationship tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Scorpius%20Malfoy*s*Albus%20Severus%20Potter/works">Scorpius Malfoy/Albus Severus Potter</a></li><li><a class="tag" href="/tags/i%20inne/works">i inne</a></li><li><a class="tag" href="/tags/g%C5%82%C3%B3wnie%20ocki/works">głównie ocki</a></li>
+            </ul>
+          </dd>
+          <dt class="character tags">
+
+              Characters:
+          </dt>
+
+          <dd class="character tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Albus%20Severus%20Potter/works">Albus Severus Potter</a></li><li><a class="tag" href="/tags/Scorpius%20Malfoy/works">Scorpius Malfoy</a></li><li><a class="tag" href="/tags/Lily%20Evans%20Potter/works">Lily Evans Potter</a></li><li><a class="tag" href="/tags/Rose%20Weasley/works">Rose Weasley</a></li><li><a class="tag" href="/tags/James%20Sirius%20Potter/works">James Sirius Potter</a></li><li><a class="tag" href="/tags/Original%20Male%20Character(s)/works">Original Male Character(s)</a></li><li><a class="tag" href="/tags/Original%20Female%20Character(s)/works">Original Female Character(s)</a></li><li><a class="tag" href="/tags/du%C5%BCo%20OC/works">dużo OC</a></li><li><a class="tag" href="/tags/serio%20du%C5%BCo/works">serio dużo</a></li>
+            </ul>
+          </dd>
+          <dt class="freeform tags">
+
+              Additional Tags:
+          </dt>
+
+          <dd class="freeform tags">
+            <ul class="commas">
+               <li><a class="tag" href="/tags/Harry%20Potter%20Next%20Generation/works">Harry Potter Next Generation</a></li><li><a class="tag" href="/tags/Slytherin%20Albus%20Severus%20Potter/works">Slytherin Albus Severus Potter</a></li><li><a class="tag" href="/tags/Teen%20Romance/works">Teen Romance</a></li><li><a class="tag" href="/tags/takie%20romansid%C5%82o%20troch%C4%99/works">takie romansidło trochę</a></li><li><a class="tag" href="/tags/Teen%20Angst/works">Teen Angst</a></li><li><a class="tag" href="/tags/nastolatki%20angstuj%C4%85/works">nastolatki angstują</a></li><li><a class="tag" href="/tags/Fluff%20and%20Humor/works">Fluff and Humor</a></li><li><a class="tag" href="/tags/Comedy/works">Comedy</a></li><li><a class="tag" href="/tags/ma%20by%C4%87%20%C5%9Bmieszne/works">ma być śmieszne</a></li><li><a class="tag" href="/tags/takie%20jest%20za%C5%82o%C5%BCenie/works">takie jest założenie</a></li><li><a class="tag" href="/tags/Jealousy/works">Jealousy</a></li><li><a class="tag" href="/tags/Quidditch/works">Quidditch</a></li><li><a class="tag" href="/tags/bardzo%20powa%C5%BCnie%20traktujemy%20tu%20Quidditch/works">bardzo poważnie traktujemy tu Quidditch</a></li><li><a class="tag" href="/tags/Headmistress%20Minerva%20McGonagall/works">Headmistress Minerva McGonagall</a></li><li><a class="tag" href="/tags/bo%20si%C4%99%20jeszcze%20trzyma/works">bo się jeszcze trzyma</a></li><li><a class="tag" href="/tags/Wedding%20Planning/works">Wedding Planning</a></li><li><a class="tag" href="/tags/bo%20%C5%9Blub%20jest%20wa%C5%BCny/works">bo ślub jest ważny</a></li><li><a class="tag" href="/tags/pomieszane%20j%C4%99zykowo%20tagi/works">pomieszane językowo tagi</a></li><li><a class="tag" href="/tags/bo%20mog%C4%99/works">bo mogę</a></li><li><a class="tag" href="/tags/Slow%20To%20Update/works">Slow To Update</a></li><li><a class="tag" href="/tags/Sorry%20Not%20Sorry/works">Sorry Not Sorry</a></li><li><a class="tag" href="/tags/Good%20Father%20Harry%20Potter/works">Good Father Harry Potter</a></li>
+            </ul>
+          </dd>
+
+      <dt class="language">
+        Language:
+      </dt>
+      <dd class="language">
+        Polski
+      </dd>
+
+
+
+    <dt class="stats">Stats:</dt>
+    <dd class="stats">
+<!-- end of cache -->
+
+      <dl class="stats"><dt class="published">Published:</dt><dd class="published">2017-08-06</dd><dt class="status">Updated:</dt><dd class="status">2017-08-27</dd><dt class="words">Words:</dt><dd class="words">7620</dd><dt class="chapters">Chapters:</dt><dd class="chapters">2/?</dd><dt class="comments">Comments:</dt><dd class="comments">3</dd><dt class="kudos">Kudos:</dt><dd class="kudos">17</dd><dt class="bookmarks">Bookmarks:</dt><dd class="bookmarks"><a href="/works/11723784/bookmarks">2</a></dd><dt class="hits">Hits:</dt><dd class="hits">245</dd></dl>
+      </dd>
+  </dl>
+</div>
+
+
+
+<!-- BEGIN section where work skin applies -->
+<div id="workskin">
+  <div class="preface group">
+    <h2 class="title heading">
+      wśród węży stąpaj ostrożnie (szczególnie tych nastoletnich)
+    </h2>
+    <h3 class="byline heading">
+      <a rel="author" href="/users/Cathy_stas/pseuds/Cathy_stas">Cathy_stas</a>
+    </h3>
+
+
+        <div class="summary module" role="complementary">
+          <h3 class="heading">Summary:</h3>
+            <blockquote class="userstuff">
+              <p>„Stąpaj ostrożnie” to wielowątkowe pomieszanie z poplątaniem, opisujące losy grupki Ślizgonów; najlepszych przyjaciół od pierwszego roku w Hogwarcie. Bohaterowie mierzą się z problemami, które dotykają wszystkich nastolatków ― pierwsze miłości, wzloty i upadki, plany na przyszłość, marzenia i głęboko skrywane tajemnice. Życie w cieniu słynnych rodziców, bardziej uzdolnionego rodzeństwa również potrafi dać w kość, tak jak i szkolna rzeczywistość.</p>
+            </blockquote>
+        </div>
+
+        <div class="notes module" role="complementary">
+  <h3 class="heading">Notes:</h3>
+
+
+
+
+
+    <blockquote class="userstuff">
+      <p>jest to ficzek pisany bardzo powoli, z nudy i dla odstresowania. w założeniu ma być śmiesznym romansidłem, ku chwale mojej ukochanje pary Al x Scorpius. potem pojawiły się OCki, dużo Quidditcha i wyszło co wyszło. ;&gt;</p>
+    </blockquote>
+
+</div>
+
+
+  </div>
+
+
+
+    <div id="chapters">
+      <!-- This partial requires local variable 'chapter' -->
+<div class="chapter" id="chapter-1">
+  <!-- chapter management -->
+
+
+  <div class="chapter preface group" role="complementary">
+    <h3 class="title">
+      <a href="/works/11723784/chapters/26408577">Chapter 1</a>: 1
+    </h3>
+
+    <!-- only display byline if different from the main byline -->
+
+
+  </div>
+
+  <!--main content-->
+  <div class="userstuff module" role="article">
+    <h3 class="landmark heading" id="work">Chapter Text</h3>
+    <p align="justify">— Chłopcy, zejdźcie na chwilę na dół!<br/>
+Dzięki otwartym drzwiom sypialni, Albus doskonale usłyszał wołającą go matkę, nawet bez zaklęcia Sonorus. Aktualnie zajmował się pakowaniem szkolnego kufra, co nie było znowu takie proste. Merlin mu świadkiem, poza ubraniami nic z niego w wakacje nie wyciągał, ale i tak jakimś cudem połowa książek, kociołek i teleskop zostały porozkładane po pokoju.<br/>
+Stał właśnie ze Standardową Księgą Zaklęć stopień siódmy w jednej ręce i zwojem nowych pergaminów w drugiej, ze zmarszczonymi brwiami rozglądając się wkoło. Na biurku stała pusta klatka, bo jego sowa ― szary puszczyk Parys ― wybrała się na wieczorny lot; dębowa szafa była otwarta, a wokół niej na podłodze leżały porozrzucane ubrania, w tym komplet świeżo wypranych szat do Quidditcha. Nowe podręczniki do siódmej klasy, które zakupił z rodzicami na Pokąnej kilka dni temu, zostały już pieczołowicie włożone do kufra, tak jak ingrediencje na Eliksiry i Piorun VII, superszybka sportowa miotła, którą podarował mu na urodziny wujek Charlie. Matka trochę się zżymała, że Albus dostał tak drogi prezent, ale tata powiedział, że siedemnaście lat kończy się tylko raz. Albus był wniebowzięty.<br/>
+Wujek Charlie był świetny, chociaż rzadko do nich przyjeżdżał. Za to zawsze przywoził niesamowite prezenty, pyszne rumuńskie słodycze i opowiadał mrożące krew w żyłach historie o smokach, po których jako dzieciak Albus nie mógł zasnąć, tylko wyobrażał sobie jak to jest być poskramiaczem smoków. Gdy miał dziewięć lat to był jego plan na życie. Teraz o wiele bardziej wolał grać w Quidditcha niż zajmować się magicznymi zwierzętami. Pogładził czule trzonek miotły i wprost nie mógł się doczekać pierwszego treningu drużyny Ślizgonów.<br/>
+Oraz miny Notta, gdy pokaże mu swoje nowe cacko. Na aprobatę Scorpiusa, który na Quidditchu nie znał się kompletnie, nie miał co liczyć; owszem, Malfoy ucieszy się przez wzgląd na niego i powie, że miotła jest ładna.<br/>
+Ładna, Merlinie.<br/>
+Piorun VII to nie była zwykła miotła! To było jak… jak przedłużenie nóg, jak najprawdziwsze skrzydła. Albus latał już na niej kilka razy i za każdym razem tata prawie siłą go z niej ściągał.<br/>
+Uśmiechnął się szeroko; nie ma mowy, żeby w tym roku nie zdobyli pucharu. Chłopak grał w szkolnej drużynie od drugiej klasy, kiedy to ówczesny szukający, Alan Fawcett skończył szkołę. Wszyscy mówili, że jako syn Harry’ego Pottera, najmłodszego i najlepszego szukającego jakiego miał Gryffindor, oraz Ginny Weasley, byłej ścigającej Harpii z Holyhead, również grającej w domowej drużynie, Albus musiał mieć latanie we krwi. I tak rzeczywiście było, dzięki niech będą Merlinowi. Kochał latać i grać w Quidditcha; czasami dopadła go myśl, że to jedyna płaszczyzna na której dogaduje się z ojcem. No, oprócz tego, że grał dla Ślizgonów, a nie Gryfonów, ale to już szczegół. Naprawdę liczył, że w tym roku wygrają w rozgrywkach międzydomowych, zwłaszcza, że mieli naprawdę zgraną i silną drużynę, złożoną z samych szósto- i siódmoklasistów. Pod przewodnictwem ich genialnego kapitana, który zarówno był bliskim przyjacielem Pottera ― Isidora Notta, chłopak czuł, że zwycięstwo jest w ich zasięgu.<br/>
+Albus westchnął z irytacją i postanowił chrzanić to wszystko — powrzucał byle jak resztę rzeczy do kufra, potem zwinięte w kłębek swetry, koszulki i dżinsy (od czego jest zaklęcie prasujące), a na sam wierzch poukładał książki. Zdołał jeszcze upchnąć kilka paczek słodyczy, które zostały mu z urodzin i z niemałym wysiłkiem, w końcu zamknął kufer.<br/>
+Oparł się o niego, oddychając ciężko. Ostatni raz rozejrzał się po pokoju i doszedł do jednego, smutnego wniosku: był strasznym bałaganiarzem, nie ma co ukrywać.<br/>
+Tęsknił za Scorpiusem i jego wrodzonym pedantyzmem, który nakazywał mu wszystko układać i odkładać na właściwe miejsca. W ich dormitorium nigdy nie było bałaganu; nawet kot Isidora wiedział, że ma tylko jeden fotel do spania, na którym bezkarnie może zostawić włosy. Scorpius miał świra na punkcie sprzątania, co chłopaki skrzętnie wykorzystywali.<br/>
+Tęsknił za przyjaciółmi, tęsknił za Hogwartem; jego zielonymi błoniami, które w zimie przykrywała gruba warstwa śniegu; brakowało mu nawet lekcji i nauki. Uwielbiał swój dom i wakacje, przebywanie z kuzynami i rodzicami, ale to nie było to samo.<br/>
+Hogwart miał swoją aurę, swój czar i Albus nigdzie nie czuł się tak dobrze jak tam.<br/>
+Otrzepał koszulkę z kurzu i krzyknął:<br/>
+— Już idę!<br/>
+Zbiegający po schodach z wdziękiem truchtającego buchorożca, James zamknął mu drzwi przed nosem, śmiejąc się na cały głos. Albus cofnął się gwałtownie, unikając oberwania nimi i westchnął, kręcąc głową. Nawet jeśli James ma te dziewiętnaście lat, to pewne rzeczy się nie zmieniają. Wciąż jest cholernym dupkiem.<br/>
+Zszedł na dół i zajrzał do kuchni, skąd wolała go matka, obecnie krzątająca się przy kuchence.<br/>
+Przy drewnianym stole siedział dwie kobiety; jedną z nich była ciotka Albusa, Hermiona Weasley w gustownej granatowej szacie. Jej tiara leżała na krześle, podobnie jak lakierowana torebka. Ciotka pochylała się nad jednym z pergaminów, którymi zawalony był stół. Obok niej stał talerz z kawałkami szarlotki i pusta już szklana. Ciotka miała cienie ze zmęczenia pod oczami, a jej puszyste brązowe włosy sterczały na wszystkie strony, zupełnie tak jak u Rose, kuzynki Albusa, pod koniec dnia.<br/>
+Na przeciwko Hermiony znajdowała się wysoka blondynka, popierając głowę na złożonych rękach. Uśmiechnęła się ciepło do Albusa, gdy wszedł do kuchni, a uśmiech objął również jej duże błękitne oczy.<br/>
+Anna Fairchild, która rok temu razem z James’em skończyła Hogwart, obecnie mieszkała z nimi w Dolinie Godryka, ponieważ w dniu zakończenia szkoły, ona i James obwieścili wszystkim swoje zaręczyny. Albusowi i Lily opadły szczęki, podobnie jak ojcu; James miał opinię flirciarza, gwiazdora, który zmieniał dziewczyny jak rękawiczki, a już z pewnością Al nie uważał swojego brata za typ osoby, która zaręczy się zaraz po skończeniu szkoły.<br/>
+Ale fakt pozostawał faktem, a James i Anna wybrali już datę ślubu ― 21 czerwca następnego roku, tu w Dolinie Godryka. Mama, której na początku niebezpiecznie drgała szczęka na widok Anny, w końcu się do niej przekonała i razem z ciotką Hermioną, oraz Philippą Farichild, matką Anny, planowały ślub swoich dzieci. Blondynka miała w sobie coś ujmującego, co sprawiało, że wszyscy ją lubili. Była miła, pomocna, nigdy nie podnosiła głosu i stanowiła zupełne przeciwieństwo nadpobudliwego, rozwrzeszczanego James’a.<br/>
+Miłość naprawdę jest ślepa.<br/>
+James stał przed matką i gestykulując żywo, coś jej tłumaczył.<br/>
+― Oj mamo, jeszcze minuta, bo Teddy pokazuje mi…<br/>
+Ginewra Potter, która z wiekiem coraz bardziej upodabniała się do swojej matki, podparła ręce na biodrach i spojrzała groźnie na najstarszego syna.<br/>
+― Jeśli myślisz, młody człowieku, że będę siedziała tu z twoją ciotką i twoją narzeczoną, planując listę gości na twoje wesele, a ty znikniesz sobie na pogawędki z Teddy’m, to się grubo mylisz.<br/>
+Albus oparł się o krzesło ciotki Hermiony, która nagle ukryła się za zwojem pergaminu, trzęsąc się nieco. Chłopak czerpał mnóstwo satysfakcji z tego, iż mama drze się na James’a, który jakby skurczył się pod jej spojrzeniem.<br/>
+― Mamo ― powiedziała Anna miękko, kierując spojrzenie swoich błękitnych oczu na panią Potter. ― Jestem pewna, że James i Teddy omawiali jakieś ważne kwestie dotyczące pana młodego i drużby, którym Teddy w końcu jest.<br/>
+― Tak było! ― krzyknął mężczyzna, dopadając do krzesła Anny i kładąc ręce na jej ramionach.<br/>
+Albusowi nie umknęła ulga, która była wprost wymalowana na twarzy starszego brata. Po raz kolejny doświadczył potęgi miłości. Jak ktoś taki jak Anna Fairchild ― spokojna, ułożona dziewczyna, była Prefekt Naczelna Hogwartu, mogła całkowicie stracić głowę dla… no właśnie, dla jego brata. Chłopaka, który wylizywał dżem ze słoika, potrafił znikać na całe dnie, latając gdzieś na miotle nad mugolskimi zabudowaniami i jedną nogą nadal tkwił w Hogwarcie, gdzie razem z Fredem podkładali łajnobomby do dormitorium dziewcząt.<br/>
+Ginny zmierzyła syna i przyszłą synową podejrzliwym spojrzeniem, ale w końcu machnęła różdżką z rezygnacją. Rolka pergaminu, która mogła mieć co najmniej trzy stopy długości, rozwinęła się, a jej koniec zjechał ze stołu prawie dotykając stóp Albusa. Chłopak wytrzeszczył oczy.<br/>
+― Mamo, czy ty zamierasz zaprosić połowę Ministerstwa na to wesele?<br/>
+― Mam dużą rodzinę, Al ― Anna uśmiechnęła się delikatnie, ustępując miejsca Jamesowi, który rozwalił się na krześle, natychmiast sięgając po szarlotkę, by po chwili usiąść mu na kolanach. Albus niemal słyszał głos Beatrix, narzekający na to, jak obrzydliwie słodkie są zakochane pary. On był zdania, że obrzydliwy jest sam fakt, iż w taki związek wchodzi jego brat.<br/>
+― No właśnie ― dodała Ginny, ponownie machając różdżką. Dzbanek z mrożoną herbatą popłynął w kierunku stołu, a zaraz za nim nadleciały czyste szklanki. Kolejne machnięcie, a z kredensu wyleciały i posłusznie ustawiły się na stole orzechowe ciastka. Albus skwapliwie wziął jedno i wpakował sobie do ust. Pakowanie może naprawdę zmęczyć człowieka.<br/>
+― Spakowałeś kufer? ― spytała syna Ginny, krzątając się przy blacie.<br/>
+― Yhm.<br/>
+― Słucham?<br/>
+― No tak, mamo.<br/>
+― Wyprasowałam ci szaty, złożyłeś je czy wepchnąłeś byle jak?<br/>
+― Złożyłem ― odparł, zezując na swoje trampki i biorąc kolejne ciastko.<br/>
+James parsknął, a matka zmierzyła Albusa podejrzliwym spojrzeniem.<br/>
+― To znaczy, złożę ― zmitygował się chłopak, a kobieta westchnęła.<br/>
+Przewidując kolejną serię pytań o stan i zawartość jego kufra, Albus natychmiast zapytał:<br/>
+― A po co mnie wołałaś?<br/>
+― No wpłaśnie ― wymamrotał James z ustami pełnymi szarlotki, a od ckliwego spojrzenia, którym obdarzyła narzeczonego Anna, Albusowi zrobiło się niedobrze. Nie był pewien czy chciałby żeby jakakolwiek dziewczyna tak na niego patrzyła.<br/>
+― Ty zaraz będziesz wybierał z Anną zaproszenia ― rzuciła Ginny do Jamesa. ― A ty Al ― spojrzała na młodszego syna. Hermiona podała jej końcówkę pergaminu, który Ginny szybko przeleciała wzrokiem. Gdy znalazła to co ją interesowało, podstawiła go synowi pod nos. ― Masz, zobacz. To kogo chcesz ze sobą zabrać?<br/>
+Albus zamrugał i spojrzał na swoje imię i nazwisko napisane matczynym pismem, a obok niego puste miejsce. Dopisek z ramce oznaczał, że jest to miejsce na osobę towarzyszącą.<br/>
+Osobę towarzyszącą.<br/>
+― Osobę towarzyszącą? ― powtórzył głupio, a James ponownie parsknął.<br/>
+Czasem Albus się zastanawiał, czy aby w poprzednim wcieleniu James nie był koniem, bo objawiał zachowania podobne temu zwierzęciu.<br/>
+― Dziewczyna, Al ― wyjaśnił powoli, pobłażliwym tonem. ― Twoja siostra nią jest, Rosie także i nasza matka…<br/>
+― Dobrze, już dobrze, dziękujemy ci Jim ― przerwała chłopakowi ciotka Hermiona; złośliwy uśmiech starszego Pottera i spojrzenie, jakim obdarzył go młodszy bart zwiastowało ostrą pyskówkę, a oni naprawdę nie mieli na to czasu. ― Przecież nie musisz z nikim iść, kochanie. I tak będzie sporo ludzi…<br/>
+Ginny podeszła do młodszego syna i przeczesała dłonią jego włosy, uśmiechając się ciepło, a starszego gromiąc wzrokiem.<br/>
+― Daj mu spokój, James. Rose też idzie sama, najwyżej będziecie się bawić we dwoje, prawda?<br/>
+No pięknie. Jego własna matka uważała go za jakąś amebę, która nie potrafi sobie znaleźć dziewczyny. To nie tak, że nie potrafił! Nie miał czasu, no i nie było żadnej, która go interesowała. Jasne, było zarówno na jego roku i w młodszych rocznikach kilka bardzo ładnych Ślizgonek, a i dziewczyny z innych domów też były śliczne i sympatyczne, jednak Albus nie miał czasu i ochoty na randkowanie. Isidor, który zmieniał dziewczyny jak rękawiczki, wielokrotnie proponował mu podwójną randkę, ze swoją obecną dziewczyną i jej koleżanką w Hogsmade, ale Alowi jakoś zawsze udawało się wykręcić. Wolał wybrać się do Trzech Mioteł z Scorpiusem i Beatrix.<br/>
+Dlatego teraz był zły, na matkę, na Jamesa, na siebie, na cały świat. I na ten głupi ślub. Co to w ogóle za pomysł, żeby zabierać osobę towarzyszącą. Na pewno większość jego kuzynostwa z nikim nie idzie.<br/>
+Przeleciał szybko wzorkiem po liście i aż wytrzeszczył oczy. Lilka z jakimś kolegą (kim do Salazara, był Hamish Watson?), Fred ze swoja dziewczyną, Roxy z Lorcanem, Lysander z jakąś Sam (to w ogóle imię żeńskie, czy męskie?), Molly z chłopakiem, Dominique z chłopakiem… Na gacie Merlina! Co się porobiło?<br/>
+Przez chwilę zastanawiał się nad Beą, ale szybko odpędził od siebie tą myśl. Przyjaciółka najpierw wytrzeszczyłaby na niego oczy, potem zaczęła się śmiać, a na koniec czymś go przeklęła. Beatrix nie cierpiała takich spędów, jak to określała. I nie darzyła jego brata jakąś przesadną miłością, więc nawet gdyby ją błagał na kolanach, to by nie poszła. Nie, definitywnie to nie był dobry pomysł.<br/>
+Westchnął, wzruszając ramionami. Trudno, Scorp będzie musiał jakoś przezwyciężyć swoją awersję (to po prostu był zwykły strach, ale Albus go rozumiał ― gdy podczas zeszłorocznych wakacji na dwa tygodnie pojechał z kumplem do Malfoy Manor, to cały czas miał wrażenie, że ojciec Scorpiusa tylko czeka, żeby czymś w niego rzucić i nie czuł się zbyt komfortowo; na szczęście mama Scorpiusa była bardzo miła) i jakoś przemęczyć się z nim na tym weselu. Lepiej z najlepszym przyjacielem, niż jakąś dziewczyną. Malfoy przynajmniej nie będzie go ciągnął na parkiet.<br/>
+― Dobra, wpisz Scorpa. Przynajmniej nie będę się nudził ― powiedział, a ciotka kiwnęła głową i zaczęła skrobać po pergaminie. Albus uśmiechnął się złośliwie do Jamesa. ― No chyba, że Anka przejrzy na oczy i widowiskowo zostawi się przed ołtarzem, to wtedy i tak nie będziemy się nudzić.<br/>
+Trzy damskie głosy zgodnym chórem rzuciły z naganą:<br/>
+― Al!<br/>
+James natomiast sklął go tak, że Harry Potter, który właśnie w tym momencie wszedł do kuchni, wracając z pracy, trzepnął syna Prorokiem Wieczornym po głowie.<br/>
+Wykorzystując zamieszanie, Albus wycofał się z kuchni i czmychnął na piętro. Bezpieczny w swoich zagraconych czterech ścianach, odetchnął głęboko. Parys, który już wrócił z nocnego lotu zahuczał wesoło, wydziobując przysmaki ze swojej miseczki. Chłopak podszedł i pogłaskał zwichrzone pióra puszczyka; tęsknie spojrzał na kalendarz wiszący na ścianie ― miesiąc sierpień sponsorowało ruchome zdjęcie roześmianych członków drużyny Goblinów z Grodziska, zeszłorocznych Mistrzów Ligii Europejskiej Quidditcha. Dziś był trzydziesty pierwszy sierpnia, a to oznaczało, że już jutro znajdzie się w Hogwarcie.<br/>
+Nie mógł się tego doczekać.</p><p align="justify">***</p><p align="justify">Od dawien dawna, pierwszy września był w rodzinie Potterów dniem bardzo nerwowym. Przepełnionym wrzaskami, poszukiwaniem ostatnich zagubionych gdzieś w odmętach prania skarpetek, pergaminów, ksiąg zaklęć i sów, które nie wiadomo gdzie poodlatywały. Mimo usilnych starań Ginny jej rodzina nigdy nie chciała współpracować ze sobą tego dnia i nawet upewnianie się, że dzieci wszystko spakowały poprzedniego dnia ni nie dawało. To zupełnie tak, jak gdyby jakiś poltergeist celowo wszystko psuł, chował i przestawiał, aby wprowadzać nerwową atmosferę.<br/>
+Tylko dzięki jakiemuś niesamowitemu szczęściu rodzeństwo jeszcze nigdy nie spóźniło się na pociąg. Raz jedyny, gdy Albus miał iść do czwartej klasy, prawie tak się stało. Wpadli na peron 9 i ¾ w momencie, w którym gruby maszynista już wsiadał do pociągu. Albus nigdy w życiu nie biegł tak szybko, ciągnąc za jedną rękę Lily, a w drugiej dzierżąc kufer i nigdy nie miał tak czerwonych uszu, bowiem okazało się, że co najmniej połowa uczniów widziała ten ich szaleńczy bieg przez peron. James uznał to za niezły dowcip i śmiał się z tego razem z innymi, Lily była jeszcze za mała, aby się przejmować, ale Albus dobrze pamiętał ile wstydu się wtedy najadł. Gdy w końcu udało mu się znaleźć przedział przyjaciół, Bea prawie zapluła się ze śmiechu, a Isidor tak rechotał, że aż zleciał z siedzenia.<br/>
+Tylko Scorpius nie śmiał się wtedy z niego, co było naprawdę miłe.<br/>
+Albus, został gwałtownie obudzony przez tatę koło dziewiątej i zaspany przyglądał się, jak ten krąży nerwowo po jego pokoju.<br/>
+― Mam pilne wezwanie do biura, złapali w końcu tego Hummelsa, no, wiesz którego ― Albus nie miał zielonego pojęcia którego, ale przytaknął. ― I natychmiast muszę się tam zjawić, nie mogę zostawić tego na głowie Andersona. Mama ma o dziewiątej trzydzieści wywiad z jakąś bułgarską drużyną, nawet nie pamiętam jaką… Zaraz, coś tam było ― Harry Potter przystanął, pocierając dłonią kark. ― Na Merlina! Nie pamiętam ― westchnął rozżalony. ― No w każdym razie, zaraz oboje wychodzimy, a James i Anna mają spotkanie z konsultantką na Pokątnej, więc też ich nie będzie i nie ma kto was zabrać na pociąg…<br/>
+― Tato, daj spokój. Mam siedemnaście lat, Lilka piętnaście i naprawdę damy radę sami dostać się na peron.<br/>
+Ale ojciec go nie słuchał. Spojrzał tylko na zegarek i pospiesznie zapiął guziki szarej szaty.<br/>
+― Poprosiłem Teddy’ego, żeby was zawiózł, będzie tutaj wpół do jedenastej. Bądźcie już wtedy gotowi, dobrze? Hermiona podrzuci też Rosie i Hugo koło dziesiątej, bo też ma jakieś posiedzenie w Wizengamocie czy coś.<br/>
+Albus lubił Teddy’ego. Chłopak był zabawny i można z nim było o wszystkim pogadać, a prowadził samochód równie brawurowo co wujek Ron. Tak zawsze opowiadał tata; wujek najpierw bladł na to wspomnienie, a potem szczerze się z tatą śmiał.<br/>
+― Okej ― westchnął Al, przeciągając się i wygrzebując z pościeli. Uśmiechnął się lekko. ― Bo się spóźnisz, tato.<br/>
+― Racja, racja, miłego semestru synu ― podszedł do niego i mocno go uściskał. ― Baw się dobrze, postaraj się trochę podciągnąć oceny Transmutacji i uważaj na siostrę, dobrze?<br/>
+― No pewnie.<br/>
+Ojciec jeszcze raz go uściskał, po czym wypadł z pokoju, aby zdążyć jeszcze pożegnać się z Lily, a Albus podszedł do okna. Pogoda była niezbyt zachęcająca ― szare chmury kłębiły się na niebie i wyglądało tak, jakby zaraz miał lunąć deszcz.<br/>
+Jednak brzydka pogoda nie mogła mu zepsuć humoru. Dziś miał się znowu znaleźć w Hogwarcie!<br/>
+James, który po raz pierwszy od siedmiu lat nie wracał po wakacjach do Hogwartu bardzo źle to znosił. Duży wpływ na jego zachowanie miało również to, że jego najlepszy przyjaciel Fred wyjechał do Stanów na studia do Instytutu Waszyngtońskiego, gdzie zamierzał studiować Alchemię dzięki stypendium waszyngtońskich alchemików, których wprawił w osłupienie swoimi rozważaniami alchemicznymi podczas owutemów. James bardzo to przeżył, zwłaszcza, że on sam zajęcia w Akademii Aurorów zaczynał dopiero w październiku. Można by pomyśleć, że obecność narzeczonej w domu nieco załagodzi te przykre fakty, ale starszy Potter tylko nadął się i był jeszcze bardziej złośliwy niż zazwyczaj.<br/>
+Najpierw zamknął się w łazience, do której Lily dobijała się przez półgodziny (Albus dziękował Merlinowi, że on sam jedynie ubrał się, przeczesał grzebieniem włosy i był gotowy), potem schował rodzeństwu różdżki (Lily kopnęła go w kostkę, a Albus zaczął wrzeszczeć) by następnie, udając chęć pomocy, wtaszczył kufer brata z trzeciego na drugie piętro i patrzył, jak coraz bardziej wkurzony Al schodzi do niego, wyzywając go od najgorszych.<br/>
+Miał wrażenie, że James zamienił się mózgiem z jakimś wyjątkowo niedorozwiniętym dziesięciolatkiem<br/>
+Pomiędzy wrzaskami: nie mogę doczekać jak się stąd wreszcie wyniesiesz!, a masz więcej klamotów niż niejedna baba!, James postawił ciężki kufer pionowo na najwyższym stopniu, rechocąc na cały głos.<br/>
+― Nawet się nie waż ― wysyczał Albus do brata, zatrzymując się i zaciskając palce na barierce.<br/>
+Nie ośmieli się. Nie ma opcji.<br/>
+Powinien się jednak nauczyć przez siedemnaście lat mieszkania z James’em pod jednym dachem, że fraza: nie waż się, działa na brata zachęcająco.<br/>
+James uśmiechnął się złośliwie, co upodobniło go do chochlików kornwalijskich z paciorkowatymi oczkami, które kiedyś Al widział na stronach „Fantastycznych zwierząt i jak je znaleźć”. Pchnął kufer Albusa stopą, a ten zjechał po schodach, obijając się o stopnie i z głuchym łoskotem wylądował na podłodze.<br/>
+― Ty parszywy błotoryju! ― wrzasnął Al.<br/>
+Miał szczęście, że matki już nie było w domu, bo dałaby mu popalić za takie odzywanie się do brata. Nawet jeżeli ten brat był kupą smoczego łajna na nogach.<br/>
+― Kiedy ja chciałem tylko pomóc ― zarechotał Jim, teleportując się w ostatniej chwili, zanim ręce Ala zacisnęły się na jego szyi. Albus wyrżnął w ścianę, a gdy rozmasowywał sobie głowę i obrzucał James’a najgorszymi przekleństwami, jakie znał (wliczając w to barwną wiązankę wujka Rona, którą ten zaserwował im w wakacje, gdy Armaty z Chudley widowiskowo przegrały z Sępami z Vracy ― 20 do 270) drzwi frontowe się otworzyły i do przedpokoju weszło rude kuzynostwo Albusa ― Rose i Hugo.<br/>
+Rose w gustownej sukience w różowe kwiaty i z ujarzmionymi włosami ― rude pukle miały tendencję do kręcenie się i tworzenia ogromnego buszu na głowie, co dziewczyna zawdzięczała genom swojej matki, ale spięte w kucyk na czubku głowy prezentowały się całkiem znośnie. Dziewczyna w jednej ręce trzymała klatkę ze swoją małą szarą sówką, a przez ramię miała przewieszoną czarną szkolną szatę. Za nią piętrzyły się dwa szkolne kufry.<br/>
+Hugo wdał się w ojca; był równie wysoki i chudy co on, miał identyczne, ogniście rude włosy, długi nos i jedynie kolor oczu odziedziczył po matce. Wyszczerzył zęby do Albusa i go uściskał. Przez te wakacje znowu urósł i teraz byli niemal równi, mimo dwóch lat różnicy.<br/>
+― Cześć! Lilka gdzie?<br/>
+― W kuchni ― mruknął Potter, a kuzyn natychmiast tam pognał. Lily i Hugo przyjaźnili się dużo mocniej niż on z jego siostrą.<br/>
+― Coś się stało? ― Rose zmarszczyła nos, cmokając go w policzek na powitanie, a Albus tylko zazgrzytał zębami. Nie miał czasu na otwieranie kufra i sprawdzanie, czy nic się nie połamało. Dobrze wiedział, że potem by go nie zamknął, bo ilość rzeczy jaka się w im znajdowała była zatrważająca.<br/>
+― James się stał ― burknął w odpowiedzi, przesuwając kufer pod ścianę i kierując się do kuchni. ― Im szybciej znajdziemy się pociągu, tym lepiej. W Hogwarcie przynajmniej nie będę musiał się z nim użerać. Na brodę Merlina, ja naprawdę nie wiem jak Anna chce spędzić z tym gnojkiem resztę życia ― kuzynka podreptała za nim, chichocząc cicho pod nosem.<br/>
+Stół był zastawiony talerzami z jajecznicą, jajkami na bekonie, tostami i dzbankami z sokiem pomarańczowym, które mama zdążyła przygotować zanim poleciała do pracy. Anna, w ładnej, ciemnozielonej szacie ze srebrnym kołnierzem grzebała torebce, a Lily, już ubrana i umalowana, pochłaniała tosty z dżemem. Hugo poczochrał jej włosy, na co ta fuknęła jak rozdrażniona kotka, ale uśmiechnęła się, podsuwając kuzynowi talerz z jajecznicą.<br/>
+― Myślałby kto, że ciocia was nie karmi ― mruknęła. Albus zajął miejsce naprzeciwko siostry, a Rose podeszła przywitać się z Anną.<br/>
+Hugo, z ustami pełnymi bekonu i jajek tylko wzruszył ramionami.<br/>
+― Wiesz jak to u nas jest. Kto pierwszy ten lepszy, a tata ma dużo dłuższe nogi niż ja.<br/>
+Al, który zupełnie stracił apetyt, z ponurą miną rozejrzał się po kuchni, szukając Jamesa. Kalkulował, czy uda mu się dorobić bratu kaktusy zamiast uszu, nim będzie trzeba się zbierać na pociąg, ale ten jakby zapadł się pod ziemię. Anna też wyglądała na zirytowaną; miała razem z Jim’em spotkać się na Pokątnej z czarownicą, zajmującą się organizacją wesel, a tego gdzieś wcięło.<br/>
+W sumie dobrze dla niego, bo Albusa naprawdę świerzbiła ręka.<br/>
+― No dobrze ― Anna westchnęła, zakładając torebkę na ramię. ― Pewnie jest już przy samochodzie, a ja tu czekam jak głupia. Miłego semestru wam życzę i pewnie zobaczymy się na Boże Narodzenie ― podeszła i uściskała dziewczyny. ― Baw się dobrze Al i skopcie Gryfonów w Quidditcha ― mrugnęła do niego łobuzersko, całując bruneta w policzek.<br/>
+― Się wie ― uśmiechnął się. ― Pa, Anno i wiesz jakbyś się rozmyśliła co do James’a to nie będę ci miał tego za złe ― Lily zachichotała a panna Fairchild tylko wywróciła oczami i wyszła z kuchni. Po chwili trzasnęły drzwi frontowe.<br/>
+― Ale się nie rozmyśli, co? ― spytała nieco niepewnie Rose, patrząc w ślad za dziewczyną.<br/>
+Albus westchnął.<br/>
+― Nie ma na to nawet najmniejszej szansy.</p>
+  </div>
+  <!--/main-->
+
+
+</div>
+
+<!-- end of cache -->
+
+    </div>
+  
+  
+    </div>
+    <!-- END work skin -->
+  </div>
+  <!-- END work -->
+
+  <!-- BEGIN comment section -->
+  <!-- Gets embedded anywhere we need to list comments on a top-level commentable. We need the local variable "commentable" here. -->
+<div id="feedback" class="feedback" role="complementary">
+
+  <h3 class="landmark heading">Actions</h3>
+
+  <ul class="actions" role="navigation">
+      <li><a href="#main">&#8593; Top</a></li>
+
+
+      <li><a href="/works/11723784/chapters/26946390#workskin">Next Chapter &#8594;</a></li>
+
+
+
+
+      <li>
+        <form id="new_kudo" action="/kudos" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="odANPPvNpI9AueT+2XU5kBNAKnFgce80Tgrn5t4vrMRUqHQcuLstJ0gRf+4kmEOBJ04kGQX7dvEBkI6h42uZog=="/>
+          <input value="11723784" type="hidden" name="kudo[commentable_id]" id="kudo_commentable_id"/>
+          <input value="Work" type="hidden" name="kudo[commentable_type]" id="kudo_commentable_type"/>
+          <input type="submit" name="commit" value="Kudos ♥" id="kudo_submit"/>
+</form>      </li>
+
+
+
+
+        <li id="show_comments_link"><a data-remote="true" href="/comments/show_comments?chapter_id=26408577">Comments (2)</a></li>
+  </ul>
+
+  <div id="kudos_message"></div>
+
+  <h3 class="landmark heading"><a name="comments">Comments</a></h3>
+
+  
+
+    <div id="kudos">
+      <p class="kudos">
+          <a href="/users/Sirianna123">Sirianna123</a>, <a href="/users/Jora_Calltrise">Jora_Calltrise</a>, <a href="/users/Silverum2016">Silverum2016</a>, <a href="/users/Megajra">Megajra</a>, <a href="/users/3rica0standfor0heathe7">3rica0standfor0heathe7</a>, <a href="/users/Ignis_97">Ignis_97</a>, <a href="/users/anemone_coronaria">anemone_coronaria</a>, <a href="/users/YesSteven">YesSteven</a>, and <a href="/users/MadelineDeCroix">MadelineDeCroix</a>
+             as well as 
+          8 guests
+         left kudos on this work!
+      </p>
+</div>
+
+
+    <div id="add_comment_placeholder" title="top level comment">
+      <div id="add_comment">
+        <!-- expects the local variables comment, commentable, and button_name -->
+<div class="post comment" id="comment_form_for_26408577">
+  <form class="new_comment" id="comment_for_26408577" action="/chapters/26408577/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="GKJH74HVM6B30B/8CoXdbl4HZbmzURRIP8AIZ8Ki7g7t2j7PwqO6CH94hOz3aKd/aglr0dbbjY1wWmEg/+bbaA=="/>
+    <fieldset>
+      <legend>Post Comment</legend>
+
+
+
+
+
+
+        <dl>
+          <dt class="landmark">Note:</dt>
+          <dd class="instructions comment_form">All fields are required. Your email address will not be published.</dd>
+          <dt><label for="comment_name_for_26408577">Guest name: </label></dt>
+          <dd>
+            <input id="comment_name_for_26408577" type="text" name="comment[name]"/>
+            <script>var validation_for_comment_name_for_26408577=new LiveValidation('comment_name_for_26408577',{wait:500,onlyOnBlur:false});validation_for_comment_name_for_26408577.add(Validate.Presence,{"failureMessage":"Please enter your name.","validMessage":""});</script>
+          </dd>
+          <dt><label for="comment_email_for_26408577">Guest email: </label></dt>
+          <dd>
+            <input id="comment_email_for_26408577" type="text" name="comment[email]"/>
+            <script>var validation_for_comment_email_for_26408577=new LiveValidation('comment_email_for_26408577',{wait:500,onlyOnBlur:false});validation_for_comment_email_for_26408577.add(Validate.Presence,{"failureMessage":"Please enter your email address.","validMessage":""});</script>
+          </dd>
+        </dl>
+        <p class="footnote">(Plain text with limited HTML <a class="help symbol question modal" title="Html help" aria-controls="#modal" href="/help/html-help.html"><span class="symbol question"><span>?</span></span></a>)</p>
+
+      <p>
+        <label for="comment_content_for_26408577" class="landmark">Comment</label>
+        <textarea id="comment_content_for_26408577" class="comment_form observe_textlength" title="Enter Comment" name="comment[comment_content]">
+</textarea>
+        <input type="hidden" id="controller_name_for_26408577" name="controller_name" value="chapters"/>
+      </p>
+      <p class="character_counter"><span id="comment_content_for_26408577_counter" class="value" data-maxlength="10000" aria-live="polite" aria-valuemax="10000" aria-valuenow="comment_content_for_26408577">10000</span> characters left</p>
+      <script>var validation_for_comment_content_for_26408577=new LiveValidation('comment_content_for_26408577',{wait:500,onlyOnBlur:false});validation_for_comment_content_for_26408577.add(Validate.Presence,{"failureMessage":"Brevity is the soul of wit, but we need your comment to have text in it.","validMessage":""});validation_for_comment_content_for_26408577.add(Validate.Length,{"maximum":"10000","tooLongMessage":"must be less than 10000 characters long."});</script>
+      <p class="submit actions">
+        <input type="submit" name="commit" value="Comment" id="comment_submit_for_26408577" data-disable-with="Please wait..."/>
+      </p>
+    </fieldset>
+</form></div>
+<div class="clear"></div>
+
+      </div>
+    </div>
+
+  <!-- If we have javascript, here is where the comments will be spiffily inserted -->
+  <!-- If not, and show_comments is true, here is where the comments will be rendered -->
+  <div id="comments_placeholder" style="display:none;">
+  </div>
+
+
+</div>
+<!-- END comments -->
+
+  <!-- END comment section -->
+
+
+
+          <div class="clear"><!--presentational--></div>
+        </div>
+        <!-- END main -->
+      </div>
+      <!-- BEGIN footer -->
+<div id="footer" role="contentinfo" class="region">
+	<h3 class="landmark heading">Footer</h3>
+  <ul class="navigation actions" role="navigation">
+    <li class="module group">
+      <h4 class="heading">About the Archive</h4>
+      <ul class="menu">
+        <li><a href="/site_map">Site Map</a></li>
+        <li><a href="/diversity">Diversity Statement</a></li>
+        <li><a href="/tos">Terms of Service</a></li>
+        <li><a href="/dmca">DMCA Policy</a> </li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Contact Us</h4>
+      <ul class="menu">
+        <li><a href="/abuse_reports/new">Report Abuse</a></li>
+        <li><a href="/support">Technical Support and Feedback</a></li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Development</h4>
+      <ul class="menu">
+          <li><a href="https://github.com/otwcode/otwarchive/commits/v0.9.300.1">otwarchive v0.9.300.1</a></li>
+        <li><a href="/known_issues">Known Issues</a></li>
+        <li><a href="http://www.gnu.org/licenses/gpl-2.0.html" title="View License">GPL</a> by the <a href="http://transformativeworks.org/" title="The Organization for Transformative Works">OTW</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!-- END footer -->
+
+    </div>
+    <!-- check to see if this controller/action allow tinymce before we load the gigantor js; see application_helper -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js" type="text/javascript"></script>
+<!-- if user has googleapis blocked for some reason we need a fallback -->
+<script type="text/javascript">if(typeof jQuery=='undefined'){document.write(unescape("%3Cscript src='/javascripts/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));document.write(unescape("%3Cscript src='/javascripts/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));}</script>
+
+
+<script type="text/javascript">$j=jQuery.noConflict();</script>
+<script src="/javascripts/jquery.scrollTo.min.js+jquery.livequery.min.js+rails.js+application.js+bootstrap,_bootstrap-dropdown.min.js+jquery-shuffle.js+jquery.tokeninput.min.js+jquery.trap.min.js+ao3modal.min.js+js.cookie.min.js+filters.min.js.pagespeed.jc.oz6LPTe6O7.js"></script><script>eval(mod_pagespeed_a8hDjzT3l_);</script>
+<script>eval(mod_pagespeed_1nA1vKz9z4);</script>
+<script>eval(mod_pagespeed_AKC4FLip6q);</script>
+<script>eval(mod_pagespeed_gX7XC77lvT);</script>
+<script>eval(mod_pagespeed_5zo0ZWMy4O);</script>
+<script>eval(mod_pagespeed_eCCgOhjhYQ);</script>
+<script>eval(mod_pagespeed_TU1Ln7LKSh);</script>
+<script>eval(mod_pagespeed_qTpbjsXQwh);</script>
+<script>eval(mod_pagespeed_R5FGw2ySDb);</script>
+<script>eval(mod_pagespeed_rqqFCT3xcT);</script>
+
+<script>eval(mod_pagespeed_Gf_4KFhTvB);</script>
+
+
+  <script>function isSupported(){var item="localStoragePolyfill";try{localStorage.setItem(item,item);localStorage.removeItem(item);return true;}catch(e){return false;}}function acceptTOS(){if(isSupported()){localStorage.setItem("accepted_tos","20180523");}else{Cookies.set("accepted_tos","20180523",{expires:365});}}$j(document).ready(function(){if(localStorage.getItem("accepted_tos")!=="20180523"&&Cookies.get("accepted_tos")!=="20180523"){$j("body").prepend("<div id=\"tos_prompt\" class=\"hidden\">\n  <h2 class=\"heading\">\n    <span>Archive of Our Own<\/span>\n  <\/h2>\n  <div class=\"agreement\">\n    <p class=\"summary\">\n      On Archive of Our Own (AO3), users can make profiles, create works and\n            other Content, post comments, give Kudos, create Collections and \n            Bookmarks, participate in Challenges, import works, and more. Any \n            information you publish in a comment, profile, work, or Content that you \n            post or import onto AO3 including in summaries, notes and tags, \n            will be accessible by the public (unless you limit access to a work only \n            to those with AO3 Accounts), and it will be available to \n            AO3 personnel. Be mindful when sharing personal information, \n            including  your religious or political views, health, racial background, \n            country of origin, sexual identity and/or personal relationships. To \n            learn more, check out our <a href=\"/tos\">Terms of Service<\/a> and <a href=\"/tos#privacy\">Privacy Policy<\/a>.\n    <\/p>\n\n    <p class=\"confirmation\">\n      <input type=\"checkbox\" id=\"tos_agree\" />\n      <label for=\"tos_agree\">I have read &amp; understood the new Terms of Service and Privacy Policy<\/label>\n    <\/p>\n\n      <p class=\"submit\">\n        <button name=\"button\" type=\"button\" disabled=\"disabled\" id=\"accept_tos\">I agree/consent to its terms<\/button>\n      <\/p>\n\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    var container = \$j(\"#tos_prompt\");\n    var outer = \$j(\"#outer\");\n    var button = \$j(\"#accept_tos\");\n\n    setTimeout(showTOSPrompt, 1500);\n\n    function showTOSPrompt() {\n      \$j.when(container.fadeIn(500)).done(function() {\n        outer.addClass(\"hidden\").attr(\"aria-hidden\", \"true\");\n      });\n\n      \$j(\"#tos_agree\").on(\"click\", function() {\n        button.attr(\"disabled\", !this.checked);\n        if (this.checked) {\n          button.on(\"click\", function() {\n            acceptTOS();\n            outer.removeClass(\"hidden\").removeAttr(\"aria-hidden\");\n            \$j.when(container.fadeOut(500)).done(function() {\n              container.remove();\n            });\n          });\n        };\n      }).change();\n    };\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+  <script>$j(document).ready(function(){var permitted_hosts=["archiveofourown.org","download.archiveofourown.org","insecure.archiveofourown.org","www.archiveofourown.org","insecure-test.archiveofourown.org","test.archiveofourown.org","testdownload.archiveofourown.org"];var current_host=window.location.hostname;if(!permitted_hosts.includes(current_host)&&Cookies.get("proxy_notice")!=="0"&&window.location.protocol!=="file:"){$j("#skiplinks").after("<div id=\"proxy-notice\">\n  <div class=\"userstuff\">\n    <p class=\"important\">Important message:<\/p>\n    <ol>\n      <li>You are using a proxy site that is not part of the Archive of Our Own.<\/li>\n      <li>The entity that set up the proxy site can see what you submit, including your IP address. If you log in through the proxy site, it can see your password.<\/li>\n    <\/ol>\n    <p class=\"important\">重要提示：<\/p>\n    <ol>\n      <li>您使用的是第三方开发的反向代理网站，此网站并非Archive of Our Own - AO3（AO3作品库）原站。<\/li>\n      <li>代理网站的开发者能够获取您上传至该站点的全部内容，包括您的ip地址。如您通过代理登录AO3，对方将获得您的密码。<\/li>\n    <\/ol>\n    <p class=\"submit\"><button class=\"action\" type=\"button\" id=\"proxy-notice-dismiss\">Dismiss Notice<\/button><\/p>\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    \$j(\"#proxy-notice-dismiss\").on(\"click\", function() {\n      Cookies.set(\"proxy_notice\", \"0\");\n      \$j(\"#proxy-notice\").slideUp();\n    });\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+    <script>$j(document).on("loadedCSRF",function(){$j.post("/works/11723784/hit_count.json")})</script>
+
+
+  </body>
+</html>
