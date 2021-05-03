@@ -25,7 +25,7 @@ To replicate the experiments from my diploma thesis:
     it will take approximately one hour):
     
     ```bash
-    python -m hp.download 5000
+    python -m hp.download_url_lists -u 5000
     ```
     Results will be stored into `downloaded_url_lists` folder.
  5. Download metadata by calling (it will take 12-24 hours):
