@@ -1,4 +1,4 @@
-from hp import FULLDOWNLOAD_PATH, PARTIAL_CATALOGUE_PATH
+from hp import FULL_DOWNLOAD_PATH, PARTIAL_CATALOGUE_PATH
 import os
 from io import StringIO
 from html.parser import HTMLParser
@@ -34,7 +34,7 @@ def iter_files():
         lines = catalogue_file.readlines()
         records = [line.strip("\n").split(";") for line in lines]
         lookup_dictionary = dict((record[0], record[1:]) for record in records)
-    for filename in os.listdir(FULLDOWNLOAD_PATH):
+    for filename in os.listdir(FULL_DOWNLOAD_PATH):
         try:
             record = lookup_dictionary[filename]
             yield (record, filename)  # vyhazuje všechny názvy souborů
@@ -64,6 +64,6 @@ def extract_article_text():
     extrahuje čisté texty fanfikcí ze souboru
     """
     for filename in _filter():
-        with codecs.open(os.path.join(FULLDOWNLOAD_PATH, filename), "r", "utf-8") as file:
+        with codecs.open(os.path.join(FULL_DOWNLOAD_PATH, filename), "r", "utf-8") as file:
             text = file.read()
         yield strip_tags(text)

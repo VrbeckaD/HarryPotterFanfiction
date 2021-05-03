@@ -6,7 +6,7 @@ from collections import Counter, defaultdict
 import pandas as pd
 import numpy as np
 
-from hp import FULL_CATALOGUE_PATH, RELATIONS_HTML, LOVERS
+from hp import FULL_CATALOGUE_PATH, RELATIONS_HTML_PATH, LOVERS_CSV_PATH
 
 
 def clean(line):
@@ -133,7 +133,7 @@ def create_html(data, matrix, cat):
     </body>
     </html>
     """
-    target = RELATIONS_HTML
+    target = RELATIONS_HTML_PATH
     if cat:
         target = target.replace(".html", "_" + cat + ".html")
 
@@ -179,7 +179,7 @@ def main(min_freq=50, category=None):
 
     create_html(filtered_char_without_freq, empty, category)
 
-    target = LOVERS
+    target = LOVERS_CSV_PATH
     if category:
         target = target.replace(".csv", "_" + category + ".csv")
 
