@@ -16,7 +16,8 @@ TEXT_URL_PREFIX = "https://archiveofourown.org/works/"
 CATEGORIES = ["filename", "title", "rating", "ship", "language", "category", "lovers",
               "wordcount", "published", "hits", "freeform_tags", "kudos", "comments", "bookmarks", "archive_warnings"]
 RETRY = "Retry later"
-RE_ERROR = re.compile("404[\n ]+Error", flags=re.IGNORECASE)
+RE_ERROR = re.compile("404[\n ]+Error|This work is only available to registered users of the Archive.",
+                      flags=re.IGNORECASE)
 
 
 def get_text_from_web(text_path: Path, text_block_with_id: str) -> Tuple[str, str]:
@@ -206,7 +207,7 @@ def main():
                 text_path = FULL_DOWNLOAD_PATH / target_name
                 try:
                     text, full_text = get_text_from_web(text_path, part)
-                except FileNotFoundError:
+                except (FileNotFoundError, AttributeError):
                     logger.error("Giving up on file %s.", target_name)
                     continue
                 catalogue_writer.writerow(parse(target_name, part, full_text))
