@@ -1,0 +1,2714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"232243a405","applicationID":"129290979","transactionName":"cVtXEUpbWFxdQhkUXEBfSkpRWlBVQA==","queueTime":0,"applicationTime":450,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"232243a405",applicationID:"129290979"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <meta name="keywords" content="fanfiction, transformative works, otw, fair use, archive"/>
+    <meta name="language" content="en-US"/>
+    <meta name="subject" content="fandom"/>
+    <meta name="description" content="An Archive of Our Own, a project of the
+    Organization for Transformative Works"/>
+    <meta name="distribution" content="GLOBAL"/>
+    <meta name="classification" content="transformative works"/>
+    <meta name="author" content="Organization for Transformative Works"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+          Harry Potter - J. K. Rowling - Works
+        |
+        Archive of Our Own
+    </title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/site/2.0/A.01-core.css+02-elements.css+03-region-header.css+04-region-dashboard.css+05-region-main.css+06-region-footer.css+07-interactions.css+08-actions.css+09-roles-states.css+10-types-groups.css+11-group-listbox.css+12-group-meta.css+13-group-blurb.css+14-group-preface.css+15-group-comments.css+16-zone-system.css+17-zone-home.css+18-zone-searchbrowse.css+19-zone-tags.css+20-zone-translation.css+21-userstuff.css+22-system-messages.css,Mcc.YIzy2FHSCx.css.pagespeed.cf.JiR2hT5NxR.css"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style media="only screen and (max-width: 62em), handheld">#dashboard{clear:both;float:none;margin:1% 3.5%;max-width:100%;padding:0;width:auto}#dashboard,#dashboard.own{border-bottom:10px solid #900;border-top:10px solid #900;padding:.5em 0;border-radius:.25em}#dashboard ul{border:none;display:inline;padding:0;text-align:left}#dashboard li{display:inline}#dashboard a,#dashboard span{display:inline-block;margin:.25em 0}#dashboard .secondary{background:#eee;padding:.375em 0 .625em;box-shadow:inset 2px 2px 5px #bbb}#dashboard .secondary a{margin:.125em 0}#dashboard .landmark{clear:none;float:left}#main,#main.dashboard{float:none;margin:auto;padding-left:3.5%;padding-right:3.5%;width:auto}.logged-in .splash>.module{width:48.5%}.logged-in .splash > div:nth-of-type(odd) {margin-left:0;margin-right:1.5%}.logged-in .splash > div:nth-of-type(even) {margin-left:1.5%;margin-right:0}form.filters{width:auto;min-width:23%;max-width:24%}.filters fieldset{margin-right:0}form.filters dl{margin-left:.25em;margin-right:.25em}#workskin{margin:auto 1.5%}</style>
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 42em), handheld" href="/stylesheets/site/2.0/A.26-media-narrow.css.pagespeed.cf.8L0d7x-op8.css"/>
+<link rel="stylesheet" type="text/css" media="speech" href="/stylesheets/site/2.0/A.27-media-aural.css.pagespeed.cf.Ybb8bLK5Um.css"/>
+<link rel="stylesheet" type="text/css" media="print" href="/stylesheets/site/2.0/A.28-media-print.css.pagespeed.cf.ry3YZtf8Cz.css"/>
+<!--[if lte IE 8]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/site/2.0/29-role-ie8_or_lower.css" /><![endif]-->
+<!--[if IE 5]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/site/2.0/30-role-ie5.css" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/site/2.0/31-role-ie6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/site/2.0/32-role-ie7.css" /><![endif]-->
+
+
+
+<!--sandbox for developers	-->
+<style media="screen">#new_work_search fieldset:first-of-type .submit{padding-top:0}.edit_external_author ul ul{margin-left:2.75em}a.resp-sharing-button__link,.resp-sharing-button__icon{display:inline-block}a.resp-sharing-button__link,a.resp-sharing-button__link:hover{text-decoration:none;color:#fff;border:none}.resp-sharing-button{border-radius:5px;transition:25ms ease-out;padding:.5em .75em}.resp-sharing-button__icon svg{width:1em;height:1em;margin-right:.4em;vertical-align:top}.resp-sharing-button__icon{stroke:#fff;fill:none}.resp-sharing-button__icon--solid{fill:#fff;stroke:none}.resp-sharing-button--twitter{background-color:#55acee}.resp-sharing-button--twitter:hover,a:focus .resp-sharing-button--twitter{background-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c}.resp-sharing-button--tumblr:hover,a:focus .resp-sharing-button--tumblr{background-color:#222d3c}.resp-sharing-button--twitter{background-color:#55acee;border-color:#55acee}.resp-sharing-button--twitter:hover,.resp-sharing-button--twitter:active{background-color:#2795e9;border-color:#2795e9}.resp-sharing-button--tumblr{background-color:#35465c;border-color:#35465c}.resp-sharing-button--tumblr:hover,.resp-sharing-button--tumblr:active{background-color:#222d3c;border-color:#222d3c}</style>
+<script src="/javascripts/livevalidation_standalone.js.pagespeed.jm.oB__Z5piTe.js"></script>
+
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="pNpAW49zfvgIvgeS-xK_MTp37GLsnn780Tb5vDmk5c7433XHlLWuEP5vjOt50nIBWn7J5Q4ZWsh2gAzvJFJlsQ"/>
+
+    
+  </head>
+
+  <body class="logged-out">
+    <div id="outer" class="wrapper">
+      <ul id="skiplinks"><li><a href="#main">Main Content</a></li></ul>
+      <!-- BEGIN BETA CAVEATS! -->
+<noscript>
+  <p id="javascript-warning">
+    While we&#39;ve done our best to make the core functionality of this site accessible without javascript, it will work better with it enabled. Please consider turning it on!
+  </p>
+</noscript>
+<!-- END BETA CAVEATS! --> 
+
+<!-- BEGIN header -->
+
+<div id="header" class="region">
+
+  <h1 class="heading">
+    <a href="/"><span>Archive of Our Own</span><sup> beta</sup><img alt="Archive of Our Own" class="logo" src="/images/ao3_logos/xlogo_42.png.pagespeed.ic.ax-awMa4j4.png"/></a> 
+  </h1>
+
+    <div id="login" class="dropdown">
+      <p class="user actions" role="menu">
+        <a id="login-dropdown" href="/users/login">Log In</a>
+      </p>
+      <div id="small_login" class="simple login">
+	<form class="new_user" id="new_user_session_small" action="/users/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="yyBY5tzcQDCJ21AQev1nvwfqFCX7GIpaDDNu5GtRSUKXJW16xxqQ2H8K22n4PaqPZ-Mxohmfrm6rhZu3dqfJPQ"/>
+	<dl>
+    <dt>
+      <label for="user_session_login_small">User name or email:</label></dt>
+    <dd><input id="user_session_login_small" type="text" name="user[login]"/></dd>
+    <dt><label for="user_session_password_small">Password:</label></dt>
+    <dd><input id="user_session_password_small" type="password" name="user[password]"/></dd>
+  </dl>
+  <p class="submit actions">
+    <label for="user_remember_me_small" class="action"><input type="checkbox" name="user[remember_me]" id="user_remember_me_small" value="1"/>Remember Me</label>
+    <input type="submit" name="commit" value="Log In"/>
+  </p>
+</form>
+<ul class="footnote actions">
+  <li><a href="/users/password/new">Forgot password?</a></li>
+    <li>
+      <a href="/invite_requests">Get an Invitation</a>
+    </li>
+</ul>
+
+</div>
+
+    </div>
+
+  <h3 class="landmark heading">Site Navigation</h3>
+  <ul class="primary navigation actions" role="navigation">
+    <li class="dropdown">
+      <a href="/menu/fandoms">Fandoms</a>
+      <ul class="menu" role="menu">
+  <li><a href="/media">All Fandoms</a></li>
+        <li id="medium_5"><a href="/media/Anime%20*a*%20Manga/fandoms">Anime &amp; Manga</a></li>
+        <li id="medium_3"><a href="/media/Books%20*a*%20Literature/fandoms">Books &amp; Literature</a></li>
+        <li id="medium_4"><a href="/media/Cartoons%20*a*%20Comics%20*a*%20Graphic%20Novels/fandoms">Cartoons &amp; Comics &amp; Graphic Novels</a></li>
+        <li id="medium_7"><a href="/media/Celebrities%20*a*%20Real%20People/fandoms">Celebrities &amp; Real People</a></li>
+        <li id="medium_2"><a href="/media/Movies/fandoms">Movies</a></li>
+        <li id="medium_6"><a href="/media/Music%20*a*%20Bands/fandoms">Music &amp; Bands</a></li>
+        <li id="medium_8"><a href="/media/Other%20Media/fandoms">Other Media</a></li>
+        <li id="medium_30198"><a href="/media/Theater/fandoms">Theater</a></li>
+        <li id="medium_1"><a href="/media/TV%20Shows/fandoms">TV Shows</a></li>
+        <li id="medium_476"><a href="/media/Video%20Games/fandoms">Video Games</a></li>
+        <li id="medium_9971"><a href="/media/Uncategorized%20Fandoms/fandoms">Uncategorized Fandoms</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/browse">Browse</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works">Works</a></li>
+  <li><a href="/bookmarks">Bookmarks</a></li>
+  <li><a href="/tags">Tags</a></li>
+  <li><a href="/collections">Collections</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/search">Search</a>
+      <ul class="menu" role="menu">
+  <li><a href="/works/search">Works</a></li>
+  <li><a href="/bookmarks/search">Bookmarks</a></li>
+  <li><a href="/tags/search">Tags</a></li>
+  <li><a href="/people/search">People</a></li>
+</ul>
+
+    </li>
+    <li class="dropdown">
+      <a href="/menu/about">About</a>
+      <ul class="menu" role="menu">
+  <li><a href="/about">About Us</a></li>
+  <li><a href="/admin_posts">News</a></li>
+  <li><a href="/faq">FAQ</a></li>
+  <li><a href="/wrangling_guidelines">Wrangling Guidelines</a></li>
+  <li><a href="/donate">Donate or Volunteer</a></li>
+</ul>
+
+    </li>
+	  <li class="search"><form class="search" id="search" action="/works/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+  <fieldset>
+    <legend>Search Works</legend>
+    <p>
+      <label class="landmark" for="site_search">Work Search:</label>
+      <input class="text" id="site_search" aria-describedby="site_search_tooltip" type="text" name="work_search[query]"/>
+      <span class="tip" role="tooltip" id="site_search_tooltip">tip: katekyou &quot;alternate universe&quot; sort:&gt;words</span>
+      <span class="submit actions"><input type="submit" value="Search" class="button"/></span>
+    </p>
+  </fieldset>
+</form></li>
+  </ul>
+
+
+
+  <div class="clear"></div>
+
+</div>
+
+
+
+<!-- END header -->
+
+      <div id="inner" class="wrapper">
+        <!-- BEGIN sidebar -->
+        <!-- END sidebar -->
+
+        <!-- BEGIN main -->
+        <div id="main" class="works-index filtered region" role="main">
+          
+          <div class="flash"></div>
+          <!--Descriptive page name and system messages, descriptions, and instructions.-->
+<h2 class="heading">
+   31801 - 31820 of 297796 Works in <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling">Harry Potter - J. K. Rowling</a>
+</h2>
+<!-- /end descriptions-->
+
+<!--Subnavigation, sorting and actions.-->
+  <div class="navigation actions module">
+    <h3 class="landmark heading">Navigation and Actions</h3>
+    <!--gift search subnav-->
+    <!--user role subnav-->
+      <ul class="user navigation actions" role="navigation">
+          <li><span class="current">Works</span></li>
+          <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/bookmarks">Bookmarks</a></li>
+          <li class="narrow-shown hidden"><a href="#work-filters" id="go_to_filters">Filters</a></li>
+          <li><a title="RSS Feed" class="rss" href="/tags/136512/feed.atom"><span>RSS Feed</span></a></li>
+      </ul>
+  </div>
+<!---/subnav-->
+
+
+  <h4 class="landmark heading">Pages Navigation</h4><ol role="navigation" aria-label="Pagination" class="pagination actions" title="pagination"><li class="previous" title="previous"><a rel="prev" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1590&amp;view_adult=true">&#8592; Previous</a></li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1&amp;view_adult=true">1</a></li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=2&amp;view_adult=true">2</a></li> <li class="gap">…</li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1587&amp;view_adult=true">1587</a></li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1588&amp;view_adult=true">1588</a></li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1589&amp;view_adult=true">1589</a></li> <li><a rel="prev" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1590&amp;view_adult=true">1590</a></li> <li><span class="current">1591</span></li> <li><a rel="next" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1592&amp;view_adult=true">1592</a></li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1593&amp;view_adult=true">1593</a></li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1594&amp;view_adult=true">1594</a></li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1595&amp;view_adult=true">1595</a></li> <li class="gap">…</li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=4999&amp;view_adult=true">4999</a></li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=5000&amp;view_adult=true">5000</a></li> <li class="next" title="next"><a rel="next" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1592&amp;view_adult=true">Next &#8594;</a></li></ol>
+
+<!--main content-->
+<h3 class="landmark heading">Listing Works</h3>
+<ol class="work index group">
+  <li id="work_27419911" class="work blurb group work-27419911 user-3626793" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/27419911">A Way of Coming Back to Us</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/AmityRavenclawElf/pseuds/AmityRavenclawElf">AmityRavenclawElf</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-teen rating" title="Teen And Up Audiences"><span class="text">Teen And Up Audiences</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-no warnings" title="No Archive Warnings Apply"><span class="text">No Archive Warnings Apply</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-multi category" title="Multi"><span class="text">Multi</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-no iswip" title="Work in Progress"><span class="text">Work in Progress</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/No%20Archive%20Warnings%20Apply/works">No Archive Warnings Apply</a></strong></li><li class='relationships'><a class="tag" href="/tags/Luna%20Lovegood*s*Harry%20Potter/works">Luna Lovegood/Harry Potter</a></li> <li class='relationships'><a class="tag" href="/tags/Harry%20Potter%20*a*%20Tom%20Riddle/works">Harry Potter &amp; Tom Riddle</a></li> <li class='relationships'><a class="tag" href="/tags/Luna%20Lovegood%20*a*%20Harry%20Potter%20*a*%20Tom%20Riddle/works">Luna Lovegood &amp; Harry Potter &amp; Tom Riddle</a></li> <li class='relationships'><a class="tag" href="/tags/Luna%20Lovegood%20*a*%20Tom%20Riddle/works">Luna Lovegood &amp; Tom Riddle</a></li><li class='characters'><a class="tag" href="/tags/Harry%20Potter/works">Harry Potter</a></li> <li class='characters'><a class="tag" href="/tags/Tom%20Riddle%20%7C%20Voldemort/works">Tom Riddle | Voldemort</a></li> <li class='characters'><a class="tag" href="/tags/Luna%20Lovegood/works">Luna Lovegood</a></li> <li class='characters'><a class="tag" href="/tags/Albus%20Dumbledore/works">Albus Dumbledore</a></li> <li class='characters'><a class="tag" href="/tags/Kreacher%20(Harry%20Potter)/works">Kreacher (Harry Potter)</a></li><li class='freeforms'><a class="tag" href="/tags/Harry%20Potter%20Raises%20Tom%20Riddle/works">Harry Potter Raises Tom Riddle</a></li> <li class='freeforms'><a class="tag" href="/tags/Luna%20Lovegood%20Raises%20Tom%20Riddle/works">Luna Lovegood Raises Tom Riddle</a></li> <li class='freeforms'><a class="tag" href="/tags/Possessive%20Tom%20Riddle/works">Possessive Tom Riddle</a></li> <li class='freeforms'><a class="tag" href="/tags/Obsessive%20Tom%20Riddle/works">Obsessive Tom Riddle</a></li> <li class='freeforms'><a class="tag" href="/tags/yandere%20tom%20riddle/works">yandere tom riddle</a></li> <li class='freeforms'><a class="tag" href="/tags/Master%20of%20Death%20Harry%20Potter/works">Master of Death Harry Potter</a></li> <li class='freeforms'><a class="tag" href="/tags/Communication/works">Communication</a></li> <li class='freeforms'><a class="tag" href="/tags/Brown%20Luna%20Lovegood/works">Brown Luna Lovegood</a></li> <li class='freeforms'><a class="tag" href="/tags/POC%20Luna%20Lovegood/works">POC Luna Lovegood</a></li> <li class='freeforms'><a class="tag" href="/tags/Rating%20May%20Change/works">Rating May Change</a></li> <li class='freeforms'><a class="tag" href="/tags/Not%20Epilogue%20Compliant/works">Not Epilogue Compliant</a></li> <li class='freeforms'><a class="tag" href="/tags/Humor/works">Humor</a></li> <li class='freeforms'><a class="tag" href="/tags/Creepy%20Fluff/works">Creepy Fluff</a></li> <li class='freeforms'><a class="tag" href="/tags/Family%20Fluff/works">Family Fluff</a></li> <li class='freeforms'><a class="tag" href="/tags/Manipulative%20Tom%20Riddle/works">Manipulative Tom Riddle</a></li> <li class='freeforms'><a class="tag" href="/tags/Yandere/works">Yandere</a></li> <li class='freeforms'><a class="tag" href="/tags/Time%20Travel/works">Time Travel</a></li> <li class='freeforms'><a class="tag" href="/tags/Bisexual%20Harry%20Potter/works">Bisexual Harry Potter</a></li> <li class='freeforms'><a class="tag" href="/tags/Harry%20Potter%20Epilogue%20What%20Epilogue%20%7C%20EWE/works">Harry Potter Epilogue What Epilogue | EWE</a></li> <li class='freeforms'><a class="tag" href="/tags/Adopted%20Tom%20Riddle/works">Adopted Tom Riddle</a></li> <li class='freeforms'><a class="tag" href="/tags/Young%20Tom%20Riddle/works">Young Tom Riddle</a></li> <li class='freeforms'><a class="tag" href="/tags/Teenage%20Tom%20Riddle/works">Teenage Tom Riddle</a></li> <li class='freeforms'><a class="tag" href="/tags/Going%20with%20the%20flow/works">Going with the flow</a></li> <li class='freeforms'><a class="tag" href="/tags/Possessive%20Behavior/works">Possessive Behavior</a></li> <li class='freeforms'><a class="tag" href="/tags/Thriller/works">Thriller</a></li> <li class='freeforms'><a class="tag" href="/tags/Neurodivergent%20Luna%20Lovegood/works">Neurodivergent Luna Lovegood</a></li> <li class='freeforms'><a class="tag" href="/tags/Child%20Tom%20Riddle/works">Child Tom Riddle</a></li> <li class='freeforms'><a class="tag" href="/tags/Parent%20Harry%20Potter/works">Parent Harry Potter</a></li> <li class='freeforms'><a class="tag" href="/tags/Parent%20Luna%20Lovegood/works">Parent Luna Lovegood</a></li> <li class='freeforms'><a class="tag" href="/tags/Autistic%20Luna%20Lovegood/works">Autistic Luna Lovegood</a></li>
+  </ul>
+
+  <!--summary-->
+    <h6 class="landmark heading">Summary</h6>
+    <blockquote class="userstuff summary">
+      <p>"I saw you in Hogsmeade yesterday," Luna said. "It looked like you were saying goodbye."</p><p>Two years after the Battle of Hogwarts, Harry decides that some of the costs of victory aren't acceptable. He would have gone alone, had a certain Ravenclaw not turned up on his doorstep one morning. Now, he and Luna are united in their quest to create a different future, starting with a single dramatic change: raising the dark lord.</p>
+    </blockquote>
+
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">18,041</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters"><a href="/works/27419911/chapters/68666694">2</a>/?</dd>
+
+
+    <dt class="collections">Collections:</dt>
+    <dd class="collections"><a href="/works/27419911/collections">1</a></dd>
+
+    <dt class="comments">Comments:</dt>
+    <dd class="comments"><a href="/works/27419911?show_comments=true&amp;view_full_work=true#comments">54</a></dd>
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/27419911?view_full_work=true#comments">292</a></dd>
+    <dt class="bookmarks">Bookmarks:</dt>
+    <dd class="bookmarks"><a href="/works/27419911/bookmarks">91</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">3645</dd>
+
+  </dl>
+
+
+</li>
+<li id="work_26692477" class="work blurb group work-26692477 user-8305381" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/26692477">Room Full of Memories</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/julyjunejanuary/pseuds/julyjunejanuary">julyjunejanuary</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-general-audience rating" title="General Audiences"><span class="text">General Audiences</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-no warnings" title="No Archive Warnings Apply"><span class="text">No Archive Warnings Apply</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-gen category" title="Gen"><span class="text">Gen</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-yes iswip" title="Complete Work"><span class="text">Complete Work</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/No%20Archive%20Warnings%20Apply/works">No Archive Warnings Apply</a></strong></li><li class='characters'><a class="tag" href="/tags/Cedric%20Diggory/works">Cedric Diggory</a></li> <li class='characters'><a class="tag" href="/tags/Nymphadora%20Tonks/works">Nymphadora Tonks</a></li> <li class='characters'><a class="tag" href="/tags/Helga%20Hufflepuff/works">Helga Hufflepuff</a></li> <li class='characters'><a class="tag" href="/tags/Merlin%20(Harry%20Potter)/works">Merlin (Harry Potter)</a></li> <li class='characters'><a class="tag" href="/tags/Salazar%20Slytherin/works">Salazar Slytherin</a></li> <li class='characters'><a class="tag" href="/tags/Horace%20Slughorn/works">Horace Slughorn</a></li> <li class='characters'><a class="tag" href="/tags/Rowena%20Ravenclaw/works">Rowena Ravenclaw</a></li> <li class='characters'><a class="tag" href="/tags/Pandora%20Lovegood/works">Pandora Lovegood</a></li> <li class='characters'><a class="tag" href="/tags/Ollivander%20family%20-%20Character/works">Ollivander family - Character</a></li> <li class='characters'><a class="tag" href="/tags/Godric%20Gryffindor/works">Godric Gryffindor</a></li> <li class='characters'><a class="tag" href="/tags/James%20Potter/works">James Potter</a></li> <li class='characters'><a class="tag" href="/tags/Sirius%20Black/works">Sirius Black</a></li> <li class='characters'><a class="tag" href="/tags/Remus%20Lupin/works">Remus Lupin</a></li> <li class='characters'><a class="tag" href="/tags/Lily%20Evans%20Potter/works">Lily Evans Potter</a></li> <li class='characters'><a class="tag" href="/tags/Peter%20Pettigrew/works">Peter Pettigrew</a></li><li class='freeforms'><a class="tag" href="/tags/Moving%20Portraits%20(Harry%20Potter)/works">Moving Portraits (Harry Potter)</a></li> <li class='freeforms'><a class="tag" href="/tags/Hufflepuff%20Pride/works">Hufflepuff Pride</a></li> <li class='freeforms'><a class="tag" href="/tags/POV%20Outsider/works">POV Outsider</a></li> <li class='freeforms'><a class="tag" href="/tags/i%20guess*q**q*/works">i guess??</a></li> <li class='freeforms'><a class="tag" href="/tags/sort%20of%20second%20person%20though/works">sort of second person though</a></li> <li class='freeforms'><a class="tag" href="/tags/Slytherin%20Pride/works">Slytherin Pride</a></li> <li class='freeforms'><a class="tag" href="/tags/Ravenclaw%20Pride/works">Ravenclaw Pride</a></li> <li class='freeforms'><a class="tag" href="/tags/Gryffindor%20Pride/works">Gryffindor Pride</a></li> <li class='freeforms'><a class="tag" href="/tags/how%20is%20that%20not%20a%20tag*q*/works">how is that not a tag?</a></li> <li class='freeforms'><a class="tag" href="/tags/it%E2%80%99s%20literally%20the%20most%20popular%20house/works">it’s literally the most popular house</a></li> <li class='freeforms'><a class="tag" href="/tags/Anyways/works">Anyways</a></li> <li class='freeforms'><a class="tag" href="/tags/its%20finally%20done!/works">its finally done!</a></li> <li class='freeforms'><a class="tag" href="/tags/yay!/works">yay!</a></li>
+  </ul>
+
+  <!--summary-->
+    <h6 class="landmark heading">Summary</h6>
+    <blockquote class="userstuff summary">
+      <p>A sort of study on the portraits at Hogwarts, and the memories that come with them.</p>
+    </blockquote>
+
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">1,953</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters"><a href="/works/26692477/chapters/69288495">4</a>/4</dd>
+
+
+
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/26692477?view_full_work=true#comments">15</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">126</dd>
+
+  </dl>
+
+
+</li>
+<li id="work_27728524" class="work blurb group work-27728524 user-1281756" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/27728524">Granny Granger's Bludgers</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/trascias/pseuds/trascias">trascias</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-explicit rating" title="Explicit"><span class="text">Explicit</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-choosenotto warnings" title="Choose Not To Use Archive Warnings"><span class="text">Choose Not To Use Archive Warnings</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-het category" title="F/M"><span class="text">F/M</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-no iswip" title="Work in Progress"><span class="text">Work in Progress</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/Choose%20Not%20To%20Use%20Archive%20Warnings/works">Creator Chose Not To Use Archive Warnings</a></strong></li><li class='relationships'><a class="tag" href="/tags/Hermione%20Granger*s*George%20Weasley/works">Hermione Granger/George Weasley</a></li><li class='characters'><a class="tag" href="/tags/Hermione%20Granger/works">Hermione Granger</a></li> <li class='characters'><a class="tag" href="/tags/George%20Weasley/works">George Weasley</a></li> <li class='characters'><a class="tag" href="/tags/Harry%20Potter/works">Harry Potter</a></li> <li class='characters'><a class="tag" href="/tags/Ron%20Weasley/works">Ron Weasley</a></li> <li class='characters'><a class="tag" href="/tags/Neville%20Longbottom/works">Neville Longbottom</a></li> <li class='characters'><a class="tag" href="/tags/Lee%20Jordan/works">Lee Jordan</a></li> <li class='characters'><a class="tag" href="/tags/Angelina%20Johnson/works">Angelina Johnson</a></li>
+  </ul>
+
+  <!--summary-->
+    <h6 class="landmark heading">Summary</h6>
+    <blockquote class="userstuff summary">
+      <p>After the Battle of Hogwarts, Hermione leaves the country to look for her parents. While she slowly rebuilds her family, the Weasleys have their own battles to fight back in England.<br/>How much will have her world changed after 6 months away?</p><p>A/N: It is a long fic, the relationship builds very slowly and I am also excruciatingly slow updating. Plus, I am not a native English speaker... you have been warned.</p><p>Disclaimer: All recognisable characters, places and events are property of J.K. Rowling (and probably Warner?), I am just playing with them for a while (non-profit, of course).</p>
+    </blockquote>
+
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">14,959</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters"><a href="/works/27728524/chapters/69538968">4</a>/?</dd>
+
+
+
+    <dt class="comments">Comments:</dt>
+    <dd class="comments"><a href="/works/27728524?show_comments=true&amp;view_full_work=true#comments">1</a></dd>
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/27728524?view_full_work=true#comments">19</a></dd>
+    <dt class="bookmarks">Bookmarks:</dt>
+    <dd class="bookmarks"><a href="/works/27728524/bookmarks">4</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">383</dd>
+
+  </dl>
+
+
+</li>
+<li id="work_28485969" class="work blurb group work-28485969 user-157787" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/28485969">A Happy Christmas Morning</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/articcat621/pseuds/articcat621">articcat621</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-general-audience rating" title="General Audiences"><span class="text">General Audiences</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-no warnings" title="No Archive Warnings Apply"><span class="text">No Archive Warnings Apply</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-het category" title="F/M"><span class="text">F/M</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-yes iswip" title="Complete Work"><span class="text">Complete Work</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/No%20Archive%20Warnings%20Apply/works">No Archive Warnings Apply</a></strong></li><li class='relationships'><a class="tag" href="/tags/Hermione%20Granger*s*Ron%20Weasley/works">Hermione Granger/Ron Weasley</a></li><li class='characters'><a class="tag" href="/tags/Hermione%20Granger/works">Hermione Granger</a></li> <li class='characters'><a class="tag" href="/tags/Ron%20Weasley/works">Ron Weasley</a></li> <li class='characters'><a class="tag" href="/tags/Rose%20Weasley/works">Rose Weasley</a></li> <li class='characters'><a class="tag" href="/tags/Hugo%20Weasley/works">Hugo Weasley</a></li><li class='freeforms'><a class="tag" href="/tags/Christmas%20Morning/works">Christmas Morning</a></li> <li class='freeforms'><a class="tag" href="/tags/Fluff/works">Fluff</a></li> <li class='freeforms'><a class="tag" href="/tags/Family%20Feels/works">Family Feels</a></li> <li class='freeforms'><a class="tag" href="/tags/Family%20Fluff/works">Family Fluff</a></li> <li class='freeforms'><a class="tag" href="/tags/Christmas%20Fluff/works">Christmas Fluff</a></li> <li class='freeforms'><a class="tag" href="/tags/Drabble/works">Drabble</a></li> <li class='freeforms'><a class="tag" href="/tags/Community:%20newyearcntdown/works">Community: newyearcntdown</a></li>
+  </ul>
+
+  <!--summary-->
+    <h6 class="landmark heading">Summary</h6>
+    <blockquote class="userstuff summary">
+      <p>Hugo and Rose were too excited to let their parents keep sleeping.</p>
+    </blockquote>
+
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">250</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters">1/1</dd>
+
+
+    <dt class="collections">Collections:</dt>
+    <dd class="collections"><a href="/works/28485969/collections">1</a></dd>
+
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/28485969#comments">22</a></dd>
+    <dt class="bookmarks">Bookmarks:</dt>
+    <dd class="bookmarks"><a href="/works/28485969/bookmarks">3</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">159</dd>
+
+  </dl>
+
+
+</li>
+<li id="work_30642062" class="work blurb group work-30642062 user-781508" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/30642062">You're our Lobster</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/lovemeleo/pseuds/lovemeleo">lovemeleo</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Sweater%20Weather%20-%20Lumosinlove/works">Sweater Weather - Lumosinlove</a>, <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-notrated rating" title="Not Rated"><span class="text">Not Rated</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-no warnings" title="No Archive Warnings Apply"><span class="text">No Archive Warnings Apply</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-multi category" title="Multi"><span class="text">Multi</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-yes iswip" title="Complete Work"><span class="text">Complete Work</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/No%20Archive%20Warnings%20Apply/works">No Archive Warnings Apply</a></strong></li><li class='relationships'><a class="tag" href="/tags/Leo%20Knut*s*Finn%20O&#39;Hara*s*Logan%20Tremblay%20(lumosinlove)/works">Leo Knut/Finn O&#39;Hara/Logan Tremblay (lumosinlove)</a></li><li class='characters'><a class="tag" href="/tags/Leo%20Knut%20(lumosinlove)/works">Leo Knut (lumosinlove)</a></li> <li class='characters'><a class="tag" href="/tags/Logan%20Tremblay%20(lumosinlove)/works">Logan Tremblay (lumosinlove)</a></li> <li class='characters'><a class="tag" href="/tags/Finn%20O&#39;Hara%20(lumosinlove)/works">Finn O&#39;Hara (lumosinlove)</a></li><li class='freeforms'><a class="tag" href="/tags/Fluff/works">Fluff</a></li> <li class='freeforms'><a class="tag" href="/tags/Short%20One%20Shot/works">Short One Shot</a></li>
+  </ul>
+
+  <!--summary-->
+
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">512</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters">1/1</dd>
+
+
+
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/30642062#comments">2</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">20</dd>
+
+  </dl>
+
+
+</li>
+<li id="work_27795010" class="work blurb group work-27795010 user-5098604" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/27795010">Guilty Pleasures</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/The_Gamer/pseuds/The_Gamer">The_Gamer</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a>, <a class="tag" href="/tags/Anita%20Blake:%20Vampire%20Hunter%20-%20Laurell%20K*d*%20Hamilton/works">Anita Blake: Vampire Hunter - Laurell K. Hamilton</a>, <a class="tag" href="/tags/%EB%8D%94%20%EA%B2%8C%EC%9D%B4%EB%A8%B8%20%7C%20The%20Gamer%20(Webcomic)/works">더 게이머 | The Gamer (Webcomic)</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-teen rating" title="Teen And Up Audiences"><span class="text">Teen And Up Audiences</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-yes warnings" title="Graphic Depictions Of Violence, Major Character Death, No Archive Warnings Apply"><span class="text">Graphic Depictions Of Violence, Major Character Death, No Archive Warnings Apply</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-multi category" title="F/M, M/M"><span class="text">F/M, M/M</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-no iswip" title="Work in Progress"><span class="text">Work in Progress</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/Graphic%20Depictions%20Of%20Violence/works">Graphic Depictions Of Violence</a></strong></li> <li class='warnings'><strong><a class="tag" href="/tags/Major%20Character%20Death/works">Major Character Death</a></strong></li> <li class='warnings'><strong><a class="tag" href="/tags/No%20Archive%20Warnings%20Apply/works">No Archive Warnings Apply</a></strong></li><li class='relationships'><a class="tag" href="/tags/Edward%20(Anita%20Blake)*s*Harry%20Potter/works">Edward (Anita Blake)/Harry Potter</a></li> <li class='relationships'><a class="tag" href="/tags/Jean-Claude%20(Anita%20Blake)*s*Harry%20Potter/works">Jean-Claude (Anita Blake)/Harry Potter</a></li><li class='characters'><a class="tag" href="/tags/Harry%20Potter/works">Harry Potter</a></li> <li class='characters'><a class="tag" href="/tags/Draco%20Malfoy/works">Draco Malfoy</a></li> <li class='characters'><a class="tag" href="/tags/Edward%20(Anita%20Blake)/works">Edward (Anita Blake)</a></li> <li class='characters'><a class="tag" href="/tags/Jean-Claude%20(Anita%20Blake)/works">Jean-Claude (Anita Blake)</a></li> <li class='characters'><a class="tag" href="/tags/Jason%20Schuyler/works">Jason Schuyler</a></li> <li class='characters'><a class="tag" href="/tags/Nathaniel%20Graison/works">Nathaniel Graison</a></li> <li class='characters'><a class="tag" href="/tags/Phillip%20(Anita%20Blake)/works">Phillip (Anita Blake)</a></li>
+  </ul>
+
+  <!--summary-->
+    <h6 class="landmark heading">Summary</h6>
+    <blockquote class="userstuff summary">
+      <p>Harry fled to America after the war. He met with Edward and is trained by him. </p>
+<p>Eventually, Harry moves to St. Louis and when he gets there the fun begins. </p>
+<p>Not much if any Anita.</p>
+    </blockquote>
+
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">5,252</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters"><a href="/works/27795010/chapters/69767553">3</a>/?</dd>
+
+
+
+    <dt class="comments">Comments:</dt>
+    <dd class="comments"><a href="/works/27795010?show_comments=true&amp;view_full_work=true#comments">17</a></dd>
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/27795010?view_full_work=true#comments">125</a></dd>
+    <dt class="bookmarks">Bookmarks:</dt>
+    <dd class="bookmarks"><a href="/works/27795010/bookmarks">48</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">1855</dd>
+
+  </dl>
+
+
+</li>
+<li id="work_27483355" class="work blurb group work-27483355 user-8398549" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/27483355">Little potter and brothers</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/RandomRandomRandom/pseuds/RandomRandomRandom">RandomRandomRandom</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Harry%20Potter%20-%20Fandom/works">Harry Potter - Fandom</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-teen rating" title="Teen And Up Audiences"><span class="text">Teen And Up Audiences</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-choosenotto warnings" title="Choose Not To Use Archive Warnings"><span class="text">Choose Not To Use Archive Warnings</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-het category" title="F/M"><span class="text">F/M</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-no iswip" title="Work in Progress"><span class="text">Work in Progress</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/Choose%20Not%20To%20Use%20Archive%20Warnings/works">Creator Chose Not To Use Archive Warnings</a></strong></li><li class='relationships'><a class="tag" href="/tags/Harry%20Potter*s*Ginny%20Weasley/works">Harry Potter/Ginny Weasley</a></li> <li class='relationships'><a class="tag" href="/tags/Hermione%20Granger*s*Ron%20Weasley/works">Hermione Granger/Ron Weasley</a></li><li class='characters'><a class="tag" href="/tags/Harry%20Potter/works">Harry Potter</a></li> <li class='characters'><a class="tag" href="/tags/Ron%20Weasley/works">Ron Weasley</a></li> <li class='characters'><a class="tag" href="/tags/Hermione%20Granger/works">Hermione Granger</a></li> <li class='characters'><a class="tag" href="/tags/James%20Potter/works">James Potter</a></li> <li class='characters'><a class="tag" href="/tags/Lily%20Potter/works">Lily Potter</a></li> <li class='characters'><a class="tag" href="/tags/a%20couple%20of%20OCs/works">a couple of OCs</a></li><li class='freeforms'><a class="tag" href="/tags/Harry%20Potter%20has%20twin/works">Harry Potter has twin</a></li> <li class='freeforms'><a class="tag" href="/tags/Potter%20Twins%20AU/works">Potter Twins AU</a></li> <li class='freeforms'><a class="tag" href="/tags/Harry%20Potter%20Has%20a%20Sibling/works">Harry Potter Has a Sibling</a></li> <li class='freeforms'><a class="tag" href="/tags/Harry%20Potter%20has%20a%20older%20twin%20brother/works">Harry Potter has a older twin brother</a></li>
+  </ul>
+
+  <!--summary-->
+    <h6 class="landmark heading">Summary</h6>
+    <blockquote class="userstuff summary">
+      <p>Harry Potter AU. </p><p>Potter family:<br/>THE POTTER FAMILY Auror James and Healer Lily's 4 sons</p><p>1. Orion James Potter</p><p>2. Samuel Luthor Potter </p><p>3. Charlus John Potter</p><p>4. Harry Lilian Potter</p><p>Note: Orion is the oldest potter child. He is 10 years older than the potter twin. <br/>Note: Samuel is seven years older than the potter twins. </p><p>Note: Charlus and Harry are twins. Harry is the younger potter twin.</p>
+    </blockquote>
+
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">10,742</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters"><a href="/works/27483355/chapters/69695169">5</a>/?</dd>
+
+
+
+    <dt class="comments">Comments:</dt>
+    <dd class="comments"><a href="/works/27483355?show_comments=true&amp;view_full_work=true#comments">10</a></dd>
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/27483355?view_full_work=true#comments">28</a></dd>
+    <dt class="bookmarks">Bookmarks:</dt>
+    <dd class="bookmarks"><a href="/works/27483355/bookmarks">4</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">374</dd>
+
+  </dl>
+
+
+</li>
+<li id="work_28443558" class="work blurb group work-28443558 user-1722488" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/28443558">The Selfie Dilemma</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/alrightginger/pseuds/alrightginger">alrightginger</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-teen rating" title="Teen And Up Audiences"><span class="text">Teen And Up Audiences</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-choosenotto warnings" title="Choose Not To Use Archive Warnings"><span class="text">Choose Not To Use Archive Warnings</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-slash category" title="M/M"><span class="text">M/M</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-yes iswip" title="Complete Work"><span class="text">Complete Work</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/Choose%20Not%20To%20Use%20Archive%20Warnings/works">Creator Chose Not To Use Archive Warnings</a></strong></li><li class='relationships'><a class="tag" href="/tags/Draco%20Malfoy*s*Harry%20Potter/works">Draco Malfoy/Harry Potter</a></li><li class='characters'><a class="tag" href="/tags/Draco%20Malfoy/works">Draco Malfoy</a></li> <li class='characters'><a class="tag" href="/tags/Harry%20Potter/works">Harry Potter</a></li> <li class='characters'><a class="tag" href="/tags/James%20Potter/works">James Potter</a></li> <li class='characters'><a class="tag" href="/tags/Sirius%20Black/works">Sirius Black</a></li> <li class='characters'><a class="tag" href="/tags/Lily%20Evans%20Potter/works">Lily Evans Potter</a></li><li class='freeforms'><a class="tag" href="/tags/Social%20Media/works">Social Media</a></li> <li class='freeforms'><a class="tag" href="/tags/Muggle%20Life/works">Muggle Life</a></li> <li class='freeforms'><a class="tag" href="/tags/Alternate%20Universe%20-%20Muggle/works">Alternate Universe - Muggle</a></li> <li class='freeforms'><a class="tag" href="/tags/James%20just%20wants%20a%20selfie%20with%20his%20only%20son/works">James just wants a selfie with his only son</a></li>
+  </ul>
+
+  <!--summary-->
+    <h6 class="landmark heading">Summary</h6>
+    <blockquote class="userstuff summary">
+      <p>“I’m sorry,” Draco apologized, wiping at his eyes. He snorted the next second. “I just — I told you this would happen. I told you that if you took your very first instagram photo with your godfather, your dad would lose his shit. And he has!”</p>
+<p>--</p>
+<p>
+  <a href="https://ficbook.net/readfic/10248064" rel="nofollow">Russian Translation</a>
+</p>
+    </blockquote>
+
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">1,091</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters">1/1</dd>
+
+
+
+    <dt class="comments">Comments:</dt>
+    <dd class="comments"><a href="/works/28443558?show_comments=true#comments">13</a></dd>
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/28443558#comments">194</a></dd>
+    <dt class="bookmarks">Bookmarks:</dt>
+    <dd class="bookmarks"><a href="/works/28443558/bookmarks">22</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">1221</dd>
+
+  </dl>
+
+
+</li>
+<li id="work_27020122" class="work blurb group work-27020122 user-8553760" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/27020122">Black Goat's Nest</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/Mochimadness/pseuds/Mochimadness">Mochimadness</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a>, <a class="tag" href="/tags/Tokyo%20Ghoul/works">Tokyo Ghoul</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-teen rating" title="Teen And Up Audiences"><span class="text">Teen And Up Audiences</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-yes warnings" title="Choose Not To Use Archive Warnings, Graphic Depictions Of Violence"><span class="text">Choose Not To Use Archive Warnings, Graphic Depictions Of Violence</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-slash category" title="M/M"><span class="text">M/M</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-no iswip" title="Work in Progress"><span class="text">Work in Progress</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/Choose%20Not%20To%20Use%20Archive%20Warnings/works">Creator Chose Not To Use Archive Warnings</a></strong></li> <li class='warnings'><strong><a class="tag" href="/tags/Graphic%20Depictions%20Of%20Violence/works">Graphic Depictions Of Violence</a></strong></li><li class='relationships'><a class="tag" href="/tags/Kaneki%20Ken%20%7C%20Sasaki%20Haise*s*Nagachika%20Hideyoshi/works">Kaneki Ken | Sasaki Haise/Nagachika Hideyoshi</a></li> <li class='relationships'><a class="tag" href="/tags/Harry%20Potter*s*Nagachika%20Hideyoshi/works">Harry Potter/Nagachika Hideyoshi</a></li><li class='characters'><a class="tag" href="/tags/Kaneki%20Ken%20%7C%20Sasaki%20Haise/works">Kaneki Ken | Sasaki Haise</a></li> <li class='characters'><a class="tag" href="/tags/Harry%20Potter/works">Harry Potter</a></li> <li class='characters'><a class="tag" href="/tags/Nagachika%20Hideyoshi/works">Nagachika Hideyoshi</a></li> <li class='characters'><a class="tag" href="/tags/Ron%20Weasley/works">Ron Weasley</a></li> <li class='characters'><a class="tag" href="/tags/Hermione%20Granger/works">Hermione Granger</a></li> <li class='characters'><a class="tag" href="/tags/Minerva%20McGonagall/works">Minerva McGonagall</a></li> <li class='characters'><a class="tag" href="/tags/Albus%20Dumbledore/works">Albus Dumbledore</a></li> <li class='characters'><a class="tag" href="/tags/Kirishima%20Touka/works">Kirishima Touka</a></li> <li class='characters'><a class="tag" href="/tags/Fueguchi%20Hinami/works">Fueguchi Hinami</a></li> <li class='characters'><a class="tag" href="/tags/Yoshimura%20Eto%20%7C%20Takatsuki%20Sen/works">Yoshimura Eto | Takatsuki Sen</a></li> <li class='characters'><a class="tag" href="/tags/Tsukiyama%20Shuu/works">Tsukiyama Shuu</a></li> <li class='characters'><a class="tag" href="/tags/Kirishima%20Ayato/works">Kirishima Ayato</a></li> <li class='characters'><a class="tag" href="/tags/Banjou%20Kazuichi/works">Banjou Kazuichi</a></li> <li class='characters'><a class="tag" href="/tags/Oomori%20%22Yamori%22%20Yakumo/works">Oomori &quot;Yamori&quot; Yakumo</a></li> <li class='characters'><a class="tag" href="/tags/Nishio%20Nishiki/works">Nishio Nishiki</a></li> <li class='characters'><a class="tag" href="/tags/Nishino%20Kimi/works">Nishino Kimi</a></li> <li class='characters'><a class="tag" href="/tags/Mado%20Akira/works">Mado Akira</a></li> <li class='characters'><a class="tag" href="/tags/Amon%20Koutarou/works">Amon Koutarou</a></li> <li class='characters'><a class="tag" href="/tags/Uta%20(Tokyo%20Ghoul)/works">Uta (Tokyo Ghoul)</a></li> <li class='characters'><a class="tag" href="/tags/Kamishiro%20Rize/works">Kamishiro Rize</a></li><li class='freeforms'><a class="tag" href="/tags/Kaneki%20is%20Harry/works">Kaneki is Harry</a></li> <li class='freeforms'><a class="tag" href="/tags/hidekane/works">hidekane</a></li> <li class='freeforms'><a class="tag" href="/tags/Hide%20reminding%20Kaneki%20that%20he%20deserves%20love%20and%20affection/works">Hide reminding Kaneki that he deserves love and affection</a></li> <li class='freeforms'><a class="tag" href="/tags/CCG%20-%20Freeform/works">CCG - Freeform</a></li> <li class='freeforms'><a class="tag" href="/tags/Kaneki%20is%20low%20key%20friends%20with%20ghoul%20investigators/works">Kaneki is low key friends with ghoul investigators</a></li> <li class='freeforms'><a class="tag" href="/tags/Kaneki%20Is%20A%20Mess/works">Kaneki Is A Mess</a></li> <li class='freeforms'><a class="tag" href="/tags/Tokyo%20Ghoul%20x%20Harry%20Potter/works">Tokyo Ghoul x Harry Potter</a></li> <li class='freeforms'><a class="tag" href="/tags/Crossover/works">Crossover</a></li> <li class='freeforms'><a class="tag" href="/tags/Inspired%20by%20Sora%20Labyrinth&#39;s%20%22Home%22/works">Inspired by Sora Labyrinth&#39;s &quot;Home&quot;</a></li> <li class='freeforms'><a class="tag" href="/tags/Kaneki%20has%20a%20bit%20of%20a%20sister%20complex/works">Kaneki has a bit of a sister complex</a></li> <li class='freeforms'><a class="tag" href="/tags/Little%20Sister%20Hinami/works">Little Sister Hinami</a></li> <li class='freeforms'><a class="tag" href="/tags/Kaneki%20just%20wanted%20to%20go%20on%20a%20date!/works">Kaneki just wanted to go on a date!</a></li> <li class='freeforms'><a class="tag" href="/tags/Lot&#39;s%20of%20fluff%20(eventually)/works">Lot&#39;s of fluff (eventually)</a></li> <li class='freeforms'><a class="tag" href="/tags/No%20Smut/works">No Smut</a></li>
+  </ul>
+
+  <!--summary-->
+    <h6 class="landmark heading">Summary</h6>
+    <blockquote class="userstuff summary">
+      <p>A Kaneki is Harry story inspired by Sora Labyrinth's "Home". Harry accidentally apparated to Tokyo during the summer after first year and got adopted by a widow named Kaneki-san. During the raid on Anteiku, moments before Arima can kill him, he gets transported back to Hogwarts when the Goblet of Fire chooses him as the fourth champion. He sees protecting Hogwarts from Voldemort as a second chance. Everything is shaky but fine until the CCG decides to teach Hogwarts about ghouls. HideKane</p>
+    </blockquote>
+
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">26,132</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters"><a href="/works/27020122/chapters/68837358">17</a>/?</dd>
+
+
+
+    <dt class="comments">Comments:</dt>
+    <dd class="comments"><a href="/works/27020122?show_comments=true&amp;view_full_work=true#comments">46</a></dd>
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/27020122?view_full_work=true#comments">178</a></dd>
+    <dt class="bookmarks">Bookmarks:</dt>
+    <dd class="bookmarks"><a href="/works/27020122/bookmarks">53</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">2956</dd>
+
+  </dl>
+
+
+</li>
+<li id="work_28445394" class="work blurb group work-28445394 user-4753631" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/28445394">Home Is Where The Heart Is</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/CatNip_618/pseuds/CatNip_618">CatNip_618</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-general-audience rating" title="General Audiences"><span class="text">General Audiences</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-no warnings" title="No Archive Warnings Apply"><span class="text">No Archive Warnings Apply</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-het category" title="F/M"><span class="text">F/M</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-yes iswip" title="Complete Work"><span class="text">Complete Work</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/No%20Archive%20Warnings%20Apply/works">No Archive Warnings Apply</a></strong></li><li class='relationships'><a class="tag" href="/tags/James%20Potter*s*Lily%20Evans%20Potter/works">James Potter/Lily Evans Potter</a></li><li class='characters'><a class="tag" href="/tags/Harry%20Potter/works">Harry Potter</a></li> <li class='characters'><a class="tag" href="/tags/Hermione%20Granger/works">Hermione Granger</a></li> <li class='characters'><a class="tag" href="/tags/Lily%20Evans%20Potter/works">Lily Evans Potter</a></li> <li class='characters'><a class="tag" href="/tags/James%20Potter/works">James Potter</a></li><li class='freeforms'><a class="tag" href="/tags/Resurrection/works">Resurrection</a></li> <li class='freeforms'><a class="tag" href="/tags/Major%20Character%20Undeath/works">Major Character Undeath</a></li> <li class='freeforms'><a class="tag" href="/tags/Godric&#39;s%20Hollow/works">Godric&#39;s Hollow</a></li> <li class='freeforms'><a class="tag" href="/tags/Book%207:%20Harry%20Potter%20and%20the%20Deathly%20Hallows/works">Book 7: Harry Potter and the Deathly Hallows</a></li> <li class='freeforms'><a class="tag" href="/tags/Angst%20with%20a%20Happy%20Ending/works">Angst with a Happy Ending</a></li> <li class='freeforms'><a class="tag" href="/tags/Alternate%20Universe%20-%20Harry%20Potter%20Setting/works">Alternate Universe - Harry Potter Setting</a></li> <li class='freeforms'><a class="tag" href="/tags/Second%20War%20with%20Voldemort/works">Second War with Voldemort</a></li> <li class='freeforms'><a class="tag" href="/tags/Horcrux%20Hunting/works">Horcrux Hunting</a></li> <li class='freeforms'><a class="tag" href="/tags/James%20Potter%20Lives/works">James Potter Lives</a></li> <li class='freeforms'><a class="tag" href="/tags/Lily%20Evans%20Potter%20Lives/works">Lily Evans Potter Lives</a></li>
+  </ul>
+
+  <!--summary-->
+    <h6 class="landmark heading">Summary</h6>
+    <blockquote class="userstuff summary">
+      <p>Harry and Hermione’s visit to Godric’s Hollow changes the course of history when Harry cries on his parents’ graves, awakening an ancient magic that brings back what he yearned for seventeen years. </p><p>His parents.</p>
+    </blockquote>
+
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">2,376</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters">1/1</dd>
+
+
+
+    <dt class="comments">Comments:</dt>
+    <dd class="comments"><a href="/works/28445394?show_comments=true#comments">14</a></dd>
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/28445394#comments">43</a></dd>
+    <dt class="bookmarks">Bookmarks:</dt>
+    <dd class="bookmarks"><a href="/works/28445394/bookmarks">4</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">588</dd>
+
+  </dl>
+
+
+</li>
+<li id="work_25121779" class="work blurb group work-25121779 user-5287895" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/25121779">You Never Know</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/WordsmithMusings/pseuds/WordsmithMusings">WordsmithMusings</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a>, <a class="tag" href="/tags/Marvel%20Cinematic%20Universe/works">Marvel Cinematic Universe</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-teen rating" title="Teen And Up Audiences"><span class="text">Teen And Up Audiences</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-no warnings" title="No Archive Warnings Apply"><span class="text">No Archive Warnings Apply</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-gen category" title="Gen"><span class="text">Gen</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-yes iswip" title="Complete Work"><span class="text">Complete Work</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/No%20Archive%20Warnings%20Apply/works">No Archive Warnings Apply</a></strong></li><li class='relationships'><a class="tag" href="/tags/Nick%20Fury%20*a*%20Kingsley%20Shacklebolt/works">Nick Fury &amp; Kingsley Shacklebolt</a></li><li class='characters'><a class="tag" href="/tags/Kingsley%20Shacklebolt/works">Kingsley Shacklebolt</a></li> <li class='characters'><a class="tag" href="/tags/Nick%20Fury/works">Nick Fury</a></li><li class='freeforms'><a class="tag" href="/tags/Post-Canon/works">Post-Canon</a></li> <li class='freeforms'><a class="tag" href="/tags/Post-Battle%20of%20Hogwarts/works">Post-Battle of Hogwarts</a></li> <li class='freeforms'><a class="tag" href="/tags/Kingsley%20*a*%20Nick%20are%20BFFS/works">Kingsley &amp; Nick are BFFS</a></li> <li class='freeforms'><a class="tag" href="/tags/brief%20reference%20to%20war%20and%20past%20character%20death/works">brief reference to war and past character death</a></li> <li class='freeforms'><a class="tag" href="/tags/Melting%20Pot%20Christmas%20in%20July/works">Melting Pot Christmas in July</a></li> <li class='freeforms'><a class="tag" href="/tags/hp%20mcu%20crossover/works">hp mcu crossover</a></li> <li class='freeforms'><a class="tag" href="/tags/Prompt%20Challenge/works">Prompt Challenge</a></li> <li class='freeforms'><a class="tag" href="/tags/rare%20pairs/works">rare pairs</a></li> <li class='freeforms'><a class="tag" href="/tags/frienships/works">frienships</a></li> <li class='freeforms'><a class="tag" href="/tags/Travel/works">Travel</a></li> <li class='freeforms'><a class="tag" href="/tags/summer%20holidays%20-%20kinda/works">summer holidays - kinda</a></li>
+  </ul>
+
+  <!--summary-->
+    <h6 class="landmark heading">Summary</h6>
+    <blockquote class="userstuff summary">
+      <p>Kingsley Shacklebolt and Nick Fury have been friends for decades. Once a year, they meet up to check in with each other face to face and talk through the night. The location always changes, but their respect and admiration for each other remain unchanged. Everyone needs a friend and confidant to talk about big life changes - and who remembers you when you had more hair.</p>
+    </blockquote>
+
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">2,819</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters"><a href="/works/25121779/chapters/69767346">2</a>/2</dd>
+
+
+    <dt class="collections">Collections:</dt>
+    <dd class="collections"><a href="/works/25121779/collections">1</a></dd>
+
+    <dt class="comments">Comments:</dt>
+    <dd class="comments"><a href="/works/25121779?show_comments=true&amp;view_full_work=true#comments">10</a></dd>
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/25121779?view_full_work=true#comments">29</a></dd>
+    <dt class="bookmarks">Bookmarks:</dt>
+    <dd class="bookmarks"><a href="/works/25121779/bookmarks">1</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">125</dd>
+
+  </dl>
+
+
+</li>
+<li id="work_28444950" class="work blurb group work-28444950 user-9127731" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/28444950">A New Beginning</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/house_cat333/pseuds/house_cat333">house_cat333</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-teen rating" title="Teen And Up Audiences"><span class="text">Teen And Up Audiences</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-yes warnings" title="Major Character Death"><span class="text">Major Character Death</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-het category" title="F/M"><span class="text">F/M</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-yes iswip" title="Complete Work"><span class="text">Complete Work</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/Major%20Character%20Death/works">Major Character Death</a></strong></li><li class='relationships'><a class="tag" href="/tags/Remus%20Lupin*s*Nymphadora%20Tonks/works">Remus Lupin/Nymphadora Tonks</a></li><li class='characters'><a class="tag" href="/tags/Nymphadora%20Tonks/works">Nymphadora Tonks</a></li> <li class='characters'><a class="tag" href="/tags/Remus%20Lupin/works">Remus Lupin</a></li><li class='freeforms'><a class="tag" href="/tags/Married%20Couple/works">Married Couple</a></li> <li class='freeforms'><a class="tag" href="/tags/Romance/works">Romance</a></li> <li class='freeforms'><a class="tag" href="/tags/Bittersweet%20Ending/works">Bittersweet Ending</a></li> <li class='freeforms'><a class="tag" href="/tags/My%20First%20Fanfic/works">My First Fanfic</a></li> <li class='freeforms'><a class="tag" href="/tags/Book%207:%20Harry%20Potter%20and%20the%20Deathly%20Hallows/works">Book 7: Harry Potter and the Deathly Hallows</a></li>
+  </ul>
+
+  <!--summary-->
+    <h6 class="landmark heading">Summary</h6>
+    <blockquote class="userstuff summary">
+      <p>My first fanfiction on this site! Inspired by the chapter in Deathly Hallows where Harry meets with Dumbledore at Kings Cross and one of my favorite quotes from Dumbledore. Set after the Battle of Hogwarts. Tonks and Lupin get a chance to be together before they move on to their next "great adventure."</p>
+    </blockquote>
+
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">1,401</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters">1/1</dd>
+
+
+
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/28444950#comments">8</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">116</dd>
+
+  </dl>
+
+
+</li>
+<li id="work_28254648" class="work blurb group work-28254648 user-6111587" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/28254648">Discomfort and Joy</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/AduroWrites/pseuds/AduroWrites">AduroWrites</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-teen rating" title="Teen And Up Audiences"><span class="text">Teen And Up Audiences</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-choosenotto warnings" title="Choose Not To Use Archive Warnings"><span class="text">Choose Not To Use Archive Warnings</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-gen category" title="Gen"><span class="text">Gen</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-yes iswip" title="Complete Work"><span class="text">Complete Work</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/Choose%20Not%20To%20Use%20Archive%20Warnings/works">Creator Chose Not To Use Archive Warnings</a></strong></li><li class='characters'><a class="tag" href="/tags/Draco%20Malfoy/works">Draco Malfoy</a></li> <li class='characters'><a class="tag" href="/tags/Kingsley%20Shacklebolt/works">Kingsley Shacklebolt</a></li> <li class='characters'><a class="tag" href="/tags/Molly%20Weasley/works">Molly Weasley</a></li> <li class='characters'><a class="tag" href="/tags/Arthur%20Weasley/works">Arthur Weasley</a></li> <li class='characters'><a class="tag" href="/tags/Remus%20Lupin/works">Remus Lupin</a></li> <li class='characters'><a class="tag" href="/tags/Nymphadora%20Tonks/works">Nymphadora Tonks</a></li> <li class='characters'><a class="tag" href="/tags/Charlie%20Weasley/works">Charlie Weasley</a></li> <li class='characters'><a class="tag" href="/tags/Fred%20Weasley/works">Fred Weasley</a></li> <li class='characters'><a class="tag" href="/tags/George%20Weasley/works">George Weasley</a></li> <li class='characters'><a class="tag" href="/tags/Luna%20Lovegood/works">Luna Lovegood</a></li> <li class='characters'><a class="tag" href="/tags/Original%20Characters/works">Original Characters</a></li><li class='freeforms'><a class="tag" href="/tags/Auror%20Draco%20Malfoy/works">Auror Draco Malfoy</a></li> <li class='freeforms'><a class="tag" href="/tags/Friendship/works">Friendship</a></li> <li class='freeforms'><a class="tag" href="/tags/Families%20of%20Choice/works">Families of Choice</a></li> <li class='freeforms'><a class="tag" href="/tags/Christmas/works">Christmas</a></li> <li class='freeforms'><a class="tag" href="/tags/Aurors/works">Aurors</a></li> <li class='freeforms'><a class="tag" href="/tags/Not%20Canon%20Compliant/works">Not Canon Compliant</a></li> <li class='freeforms'><a class="tag" href="/tags/AU%20after%20fifth%20year/works">AU after fifth year</a></li> <li class='freeforms'><a class="tag" href="/tags/minor%20Draco%20Malfoy*s*Luna%20Lovegood/works">minor Draco Malfoy/Luna Lovegood</a></li>
+  </ul>
+
+  <!--summary-->
+    <h6 class="landmark heading">Summary</h6>
+    <blockquote class="userstuff summary">
+      <p>Alternate Universe after 5th year, a War-Time Christmas story taking place during 7th year. Complete.</p>
+<p>After the Auror Department falls to Death Eaters, Detective-Auror Draco Malfoy and his partner Kingsley Shacklebolt are forced to take refuge at the Burrow. When members of the Weasley family are captured by Death Eaters, Draco and Kingsley embark on a last-minute rescue mission to reunite the Weasley family for the holiday. Draco Malfoy saving Christmas? Well, it is the season for miracles.</p>
+    </blockquote>
+
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">56,395</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters"><a href="/works/28254648/chapters/69712803">9</a>/9</dd>
+
+
+
+    <dt class="comments">Comments:</dt>
+    <dd class="comments"><a href="/works/28254648?show_comments=true&amp;view_full_work=true#comments">79</a></dd>
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/28254648?view_full_work=true#comments">54</a></dd>
+    <dt class="bookmarks">Bookmarks:</dt>
+    <dd class="bookmarks"><a href="/works/28254648/bookmarks">13</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">624</dd>
+
+  </dl>
+
+
+</li>
+<li id="work_28416912" class="work blurb group work-28416912 user-94114" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/28416912">Mooncalves</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/SlytherinOwl/pseuds/SlytherinOwl">SlytherinOwl</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a>, <a class="tag" href="/tags/Marvel%20Cinematic%20Universe/works">Marvel Cinematic Universe</a>, <a class="tag" href="/tags/The%20Avengers%20(Marvel%20Movies)/works">The Avengers (Marvel Movies)</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-general-audience rating" title="General Audiences"><span class="text">General Audiences</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-no warnings" title="No Archive Warnings Apply"><span class="text">No Archive Warnings Apply</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-het category" title="F/M"><span class="text">F/M</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-yes iswip" title="Complete Work"><span class="text">Complete Work</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/No%20Archive%20Warnings%20Apply/works">No Archive Warnings Apply</a></strong></li><li class='relationships'><a class="tag" href="/tags/Hermione%20Granger*s*Steve%20Rogers/works">Hermione Granger/Steve Rogers</a></li><li class='characters'><a class="tag" href="/tags/Hermione%20Granger/works">Hermione Granger</a></li> <li class='characters'><a class="tag" href="/tags/Steve%20Rogers/works">Steve Rogers</a></li> <li class='characters'><a class="tag" href="/tags/Tony%20Stark/works">Tony Stark</a></li> <li class='characters'><a class="tag" href="/tags/Clint%20Barton/works">Clint Barton</a></li> <li class='characters'><a class="tag" href="/tags/Thor%20(Marvel)/works">Thor (Marvel)</a></li><li class='freeforms'><a class="tag" href="/tags/New%20Zealand/works">New Zealand</a></li> <li class='freeforms'><a class="tag" href="/tags/National%20Park/works">National Park</a></li> <li class='freeforms'><a class="tag" href="/tags/Banging%20Pots%20and%20Pans/works">Banging Pots and Pans</a></li> <li class='freeforms'><a class="tag" href="/tags/Crossover/works">Crossover</a></li> <li class='freeforms'><a class="tag" href="/tags/alcohol%20is%20bad%20for%20you%20kids/works">alcohol is bad for you kids</a></li>
+  </ul>
+
+  <!--summary-->
+    <h6 class="landmark heading">Summary</h6>
+    <blockquote class="userstuff summary">
+      <p>Hermione was on a work trip to observe a local herd of Mooncalves in New Zealand. Steve, Tony, Clint and Thor were in New Zealand to help Tony get over his break-up with Pepper, much to Steve's annoyance. </p><p>What could possibly go wrong?</p><p>Written for Hermione's Holiday Hideaway 2020.</p>
+    </blockquote>
+
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">1,827</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters">1/1</dd>
+
+
+    <dt class="collections">Collections:</dt>
+    <dd class="collections"><a href="/works/28416912/collections">1</a></dd>
+
+    <dt class="comments">Comments:</dt>
+    <dd class="comments"><a href="/works/28416912?show_comments=true#comments">2</a></dd>
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/28416912#comments">58</a></dd>
+    <dt class="bookmarks">Bookmarks:</dt>
+    <dd class="bookmarks"><a href="/works/28416912/bookmarks">5</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">638</dd>
+
+  </dl>
+
+
+</li>
+<li id="work_28259214" class="work blurb group work-28259214 user-75312" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/28259214">The Boy Who Lived Meets The Addams</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/MiriRainbowitz/pseuds/MiriRainbowitz">MiriRainbowitz</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a>, <a class="tag" href="/tags/Addams%20Family%20-%20All%20Media%20Types/works">Addams Family - All Media Types</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-general-audience rating" title="General Audiences"><span class="text">General Audiences</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-no warnings" title="No Archive Warnings Apply"><span class="text">No Archive Warnings Apply</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-gen category" title="Gen"><span class="text">Gen</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-yes iswip" title="Complete Work"><span class="text">Complete Work</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/No%20Archive%20Warnings%20Apply/works">No Archive Warnings Apply</a></strong></li><li class='relationships'><a class="tag" href="/tags/Gomez%20Addams*s*Morticia%20Addams/works">Gomez Addams/Morticia Addams</a></li> <li class='relationships'><a class="tag" href="/tags/Gomez%20Addams%20*a*%20Harry%20Potter/works">Gomez Addams &amp; Harry Potter</a></li> <li class='relationships'><a class="tag" href="/tags/Morticia%20Addams%20*a*%20Harry%20Potter/works">Morticia Addams &amp; Harry Potter</a></li><li class='characters'><a class="tag" href="/tags/Harry%20Potter/works">Harry Potter</a></li> <li class='characters'><a class="tag" href="/tags/Gomez%20Addams/works">Gomez Addams</a></li> <li class='characters'><a class="tag" href="/tags/Morticia%20Addams/works">Morticia Addams</a></li><li class='freeforms'><a class="tag" href="/tags/Indian%20Harry%20Potter/works">Indian Harry Potter</a></li>
+  </ul>
+
+  <!--summary-->
+    <h6 class="landmark heading">Summary</h6>
+    <blockquote class="userstuff summary">
+      <p>Gomez and Morticia get a gift from their renters, Vernon and Petunia Dursley.</p>
+    </blockquote>
+
+    <h6 class="landmark heading">Series</h6>
+    <ul class="series">
+        <li>
+          Part <strong>1</strong> of <a href="/series/2070153">The Boy Who Lived (With The Addams Family)</a>
+        </li>
+    </ul>
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">196</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters">1/1</dd>
+
+
+    <dt class="collections">Collections:</dt>
+    <dd class="collections"><a href="/works/28259214/collections">2</a></dd>
+
+    <dt class="comments">Comments:</dt>
+    <dd class="comments"><a href="/works/28259214?show_comments=true#comments">6</a></dd>
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/28259214#comments">201</a></dd>
+    <dt class="bookmarks">Bookmarks:</dt>
+    <dd class="bookmarks"><a href="/works/28259214/bookmarks">16</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">1624</dd>
+
+  </dl>
+
+
+</li>
+<li id="work_27863341" class="work blurb group work-27863341 user-5508364" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/27863341">Wishes and Kisses</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/LSUsweetie/pseuds/LSUsweetie">LSUsweetie</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-general-audience rating" title="General Audiences"><span class="text">General Audiences</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-no warnings" title="No Archive Warnings Apply"><span class="text">No Archive Warnings Apply</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-het category" title="F/M"><span class="text">F/M</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-yes iswip" title="Complete Work"><span class="text">Complete Work</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/No%20Archive%20Warnings%20Apply/works">No Archive Warnings Apply</a></strong></li><li class='relationships'><a class="tag" href="/tags/Hermione%20Granger*s*Fred%20Weasley/works">Hermione Granger/Fred Weasley</a></li><li class='characters'><a class="tag" href="/tags/Hermione%20Granger/works">Hermione Granger</a></li> <li class='characters'><a class="tag" href="/tags/Fred%20Weasley/works">Fred Weasley</a></li><li class='freeforms'><a class="tag" href="/tags/Fred%20Lives/works">Fred Lives</a></li> <li class='freeforms'><a class="tag" href="/tags/Fluff/works">Fluff</a></li> <li class='freeforms'><a class="tag" href="/tags/New%20Year&#39;s%20Fluff/works">New Year&#39;s Fluff</a></li> <li class='freeforms'><a class="tag" href="/tags/New%20Year&#39;s%20Eve/works">New Year&#39;s Eve</a></li> <li class='freeforms'><a class="tag" href="/tags/Weasleys&#39;%20Wizard%20Wheezes/works">Weasleys&#39; Wizard Wheezes</a></li>
+  </ul>
+
+  <!--summary-->
+    <h6 class="landmark heading">Summary</h6>
+    <blockquote class="userstuff summary">
+      <p>Hermione spends her New Year’s Eve at a party hosted by the Weasley twins.</p>
+    </blockquote>
+
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">1,291</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters">1/1</dd>
+
+
+    <dt class="collections">Collections:</dt>
+    <dd class="collections"><a href="/works/27863341/collections">1</a></dd>
+
+    <dt class="comments">Comments:</dt>
+    <dd class="comments"><a href="/works/27863341?show_comments=true#comments">24</a></dd>
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/27863341#comments">147</a></dd>
+    <dt class="bookmarks">Bookmarks:</dt>
+    <dd class="bookmarks"><a href="/works/27863341/bookmarks">7</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">1003</dd>
+
+  </dl>
+
+
+</li>
+<li id="work_25638268" class="work blurb group work-25638268 user-6440992" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/25638268">The Goblin Prince and the Philosopher's Stone</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/PsychoLynx/pseuds/PsychoLynx">PsychoLynx</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a>, <a class="tag" href="/tags/Labyrinth%20(1986)/works">Labyrinth (1986)</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-general-audience rating" title="General Audiences"><span class="text">General Audiences</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-no warnings" title="No Archive Warnings Apply"><span class="text">No Archive Warnings Apply</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-gen category" title="Gen"><span class="text">Gen</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-yes iswip" title="Complete Work"><span class="text">Complete Work</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/No%20Archive%20Warnings%20Apply/works">No Archive Warnings Apply</a></strong></li><li class='characters'><a class="tag" href="/tags/Harry%20Potter/works">Harry Potter</a></li> <li class='characters'><a class="tag" href="/tags/Jareth%20(Labyrinth)/works">Jareth (Labyrinth)</a></li> <li class='characters'><a class="tag" href="/tags/Ron%20Weasley/works">Ron Weasley</a></li> <li class='characters'><a class="tag" href="/tags/Hermione%20Granger/works">Hermione Granger</a></li> <li class='characters'><a class="tag" href="/tags/Severus%20Snape/works">Severus Snape</a></li> <li class='characters'><a class="tag" href="/tags/Sir%20Didymus%20(Labyrinth)/works">Sir Didymus (Labyrinth)</a></li><li class='freeforms'><a class="tag" href="/tags/Harry%20Potter%20was%20Raised%20by%20Other(s)/works">Harry Potter was Raised by Other(s)</a></li> <li class='freeforms'><a class="tag" href="/tags/Goblins/works">Goblins</a></li> <li class='freeforms'><a class="tag" href="/tags/Prince%20Harry%20Potter/works">Prince Harry Potter</a></li> <li class='freeforms'><a class="tag" href="/tags/Alternate%20Universe/works">Alternate Universe</a></li> <li class='freeforms'><a class="tag" href="/tags/Book%201:%20Harry%20Potter%20and%20the%20Philosopher&#39;s%20Stone/works">Book 1: Harry Potter and the Philosopher&#39;s Stone</a></li> <li class='freeforms'><a class="tag" href="/tags/Alternate%20Universe%20-%20Labyrinth%20Fusion/works">Alternate Universe - Labyrinth Fusion</a></li> <li class='freeforms'><a class="tag" href="/tags/Single%20Parent%20Jareth/works">Single Parent Jareth</a></li>
+  </ul>
+
+  <!--summary-->
+    <h6 class="landmark heading">Summary</h6>
+    <blockquote class="userstuff summary">
+      <p>Lily wanted her son to live; Jareth wanted an heir to the Goblin Throne. It only took a single wish to satisfy both of their needs.</p><p>“I wish the Goblins would come and take you away…”</p>
+    </blockquote>
+
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">28,980</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters"><a href="/works/25638268/chapters/69703140">19</a>/19</dd>
+
+
+
+    <dt class="comments">Comments:</dt>
+    <dd class="comments"><a href="/works/25638268?show_comments=true&amp;view_full_work=true#comments">136</a></dd>
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/25638268?view_full_work=true#comments">505</a></dd>
+    <dt class="bookmarks">Bookmarks:</dt>
+    <dd class="bookmarks"><a href="/works/25638268/bookmarks">145</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">8903</dd>
+
+  </dl>
+
+
+</li>
+<li id="work_23287558" class="work blurb group work-23287558 user-205216" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/23287558">Soul of Rebirth: Tunc E Converso</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/ChibiTsukiHikari/pseuds/ChibiTsukiHikari">ChibiTsukiHikari</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-explicit rating" title="Explicit"><span class="text">Explicit</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-yes warnings" title="Graphic Depictions Of Violence, Underage"><span class="text">Graphic Depictions Of Violence, Underage</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-multi category" title="F/F, F/M, M/M"><span class="text">F/F, F/M, M/M</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-no iswip" title="Work in Progress"><span class="text">Work in Progress</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/Graphic%20Depictions%20Of%20Violence/works">Graphic Depictions Of Violence</a></strong></li> <li class='warnings'><strong><a class="tag" href="/tags/Underage/works">Underage</a></strong></li><li class='relationships'><a class="tag" href="/tags/Harry%20Potter*s*Tom%20Riddle%20%7C%20Voldemort/works">Harry Potter/Tom Riddle | Voldemort</a></li> <li class='relationships'><a class="tag" href="/tags/Harry%20Potter*s*Tom%20Riddle/works">Harry Potter/Tom Riddle</a></li><li class='characters'><a class="tag" href="/tags/Harry%20Potter/works">Harry Potter</a></li> <li class='characters'><a class="tag" href="/tags/Tom%20Riddle/works">Tom Riddle</a></li> <li class='characters'><a class="tag" href="/tags/Orion%20Black/works">Orion Black</a></li> <li class='characters'><a class="tag" href="/tags/Abraxas%20Malfoy/works">Abraxas Malfoy</a></li> <li class='characters'><a class="tag" href="/tags/Albus%20Dumbledore/works">Albus Dumbledore</a></li> <li class='characters'><a class="tag" href="/tags/Armando%20Dippet/works">Armando Dippet</a></li><li class='freeforms'><a class="tag" href="/tags/Time%20Travel%20Fix-It/works">Time Travel Fix-It</a></li> <li class='freeforms'><a class="tag" href="/tags/Time%20Travel/works">Time Travel</a></li> <li class='freeforms'><a class="tag" href="/tags/Personified%20Death%20Character/works">Personified Death Character</a></li> <li class='freeforms'><a class="tag" href="/tags/Enemies%20to%20Friends%20to%20Lovers/works">Enemies to Friends to Lovers</a></li> <li class='freeforms'><a class="tag" href="/tags/Harry%20is%20a%20saucy%20little%20shit/works">Harry is a saucy little shit</a></li> <li class='freeforms'><a class="tag" href="/tags/Morally%20Grey%20Harry%20Potter/works">Morally Grey Harry Potter</a></li> <li class='freeforms'><a class="tag" href="/tags/Torture/works">Torture</a></li> <li class='freeforms'><a class="tag" href="/tags/Psychological%20Torture/works">Psychological Torture</a></li> <li class='freeforms'><a class="tag" href="/tags/Suicidal%20Thoughts/works">Suicidal Thoughts</a></li> <li class='freeforms'><a class="tag" href="/tags/Possessive%20Behavior/works">Possessive Behavior</a></li> <li class='freeforms'><a class="tag" href="/tags/Post-Traumatic%20Stress%20Disorder%20-%20PTSD/works">Post-Traumatic Stress Disorder - PTSD</a></li> <li class='freeforms'><a class="tag" href="/tags/Panic%20Attacks/works">Panic Attacks</a></li> <li class='freeforms'><a class="tag" href="/tags/Timeline%20What%20Timeline/works">Timeline What Timeline</a></li> <li class='freeforms'><a class="tag" href="/tags/Manipulative%20Tom%20Riddle/works">Manipulative Tom Riddle</a></li> <li class='freeforms'><a class="tag" href="/tags/Eventual%20Top%20Tom%20Riddle/works">Eventual Top Tom Riddle</a></li> <li class='freeforms'><a class="tag" href="/tags/Eventual%20Bottom%20Harry%20Potter/works">Eventual Bottom Harry Potter</a></li> <li class='freeforms'><a class="tag" href="/tags/Alternate%20Universe%20-%20Canon%20Divergence/works">Alternate Universe - Canon Divergence</a></li> <li class='freeforms'><a class="tag" href="/tags/Baby%20Death%20Eaters%20-%20Freeform/works">Baby Death Eaters - Freeform</a></li> <li class='freeforms'><a class="tag" href="/tags/Harry%20Potter%20is%20a%20Little%20Shit/works">Harry Potter is a Little Shit</a></li> <li class='freeforms'><a class="tag" href="/tags/Unhealthy%20Coping%20Mechanisms/works">Unhealthy Coping Mechanisms</a></li> <li class='freeforms'><a class="tag" href="/tags/Horcrux%20are%20bad%20for%20you%20yo/works">Horcrux are bad for you yo</a></li> <li class='freeforms'><a class="tag" href="/tags/Albus%20Dumbledore%20Being%20an%20Asshole/works">Albus Dumbledore Being an Asshole</a></li> <li class='freeforms'><a class="tag" href="/tags/Harry%20is%20having%20none%20of%20his%20bias%20shit/works">Harry is having none of his bias shit</a></li> <li class='freeforms'><a class="tag" href="/tags/Soulmates/works">Soulmates</a></li> <li class='freeforms'><a class="tag" href="/tags/Romantic%20Soulmates/works">Romantic Soulmates</a></li> <li class='freeforms'><a class="tag" href="/tags/Soulmate%20Bond/works">Soulmate Bond</a></li> <li class='freeforms'><a class="tag" href="/tags/Cassius%20is%20a%20sleepy%20dreamy%20boi/works">Cassius is a sleepy dreamy boi</a></li> <li class='freeforms'><a class="tag" href="/tags/Orion%20is%20his%20own%20hyper%20warning/works">Orion is his own hyper warning</a></li>
+  </ul>
+
+  <!--summary-->
+    <h6 class="landmark heading">Summary</h6>
+    <blockquote class="userstuff summary">
+      <p>“Dawn, May 2nd of 1998. Tom Marvolo Riddle, otherly known as Lord Voldemort died, thus taking the other half of your soul with him.” Death droned out in a bored tone, “I do not make the rules, but the day he made you his Horcrux, soul-bound you as soulmates.” </p><p>Harry blinked once, then he blinked twice before he burst into a fit of roaring laughter that brought tears to his eyes. It took him a few minutes to calm himself, wiping his eyes of excess water he sobered and stared blankly at Death, “You mean to tell me, that goddamn Tom fucking Riddle jr. is my soulmate? The same mass-murdering sociopath, who attacked an infant over a shitty prophecy that a drunk off her ass on cooking sherry, Sybill Trelawney projectile vomited into Albus Dumbledore’s ear? The same idiot Dark lord of the century, Lord bloody Voldemort?”</p>
+    </blockquote>
+
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">7,169</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters"><a href="/works/23287558/chapters/69703332">2</a>/?</dd>
+
+
+
+    <dt class="comments">Comments:</dt>
+    <dd class="comments"><a href="/works/23287558?show_comments=true&amp;view_full_work=true#comments">27</a></dd>
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/23287558?view_full_work=true#comments">357</a></dd>
+    <dt class="bookmarks">Bookmarks:</dt>
+    <dd class="bookmarks"><a href="/works/23287558/bookmarks">107</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">3913</dd>
+
+  </dl>
+
+
+</li>
+<li id="work_27534292" class="work blurb group work-27534292 user-8744563" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/27534292">After</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/greeneggsandham25/pseuds/greeneggsandham25">greeneggsandham25</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-teen rating" title="Teen And Up Audiences"><span class="text">Teen And Up Audiences</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-no warnings" title="No Archive Warnings Apply"><span class="text">No Archive Warnings Apply</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-slash category" title="M/M"><span class="text">M/M</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-yes iswip" title="Complete Work"><span class="text">Complete Work</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/No%20Archive%20Warnings%20Apply/works">No Archive Warnings Apply</a></strong></li><li class='relationships'><a class="tag" href="/tags/Draco%20Malfoy*s*Harry%20Potter/works">Draco Malfoy/Harry Potter</a></li> <li class='relationships'><a class="tag" href="/tags/Draco%20Malfoy%20*a*%20Harry%20Potter/works">Draco Malfoy &amp; Harry Potter</a></li> <li class='relationships'><a class="tag" href="/tags/Harry%20Potter*s*Ginny%20Weasley/works">Harry Potter/Ginny Weasley</a></li> <li class='relationships'><a class="tag" href="/tags/Hermione%20Granger*s*Ron%20Weasley/works">Hermione Granger/Ron Weasley</a></li><li class='characters'><a class="tag" href="/tags/Harry%20Potter/works">Harry Potter</a></li> <li class='characters'><a class="tag" href="/tags/Draco%20Malfoy/works">Draco Malfoy</a></li> <li class='characters'><a class="tag" href="/tags/Scorpius%20Malfoy/works">Scorpius Malfoy</a></li> <li class='characters'><a class="tag" href="/tags/Teddy%20Lupin/works">Teddy Lupin</a></li> <li class='characters'><a class="tag" href="/tags/Ginny%20Weasley/works">Ginny Weasley</a></li> <li class='characters'><a class="tag" href="/tags/Hermione%20Granger/works">Hermione Granger</a></li> <li class='characters'><a class="tag" href="/tags/Ron%20Weasley/works">Ron Weasley</a></li> <li class='characters'><a class="tag" href="/tags/Rose%20Weasley/works">Rose Weasley</a></li> <li class='characters'><a class="tag" href="/tags/Andromeda%20Black%20Tonks/works">Andromeda Black Tonks</a></li> <li class='characters'><a class="tag" href="/tags/Dudley%20Dursley/works">Dudley Dursley</a></li> <li class='characters'><a class="tag" href="/tags/Millicent%20Bulstrode/works">Millicent Bulstrode</a></li> <li class='characters'><a class="tag" href="/tags/Vernon%20Dursley/works">Vernon Dursley</a></li> <li class='characters'><a class="tag" href="/tags/Petunia%20Evans%20Dursley/works">Petunia Evans Dursley</a></li> <li class='characters'><a class="tag" href="/tags/Luna%20Lovegood/works">Luna Lovegood</a></li> <li class='characters'><a class="tag" href="/tags/Neville%20Longbottom/works">Neville Longbottom</a></li> <li class='characters'><a class="tag" href="/tags/Hannah%20Abbott/works">Hannah Abbott</a></li> <li class='characters'><a class="tag" href="/tags/Rolf%20Scamander/works">Rolf Scamander</a></li><li class='freeforms'><a class="tag" href="/tags/Angst/works">Angst</a></li> <li class='freeforms'><a class="tag" href="/tags/Depression/works">Depression</a></li> <li class='freeforms'><a class="tag" href="/tags/Post-Traumatic%20Stress%20Disorder%20-%20PTSD/works">Post-Traumatic Stress Disorder - PTSD</a></li> <li class='freeforms'><a class="tag" href="/tags/Hogwarts/works">Hogwarts</a></li> <li class='freeforms'><a class="tag" href="/tags/Post-Hogwarts/works">Post-Hogwarts</a></li> <li class='freeforms'><a class="tag" href="/tags/Anxiety/works">Anxiety</a></li> <li class='freeforms'><a class="tag" href="/tags/Self-Harm/works">Self-Harm</a></li> <li class='freeforms'><a class="tag" href="/tags/Suicide%20Attempt/works">Suicide Attempt</a></li> <li class='freeforms'><a class="tag" href="/tags/Angst%20with%20a%20Happy%20Ending/works">Angst with a Happy Ending</a></li> <li class='freeforms'><a class="tag" href="/tags/Happy%20Ending/works">Happy Ending</a></li> <li class='freeforms'><a class="tag" href="/tags/long%20story/works">long story</a></li> <li class='freeforms'><a class="tag" href="/tags/LGBT/works">LGBT</a></li> <li class='freeforms'><a class="tag" href="/tags/Gay/works">Gay</a></li> <li class='freeforms'><a class="tag" href="/tags/mature%20themes/works">mature themes</a></li> <li class='freeforms'><a class="tag" href="/tags/Harry%20Potter%20Next%20Generation/works">Harry Potter Next Generation</a></li> <li class='freeforms'><a class="tag" href="/tags/Next%20Generation/works">Next Generation</a></li> <li class='freeforms'><a class="tag" href="/tags/Hurt*s*Comfort/works">Hurt/Comfort</a></li> <li class='freeforms'><a class="tag" href="/tags/Emotional%20Hurt*s*Comfort/works">Emotional Hurt/Comfort</a></li> <li class='freeforms'><a class="tag" href="/tags/Angst%20and%20Hurt*s*Comfort/works">Angst and Hurt/Comfort</a></li> <li class='freeforms'><a class="tag" href="/tags/Harry%20Potter%20Needs%20a%20Hug/works">Harry Potter Needs a Hug</a></li> <li class='freeforms'><a class="tag" href="/tags/Scorpius%20is%20amazing/works">Scorpius is amazing</a></li> <li class='freeforms'><a class="tag" href="/tags/Harry%20Potter%20Epilogue%20What%20Epilogue%20%7C%20EWE/works">Harry Potter Epilogue What Epilogue | EWE</a></li>
+  </ul>
+
+  <!--summary-->
+    <h6 class="landmark heading">Summary</h6>
+    <blockquote class="userstuff summary">
+      <p>My blood ran cold at her words. Everything went still. I noticed Ron and Hermione turn to look at me. Their faces showed pure shock. </p><p>Then, In a tense whisper, Harry spoke.</p><p>"Damn you Weasley."</p><p> </p><p>It's 10 years after the battle of Hogwarts and Harry has great deal of depression, PTSD, and Anxiety. Ginny has tried to help him, but he is unperceptive to her efforts. It's not until Draco Malfoy unexpectedly reenters his life, that things start taking a few turns. will Harry make it though the battles that rage on in his mind? </p><p>Trigger warnings for this whole thing. Mentions of abuse, self harm, suicidal thoughts. etc.</p><p>The plot, and some minor characters, are the only thing that belongs to me and my friend.</p><p> </p><p>This story can also be found on Wattpad and Harrypotterfanfiction.com  under the same title. My users are iwatt0245607 and greeneggsandham25 respectively.</p>
+    </blockquote>
+
+    <h6 class="landmark heading">Series</h6>
+    <ul class="series">
+        <li>
+          Part <strong>1</strong> of <a href="/series/2012536">After- Drarry</a>
+        </li>
+    </ul>
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">85,398</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters"><a href="/works/27534292/chapters/69691386">62</a>/62</dd>
+
+
+
+    <dt class="comments">Comments:</dt>
+    <dd class="comments"><a href="/works/27534292?show_comments=true&amp;view_full_work=true#comments">13</a></dd>
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/27534292?view_full_work=true#comments">139</a></dd>
+    <dt class="bookmarks">Bookmarks:</dt>
+    <dd class="bookmarks"><a href="/works/27534292/bookmarks">34</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">6373</dd>
+
+  </dl>
+
+
+</li>
+<li id="work_28451646" class="work blurb group work-28451646 user-7381408" role="article">
+  
+
+  <!--title, author, fandom-->
+  <div class="header module">
+
+    <h4 class="heading">
+      <a href="/works/28451646">Beautiful In My Eyes</a>
+      by
+        
+      <!-- do not cache -->
+      <a rel="author" href="/users/louis_my_child/pseuds/louis_my_child">louis_my_child</a>
+
+
+
+      
+      
+    </h4>
+
+    <h5 class="fandoms heading">
+      <span class="landmark">Fandoms:</span>
+      <a class="tag" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works">Harry Potter - J. K. Rowling</a>
+      &nbsp;
+    </h5>
+
+    <!--required tags-->
+    <ul class="required-tags">
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="rating-teen rating" title="Teen And Up Audiences"><span class="text">Teen And Up Audiences</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="warning-no warnings" title="No Archive Warnings Apply"><span class="text">No Archive Warnings Apply</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="category-multi category" title="Gen, M/M"><span class="text">Gen, M/M</span></span></a></li>
+<li> <a class="help symbol question modal" title="Symbols key" aria-controls="#modal" href="/help/symbols-key.html"><span class="complete-yes iswip" title="Complete Work"><span class="text">Complete Work</span></span></a></li>
+</ul>
+    <p class="datetime">31 Dec 2020</p>
+  </div>
+
+  <!--warnings again, cast, freeform tags-->
+  <h6 class="landmark heading">Tags</h6>
+  <ul class="tags commas">
+    <li class='warnings'><strong><a class="tag" href="/tags/No%20Archive%20Warnings%20Apply/works">No Archive Warnings Apply</a></strong></li><li class='relationships'><a class="tag" href="/tags/Draco%20Malfoy*s*Harry%20Potter/works">Draco Malfoy/Harry Potter</a></li><li class='characters'><a class="tag" href="/tags/Draco%20Malfoy/works">Draco Malfoy</a></li> <li class='characters'><a class="tag" href="/tags/Harry%20Potter/works">Harry Potter</a></li><li class='freeforms'><a class="tag" href="/tags/Established%20Draco%20Malfoy*s*Harry%20Potter/works">Established Draco Malfoy/Harry Potter</a></li> <li class='freeforms'><a class="tag" href="/tags/Drarry/works">Drarry</a></li> <li class='freeforms'><a class="tag" href="/tags/Fluff/works">Fluff</a></li> <li class='freeforms'><a class="tag" href="/tags/Christmas%20Fluff/works">Christmas Fluff</a></li> <li class='freeforms'><a class="tag" href="/tags/Christmas%20Presents/works">Christmas Presents</a></li> <li class='freeforms'><a class="tag" href="/tags/Married%20Draco%20Malfoy*s*Harry%20Potter/works">Married Draco Malfoy/Harry Potter</a></li> <li class='freeforms'><a class="tag" href="/tags/Banter/works">Banter</a></li> <li class='freeforms'><a class="tag" href="/tags/Good%20Draco%20Malfoy/works">Good Draco Malfoy</a></li> <li class='freeforms'><a class="tag" href="/tags/Harry%20Potter%20-%20Freeform/works">Harry Potter - Freeform</a></li>
+  </ul>
+
+  <!--summary-->
+    <h6 class="landmark heading">Summary</h6>
+    <blockquote class="userstuff summary">
+      <p>Draco and Harry are wrapping presents for their children.</p>
+    </blockquote>
+
+
+  <!--stats-->
+
+  <dl class="stats">
+      <dt class="language">Language:</dt>
+      <dd class="language">English</dd>
+    <dt class="words">Words:</dt>
+    <dd class="words">1,843</dd>
+    <dt class="chapters">Chapters:</dt>
+    <dd class="chapters">1/1</dd>
+
+
+
+    <dt class="comments">Comments:</dt>
+    <dd class="comments"><a href="/works/28451646?show_comments=true#comments">2</a></dd>
+    <dt class="kudos">Kudos:</dt>
+    <dd class="kudos"><a href="/works/28451646#comments">59</a></dd>
+    <dt class="bookmarks">Bookmarks:</dt>
+    <dd class="bookmarks"><a href="/works/28451646/bookmarks">5</a></dd>
+
+  <dt class="hits">Hits:</dt>
+  <dd class="hits">777</dd>
+
+  </dl>
+
+
+</li>
+
+</ol>
+
+<!--/content-->
+
+<!--filters subnav-->
+  <form class="narrow-hidden filters" id="work-filters" action="/works" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+  <h3 class="landmark heading">Filters</h3>
+  <fieldset><legend>Filter results:</legend>
+    <dl>
+      <dt class="landmark">Submit</dt>
+      <dd class="submit actions"><input type="submit" name="commit" value="Sort and Filter"/></dd>
+      <dt class="sort">
+        <label for="work_search_sort_column">Sort by</label>
+      </dt>
+      <dd class="sort">
+        <select name="work_search[sort_column]" id="work_search_sort_column"><option value="authors_to_sort_on">Author</option>
+<option value="title_to_sort_on">Title</option>
+<option value="created_at">Date Posted</option>
+<option selected="selected" value="revised_at">Date Updated</option>
+<option value="word_count">Word Count</option>
+<option value="hits">Hits</option>
+<option value="kudos_count">Kudos</option>
+<option value="comments_count">Comments</option>
+<option value="bookmarks_count">Bookmarks</option></select>
+      </dd>
+
+        <dt class="include heading">
+          <h4 class="heading">
+            Include
+          </h4>
+           <a class="help symbol question modal" title="Work filters include tags" aria-controls="#modal" href="/help/work-filters-include-tags.html"><span class="symbol question"><span>?</span></span></a>
+        </dt>
+        <dd class="include tags group">
+          <dl>
+              <dt id="toggle_include_rating_tags" class="filter-toggle rating tags">
+                <span class="landmark">Include </span>Ratings
+              </dt>
+              <dd id="include_rating_tags" class="expandable rating tags">
+                <ul>
+                    <li>
+                      <label for="include_work_search_rating_ids_11">
+                          <input type="radio" name="include_work_search[rating_ids][]" id="include_work_search_rating_ids_11" value="11"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Teen And Up Audiences (91524)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_rating_ids_10">
+                          <input type="radio" name="include_work_search[rating_ids][]" id="include_work_search_rating_ids_10" value="10"/>
+                        <span class="indicator" aria-hidden="true"></span><span>General Audiences (82890)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_rating_ids_12">
+                          <input type="radio" name="include_work_search[rating_ids][]" id="include_work_search_rating_ids_12" value="12"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Mature (49606)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_rating_ids_13">
+                          <input type="radio" name="include_work_search[rating_ids][]" id="include_work_search_rating_ids_13" value="13"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Explicit (48845)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_rating_ids_9">
+                          <input type="radio" name="include_work_search[rating_ids][]" id="include_work_search_rating_ids_9" value="9"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Not Rated (24951)</span>
+</label>                    </li>
+                </ul>
+              </dd>
+              <dt id="toggle_include_archive_warning_tags" class="filter-toggle warning tags">
+                <span class="landmark">Include </span>Warnings
+              </dt>
+              <dd id="include_archive_warning_tags" class="expandable warning tags">
+                <ul>
+                    <li>
+                      <label for="include_work_search_archive_warning_ids_16">
+                          <input type="checkbox" name="include_work_search[archive_warning_ids][]" id="include_work_search_archive_warning_ids_16" value="16"/>
+                        <span class="indicator" aria-hidden="true"></span><span>No Archive Warnings Apply (161275)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_archive_warning_ids_14">
+                          <input type="checkbox" name="include_work_search[archive_warning_ids][]" id="include_work_search_archive_warning_ids_14" value="14"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Creator Chose Not To Use Archive Warnings (102394)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_archive_warning_ids_17">
+                          <input type="checkbox" name="include_work_search[archive_warning_ids][]" id="include_work_search_archive_warning_ids_17" value="17"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Graphic Depictions Of Violence (20459)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_archive_warning_ids_18">
+                          <input type="checkbox" name="include_work_search[archive_warning_ids][]" id="include_work_search_archive_warning_ids_18" value="18"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Major Character Death (18555)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_archive_warning_ids_20">
+                          <input type="checkbox" name="include_work_search[archive_warning_ids][]" id="include_work_search_archive_warning_ids_20" value="20"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Underage (12436)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_archive_warning_ids_19">
+                          <input type="checkbox" name="include_work_search[archive_warning_ids][]" id="include_work_search_archive_warning_ids_19" value="19"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Rape/Non-Con (8310)</span>
+</label>                    </li>
+                </ul>
+              </dd>
+              <dt id="toggle_include_category_tags" class="filter-toggle category tags">
+                <span class="landmark">Include </span>Categories
+              </dt>
+              <dd id="include_category_tags" class="expandable category tags">
+                <ul>
+                    <li>
+                      <label for="include_work_search_category_ids_23">
+                          <input type="checkbox" name="include_work_search[category_ids][]" id="include_work_search_category_ids_23" value="23"/>
+                        <span class="indicator" aria-hidden="true"></span><span>M/M (135063)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_category_ids_22">
+                          <input type="checkbox" name="include_work_search[category_ids][]" id="include_work_search_category_ids_22" value="22"/>
+                        <span class="indicator" aria-hidden="true"></span><span>F/M (99543)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_category_ids_21">
+                          <input type="checkbox" name="include_work_search[category_ids][]" id="include_work_search_category_ids_21" value="21"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Gen (56378)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_category_ids_116">
+                          <input type="checkbox" name="include_work_search[category_ids][]" id="include_work_search_category_ids_116" value="116"/>
+                        <span class="indicator" aria-hidden="true"></span><span>F/F (20133)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_category_ids_2246">
+                          <input type="checkbox" name="include_work_search[category_ids][]" id="include_work_search_category_ids_2246" value="2246"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Multi (17501)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_category_ids_24">
+                          <input type="checkbox" name="include_work_search[category_ids][]" id="include_work_search_category_ids_24" value="24"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Other (6956)</span>
+</label>                    </li>
+                </ul>
+              </dd>
+              <dt id="toggle_include_fandom_tags" class="filter-toggle fandom tags">
+                <span class="landmark">Include </span>Fandoms
+              </dt>
+              <dd id="include_fandom_tags" class="expandable fandom tags">
+                <ul>
+                    <li>
+                      <label for="include_work_search_fandom_ids_136512">
+                          <input type="checkbox" name="include_work_search[fandom_ids][]" id="include_work_search_fandom_ids_136512" value="136512"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Harry Potter - J. K. Rowling (286607)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_fandom_ids_7625681">
+                          <input type="checkbox" name="include_work_search[fandom_ids][]" id="include_work_search_fandom_ids_7625681" value="7625681"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Fantastic Beasts and Where to Find Them (Movies) (13433)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_fandom_ids_11055523">
+                          <input type="checkbox" name="include_work_search[fandom_ids][]" id="include_work_search_fandom_ids_11055523" value="11055523"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Harry Potter and the Cursed Child - Thorne &amp; Rowling (3374)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_fandom_ids_414093">
+                          <input type="checkbox" name="include_work_search[fandom_ids][]" id="include_work_search_fandom_ids_414093" value="414093"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Marvel Cinematic Universe (2425)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_fandom_ids_1001939">
+                          <input type="checkbox" name="include_work_search[fandom_ids][]" id="include_work_search_fandom_ids_1001939" value="1001939"/>
+                        <span class="indicator" aria-hidden="true"></span><span>The Avengers (Marvel Movies) (1837)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_fandom_ids_133185">
+                          <input type="checkbox" name="include_work_search[fandom_ids][]" id="include_work_search_fandom_ids_133185" value="133185"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Sherlock (TV) (1733)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_fandom_ids_27">
+                          <input type="checkbox" name="include_work_search[fandom_ids][]" id="include_work_search_fandom_ids_27" value="27"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Supernatural (1722)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_fandom_ids_13999">
+                          <input type="checkbox" name="include_work_search[fandom_ids][]" id="include_work_search_fandom_ids_13999" value="13999"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Naruto (934)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_fandom_ids_232768">
+                          <input type="checkbox" name="include_work_search[fandom_ids][]" id="include_work_search_fandom_ids_232768" value="232768"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Merlin (TV) (856)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_fandom_ids_22001796">
+                          <input type="checkbox" name="include_work_search[fandom_ids][]" id="include_work_search_fandom_ids_22001796" value="22001796"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Buffy the Vampire Slayer (TV) (828)</span>
+</label>                    </li>
+                </ul>
+              </dd>
+              <dt id="toggle_include_character_tags" class="filter-toggle character tags">
+                <span class="landmark">Include </span>Characters
+              </dt>
+              <dd id="include_character_tags" class="expandable character tags">
+                <ul>
+                    <li>
+                      <label for="include_work_search_character_ids_1803">
+                          <input type="checkbox" name="include_work_search[character_ids][]" id="include_work_search_character_ids_1803" value="1803"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Harry Potter (127420)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_character_ids_1048">
+                          <input type="checkbox" name="include_work_search[character_ids][]" id="include_work_search_character_ids_1048" value="1048"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Hermione Granger (80960)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_character_ids_1589">
+                          <input type="checkbox" name="include_work_search[character_ids][]" id="include_work_search_character_ids_1589" value="1589"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Draco Malfoy (79654)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_character_ids_2211">
+                          <input type="checkbox" name="include_work_search[character_ids][]" id="include_work_search_character_ids_2211" value="2211"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Ron Weasley (54741)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_character_ids_966">
+                          <input type="checkbox" name="include_work_search[character_ids][]" id="include_work_search_character_ids_966" value="966"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Severus Snape (49759)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_character_ids_321">
+                          <input type="checkbox" name="include_work_search[character_ids][]" id="include_work_search_character_ids_321" value="321"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Sirius Black (46984)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_character_ids_1049">
+                          <input type="checkbox" name="include_work_search[character_ids][]" id="include_work_search_character_ids_1049" value="1049"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Remus Lupin (44675)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_character_ids_2174">
+                          <input type="checkbox" name="include_work_search[character_ids][]" id="include_work_search_character_ids_2174" value="2174"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Ginny Weasley (32640)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_character_ids_967">
+                          <input type="checkbox" name="include_work_search[character_ids][]" id="include_work_search_character_ids_967" value="967"/>
+                        <span class="indicator" aria-hidden="true"></span><span>James Potter (28484)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_character_ids_1386">
+                          <input type="checkbox" name="include_work_search[character_ids][]" id="include_work_search_character_ids_1386" value="1386"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Albus Dumbledore (26789)</span>
+</label>                    </li>
+                </ul>
+              </dd>
+              <dt id="toggle_include_relationship_tags" class="filter-toggle relationship tags">
+                <span class="landmark">Include </span>Relationships
+              </dt>
+              <dd id="include_relationship_tags" class="expandable relationship tags">
+                <ul>
+                    <li>
+                      <label for="include_work_search_relationship_ids_99">
+                          <input type="checkbox" name="include_work_search[relationship_ids][]" id="include_work_search_relationship_ids_99" value="99"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Draco Malfoy/Harry Potter (47120)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_relationship_ids_1110">
+                          <input type="checkbox" name="include_work_search[relationship_ids][]" id="include_work_search_relationship_ids_1110" value="1110"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Sirius Black/Remus Lupin (22889)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_relationship_ids_3458">
+                          <input type="checkbox" name="include_work_search[relationship_ids][]" id="include_work_search_relationship_ids_3458" value="3458"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Hermione Granger/Ron Weasley (14283)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_relationship_ids_10760">
+                          <input type="checkbox" name="include_work_search[relationship_ids][]" id="include_work_search_relationship_ids_10760" value="10760"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Hermione Granger/Draco Malfoy (13406)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_relationship_ids_18827">
+                          <input type="checkbox" name="include_work_search[relationship_ids][]" id="include_work_search_relationship_ids_18827" value="18827"/>
+                        <span class="indicator" aria-hidden="true"></span><span>James Potter/Lily Evans Potter (13336)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_relationship_ids_1600">
+                          <input type="checkbox" name="include_work_search[relationship_ids][]" id="include_work_search_relationship_ids_1600" value="1600"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Harry Potter/Severus Snape (12615)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_relationship_ids_3548">
+                          <input type="checkbox" name="include_work_search[relationship_ids][]" id="include_work_search_relationship_ids_3548" value="3548"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Harry Potter/Ginny Weasley (11328)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_relationship_ids_2390">
+                          <input type="checkbox" name="include_work_search[relationship_ids][]" id="include_work_search_relationship_ids_2390" value="2390"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Hermione Granger/Severus Snape (5300)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_relationship_ids_20822">
+                          <input type="checkbox" name="include_work_search[relationship_ids][]" id="include_work_search_relationship_ids_20822" value="20822"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Harry Potter/Tom Riddle (4972)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_relationship_ids_9510">
+                          <input type="checkbox" name="include_work_search[relationship_ids][]" id="include_work_search_relationship_ids_9510" value="9510"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Hermione Granger/Harry Potter (4398)</span>
+</label>                    </li>
+                </ul>
+              </dd>
+              <dt id="toggle_include_freeform_tags" class="filter-toggle freeform tags">
+                <span class="landmark">Include </span>Additional Tags
+              </dt>
+              <dd id="include_freeform_tags" class="expandable freeform tags">
+                <ul>
+                    <li>
+                      <label for="include_work_search_freeform_ids_110">
+                          <input type="checkbox" name="include_work_search[freeform_ids][]" id="include_work_search_freeform_ids_110" value="110"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Fluff (31114)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_freeform_ids_176">
+                          <input type="checkbox" name="include_work_search[freeform_ids][]" id="include_work_search_freeform_ids_176" value="176"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Angst (28221)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_freeform_ids_60">
+                          <input type="checkbox" name="include_work_search[freeform_ids][]" id="include_work_search_freeform_ids_60" value="60"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Romance (27868)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_freeform_ids_968">
+                          <input type="checkbox" name="include_work_search[freeform_ids][]" id="include_work_search_freeform_ids_968" value="968"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Alternate Universe (17559)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_freeform_ids_62">
+                          <input type="checkbox" name="include_work_search[freeform_ids][]" id="include_work_search_freeform_ids_62" value="62"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Humor (15651)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_freeform_ids_143795">
+                          <input type="checkbox" name="include_work_search[freeform_ids][]" id="include_work_search_freeform_ids_143795" value="143795"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Alternate Universe - Canon Divergence (13191)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_freeform_ids_2379">
+                          <input type="checkbox" name="include_work_search[freeform_ids][]" id="include_work_search_freeform_ids_2379" value="2379"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Hurt/Comfort (11814)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_freeform_ids_61">
+                          <input type="checkbox" name="include_work_search[freeform_ids][]" id="include_work_search_freeform_ids_61" value="61"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Drama (10471)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_freeform_ids_27594097">
+                          <input type="checkbox" name="include_work_search[freeform_ids][]" id="include_work_search_freeform_ids_27594097" value="27594097"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Marauders Era (Harry Potter) (10108)</span>
+</label>                    </li>
+                    <li>
+                      <label for="include_work_search_freeform_ids_663">
+                          <input type="checkbox" name="include_work_search[freeform_ids][]" id="include_work_search_freeform_ids_663" value="663"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Drabble (9925)</span>
+</label>                    </li>
+                </ul>
+              </dd>
+            <dt class="autocomplete search">
+              <label for="work_search_other_tag_names">Other tags to include</label>
+            </dt>
+            <dd class="autocomplete search">
+              <input class="autocomplete" data-autocomplete-method="/autocomplete/tag" data-autocomplete-hint-text="Start typing for suggestions!" data-autocomplete-no-results-text="(No suggestions found)" data-autocomplete-min-chars="1" data-autocomplete-searching-text="Searching..." type="text" name="work_search[other_tag_names]" id="work_search_other_tag_names"/>
+            </dd>
+          </dl>
+        </dd>
+        <dt class="exclude heading">
+          <h4 class="heading">
+            Exclude
+          </h4>
+           <a class="help symbol question modal" title="Work filters exclude tags" aria-controls="#modal" href="/help/work-filters-exclude-tags.html"><span class="symbol question"><span>?</span></span></a>
+        </dt>
+        <dd class="exclude tags group">
+          <dl>
+              <dt id="toggle_exclude_rating_tags" class="filter-toggle rating tags">
+                <span class="landmark">Exclude </span>Ratings
+              </dt>
+              <dd id="exclude_rating_tags" class="expandable rating tags">
+                <ul>
+                    <li>
+                      <label for="exclude_work_search_rating_ids_11">
+                          <input type="checkbox" name="exclude_work_search[rating_ids][]" id="exclude_work_search_rating_ids_11" value="11"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Teen And Up Audiences (91524)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_rating_ids_10">
+                          <input type="checkbox" name="exclude_work_search[rating_ids][]" id="exclude_work_search_rating_ids_10" value="10"/>
+                        <span class="indicator" aria-hidden="true"></span><span>General Audiences (82890)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_rating_ids_12">
+                          <input type="checkbox" name="exclude_work_search[rating_ids][]" id="exclude_work_search_rating_ids_12" value="12"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Mature (49606)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_rating_ids_13">
+                          <input type="checkbox" name="exclude_work_search[rating_ids][]" id="exclude_work_search_rating_ids_13" value="13"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Explicit (48845)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_rating_ids_9">
+                          <input type="checkbox" name="exclude_work_search[rating_ids][]" id="exclude_work_search_rating_ids_9" value="9"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Not Rated (24951)</span>
+</label>                    </li>
+                </ul>
+              </dd>
+              <dt id="toggle_exclude_archive_warning_tags" class="filter-toggle warning tags">
+                <span class="landmark">Exclude </span>Warnings
+              </dt>
+              <dd id="exclude_archive_warning_tags" class="expandable warning tags">
+                <ul>
+                    <li>
+                      <label for="exclude_work_search_archive_warning_ids_16">
+                          <input type="checkbox" name="exclude_work_search[archive_warning_ids][]" id="exclude_work_search_archive_warning_ids_16" value="16"/>
+                        <span class="indicator" aria-hidden="true"></span><span>No Archive Warnings Apply (161275)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_archive_warning_ids_14">
+                          <input type="checkbox" name="exclude_work_search[archive_warning_ids][]" id="exclude_work_search_archive_warning_ids_14" value="14"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Creator Chose Not To Use Archive Warnings (102394)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_archive_warning_ids_17">
+                          <input type="checkbox" name="exclude_work_search[archive_warning_ids][]" id="exclude_work_search_archive_warning_ids_17" value="17"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Graphic Depictions Of Violence (20459)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_archive_warning_ids_18">
+                          <input type="checkbox" name="exclude_work_search[archive_warning_ids][]" id="exclude_work_search_archive_warning_ids_18" value="18"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Major Character Death (18555)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_archive_warning_ids_20">
+                          <input type="checkbox" name="exclude_work_search[archive_warning_ids][]" id="exclude_work_search_archive_warning_ids_20" value="20"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Underage (12436)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_archive_warning_ids_19">
+                          <input type="checkbox" name="exclude_work_search[archive_warning_ids][]" id="exclude_work_search_archive_warning_ids_19" value="19"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Rape/Non-Con (8310)</span>
+</label>                    </li>
+                </ul>
+              </dd>
+              <dt id="toggle_exclude_category_tags" class="filter-toggle category tags">
+                <span class="landmark">Exclude </span>Categories
+              </dt>
+              <dd id="exclude_category_tags" class="expandable category tags">
+                <ul>
+                    <li>
+                      <label for="exclude_work_search_category_ids_23">
+                          <input type="checkbox" name="exclude_work_search[category_ids][]" id="exclude_work_search_category_ids_23" value="23"/>
+                        <span class="indicator" aria-hidden="true"></span><span>M/M (135063)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_category_ids_22">
+                          <input type="checkbox" name="exclude_work_search[category_ids][]" id="exclude_work_search_category_ids_22" value="22"/>
+                        <span class="indicator" aria-hidden="true"></span><span>F/M (99543)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_category_ids_21">
+                          <input type="checkbox" name="exclude_work_search[category_ids][]" id="exclude_work_search_category_ids_21" value="21"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Gen (56378)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_category_ids_116">
+                          <input type="checkbox" name="exclude_work_search[category_ids][]" id="exclude_work_search_category_ids_116" value="116"/>
+                        <span class="indicator" aria-hidden="true"></span><span>F/F (20133)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_category_ids_2246">
+                          <input type="checkbox" name="exclude_work_search[category_ids][]" id="exclude_work_search_category_ids_2246" value="2246"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Multi (17501)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_category_ids_24">
+                          <input type="checkbox" name="exclude_work_search[category_ids][]" id="exclude_work_search_category_ids_24" value="24"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Other (6956)</span>
+</label>                    </li>
+                </ul>
+              </dd>
+              <dt id="toggle_exclude_fandom_tags" class="filter-toggle fandom tags">
+                <span class="landmark">Exclude </span>Fandoms
+              </dt>
+              <dd id="exclude_fandom_tags" class="expandable fandom tags">
+                <ul>
+                    <li>
+                      <label for="exclude_work_search_fandom_ids_136512">
+                          <input type="checkbox" name="exclude_work_search[fandom_ids][]" id="exclude_work_search_fandom_ids_136512" value="136512"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Harry Potter - J. K. Rowling (286607)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_fandom_ids_7625681">
+                          <input type="checkbox" name="exclude_work_search[fandom_ids][]" id="exclude_work_search_fandom_ids_7625681" value="7625681"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Fantastic Beasts and Where to Find Them (Movies) (13433)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_fandom_ids_11055523">
+                          <input type="checkbox" name="exclude_work_search[fandom_ids][]" id="exclude_work_search_fandom_ids_11055523" value="11055523"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Harry Potter and the Cursed Child - Thorne &amp; Rowling (3374)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_fandom_ids_414093">
+                          <input type="checkbox" name="exclude_work_search[fandom_ids][]" id="exclude_work_search_fandom_ids_414093" value="414093"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Marvel Cinematic Universe (2425)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_fandom_ids_1001939">
+                          <input type="checkbox" name="exclude_work_search[fandom_ids][]" id="exclude_work_search_fandom_ids_1001939" value="1001939"/>
+                        <span class="indicator" aria-hidden="true"></span><span>The Avengers (Marvel Movies) (1837)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_fandom_ids_133185">
+                          <input type="checkbox" name="exclude_work_search[fandom_ids][]" id="exclude_work_search_fandom_ids_133185" value="133185"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Sherlock (TV) (1733)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_fandom_ids_27">
+                          <input type="checkbox" name="exclude_work_search[fandom_ids][]" id="exclude_work_search_fandom_ids_27" value="27"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Supernatural (1722)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_fandom_ids_13999">
+                          <input type="checkbox" name="exclude_work_search[fandom_ids][]" id="exclude_work_search_fandom_ids_13999" value="13999"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Naruto (934)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_fandom_ids_232768">
+                          <input type="checkbox" name="exclude_work_search[fandom_ids][]" id="exclude_work_search_fandom_ids_232768" value="232768"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Merlin (TV) (856)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_fandom_ids_22001796">
+                          <input type="checkbox" name="exclude_work_search[fandom_ids][]" id="exclude_work_search_fandom_ids_22001796" value="22001796"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Buffy the Vampire Slayer (TV) (828)</span>
+</label>                    </li>
+                </ul>
+              </dd>
+              <dt id="toggle_exclude_character_tags" class="filter-toggle character tags">
+                <span class="landmark">Exclude </span>Characters
+              </dt>
+              <dd id="exclude_character_tags" class="expandable character tags">
+                <ul>
+                    <li>
+                      <label for="exclude_work_search_character_ids_1803">
+                          <input type="checkbox" name="exclude_work_search[character_ids][]" id="exclude_work_search_character_ids_1803" value="1803"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Harry Potter (127420)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_character_ids_1048">
+                          <input type="checkbox" name="exclude_work_search[character_ids][]" id="exclude_work_search_character_ids_1048" value="1048"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Hermione Granger (80960)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_character_ids_1589">
+                          <input type="checkbox" name="exclude_work_search[character_ids][]" id="exclude_work_search_character_ids_1589" value="1589"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Draco Malfoy (79654)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_character_ids_2211">
+                          <input type="checkbox" name="exclude_work_search[character_ids][]" id="exclude_work_search_character_ids_2211" value="2211"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Ron Weasley (54741)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_character_ids_966">
+                          <input type="checkbox" name="exclude_work_search[character_ids][]" id="exclude_work_search_character_ids_966" value="966"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Severus Snape (49759)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_character_ids_321">
+                          <input type="checkbox" name="exclude_work_search[character_ids][]" id="exclude_work_search_character_ids_321" value="321"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Sirius Black (46984)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_character_ids_1049">
+                          <input type="checkbox" name="exclude_work_search[character_ids][]" id="exclude_work_search_character_ids_1049" value="1049"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Remus Lupin (44675)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_character_ids_2174">
+                          <input type="checkbox" name="exclude_work_search[character_ids][]" id="exclude_work_search_character_ids_2174" value="2174"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Ginny Weasley (32640)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_character_ids_967">
+                          <input type="checkbox" name="exclude_work_search[character_ids][]" id="exclude_work_search_character_ids_967" value="967"/>
+                        <span class="indicator" aria-hidden="true"></span><span>James Potter (28484)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_character_ids_1386">
+                          <input type="checkbox" name="exclude_work_search[character_ids][]" id="exclude_work_search_character_ids_1386" value="1386"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Albus Dumbledore (26789)</span>
+</label>                    </li>
+                </ul>
+              </dd>
+              <dt id="toggle_exclude_relationship_tags" class="filter-toggle relationship tags">
+                <span class="landmark">Exclude </span>Relationships
+              </dt>
+              <dd id="exclude_relationship_tags" class="expandable relationship tags">
+                <ul>
+                    <li>
+                      <label for="exclude_work_search_relationship_ids_99">
+                          <input type="checkbox" name="exclude_work_search[relationship_ids][]" id="exclude_work_search_relationship_ids_99" value="99"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Draco Malfoy/Harry Potter (47120)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_relationship_ids_1110">
+                          <input type="checkbox" name="exclude_work_search[relationship_ids][]" id="exclude_work_search_relationship_ids_1110" value="1110"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Sirius Black/Remus Lupin (22889)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_relationship_ids_3458">
+                          <input type="checkbox" name="exclude_work_search[relationship_ids][]" id="exclude_work_search_relationship_ids_3458" value="3458"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Hermione Granger/Ron Weasley (14283)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_relationship_ids_10760">
+                          <input type="checkbox" name="exclude_work_search[relationship_ids][]" id="exclude_work_search_relationship_ids_10760" value="10760"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Hermione Granger/Draco Malfoy (13406)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_relationship_ids_18827">
+                          <input type="checkbox" name="exclude_work_search[relationship_ids][]" id="exclude_work_search_relationship_ids_18827" value="18827"/>
+                        <span class="indicator" aria-hidden="true"></span><span>James Potter/Lily Evans Potter (13336)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_relationship_ids_1600">
+                          <input type="checkbox" name="exclude_work_search[relationship_ids][]" id="exclude_work_search_relationship_ids_1600" value="1600"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Harry Potter/Severus Snape (12615)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_relationship_ids_3548">
+                          <input type="checkbox" name="exclude_work_search[relationship_ids][]" id="exclude_work_search_relationship_ids_3548" value="3548"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Harry Potter/Ginny Weasley (11328)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_relationship_ids_2390">
+                          <input type="checkbox" name="exclude_work_search[relationship_ids][]" id="exclude_work_search_relationship_ids_2390" value="2390"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Hermione Granger/Severus Snape (5300)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_relationship_ids_20822">
+                          <input type="checkbox" name="exclude_work_search[relationship_ids][]" id="exclude_work_search_relationship_ids_20822" value="20822"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Harry Potter/Tom Riddle (4972)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_relationship_ids_9510">
+                          <input type="checkbox" name="exclude_work_search[relationship_ids][]" id="exclude_work_search_relationship_ids_9510" value="9510"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Hermione Granger/Harry Potter (4398)</span>
+</label>                    </li>
+                </ul>
+              </dd>
+              <dt id="toggle_exclude_freeform_tags" class="filter-toggle freeform tags">
+                <span class="landmark">Exclude </span>Additional Tags
+              </dt>
+              <dd id="exclude_freeform_tags" class="expandable freeform tags">
+                <ul>
+                    <li>
+                      <label for="exclude_work_search_freeform_ids_110">
+                          <input type="checkbox" name="exclude_work_search[freeform_ids][]" id="exclude_work_search_freeform_ids_110" value="110"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Fluff (31114)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_freeform_ids_176">
+                          <input type="checkbox" name="exclude_work_search[freeform_ids][]" id="exclude_work_search_freeform_ids_176" value="176"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Angst (28221)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_freeform_ids_60">
+                          <input type="checkbox" name="exclude_work_search[freeform_ids][]" id="exclude_work_search_freeform_ids_60" value="60"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Romance (27868)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_freeform_ids_968">
+                          <input type="checkbox" name="exclude_work_search[freeform_ids][]" id="exclude_work_search_freeform_ids_968" value="968"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Alternate Universe (17559)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_freeform_ids_62">
+                          <input type="checkbox" name="exclude_work_search[freeform_ids][]" id="exclude_work_search_freeform_ids_62" value="62"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Humor (15651)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_freeform_ids_143795">
+                          <input type="checkbox" name="exclude_work_search[freeform_ids][]" id="exclude_work_search_freeform_ids_143795" value="143795"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Alternate Universe - Canon Divergence (13191)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_freeform_ids_2379">
+                          <input type="checkbox" name="exclude_work_search[freeform_ids][]" id="exclude_work_search_freeform_ids_2379" value="2379"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Hurt/Comfort (11814)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_freeform_ids_61">
+                          <input type="checkbox" name="exclude_work_search[freeform_ids][]" id="exclude_work_search_freeform_ids_61" value="61"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Drama (10471)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_freeform_ids_27594097">
+                          <input type="checkbox" name="exclude_work_search[freeform_ids][]" id="exclude_work_search_freeform_ids_27594097" value="27594097"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Marauders Era (Harry Potter) (10108)</span>
+</label>                    </li>
+                    <li>
+                      <label for="exclude_work_search_freeform_ids_663">
+                          <input type="checkbox" name="exclude_work_search[freeform_ids][]" id="exclude_work_search_freeform_ids_663" value="663"/>
+                        <span class="indicator" aria-hidden="true"></span><span>Drabble (9925)</span>
+</label>                    </li>
+                </ul>
+              </dd>
+            <dt class="autocomplete search">
+              <label for="work_search_excluded_tag_names">Other tags to exclude</label>
+            </dt>
+            <dd class="autocomplete search">
+              <input class="autocomplete" data-autocomplete-method="/autocomplete/tag" data-autocomplete-hint-text="Start typing for suggestions!" data-autocomplete-no-results-text="(No suggestions found)" data-autocomplete-min-chars="1" data-autocomplete-searching-text="Searching..." type="text" name="work_search[excluded_tag_names]" id="work_search_excluded_tag_names"/>
+            </dd>
+          </dl>
+        </dd>
+
+      <dt class="more heading">
+        <h4 class="heading">More Options</h4>
+      </dt>
+
+      <dd class="more group">
+        <dl>
+          <dt id="toggle_work_crossover" class="filter-toggle crossover">Crossovers</dt>
+          <dd id="work_crossover" class="expandable">
+            <ul>
+              <li>
+                <label for="work_search_crossover_">
+                  <input type="radio" value="" checked="checked" name="work_search[crossover]" id="work_search_crossover_"/>
+                  <span class="indicator" aria-hidden="true"></span><span>Include crossovers</span>
+</label>              </li>
+              <li>
+                <label for="work_search_crossover_f">
+                  <input type="radio" value="F" name="work_search[crossover]" id="work_search_crossover_f"/>
+                  <span class="indicator" aria-hidden="true"></span><span>Exclude crossovers</span>
+</label>              </li>
+              <li>
+                <label for="work_search_crossover_t">
+                  <input type="radio" value="T" name="work_search[crossover]" id="work_search_crossover_t"/>
+                  <span class="indicator" aria-hidden="true"></span><span>Show only crossovers</span>
+</label>              </li>
+            </ul>
+          </dd>
+          <dt id="toggle_work_complete" class="filter-toggle status">Completion Status</dt>
+          <dd id="work_complete" class="expandable">
+            <ul>
+              <li>
+                <label for="work_search_complete_">
+                  <input type="radio" value="" checked="checked" name="work_search[complete]" id="work_search_complete_"/>
+                  <span class="indicator" aria-hidden="true"></span><span>All works</span>
+</label>              </li>
+              <li>
+                <label for="work_search_complete_t">
+                  <input type="radio" value="T" name="work_search[complete]" id="work_search_complete_t"/>
+                  <span class="indicator" aria-hidden="true"></span><span>Complete works only</span>
+</label>              </li>
+              <li>
+                <label for="work_search_complete_f">
+                  <input type="radio" value="F" name="work_search[complete]" id="work_search_complete_f"/>
+                  <span class="indicator" aria-hidden="true"></span><span>Works in progress only</span>
+</label>              </li>
+            </ul>
+          </dd>
+          <dt id="toggle_work_words" class="filter-toggle words">Word Count</dt>
+          <dd id="work_words" class="expandable">
+            <dl class="range">
+              <dt><label for="work_search_words_from">From</label></dt>
+              <dd><input type="text" name="work_search[words_from]" id="work_search_words_from"/></dd>
+              <dt><label for="work_search_words_to">To</label></dt>
+              <dd><input type="text" name="work_search[words_to]" id="work_search_words_to"/></dd>
+            </dl>
+          </dd>
+          <dt id="toggle_work_dates" class="filter-toggle dates">Date Updated</dt>
+          <dd id="work_dates" class="expandable">
+            <dl class="range">
+              <dt><label for="work_search_date_from">From</label></dt>
+              <dd><input class="datepicker" type="text" name="work_search[date_from]" id="work_search_date_from"/></dd>
+              <dt><label for="work_search_date_to">To</label></dt>
+              <dd><input class="datepicker" type="text" name="work_search[date_to]" id="work_search_date_to"/></dd>
+            </dl>
+          </dd>
+
+          <dt class="search">
+            <label for="work_search_query">Search within results</label>
+             <a class="help symbol question modal" title="Work search text help" aria-controls="#modal" href="/help/work-search-text-help.html"><span class="symbol question"><span>?</span></span></a>
+          </dt>
+          <dd class="search">
+            <input type="text" name="work_search[query]" id="work_search_query"/>
+          </dd>
+
+          <dt class="language">
+            <label for="work_search_language_id">Language</label>
+          </dt>
+          <dd class="language">
+            <select name="work_search[language_id]" id="work_search_language_id"><option value=""></option>
+<option value="so">af Soomaali</option>
+<option value="afr">Afrikaans</option>
+<option value="ar">العربية</option>
+<option value="arc">ܐܪܡܝܐ | ארמיא</option>
+<option value="hy">հայերեն</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="ms">Bahasa Malaysia</option>
+<option value="bg">Български</option>
+<option value="bn">বাংলা</option>
+<option value="jv">Basa Jawa</option>
+<option value="be">беларуская</option>
+<option value="bos">Bosanski</option>
+<option value="br">brezhoneg</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="chn">Chinuk Wawa</option>
+<option value="cy">Cymraeg</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="et">eesti keel</option>
+<option value="el">Ελληνικά</option>
+<option value="en">English</option>
+<option value="es">Español</option>
+<option value="eo">Esperanto</option>
+<option value="eu">Euskara</option>
+<option value="fa">فارسی</option>
+<option value="fil">Filipino</option>
+<option value="fr">Français</option>
+<option value="fur">Furlan</option>
+<option value="ga">Gaeilge</option>
+<option value="gd">Gàidhlig</option>
+<option value="gl">Galego</option>
+<option value="got">𐌲𐌿𐍄𐌹𐍃𐌺𐌰</option>
+<option value="hak">中文-客家话</option>
+<option value="ko">한국어</option>
+<option value="hau">Hausa | هَرْشَن هَوْسَ</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="ia">Interlingua</option>
+<option value="zu">isiZulu</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="he">עברית</option>
+<option value="kat">ქართული</option>
+<option value="qkz">Khuzdul</option>
+<option value="kir">Кыргызча</option>
+<option value="sw">Kiswahili</option>
+<option value="ht">kreyòl ayisyen</option>
+<option value="fcs">Langue des signes québécoise</option>
+<option value="lv">Latviešu valoda</option>
+<option value="lb">Lëtzebuergesch</option>
+<option value="lt">Lietuvių kalba</option>
+<option value="la">Lingua latina</option>
+<option value="hu">Magyar</option>
+<option value="mk">македонски</option>
+<option value="ml">മലയാളം</option>
+<option value="mnc">ᠮᠠᠨᠵᡠ ᡤᡳᠰᡠᠨ</option>
+<option value="mr">मराठी</option>
+<option value="mon">ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ᠌ | Монгол Кирилл үсэг</option>
+<option value="my">မြန်မာဘာသာ</option>
+<option value="nan">中文-闽南话 臺語</option>
+<option value="nl">Nederlands</option>
+<option value="ja">日本語</option>
+<option value="no">Norsk</option>
+<option value="ps">پښتو</option>
+<option value="nds">Plattdüütsch</option>
+<option value="pl">Polski</option>
+<option value="ptBR">Português brasileiro</option>
+<option value="ptPT">Português europeu</option>
+<option value="pa">ਪੰਜਾਬੀ</option>
+<option value="qya">Quenya</option>
+<option value="ro">Română</option>
+<option value="ru">Русский</option>
+<option value="sco">Scots</option>
+<option value="sq">Shqip</option>
+<option value="sjn">Sindarin</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="slv">Slovenščina</option>
+<option value="gem">Sprēkō Þiudiskō</option>
+<option value="sr">српски</option>
+<option value="fi">Suomi</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="th">ไทย</option>
+<option value="tqx">Thermian</option>
+<option value="bod">བོད་སྐད་</option>
+<option value="vi">Tiếng Việt</option>
+<option value="tlh">tlhIngan-Hol</option>
+<option value="qtp">Toki Pona</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="uig">ئۇيغۇر تىلى</option>
+<option value="wuu">中文-吴语</option>
+<option value="yi">יידיש</option>
+<option value="yue">中文-广东话 粵語</option>
+<option value="zh">中文-普通话 國語</option></select>
+          </dd>
+        </dl>
+      </dd>
+      <dt class="landmark">Submit</dt>
+      <dd class="submit actions"><input type="submit" name="commit" value="Sort and Filter"/></dd>
+    </dl>
+
+    <div>
+      
+      <input type="hidden" name="tag_id" id="tag_id" value="Harry Potter - J*d* K*d* Rowling" class="text"/>
+      
+      
+      
+    </div>
+
+</fieldset>
+  <p class="narrow-shown hidden">
+    <a href="#main" id="leave_filters" class="close">
+      Top of Work Index
+    </a>
+  </p>
+
+</form>
+
+<!---/subnav-->
+
+  <h4 class="landmark heading">Pages Navigation</h4><ol role="navigation" aria-label="Pagination" class="pagination actions" title="pagination"><li class="previous" title="previous"><a rel="prev" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1590&amp;view_adult=true">&#8592; Previous</a></li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1&amp;view_adult=true">1</a></li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=2&amp;view_adult=true">2</a></li> <li class="gap">…</li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1587&amp;view_adult=true">1587</a></li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1588&amp;view_adult=true">1588</a></li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1589&amp;view_adult=true">1589</a></li> <li><a rel="prev" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1590&amp;view_adult=true">1590</a></li> <li><span class="current">1591</span></li> <li><a rel="next" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1592&amp;view_adult=true">1592</a></li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1593&amp;view_adult=true">1593</a></li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1594&amp;view_adult=true">1594</a></li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1595&amp;view_adult=true">1595</a></li> <li class="gap">…</li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=4999&amp;view_adult=true">4999</a></li> <li><a href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=5000&amp;view_adult=true">5000</a></li> <li class="next" title="next"><a rel="next" href="/tags/Harry%20Potter%20-%20J*d*%20K*d*%20Rowling/works?page=1592&amp;view_adult=true">Next &#8594;</a></li></ol>
+
+
+          <div class="clear"><!--presentational--></div>
+        </div>
+        <!-- END main -->
+      </div>
+      <!-- BEGIN footer -->
+<div id="footer" role="contentinfo" class="region">
+	<h3 class="landmark heading">Footer</h3>
+  <ul class="navigation actions" role="navigation">
+    <li class="module group">
+      <h4 class="heading">About the Archive</h4>
+      <ul class="menu">
+        <li><a href="/site_map">Site Map</a></li>
+        <li><a href="/diversity">Diversity Statement</a></li>
+        <li><a href="/tos">Terms of Service</a></li>
+        <li><a href="/dmca">DMCA Policy</a> </li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Contact Us</h4>
+      <ul class="menu">
+        <li><a href="/abuse_reports/new">Report Abuse</a></li>
+        <li><a href="/support">Technical Support and Feedback</a></li>
+      </ul>
+    </li>
+    <li class="module group">
+      <h4 class="heading">Development</h4>
+      <ul class="menu">
+          <li><a href="https://github.com/otwcode/otwarchive/commits/v0.9.301.1">otwarchive v0.9.301.1</a></li>
+        <li><a href="/known_issues">Known Issues</a></li>
+        <li><a href="http://www.gnu.org/licenses/gpl-2.0.html" title="View License">GPL</a> by the <a href="http://transformativeworks.org/" title="The Organization for Transformative Works">OTW</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!-- END footer -->
+
+    </div>
+    <!-- check to see if this controller/action allow tinymce before we load the gigantor js; see application_helper -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js" type="text/javascript"></script>
+<!-- if user has googleapis blocked for some reason we need a fallback -->
+<script type="text/javascript">if(typeof jQuery=='undefined'){document.write(unescape("%3Cscript src='/javascripts/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));document.write(unescape("%3Cscript src='/javascripts/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));}</script>
+
+
+<script type="text/javascript">$j=jQuery.noConflict();</script>
+<script src="/javascripts/jquery.scrollTo.min.js+jquery.livequery.min.js+rails.js+application.js+bootstrap,_bootstrap-dropdown.min.js+jquery-shuffle.js+jquery.tokeninput.min.js+jquery.trap.min.js+ao3modal.min.js+js.cookie.min.js+filters.min.js.pagespeed.jc.oz6LPTe6O7.js"></script><script>eval(mod_pagespeed_a8hDjzT3l_);</script>
+<script>eval(mod_pagespeed_1nA1vKz9z4);</script>
+<script>eval(mod_pagespeed_AKC4FLip6q);</script>
+<script>eval(mod_pagespeed_gX7XC77lvT);</script>
+<script>eval(mod_pagespeed_5zo0ZWMy4O);</script>
+<script>eval(mod_pagespeed_eCCgOhjhYQ);</script>
+<script>eval(mod_pagespeed_TU1Ln7LKSh);</script>
+<script>eval(mod_pagespeed_qTpbjsXQwh);</script>
+<script>eval(mod_pagespeed_R5FGw2ySDb);</script>
+<script>eval(mod_pagespeed_rqqFCT3xcT);</script>
+
+<script>eval(mod_pagespeed_Gf_4KFhTvB);</script>
+
+
+  <script>function isSupported(){var item="localStoragePolyfill";try{localStorage.setItem(item,item);localStorage.removeItem(item);return true;}catch(e){return false;}}function acceptTOS(){if(isSupported()){localStorage.setItem("accepted_tos","20180523");}else{Cookies.set("accepted_tos","20180523",{expires:365});}}$j(document).ready(function(){if(localStorage.getItem("accepted_tos")!=="20180523"&&Cookies.get("accepted_tos")!=="20180523"){$j("body").prepend("<div id=\"tos_prompt\" class=\"hidden\">\n  <h2 class=\"heading\">\n    <span>Archive of Our Own<\/span>\n  <\/h2>\n  <div class=\"agreement\">\n    <p class=\"summary\">\n      On Archive of Our Own (AO3), users can make profiles, create works and\n            other Content, post comments, give Kudos, create Collections and \n            Bookmarks, participate in Challenges, import works, and more. Any \n            information you publish in a comment, profile, work, or Content that you \n            post or import onto AO3 including in summaries, notes and tags, \n            will be accessible by the public (unless you limit access to a work only \n            to those with AO3 Accounts), and it will be available to \n            AO3 personnel. Be mindful when sharing personal information, \n            including  your religious or political views, health, racial background, \n            country of origin, sexual identity and/or personal relationships. To \n            learn more, check out our <a href=\"/tos\">Terms of Service<\/a> and <a href=\"/tos#privacy\">Privacy Policy<\/a>.\n    <\/p>\n\n    <p class=\"confirmation\">\n      <input type=\"checkbox\" id=\"tos_agree\" />\n      <label for=\"tos_agree\">I have read &amp; understood the new Terms of Service and Privacy Policy<\/label>\n    <\/p>\n\n      <p class=\"submit\">\n        <button name=\"button\" type=\"button\" disabled=\"disabled\" id=\"accept_tos\">I agree/consent to its terms<\/button>\n      <\/p>\n\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    var container = \$j(\"#tos_prompt\");\n    var outer = \$j(\"#outer\");\n    var button = \$j(\"#accept_tos\");\n\n    setTimeout(showTOSPrompt, 1500);\n\n    function showTOSPrompt() {\n      \$j.when(container.fadeIn(500)).done(function() {\n        outer.addClass(\"hidden\").attr(\"aria-hidden\", \"true\");\n      });\n\n      \$j(\"#tos_agree\").on(\"click\", function() {\n        button.attr(\"disabled\", !this.checked);\n        if (this.checked) {\n          button.on(\"click\", function() {\n            acceptTOS();\n            outer.removeClass(\"hidden\").removeAttr(\"aria-hidden\");\n            \$j.when(container.fadeOut(500)).done(function() {\n              container.remove();\n            });\n          });\n        };\n      }).change();\n    };\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+  <script>$j(document).ready(function(){var permitted_hosts=["archiveofourown.org","download.archiveofourown.org","insecure.archiveofourown.org","www.archiveofourown.org","insecure-test.archiveofourown.org","test.archiveofourown.org","testdownload.archiveofourown.org"];var current_host=window.location.hostname;if(!permitted_hosts.includes(current_host)&&Cookies.get("proxy_notice")!=="0"&&window.location.protocol!=="file:"){$j("#skiplinks").after("<div id=\"proxy-notice\">\n  <div class=\"userstuff\">\n    <p class=\"important\">Important message:<\/p>\n    <ol>\n      <li>You are using a proxy site that is not part of the Archive of Our Own.<\/li>\n      <li>The entity that set up the proxy site can see what you submit, including your IP address. If you log in through the proxy site, it can see your password.<\/li>\n    <\/ol>\n    <p class=\"important\">重要提示：<\/p>\n    <ol>\n      <li>您使用的是第三方开发的反向代理网站，此网站并非Archive of Our Own - AO3（AO3作品库）原站。<\/li>\n      <li>代理网站的开发者能够获取您上传至该站点的全部内容，包括您的ip地址。如您通过代理登录AO3，对方将获得您的密码。<\/li>\n    <\/ol>\n    <p class=\"submit\"><button class=\"action\" type=\"button\" id=\"proxy-notice-dismiss\">Dismiss Notice<\/button><\/p>\n  <\/div>\n<\/div>\n\n<script>\n//<![CDATA[\n\n  \$j(document).ready(function() {\n    \$j(\"#proxy-notice-dismiss\").on(\"click\", function() {\n      Cookies.set(\"proxy_notice\", \"0\");\n      \$j(\"#proxy-notice\").slideUp();\n    });\n  });\n\n//]]]]><![CDATA[>\n<\/script>");}});</script>
+
+  <script>$j(".datepicker").datepicker({dateFormat:"yy-mm-dd"});</script>
+
+  </body>
+</html>
