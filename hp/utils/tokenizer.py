@@ -13,10 +13,3 @@ nist = NISTTokenizer()
 
 def tokenizer(text):
     return nist.tokenize(text)
-
-
-if __name__ == '__main__':
-    from filter_file import extract_article_text
-
-    for file in extract_article_text():
-        print(tokenizer(file))
