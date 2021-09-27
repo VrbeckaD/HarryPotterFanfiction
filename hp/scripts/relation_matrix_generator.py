@@ -1,4 +1,5 @@
 import argparse
+import csv
 import itertools
 from collections import Counter, defaultdict
 import logging
@@ -95,31 +96,34 @@ def clean(line):
     return line
 
 
-def load_relation_freqs(selection="all"):
+def load_relation_freqs(selection="all", language="all"):
     """Načte katalog a vrátí seznam s počty jednotlivých vztahů, např. [('Delphi/Rodolphus Lestrange', 3), ...].
 
     Args:
         selection: filter one of all/explicit/slash/het
-
+        language: all/English/...
     Returns:
         list of pairs relation, freq
     """
-    with open(FULL_CATALOGUE_PATH) as h:
-        lines = h.readlines()
     shiplist_raw = []
-    for line in lines[1:]:
-        cols = line.split(",")
-        if selection == "explicit":
-            if cols[2] != "explicit":
+    with open(FULL_CATALOGUE_PATH) as h:
+        reader = csv.DictReader(h, delimiter=",")
+        for cols in reader:
+            if language != "all" and cols["language"] != language:
                 continue
-        if selection == "slash":
-            if "slash" not in cols[5]:
-                continue
-        if selection == "het":
-            if "het" not in cols[5]:
-                continue
-        if "/" in cols[6]:
-            shiplist_raw.append(clean(cols[6]))
+
+            if selection == "explicit":
+                if cols["rating"] != "explicit":
+                    continue
+            if selection == "slash":
+                if "slash" not in cols["category"]:
+                    continue
+            if selection == "het":
+                if "het" not in cols["category"]:
+                    continue
+            if "/" in cols["lovers"]:
+                shiplist_raw.append(clean(cols["lovers"]))
+
     return sorted(Counter(shiplist_raw).items(), key=lambda x: x[1], reverse=True)
 
 
@@ -190,13 +194,10 @@ def create_html(data, matrix, cat):
         hw.write(html_table)
 
 
-def main(min_freq=50, category="all"):
-    if category == "none":
-        category = None
+def main(min_freq=50, category="all", language="all"):
 
-    shiplist = load_relation_freqs(category)
+    shiplist = load_relation_freqs(category, language)
     sorted_char_in_relations = count_freqs(shiplist)
-
     filtered_char_in_ship_best = [(char, freq) for char, freq in sorted_char_in_relations if freq >= min_freq]
 
     logger.info(f"Let keep only names with frequency > {min_freq} to obtain {len(filtered_char_in_ship_best)} names.")
@@ -217,17 +218,19 @@ def main(min_freq=50, category="all"):
             filtered_shiplist.append((ship, count))
             if len(set(names)) == 1:
                 logger.info("    * self-relation %s: %d", names[0], count)
-                empty[index(names[0]), index(names[0])] = count
+                empty[index(names[0]), index(names[0])] += count
             else:
                 for left_name, right_name in itertools.combinations(names, 2):
-                    empty[index(left_name), index(right_name)] = count
-                    empty[index(right_name), index(left_name)] = count
+                    empty[index(left_name), index(right_name)] += count
+                    empty[index(right_name), index(left_name)] += count
 
-    logger.info(f"The final matrix contains {len(filtered_shiplist)} ships for category {category}.")
+    logger.info(f"The final matrix contains {len(filtered_shiplist)} lovers for category {category}.")
 
     create_html(filtered_char_without_freq, empty, category)
 
     target = FILES[category]
+    if language != "all":
+        target = target.replace(".csv", f"_{language}.csv")
 
     pd.DataFrame(data=empty,
                  index=[i.replace(" ", "_") for i in filtered_char_without_freq],
@@ -273,7 +276,20 @@ def main(min_freq=50, category="all"):
                node_color=dim('index').str(),
                hooks=[rotate_label]
                )
-    hv.save(graph, FILES[category].replace(".csv", ".svg"), fmt="svg", backend="matplotlib", title=f"Ship for {category}")
+    hv.save(graph, target.replace(".csv", ".svg"), fmt="svg", backend="matplotlib",
+            title=f"Lovers for {category}")
+
+    matrix = data.to_numpy()
+    names = matrix[:, 0]
+    items = matrix[:, 1:]
+
+    max_values = []
+    for rn, row in enumerate(items):
+        for cn, value in enumerate(row):
+            if rn >= cn:
+                max_values.append((value, "/".join(sorted([names[cn], names[rn]]))))
+    max_values.sort(key=lambda rec: -rec[0])
+    pd.DataFrame(data=max_values[:100], columns=["freq", "lovers"]).to_csv(target.replace(".csv", "_top100.csv"))
 
 
 if __name__ == '__main__':
@@ -284,7 +300,9 @@ if __name__ == '__main__':
                         help='minimal frequency of character to be displayed')
     parser.add_argument('--filter', '-f', dest='filter', default="all",
                         help='filter: all/slash/het/explicit')
+    parser.add_argument('--language', '-l', dest='language', default="all",
+                        help='language: all/English')
 
     args = parser.parse_args()
 
-    main(args.freq, args.filter)
+    main(args.freq, args.filter, args.language)
