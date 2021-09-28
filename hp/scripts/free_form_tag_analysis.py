@@ -10,7 +10,7 @@ from hp import FULL_CATALOGUE_PATH, FREE_FORM_TAGS_PATH
 logger = logging.getLogger(__name__)
 CATEGORIES = ["all", "slash", "het", "explicit"]
 FILES = {
-    category: str(FREE_FORM_TAGS_PATH / ("top_100_" + category + ".csv"))
+    category: str(FREE_FORM_TAGS_PATH / ("top_1000_" + category + ".csv"))
     for category in CATEGORIES
 }
 
@@ -73,7 +73,7 @@ def main(category="all", language="all"):
     target = FILES[category]
     with open(target, "w") as hw:
         for i, (tag, freq) in enumerate(tag_freqs, start=1):
-            hw.write(f"{tag},{freq}")
+            hw.write(f"{tag},{freq}\n")
             if i > 1000:
                 break
 

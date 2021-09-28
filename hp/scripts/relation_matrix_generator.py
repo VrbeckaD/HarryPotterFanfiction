@@ -91,8 +91,8 @@ def clean(line):
     line = line.replace("Percival Graves | Gellert Grindenwald ", "Gellert_Grindelwald_pretending_Percival_Graves")
     line = re.sub(r"\s*-\s*", " - ", line)
     line = line.replace('"', "")
-    if "/" not in line:
-        print(orig, "=>", line)
+    # if "/" not in line:
+    #     print(orig, "=>", line)
     return line
 
 
