@@ -291,6 +291,10 @@ def main(min_freq=50, category="all", language="all"):
     max_values.sort(key=lambda rec: -rec[0])
     pd.DataFrame(data=max_values[:100], columns=["freq", "lovers"]).to_csv(target.replace(".csv", "_top100.csv"))
 
+    with open(target.replace(".csv", "_top100_people.csv"), "w") as hw:
+        for name, count in sorted(zip(names, [sum(row) for row in items]), key=lambda r: -r[1])[:100]:
+            hw.write(f"{name},{count}\n")
+
 
 if __name__ == '__main__':
     logging.basicConfig(format="%(asctime)s %(levelname)s %(message)s", level=logging.INFO)
