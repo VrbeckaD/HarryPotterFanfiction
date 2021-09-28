@@ -15,6 +15,10 @@ FREE_FORM_TAGS_PATH: Path = (Path(__file__).parent / "free_form_tags_data")
 FREE_FORM_TAGS_PATH.mkdir(exist_ok=True)
 FREE_FORM_TAGS_PER_PERSON_PATH: Path = (Path(__file__).parent / "free_form_tags_per_person_data")
 FREE_FORM_TAGS_PER_PERSON_PATH.mkdir(exist_ok=True)
+FREE_FORM_TAGS_PER_SHIP_PATH: Path = (Path(__file__).parent / "free_form_tags_per_ship_data")
+FREE_FORM_TAGS_PER_SHIP_PATH.mkdir(exist_ok=True)
+FREE_FORM_TAGS_REPRESENTATIVES_PATH: Path = (Path(__file__).parent / "free_form_tags_representatives_data")
+FREE_FORM_TAGS_REPRESENTATIVES_PATH.mkdir(exist_ok=True)
 
 
 def delay(multiplier: float = 0.85, minimum: float = 0.15, maximum: float = 0.85) -> None:
