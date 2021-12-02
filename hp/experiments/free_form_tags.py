@@ -4,6 +4,7 @@ from pathlib import Path
 from csv import DictReader
 import re
 
+from hp import FULL_CATALOGUE_PATH
 
 HEADER = "filename,title,rating,ship,language,category,lovers,wordcount,published,hits,freeform_tags"
 
@@ -58,7 +59,7 @@ def _to_date(text):
 
 def get_data():
     """Nachystat si data."""
-    path = (Path("..") / "HP_catalogue.csv").resolve()
+    path = Path(FULL_CATALOGUE_PATH).resolve()
     with Path(path).open(encoding="utf-8", errors="replace") as h:
         freqs = Counter()
         data = defaultdict(list)
